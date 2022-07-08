@@ -1,10 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-
-import { jsx, Box, Container } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import Service from "components/cards/service";
-
 const data = [
   {
     id: 2,
@@ -28,46 +21,39 @@ const data = [
 
 const OtherServices = () => {
   return (
-    <Box as="section" sx={styles.section} id="why-us">
-      <Container>
-        <SectionHeading
-          sx={styles.heading}
-          title="What makes GarbhaGudi special?"
-          description="GarbhaGudi is known for its top-class treatment at affordable costs and unparalled success rates."
-        />
-        <Box sx={styles.contentWrapper}>
-          {data?.map((item) => (
-            <Service key={item.id} item={item} />
-          ))}
-        </Box>
-      </Container>
-    </Box>
+    <div className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:text-center">
+          <p className="mt-2 text-3xl leading-8 font-bold font-heading text-gray-900 sm:text-4xl">
+            What makes GarbhaGudi special?
+          </p>
+          <p className="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
+            GarbhaGudi is known for its top-class treatment at affordable costs
+            and unparalled success rates.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-10">
+            {data.map((feature) => (
+              <div key={feature.id} className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
+                    <img src={feature.icon} alt="feature icon" />
+                  </div>
+                  <p className="ml-16 text-xl leading-6 font-heading font-bold text-gray-900">
+                    {feature.title}
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-md text-gray-500">
+                  {feature.description}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </div>
   );
 };
 export default OtherServices;
-
-const styles = {
-  section: {
-    backgroundColor: "#F9FAFC",
-    pt: [9, 9, 9, 11],
-    pb: [9, 9, 9, 12, 12, 14],
-  },
-  heading: {
-    mb: [6, null, null, 8, 9, null, 13],
-    p: {
-      maxWidth: 500,
-      margin: "10px auto 0",
-    },
-  },
-  contentWrapper: {
-    gap: ["30px 30px", "30px 30px", "30px 30px", "80px 30px"],
-    display: "grid",
-    justifyContent: ["center", "center", "center", "unset"],
-    gridTemplateColumns: [
-      "repeat(1, 285px)",
-      "repeat(1, 325px)",
-      "repeat(1, 285px)",
-      "repeat(3, 1fr)",
-    ],
-  },
-};

@@ -5,13 +5,13 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    path: "/ovulation-calculator",
+    path: "tools/ovulation-calculator",
     title: "Ovulation Prediction Calculator",
     description: `Menstrual periods are different from woman to woman and month to month. Use this calculator to see when you may be ovulating to help find your most fertile days.`,
   },
   {
     id: 2,
-    path: "/fertility-quotient-calculator",
+    path: "tools/fertility-quotient-calculator",
     title: "Fertility Quotient Calculator",
     description: `Fertility quotient is an indicator of an individual’s capability to reproduce. Use this calculator to check your Fertility Quotient based on the AGE, BMI, AFC and AMH values.`,
   },
@@ -24,9 +24,6 @@ const Calculators = () => {
         <Grid sx={styles.grid}>
           {data?.map((item) => (
             <Flex key={item.id} sx={styles.supportItem}>
-              {/* <Flex as="figure" sx={styles.media}>
-                <Image src={item?.icon} alt={item?.title} />
-              </Flex> */}
               <Box sx={styles.content}>
                 <Heading>
                   <Link href={item.path} target="_blank">
@@ -49,7 +46,7 @@ export default Calculators;
 
 const styles = {
   section: {
-    pt: [9, null, null, 10, 11, 11, 11],
+    pt: [5, null, null, 5, 5, 5, 5],
     pb: [7, null, null, 8, null, 9, 10],
   },
   grid: {

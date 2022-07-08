@@ -2,15 +2,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Flex, Box, Heading, Text, Image, Button } from "theme-ui";
-// import ModalVideo from "react-modal-video";
-// import { FaPlayCircle } from "react-icons/fa";
 
 export default function Banner() {
-  // const [videoOpen, setVideoOpen] = React.useState(false);
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   setVideoOpen(true);
-  // };
   return (
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
@@ -93,7 +86,7 @@ const styles = {
     imageBox: {
       display: ["none", null, null, "block"],
       justifyContent: "center",
-      ml: [0, null, null, "-110px", "-115px", "-150px", "-210px", "-270px"],
+      ml: [0, null, null, "-110px", "-115px", "-150px", "-210px", "-140px"],
       mr: [0, null, null, "-145px", "-160px", "-180px", "-220px", "-290px"],
       mt: [0, null, null, "40px", 4, 7, 10],
       mb: [0, null, null, "-150px", "-150px", "-150px", "-160px", "-200px"],

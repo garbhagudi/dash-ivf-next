@@ -1,96 +1,24 @@
 import React from "react";
-import { Box, Container, Heading, Button } from "theme-ui";
-import BgShape from "assets/images/cta-shape-1.svg";
-import btnShape from "assets/images/cta-btn-shape-1.svg";
-import Link from "next/link";
+import MyModal from "components/modal";
 
 const CallToAction = () => {
   return (
-    <Box sx={styles.wrapper}>
-      <Container sx={styles.container}>
-        <Box sx={styles.inner}>
-          <Heading as="h3">Let us take your dreams Forward.</Heading>
-          <Box sx={styles.btnWrapper}>
-            <Button sx={styles.btn}>
-              <Link href="/contact-us">BOOK A FREE CONSULTATION</Link>
-            </Button>
-          </Box>
-        </Box>
-      </Container>
-    </Box>
+    <div className="bg-gray-100 rounded-lg max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block">Ready to start?</span>
+          <span className="block text-brandPink">
+            Let us take your dreams forward...
+          </span>
+        </h2>
+        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="inline-flex rounded-md shadow">
+            <MyModal title={"BOOK AN APPOINTMENT"} />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default CallToAction;
-
-const styles = {
-  wrapper: {
-    padding: ["45px 30px 50px", null, null, "45px 50px", null, "45px 70px"],
-    mt: ["-55px", null, null, "50px"],
-  },
-  inner: {
-    padding: ["45px 30px 50px", null, null, "45px 50px", null, "45px 70px"],
-    mt: [0, null, null, null, "-80px"],
-    position: "relative",
-    zIndex: "10",
-    backgroundColor: "secondary",
-    backgroundImage: ["none", null, null, null, null, `url(${BgShape})`],
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "60% center",
-    borderRadius: "10px",
-    display: "flex",
-    alignItems: "center",
-    textAlign: ["center", null, null, "left"],
-    flexDirection: ["column", null, null, "row"],
-    justifyContent: ["center", null, null, "space-between"],
-    h3: {
-      color: "#fff",
-      fontWeight: "bold",
-      fontSize: [5, null, 4, null, null, 6, 7],
-      lineHeight: [1.24, null, 1.53],
-      padding: ["0 15px", "0"],
-      marginBottom: ["50px", null, null, "0"],
-      br: {
-        display: ["none", null, null, "inherit"],
-      },
-    },
-  },
-  btn: {
-    backgroundColor: "#fff",
-    color: "secondary",
-    borderRadius: "5px",
-    fontSize: [0, 1, null, null, null, null, "17px"],
-    fontWeight: "700",
-    letterSpacing: "0.1em",
-    fontFamily: "body",
-    padding: ["10px 24px", null, null, null, null, "15px 44px"],
-    position: "relative",
-    outline: "none",
-    webkitAppearance: "none",
-    "&:before, &:after": {
-      content: '""',
-      position: "absolute",
-      width: "73px",
-      height: "26px",
-      backgroundImage: `url(${btnShape})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      bottom: "calc(100% + 10px)",
-      left: "50%",
-      transform: "translateX(-50%)",
-    },
-    "&:after": {
-      bottom: "auto",
-      top: "calc(100% + 10px)",
-      transform: "translateX(-50%) rotate(180deg)",
-    },
-    "&:hover": {
-      backgroundColor: "black",
-      color: "#fff",
-    },
-    a: {
-      color: "secondary",
-      textDecoration: "none",
-    },
-  },
-};

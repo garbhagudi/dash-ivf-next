@@ -7,68 +7,54 @@ import Link from "next/link";
 const treatments = [
   {
     name: "Male Infertility",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
     href: "/male-infertility",
     icon: HiCalendar,
   },
   {
     name: "Female Infertility",
-    description: "Speak directly to your customers in a more meaningful way.",
     href: "/female-infertility",
     icon: HiCalendar,
   },
   {
     name: "IVF",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/ivf",
     icon: HiCalendar,
   },
   {
     name: "ICSI",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    href: "/icsi",
     icon: HiCalendar,
   },
   {
     name: "TESA/PESA",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
-    href: "#",
+    href: "/tesa-pesa",
     icon: HiCalendar,
   },
-];
-
-const callsToAction = [
-  { name: "Get Quote", href: "#", icon: HiCalendar },
-  { name: "Contact Us", href: "#", icon: HiCalendar },
+  {
+    name: "PCOD/PCOS",
+    href: "/pcod-pcos",
+    icon: HiCalendar,
+  },
 ];
 
 const services = [
   {
     name: "Online Consultation",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
+    href: "/online-consultation",
     icon: HiCalendar,
   },
   {
     name: "IVF From Home",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
+    href: "/ivf-from-home",
     icon: HiCalendar,
   },
   {
     name: "Paripoorna",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "#",
+    href: "/paripoorna",
     icon: HiCalendar,
   },
   {
     name: "More Offers",
-    description: "Understand how we take your privacy seriously.",
     href: "#",
     icon: HiCalendar,
   },
@@ -76,37 +62,50 @@ const services = [
 const resources = [
   {
     name: "About Us",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
     href: "#",
     icon: HiCalendar,
   },
   {
     name: "Dr Asha S Vijay",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
     href: "#",
     icon: HiCalendar,
   },
   {
     name: "Our Fertility Experts",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
     href: "#",
     icon: HiCalendar,
   },
   {
     name: "Security",
-    description: "Understand how we take your privacy seriously.",
     href: "#",
     icon: HiCalendar,
   },
 ];
-
-const mobileMenu = [
+const locations = [
   {
-    name: "About Us",
-    href: "",
+    name: "Hanumanthanagar",
+    href: "#",
+    icon: HiCalendar,
+  },
+  {
+    name: "Kalyan Nagar",
+    href: "#",
+    icon: HiCalendar,
+  },
+  {
+    name: "South End Circle",
+    href: "#",
+    icon: HiCalendar,
+  },
+  {
+    name: "Electronic City",
+    href: "#",
+    icon: HiCalendar,
+  },
+  {
+    name: "Marathahalli",
+    href: "#",
+    icon: HiCalendar,
   },
 ];
 
@@ -116,7 +115,7 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Popover className="sticky top-0 bg-white border-b-2 shadow-xl z-20">
+    <Popover className="sticky top-0 bg-white border-b-2 shadow-xl z-20 font-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center  border-gray-100 py-3 sm:py-5 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -134,18 +133,18 @@ export default function Header() {
 
           <Popover.Group as="nav" className="hidden lg:flex space-x-10">
             <Popover className="relative">
-              {({ open }) => (
+              {({ close }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-brandPink2" : "text-gray-900",
+                      close ? "text-gray-900" : "text-brandPink2",
                       "group bg-white rounded-md inline-flex items-center text-sm md:text-base font-medium hover:text-brandPink2 focus:outline-none focus:ring-offset-2"
                     )}
                   >
                     <span>Treatments</span>
                     <HiChevronDown
                       className={classNames(
-                        open ? "text-brandPink2" : "text-gray-900",
+                        close ? "text-gray-900" : "text-brandPink2",
                         "ml-2 h-5 w-5 group-hover:text-brandPink2"
                       )}
                       aria-hidden="true"
@@ -161,44 +160,26 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-5 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-5 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {treatments.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                        <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                          {callsToAction.map((item) => (
-                            <div key={item.name} className="flow-root">
+                            <Link href={item.href} key={item.name}>
                               <a
-                                href={item.href}
-                                className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                onClick={() => close()}
                               >
                                 <item.icon
-                                  className="flex-shrink-0 h-6 w-6 text-gray-400"
+                                  className="flex-shrink-0 h-6 w-6 text-indigo-600"
                                   aria-hidden="true"
                                 />
-                                <span className="ml-3">{item.name}</span>
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                </div>
                               </a>
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -209,18 +190,18 @@ export default function Header() {
             </Popover>
 
             <Popover className="relative">
-              {({ open }) => (
+              {({ close }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-brandPink2" : "text-gray-900",
+                      close ? "text-gray-900" : "text-brandPink2",
                       "group bg-white rounded-md inline-flex items-center text-sm md:text-base font-medium hover:text-brandPink2 focus:outline-none focus:ring-offset-2"
                     )}
                   >
                     <span>Services</span>
                     <HiChevronDown
                       className={classNames(
-                        open ? "text-brandPink2" : "text-gray-900",
+                        close ? "text-gray-900" : "text-brandPink2",
                         "ml-2 h-5 w-5 group-hover:text-brandPink2"
                       )}
                       aria-hidden="true"
@@ -236,28 +217,26 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-5 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-5 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {services.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                            <Link key={item.name} href={item.href}>
+                              <a
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                onClick={() => close()}
+                              >
+                                <item.icon
+                                  className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -268,18 +247,18 @@ export default function Header() {
             </Popover>
 
             <Popover className="relative">
-              {({ open }) => (
+              {({ close }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-brandPink2" : "text-gray-900",
+                      close ? "text-gray-900" : "text-brandPink2",
                       "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-brandPink2 focus:outline-none"
                     )}
                   >
                     <span>Locations</span>
                     <HiChevronDown
                       className={classNames(
-                        open ? "text-brandPink2" : "text-gray-900",
+                        close ? "text-gray-900" : "text-brandPink2",
                         "ml-2 h-5 w-5 group-hover:text-brandPink2"
                       )}
                       aria-hidden="true"
@@ -295,28 +274,26 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-5 px-2 w-screen max-w-sm sm:px-0">
+                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-5 px-2 w-screen max-w-xs sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                          {locations.map((item) => (
+                            <Link key={item.name} href={item.href}>
+                              <a
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                onClick={() => close()}
+                              >
+                                <item.icon
+                                  className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -327,18 +304,18 @@ export default function Header() {
             </Popover>
 
             <Popover className="relative">
-              {({ open }) => (
+              {({ close }) => (
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-brandPink2" : "text-gray-900",
+                      close ? "text-gray-900" : "text-brandPink2",
                       "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-brandPink2 focus:outline-none"
                     )}
                   >
                     <span>About Us</span>
                     <HiChevronDown
                       className={classNames(
-                        open ? "text-brandPink2" : "text-gray-900",
+                        close ? "text-gray-900" : "text-brandPink2",
                         "ml-2 h-5 w-5 group-hover:text-brandPink2"
                       )}
                       aria-hidden="true"
@@ -354,28 +331,26 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-5 px-2 w-screen max-w-sm sm:px-0">
+                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-5 px-2 w-screen max-w-xs sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                            <Link key={item.name} href={item.href}>
+                              <a
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                onClick={() => close()}
+                              >
+                                <item.icon
+                                  className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
