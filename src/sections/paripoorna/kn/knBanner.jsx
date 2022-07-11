@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Box, Flex, Grid, Container, Button, Image, Text } from "theme-ui";
 import SectionHeading from "components/section-heading-kn";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -27,11 +27,11 @@ const Banner = () => {
             </Text>
             <div sx={styles.buttonGroup}>
               <Button variant="secondary">
-                <Link
-                  to="/contact-us"
-                  style={{ fontFamily: "'Noto Sans Kannada'" }}
-                >
-                  ಪ್ರಾರಂಭಿಸಿ
+                <Link href="/contact-us">
+                  <span style={{ fontFamily: "'Noto Sans Kannada'" }}>
+                    {" "}
+                    ಪ್ರಾರಂಭಿಸಿ
+                  </span>
                 </Link>
               </Button>
             </div>

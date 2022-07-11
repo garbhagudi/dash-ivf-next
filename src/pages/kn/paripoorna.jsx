@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import Banner from "Pages/Paripoorna/kn/knBanner";
-import Benefits from "Pages/Paripoorna/kn/knBenefits";
-import Faq from "Pages/Paripoorna/kn/knfaq";
-import Video from "Pages/Paripoorna/kn/knvideo-one";
-import SubscribeUs from "Pages/Home/subscribe-us";
-import WorkFlow from "Pages/Paripoorna/kn/knWorkflow";
+import Banner from "sections/paripoorna/kn/knBanner";
+import Benefits from "sections/paripoorna/kn/knBenefits";
+import Faq from "sections/paripoorna/kn/knfaq";
+import Video from "sections/paripoorna/kn/knvideo-one";
+import SubscribeUs from "sections/home/subscribe-us";
+import WorkFlow from "sections/paripoorna/kn/knWorkflow";
 
 const KnParipoorna = () => {
   return (

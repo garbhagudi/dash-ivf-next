@@ -4,7 +4,7 @@
 import { jsx } from "theme-ui";
 import { Container, Grid, Box, Heading, Text, Button } from "theme-ui";
 import SectionHeading from "components/section-heading-kn";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const data = [
   {
@@ -59,8 +59,11 @@ export default function WorkFlow() {
       </Container>
       <Box sx={styles.buttonWrapper}>
         <Button variant="secondary">
-          <Link to="/contact-us" style={{ fontFamily: "'Noto Sans Kannada'" }}>
-            ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ
+          <Link href="/contact-us">
+            <span style={{ fontFamily: "'Noto Sans Kannada'" }}>
+              {" "}
+              ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ
+            </span>
           </Link>
         </Button>
       </Box>
