@@ -1,4 +1,4 @@
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "Atom.rc-beautify"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

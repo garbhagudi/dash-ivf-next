@@ -142,7 +142,7 @@ const Ivf = () => {
           </div>
 
           {/* Gradient Feature Section */}
-          <div className="bg-gradient-to-r from-brandPink4 to-brandPurple rounded-2xl sm:rounded-none bg-opacity-10 px-2 py-14 sm:px-0">
+          <div className="bg-gradient-to-r from-brandPink4 to-brandPurple bg-opacity-10 px-2 py-14 sm:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2 max-w-7xl mx-auto ">
               <div className="max-w-md flex items-center justify-center flex-col">
                 <h3 className="text-xl sm:text-2xl font-heading font-bold">
@@ -150,7 +150,7 @@ const Ivf = () => {
                 </h3>
                 <div>
                   <p className="mt-2 text-lg">
-                    The process of IVF begins with fertility medications and 
+                    The process of IVF begins with fertility medications and
                     hormones, which are given to the woman for about 10 – 12
                     days to stimulate the growth of multiple eggs in the ovary.
                     Transvaginal ultrasound scans and hormone analysis is done
@@ -179,33 +179,37 @@ const Ivf = () => {
           </div>
 
           {/* Stats section */}
-          <div className="relative">
+          <div className="relative bg-gray-800">
             <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
               <div className="h-full w-full xl:grid xl:grid-cols-2">
                 <div className="h-full xl:relative xl:col-start-2">
                   <img
-                    className="h-full w-full object-cover opacity-40 xl:absolute xl:inset-0 "
-                    src="https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?t=st=1657276064~exp=1657276664~hmac=03b9ecae80edfea5db6205140e56a95742996665446fe59798ef23f5e9385017&w=1380"
+                    className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
+                    src="https://img.freepik.com/premium-photo/medical-banner-with-icons_1325-1526.jpg?w=1380"
                     alt="People working on laptops"
                   />
                   <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b xl:inset-y-0 xl:left-0 xl:h-full xl:bg-gradient-to-r from-brandPink4 to-brandPurple2 mix-blend-multiply"
+                    className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-800 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
                   />
                 </div>
               </div>
             </div>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8 ">
-              <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+              <div className="relative pt-12 pb-96 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
                 <h2 className="text-sm font-semibold tracking-wide uppercase"></h2>
-                <p className="mt-3 text-3xl font-extrabold">
+                <p className="mt-3 text-3xl font-extrabold text-white">
                   IVF Success Rate at GarbhaGudi
                 </p>
-                <p className="mt-5 text-lg">
-                  GarbhaGudi has one of the highest IVF treatments success rates in the industry with over 7000+ successful IVF pregnancies in the last 10-years
+                <p className="mt-5 text-lg text-gray-400">
+                  GarbhaGudi has one of the highest IVF treatments success rates
+                  in the industry with over 7000+ successful IVF pregnancies in
+                  the last 10-years
                 </p>
                 <div className="mt-10">
-                  <h4 className=" mb-5 text-center">Industry Average</h4>
+                  <h4 className="mb-5 text-center text-gray-50">
+                    Industry Average
+                  </h4>
                   <div className="w-full rounded-full h-6 bg-gray-200">
                     <div
                       className="bg-brandPink4 text-xs h-6 font-medium text-center p-0.5 leading-none rounded-l-full flex items-center justify-center"
@@ -232,7 +236,7 @@ const Ivf = () => {
             </div>
           </div>
         </main>
-        <div className="py-6 -mb-20">
+        <div className=" -mb-20">
           <CallToAction />
         </div>
       </div>
