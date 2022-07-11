@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "sections/female-infertility/banner";
 import SymptomsCauses from "sections/female-infertility/symptoms-causes";
 import DiagnosisTreatment from "sections/female-infertility/diagnosis-treatment";
-import Faq from "sections/female-infertility/Faq";
+import Faq from "sections/female-infertility/faq";
 import SubscribeUs from "sections/home/subscribe-us";
 import Head from "next/head";
 
