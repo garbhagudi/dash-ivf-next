@@ -88,7 +88,7 @@ const IndexPage = () => {
   return (
     <>
       <div
-        className="max-w-7xl mx-auto crmWebToEntityForm"
+        className="mx-auto max-w-7xl crmWebToEntityForm"
         id="crmWebToEntityForm"
       >
         <meta httpEquiv="content-type" content="text/html; charset='UTF-8'" />
@@ -138,43 +138,43 @@ const IndexPage = () => {
             name="LDTuvid"
           ></input>
           <div className="w-full max-w-2xl px-5 py-10 m-auto bg-transparent rounded-lg">
-            <div className="mb-6 text-3xl text-center text-gray-800 font-heading font-bold">
+            <div className="mb-6 text-3xl font-bold text-center text-gray-800 font-heading">
               Contact us !
             </div>
             <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
               <div className="col-span-2">
-                <div className=" relative ">
+                <div className="relative ">
                   <input
                     type="text"
                     id="Last_Name"
                     name="Last Name"
                     maxLength={80}
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
+                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-transparent border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none  focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
                     placeholder="Full Name"
                   />
                 </div>
               </div>
               <div className="col-span-2">
-                <div className=" relative ">
+                <div className="relative ">
                   <input
                     type="text"
                     id="Email"
                     name="Email"
                     ftype="Email"
                     maxLength={100}
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
+                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-transparent border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none  focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
                     placeholder="Email"
                   />
                 </div>
               </div>
               <div className="col-span-2">
-                <div className=" relative ">
+                <div className="relative ">
                   <input
                     type="text"
                     id="Phone"
                     name="Phone"
                     maxLength={30}
-                    className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-transparent text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
+                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-transparent border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none  focus:outline-none focus:ring-2 focus:ring-brandPink2 focus:border-transparent"
                     placeholder="Phone"
                     onKeyPress={(e) => {
                       if (!/[0-9]/.test(e.key)) {
@@ -187,14 +187,14 @@ const IndexPage = () => {
               {/* <div className="col-span-2">
                   <label className="text-gray-700" htmlFor="name">
                     <textarea
-                      className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                       id="comment"
                       placeholder="Enter your comment"
                       name="comment"
                     ></textarea>
                   </label>
                 </div> */}
-              <div className="col-span-2 hidden">
+              <div className="hidden col-span-2">
                 <label className="text-gray-700" htmlFor="Lead_Source">
                   <select name="Lead Source" id="Lead_Source">
                     <option value="-None-">-None-</option>
@@ -209,7 +209,7 @@ const IndexPage = () => {
                   </select>
                 </label>
               </div>
-              <div className="col-span-2 hidden">
+              <div className="hidden col-span-2">
                 <label className="text-gray-700" htmlFor="LEADCF6">
                   <select name="LEADCF6" id="LEADCF6">
                     <option value="-None-">-None-</option>
@@ -318,7 +318,7 @@ const IndexPage = () => {
                   value={"Submit"}
                   title="Submit"
                   onClick={() => onClickButton()}
-                  className="py-2 px-4  bg-brandPink4 hover:bg-brandPink focus:ring-brandPink3 focus:ring-offset-brandPink4 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                  className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-brandPink4 hover:bg-brandPink focus:ring-brandPink3 focus:ring-offset-brandPink4 focus:outline-none focus:ring-2 focus:ring-offset-2 "
                 />
               </div>
               <div className="col-span-2 text-right">
@@ -326,7 +326,7 @@ const IndexPage = () => {
                   type="reset"
                   value={"Reset"}
                   title="Reset"
-                  className="py-2 px-4  bg-brandPink4 hover:bg-brandPink focus:ring-brandPink3 focus:ring-offset-brandPink4 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                  className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-brandPink4 hover:bg-brandPink focus:ring-brandPink3 focus:ring-offset-brandPink4 focus:outline-none focus:ring-2 focus:ring-offset-2 "
                 />
               </div>
             </div>

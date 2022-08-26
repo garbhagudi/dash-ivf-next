@@ -91,15 +91,15 @@ const data = [
     designation: "Senior Andrologist",
     // website: "https://garbhagudi.com/dr-srinivas-b-v",
   },
-  // {
-  //   id: 10,
-  //   imgSrc:
-  //     "https://res.cloudinary.com/garbhagudi/image/upload/v1650949577/garbhagudi-ivf/Images%20/niddhi_m_wmjc6x.jpg",
-  //   altText: "Dr Nidhi Jhawar",
-  //   title: "Dr Nidhi Jhawar",
-  //   designation: "Fertility Specialist",
-  //   // website: "https://garbhagudi.com/dr-srinivas-b-v",
-  // },
+  {
+    id: 10,
+    imgSrc:
+      "https://res.cloudinary.com/garbhagudi/image/upload/v1661498037/garbhagudi-ivf/doctors/Dr._Nidaa-min_k7r4vz.jpg",
+    altText: "Dr. Nidaa Ashfaq Khan",
+    title: "Dr. Nidaa Ashfaq Khan",
+    designation: "Fertility Specialist",
+    // website: "https://garbhagudi.com/dr-srinivas-b-v",
+  },
 ];
 
 export default function TeamSection() {

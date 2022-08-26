@@ -1,25 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Link as A } from "theme-ui";
-import { Link as MenuLink } from "react-scroll";
-import { HiOutlineChevronRight } from "react-icons/hi";
 
-export function ScrollLink({ path, label, children, ...rest }) {
-  return (
-    <MenuLink
-      to={path}
-      spy={true}
-      offset={-70}
-      smooth={true}
-      duration={500}
-      className="nav-item"
-      activeClass="active"
-      {...rest}
-    >
-      {label}
-    </MenuLink>
-  );
-}
+import { jsx, Link as A } from "theme-ui";
+import { HiOutlineChevronRight } from "react-icons/hi";
 
 export function Link({ path, label, children, ...rest }) {
   return (

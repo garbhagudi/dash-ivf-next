@@ -4,45 +4,44 @@ import { jsx, Box, Text, Container } from "theme-ui";
 import Logo from "components/logo";
 import Link from "next/link";
 import { WidgetAbout, WidgetInfo, WidgetPages, WidgetConnect } from "./widget";
-import { about } from "./footer.data";
-import { information } from "./footer.data";
-import { pages } from "./footer.data";
-import { connect } from "./footer.data";
+import { about, information, pages, connect } from "./footer.data";
 import { rgba } from "polished";
 
 export default function Footer() {
   return (
-    <Box as="footer" sx={styles.footer}>
-      <Container>
-        <Box sx={styles.footerTopInner}>
-          <Box sx={styles.about}>
-            <Box sx={styles.logo}>
-              <Logo />
+    <div className="bg-white">
+      <Box as="footer" sx={styles.footer}>
+        <Container>
+          <Box sx={styles.footerTopInner}>
+            <Box sx={styles.about}>
+              <Box sx={styles.logo}>
+                <Logo />
+              </Box>
+              <Box sx={styles.terms}>
+                <Link href="/terms-and-conditions">Terms of use</Link>
+                <Text as="span">|</Text>
+                <Link href="/privacy-policy">Privacy</Link>
+              </Box>
+              <Text as="p" sx={styles.copyright}>
+                &copy; GarbhaGudi IVF Center - {new Date().getFullYear()}
+              </Text>
             </Box>
-            <Box sx={styles.terms}>
-              <Link href="/terms-and-conditions">Terms of use</Link>
-              <Text as="span">|</Text>
-              <Link href="/privacy-policy">Privacy</Link>
-            </Box>
-            <Text as="p" sx={styles.copyright}>
-              &copy; GarbhaGudi IVF Center - {new Date().getFullYear()}
-            </Text>
+            {about.map(({ id, title, items }) => (
+              <WidgetAbout key={id} title={title} items={items} />
+            ))}
+            {information.map(({ id, title, items }) => (
+              <WidgetInfo key={id} title={title} items={items} />
+            ))}
+            {pages.map(({ id, title, items }) => (
+              <WidgetPages key={id} title={title} items={items} />
+            ))}
+            {connect.map(({ id, title, items }) => (
+              <WidgetConnect key={id} title={title} items={items} />
+            ))}
           </Box>
-          {about.map(({ id, title, items }) => (
-            <WidgetAbout key={id} title={title} items={items} />
-          ))}
-          {information.map(({ id, title, items }) => (
-            <WidgetInfo key={id} title={title} items={items} />
-          ))}
-          {pages.map(({ id, title, items }) => (
-            <WidgetPages key={id} title={title} items={items} />
-          ))}
-          {connect.map(({ id, title, items }) => (
-            <WidgetConnect key={id} title={title} items={items} />
-          ))}
-        </Box>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </div>
   );
 }
 
