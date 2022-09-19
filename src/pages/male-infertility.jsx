@@ -5,6 +5,7 @@ import WhatIs from "sections/male-infertility/whatIs";
 import Causes from "sections/male-infertility/Causes";
 import SubscribeUs from "sections/home/subscribe-us";
 import Head from "next/head";
+import Tags from "sections/male-infertility/tags";
 
 const MaleInfertility = () => {
   return (
@@ -44,6 +45,7 @@ const MaleInfertility = () => {
       <WhatIs />
       <Causes />
       <Advancements />
+      <Tags />
       <SubscribeUs />
     </div>
   );

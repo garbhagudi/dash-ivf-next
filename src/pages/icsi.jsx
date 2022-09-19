@@ -3,7 +3,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import CallToAction from "sections/home/subscribe-us";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
-const Index = () => {
+const IndexPage = () => {
   return (
     <div className="max-w-7xl mx-auto py-12 px-3">
       <h1 className="text-center text-3xl sm:text-4xl font-heading font-bold">
@@ -26,8 +26,8 @@ const Index = () => {
             Sometimes the sperm cannot penetrate the outer layer for several
             reasons. The outer layer may be thick which is hard for the sperm to
             penetrate, the sperm may be unable to swim. In these cases, a
-            procedure called Intracytoplasmic sperm injection (ICSI) can be done
-            along with in vitro fertilization (IVF) to help fertilization with
+            procedure called Intra cytoplasmic sperm injection (ICSI) can be done
+            along with in-vitro fertilization (IVF) to help fertilization with
             the egg. During ICSI, one sperm is injected directly into the
             cytoplasm of the egg.
           </p>
@@ -62,7 +62,7 @@ const Index = () => {
                   swimming sperm are placed next to the egg during a laboratory
                   dish. Fertilization occurs when one among the sperm enters
                   into the cytoplasm of the egg. In the ICSI process, a tiny
-                  needle micropipette injects a single sperm into the egg. With
+                  needle micro-pipette injects a single sperm into the egg. With
                   either traditional IVF or ICSI, once fertilization occurs, the
                   embryo grows in a laboratory for 1 to 5 days before it gets
                   transferred to the woman’s uterus (womb).
@@ -187,4 +187,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default IndexPage;

@@ -3,70 +3,70 @@ export const treatments = {
     {
       id: 1,
       name: "PCOS/PCOD",
-      href: "/courses/ima-ams-fellowship-in-infertility",
+      href: "/pcod-pcos",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 2,
-      name: "Ovulation Induction",
-      href: "/courses/rguhs-fellowship-in-reproductive-medicine",
+      name: "Ovulation Disorders",
+      href: "/ovarian-disorders",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 3,
       name: "Laproscopy & Hysteroscopy",
-      href: "/courses/institutional-fellowship-in-reproductive-medicine",
+      href: "/Hysteroscopy-and-laparoscopy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 4,
       name: "Embryo Transfer ",
-      href: "/courses/non-resident-fellowship-in-infertility",
+      href: "/embryo-transfer",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
   ],
   male: [
     {
       name: "TESA/PESA",
-      href: "/courses/comprehensive-ultrasound-scan-training",
+      href: "/male-infertility/#tesa-pesa",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       name: "Varicocele",
-      href: "/courses/comprehensive-ultrasound-scan-training",
+      href: "/male-infertility/#varicocele",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       name: "Semen analysis / CASA",
-      href: "/courses/comprehensive-ultrasound-scan-training",
+      href: "/male-infertility/#casa",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       name: "Semen Freezing",
-      href: "/courses/comprehensive-ultrasound-scan-training",
+      href: "/male-infertility/#semen-freezing",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
   ],
   infertility: [
     {
       name: "IUI",
-      href: "/courses/andrology-lab-technician-course",
+      href: "/iui",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
 
     {
       name: "ICSI",
-      href: "/courses/institutional-diploma-in-embryology",
+      href: "/icsi",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       name: "IVF",
-      href: "/courses/institutional-diploma-in-embryology",
+      href: "/ivf",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       name: "Donor & Surrogacy",
-      href: "/courses/institutional-diploma-in-embryology",
+      href: "/donor-and-surrogacy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
   ],
@@ -97,7 +97,7 @@ export const services = [
 export const about = [
   {
     name: "About Us",
-    href: "#",
+    href: "/about",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
@@ -114,27 +114,27 @@ export const about = [
 export const locations = [
   {
     name: "Hanumanthanagar",
-    href: "#",
+    href: "/branch/hanumanthanagar",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Kalyan Nagar",
-    href: "#",
+    href: "/branch/kalyan-nagar",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "South End Circle",
-    href: "#",
+    href: "/branch/south-end-circle",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Electronic City",
-    href: "#",
+    href: "/branch/electronic-city",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Marathahalli",
-    href: "#",
+    href: "/branch/marathahalli",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
 ];

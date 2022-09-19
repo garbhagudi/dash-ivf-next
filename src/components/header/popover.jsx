@@ -154,11 +154,11 @@ export const Services = () => {
                   {services.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
                         <Image
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                          className="flex-shrink-0 w-10 h-10 text-indigo-600"
                           src={item.icon}
                           aria-hidden="true"
                           alt={item.name}
@@ -217,11 +217,11 @@ export const Locations = () => {
                   {locations.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
                         <Image
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                          className="flex-shrink-0 w-10 h-10 text-indigo-600"
                           src={item.icon}
                           aria-hidden="true"
                           alt={item.name}
@@ -280,11 +280,11 @@ export const About = () => {
                   {about.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
                         <Image
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                          className="flex-shrink-0 w-10 h-10 text-indigo-600"
                           src={item.icon}
                           aria-hidden="true"
                           alt={item.name}

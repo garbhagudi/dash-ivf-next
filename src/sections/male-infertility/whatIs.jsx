@@ -6,7 +6,7 @@ const WhatIs = () => {
       <div className="text-center text-2xl sm:text-4xl font-heading font-bold pt-12">
         What is Male Infertility?{" "}
       </div>
-      <div className="max-w-2xl text-center leading-8 mx-auto pt-4 pb-8">
+      <div className="max-w-4xl text-center mx-auto py-8">
         Male infertility is more common than what you think and there’s nothing
         to be ashamed of. It is a health issue in a man, which lowers the
         chances of his female partner getting pregnant. In over 50 % of

@@ -20,15 +20,15 @@ export const information = [
     title: "Our Information",
     items: [
       {
-        to: "/refund-policy",
+        to: "/legal/refund-policy",
         label: "Refund Policy ",
       },
       {
-        to: "/privacy-policy",
+        to: "/legal/privacy-policy",
         label: "Privacy Policy",
       },
       {
-        to: "/terms-and-conditions",
+        to: "/legal/terms-and-conditions",
         label: "Terms & Conditions",
       },
     ],
