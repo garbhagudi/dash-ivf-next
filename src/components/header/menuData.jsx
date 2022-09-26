@@ -3,25 +3,25 @@ export const treatments = {
     {
       id: 1,
       name: "PCOS/PCOD",
-      href: "/pcod-pcos",
+      href: "/female-infertility/#pcod-pcos",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 2,
       name: "Ovulation Disorders",
-      href: "/ovarian-disorders",
+      href: "/female-infertility/#ovarian-disorders",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 3,
       name: "Laproscopy & Hysteroscopy",
-      href: "/Hysteroscopy-and-laparoscopy",
+      href: "/female-infertility/#Hysteroscopy-and-laparoscopy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
       id: 4,
       name: "Embryo Transfer ",
-      href: "/embryo-transfer",
+      href: "/female-infertility/#embryo-transfer",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
   ],
@@ -114,27 +114,27 @@ export const about = [
 export const locations = [
   {
     name: "Hanumanthanagar",
-    href: "/branch/hanumanthanagar",
+    href: "/location/hanumanthanagar",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Kalyan Nagar",
-    href: "/branch/kalyan-nagar",
+    href: "/location/kalyan-nagar",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "South End Circle",
-    href: "/branch/south-end-circle",
+    href: "/location/south-end-circle",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Electronic City",
-    href: "/branch/electronic-city",
+    href: "/location/electronic-city",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
     name: "Marathahalli",
-    href: "/branch/marathahalli",
+    href: "/location/marathahalli",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
 ];

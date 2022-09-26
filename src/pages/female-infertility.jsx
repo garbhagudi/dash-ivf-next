@@ -5,6 +5,10 @@ import DiagnosisTreatment from "sections/female-infertility/diagnosis-treatment"
 import Faq from "sections/female-infertility/faq";
 import SubscribeUs from "sections/home/subscribe-us";
 import Head from "next/head";
+import PcodPcos from "sections/female-infertility-treatments/pcos-pcod";
+import EmbryoTransfer from "sections/female-infertility-treatments/embryo-transfer";
+import LaparoHystero from "sections/female-infertility-treatments/laparoscopy-hysteroscopy";
+import OvulationDisorder from "sections/female-infertility-treatments/ovulation-disorder";
 
 const FemaleInfertility = () => {
   return (
@@ -37,10 +41,14 @@ const FemaleInfertility = () => {
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
-      <Banner />
+      <PcodPcos />
       <SymptomsCauses />
+      <EmbryoTransfer />
+      <LaparoHystero />
+      <OvulationDisorder />
+      {/* <Banner /> */}
       <DiagnosisTreatment />
-      <Faq />
+      {/* <Faq /> */}
       <SubscribeUs />
     </div>
   );
