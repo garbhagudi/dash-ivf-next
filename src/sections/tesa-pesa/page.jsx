@@ -128,7 +128,7 @@ const Page = () => {
                 Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
                 condimentum id viverra nulla.
               </p>
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {features.map((feature) => (
                     <div key={feature.name} className="pt-6">
@@ -153,7 +153,7 @@ const Page = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -223,7 +223,7 @@ const Page = () => {
                   condimentum id viverra nulla.
                 </p>
               </div>
-              <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
+              {/* <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
                 {blogPosts.map((post) => (
                   <div
                     key={post.id}
@@ -284,7 +284,7 @@ const Page = () => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 
