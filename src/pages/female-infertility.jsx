@@ -1,14 +1,15 @@
 import React from "react";
-import Banner from "sections/female-infertility/banner";
+// import Banner from "sections/female-infertility/banner";
 import SymptomsCauses from "sections/female-infertility/symptoms-causes";
 import DiagnosisTreatment from "sections/female-infertility/diagnosis-treatment";
 import Faq from "sections/female-infertility/faq";
 import SubscribeUs from "sections/home/subscribe-us";
 import Head from "next/head";
-import PcodPcos from "sections/female-infertility-treatments/pcos-pcod";
+import Banner from "sections/female-infertility-treatments/banner";
 import EmbryoTransfer from "sections/female-infertility-treatments/embryo-transfer";
 import LaparoHystero from "sections/female-infertility-treatments/laparoscopy-hysteroscopy";
 import OvulationDisorder from "sections/female-infertility-treatments/ovulation-disorder";
+import PcodPcos from "sections/female-infertility-treatments/pcos-pcod";
 
 const FemaleInfertility = () => {
   return (
@@ -41,14 +42,15 @@ const FemaleInfertility = () => {
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
-      <PcodPcos />
+      <Banner />
       <SymptomsCauses />
       <EmbryoTransfer />
       <LaparoHystero />
       <OvulationDisorder />
+      <PcodPcos />
       {/* <Banner /> */}
       <DiagnosisTreatment />
-      {/* <Faq /> */}
+      <Faq />
       <SubscribeUs />
     </div>
   );

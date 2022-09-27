@@ -1,101 +1,121 @@
-import Link from "next/link";
+import React from "react";
+
 const PcodPcos = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-            <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
-              <polyline
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                points=" 8,5 8,1 16,1 16,5"
-                strokeLinejoin="round"
-              />
-              <polyline
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                points="9,15 1,15 1,5 23,5 23,15 15,15"
-                strokeLinejoin="round"
-              />
-              <polyline
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                points="22,18 22,23 2,23 2,18"
-                strokeLinejoin="round"
-              />
-              <rect
-                x="9"
-                y="13"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                width="6"
-                height="4"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Let us handle
-              <br className="hidden md:block" />
-              your next{" "}
-              <span className="inline-block text-deep-purple-accent-400">
-                destination
-              </span>
-            </h2>
-            <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
-            </p>
-          </div>
+    <div className="bg-white overflow-hidden scroll-m-28" id="pcod-pcos">
+      <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
+        <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
-            <Link href="/" aria-label="">
-              <a className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                Learn more
-                <svg
-                  className="inline-block w-3 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 12 12"
-                >
-                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                </svg>
-              </a>
-            </Link>
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase scroll-m-28">
+              Female Infertility
+            </h2>
+            <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              PCOD - PCOS
+            </h3>
           </div>
         </div>
-        <div className="flex items-center justify-center -mx-4 lg:pl-8">
-          <div className="flex flex-col items-end px-3">
-            <img
-              className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-              src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-            <img
-              className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
+        <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="relative lg:row-start-1 lg:col-start-2">
+            <svg
+              className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
+              width={404}
+              height={384}
+              fill="none"
+              viewBox="0 0 404 384"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="de316486-4a29-4312-bdfc-fbce2132a2c1"
+                  x={0}
+                  y={0}
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                width={404}
+                height={384}
+                fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
+              />
+            </svg>
+            <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
+              <figure>
+                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
+                  <img
+                    className="rounded-lg shadow-lg object-cover object-center"
+                    src="https://img.freepik.com/free-photo/beautiful-fertility-concept-3d-rendering_23-2149230688.jpg?w=1060&t=st=1664183839~exp=1664184439~hmac=69911a287c8633b80e63f15f93caca136aae68de2be9b462640bbb3a53c12597"
+                    alt="Whitney leaning against a railing on a downtown street"
+                    width={1184}
+                    height={1376}
+                  />
+                </div>
+              </figure>
+            </div>
           </div>
-          <div className="px-3">
-            <img
-              className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-              src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-              alt=""
-            />
+          <div className="mt-8 lg:mt-0">
+            <div className="text-base max-w-prose mx-auto lg:max-w-none">
+              <p className="text-lg text-gray-500">
+                Sagittis scelerisque nulla cursus in enim consectetur quam.
+                Dictum urna sed consectetur neque tristique pellentesque.
+                Blandit amet, sed aenean erat arcu morbi.
+              </p>
+            </div>
+            <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+              <p>
+                Sollicitudin tristique eros erat odio sed vitae, consequat
+                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
+                eu viverra donec ut volutpat donec laoreet quam urna.
+              </p>
+              <p>
+                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
+                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
+                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
+                a.
+              </p>
+              <p>
+                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
+                arcu, metus, egestas netus cursus. In.
+              </p>
+              <ul>
+                <li>Quis elit egestas venenatis mattis dignissim.</li>
+                <li>
+                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
+                </li>
+                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+              </ul>
+              <p>
+                Rhoncus nisl, libero egestas diam fermentum dui. At quis
+                tincidunt vel ultricies. Vulputate aliquet velit faucibus
+                semper. Pellentesque in venenatis vestibulum consectetur nibh
+                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
+                fermentum lacus in. Viverra.
+              </p>
+              <h3>How we helped</h3>
+              <p>
+                Tincidunt integer commodo, cursus etiam aliquam neque, et.
+                Consectetur pretium in volutpat, diam. Montes, magna cursus
+                nulla feugiat dignissim id lobortis amet. Laoreet sem est
+                phasellus eu proin massa, lectus. Diam rutrum posuere donec
+                ultricies non morbi. Mi a platea auctor mi.
+              </p>
+              <p>
+                Sagittis scelerisque nulla cursus in enim consectetur quam.
+                Dictum urna sed consectetur neque tristique pellentesque.
+                Blandit amet, sed aenean erat arcu morbi.
+              </p>
+            </div>
           </div>
         </div>
       </div>

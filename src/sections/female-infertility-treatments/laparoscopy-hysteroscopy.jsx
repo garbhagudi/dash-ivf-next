@@ -2,7 +2,10 @@ import React from "react";
 
 const LaparoHystero = () => {
   return (
-    <div className="relative bg-white">
+    <div
+      className="relative bg-white scroll-m-28"
+      id="hysteroscopy-and-laparoscopy"
+    >
       <div className="lg:absolute lg:inset-0">
         <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
           <img

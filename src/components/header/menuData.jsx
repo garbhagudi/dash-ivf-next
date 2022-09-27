@@ -15,7 +15,7 @@ export const treatments = {
     {
       id: 3,
       name: "Laproscopy & Hysteroscopy",
-      href: "/female-infertility/#Hysteroscopy-and-laparoscopy",
+      href: "/female-infertility/#hysteroscopy-and-laparoscopy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
@@ -83,14 +83,14 @@ export const services = [
     href: "/ivf-from-home",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
+  // {
+  //   name: "Paripoorna",
+  //   href: "/paripoorna",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+  // },
   {
-    name: "Paripoorna",
-    href: "/paripoorna",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-  },
-  {
-    name: "More Offers",
-    href: "#",
+    name: "No Cost EMI",
+    href: "/benefits/no-cost-emi",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
 ];
