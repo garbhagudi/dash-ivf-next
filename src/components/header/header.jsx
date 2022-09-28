@@ -91,7 +91,7 @@ export default function Header() {
               <div className="mt-6">
                 <div className="w-full">
                   <AccordionLayout
-                    title={"Female Infertiliry"}
+                    title={"Female Infertility"}
                     key={1}
                     index={1}
                     activeIndex={activeIndex1}
@@ -109,7 +109,7 @@ export default function Header() {
                   </AccordionLayout>
 
                   <AccordionLayout
-                    title={"Male Infertiliry"}
+                    title={"Male Infertility"}
                     key={2}
                     index={2}
                     activeIndex={activeIndex1}
@@ -163,9 +163,27 @@ export default function Header() {
                   </AccordionLayout>
 
                   <AccordionLayout
-                    title={"About Us"}
+                    title={"Locations"}
                     key={5}
                     index={5}
+                    activeIndex={activeIndex1}
+                    setActiveIndex={setActiveIndex1}
+                  >
+                    <div className="flex flex-col">
+                      {mobileMenu.locations.map((items) => (
+                        <Link href={items.href} key={items.id}>
+                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                            {items.name}
+                          </a>
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionLayout>
+
+                  <AccordionLayout
+                    title={"About Us"}
+                    key={6}
+                    index={6}
                     activeIndex={activeIndex1}
                     setActiveIndex={setActiveIndex1}
                   >
