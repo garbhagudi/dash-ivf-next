@@ -66,55 +66,41 @@ const PcodPcos = () => {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="text-base max-w-prose mx-auto lg:max-w-none">
-              <p className="text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+              <p className="prose text-gray-500">
+                PCOD or PCOS is a syndrome that affects women&apos;s ovaries,
+                the reproductive organs that generate progesterone and oestrogen
+                hormones that help regulate the menstrual cycle, as well as
+                modest amounts of hormones inhibin, relaxin, and male hormones
+                known as androgens.
               </p>
             </div>
             <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
               <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
+                PCOD affects over 10% of all women worldwide. In comparison to
+                PCOD, women with PCOS generate more male hormones than usual.
+                This hormonal imbalance leads individuals to miss menstrual
+                cycles and makes it difficult for them to conceive. This disease
+                might also cause erratic hormonal behavior.
+                <ul className="list-outside list-disc mt-2 space-y-2">
+                  <li>Diabetes</li>
+                  <li>Infertility</li>
+                  <li>Acne</li>
+                  <li>Excessive Hair Growth </li>
+                </ul>
               </p>
-              <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
+              <p className="mt-2">
+                Many women have PCOD/PCOS but are unaware of it. The following
+                symptoms impact ovulation and the ovaries:
               </p>
-              <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
-              </p>
-              <ul>
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
+              <ul className="list-outside list-disc mt-2 space-y-2">
+                <li>Cysts in the ovaries</li>
+                <li>Male hormone levels have risen.</li>
+                <li>Periods that are skipped or irregular</li>
                 <li>
-                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
+                  It&apos;s a rather prevalent condition with no known
+                  treatment.
                 </li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
               </ul>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                semper. Pellentesque in venenatis vestibulum consectetur nibh
-                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-                fermentum lacus in. Viverra.
-              </p>
-              <h3>How we helped</h3>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                Consectetur pretium in volutpat, diam. Montes, magna cursus
-                nulla feugiat dignissim id lobortis amet. Laoreet sem est
-                phasellus eu proin massa, lectus. Diam rutrum posuere donec
-                ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
-              </p>
             </div>
           </div>
         </div>

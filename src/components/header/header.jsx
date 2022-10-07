@@ -9,7 +9,7 @@ import MyModal from "components/modal";
 import AccordionLayout from "./mobileMenuLauout";
 
 export default function Header() {
-  const [activeIndex1, setActiveIndex1] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Popover className="sticky top-0 z-20 bg-white border-b-2 shadow-xl font-content">
       <div className="px-4 mx-auto max-w-7xl sm:px-6">
@@ -62,10 +62,7 @@ export default function Header() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel
-          focus
-          className="absolute inset-x-0 top-0 z-30 p-2 transition duration-500 origin-top-right transform lg:hidden"
-        >
+        <Popover.Panel className="absolute inset-x-0 top-0 z-30 p-2 transition duration-500 origin-top-right transform lg:hidden">
           <div className="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
             <div className="px-2 pt-5 pb-2">
               <div className="flex items-center justify-between">
@@ -77,7 +74,7 @@ export default function Header() {
                   />
                 </div>
                 <div className="flex items-center justify-center -mr-2">
-                  <Link href="#">
+                  <Link href="/contact-us">
                     <a className="px-2 py-1 mr-2 text-xs font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink focus:outline-none">
                       Book Now
                     </a>
@@ -94,8 +91,8 @@ export default function Header() {
                     title={"Female Infertility"}
                     key={1}
                     index={1}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.female.map((items) => (
@@ -112,8 +109,8 @@ export default function Header() {
                     title={"Male Infertility"}
                     key={2}
                     index={2}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.male.map((items) => (
@@ -130,8 +127,8 @@ export default function Header() {
                     title={"Advanced Treatments"}
                     key={3}
                     index={3}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.infertility.map((items) => (
@@ -148,8 +145,8 @@ export default function Header() {
                     title={"Value Added Service"}
                     key={4}
                     index={4}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.valueAdds.map((items) => (
@@ -166,8 +163,8 @@ export default function Header() {
                     title={"Locations"}
                     key={5}
                     index={5}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.locations.map((items) => (
@@ -184,8 +181,8 @@ export default function Header() {
                     title={"About Us"}
                     key={6}
                     index={6}
-                    activeIndex={activeIndex1}
-                    setActiveIndex={setActiveIndex1}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   >
                     <div className="flex flex-col">
                       {mobileMenu.others.map((items) => (

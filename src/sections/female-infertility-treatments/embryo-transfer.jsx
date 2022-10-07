@@ -66,54 +66,37 @@ const EmbryoTransfer = () => {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="text-base max-w-prose mx-auto lg:max-w-none">
-              <p className="text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+              <p className="prose text-gray-500">
+                Transferring a fertilized embryo to a woman&apos;s uterus is
+                critical in the in vitro fertilization process. The final stage
+                of in vitro fertilization (IVF) is embryo transfer.
               </p>
             </div>
-            <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+            <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 space-y-4">
               <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
+                Fertility drugs are used during IVF to stimulate the ovaries
+                into producing healthy eggs. These eggs are then extracted from
+                a woman’s ovaries and fertilized in a laboratory. The embryos
+                are transplanted to the woman&apos;s uterus once the fertilized
+                eggs have multiplied. The embryo must next attach itself to the
+                wall of the womb or uterus for a pregnancy to begin.
               </p>
               <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
+                The entire IVF cycle is dependent on the precise positioning of
+                embryos around the center of the endometrial cavity - with the
+                least stress and manipulation. The significance of the correct
+                embryo transfer method in IVF success cannot be emphasized
               </p>
               <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
-              </p>
-              <ul>
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
-                <li>
-                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
-                </li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-              </ul>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                semper. Pellentesque in venenatis vestibulum consectetur nibh
-                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-                fermentum lacus in. Viverra.
-              </p>
-              <h3>How we helped</h3>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                Consectetur pretium in volutpat, diam. Montes, magna cursus
-                nulla feugiat dignissim id lobortis amet. Laoreet sem est
-                phasellus eu proin massa, lectus. Diam rutrum posuere donec
-                ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+                The most effective approach currently available is
+                ultrasound-guided embryo transfer. In IVF, the woman is
+                stimulated to create numerous eggs using injectable medicines.
+                Eggs develop in the ovaries in follicles. The egg retrieval
+                method takes eggs from the ovaries once the follicles have
+                matured. We inject sperm into the eggs and examine them the next
+                day for signs of fertilization. Several days later, an adequate
+                number of embryos are delivered to the uterus with ultrasound
+                guidance for optimal positioning.
               </p>
             </div>
           </div>

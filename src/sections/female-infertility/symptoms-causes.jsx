@@ -45,7 +45,12 @@ const data = [
 
 const UsefulFeatures = () => {
   return (
-    <Box as="section" id="symp" variant="section.usefulFeatures">
+    <Box
+      as="section"
+      id="causes-and-symptoms"
+      variant="section.usefulFeatures"
+      className="scroll-m-24"
+    >
       <Container>
         <SectionHeading
           sx={styles.heading}

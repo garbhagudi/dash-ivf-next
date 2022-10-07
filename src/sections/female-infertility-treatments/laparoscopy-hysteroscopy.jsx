@@ -24,57 +24,37 @@ const LaparoHystero = () => {
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Laparoscopy and Hysteroscopy
             </h3>
-            <p className="mt-8 text-lg text-gray-500">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
-              urna sed consectetur neque tristique pellentesque. Blandit amet,
-              sed aenean erat arcu morbi.
+            <p className="mt-8 prose text-gray-500">
+              Laparoscopy and hysteroscopy are procedures that are advised
+              during infertility therapy. These treatments allow the doctor to
+              examine the tissues and organs within the pelvis and perform
+              remedial operations. Laparoscopy is used to examine and access the
+              uterus, ovaries, fallopian tubes, and other organs within the
+              pelvis. Hysteroscopy is used to examine the uterine cavity,
+              diagnose abnormalities, and undertake remedial operations. These
+              operations are best performed immediately after menstruation when
+              the view is clear.
             </p>
             <div className="mt-5 prose prose-indigo text-gray-500">
               <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
+                If you have pelvic discomfort or a history of pelvic illness,
+                the doctor may consider a laparoscopy. It aids in the diagnosis
+                and treatment of uterine fibroids, blocked tubes, endometriosis,
+                ectopic pregnancies, ovarian cysts, adhesions, and other
+                structural disorders. Following the initial fertility
+                examination, a laparoscopy may be advised. The surgery is often
+                performed under general anaesthesia.
               </p>
               <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
-              </p>
-              <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
-              </p>
-              <ul>
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
-                <li>
-                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
-                </li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-              </ul>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                semper. Pellentesque in venenatis vestibulum consectetur nibh
-                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-                fermentum lacus in. Viverra.
-              </p>
-              <h3>How we’re different</h3>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                Consectetur pretium in volutpat, diam. Montes, magna cursus
-                nulla feugiat dignissim id lobortis amet. Laoreet sem est
-                phasellus eu proin massa, lectus. Diam rutrum posuere donec
-                ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Mauris ullamcorper imperdiet nec egestas mi quis quam ante
-                vulputate. Vel faucibus adipiscing lacus, eget. Nunc fermentum
-                id tellus donec. Ut metus odio sit sit varius non nunc orci. Eu,
-                mi neque, ornare suspendisse amet, nibh. Facilisi volutpat
-                lectus id sapien dis mauris rhoncus. Est rhoncus, interdum
-                imperdiet ac eros, diam mauris, tortor. Risus id sit molestie
-                magna.
+                Hysteroscopy is commonly used to diagnose infertility,
+                miscarriage, and irregular uterine bleeding. Other imaging
+                procedures, such as ultrasonography, are frequently performed
+                before it. A hysteroscopy can aid in the detection of uterine
+                abnormalities such as fibroids, polyps, scarring, and congenital
+                deformities. During hysteroscopy, surgery may be performed to
+                repair specific problems. You may be requested to take specific
+                drugs prior to surgery to prepare the uterus. The operation is
+                conducted as an outpatient and does not need any incisions.
               </p>
             </div>
           </div>

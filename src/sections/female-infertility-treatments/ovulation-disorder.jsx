@@ -86,56 +86,75 @@ const OvulationDisorder = () => {
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
               <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
                 <p>
-                  Ultrices ultricies a in odio consequat egestas rutrum. Ut
-                  vitae aliquam in ipsum. Duis nullam placerat cursus risus
-                  ultrices nisi, vitae tellus in. Qui non fugiat aut minus aut
-                  rerum. Perspiciatis iusto mollitia iste minima soluta id.
+                  Ovulation abnormalities are among the most prevalent causes of
+                  female infertility. Ovulation disorders are disruptions in the
+                  development of an egg (also known as an oocyte or ovum) during
+                  a woman&apos;s menstrual cycle caused by issues with the
+                  control of reproductive hormones. Disorders are frequently
+                  caused by situations such as:
                 </p>
-                <p>
-                  Erat pellentesque dictumst ligula porttitor risus eget et
-                  eget. Ultricies tellus felis id dignissim eget. Est augue{" "}
-                  <a href="#">maecenas</a> risus nulla ultrices congue nunc
-                  tortor. Eu leo risus porta integer suspendisse sed sit ligula
-                  elit.
-                </p>
-                <ol>
+                <ol className="list-outside list-disc space-y-2">
                   <li>
-                    Integer varius imperdiet sed interdum felis cras in nec
-                    nunc.
+                    Hypothyroidism or hyperthyroidism is caused by hypothalamic
+                    dysfunction
                   </li>
+                  <li>Polycystic ovarian syndrome (PCOS) (PCOS)</li>
+                  <li>Early ovarian failure</li>
                   <li>
-                    Quam malesuada odio ut sit egestas. Elementum at porta
-                    vitae.
+                    Too much prolactin, a hormone that encourages breast milk
+                    production among other things
                   </li>
                 </ol>
+                <h4 className="font-bold text-lg py-4">Symptoms: </h4>
                 <p>
-                  Amet, eu nulla id molestie quis tortor. Auctor erat justo, sed
-                  pellentesque scelerisque interdum blandit lectus. Nec viverra
-                  amet ac facilisis vestibulum. Vestibulum purus nibh ac
-                  ultricies congue.
+                  Symptoms of an ovulation issue vary depending on the reason
+                  and the hormones that impact ovulation. Infertility may be the
+                  only symptom in certain situations. Others are as follows:
+                  <ul className="list-outside list-disc mt-2 space-y-2">
+                    <li>Periods that are irregular or missing are common.</li>
+                    <li>
+                      Anxiety, despair, and anxiousness are examples of mood
+                      shifts.
+                    </li>
+                    <li>
+                      Weight fluctuations – Weight growth is frequently
+                      associated with hypothyroidism, while weight loss is
+                      associated with hyperthyroidism.
+                    </li>
+                  </ul>
                 </p>
               </div>
               <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
                 <p>
-                  Erat pellentesque dictumst ligula porttitor risus eget et
-                  eget. Ultricies tellus felis id dignissim eget. Est augue
-                  maecenas risus nulla ultrices congue nunc tortor.
+                  Treatments for ovulation problems aim to improve the quality
+                  and frequency of ovulation. Among the therapies are:
                 </p>
+                <h4 className="font-bold text-lg py-4">
+                  Fertility Medications:{" "}
+                </h4>
                 <p>
-                  Eu leo risus porta integer suspendisse sed sit ligula elit.
-                  Elit egestas lacinia sagittis pellentesque neque dignissim
-                  vulputate sodales. Diam sed mauris felis risus, ultricies
-                  mauris netus tincidunt. Mauris sit eu ac tellus nibh non eget
-                  sed accumsan. Viverra ac sed venenatis pulvinar elit. Cras
-                  diam quis tincidunt lectus. Non mi vitae, scelerisque felis
-                  nisi, netus amet nisl.
+                  Fertility treatments, both oral and injectable, can encourage
+                  the ovaries to make and release eggs. The majority of women
+                  will react to an oral medicine that requires little
+                  monitoring. If a patient does not react to oral medicine, she
+                  will be started on injectable meds, which will require more
+                  frequent monitoring by a doctor
                 </p>
+                <h4 className="font-bold text-lg py-4">
+                  Modifications in lifestyle:
+                </h4>
                 <p>
-                  Eu eu mauris bibendum scelerisque adipiscing et. Justo,
-                  elementum consectetur morbi eros, posuere ipsum tortor. Eget
-                  cursus massa sed velit feugiat sed ut. Faucibus eros mauris
-                  morbi aliquam nullam. Scelerisque elementum sit magna
-                  ullamcorper dignissim pretium.
+                  Patients are urged to undertake lifestyle changes in addition
+                  to taking thyroid medication. Maintaining a healthy weight,
+                  frequent exercise, and stress-relieving techniques are all
+                  recommended.
+                </p>
+                <h4 className="font-bold text-lg py-4">
+                  Thyroid hormone replacement treatment:
+                </h4>
+                <p>
+                  Thyroxine (T4) helps put thyroid levels back into normal
+                  ranges in individuals with hypothyroidism or hyperthyroidism.
                 </p>
               </div>
             </div>
