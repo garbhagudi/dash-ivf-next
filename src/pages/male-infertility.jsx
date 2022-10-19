@@ -6,6 +6,7 @@ import Causes from "sections/male-infertility/Causes";
 import SubscribeUs from "sections/home/subscribe-us";
 import Head from "next/head";
 import Tags from "sections/male-infertility/tags";
+import AtRisk from "sections/male-infertility/AtRisk";
 
 const MaleInfertility = () => {
   return (
@@ -44,6 +45,7 @@ const MaleInfertility = () => {
       <Banner />
       <WhatIs />
       <Causes />
+      <AtRisk />
       <Advancements />
       <Tags />
       <SubscribeUs />

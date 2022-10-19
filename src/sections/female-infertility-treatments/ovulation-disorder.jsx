@@ -106,7 +106,7 @@ const OvulationDisorder = () => {
                   </li>
                 </ol>
                 <h4 className="font-bold text-lg py-4">Symptoms: </h4>
-                <p>
+                <div>
                   Symptoms of an ovulation issue vary depending on the reason
                   and the hormones that impact ovulation. Infertility may be the
                   only symptom in certain situations. Others are as follows:
@@ -122,7 +122,7 @@ const OvulationDisorder = () => {
                       associated with hyperthyroidism.
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
               <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
                 <p>

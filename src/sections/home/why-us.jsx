@@ -34,7 +34,7 @@ const data = [
     description: `Our value added service was started specially for patients seeking infertility treatment during the ongoing pandemic. The idea is to help you start IVF treatment right from the safety of your home and minimize travel risks.`,
     moreLink: "/ivf-from-home",
     image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1633780583/garbhagudi-ivf/Images%20/ivffromhome_evpbae.webp",
+      "https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/IVF-From-Home-min_pz1yhy.webp",
     list: [
       "IVF from Home",
       "GarbhaGriha ",

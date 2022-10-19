@@ -7,13 +7,11 @@ const Banner = () => {
     >
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400"></div>
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Making Couples
-              <br className="hidden md:block" />
+            <div className="max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none">
+              Making Couples <br className="hidden md:block" />
               Fertile...
-            </h2>
+            </div>
             <p className="text-base text-gray-700 md:text-lg">
               Infertility is a medical illness that can harm the patient&apos;s
               psychological, physical, emotional, spiritual, and medical

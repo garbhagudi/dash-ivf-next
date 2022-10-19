@@ -1,33 +1,32 @@
 import React from "react";
 import { Box, Container, Grid, Heading, Text } from "theme-ui";
-import Image from "components/image";
 
 const Banner = () => {
   return (
-    <Box sx={styles.banner} id="home">
-      <Container sx={styles.container}>
-        <Grid sx={styles.grid}>
-          <Box sx={styles.content}>
-            <Heading as="h3">
+    <div className="max-w-7xl mx-auto py-10 lg:py-24" id="home">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col justify-center max-w-lg mx-auto px-3">
+            <h3 className="text-3xl md:text-4xl font-heading font-bold py-4">
               Start IVF from home with our IPL treatment!
-            </Heading>
-            <Text as="p">
+            </h3>
+            <p className="text-lg mt-4">
               IPL stands for Injections, Pharmacy & Lab. It is a service by
               GarbhaGudi specially started for patients seeking infertility
               treatment during the ongoing pandemic. The idea is to help you
               start treatments from your home to keep you safe and protected.
-            </Text>
-          </Box>
-          <Box sx={styles.image}>
-            <Image
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1633779919/garbhagudi-ivf/Banners/ivffromhome_tdjvoq.webp"
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/IVF-From-Home-min_pz1yhy.webp"
+              className="w-96 sm:w-fit mx-auto flex items-center justify-center mt-10"
               alt="IVF from Home Logo"
-              style={{ width: "450px", height: "350px" }}
             />
-          </Box>
-        </Grid>
-      </Container>
-    </Box>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

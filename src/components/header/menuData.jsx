@@ -140,8 +140,8 @@ export const locations = [
   },
   {
     id: 3,
-    name: "South End Circle",
-    href: "/location/south-end-circle",
+    name: "Jayanagar",
+    href: "/location/jayanagar",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
   {
@@ -253,8 +253,8 @@ export const mobileMenu = {
     },
     {
       id: 3,
-      name: "South End Circle",
-      href: "/location/south-end-circle",
+      name: "Jayanagar",
+      href: "/location/jayanagar",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {

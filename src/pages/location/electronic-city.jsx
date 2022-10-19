@@ -33,7 +33,6 @@ const ElectronicCity = () => {
       <div className="pt-8">
         <CallToAction />
       </div>
-      <Script src="https://crm.zoho.com/crm/WebFormServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2&script=$sYG"></Script>
     </div>
   );
 };

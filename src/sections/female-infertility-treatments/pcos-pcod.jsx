@@ -55,7 +55,7 @@ const PcodPcos = () => {
                 <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                   <img
                     className="rounded-lg shadow-lg object-cover object-center"
-                    src="https://img.freepik.com/free-photo/beautiful-fertility-concept-3d-rendering_23-2149230688.jpg?w=1060&t=st=1664183839~exp=1664184439~hmac=69911a287c8633b80e63f15f93caca136aae68de2be9b462640bbb3a53c12597"
+                    src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994576/garbhagudi-ivf/New%20Website/image-0-compressed_kiox5s.jpg"
                     alt="Whitney leaning against a railing on a downtown street"
                     width={1184}
                     height={1376}
@@ -81,13 +81,13 @@ const PcodPcos = () => {
                 This hormonal imbalance leads individuals to miss menstrual
                 cycles and makes it difficult for them to conceive. This disease
                 might also cause erratic hormonal behavior.
-                <ul className="list-outside list-disc mt-2 space-y-2">
-                  <li>Diabetes</li>
-                  <li>Infertility</li>
-                  <li>Acne</li>
-                  <li>Excessive Hair Growth </li>
-                </ul>
               </p>
+              <ul className="list-outside list-disc mt-2 space-y-2">
+                <li>Diabetes</li>
+                <li>Infertility</li>
+                <li>Acne</li>
+                <li>Excessive Hair Growth </li>
+              </ul>
               <p className="mt-2">
                 Many women have PCOD/PCOS but are unaware of it. The following
                 symptoms impact ovulation and the ovaries:

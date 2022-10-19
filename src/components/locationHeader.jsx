@@ -22,14 +22,17 @@ const LocationHeader = ({ branch, mapLink, address, phone }) => {
             ></iframe>
           </div>
           <div className="flex flex-col justify-center px-3 lg:px-10 pt-10 lg:pt-0">
-            GarbhaGudi is a place where dreams come alive, hopes never fade, and
-            possibilities never end. We ceaselessly work to help you cherish the
-            golden moment of holding your little bundles of joy.
-            <br />
-            <br />
-            Worry no more to travel far distances for your fertlity Treatments!
-            GarbhaGudi has five strategically located branches in Bengaluru and
-            plans to expand to other areas soon.
+            <p>
+              GarbhaGudi is a place where dreams come alive, hopes never fade,
+              and possibilities never end. We strive tirelessly to assist you to
+              treasure the golden moment of holding your little bundles of joy.
+            </p>
+            <p className="mt-4">
+              You no longer need to go long distances for fertility treatments!
+              GarbhaGudi now has five strategically positioned branches in
+              Bengaluru and wants to expand to additional places in the near
+              future.
+            </p>
             <div className="pt-4 flex flex-col space-y-4">
               <div>
                 Phone:{" "}
@@ -55,19 +58,6 @@ const LocationHeader = ({ branch, mapLink, address, phone }) => {
               alt="image"
               className="h-40 object-cover object-center rounded-xl mt-8"
             />
-            {/* <div>
-              <Script
-                strategy="afterInteractive"
-                id="form"
-                dangerouslySetInnerHTML={{
-                  __html: `function wfa_pstMesgFrmFom (evt){if(evt.origin === 'https://crm.zoho.com'|| evt.origin === 'https://crm.zohopublic.com'){var loc_obj=JSON.stringify({ origin:window.location.origin, pathname:window.location.pathname, search:window.location.search, hash:window.location.hash}); evt.source.postMessage(('prnt_wnd_pg_lc_rc_frm_prwindow_'+loc_obj), evt.origin);}}window.addEventListener('message', wfa_pstMesgFrmFom, false);`,
-                }}
-              />
-              <iframe
-                className="w-screen max-w-xl h-80"
-                src="https://crm.zoho.com/crm/WebFormServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2"
-              ></iframe>
-            </div> */}
           </div>
         </div>
       </div>

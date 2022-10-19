@@ -27,7 +27,7 @@ const Causes = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780881/garbhagudi-ivf/Images%20/low-sperm_j21spq.jpg"
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp"
             alt="lsc"
             className="my-4 sm:mt-0 w-72"
           />
@@ -49,7 +49,7 @@ const Causes = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780880/garbhagudi-ivf/Images%20/sperm-movement_mpnozg.jpg"
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Poor-sperm-movement-min_flsze3.webp"
             alt="lsc"
             className="my-4 sm:mt-0 w-72"
           />
@@ -73,9 +73,33 @@ const Causes = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780880/garbhagudi-ivf/Images%20/sperm-quality_aqp6kp.jpg"
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Sperm-Quality-min_tzt5zb.webp"
             alt="lsc"
             className="my-4 sm:mt-0 w-72"
+          />
+        </div>
+      </div>
+      <div
+        className="grid grid-cols-1 lg:grid-cols-2 py-8 scroll-m-16 lg:scroll-m-28"
+        id="varicocele"
+      >
+        <div className="flex items-start justify-center flex-col">
+          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+            Structural Issues
+          </h3>
+          <p className="mt-4">
+            Anything that clogs the genital tract can prevent the passage of
+            sperm. This might be the result of a genetic or congenital defect.
+            Infection or inflammation caused by a sexually transmitted disease
+            can also obstruct sperm production. Other reasons include surgical
+            scar tissue or twisted, bulging veins in the scrotum.
+          </p>
+        </div>
+        <div className="flex items-center justify-center">
+          <Image
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp"
+            alt="lsc"
+            className="my-4 sm:mt-0 w-80"
           />
         </div>
       </div>
@@ -100,9 +124,9 @@ const Causes = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/01/1884335-Varicocele.20220125174126722.png?w=1155&h=1722"
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Varicocele-min_twb33l.webp"
             alt="lsc"
-            className="my-4 sm:mt-0 w-72 border border-brandPurpleDark rounded-lg"
+            className="my-4 sm:mt-0 scale-75"
           />
         </div>
       </div>
