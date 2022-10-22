@@ -121,7 +121,7 @@ export const about = [
   {
     id: 3,
     name: "Our Fertility Experts",
-    href: "#",
+    href: "/our-fertility-experts",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
 ];
@@ -311,7 +311,7 @@ export const mobileMenu = {
     {
       id: 3,
       name: "Our Fertility Experts",
-      href: "#",
+      href: "/our-fertility-experts",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
   ],
