@@ -7,6 +7,7 @@ const DoctorLayout = ({
   index,
   imageComponent,
   activeIndex,
+  docpic,
   setActiveIndex,
   bio,
 }) => {
@@ -62,6 +63,11 @@ const DoctorLayout = ({
                     >
                       {name}
                     </Dialog.Title>
+                    <img
+                      src={docpic}
+                      alt={name}
+                      className="w-44 h-44 mx-auto m-4 rounded-full"
+                    />
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">{bio}</p>
                     </div>

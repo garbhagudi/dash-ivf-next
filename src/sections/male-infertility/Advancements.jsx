@@ -8,7 +8,7 @@ const Advancements = () => {
       </h3>
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="">
+          <div className="flex items-center justify-center flex-col">
             <h4
               className="text-xl mt-8 sm:text-2xl font-heading font-bold text-center scroll-m-10 md:scroll-m-28"
               id="casa"
@@ -27,13 +27,20 @@ const Advancements = () => {
               treatment can be specifically tailored for male infertility.
             </p>
           </div>
+          <div className="flex items-center justify-center mx-auto lg:ml-10">
+            <img
+              src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/CASA-min_kb4aei.jpg"
+              alt="CASA"
+              className="rounded-lg"
+            />
+          </div>
         </div>
       </div>
       <div
         className="mt-10 scroll-m-10 md:scroll-m-28 grid grid-cols-1 lg:grid-cols-2"
         id="tesa-pesa"
       >
-        <div>
+        <div className="flex items-center justify-center flex-col">
           <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
             Percutaneous Epididymal Sperm Aspiration (PESA)
           </h4>
@@ -52,9 +59,15 @@ const Advancements = () => {
             as it does not involve any surgical incision.
           </p>
         </div>
+        <div className="w-96 flex items-center justify-center mx-auto">
+          <img
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/PESA-min_uoxqt7.webp"
+            alt="pesa"
+          />
+        </div>
       </div>
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
-        <div>
+        <div className="flex items-center justify-center flex-col">
           <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
             Testicular Sperm Aspiration (TESA)
           </h4>
@@ -84,12 +97,18 @@ const Advancements = () => {
             father. GarbhaGudi IVF Centre – A path from dreams to success.
           </p>
         </div>
+        <div className="w-96 flex items-center justify-center mx-auto">
+          <img
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/TESA-min_fep5ds.webp"
+            alt="TESA"
+          />
+        </div>
       </div>
       <div
         className="mt-10 grid grid-cols-1 lg:grid-cols-2 scroll-m-28"
         id="semen-freezing"
       >
-        <div>
+        <div className="flex items-center justify-center flex-col">
           <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
             Semen Freezing
           </h4>
@@ -104,6 +123,12 @@ const Advancements = () => {
             it for future therapy. Frozen sperm (including donor sperm) can thus
             be used in IVF and IUI in the future.
           </p>
+        </div>
+        <div className="w-96 flex items-center justify-center mx-auto">
+          <img
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Semen-Freezing-min_pfcrvp.png"
+            alt="Semen Freezing"
+          />
         </div>
       </div>
     </div>

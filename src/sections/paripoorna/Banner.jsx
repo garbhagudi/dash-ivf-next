@@ -3,6 +3,7 @@
 import { jsx, Box, Flex, Grid, Container, Button, Image, Text } from "theme-ui";
 import SectionHeading from "components/section-heading";
 import Link from "next/link";
+import MyModal from "components/modal";
 
 const Banner = () => {
   return (
@@ -18,15 +19,13 @@ const Banner = () => {
               Our intention is to serve couple who are missing parenthood. With
               our experience, we know that not every couple can afford IVF. With
               this in mind, GarbhaGudi IVF Centre in association with GarbhaGnan
-              Foundation, initiated a program called PARIPOORNA-2021. Under this
-              programme, the couple can{" "}
-              <strong>avail up to 50% discount </strong>on cost of IVF
+              Foundation, initiated a program called PARIPOORNA 2022 - 23. Under
+              this programme, the couple can{" "}
+              <strong>avail up to ₹30,000 discount </strong>on cost of IVF
               treatment.
             </Text>
-            <div sx={styles.buttonGroup}>
-              <Button variant="secondary">
-                <Link href="/contact-us">Get Started</Link>
-              </Button>
+            <div className="mt-8">
+              <MyModal title={"Get Started"} />
             </div>
           </Box>
           <Flex as="figure" sx={styles.illustration}>

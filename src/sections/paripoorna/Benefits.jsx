@@ -10,8 +10,9 @@ const Benefits = () => {
         <Box sx={styles.grid}>
           <Flex sx={styles.illustration}>
             <Img
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1638186087/garbhagudi-ivf/Images%20/english_creativbe_bvlhzr.webp"
+              src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1672910543/Misc/4_Extended_Offer-Kan_9-16-min_h91vfc.webp"
               alt="benefits"
+              className="rounded-xl my-4"
             />
           </Flex>
           <Box>

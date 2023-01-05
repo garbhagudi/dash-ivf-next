@@ -17,7 +17,7 @@ const VideoOne = () => {
         <Heading as="h3">Paripoorna Overview</Heading>
         <Box sx={styles.videoBox}>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1638186081/garbhagudi-ivf/Images%20/you_thumbnail_english_wclz9v.webp"
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1672910725/Misc/4_Extended_Offer_Ad-Creative_YT_Bnr-min_pcph7o.webp"
             alt="testimonial video"
           />
           <Link
@@ -33,7 +33,7 @@ const VideoOne = () => {
       <ModalVideo
         channel="youtube"
         isOpen={videoOpen}
-        videoId="0bYpBiT1pJs"
+        videoId="OQEFbV9AB5w"
         onClose={() => setVideoOpen(false)}
       />
     </Box>

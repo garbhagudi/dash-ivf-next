@@ -60,16 +60,6 @@ const faqs = [
     ),
   },
   {
-    title: `How can I track my application status ?`,
-    contents: (
-      <div>
-        Once submitted, you will not be able to make any corrections. Hence, you
-        are requested to carefully view the form and update appropriate
-        information and validate before submitting.
-      </div>
-    ),
-  },
-  {
     title: `What is the last date to apply for PARIPOORNA program?`,
     contents: (
       <div>Register for the PARIPOORNA program before 31st Dec’2021.</div>
@@ -81,15 +71,6 @@ const faqs = [
       <div>
         Yes, you can apply, but we recommend you not to discontinue the
         treatment as it could affect the success rate of your treatment.
-      </div>
-    ),
-  },
-  {
-    title: `If I do not wish to register at my first visit at GarbhaGudi, can I register at a later date when need be?`,
-    contents: (
-      <div>
-        GarbhaGudi comes up with various benefit plans frequently, so you have a
-        chance to register till other clause of benefit plan.
       </div>
     ),
   },

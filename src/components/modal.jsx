@@ -7,6 +7,7 @@ export default function MyModal({ title }) {
 
   function closeModal() {
     setIsOpen(false);
+    window.location.reload();
   }
 
   function openModal() {
@@ -50,7 +51,7 @@ export default function MyModal({ title }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-lg transform rounded cursor-pointer overflow-hidden bg-gray-50 opacity-95 align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-lg -mt-5 transform rounded cursor-pointer overflow-hidden bg-gray-50 opacity-95 align-middle shadow-xl transition-all">
                   <div
                     className="my-4 flex sm:hidden items-center justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg"
                     onClick={closeModal}
@@ -59,7 +60,7 @@ export default function MyModal({ title }) {
                   </div>
                   <Form />
                   <div
-                    className="my-4 flex items-center hidden sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg"
+                    className="hidden my-4 items-center sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg"
                     onClick={closeModal}
                   >
                     Close

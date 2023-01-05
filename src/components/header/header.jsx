@@ -38,7 +38,7 @@ export default function Header() {
             <div className="hidden md:flex">
               <MyModal title={"Book Appointment"} />
             </div>
-            <Link href="/contact-us">
+            <Link href="/contact.html">
               <a className="flex items-center justify-end px-3 py-1 ml-8 text-sm font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink">
                 Book Now
               </a>

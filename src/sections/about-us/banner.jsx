@@ -1,3 +1,4 @@
+import MyModal from "components/modal";
 import React from "react";
 
 function HeroHome() {
@@ -35,17 +36,12 @@ function HeroHome() {
               </p>
               <div className="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-10 items-center justify-center">
                 <div>
-                  <a
-                    className="px-3 py-3 rounded-xl text-white bg-brandPink hover:bg-brandPink4 w-full"
-                    href="#0"
-                  >
-                    Book a free consultation
-                  </a>
+                  <MyModal title={"Book a Free Consultation"} />
                 </div>
                 <div>
                   <a
-                    className="px-3 py-3 rounded-xl text-white bg-gray-900 hover:bg-gray-800 w-full"
-                    href="#0"
+                    className="px-5 py-4 font-semibold rounded-lg text-white bg-gray-900 hover:bg-gray-800 w-full"
+                    href="#"
                   >
                     Learn more
                   </a>

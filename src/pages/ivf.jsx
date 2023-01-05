@@ -3,10 +3,214 @@ import CallToAction from "sections/home/subscribe-us";
 import MyModal from "components/modal";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import Head from "next/head";
 
 const Ivf = () => {
+  function addReviewJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/", 
+          "@type": "Product", 
+          "name": "In-vitro Fertilization (IVF)",
+          "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
+          "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
+          "brand": {
+            "@type": "Brand",
+            "name": "Garbha Gudi"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "604"
+          }
+        }`,
+    };
+  }
+
+  function addBreadcrumbsJsonLd() {
+    return {
+      __html: `{
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "name": "HOME",
+              "item": "https://www.garbhagudi.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "name": "treatments",
+              "item": "https://www.garbhagudi.com/treatments/"
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "name": "In-vitro Fertilization (IVF)",
+              "item": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf"
+            }
+          ]
+        }`,
+    };
+  }
+
+  function addProductJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/", 
+        "@type": "Service", 
+        "name": "In-vitro Fertilization (IVF)",
+        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
+        "description": "What is IVF and how does it work ? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
+        "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf",
+        "priceCurrency": "INR",
+        "lowPrice": "90000",
+        "highPrice": "220000"
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+          "itemReviewed": {
+          "@type": "Hospital",
+          "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
+          "name": "Garbha Gudi",
+          "telephone": "+918880000909",
+          "priceRange": "90000 - 280000"
+          }
+        } 
+      }`,
+    };
+  }
+
+  function addHowToJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org/",
+        "@type": "HowTo",
+        "name": "How do you prepare for IVF?",
+        "description": "Various screening procedures have to be done before beginning an IVF cycle",
+        "image": "https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm",
+        "totalTime": "PT5M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "text": "The process of IVF begins with fertility medications and hormones, which are given to the woman for about 10 – 12 days to stimulate the growth of multiple eggs in the ovary. Transvaginal ultrasound scans and hormone analysis is done to know the status of growing eggs.",
+            "name": "Ovulation induction",
+            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=may%20be%20required.-,Ovulation%20induction,-The%20process%20of"
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Egg retrieval is done 34 to 36 hours after the final trigger injection and before ovulation.",
+            "name": "Egg retrieval",
+            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=hormones%20being%20injected.-,Egg%20retrieval,-Egg%20retrieval%20is"
+          },
+          {
+            "@type": "HowToStep",
+            "text": "The male counterpart is asked to produce a sample of semen by ejaculating. The sperms and eggs are put together in a dish and stored in the laboratory in a controlled environment to encourage fertilization.",
+            "name": "Fertilization",
+            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=fertilize%20the%20eggs.-,Fertilization,-The%20male%20counterpart"
+          },
+          {
+            "@type": "HowToStep",
+            "text": "The embryos are usually transferred into the woman’s uterus three to five days after egg retrieval and fertilization.",
+            "name": "Embryo Transfer",
+            "url": "https://www.garbhagudi.com/treatments/in-vitro-fertilization-ivf#:~:text=IVF%20cycles%20failed.-,Embryo%20Transfer,-The%20embryos%20are"
+          },
+          {
+            "@type": "HowToStep",
+            "text": "In an IVF cycle, one or more embryos develop and these embryos are usually frozen for later use.",
+            "name": "Frozen Embryo transfer",
+            "url": "Frozen Embryo transfer"
+          },
+          {
+            "@type": "HowToStep",
+            "text": "There may be a slight discomfort after the embryo transfer, normal daily activities can be resumed.",
+            "name": "After the Embryo Transfer procedure",
+            "url": "After the Embryo Transfer procedure"
+          }
+        ]
+      }`,
+    };
+  }
   return (
     <div>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>In-vitro Fertilization - IVF | GarbhaGudi</title>
+        <meta
+          name="title"
+          content="In-vitro Fertilization - IVF | GarbhaGudi"
+        />
+        <meta
+          name="description"
+          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+        />
+
+        {/* Ld+JSON Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addReviewJsonLd()}
+          key="review-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addProductJsonLd()}
+          key="product-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addBreadcrumbsJsonLd()}
+          key="breadcrumbs-jsonld"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addHowToJsonLd()}
+          key="howto-jsonld"
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property="og:title"
+          content="In-vitro Fertilization - IVF | GarbhaGudi"
+        />
+        <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
+        <meta property="og:url" content="https://garbhagudi-ivf.com" />
+        <meta
+          property="og:description"
+          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm"
+        />
+
+        {/* Twitter*/}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@garbhagudiivf" />
+        <meta
+          name="twitter:title"
+          content="In-vitro Fertilization - IVF | GarbhaGudi"
+        />
+        <meta
+          name="twitter:description"
+          content="What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART)."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media.graphassets.com/B1dYqOD6RMihLOVzSDCm"
+        />
+      </Head>
       <div className="mx-auto py-12">
         <main>
           {/* Hero section */}
@@ -17,8 +221,8 @@ const Ivf = () => {
                 <div className="absolute inset-0">
                   <img
                     className="h-full w-full object-cover"
-                    src="https://img.freepik.com/premium-vector/childless-couples-plan-queue-reproductive-center-clinic-doctor-flat-vector-illustration-isolated_125133-1561.jpg?w=1380"
-                    alt="People working on laptops"
+                    src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Start_IVF_Journey-min_fkc1xs.jpg"
+                    alt="Start IVF Journey"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-brandPink4 to-brandPurple2 mix-blend-multiply" />
                 </div>
@@ -74,7 +278,7 @@ const Ivf = () => {
                       </div>
                       <div className="mt-6">
                         <a
-                          href="#"
+                          href="#know-more"
                           className="inline-flex bg-gradient-to-r from-brandPink4 to-brandPurple bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-brandPink hover:to-brandPurpleDark"
                         >
                           Know More
@@ -87,7 +291,7 @@ const Ivf = () => {
                   <div className="px-2 sm:px-0 lg:pl-4 lg:-mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://img.freepik.com/free-vector/hand-drawn-flat-design-ivf-infographic_23-2149367789.jpg?t=st=1657263078~exp=1657263678~hmac=0222a98bad4eb649fc59effafa1aae60a2316ce746f97b7af047b84e659f9a02&w=1380"
+                      src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1671177124/Misc/PNG_25_yoa08y.webp"
                       alt="Inbox user interface"
                     />
                   </div>
@@ -119,7 +323,7 @@ const Ivf = () => {
                       </div>
                       <div className="mt-6">
                         <a
-                          href="#"
+                          href="#know-more"
                           className="inline-flex bg-gradient-to-r from-brandPink4 to-brandPurple bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-brandPink hover:to-brandPurpleDark"
                         >
                           Know More
@@ -131,8 +335,8 @@ const Ivf = () => {
                 <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                   <div className="px-2 sm:px-0 lg:pr-4 lg:-ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
-                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://img.freepik.com/free-vector/hand-drawn-flat-design-infertility-infographic_23-2149367796.jpg?w=1380"
+                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none lg:px-28"
+                      src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png"
                       alt="Customer profile user interface"
                     />
                   </div>
@@ -142,7 +346,10 @@ const Ivf = () => {
           </div>
 
           {/* Gradient Feature Section */}
-          <div className="bg-gradient-to-r from-brandPink4 to-brandPurple bg-opacity-10 px-2 py-14 sm:px-0">
+          <div
+            className="bg-gradient-to-r from-brandPink4 to-brandPurple bg-opacity-10 px-2 py-14 sm:px-0 scroll-m-16"
+            id="know-more"
+          >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2 max-w-7xl mx-auto ">
               <div className="max-w-md flex items-center justify-center flex-col">
                 <h3 className="text-xl sm:text-2xl font-heading font-bold">
@@ -179,13 +386,13 @@ const Ivf = () => {
           </div>
 
           {/* Stats section */}
-          <div className="relative mt-10">
+          <div className="relative">
             <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
               <div className="h-full w-full xl:grid xl:grid-cols-2">
                 <div className="h-full xl:relative xl:col-start-2">
                   <img
                     className="h-full w-full object-cover xl:absolute xl:inset-0"
-                    src="https://img.freepik.com/premium-photo/medical-banner-with-icons_1325-1526.jpg?w=1380"
+                    src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/IVF_Success_Rate-min_qtrrke.webp"
                     alt="rounded-xl"
                   />
                 </div>
@@ -232,7 +439,7 @@ const Ivf = () => {
             </div>
           </div>
         </main>
-        <div className=" -mb-20">
+        <div className=" mt-20">
           <CallToAction />
         </div>
       </div>

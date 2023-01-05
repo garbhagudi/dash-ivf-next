@@ -4,7 +4,7 @@
 import { jsx } from "theme-ui";
 import { Container, Grid, Box, Heading, Text, Button } from "theme-ui";
 import SectionHeading from "components/section-heading";
-import Link from "next/link";
+import MyModal from "components/modal";
 
 const data = [
   {
@@ -47,11 +47,9 @@ export default function WorkFlow() {
           ))}
         </Grid>
       </Container>
-      <Box sx={styles.buttonWrapper}>
-        <Button variant="secondary">
-          <Link href="/contact-us">Book an Appointment</Link>
-        </Button>
-      </Box>
+      <div className="mx-auto text-center mt-12">
+        <MyModal title={"Book an Appointment"} />
+      </div>
     </section>
   );
 }

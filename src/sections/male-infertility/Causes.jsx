@@ -97,9 +97,9 @@ const Causes = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp"
+            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Sperm-Structure-min_eyhwz0.webp"
             alt="lsc"
-            className="my-4 sm:mt-0 w-80"
+            className="my-4 sm:mt-0 w-3/4"
           />
         </div>
       </div>

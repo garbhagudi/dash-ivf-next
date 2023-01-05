@@ -52,12 +52,12 @@ export const treatments = {
     },
   ],
   infertility: [
-    {
-      id: 1,
-      name: "IUI",
-      href: "/iui",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
+    // {
+    //   id: 1,
+    //   name: "IUI",
+    //   href: "/iui",
+    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    // },
 
     {
       id: 2,
@@ -65,18 +65,20 @@ export const treatments = {
       href: "/icsi",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
+
     {
       id: 3,
       name: "IVF",
       href: "/ivf",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
-    {
-      id: 4,
-      name: "Donor & Surrogacy",
-      href: "/donor-and-surrogacy",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
+
+    // {
+    //   id: 4,
+    //   name: "Donor & Surrogacy",
+    //   href: "/donor-and-surrogacy",
+    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    // },
   ],
 };
 
@@ -112,12 +114,12 @@ export const about = [
     href: "/about",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
-  {
-    id: 2,
-    name: "Dr Asha S Vijay",
-    href: "#",
-    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-  },
+  // {
+  //   id: 2,
+  //   name: "Dr Asha S Vijay",
+  //   href: "#",
+  //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+  // },
   {
     id: 3,
     name: "Our Fertility Experts",
@@ -212,12 +214,12 @@ export const mobileMenu = {
     },
   ],
   infertility: [
-    {
-      id: 1,
-      name: "IUI",
-      href: "/iui",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
+    // {
+    //   id: 1,
+    //   name: "IUI",
+    //   href: "/iui",
+    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    // },
 
     {
       id: 2,
@@ -231,12 +233,12 @@ export const mobileMenu = {
       href: "/ivf",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
-    {
-      id: 4,
-      name: "Donor & Surrogacy",
-      href: "/donor-and-surrogacy",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
+    // {
+    //   id: 4,
+    //   name: "Donor & Surrogacy",
+    //   href: "/donor-and-surrogacy",
+    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    // },
   ],
   locations: [
     {
@@ -302,12 +304,12 @@ export const mobileMenu = {
       href: "/about",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
-    {
-      id: 2,
-      name: "Dr Asha S Vijay",
-      href: "#",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
+    // {
+    //   id: 2,
+    //   name: "Dr Asha S Vijay",
+    //   href: "#",
+    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    // },
     {
       id: 3,
       name: "Our Fertility Experts",

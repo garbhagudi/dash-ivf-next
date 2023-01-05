@@ -14,6 +14,12 @@ const Banner = () => {
               Making families smile since 2011
             </p>
           </div>
+          <div className="text-lg text-center mb-4 px-3 py-2 bg-gray-300 max-w-lg font-semibold mx-auto rounded-lg">
+            To Book an Appointment call{" "}
+            <a href="tel+918880000909" className="text-brandPink">
+              +918880000909
+            </a>
+          </div>
           <div className="mx-auto">
             <div className="text-center">
               <MyModal title="Get Started" />
