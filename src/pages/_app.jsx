@@ -4,7 +4,6 @@ import theme from "theme";
 import "../styles/globals.css";
 import "../styles/calendar.css";
 import "react-modal-video/css/modal-video.min.css";
-import "rc-drawer/assets/index.css";
 import TagManager from "react-gtm-module";
 import SalesIQ from "components/SalesIQ";
 import Footer from "components/footer/footer";

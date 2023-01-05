@@ -16,14 +16,14 @@ export default function Header() {
         <div className="flex items-center justify-between py-3 border-gray-100 sm:py-5 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a>
+              <div>
                 <span className="sr-only">Workflow</span>
                 <Image
                   className="h-10 sm:h-14"
                   src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg"
                   alt="logo"
                 />
-              </a>
+              </div>
             </Link>
           </div>
 
@@ -39,9 +39,9 @@ export default function Header() {
               <MyModal title={"Book Appointment"} />
             </div>
             <Link href="/contact.html">
-              <a className="flex items-center justify-end px-3 py-1 ml-8 text-sm font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink">
+              <div className="flex items-center justify-end px-3 py-1 ml-8 text-sm font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink">
                 Book Now
-              </a>
+              </div>
             </Link>
             <div className="ml-2 -my-2 -mr-2 lg:hidden">
               <Popover.Button className="flex items-end justify-between p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink">
@@ -75,9 +75,9 @@ export default function Header() {
                 </div>
                 <div className="flex items-center justify-center -mr-2">
                   <Link href="/contact-us">
-                    <a className="px-2 py-1 mr-2 text-xs font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink focus:outline-none">
+                    <div className="px-2 py-1 mr-2 text-xs font-medium text-white border border-transparent rounded-md shadow-sm md:hidden whitespace-nowrap bg-brandPink3 hover:bg-brandPink focus:outline-none">
                       Book Now
-                    </a>
+                    </div>
                   </Link>
                   <Popover.Button className="inline-flex items-center justify-center p-2 mr-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink">
                     <span className="sr-only">Close menu</span>
@@ -97,9 +97,9 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.female.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>
@@ -115,15 +115,15 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.male.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>
                   </AccordionLayout>
 
-                  <AccordionLayout
+                  {/* <AccordionLayout
                     title={"Advanced Treatments"}
                     key={3}
                     index={3}
@@ -133,13 +133,13 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.infertility.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>
-                  </AccordionLayout>
+                  </AccordionLayout> */}
 
                   <AccordionLayout
                     title={"Value Added Service"}
@@ -151,9 +151,9 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.valueAdds.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>
@@ -169,9 +169,9 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.locations.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>
@@ -187,9 +187,9 @@ export default function Header() {
                     <div className="flex flex-col">
                       {mobileMenu.others.map((items) => (
                         <Link href={items.href} key={items.id}>
-                          <a className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
+                          <div className="px-2 py-2 text-sm hover:bg-brandPink4 hover:font-semibold hover:text-white rounded-xl">
                             {items.name}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>

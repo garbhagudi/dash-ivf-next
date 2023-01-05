@@ -86,29 +86,6 @@ export const Treatments = () => {
                   ))}
                 </div>
                 <hr />
-                <p className="bg-white text-brandDark px-4 py-2 text-xs sm:text-sm font-bold underline">
-                  Infertility
-                </p>
-                <div className="relative grid gap-8 bg-white p-3 grid-cols-2">
-                  {treatments.infertility.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => close()}
-                      className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-blue-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                        <img src={item.icon} alt={item.name} />
-                      </div>
-                      <div className="ml-4">
-                        <p className="sm:text-sm text-xs font-medium text-gray-900">
-                          {item.name}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-                <hr />
               </div>
             </Popover.Panel>
           </Transition>
@@ -153,7 +130,7 @@ export const Services = () => {
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   {services.map((item) => (
                     <Link key={item.name} href={item.href}>
-                      <a
+                      <div
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
@@ -168,7 +145,7 @@ export const Services = () => {
                             {item.name}
                           </p>
                         </div>
-                      </a>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -216,7 +193,7 @@ export const Locations = () => {
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   {locations.map((item) => (
                     <Link key={item.name} href={item.href}>
-                      <a
+                      <div
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
@@ -231,7 +208,7 @@ export const Locations = () => {
                             {item.name}
                           </p>
                         </div>
-                      </a>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -279,7 +256,7 @@ export const About = () => {
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   {about.map((item) => (
                     <Link key={item.name} href={item.href}>
-                      <a
+                      <div
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         onClick={() => close()}
                       >
@@ -294,7 +271,7 @@ export const About = () => {
                             {item.name}
                           </p>
                         </div>
-                      </a>
+                      </div>
                     </Link>
                   ))}
                 </div>

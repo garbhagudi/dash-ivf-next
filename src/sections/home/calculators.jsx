@@ -27,9 +27,9 @@ const Calculators = () => {
               <Box sx={styles.content}>
                 <Heading>
                   <Link href={item.path} target="_blank">
-                    <a>
+                    <div>
                       {item?.title} <BsArrowRight className="inline-flex" />
-                    </a>
+                    </div>
                   </Link>
                 </Heading>
                 <Text as="p">{item?.description}</Text>

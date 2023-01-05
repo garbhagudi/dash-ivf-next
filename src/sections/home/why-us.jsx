@@ -1,17 +1,12 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Box, Container, Heading, Text } from "theme-ui";
-import Tabs, { TabPane } from "rc-tabs/";
+import React from "react";
+import { Tab } from "@headlessui/react";
 import { RiCheckboxCircleFill } from "react-icons/ri";
-import { rgba } from "polished";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Link from "next/link";
 
 const data = [
   {
     id: 1,
     tabTitle: "Treatment Options",
-    title: `You are not fighting alone against infertility!`,
+    title: `You are not fighting alone against Infertility!`,
     description: `"GarbhaGudi provides an in-depth analysis of infertility issues and makes a tailored treatment protocol since every individual is unique."`,
     moreLink: "/online-consultation",
     image:
@@ -48,140 +43,66 @@ const data = [
 
 const WhyUs = () => {
   return (
-    <Box as="section" sx={styles.section}>
-      <Container>
-        <Tabs sx={styles.tabs} animated={{ tabPane: true }}>
-          {data?.map((item) => (
-            <TabPane
-              key={item.id}
-              tab={<Heading as="h4">{item.tabTitle}</Heading>}
-            >
-              <Box>
-                <Heading>{item.title}</Heading>
-                <Text as="p" sx={styles.description}>
-                  {item.description}
-                </Text>
-                <Box sx={styles.list}>
-                  {item.list.map((item, i) => (
-                    <Box key={i} className="list-item">
-                      <RiCheckboxCircleFill
-                        color="#3FDBB1"
-                        size="20px"
-                        sx={{ mr: 2 }}
-                      />
-                      <span>{item}</span>
-                    </Box>
-                  ))}
-                </Box>
-                <Box sx={styles.learnMore}>
-                  <Link href={item.moreLink}>Explore more</Link>
-                </Box>
-              </Box>
-              <Box sx={styles.illustration}>
-                <LazyLoadImage src={item.image} alt="illustration" />
-              </Box>
-            </TabPane>
-          ))}
-        </Tabs>
-      </Container>
-    </Box>
+    <div className="bg-green-50">
+      <div className="max-w-7xl mx-auto">
+        <Tab.Group>
+          <Tab.List
+            className={"flex items-center justify-around pt-10 border-b"}
+          >
+            {data.map((items) => (
+              <Tab key={items.id} className="outline-none">
+                {({ selected }) => (
+                  <div
+                    className={
+                      selected
+                        ? `border-b-2 py-6 border-brandPink text-xl font-heading`
+                        : `border-none text-xl font-heading`
+                    }
+                  >
+                    {items.tabTitle}
+                  </div>
+                )}
+              </Tab>
+            ))}
+          </Tab.List>
+          <Tab.Panels>
+            {data.map((items) => (
+              <Tab.Panel key={items.id} className="py-10 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={items.image}
+                      alt={items.tabTitle}
+                      className="max-w-sm md:max-w-md"
+                    />
+                  </div>
+                  <div className="px-3">
+                    <div className="text-3xl lg:text-4xl font-heading font-bold lg:leading-normal pt-10">
+                      {items.title}
+                    </div>
+                    <div className="leading-relaxed mt-5">
+                      {items.description}
+                    </div>
+                    <div className="mt-6 grid grid-cols-2 justify gap-8">
+                      {items.list.map((item, i) => (
+                        <div key={i} className="flex items-center">
+                          <RiCheckboxCircleFill color="#3FDBB1" size="20px" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button className="mt-6 rounded-lg text-white font-bold hover:bg-brandPink4 bg-brandPink px-3 py-2 border ">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
+    </div>
   );
 };
 
 export default WhyUs;
-
-const styles = {
-  section: {
-    backgroundColor: rgba("#bbd4ce", 0.3),
-    pt: [7, null, null, 9],
-    pb: [8, null, null, 9, null, 11],
-  },
-  tabs: {
-    border: 0,
-    ".rc-tabs-nav": {
-      mb: [8, null, null, 9, 10, 9, 12],
-    },
-    ".rc-tabs-nav-wrap": {
-      borderBottom: `1px solid ${rgba("#01070D", 0.1)}`,
-      justifyContent: "center",
-    },
-    ".rc-tabs-nav-list": {
-      flexGrow: 1,
-      justifyContent: "space-evenly",
-      pb: [3, null, null, 5, null, 6],
-    },
-    ".rc-tabs-tab-btn": {
-      outline: 0,
-      alignItems: "center",
-      img: {
-        outline: 0,
-      },
-    },
-    ".rc-tabs-tab": {
-      backgroundColor: "transparent",
-      // m: ['0 45px'],
-      h4: {
-        fontFamily: "body",
-        fontSize: [2, null, null, 17, null, null, 5],
-        fontWeight: 700,
-        lineHeight: 1.5,
-        textAlign: ["center", null, null, null, "left"],
-        whiteSpace: ["break-spaces", null, null, null, "unset"],
-      },
-    },
-    ".rc-tabs-tabpane": {
-      display: ["flex", null, null, "grid"],
-      flexDirection: ["column-reverse", null, null, "unset"],
-      alignItems: "center",
-      justifyContent: "center",
-      gridTemplateColumns: [null, null, null, "0.9fr 1.1fr"],
-      outline: 0,
-      gap: [5, null, null, 11],
-      h2: {
-        color: "heading",
-        fontSize: [24, null, null, 6, 26, 8, 40],
-        fontWeight: 700,
-        lineHeight: [1.45, null, null, 1.5],
-        letterSpacing: [null, null, null, "0.5px", null, "-1px"],
-        textAlign: ["center", null, null, "left"],
-      },
-      p: {
-        color: "textSecondary",
-        fontSize: [1, null, null, 2, 17],
-        lineHeight: [1.87, null, null, 2, 2.48],
-        textAlign: ["center", null, null, "left"],
-        mt: [4],
-      },
-      ".list-item": {
-        fontSize: [0, null, null, 1, 2],
-        fontWeight: 500,
-        lineHeight: [2.8],
-        display: "flex",
-        alignItems: "center",
-      },
-    },
-  },
-  list: {
-    mt: [5],
-    display: "grid",
-    justifyContent: ["center", null, null, "unset"],
-    gridTemplateColumns: ["repeat(2, 164px)", null, null, "repeat(2, 180px)"],
-  },
-  learnMore: {
-    mt: [4],
-    textAlign: ["center", null, null, "left"],
-    a: {
-      fontSize: [null, null, null, 1, 2],
-      color: "link",
-    },
-  },
-  illustration: {
-    display: ["flex"],
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: [null, null, null, null, null, "center"],
-    img: {
-      maxWidth: ["65%", null, null, "100%", null, "90%", "100%"],
-    },
-  },
-};

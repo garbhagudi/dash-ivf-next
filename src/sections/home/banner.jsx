@@ -22,7 +22,7 @@ const Banner = () => {
           </div>
           <div className="mx-auto">
             <div className="text-center">
-              <MyModal title="Get Started" />
+              <MyModal title="Book a Free Appointment" />
             </div>
             <img
               src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994576/garbhagudi-ivf/New%20Website/image-1-compressed_n32eoj.jpg"

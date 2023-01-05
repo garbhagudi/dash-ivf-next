@@ -1,9 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Box, Container, Image, Text } from "theme-ui";
-import Tabs, { TabPane } from "rc-tabs";
-import { rgba } from "polished";
-import SectionHeading from "components/section-heading";
+import React from "react";
+import { Tab } from "@headlessui/react";
+
 const data = [
   {
     id: 1,
@@ -39,118 +36,54 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <Box as="section" id="testimonial" sx={styles.section}>
-      <Container>
-        <SectionHeading
-          sx={styles.heading}
-          title="Experience the Joy of Being Complete"
-          description="GarbhaGudi IVF Center is guided by the highest ethical standards, providing patients with the best quality, individualized, compassionate care."
-        />
-        <Tabs
-          sx={styles.tabs}
-          animated={{ tabPane: true }}
-          tabPosition="bottom"
-        >
-          {data?.map((item) => (
-            <TabPane
-              key={item.id}
-              tab={
-                <Image src={item.logo} alt="logo" style={{ width: "120px" }} />
-              }
-            >
-              <Box as="blockquote">
-                {item.quote}
-                <Text as="span" sx={styles.author}>
-                  {item.author}
-                </Text>
-              </Box>
-            </TabPane>
-          ))}
-        </Tabs>
-      </Container>
-    </Box>
+    <div className="bg-orange-50">
+      <div className="max-w-7xl mx-auto px-3 ">
+        <h2 className="text-3xl lg:text-4xl font-heading font-bold text-center pt-10 lg:pt-16">
+          Experience the Joy of Being Complete
+        </h2>
+        <div className="text-sm lg:text-lg text-center mt-4 max-w-prose mx-auto">
+          GarbhaGudi IVF Center is guided by the highest ethical standards,
+          providing patients with the best quality, individualized,
+          compassionate care.
+        </div>
+        <Tab.Group>
+          <Tab.List
+            className={"flex items-center justify-around my-10 border-b"}
+          >
+            {data.map((items) => (
+              <Tab key={items.id} className="outline-none">
+                {({ selected }) => (
+                  <div
+                    className={
+                      selected ? `border-b-2 border-brandPink` : `border-none`
+                    }
+                  >
+                    <img
+                      src={items.logo}
+                      alt={items.author}
+                      className="h-7 md:h-11 px-4 py-2"
+                    />
+                  </div>
+                )}
+              </Tab>
+            ))}
+          </Tab.List>
+          <Tab.Panels>
+            {data.map((items) => (
+              <Tab.Panel key={items.id} className="mt-10 max-w-6xl mx-auto">
+                <div className="bg-[url(https://res.cloudinary.com/garbhagudi/image/upload/v1633780928/garbhagudi-ivf/Icons/quote_lhrts2.webp)] bg-no-repeat bg-left-top">
+                  <div className="max-w-4xl mx-auto text-lg lg:text-2xl font-heading lg:leading-loose">
+                    {items.quote}
+                  </div>
+                </div>
+                <div className="text-center text-lg py-7">{items.author}</div>
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
+    </div>
   );
 };
 
 export default Testimonials;
-
-const styles = {
-  section: {
-    backgroundColor: rgba("#FFF5ED", 0.5),
-    pt: [7, null, null, 9, null, 10, 11],
-    pb: [5, null, null, 10, 11],
-  },
-  heading: {
-    textAlign: "Center",
-    mb: [null, null, null, 10, 4],
-  },
-  tabs: {
-    flexDirection: ["column-reverse", null, null, null, null, "column"],
-    ".rc-tabs-nav": {
-      mt: [8, null, null, 9, 11],
-    },
-    ".rc-tabs-nav-wrap": {
-      borderTop: `1px solid ${rgba("#01070D", 0.1)}`,
-      justifyContent: "center",
-    },
-    ".rc-tabs-tab": {
-      backgroundColor: "transparent",
-      // m: ['0 45px'],
-    },
-    ".rc-tabs-tab-btn": {
-      display: "flex",
-      alignItems: "center",
-      lineHeight: 1,
-      outline: 0,
-      img: {
-        outline: 0,
-        maxWidth: [50, 65, null, 110, "80%", "100%"],
-        m: ["0 auto"],
-      },
-    },
-    ".rc-tabs-nav-list": {
-      flexGrow: 1,
-      justifyContent: "space-evenly",
-      pt: [4, null, null, 7, 9],
-    },
-    ".rc-tabs-tabpane": {
-      outline: 0,
-      blockquote: {
-        fontFamily: "heading",
-        fontWeight: 400,
-        fontSize: [2, null, null, 3, 4, 6],
-        lineHeight: [1.87, null, null, 2.08],
-        position: "relative",
-        maxWidth: 846,
-        margin: "0px auto",
-        pt: ["12px", null, null, "17px", "13px"],
-        pl: [35, 35, 35, 10, 11],
-        ":before": {
-          background: `url(https://res.cloudinary.com/garbhagudi/image/upload/v1633780928/garbhagudi-ivf/Icons/quote_lhrts2.webp) no-repeat`,
-          content: `''`,
-          position: "absolute",
-          width: 128,
-          height: 43,
-          left: ["-31px", null, null, "-16px", "-7px", 0],
-          top: ["1px", "1px", "1px", 0],
-          backgroundSize: ["75%", null, null, "100%"],
-        },
-      },
-      span: {
-        color: "#7E8896",
-        fontFamily: "body",
-        display: "flex",
-        fontWeight: 500,
-        fontSize: [0, 1, 1, 2],
-        lineHeight: 2.5,
-        mt: [1, null, null, 3],
-      },
-    },
-    ".rc-tabs-ink-bar": {
-      top: 0,
-      height: 2,
-      backgroundColor: "#A17857",
-      borderRadius: 5,
-    },
-  },
-};

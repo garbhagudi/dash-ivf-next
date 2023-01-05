@@ -2,24 +2,37 @@ export const treatments = {
   female: [
     {
       id: 1,
+      name: "ICSI",
+      href: "/icsi",
+      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    },
+
+    {
+      id: 2,
+      name: "IVF",
+      href: "/ivf",
+      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    },
+    {
+      id: 3,
       name: "PCOS/PCOD",
       href: "/female-infertility/#pcod-pcos",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 2,
+      id: 4,
       name: "Ovulation Disorders",
       href: "/female-infertility/#ovarian-disorders",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 3,
+      id: 5,
       name: "Laproscopy & Hysteroscopy",
       href: "/female-infertility/#hysteroscopy-and-laparoscopy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 4,
+      id: 6,
       name: "Embryo Transfer ",
       href: "/female-infertility/#embryo-transfer",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
@@ -58,21 +71,6 @@ export const treatments = {
     //   href: "/iui",
     //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     // },
-
-    {
-      id: 2,
-      name: "ICSI",
-      href: "/icsi",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
-
-    {
-      id: 3,
-      name: "IVF",
-      href: "/ivf",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
-
     // {
     //   id: 4,
     //   name: "Donor & Surrogacy",
@@ -164,24 +162,36 @@ export const mobileMenu = {
   female: [
     {
       id: 1,
+      name: "ICSI",
+      href: "/icsi",
+      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    },
+    {
+      id: 2,
+      name: "IVF",
+      href: "/ivf",
+      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+    },
+    {
+      id: 3,
       name: "PCOS/PCOD",
       href: "/female-infertility/#pcod-pcos",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 2,
+      id: 4,
       name: "Ovulation Disorders",
       href: "/female-infertility/#ovarian-disorders",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 3,
+      id: 5,
       name: "Laproscopy & Hysteroscopy",
       href: "/female-infertility/#hysteroscopy-and-laparoscopy",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
     {
-      id: 4,
+      id: 6,
       name: "Embryo Transfer ",
       href: "/female-infertility/#embryo-transfer",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
@@ -212,33 +222,6 @@ export const mobileMenu = {
       href: "/male-infertility/#semen-freezing",
       icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
     },
-  ],
-  infertility: [
-    // {
-    //   id: 1,
-    //   name: "IUI",
-    //   href: "/iui",
-    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    // },
-
-    {
-      id: 2,
-      name: "ICSI",
-      href: "/icsi",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
-    {
-      id: 3,
-      name: "IVF",
-      href: "/ivf",
-      icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    },
-    // {
-    //   id: 4,
-    //   name: "Donor & Surrogacy",
-    //   href: "/donor-and-surrogacy",
-    //   icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
-    // },
   ],
   locations: [
     {
