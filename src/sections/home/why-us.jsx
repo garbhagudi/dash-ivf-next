@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab } from "@headlessui/react";
 import { RiCheckboxCircleFill } from "react-icons/ri";
+import Link from "next/link";
 
 const data = [
   {
@@ -8,7 +9,7 @@ const data = [
     tabTitle: "Treatment Options",
     title: `You are not fighting alone against Infertility!`,
     description: `"GarbhaGudi provides an in-depth analysis of infertility issues and makes a tailored treatment protocol since every individual is unique."`,
-    moreLink: "/online-consultation",
+    moreLink: "/female-infertility",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1633780860/garbhagudi-ivf/Images%20/treatment_wykcf3.webp",
     list: [
@@ -92,7 +93,7 @@ const WhyUs = () => {
                       ))}
                     </div>
                     <button className="mt-6 rounded-lg text-white font-bold hover:bg-brandPink4 bg-brandPink px-3 py-2 border ">
-                      Learn More
+                      <Link href={items.moreLink}>Learn More</Link>
                     </button>
                   </div>
                 </div>

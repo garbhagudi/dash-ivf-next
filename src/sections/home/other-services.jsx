@@ -24,13 +24,49 @@ const OtherServices = () => {
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-bold font-heading text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-bold font-heading text-gray-900 sm:text-4xl text-center">
             What makes GarbhaGudi special?
           </p>
-          <p className="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
-            GarbhaGudi is known for its top-class treatment at affordable costs
-            and unparalled success rates.
-          </p>
+        </div>
+        <div className="max-w-4xl mx-auto pb-12">
+          <div className="max-w-3xl mx-auto text-center py-6 md:py-10">
+            <h2 className="text-3xl md:text-5xl mb-4">
+              Trusted by over{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark">
+                8500+ couples{" "}
+              </span>
+              across the world for over{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark">
+                12 Years{" "}
+              </span>
+            </h2>
+          </div>
+          <div className="mt-2">
+            <h4 className="mb-5 text-center font-bold text-lg text-gray-700">
+              Industry Average
+            </h4>
+            <div className="w-full rounded-full h-6 bg-gray-600">
+              <div
+                className="bg-brandPink4 text-md h-6 font-bold text-center p-0.5 leading-none rounded-l-full flex items-center justify-center"
+                style={{ width: "25%" }}
+              >
+                25 - 28%
+              </div>
+            </div>
+          </div>
+          <div className="mt-10">
+            <h4 className="text-brandPink font-bold text-lg mb-5 text-center">
+              GarbhaGudi Average
+            </h4>
+            <div className="w-full bg-gray-600 rounded-full h-6">
+              <div
+                className="bg-brandPink4 text-md h-6 font-bold text-center p-0.5 leading-none rounded-l-full flex items-center justify-center"
+                style={{ width: "75%" }}
+              >
+                65-73%
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10">
