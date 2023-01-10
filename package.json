@@ -12,7 +12,7 @@
     "@emotion/react": "^11.10.5",
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^8.3.3",
     "moment": "^2.29.3",
     "next": "^13.1.1",
     "polished": "^4.2.2",
