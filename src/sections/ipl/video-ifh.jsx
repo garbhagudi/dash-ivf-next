@@ -1,42 +1,20 @@
-import React, { useState } from "react";
-import { Container, Box, Heading } from "theme-ui";
-import { Link } from "components/link";
-import { FaPlay } from "react-icons/fa";
-import Image from "components/image";
-import ModalVideo from "react-modal-video";
+import React from "react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 const VideoTwo = () => {
-  const [videoOpen, setVideoOpen] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setVideoOpen(true);
-  };
   return (
-    <Box as="section" sx={styles.video} id="intro">
-      <Container>
-        <Heading as="h3">IVF & IUI From Home ? Is it really Possible?</Heading>
-        <Box sx={styles.videoBox}>
-          <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/c_scale,h_720,w_1280/v1633779918/garbhagudi-ivf/Banners/ivffromhome-thumb_dtliyc.webp"
-            alt="testimonial video"
-          />
-          <Link
-            path="/"
-            aria-label="video btn"
-            onClick={handleClick}
-            sx={styles.videoBtn}
-          >
-            <FaPlay />
-          </Link>
-        </Box>
-      </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="q-NWGcN89as"
-        onClose={() => setVideoOpen(false)}
-      />
-    </Box>
+    <div className="mx-auto max-w-7xl ">
+      <div className="py-12 px-3">
+        <h3 className="font-heading text-2xl sm:text-3xl font-bold sm:text-center">
+          IVF From Home...
+          <br /> Is it really Possible?
+        </h3>
+        <div className="rounded-2xl overflow-hidden mt-6">
+          <LiteYouTubeEmbed id="q-NWGcN89as" poster="maxresdefault" />
+        </div>
+      </div>
+    </div>
   );
 };
 

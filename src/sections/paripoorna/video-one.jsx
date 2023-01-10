@@ -1,42 +1,16 @@
-import React, { useState } from "react";
-import { Container, Box, Heading } from "theme-ui";
-import { Link } from "components/link";
-import { FaPlay } from "react-icons/fa";
-import ModalVideo from "react-modal-video";
-import Image from "components/image";
+import React from "react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 const VideoOne = () => {
-  const [videoOpen, setVideoOpen] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setVideoOpen(true);
-  };
   return (
-    <Box as="section" sx={styles.video}>
-      <Container>
-        <Heading as="h3">Paripoorna Overview</Heading>
-        <Box sx={styles.videoBox}>
-          <Image
-            src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1672910725/Misc/4_Extended_Offer_Ad-Creative_YT_Bnr-min_pcph7o.webp"
-            alt="testimonial video"
-          />
-          <Link
-            path="/"
-            aria-label="video btn"
-            onClick={handleClick}
-            sx={styles.videoBtn}
-          >
-            <FaPlay />
-          </Link>
-        </Box>
-      </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="OQEFbV9AB5w"
-        onClose={() => setVideoOpen(false)}
-      />
-    </Box>
+    <div className="mx-auto max-w-7xl ">
+      <div className="px-3 pb-10 lg:pb-24">
+        <div className="rounded-2xl  overflow-hidden">
+          <LiteYouTubeEmbed id="OQEFbV9AB5w" poster="maxresdefault" />
+        </div>
+      </div>
+    </div>
   );
 };
 
