@@ -246,7 +246,7 @@ export const doctors = [
     name: "Dr Vandana Ramanathan",
     designation: "Fertility Specialist",
     qualification: "MBBS, DNB (OBGY), FRM",
-    location: "KalyanNagar, Marathahalli",
+    location: "Marathahalli",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/vandana_qg1ixe.webp",
     bio: (
