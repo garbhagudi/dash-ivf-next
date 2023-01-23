@@ -19,26 +19,35 @@ const data = [
 
 const Calculators = () => {
   return (
-    <Box as="section" id="support" sx={styles.section}>
-      <Container>
-        <Grid sx={styles.grid}>
+    <div
+      as="section"
+      id="support"
+      sx={styles.section}
+      className="max-w-7xl mx-auto py-10"
+    >
+      <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 justify-center">
           {data?.map((item) => (
-            <Flex key={item.id} sx={styles.supportItem}>
-              <Box sx={styles.content}>
-                <Heading>
-                  <Link href={item.path} target="_blank">
-                    <div>
-                      {item?.title} <BsArrowRight className="inline-flex" />
+            <div
+              key={item.id}
+              className="bg-blue-200 rounded-lg p-6 flex items-start hover:bg-gray-100 transition duration-500"
+            >
+              <Link href={item.path} target="_blank">
+                <div>
+                  <div>
+                    <div className="font-heading font-bold py-4 text-xl">
+                      {item?.title}{" "}
+                      <BsArrowRight className="inline-flex font-bold items-center justify-center" />
                     </div>
-                  </Link>
-                </Heading>
-                <Text as="p">{item?.description}</Text>
-              </Box>
-            </Flex>
+                  </div>
+                  <div className="pb-4 text-base">{item?.description}</div>
+                </div>
+              </Link>
+            </div>
           ))}
-        </Grid>
-      </Container>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ import FloatPhone from "components/phoneFloat";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    TagManager.initialize({ gtmId: "GTM-5T77DVZ" });
+    TagManager.initialize({ gtmId: "GTM-NT9BZ69" });
   }, []);
   return (
     <div>
