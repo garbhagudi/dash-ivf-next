@@ -15,9 +15,12 @@ const Banner = () => {
             </p>
           </div>
           <div className="text-lg text-center mb-4 px-3 py-2 bg-gray-300 max-w-lg font-semibold mx-auto rounded-lg">
-            To Book an Appointment call{" "}
-            <a href="tel+919148038971" className="text-brandPink">
-              +919148038971
+            To Book Appointment call{" "}
+            <a
+              href="tel+919108910832"
+              className="text-brandPink block md:inline-flex"
+            >
+              +91 9108 9108 32
             </a>
           </div>
           <div className="mx-auto">
