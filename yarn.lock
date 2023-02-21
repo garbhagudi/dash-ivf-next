@@ -1418,10 +1418,10 @@ fraction.js@^4.2.0:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-framer-motion@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-9.0.2.tgz#b599beb987ca1341e32ec5a2a9c667f2143976e9"
-  integrity sha512-n7ZdIUBrT1xklowQNRQ6/h54+3ysmz422CP0rrhjE1X2tshiJy0WWQ7tv6y/fcOSQd23htNA9vvbUFLYMQ5lEQ==
+framer-motion@^9.0.5:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-9.0.5.tgz#d0ad8442746eb920772198a07bf73181d512a52f"
+  integrity sha512-IK2PrfFrtZAkRO0jWYB0N/XsBS4ipCm/MqNTvIf3nActXt5FkFBvIoDkg8CA2m9q2R1J/yvvfffhGiVbAIjfFw==
   dependencies:
     "@motionone/dom" "^10.15.3"
     hey-listen "^1.0.8"
@@ -2683,15 +2683,10 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.3.1:
+tslib@^2.3.1, tslib@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
-
-tslib@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tsutils@^3.21.0:
   version "3.21.0"
