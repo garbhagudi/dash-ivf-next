@@ -4,7 +4,7 @@ export const about = [
     title: "About Us",
     items: [
       {
-        url: "tel:8880000909",
+        url: "tel:+919108910832",
         label: "Give us a Call",
       },
       {
