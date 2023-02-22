@@ -196,14 +196,6 @@ export const doctors = [
       </div>
     ),
   },
-  //   {
-  //     id: "6",
-  //     name: "Dr Swetha V",
-  //     designation: "Fertility Specialist",
-  //     qualification: "MBBS, DNB-OBG, FRM",
-  //     location: "Marathahalli",
-  //     image: "",
-  //   },
   {
     id: "7",
     name: "Dr Anitha Manoj",
@@ -234,69 +226,35 @@ export const doctors = [
       </div>
     ),
   },
-  //   {
-  //     id: "8",
-  //     name: "Dr Swati Shree",
-  //     designation: "Fertility Specialist",
-  //     qualification: "MBBS , DNB , FRM",
-  //     location: "Jayanagar",
-  //   },
   {
-    id: "9",
-    name: "Dr Vandana Ramanathan",
+    id: "8",
+    name: "Dr Shubha L",
     designation: "Fertility Specialist",
-    qualification: "MBBS, DNB (OBGY), FRM",
-    location: "Marathahalli",
-    image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/vandana_qg1ixe.webp",
-    bio: (
-      <div>
-        <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p class="mb-4 text-gray-800 prose">
-            <div class="text-md text-brandDark mt-3 font-qs">
-              <p>
-                Anchored to GarbhaGudi, Dr Vandana is a fertility specialist who
-                holds a fellowship in reproductive medicine from CRAFT, Kerala.
-                She has a great professional experience of years, and her area
-                of specialization includes IUI, IVF, ICSI, hysteroscopy,
-                fertility-enhancing surgeries, and male infertility. Dr Vandana
-                is known for the comfort and confidence she elicits in her
-                patients, and she believes in performing fertility treatments
-                with a scientific approach & in an ethical manner. She also
-                offers to counsel for infertility treatment with dedication
-                towards her patients.
-              </p>
-            </div>
-          </p>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: "10",
-    name: "Dr Jahnavi Esanakula",
-    designation: "Fertility Specialist",
-    qualification: "MBBS, DGO, DNB",
+    qualification: "MBBS, MS(OBG), DNB, FRM",
     location: "ElectronicCity",
-    image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1643980098/garbhagudi-ivf/Images%20/Jahnavi-modified_ivxuei.png",
+    image: "https://media.graphassets.com/xHvgevKDT4aNPxoPBWaK",
     bio: (
       <div>
-        <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p class="mb-4 text-gray-800 prose">
-            <div class="text-md text-brandDark mt-3 font-qs">
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <p className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
               <p>
-                Dr Jhanvi is a diligent and dedicated fertility expert
-                practising at GarbhaGudi IVF Center, with sound knowledge in
-                gynaecology, obstetrics & infertility. She has vast experience
-                in various hospital and clinical settings, and she’s recognized
-                for her consummate diagnostic routines, skilful clinical
-                treatments, and adept handling of laparoscopic and minimally
-                invasive surgeries. Dr Jhanvi holds a Fellowship in Reproductive
-                medicine FRM from MILAN (BACC) and has authored/co-authored
-                several papers published in international journals. She is known
-                for her approachable nature and immense dedication to her
-                profession.
+                Dr. Shubha L is a fertility specialist with 5 years of
+                experience in obstetrics and gynecology. She completed her MBBS
+                at JJMMC, davangere and MS from father muller medical college,
+                Mangalore. She worked as a senior registrar at St Martha’s
+                hospital and Owing to her great desire to specialize further,
+                she completed her fellowship in reproductive medicine from Craft
+                hospital, Kerala. She is a skilled professional, is completely
+                passionate about her job, and aims to provide the best treatment
+                for her patients. She is well-versed in ART procedures like IVF,
+                IUI, etc. Dr. Shubha l is known for the comfort and confidence
+                she elicits in her patients, and she believes in performing
+                fertility treatments with a scientific approach & in an ethical
+                manner. She also offers to counsel for infertility treatment
+                with dedication toward her patients. Her skills as a fertility
+                specialist made her a valued member of the team at GarbhaGudi
+                IVF Center.
               </p>
             </div>
           </p>
@@ -364,53 +322,46 @@ export const doctors = [
       </div>
     ),
   },
-  //   {
-  //     id: "12",
-  //     name: "Dr Nidhi Jhawar",
-  //     designation: "Fertility Specialist",
-  //     qualification: "MBBS, DGO, FRM",
-  //     location: "Jayanagar",
-  //   },
-  {
-    id: "13",
-    name: "Dr. Nidaa Ashfaq Khan",
-    designation: "Fertility Specialist ",
-    qualification: "MBBS, MS - OBG,  FRM",
-    location: "Jayanagar ",
-    image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1661498037/garbhagudi-ivf/doctors/Dr._Nidaa-min_k7r4vz.jpg",
-    bio: (
-      <div>
-        <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-          <p class="mb-4 text-gray-800 prose">
-            <div class="text-md text-brandDark mt-3 font-qs">
-              <p>
-                Dr Nidaa is a renowned and experienced Fertility specialist and
-                Gynaecologist rendering her services in GarbhaGudi IVF Centre as
-                a Consultant Fertility Specialist.
-              </p>
-            </div>
-            <div class="text-md text-brandDark mt-3 font-qs">
-              <p>
-                Dr. Nidaa completed her MBBS from the prestigious Kempegowda
-                Institute Of Medical Sciences. Later on, finished her
-                postgraduate MS (OBG) from Al Ameen Medical College, Bijapur.
-                Her pursuit for enhanced learning made her continue the further
-                course on fellowship in reproductive medicine (FRM) from Dr.
-                Patil’s Fertility Centre, Bangalore (Rajiv Gandhi University Of
-                health sciences).
-              </p>
-            </div>
-            <div class="text-md text-brandDark mt-3 font-qs">
-              <p>
-                She has also published many articles in international journals.
-                To her credit, Dr. Nidaa has won a lot of awards at various
-                national and state conferences and CMEs.
-              </p>
-            </div>
-          </p>
-        </div>
-      </div>
-    ),
-  },
+  // {
+  //   id: "13",
+  //   name: "Dr. Nidaa Ashfaq Khan",
+  //   designation: "Fertility Specialist ",
+  //   qualification: "MBBS, MS - OBG,  FRM",
+  //   location: "Jayanagar ",
+  //   image:
+  //     "https://res.cloudinary.com/garbhagudi/image/upload/v1661498037/garbhagudi-ivf/doctors/Dr._Nidaa-min_k7r4vz.jpg",
+  //   bio: (
+  //     <div>
+  //       <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+  //         <p class="mb-4 text-gray-800 prose">
+  //           <div class="text-md text-brandDark mt-3 font-qs">
+  //             <p>
+  //               Dr Nidaa is a renowned and experienced Fertility specialist and
+  //               Gynaecologist rendering her services in GarbhaGudi IVF Centre as
+  //               a Consultant Fertility Specialist.
+  //             </p>
+  //           </div>
+  //           <div class="text-md text-brandDark mt-3 font-qs">
+  //             <p>
+  //               Dr. Nidaa completed her MBBS from the prestigious Kempegowda
+  //               Institute Of Medical Sciences. Later on, finished her
+  //               postgraduate MS (OBG) from Al Ameen Medical College, Bijapur.
+  //               Her pursuit for enhanced learning made her continue the further
+  //               course on fellowship in reproductive medicine (FRM) from Dr.
+  //               Patil’s Fertility Centre, Bangalore (Rajiv Gandhi University Of
+  //               health sciences).
+  //             </p>
+  //           </div>
+  //           <div class="text-md text-brandDark mt-3 font-qs">
+  //             <p>
+  //               She has also published many articles in international journals.
+  //               To her credit, Dr. Nidaa has won a lot of awards at various
+  //               national and state conferences and CMEs.
+  //             </p>
+  //           </div>
+  //         </p>
+  //       </div>
+  //     </div>
+  //   ),
+  // },
 ];
