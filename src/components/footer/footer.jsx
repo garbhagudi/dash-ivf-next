@@ -5,7 +5,6 @@ import Logo from "components/logo";
 import Link from "next/link";
 import { WidgetAbout, WidgetInfo, WidgetPages, WidgetConnect } from "./widget";
 import { about, information, pages, connect } from "./footer.data";
-import { rgba } from "polished";
 
 export default function Footer() {
   return (
@@ -103,7 +102,7 @@ const styles = {
     },
   },
   copyright: {
-    color: rgba("#0F2137", 0.6),
+    color: "#0F2137",
     fontSize: ["14px"],
     mt: [3, null, null, -31, 3],
     mr: [null, null, null, "auto", "unset"],
