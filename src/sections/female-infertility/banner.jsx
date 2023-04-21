@@ -1,6 +1,5 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { rgba } from "polished";
 import { jsx, Flex, Container, Image } from "theme-ui";
 import SectionHeading from "components/section-heading";
 import MyModal from "components/modal";
@@ -91,7 +90,7 @@ const styles = {
     },
   },
   btnOutlined: {
-    borderColor: rgba("white", 0.25),
+    borderColor: "white",
     color: "white",
     ml: 3,
     svg: {

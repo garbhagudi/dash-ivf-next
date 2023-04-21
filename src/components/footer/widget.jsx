@@ -3,7 +3,6 @@
 
 import { jsx, Box, Heading, Image } from "theme-ui";
 import Link from "next/link";
-import { rgba } from "polished";
 
 export const WidgetAbout = ({ title, items }) => {
   return (
@@ -99,7 +98,7 @@ const styles = {
         },
       },
       a: {
-        color: rgba("#02073E", 0.8),
+        color: "#02073E",
         textDecoration: "none",
       },
     },

@@ -3,7 +3,6 @@
 
 import { jsx, Box, Container, Button } from "theme-ui";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { rgba } from "polished";
 import SectionHeading from "components/section-heading";
 import MyModal from "components/modal";
 
@@ -42,7 +41,7 @@ const styles = {
     pb: [8, null, null, 0],
     zIndex: 0,
     ":before": {
-      backgroundColor: rgba("#FFF5ED", 0.5),
+      backgroundColor: "#FFF5ED",
       content: ["none", null, null, `''`],
       position: "absolute",
       left: 0,
