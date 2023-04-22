@@ -7,7 +7,6 @@ export default function MyModal({ title }) {
 
   function closeModal() {
     setIsOpen(false);
-    window.location.reload();
   }
 
   function openModal() {

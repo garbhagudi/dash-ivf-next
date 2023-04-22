@@ -156,6 +156,18 @@ export const locations = [
     href: "/location/marathahalli",
     icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
   },
+  {
+    id: 6,
+    name: "New BEL Road",
+    href: "/location/new-bel-road",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+  },
+  {
+    id: 7,
+    name: "Nagarabhavi",
+    href: "/location/nagarabhavi",
+    icon: "https://res.cloudinary.com/garbhagudiivf/image/upload/v1642838895/Icons/About/About_Us_01_yz3h95.svg",
+  },
 ];
 
 export const mobileMenu = {

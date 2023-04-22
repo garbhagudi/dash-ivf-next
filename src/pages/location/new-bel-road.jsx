@@ -13,23 +13,23 @@ const Marathahalli = () => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
           India
         </title>
         <meta
           name="title"
-          content="Best IVF Centre in Marathahalli | Infertility treatment and IVF Cost in Marathahalli - GarbhaGudi"
+          content="Best IVF Centre in New BEL Road | Infertility treatment and IVF Cost in Marathahalli - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi IVF Centre in Marathahalli offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now."
+          content="GarbhaGudi IVF Centre in New BEL Road offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now."
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
           property="og:title"
-          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          content="GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
           India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
@@ -50,7 +50,7 @@ const Marathahalli = () => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          content="GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
           India"
         />
         <meta
@@ -63,17 +63,17 @@ const Marathahalli = () => {
         />
       </Head>
       <LocationHeader
-        branch="Marathahalli"
-        mapLink="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124389.58988191826!2d77.50394971640624!3d13.024545500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae122d06a90725%3A0xe3b45ee50de8eedf!2sGarbhaGudi%20IVF%20Centre%2C%20Marathahalli.!5e0!3m2!1sen!2sin!4v1663850228657!5m2!1sen!2sin"
+        branch="New BEL Road"
+        mapLink="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248776.01303899457!2d77.571752!3d13.027698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2sin!4v1682145314332!5m2!1sen!2sin"
         phone="+919108910832"
         address={
-          "4TH floor, Chirag Towers, 24 & 64, Service Rd, next to Kalamandir, Marathahalli, Bengaluru, Karnataka 560037"
+          "No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094"
         }
       />
       <div className=" max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {doctors.map(
           (items) =>
-            items.location.includes("Nagarabhavi") && (
+            items.location.includes("NewBelRoad") && (
               <DoctorLocation
                 key={items.id}
                 name={items.name}
