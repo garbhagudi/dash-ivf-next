@@ -63,49 +63,6 @@ export const doctors = [
     ),
   },
   {
-    id: "2",
-    name: "Dr Chaithra S.K",
-    designation: "Assistant Medical Director, GarbhaGudi",
-    qualification: "MBBS, MS – OBG, FRM",
-    location: "KalyanNagar, Marathahalli",
-    image:
-      "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/Chithra-SK_orc3cx.webp",
-    bio: (
-      <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-        <p class="mb-4 text-gray-800 prose">
-          <div class="text-md text-brandDark mt-3 font-qs">
-            <p>
-              Dr Chaithra S.K is a well known Fertility Specialist with more
-              than 11 years of experience in the field. She completed her MBBS,
-              MS (OBG) from RGUHS in 2013 and a fellowship in Reproductive
-              Medicine and Endoscopy the same year. She practices Obstetrics,
-              Gynaecology, Infertility, and Endoscopy in Bangalore with
-              high-level skills and knowledge in IVF. She has an almost
-              commitment, care, and empathy towards patients. She has amazing
-              success rates in IUI and IVF with great skills and knowledge in
-              Obstetrics and Gynaecology.
-            </p>
-          </div>
-          <div class="text-md text-brandDark mt-3 font-qs">
-            <p>
-              Dr Chaithra S.K. is a well known, highly skilled and thorough
-              professional in the field of Reproductive Medicine and Fertility
-              Endoscopy. She is also a qualified Obstetrician and Gynecologist
-              with a special interest in infertility which is passionate about.
-              She has a total of 11 years of experience with expertise in IVF,
-              ICSI, IUI and fertility-enhancing endoscopic procedures. She is
-              known among her patients and peers for her skills, patience,
-              ethics, knowledge, attention to detail, patient safety, and high
-              success rates. She understands the individual care and attention
-              patients require and is dedicated to the same.
-            </p>
-          </div>
-          <p></p>
-        </p>
-      </div>
-    ),
-  },
-  {
     id: "3",
     name: "Dr Maheshwari",
     designation: "Assistant Medical Director, GarbhaGudi ",
@@ -197,11 +154,11 @@ export const doctors = [
     ),
   },
   {
-    id: "7",
+    id: "6",
     name: "Dr Anitha Manoj",
     designation: "Fertility Specialist",
     qualification: "MBBS, MS (OBG), FMAS, FRM",
-    location: "HanumanthaNagar",
+    location: "HanumanthaNagar, Nagarabhavi",
     image:
       "https://res.cloudinary.com/garbhagudi/image/upload/v1657178113/garbhagudi-ivf/doctors/anitha_oambb3.webp",
     bio: (
@@ -227,7 +184,7 @@ export const doctors = [
     ),
   },
   {
-    id: "8",
+    id: "7",
     name: "Dr Shubha L",
     designation: "Fertility Specialist",
     qualification: "MBBS, MS(OBG), DNB, FRM",
@@ -258,6 +215,221 @@ export const doctors = [
               </p>
             </div>
           </p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "8",
+    name: "Dr Deepthi Venkatesh",
+    designation: "Fertility Specialist",
+    qualification: "MBBS, MS - FRM",
+    location: "Jayanagar",
+    image: "https://media.graphassets.com/Yc2o14y8QiSuGfDeTpmA",
+    bio: (
+      <div>
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <div className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr. Deepthi is a distinguished fertility specialist with over
+                seven years of experience in the field of obstetrics and
+                gynecology. She graduated top of her class from VIMS & RC and
+                pursued her MS OBG from the prestigious Bangalore Medical
+                College & Research Institute. Her dedication to the field is
+                evident through her fellowship in reproductive medicine from
+                RGUHS.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                With a passion for helping couples achieve their dream of
+                parenthood, Dr. Deepthi is an expert in Intra-Uterine
+                Insemination (IUI), In-Vitro Fertilization (IVF), and other such
+                ART techniques. Her personalized approach and exceptional
+                success rates have earned high praise from her patients, who
+                appreciate her compassionate nature and approachability.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Driven by her commitment to providing the very best care, Dr.
+                Deepthi continuously updates her knowledge and skills. She
+                contributes to the Indian Council of Medical Research Program
+                and presents papers at various state and national conferences.
+                She firmly believes in a scientific and ethical approach to her
+                patient&apos;s issues, and her dedication to her profession is
+                unmatched. With Dr. Deepthi, you can be assured that you are
+                receiving the highest level of expertise and care on your
+                journey toward parenthood
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "9",
+    name: "Dr Varsha Patil",
+    designation: "Fertility Specialist",
+    qualification: "MBBS, DGO, DNB(OBG), FRM",
+    location: "Marathahalli",
+    image: "https://media.graphassets.com/N1CTnwauQUuFHkwC9a0a",
+    bio: (
+      <div>
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <div className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr Varsha Patil is a highly skilled Fertility Specialist,
+                dedicated to providing the best treatment for her patients. She
+                received her MBBS degree from M.R. Medical College, Gulbarga and
+                completed her DGO from Mysore Medical College and Research
+                Institute, Mysore. Dr Varsha Patil also completed her DNB(OBG)
+                through the National Board of Examinations from Bangalore
+                Baptist hospital, Bangalore.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Her desire to specialize further in infertility led her to
+                complete her Fellowship in Reproductive Medicine from the
+                International Institute for training and research in
+                reproductive health (IIRRH) - Milann, Bangalore. She further
+                honed her skills by completing Ultrasound Training at Karthik
+                Ultrasound Scan Centre under the tutelage of Dr Chaithra Ganesh.
+                She also completed a 6-month ICOG certification from FOGSI in
+                Reproductive Medicine.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr Varsha Patil is known for her patience, knowledge, and hard
+                work. She believes in a scientific approach to fertility
+                treatment in an ethical manner. She is well-versed in various
+                ART procedures like IVF, IUI, etc. and provides counselling to
+                her patients with dedication. Her goal is to ensure that every
+                patient receives personalized care and treatment that is
+                tailored to their individual needs. Dr Varsha Patil is a skilled
+                professional committed to helping her patients achieve their
+                dream of having a child.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "10",
+    name: "Dr Nikitha Murthy B.S",
+    designation: "Fertility Specialist",
+    qualification: "MBBS, MS-OBG, DNB, FRM",
+    location: "NewBelRoad",
+    image: "https://media.graphassets.com/b0WeBG2eQpeodrBbB32S",
+    bio: (
+      <div>
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <div className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Meet Dr Nikitha Murthy, an experienced Infertility Specialist
+                with a passion for helping couples achieve their dream of having
+                a family. Dr Murthy completed her MBBS from Bangalore Medical
+                College and Research Institute, Bangalore in 2014. She then
+                pursued her post-graduation in Obstetrics and Gynecology from
+                JJMMC, Davanagere, and obtained her DNB in 2018.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                After completing her residency at Moolchand Hospital, New Delhi,
+                she worked as a Registrar at Fortis La Femme, Richmond Road &
+                Apollo Hospitals Sheshadripuram from 2019 to 2020. In 2019, Dr
+                Murthy also completed a Fellowship in Reproductive Medicine from
+                Milann Fertility Centre, Bangalore.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr Murthy&apos;s passion for helping couples struggling with
+                infertility led her to become the Chief Consultant at Caree
+                fertility centre from 2020 to 2021. She is now a Fertility
+                Specialist at GarbhaGudi IVF Centre, New BEL Road, where she
+                continues to provide personalized care to her patients. Dr
+                Murthy&apos;s areas of expertise include assisted reproductive
+                technologies, preconception counselling, and management of
+                complex fertility issues.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                With her vast knowledge and experience, Dr Nikitha Murthy is
+                dedicated to helping her patients navigate the complex world of
+                infertility and achieve their dream of having a family.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "10",
+    name: "Dr Aparna N",
+    designation: "Fertility Specialist",
+    qualification: "MBBS, DNB, M.Ch Reproductive Medicine and Surgery",
+    location: "KalyanNagar",
+    image: "https://media.graphassets.com/QgV1Ij9Ta2fdHnRsiGlp",
+    bio: (
+      <div>
+        <div className="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
+          <div className="mb-4 text-gray-800 prose">
+            <div className="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr Aparna N is a highly qualified and experienced senior
+                Reproductive Medicine Specialist, currently practicing at
+                GarbhaGudi IVF Centre. She completed her MBBS from Sri
+                Siddhartha Medical College, Tumkur, followed by a PG in
+                Obstetrics and Gynaecology under the National Board of
+                Examinations. She secured the 18th rank in the NEET All India
+                Super-Speciality entrance exam and pursued a
+                super-specialization in Reproductive Medicine and Surgery from
+                Amrita Institute Of Medical Sciences, Kochi, Kerala.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Dr Aparna has vast expertise in various areas related to
+                infertility, including Recurrent Pregnancy Loss, Repeated IVF
+                Failure, Genetics, Ultrasound in Infertility, Fertility
+                enhancing Laparoscopy, Hysteroscopy, and Fertility preservation
+                for cancer patients. Her counselling and interpersonal skills
+                are highly appreciated by her patients, and she is known for her
+                knowledge and patience, ensuring patient safety and ethical
+                practice.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                Apart from her clinical work, Dr Aparna is also a member of the
+                faculty at GarbhaGudi Institute of Reproductive Health and
+                Research. She has published papers in national and international
+                journals and contributed to chapters in various books. Dr Aparna
+                is fluent in Kannada, English, Hindi, Telugu, Tamil, and
+                Malayalam, which allows her to communicate effectively with
+                patients from diverse linguistic backgrounds.
+              </p>
+            </div>
+            <div class="text-md text-brandDark mt-3 font-qs">
+              <p>
+                With her expertise and experience, Dr Aparna N is dedicated to
+                providing the best possible care and treatment to her patients,
+                helping them achieve their dreams of parenthood.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -322,46 +494,4 @@ export const doctors = [
       </div>
     ),
   },
-  // {
-  //   id: "13",
-  //   name: "Dr. Nidaa Ashfaq Khan",
-  //   designation: "Fertility Specialist ",
-  //   qualification: "MBBS, MS - OBG,  FRM",
-  //   location: "Jayanagar ",
-  //   image:
-  //     "https://res.cloudinary.com/garbhagudi/image/upload/v1661498037/garbhagudi-ivf/doctors/Dr._Nidaa-min_k7r4vz.jpg",
-  //   bio: (
-  //     <div>
-  //       <div class="w-full lg:w-9/12 px-4 mx-auto flex justify-start">
-  //         <p class="mb-4 text-gray-800 prose">
-  //           <div class="text-md text-brandDark mt-3 font-qs">
-  //             <p>
-  //               Dr Nidaa is a renowned and experienced Fertility specialist and
-  //               Gynaecologist rendering her services in GarbhaGudi IVF Centre as
-  //               a Consultant Fertility Specialist.
-  //             </p>
-  //           </div>
-  //           <div class="text-md text-brandDark mt-3 font-qs">
-  //             <p>
-  //               Dr. Nidaa completed her MBBS from the prestigious Kempegowda
-  //               Institute Of Medical Sciences. Later on, finished her
-  //               postgraduate MS (OBG) from Al Ameen Medical College, Bijapur.
-  //               Her pursuit for enhanced learning made her continue the further
-  //               course on fellowship in reproductive medicine (FRM) from Dr.
-  //               Patil’s Fertility Centre, Bangalore (Rajiv Gandhi University Of
-  //               health sciences).
-  //             </p>
-  //           </div>
-  //           <div class="text-md text-brandDark mt-3 font-qs">
-  //             <p>
-  //               She has also published many articles in international journals.
-  //               To her credit, Dr. Nidaa has won a lot of awards at various
-  //               national and state conferences and CMEs.
-  //             </p>
-  //           </div>
-  //         </p>
-  //       </div>
-  //     </div>
-  //   ),
-  // },
 ];

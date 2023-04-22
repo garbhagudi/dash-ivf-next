@@ -18,18 +18,18 @@ const Marathahalli = () => {
         </title>
         <meta
           name="title"
-          content="Best IVF Centre in Marathahalli | Infertility treatment and IVF Cost in Marathahalli - GarbhaGudi"
+          content="Best IVF Centre in Nagarabhavi | Infertility treatment and IVF Cost in Marathahalli - GarbhaGudi"
         />
         <meta
           name="description"
-          content="GarbhaGudi IVF Centre in Marathahalli offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now."
+          content="GarbhaGudi IVF Centre in Nagarabhavi offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now."
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
           property="og:title"
-          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          content="GarbhaGudi IVF Centre, Nagarabhavi | Best IVF & Fertility Hospital in
           India"
         />
         <meta property="og:site_name" content="GarbhaGudi IVF Centre" />
@@ -50,7 +50,7 @@ const Marathahalli = () => {
         <meta name="twitter:site" content="@garbhagudiivf" />
         <meta
           name="twitter:title"
-          content="GarbhaGudi IVF Centre, Marathahalli | Best IVF & Fertility Hospital in
+          content="GarbhaGudi IVF Centre, Nagarabhavi | Best IVF & Fertility Hospital in
           India"
         />
         <meta
@@ -63,8 +63,8 @@ const Marathahalli = () => {
         />
       </Head>
       <LocationHeader
-        branch="Marathahalli"
-        mapLink="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124389.58988191826!2d77.50394971640624!3d13.024545500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae122d06a90725%3A0xe3b45ee50de8eedf!2sGarbhaGudi%20IVF%20Centre%2C%20Marathahalli.!5e0!3m2!1sen!2sin!4v1663850228657!5m2!1sen!2sin"
+        branch="Nagarabhavi"
+        mapLink="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.087072336465!2d77.508472!3d12.960706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fcd6ee8ee57%3A0x2b5769e83d027d93!2sGarbhaGudi%20IVF%20Centre%2C%20Nagarbhavi!5e0!3m2!1sen!2sin!4v1682147772838!5m2!1sen!2sin"
         phone="+919108910832"
         address={
           "4TH floor, Chirag Towers, 24 & 64, Service Rd, next to Kalamandir, Marathahalli, Bengaluru, Karnataka 560037"
