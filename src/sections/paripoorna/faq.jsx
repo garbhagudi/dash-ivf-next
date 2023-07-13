@@ -104,7 +104,7 @@ export default function Faq() {
         <Container>
           <SectionHeading
             title="Do you have any quesiton?"
-            description="GG Care is here to help. Please contact us on +91 8880000909 and one of our associates will get in touch with you."
+            description="GG Care is here to help. Please contact us on +919108910832 and one of our associates will get in touch with you."
           />
           <Box
             sx={{

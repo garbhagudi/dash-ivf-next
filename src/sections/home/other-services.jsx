@@ -21,15 +21,15 @@ const data = [
 
 const OtherServices = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="pt-8 pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-bold font-heading text-gray-900 sm:text-4xl text-center">
+          <p className="mt-2 text-xl leading-8 font-bold font-heading text-gray-700 underline sm:text-2xl text-center">
             What makes GarbhaGudi special?
           </p>
         </div>
         <div className="max-w-4xl mx-auto pb-12">
-          <div className="max-w-3xl mx-auto text-center py-6 md:py-10">
+          <div className="max-w-3xl mx-auto text-center font-bold py-6 md:py-10">
             <h2 className="text-3xl md:text-5xl mb-4">
               Trusted by over{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark">
@@ -37,7 +37,7 @@ const OtherServices = () => {
               </span>
               across the world for over{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark">
-                12 Years{" "}
+                13 Years{" "}
               </span>
             </h2>
           </div>

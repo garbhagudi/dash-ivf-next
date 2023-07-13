@@ -5,7 +5,7 @@ import CallToAction from 'sections/home/subscribe-us';
 import { doctors } from 'components/doctors';
 import Head from 'next/head';
 
-const Jayanagar = () => {
+const Marathahalli = () => {
   return (
     <div>
       <Head>
@@ -13,27 +13,27 @@ const Jayanagar = () => {
 
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
-          GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility Hospital in
+          GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
           India
         </title>
         <meta
           name='title'
-          content='Best IVF Centre in Jayanagar | Infertility treatment and IVF Cost in Jayanagar - GarbhaGudi'
+          content='Best IVF Centre in New BEL Road | Infertility treatment and IVF Cost in Marathahalli - GarbhaGudi'
         />
         <meta
           name='description'
-          content='GarbhaGudi IVF Centre in Jayanagar offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Jayanagar now.'
+          content='GarbhaGudi IVF Centre in New BEL Road offers full range of fertility treatments. Call now to book an appointment! Visit best IVF centre in Marathahalli now.'
         />
 
         {/* Open Graph / Facebook */}
 
         <meta
           property='og:title'
-          content='GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility
-          Hospital in India'
+          content='GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
+          India'
         />
         <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:url' content='https://garbhagudi-ivf.com' />
         <meta
           property='og:description'
           content='GarbhaGudi is where dreams come alive, hopes never fade and possibilities never end. We work to help you cherish the golden moment of holding your bundle of joy'
@@ -41,7 +41,7 @@ const Jayanagar = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277102/Locations/1201x501_SE_sziwh5.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1201x501_MH_jqxxsh.jpg'
         />
 
         {/* Twitter*/}
@@ -50,8 +50,8 @@ const Jayanagar = () => {
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
           name='twitter:title'
-          content='GarbhaGudi IVF Centre, Jayanagar | Best IVF & Fertility
-          Hospital in India'
+          content='GarbhaGudi IVF Centre, New BEL Road | Best IVF & Fertility Hospital in
+          India'
         />
         <meta
           name='twitter:description'
@@ -59,21 +59,21 @@ const Jayanagar = () => {
         />
         <meta
           name='twitter:image'
-          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277102/Locations/1201x501_SE_sziwh5.jpg'
+          content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643277077/Locations/1201x501_MH_jqxxsh.jpg'
         />
       </Head>
       <LocationHeader
-        branch='Jayanagar'
-        mapLink='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124389.58988191826!2d77.50394971640624!3d13.024545500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1596b02fd78f%3A0x1f870d0e467c8c8a!2sGarbhaGudi%20IVF%20Centre%2C%20South%20End%20Circle.!5e0!3m2!1sen!2sin!4v1663846658020!5m2!1sen!2sin'
+        branch='New BEL Road'
+        mapLink='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248776.01303899457!2d77.571752!3d13.027698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2sin!4v1682145314332!5m2!1sen!2sin'
         phone='+919108910832'
         address={
-          'South End Circle, 26, Pattalamma Temple Rd, Basavanagudi, Bengaluru, Karnataka 560004'
+          'No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094'
         }
       />
-      <div className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+      <div className=' max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
         {doctors.map(
           (items) =>
-            items.locations.includes('Jayanagar') && (
+            items.locations.includes('RMV Extension') && (
               <DoctorLocation
                 key={items.name}
                 name={items.name}
@@ -91,4 +91,4 @@ const Jayanagar = () => {
   );
 };
 
-export default Jayanagar;
+export default Marathahalli;
