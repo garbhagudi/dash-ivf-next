@@ -75,7 +75,7 @@ const KalyanNagar = () => {
           (items) =>
             items.locations.includes('Kalyan Nagar') && (
               <DoctorLocation
-                key={items.id}
+                key={items.name}
                 name={items.name}
                 qualification={items.qualification}
                 designation={items.designation}

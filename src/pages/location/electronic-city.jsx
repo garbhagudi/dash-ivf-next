@@ -73,7 +73,7 @@ const ElectronicCity = () => {
           (items) =>
             items.locations.includes('Electronic City') && (
               <DoctorLocation
-                key={items.id}
+                key={items.name}
                 name={items.name}
                 qualification={items.qualification}
                 designation={items.designation}

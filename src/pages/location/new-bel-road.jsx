@@ -75,7 +75,7 @@ const Marathahalli = () => {
           (items) =>
             items.locations.includes('RMV Extension') && (
               <DoctorLocation
-                key={items.id}
+                key={items.name}
                 name={items.name}
                 qualification={items.qualification}
                 designation={items.designation}
