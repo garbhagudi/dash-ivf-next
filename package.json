@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@headlessui/react": "^1.7.14",
     "@apollo/client": "^3.7.17",
     "@emotion/react": "^11.11.1",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
