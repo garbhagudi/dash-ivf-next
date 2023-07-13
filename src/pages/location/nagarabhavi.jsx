@@ -73,13 +73,13 @@ const Marathahalli = () => {
       <div className=" max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {doctors.map(
           (items) =>
-            items.location.includes("Nagarabhavi") && (
+            items.locations.includes("Nagarabhavi") && (
               <DoctorLocation
                 key={items.id}
                 name={items.name}
                 qualification={items.qualification}
                 designation={items.designation}
-                image={items.image}
+                image={items.image.url}
               />
             )
         )}

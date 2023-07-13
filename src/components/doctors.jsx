@@ -7,6 +7,8 @@ export const doctors = [
       url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
     },
     imageAlt: 'Best IVF Specialist in Bangalore - Dr Asha S Vijay',
+    locations:
+      'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar, Marathahalli, RMV Extension, Nagarbhavi',
     bio: {
       raw: {
         children: [
@@ -174,6 +176,7 @@ export const doctors = [
   {
     name: 'Dr Aparna N',
     qualification: 'MBBS, DNB, M.Ch Reproductive Medicine and Surgery',
+    locations: 'Kalyan Nagar',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/3Shs19wcRZWACdwng438',
@@ -254,6 +257,7 @@ export const doctors = [
     name: 'Dr Maheshwari',
     qualification: 'MBBS, MS-OBG, FRM',
     designation: 'Assistant Medical Director, GarbhaGudi ',
+    locations: 'Hanumanthanagar',
     image: {
       url: 'https://media.graphassets.com/GyfBXwJQWm5NpDwnKj2X',
     },
@@ -285,6 +289,7 @@ export const doctors = [
     name: 'Dr Chinmayie R',
     qualification: 'MBBS,MS – OBG, FRM',
     designation: 'Assistant Medical Director, GGIRHR',
+    locations: 'Jayanagar',
     image: {
       url: 'https://media.graphassets.com/WYwNXLz4QbCJUrbHOaM3',
     },
@@ -322,6 +327,7 @@ export const doctors = [
     name: 'Dr Priyanka Rani',
     qualification: 'MBBS, DNB, FRM',
     designation: 'Fertility Specialist',
+    locations: 'Electronic City',
     image: {
       url: 'https://media.graphassets.com/kBAaY7UgQqefqgAjAvsk',
     },
@@ -358,6 +364,7 @@ export const doctors = [
   {
     name: 'Dr Anitha Manoj',
     qualification: 'MBBS, MS (OBG), FMAS, FRM',
+    locations: 'Nagarabhavi',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/7ghdxcJPTZIQvtdFRVWn',
@@ -395,6 +402,7 @@ export const doctors = [
   {
     name: 'Dr Srinivas B.V',
     qualification: 'MBBS, MS, DNB Urology, FAMH',
+    locations: 'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar',
     designation: 'Andrologist and Urologist',
     image: {
       url: 'https://media.graphassets.com/Phqwx5loT1y6F9kyaL3U',
@@ -474,6 +482,7 @@ export const doctors = [
   {
     name: 'Dr Shubha L ',
     qualification: 'MBBS, MS(OBG), DNB, FRM ',
+    locations: 'Electronic City',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/9uwozE6LSTe53RQfEb9t',
@@ -511,6 +520,7 @@ export const doctors = [
   {
     name: 'Dr Deepthi Venkatesh ',
     qualification: 'MBBS, MS - FRM ',
+    locations: 'Jayanagar',
     designation: 'Fertility Specialist ',
     image: {
       url: 'https://media.graphassets.com/kKgEEz2Q4GLNK4wMPIOW',
@@ -592,6 +602,7 @@ export const doctors = [
   {
     name: 'Dr Varsha Patil',
     qualification: 'MBBS, DGO, DNB(OBG), FRM',
+    locations: 'Marathahalli',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/9wZTO3YiTUGgeDs55xrp',
@@ -657,6 +668,7 @@ export const doctors = [
   {
     name: 'Dr Nikitha Murthy B.S',
     qualification: 'MBBS, MS-OBG, DNB, FRM',
+    locations: 'RMV Extension',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/aoSy8u3ORwaJng9CVqGY',
@@ -737,6 +749,7 @@ export const doctors = [
     name: 'Fyzullah Syed ',
     qualification: 'MSc Embryology, MSc Microbiology, BSc MLT',
     designation: 'Director of Embryology',
+    locations: 'Hanumanthanagar',
     image: {
       url: 'https://media.graphassets.com/3S1OSi7IQ6UT4qnwBj2M',
     },
@@ -843,6 +856,7 @@ export const doctors = [
   {
     name: 'Dr Itishree Anindita',
     qualification: 'MSc Clinical Embryology and Preimplantation Genetics',
+    locations: 'Electronic City',
     designation: 'Senior Embryologist',
     image: {
       url: 'https://media.graphassets.com/xvy2b8QlSRqQxHOhEyKa',
@@ -923,6 +937,7 @@ export const doctors = [
     name: 'Nabeela Lubna ',
     qualification:
       ' MSc Biotechnology, PG Diploma in Clinical embryology and ART',
+    locations: 'Kalyan Nagar',
     designation: 'Associate Embryologist ',
     image: {
       url: 'https://media.graphassets.com/b9xjXNtSw6Q8IfyY0p2C',
@@ -1003,6 +1018,7 @@ export const doctors = [
     name: 'Vidyalakshmi A',
     qualification:
       'MSc Biotechnology, P.G diploma, Fellowship in Embryology & Andrology',
+    locations: 'Kalyan Nagar',
     designation: 'Senior Embryologist & Lab Manager',
     image: {
       url: 'https://media.graphassets.com/j2n2u6wTtqxdj2HEMm3M',
@@ -1084,6 +1100,7 @@ export const doctors = [
     qualification:
       'M.Sc. in Biotechnology (ESHRE Certified Clinical Embryologist)',
     designation: 'Senior Embryologist & IVF Lab Manager',
+    locations: 'Kalyan Nagar',
     image: {
       url: 'https://media.graphassets.com/S05PqULShm7jtRCVb3jM',
     },
@@ -1265,6 +1282,7 @@ export const doctors = [
     name: 'Dr Pavithra ',
     qualification: 'MBBS, MS OBG , FRM',
     designation: 'Fertility Specialist',
+    locations: 'Kalyan Nagar',
     image: {
       url: 'https://media.graphassets.com/4UJ5nbpQYCRSGSuKrWJq',
     },
@@ -1344,6 +1362,7 @@ export const doctors = [
     name: 'Dr Lakshmi Priya ',
     qualification: 'MBBS, MS (OBG), FRM',
     designation: 'Fertility Specialist',
+    locations: 'Hanumanthanagar',
     image: {
       url: 'https://media.graphassets.com/gc7HQh4RmZKof4PbunIA',
     },
