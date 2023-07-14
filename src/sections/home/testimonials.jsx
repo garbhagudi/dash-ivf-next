@@ -77,6 +77,7 @@ const Testimonial = () => {
                           alt={item.name}
                           width={56}
                           height={56}
+                          loading='lazy'
                           suppressHydrationWarning={true}
                         />
                       </div>

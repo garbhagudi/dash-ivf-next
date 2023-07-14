@@ -64,6 +64,7 @@ const Video = ({ testimonials }) => {
                       id={snippet.resourceId.videoId}
                       title='Successful IVF Treatment Testimonial | GarbhaGudi IVF Centre | Dr Asha S Vijay'
                       poster='maxresdefault'
+                      loading='lazy'
                     />
                   </div>
                 </SwiperSlide>
