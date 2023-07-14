@@ -72,8 +72,8 @@ export default function TeamSection() {
                         className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent overflow-hidden'
                         src={item?.image.url}
                         alt={item?.imageAlt || item?.name}
-                        width={500}
-                        height={500}
+                        width={220}
+                        height={220}
                         loading='lazy'
                       />
                     </div>

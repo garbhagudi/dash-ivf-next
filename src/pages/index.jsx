@@ -3,13 +3,12 @@ import OtherServices from 'sections/home/other-services';
 import Calculators from 'sections/home/calculators';
 import TeamSection from 'sections/home/our-team';
 import Testimonials from 'sections/home/testimonials';
-import WhyUs from 'sections/home/why-us';
-import VideoOne from 'sections/home/video-one';
 import CallToAction from 'sections/home/subscribe-us';
 import Head from 'next/head';
 import TreatmentOptions from 'sections/home/treatment';
+import Faq from 'sections/home/faq';
 
-export default function Home({ testimonials }) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -65,30 +64,12 @@ export default function Home({ testimonials }) {
       </Head>
       <Banner />
       <OtherServices />
-      <Calculators />
-      <TreatmentOptions branch={'GarbhaGudi'} />
+      <TreatmentOptions branch={'GarbhaGudi IVF Centre'} />
       <TeamSection />
-      <WhyUs />
+      <Faq />
       <Testimonials />
-      <VideoOne testimonials={testimonials} />
+      <Calculators />
       <CallToAction />
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const YOUTUBE_PLAYLIST_ITEMS_API =
-    'https://www.googleapis.com/youtube/v3/playlistItems';
-  const testimonialData = await fetch(
-    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLiHJchamOyyG_IJk4YVYM_LlEkz8dWvqJ&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
-  );
-
-  const testimonials = await testimonialData.json();
-
-  return {
-    props: {
-      testimonials,
-    },
-    revalidate: 180,
-  };
-};
