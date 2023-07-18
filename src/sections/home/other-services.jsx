@@ -28,10 +28,7 @@ const OtherServices = () => {
                 Industry Average
               </h4>
               <div className='w-full rounded-full h-5 bg-brandPurple'>
-                <div
-                  className='bg-brandPurpleDark text-md text-white h-5 font-bold text-center p-0.5 leading-none rounded-l-full flex items-center justify-center'
-                  style={{ width: '25%' }}
-                >
+                <div className='bg-brandPurpleDark w-[25%] text-sm text-white h-5 font-bold text-center leading-none rounded-l-full flex items-center justify-center'>
                   25 - 28%
                 </div>
               </div>
@@ -41,10 +38,7 @@ const OtherServices = () => {
                 GarbhaGudi Average
               </h4>
               <div className='w-full bg-brandPurple rounded-full h-5'>
-                <div
-                  className='bg-brandPurpleDark text-md text-white h-5 font-bold text-center p-0.5 leading-none rounded-l-full flex items-center justify-center'
-                  style={{ width: '75%' }}
-                >
+                <div className='bg-brandPurpleDark w-[75%] text-sm text-white h-5 font-extrabold text-center leading-none rounded-l-full flex items-center justify-center'>
                   65-73%
                 </div>
               </div>

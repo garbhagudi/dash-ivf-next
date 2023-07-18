@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'components/image';
 import { doctors } from 'components/doctors';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
