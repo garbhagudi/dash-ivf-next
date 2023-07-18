@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import {
-  CiPercent,
-  CiMedicalCase,
-  CiMedicalClipboard,
-  CiBank,
-} from 'react-icons/ci';
-import { BsBuildings, BsCurrencyRupee, BsQuestionCircle } from 'react-icons/bs';
+import { CiPercent, CiMedicalCase } from 'react-icons/ci';
+import { BsBuildings, BsCurrencyRupee } from 'react-icons/bs';
 import { GiMeditation } from 'react-icons/gi';
 import { ImLab } from 'react-icons/im';
 
@@ -89,7 +83,7 @@ const Features = () => {
                       <h3 className='mt-3 text-base font-semibold text-brandDark tracking-tight font-heading'>
                         {feature.name}
                       </h3>
-                      <p className='mt-2 pb-3 text-brandDark antialiased text-sm  font-content font-normal'>
+                      <p className='mt-2 pb-3 text-brandDark antialiased text-sm  font-content font-medium'>
                         {feature.content}
                       </p>
                     </div>

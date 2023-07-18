@@ -5,7 +5,7 @@ import Link from 'next/link';
 const TreatmentOptions = ({ branch }) => {
   return (
     <div className='container mx-auto'>
-      <h2 className='pb-16 lg:pb-20 text-xl lg:text-2xl font-heading text-center font-bold px-2'>
+      <h2 className='pb-16 lg:pb-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2'>
         Infertility Treatment Options at {branch}
       </h2>
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2'>
@@ -14,7 +14,7 @@ const TreatmentOptions = ({ branch }) => {
             key={items?.id}
             className='font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50'
           >
-            <div className='w-28 h-28 -mt-14 mx-auto flex items-center justify-center rounded-full'>
+            <div className='w-20 h-20 -mt-10 md:w-24 md:h-24 md:-mt-12 mx-auto flex items-center justify-center rounded-full'>
               <Image
                 src={items?.image}
                 alt={items?.treatent}
@@ -25,10 +25,12 @@ const TreatmentOptions = ({ branch }) => {
               />
             </div>
             <div className='flex flex-col items-center justify-center py-2'>
-              <div className='text-xl font-heading text-center font-bold pb-2'>
+              <div className='text-base md:text-xl font-heading text-center font-bold pb-2'>
                 {items?.treatent}
               </div>
-              <div className='px-3 text-base text-center'>{items?.desc}</div>
+              <div className='px-3 text-sm md:text-base text-center'>
+                {items?.desc}
+              </div>
             </div>
             <div className=' text-center border w-full bg-brandPink4 py-1 rounded-b-2xl'>
               <Link
