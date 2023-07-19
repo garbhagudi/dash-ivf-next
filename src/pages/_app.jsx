@@ -6,7 +6,6 @@ import '../styles/calendar.css';
 import TagManager from 'react-gtm-module';
 import SalesIQ from 'components/SalesIQ';
 import Footer from 'components/footer/footer';
-import Header from 'components/header/header';
 import FloatPhone from 'components/phoneFloat';
 
 function MyApp({ Component, pageProps }) {

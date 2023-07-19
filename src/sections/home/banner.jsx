@@ -32,7 +32,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1689751842/coup-min_g3kq4k_kltqdy.webp'
             }
             width={500}
             height={500}

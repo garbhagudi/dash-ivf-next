@@ -14,12 +14,12 @@ const TreatmentOptions = ({ branch }) => {
             key={items?.id}
             className='font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50'
           >
-            <div className='w-20 h-20 -mt-10 md:w-24 md:h-24 md:-mt-12 mx-auto flex items-center justify-center rounded-full'>
+            <div className='-mt-10 md:w-24 md:h-24 md:-mt-12 mx-auto flex items-center justify-center rounded-full'>
               <Image
                 src={items?.image}
                 alt={items?.treatent}
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 className='w-20'
                 loading='lazy'
               />
