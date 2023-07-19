@@ -375,11 +375,11 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        '"Segoe UI"',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
         'BlinkMacSystemFont',
-        '"Segoe UI"',
         'Roboto',
         '"Helvetica Neue"',
         'Arial',
