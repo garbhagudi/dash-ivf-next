@@ -1,6 +1,6 @@
-import MyModal from 'components/modal';
 import Image from 'next/image';
 import Form from 'components/form';
+import Link from 'next/link';
 
 const Banner = () => {
   return (
@@ -32,7 +32,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1677492148/Misc/coup-min_g3kq4k.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1689754283/29ualjhh_radyt9.webp'
             }
             width={500}
             height={500}
@@ -41,7 +41,7 @@ const Banner = () => {
             priority={true}
           />
         </div>
-        <div className='order-2 bg-brandPurpleDark'>
+        <div className='order-2 bg-brandPurpleDark' id='leadForm'>
           <div className='flex items-center justify-center'>
             <Form />
           </div>
@@ -57,8 +57,12 @@ const Banner = () => {
             +91 9108 9108 32
           </a>
         </div>
-        <div className='text-center mt-8 sm:mt-0'>
-          <MyModal title='Book a Free Appointment' />
+        <div className='mx-auto text-center'>
+          <button className='px-3 py-2 text-center mx-auto block sm:inline-block bg-brandPink hover:bg-brandPurpleDark transition duration-200 ease-in-out text-white font-semibold rounded-lg'>
+            <Link href='#leadForm' className='scroll-smooth font-sans'>
+              Book an Appointment
+            </Link>
+          </button>
         </div>
       </div>
     </div>

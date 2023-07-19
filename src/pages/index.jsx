@@ -1,12 +1,14 @@
-import Banner from 'sections/home/banner';
-import OtherServices from 'sections/home/other-services';
-import Calculators from 'sections/home/calculators';
-import TeamSection from 'sections/home/our-team';
-import Testimonials from 'sections/home/testimonials';
-import CallToAction from 'sections/home/subscribe-us';
-import Head from 'next/head';
-import TreatmentOptions from 'sections/home/treatment';
-import Faq from 'sections/home/faq';
+import dynamic from 'next/dynamic';
+
+const Banner = dynamic(() => import('sections/home/banner'));
+const OtherServices = dynamic(() => import('sections/home/other-services'));
+const Calculators = dynamic(() => import('sections/home/calculators'));
+const TeamSection = dynamic(() => import('sections/home/our-team'));
+const Testimonials = dynamic(() => import('sections/home/testimonials'));
+const Cta = dynamic(() => import('sections/home/cta'));
+const Head = dynamic(() => import('next/head'));
+const TreatmentOptions = dynamic(() => import('sections/home/treatment'));
+const Faq = dynamic(() => import('sections/home/faq'));
 
 export default function Home() {
   return (
@@ -69,7 +71,7 @@ export default function Home() {
       <Faq />
       <Testimonials />
       <Calculators />
-      <CallToAction />
+      <Cta />
     </div>
   );
 }
