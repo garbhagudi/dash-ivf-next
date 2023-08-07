@@ -58,16 +58,58 @@ const features = [
 const Features = () => {
   return (
     <div className='relative bg-white py-8 sm:py-18' id='features'>
-      <div className='mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
-        <h2 className='mt-2 text-3xl font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading'>
+      <div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
+        <h2 className='mt-2 text-3xl text-center font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading'>
           Our Versatile Approach
         </h2>
-        <p className='mt-5 max-w-prose mx-auto text-md text-brandDark font-content'>
-          At GarbhaGudi, we understand that fertility treatments can be mentally
-          and physically stressful. We are always committed to providing a world
-          of options and bringing a new ray of hope to many who are trying to
-          conceive. So, you can expect:
-        </p>
+        <div className='max-w-7xl mx-auto px-3'>
+          <div className='py-3 lg:pt-8'>
+            <div className='font-content'>
+              <div className='pb-4'>
+                GarbhaGudi IVF Centre stands as the epitome of excellence,
+                making it the{' '}
+                <span className='font-bold'>
+                  {' '}
+                  Best Fertility Hospital in Bangalore
+                </span>
+                . We take pride in offering a comprehensive range of{' '}
+                <span className='font-bold'> Infertility treatments</span> to
+                cater to diverse needs, ensuring that every couple receives
+                personalized care and attention.
+              </div>{' '}
+              <div className='pb-4'>
+                As a prominent{' '}
+                <span className='font-bold'>
+                  {' '}
+                  Infertility Hospital in Bangalore
+                </span>
+                , our facility houses state-of-the-art infrastructure and
+                cutting-edge technologies. Our dedicated team of fertility
+                experts brings together years of experience and expertise to
+                provide the highest level of care.
+              </div>{' '}
+              <div className='pb-4'>
+                At GarbhaGudi IVF Centre, our suite of treatments includes
+                Intrauterine Insemination (IUI), In Vitro Fertilization (IVF),
+                Intracytoplasmic Sperm Injection (ICSI), Egg Freezing,
+                Surrogacy, and more. We believe in a holistic approach, focusing
+                not just on the medical aspects but also on the emotional
+                well-being of our patients.
+              </div>
+              <div className='pb-4'>
+                With a commitment to excellence, compassionate care, and a high
+                success rate, GarbhaGudi IVF Centre has rightfully earned its
+                reputation as the{' '}
+                <span className='font-bold'>
+                  {' '}
+                  Best Fertility Hospital in Bangalore
+                </span>
+                . Trust us to accompany you on your journey to parenthood and
+                make your dreams of a complete family a reality.
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
