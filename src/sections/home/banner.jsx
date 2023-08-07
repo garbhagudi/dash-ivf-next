@@ -9,17 +9,19 @@ const Banner = () => {
         <div className='px-3 order-0 bg-[#e3e3e3]'>
           <div className='flex flex-col items-center justify-center h-full space-y-3 py-16'>
             <div className='font-heading font-bold text-3xl  text-center leading-10'>
-              <span className='text-brandPink'>Parenthood:</span> Where every
-              little moment becomes a <br />
+              <div className='text-brandPink lg:mb-2'>
+                Freedom From Infertility:
+              </div>{' '}
+              Experience the Joy of{' '}
               <span className='bg-brandPink px-3 pt-1 pb-0.5 text-white rounded-md'>
-                Fond Memory
+                Parenthood
               </span>
             </div>
             <div className='font-content text-center text-lg font-semibold bg-brandPurple text-white px-3 py-1 rounded-lg'>
-              15% Discounts on Blood Tests
+              Get up to 80% off on Fertility Investigation Packages
             </div>
             <div className='text-brandPurpleDark font-semibold text-sm'>
-              Offer Valid till July 31st <span className='text-red-500'>*</span>
+              Offer Valid till Aug 31st <span className='text-red-500'>*</span>
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>

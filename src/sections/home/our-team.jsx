@@ -34,7 +34,7 @@ export default function TeamSection() {
       <div className='mx-auto px-3 max-w-7xl pb-12'>
         <div className='text-center pb-12 '>
           <h1 className='text-3xl sm:text-4xl font-heading font-bold mb-4'>
-            Meet our Experts
+            Meet our Fertility Specialists
           </h1>
           <p className='max-w-prose mx-auto'>
             Our team of fertility specialists have been known for their
