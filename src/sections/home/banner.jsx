@@ -6,43 +6,34 @@ const Banner = () => {
   return (
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-3'>
-        <div className='px-3 order-0 bg-[#e3e3e3]'>
-          <div className='flex flex-col items-center justify-center h-full space-y-3 py-16'>
-            <div className='font-heading font-bold text-3xl  text-center leading-10'>
-              <div className='text-brandPink lg:mb-2'>
-                Freedom From Infertility:
-              </div>{' '}
-              Experience the Joy of{' '}
-              <span className='bg-brandPink px-3 pt-1 pb-0.5 text-white rounded-md'>
-                Parenthood
-              </span>
-            </div>
-            <div className='font-content text-center text-lg font-semibold bg-brandPurple text-white px-3 py-1 rounded-lg'>
-              Get up to 80% off on Fertility Investigation Packages
-            </div>
-            <div className='text-brandPurpleDark font-semibold text-sm'>
-              Offer Valid till Aug 31st <span className='text-red-500'>*</span>
-            </div>
-          </div>
+        <div className='order-0 col-span-3 lg:col-span-2 bg-red-200'>
+          <Image
+            src={'https://media.graphassets.com/fXrmukvAR4qUMXe4NFd7'}
+            width={500}
+            height={500}
+            alt='Start IVF from as low as 90K'
+            className='w-full h-full object-cover object-center'
+            priority={true}
+          />
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
             *terms and conditions apply
           </div>
         </div>
-        <div className='order-1 flex items-end justify-center object-cover overflow-hidden bg-[#e3e3e3]'>
+        {/* <div className='order-1 flex items-center justify-center object-cover overflow-hidden bg-[#fff]'>
           <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md'>
             *terms and conditions apply
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1689754283/29ualjhh_radyt9.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1691477376/misc/PNG_Images-02_bxdqyu.webp'
             }
-            width={500}
-            height={500}
+            width={350}
+            height={350}
             alt='Start IVF from as low as 90K'
-            className='w-full h-auto object-contain object-center lg:object-contain'
+            className='w-96 h-auto object-contain object-center lg:object-contain'
             priority={true}
           />
-        </div>
+        </div> */}
         <div className='order-2 bg-brandPurpleDark' id='leadForm'>
           <div className='flex items-center justify-center'>
             <Form />
