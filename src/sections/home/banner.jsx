@@ -7,8 +7,8 @@ const Banner = () => {
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-3 bg-neutral-100'>
         <div className='order-0 relative '>
-          <div className='flex items-center justify-center w-full h-full flex-col text-center py-24 lg:py-0'>
-            <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center py-4'>
+          <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
+            <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
               <span className='text-[#f15b25]'>Freedom</span>{' '}
               <span className='text-white font-outline'>From</span>{' '}
               <span className='text-[#006931]'>Infertility</span>
