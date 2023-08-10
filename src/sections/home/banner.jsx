@@ -5,35 +5,48 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-3'>
-        <div className='order-0 col-span-3 lg:col-span-2 bg-red-200'>
-          <Image
-            src={'https://media.graphassets.com/fXrmukvAR4qUMXe4NFd7'}
-            width={500}
-            height={500}
-            alt='Start IVF from as low as 90K'
-            className='w-full h-full object-cover object-center'
-            priority={true}
-          />
+      <div className='grid grid-cols-1 lg:grid-cols-3 bg-neutral-100'>
+        <div className='order-0 relative '>
+          <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
+            <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
+              <span className='text-[#f15b25]'>Freedom</span>{' '}
+              <span className='text-white font-outline'>From</span>{' '}
+              <span className='text-[#006931]'>Infertility</span>
+            </div>
+            <div className='text-xl  py-2 font-bold font-heading pb-4'>
+              Get Upto{' '}
+              <span className='text-3xl text-[#282870] underline'>
+                50% to 80%
+              </span>{' '}
+              Off*
+            </div>
+            <div className='text-2xl'>
+              On{' '}
+              <span className='text-[#f15b25] font-semibold'>
+                Fertility Investigation{' '}
+              </span>
+              Packages
+            </div>
+          </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
             *terms and conditions apply
           </div>
         </div>
-        {/* <div className='order-1 flex items-center justify-center object-cover overflow-hidden bg-[#fff]'>
-          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md'>
+        <div className='order-1 flex items-end justify-center object-cover overflow-hidden'>
+          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
             *terms and conditions apply
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1691477376/misc/PNG_Images-02_bxdqyu.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1691654264/My_project_2_-min_uloxu3.webp'
             }
-            width={350}
-            height={350}
+            width={1920}
+            height={1080}
             alt='Start IVF from as low as 90K'
-            className='w-96 h-auto object-contain object-center lg:object-contain'
+            className='object-cover object-center -scale-x-100'
             priority={true}
           />
-        </div> */}
+        </div>
         <div className='order-2 bg-brandPurpleDark' id='leadForm'>
           <div className='flex items-center justify-center'>
             <Form />
