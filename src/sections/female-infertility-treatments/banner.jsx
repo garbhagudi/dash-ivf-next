@@ -33,8 +33,8 @@ const Banner = () => {
             *terms and conditions apply
           </div>
         </div>
-        <div className='order-1 flex items-center w-full h-full justify-center object-cover overflow-hidden bg-[#e1a1b2]'>
-          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
+        <div className='order-1 relative flex items-center w-full h-full justify-center object-cover overflow-hidden bg-[#e1a1b2]'>
+          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bottom-0 bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
             *terms and conditions apply
           </div>
           <Image
