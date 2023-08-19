@@ -89,14 +89,6 @@ const Features = () => {
                 provide the highest level of care.
               </div>{' '}
               <div className='pb-4'>
-                At GarbhaGudi IVF Centre, our suite of treatments includes
-                Intrauterine Insemination (IUI), In Vitro Fertilization (IVF),
-                Intracytoplasmic Sperm Injection (ICSI), Egg Freezing,
-                Surrogacy, and more. We believe in a holistic approach, focusing
-                not just on the medical aspects but also on the emotional
-                well-being of our patients.
-              </div>
-              <div className='pb-4'>
                 With a commitment to excellence, compassionate care, and a high
                 success rate, GarbhaGudi IVF Centre has rightfully earned its
                 reputation as the{' '}

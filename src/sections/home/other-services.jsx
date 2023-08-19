@@ -9,6 +9,11 @@ const OtherServices = () => {
             What makes GarbhaGudi special?
           </p>
         </div>
+        <div className='mt-10 text-center'>
+          GarbhaGudi IVF Centre has been awarded as the{' '}
+          <h1>Best IVF & Fertility centre in Bangalore</h1> by multiple
+          organisations.
+        </div>
         <div className='max-w-4xl mx-auto pb-12'>
           <div className='max-w-3xl mx-auto text-center font-bold py-6 md:py-10'>
             <h2 className='text-3xl md:text-5xl mb-4'>
