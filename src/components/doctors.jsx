@@ -359,78 +359,78 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr Srinivas B.V',
-    qualification: 'MBBS, MS, DNB Urology, FAMH',
-    locations: 'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar',
-    designation: 'Andrologist and Urologist',
-    image: {
-      url: 'https://media.graphassets.com/Phqwx5loT1y6F9kyaL3U',
-    },
-    imageAlt: 'IVF Doctor in Bangalore - Dr Srinivas B.V',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Srinivas is a renowned and experienced Andrologist rendering his service in Garbhagudi IVF centre as Senior Consultant Andrologist and Urologist. He was awarded as the best budding Andrologist in India during the National Award ceremony conducted by Economic times in the year 2019, he was also awarded as the best budding Andrologist in South India as well during the same event.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Srinivas completed his MBBS from the prestigious BANGALORE MEDICAL COLLEGE. Later on, finished his postgraduate MS (General Surgery) from ST. JOHN’S MEDICAL COLLEGE, BANGALORE. He completed his super-speciality course DNB (Urology)- NATIONAL BOARD OF EXAMINATION, NEW DELHI from NU Hospitals, Bangalore. His pursuit for enhanced learning made him continue the further course on FAMH( Fellowship in Andrology and Men’s Health) from Rajiv Gandhi University Of health sciences. He is the first in Asia to have a university certified course in Andrology and men’s health.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Srinivas has an equal interest in teaching as well. He is an honorary ASSOCIATE PROFESSOR at SHRIDEVI INSTITUTE OF MEDICAL COLLEGE & RESEARCH CENTER, Tumkur. He is also associated with teaching students in Embryology courses at Bangalore University. He also takes regular classes to gynaecologists at various fellowship programmes under RGUHS.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Srinivas is presently practising at various IVF and fertility centres in Bangalore. He has also published many articles in international journals. His depth of involvement in research is evident with his journal published in the International Journal of Infertility and Fetal Medicine which studied the effect of mobile phone radiation on semen parameters. His original article on Hypogonadism and Varicocele was published in the International Journal of Endocrinology and was appreciated worldwide and was even included in American Urology Association guidelines. To his credit, Dr Srinivas has won a lot of prizes at various national and state conferences and CMEs. He is also credited with being an author of 3 chapters of the standard Fertility Textbook. He has given several TV interviews on reproductive health and fertility issues.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr Srinivas B.V',
+  //   qualification: 'MBBS, MS, DNB Urology, FAMH',
+  //   locations: 'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar',
+  //   designation: 'Andrologist and Urologist',
+  //   image: {
+  //     url: 'https://media.graphassets.com/Phqwx5loT1y6F9kyaL3U',
+  //   },
+  //   imageAlt: 'IVF Doctor in Bangalore - Dr Srinivas B.V',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Srinivas is a renowned and experienced Andrologist rendering his service in Garbhagudi IVF centre as Senior Consultant Andrologist and Urologist. He was awarded as the best budding Andrologist in India during the National Award ceremony conducted by Economic times in the year 2019, he was also awarded as the best budding Andrologist in South India as well during the same event.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Srinivas completed his MBBS from the prestigious BANGALORE MEDICAL COLLEGE. Later on, finished his postgraduate MS (General Surgery) from ST. JOHN’S MEDICAL COLLEGE, BANGALORE. He completed his super-speciality course DNB (Urology)- NATIONAL BOARD OF EXAMINATION, NEW DELHI from NU Hospitals, Bangalore. His pursuit for enhanced learning made him continue the further course on FAMH( Fellowship in Andrology and Men’s Health) from Rajiv Gandhi University Of health sciences. He is the first in Asia to have a university certified course in Andrology and men’s health.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Srinivas has an equal interest in teaching as well. He is an honorary ASSOCIATE PROFESSOR at SHRIDEVI INSTITUTE OF MEDICAL COLLEGE & RESEARCH CENTER, Tumkur. He is also associated with teaching students in Embryology courses at Bangalore University. He also takes regular classes to gynaecologists at various fellowship programmes under RGUHS.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Srinivas is presently practising at various IVF and fertility centres in Bangalore. He has also published many articles in international journals. His depth of involvement in research is evident with his journal published in the International Journal of Infertility and Fetal Medicine which studied the effect of mobile phone radiation on semen parameters. His original article on Hypogonadism and Varicocele was published in the International Journal of Endocrinology and was appreciated worldwide and was even included in American Urology Association guidelines. To his credit, Dr Srinivas has won a lot of prizes at various national and state conferences and CMEs. He is also credited with being an author of 3 chapters of the standard Fertility Textbook. He has given several TV interviews on reproductive health and fertility issues.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   {
     name: 'Dr Shubha L ',
     qualification: 'MBBS, MS(OBG), DNB, FRM ',
