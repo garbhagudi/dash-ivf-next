@@ -14,16 +14,18 @@ const Banner = () => {
               through Tailored Solutions for{' '}
               <span className='text-brandPurpleDark'>Female Infertility</span>
             </div>
+            <div className='text-xl pb-2'>
+              Get a{' '}
+              <span className='text-[#e92e64] uppercase font-bold'>Free</span>{' '}
+              Ultrasound Scan
+            </div>
             <div className='text-xl  py-2 font-bold font-heading pb-4'>
-              Get Upto{' '}
-              <span className='text-3xl text-brandDark underline'>
-                50% to 80%
-              </span>{' '}
-              Off*
+              and upto{' '}
+              <span className='text-[#064a63] underline'>50% to 80%</span> Off*
             </div>
             <div className='text-2xl'>
               On{' '}
-              <span className='text-brandPink font-semibold drop-shadow-xl'>
+              <span className='text-[#e92e64] font-semibold'>
                 Fertility Investigation{' '}
               </span>
               Packages

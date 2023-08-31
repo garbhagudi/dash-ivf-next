@@ -5,24 +5,25 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-3 bg-neutral-100'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 bg-[#ffb6c0]'>
         <div className='order-0 relative '>
           <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
             <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
-              <span className='text-[#f15b25]'>Freedom</span>{' '}
-              <span className='text-white font-outline'>From</span>{' '}
-              <span className='text-[#006931]'>Infertility</span>
+              <div className='text-[#064a63] uppercase'>Feel the Joy of</div>{' '}
+              <div className='text-[#e92e64] uppercase'>Parenthood</div>
+            </div>
+            <div className='text-xl pb-2'>
+              Get a{' '}
+              <span className='text-[#e92e64] uppercase font-bold'>Free</span>{' '}
+              Ultrasound Scan
             </div>
             <div className='text-xl  py-2 font-bold font-heading pb-4'>
-              Get Upto{' '}
-              <span className='text-3xl text-[#282870] underline'>
-                50% to 80%
-              </span>{' '}
-              Off*
+              and upto{' '}
+              <span className='text-[#064a63] underline'>50% to 80%</span> Off*
             </div>
             <div className='text-2xl'>
               On{' '}
-              <span className='text-[#f15b25] font-semibold'>
+              <span className='text-[#e92e64] font-semibold'>
                 Fertility Investigation{' '}
               </span>
               Packages
@@ -38,12 +39,12 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1691654264/My_project_2_-min_uloxu3.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1693471472/Girl_Fri-min_ouvhv3.webp'
             }
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='object-cover object-center -scale-x-100'
+            className='object-cover object-center -scale-x-100 w-56 -mb-5'
             priority={true}
           />
         </div>
