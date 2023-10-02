@@ -8,27 +8,14 @@ const Banner = () => {
       <div className='grid grid-cols-1 lg:grid-cols-3'>
         <div className='order-0 relative bg-[#e1a1b2]'>
           <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
-            <div className='text-3xl lg:text-4xl font-heading font-extrabold text-center pb-4'>
-              Achieve{' '}
+            <div className='text-3xl lg:text-2xl font-content font-extrabold text-center pb-4'>
+              Affordable{' '}
               <span className='text-brandPink drop-shadow-xl'>Parenthood</span>{' '}
-              through Tailored Solutions for{' '}
-              <span className='text-brandPurpleDark'>Female Infertility</span>
+              IVF Solutions at GarbhaGudi{' '}
             </div>
-            <div className='text-xl pb-2'>
-              Get a{' '}
-              <span className='text-[#e92e64] uppercase font-bold'>Free</span>{' '}
-              Ultrasound Scan
-            </div>
-            <div className='text-xl  py-2 font-bold font-heading pb-4'>
-              and upto{' '}
-              <span className='text-[#064a63] underline'>50% to 80%</span> Off*
-            </div>
-            <div className='text-2xl'>
-              On{' '}
-              <span className='text-[#e92e64] font-semibold'>
-                Fertility Investigation{' '}
-              </span>
-              Packages
+            <div className='text-3xl lg:text-4xl pb-2 font-bold font-heading'>
+              Your path to parenthood Begins at{' '}
+              <span className='text-[#e92e64] uppercase'>₹90,000/- </span>{' '}
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
