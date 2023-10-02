@@ -13,20 +13,12 @@ const Banner = () => {
               <div className='text-[#e92e64] uppercase'>Parenthood</div>
             </div>
             <div className='text-xl font-bold pb-2'>
-              Get a{' '}
-              <span className='text-[#e92e64] uppercase font-bold'>Free</span>{' '}
-              Ultrasound Scan
+              Experience Tailored Fertility Care
             </div>
             <div className='text-xl py-2 font-bold font-heading pb-4'>
-              and upto{' '}
-              <span className='text-[#064a63] underline'>50% to 80%</span> Off*
-            </div>
-            <div className='text-2xl'>
-              On{' '}
-              <span className='text-[#e92e64] font-semibold'>
-                Fertility Investigation{' '}
-              </span>
-              Packages
+              with our Exclusive{' '}
+              <span className='text-[#064a63] underline'>₹ 90,000/-</span>{' '}
+              Package Offer
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
