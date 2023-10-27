@@ -50,7 +50,7 @@ export default function MyModal({ title }) {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-lg -mt-5 transform rounded cursor-pointer overflow-hidden bg-brandPurple opacity-95 align-middle shadow-xl transition-all'>
+                <Dialog.Panel className='w-full max-w-lg -mt-5 transform rounded cursor-pointer overflow-hidden bg-purple-100 opacity-95 align-middle shadow-xl transition-all'>
                   <div
                     className='my-4 flex sm:hidden items-center justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg'
                     onClick={closeModal}

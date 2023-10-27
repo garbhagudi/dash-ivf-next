@@ -3,7 +3,7 @@ const IndexPage = () => {
     <>
       <iframe
         src='/contact.html'
-        className='max-w-lg w-screen bg-transparent mx-auto h-[422px]'
+        className='w-screen max-w-xs bg-transparent mx-auto h-screen max-h-[460px]'
         loading='lazy'
       >
         Loading…
