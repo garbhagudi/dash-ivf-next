@@ -1,342 +1,84 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react';
-import { HiCheck, HiMinus, HiChevronDown } from 'react-icons/hi';
-import { Disclosure } from '@headlessui/react';
+import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import MyModal from 'sections/lp-catalyst/modal';
-import Treatment from 'sections/female-infertility/diagtreat/treatment';
 
-const tiers = [
+const metrics = [
   {
-    name: 'IVF Essentials',
-    href: '/contact.html',
-    priceMonthly: '90,000',
+    id: 1,
+    stat: '10000+',
+    emphasis: 'Happy Families',
   },
   {
-    name: 'Plus',
-    href: '/contact.html',
-    priceMonthly: '1,50,000',
+    id: 2,
+    stat: '150+',
+    emphasis: 'Free Fertility Awareness Camps',
   },
   {
-    name: 'Premium',
-    href: '/contact.html',
-    priceMonthly: '2,20,000',
+    id: 3,
+    stat: '65-73%',
+    emphasis: 'IVF Success Rate',
   },
-];
-const sections = [
   {
-    name: 'Services*',
-    features: [
-      {
-        id: 1,
-        name: 'Consultations',
-        tiers: { Plus: true, Premium: true, 'IVF Essentials': true },
-      },
-      {
-        id: 2,
-        name: 'Follicular Monitoring',
-        tiers: { Plus: true, Premium: true, 'IVF Essentials': false },
-      },
-      {
-        id: 3,
-        name: 'Stimulation Injections',
-        tiers: { Plus: false, 'IVF Essentials': false, Premium: true },
-      },
-      {
-        id: 4,
-        name: (
-          <span className=''>
-            Investigations during Stimulation Cycle <br />
-            (Estradiol,
-            <br /> Luteinizing Hormone, <br />
-            Progesterone)
-          </span>
-        ),
-        tiers: { Plus: true, 'IVF Essentials': false, Premium: true },
-      },
-      {
-        id: 5,
-        name: 'Other Specific Investiagtions',
-        tiers: { Plus: false, 'IVF Essentials': false, Premium: false },
-      },
-      {
-        id: 6,
-        name: 'FET',
-        tiers: {
-          'IVF Essentials': '1 Cycle',
-          Premium: '1 Cycle',
-          Plus: '1 Cycle',
-        },
-      },
-      { id: 7, name: 'Blastocyst', tiers: { Premium: true, Plus: true } },
-      {
-        id: 8,
-        name: (
-          <span className=''>
-            Freezing charges <br /> (1 Year)
-          </span>
-        ),
-        tiers: { Premium: true, Plus: true },
-      },
-      {
-        id: 9,
-        name: 'OPU Charges',
-        tiers: { Plus: true, 'IVF Essentials': true, Premium: true },
-      },
-      {
-        id: 10,
-        name: 'Ward Charges',
-        tiers: { Plus: true, 'IVF Essentials': true, Premium: true },
-      },
-    ],
+    id: 4,
+    stat: '7',
+    emphasis: 'Infertility Centres Across Bangalore',
   },
 ];
 
-const Packages = () => {
+const Stat = () => {
   return (
-    <div className='font-content'>
-      <div className='text-center py-10 lg:py-16 px-3'>
-        <h2 className='font-heading font-bold text-3xl lg:text-5xl text-gray-800'>
-          IVF Packages at GarbhaGudi
-        </h2>
-        <p className='pt-4 font-content'>
-          Here is a brief comparison of the{' '}
-          <Link
-            href='/treatments/ivf-treatment-cost-in-bangalore'
-            className='text-brandPink hover:underline'
-          >
-            cost of IVF
-          </Link>{' '}
-          packages at GarbhaGudi. No matter the financial status, we&apos;ve got
-          a package that works for you.
-        </p>
+    <div className='relative mx-auto bg-white'>
+      <div className='absolute bottom-0 w-full h-80 xl:inset-0 xl:h-full'>
+        <div className='w-full h-full xl:grid xl:grid-cols-2'>
+          <div className='h-full xl:relative xl:col-start-2'>
+            <Image
+              className='object-cover w-full h-full opacity-70 xl:absolute xl:inset-0'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1674112151/Misc/c9xR52ZwxhbTdCfXFGsx4-transformed_1_lrnub0.jpg'
+              alt='Successful IVF Treatment In Banglore'
+              height={1024}
+              width={1024}
+              loading='lazy'
+            />
+            <div
+              aria-hidden='true'
+              className='absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r'
+            />
+          </div>
+        </div>
       </div>
-      <div className='max-w-7xl mx-auto py-16 sm:pb-24 sm:px-6 lg:px-8'>
-        {/* xs to lg */}
-        <div className='max-w-sm mx-auto space-y-2 striped lg:hidden '>
-          {tiers.map((tier) => (
-            <section
-              key={tier.name}
-              className='border border-gray-400 rounded-md bg-gray-50 hover:bg-gray-100'
-            >
-              <div className='p-4 mb-8 '>
-                <h2 className='text-lg leading-6 text-gray-800 font-bold font-heading text-center'>
-                  {tier.name}
-                </h2>
-                <p className='mt-4 text-center '>
-                  <span className='text-4xl font-extrabold text-brandPink  '>
-                    ₹{tier.priceMonthly}
+      <div className='max-w-4xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8'>
+        <div className='relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24'>
+          <p className='mt-3 text-3xl font-extrabold text-gray-800 font-heading'>
+            Our Ever-Growing Success
+          </p>
+          <p className='mt-5 text-lg text-gray-800 font-content'>
+            GarbhaGudi is a place where dreams come alive, hopes never fade, and
+            possibilities never end. As one of the finest{' '}
+            <Link href='/' className='text-gg-500 hover:underline'>
+              IVF Centre in Bangalore
+            </Link>
+            , we ceaselessly work to help you cherish the golden moment of
+            holding your little bundles of joy. Along with our quality of
+            treatment and care, some of the other contributing factors for
+            achieving high success rates are:
+          </p>
+          <div className='grid grid-cols-1 mt-12 gap-y-12 gap-x-6 sm:grid-cols-2'>
+            {metrics.map((item) => (
+              <p key={item.id}>
+                <span className='block text-2xl font-bold text-gray-800 font-heading'>
+                  {item.stat}
+                </span>
+                <span className='block mt-1 text-base text-gray-800'>
+                  <span className='font-medium text-gray-800 font-content'>
+                    {item.emphasis}
                   </span>{' '}
-                </p>
-                <div className='block w-36 mx-auto mt-4 bg-gg-400 rounded-md py-2 text-sm font-bold font-heading text-brandDark text-center hover:bg-gg-500'>
-                  <MyModal title={'Know More'} />
-                </div>
-              </div>
-
-              <Disclosure>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className='flex items-center justify-center my-4 w-56 mx-auto text-brandPink font-bold'>
-                      {open ? 'See less' : 'See More'}
-                      <HiChevronDown
-                        className={`${
-                          open ? 'rotate-180 transform' : ''
-                        } h-5 w-5 text-gg-500`}
-                      />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className='text-gray-800'>
-                      {sections.map((section) => (
-                        <table key={section.name} className='w-full'>
-                          <caption className='text-xl border-t border-gray-200 py-3 px-4  font-heading font-bold text-left'>
-                            {section.name}
-                          </caption>
-                          <thead>
-                            <tr>
-                              <th className='sr-only' scope='col'>
-                                Feature
-                              </th>
-                              <th className='sr-only' scope='col'>
-                                Included
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody className='divide-y divide-gray-300'>
-                            {section.features.map((feature) => (
-                              <tr
-                                key={feature.id}
-                                className='border-t border-gray-00'
-                              >
-                                <th
-                                  className='py-5 px-4 text-sm font-normal text-left'
-                                  scope='row'
-                                >
-                                  {feature.name}
-                                </th>
-                                <td className='py-5 pr-4'>
-                                  {typeof feature.tiers[tier.name] ===
-                                  'string' ? (
-                                    <span className='block text-sm text-right'>
-                                      {feature.tiers[tier.name]}
-                                    </span>
-                                  ) : (
-                                    <>
-                                      {feature.tiers[tier.name] === true ? (
-                                        <HiCheck
-                                          className='ml-auto h-5 w-5 text-green-500'
-                                          aria-hidden='true'
-                                        />
-                                      ) : (
-                                        <HiMinus
-                                          className='ml-auto h-5 w-5 text-gray-400'
-                                          aria-hidden='true'
-                                        />
-                                      )}
-
-                                      <span className='sr-only'>
-                                        {feature.tiers[tier.name] === true
-                                          ? 'Yes'
-                                          : 'No'}
-                                      </span>
-                                    </>
-                                  )}
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      ))}
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            </section>
-          ))}
-        </div>
-        {/* lg+ */}
-        <div className='hidden lg:block'>
-          <table className='w-full h-px table-fixed'>
-            <caption className='sr-only'>Pricing plan comparison</caption>
-            <thead>
-              <tr>
-                <th
-                  className='pb-4 px-6 text-sm font-medium text-gray-800 text-left'
-                  scope='col'
-                >
-                  <span className='sr-only'>Feature by</span>
-                  <span>IVF Treatment Plans</span>
-                </th>
-                {tiers.map((tier) => (
-                  <th
-                    key={tier.name}
-                    className='w-1/4 pb-4 px-6 text-lg leading-6 font-bold font-heading text-gray-800 text-center mx-auto'
-                    scope='col'
-                  >
-                    {tier.name}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className='border-t border-gray-300 divide-y divide-gray-300'>
-              <tr>
-                <th
-                  className='py-8 px-6 text-sm font-medium text-gray-800 text-left align-top'
-                  scope='row'
-                >
-                  IVF Treatment Pricing
-                </th>
-                {tiers.map((tier) => (
-                  <td key={tier.name} className='h-full py-8 px-6 align-top'>
-                    <div className='h-full '>
-                      <p className='text-center'>
-                        <span className='text-4xl font-extrabold text-brandPink'>
-                          ₹{tier.priceMonthly}
-                        </span>{' '}
-                      </p>
-                      <div className='block w-36 mx-auto mt-4 text-sm font-bold font-heading text-white text-center'>
-                        <MyModal title={'Know More'} />
-                      </div>
-                    </div>
-                  </td>
-                ))}
-              </tr>
-              {sections.map((section) => (
-                <Fragment key={section.name}>
-                  <tr>
-                    <th
-                      className='py-3 pl-6 text-gray-800 text-xl text-left font-heading font-bold'
-                      colSpan={4}
-                      scope='colgroup'
-                    >
-                      {section.name}
-                    </th>
-                  </tr>
-                  {section.features.map((feature) => (
-                    <tr key={feature.id}>
-                      <th
-                        className='py-5 px-6 text-sm text-left font-medium text-gray-800'
-                        scope='row'
-                      >
-                        {feature.name}
-                      </th>
-                      {tiers.map((tier) => (
-                        <td key={tier.name} className='py-5 px-6 text-center'>
-                          {typeof feature.tiers[tier.name] === 'string' ? (
-                            <span className='block text-sm'>
-                              {feature.tiers[tier.name]}
-                            </span>
-                          ) : (
-                            <>
-                              {feature.tiers[tier.name] === true ? (
-                                <HiCheck
-                                  className='h-7 w-7 text-green-500 mx-auto'
-                                  aria-hidden='true'
-                                />
-                              ) : (
-                                <HiMinus
-                                  className='h-5 text-gray-400 mx-auto'
-                                  aria-hidden='true'
-                                />
-                              )}
-
-                              <span className='sr-only'>
-                                {feature.tiers[tier.name] === true
-                                  ? 'Included'
-                                  : 'Not included'}{' '}
-                                in {tier.name}
-                              </span>
-                            </>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </Fragment>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr className='border-t border-gray-200'>
-                <th className='sr-only' scope='row'>
-                  Choose your plan
-                </th>
-                {tiers.map((tier) => (
-                  <td key={tier.name} className='pt-5 px-6'>
-                    <div className='block w-36 mx-auto mt-4 text-sm font-bold font-heading text-white text-center hover:bg-gg-500'>
-                      <MyModal title={'Know More'} />
-                    </div>
-                  </td>
-                ))}
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <div className='text-xs text-center lg:text mt-4'>
-          *Any additional procedures and tests recommended by the doctor may or
-          may not be included. Please contact the financial advisor at the
-          centre for more information.
+                </span>
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default Packages;
+export default Stat;

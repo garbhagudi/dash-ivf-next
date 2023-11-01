@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Form from 'sections/lp-catalyst/form';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import bannerImage from 'assets/images/banner.webp';
 
 const Banner = () => {
@@ -13,7 +13,7 @@ const Banner = () => {
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='w-full h-screen max-h-[66vh] sm:h-full  object-center justify-center object-cover overflow-hidden'
+            className='w-full h-screen max-h-[37vh] sm:h-full sm:max-h-full  object-center justify-center object-cover overflow-hidden'
             priority={true}
           />
         </div>
@@ -38,7 +38,13 @@ const Banner = () => {
         </div>
         <div className='mx-auto text-center'>
           <button className='px-3 py-2 text-center mx-auto block sm:inline-block bg-brandPink hover:bg-brandPurpleDark transition duration-200 ease-in-out text-white font-semibold rounded-lg'>
-            <Link href='#leadForm' className='scroll-smooth font-sans'>
+            <Link
+              to='home'
+              spy={true}
+              smooth={true}
+              offset={-110}
+              duration={500}
+            >
               Book an Appointment
             </Link>
           </button>
