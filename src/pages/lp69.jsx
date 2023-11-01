@@ -6,10 +6,17 @@ const OtherServices = dynamic(() => import('sections/lp-catalyst/main'));
 const Testimonials = dynamic(() => import('sections/lp-catalyst/testimonial'));
 import Packages from 'sections/lp-catalyst/pricing';
 import FeaturesBlocks from 'sections/about-us/featuresBlock';
+import Head from 'next/head';
 
 const IndexPage = () => {
   return (
     <div>
+      <Head>
+        <title>
+          GarbhaGudi IVF Centre | Best IVF and infertility treatment
+          infrastructure in India.
+        </title>
+      </Head>
       <Navbar />
       <section id='home'>
         <Banner />
