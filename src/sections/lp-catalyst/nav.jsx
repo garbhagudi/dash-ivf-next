@@ -46,14 +46,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to='ivf-packages'
+              to='our-success'
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
               className='hover:text-gray-800 cursor-pointer hover:tracking-widest transition-all duration-200 ease-in-out'
             >
-              IVF Packages
+              Our Success
             </Link>
           </li>
           <li>
@@ -70,14 +70,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to='faq'
+              to='awards'
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
               className='hover:text-gray-800 cursor-pointer hover:tracking-wider transition-all duration-200 ease-in-out'
             >
-              FAQ
+              Awards
             </Link>
           </li>
         </ul>

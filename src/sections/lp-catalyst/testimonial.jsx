@@ -4,7 +4,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const VideoOne = () => {
   return (
-    <div className='mx-auto max-w-7xl'>
+    <div className='mx-auto max-w-7xl pt-6'>
       <h2 className='py-8 lg:py-10 text-3xl font-heading font-bold text-center'>
         Our Success Stories
       </h2>

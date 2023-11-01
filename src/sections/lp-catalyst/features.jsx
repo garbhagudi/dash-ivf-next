@@ -52,39 +52,11 @@ const features = [
 
 const Features = () => {
   return (
-    <div className='relative bg-white py-8 sm:py-18' id='features'>
+    <div className='relative py-8'>
       <div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl'>
         <h2 className='mt-2 text-3xl text-center font-extrabold text-brandDark tracking-tight sm:text-4xl font-heading'>
           How We Adapt to Your Needs
         </h2>
-        <div className='max-w-7xl mx-auto px-3'>
-          <div className='py-3 lg:pt-8'>
-            <div className='font-content'>
-              <div className='pb-4'>
-                GarbhaGudi IVF Centre, the epitome of excellence, proudly holds
-                the title of the finest Fertility Hospital in Bangalore. We take
-                great pride in offering a comprehensive range of infertility
-                treatments to meet the diverse needs of couples, ensuring that
-                each receives personalized care and attention.
-              </div>{' '}
-              <div className='pb-4'>
-                As a prominent Infertility Hospital in Bangalore, our facility
-                boasts state-of-the-art infrastructure and cutting-edge
-                technologies. Our dedicated team of fertility experts combines
-                years of experience and expertise to provide the highest level
-                of care.
-              </div>{' '}
-              <div className='pb-4'>
-                With a steadfast commitment to excellence, compassionate care,
-                and a remarkable success rate, GarbhaGudi IVF Centre has
-                rightfully earned its reputation as the Best Fertility Hospital
-                in Bangalore. Place your trust in us as we guide you on your
-                journey to parenthood, turning your dreams of a complete family
-                into a beautiful reality.
-              </div>
-            </div>
-          </div>
-        </div>
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features.map((feature) => (
