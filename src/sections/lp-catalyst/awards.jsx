@@ -4,11 +4,11 @@ import Image from 'next/image';
 function FeaturesBlocks() {
   return (
     <section className='relative'>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 pt-6'>
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 mt-10'>
         <div className='py-4 md:py-6'>
           {/* Section header */}
           <div className='max-w-3xl mx-auto text-center pb-12 md:pb-20'>
-            <h2 className='h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark dark:to-brandPurple font-bold'>
+            <h2 className='h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark font-bold'>
               Why we are the Industry Leaders?
             </h2>
             <p className='text-xl text-gray-800 font-content'>
