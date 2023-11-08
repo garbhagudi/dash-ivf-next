@@ -14,7 +14,7 @@
     "@headlessui/react": "^1.7.17",
     "@headlessui/tailwindcss": "^0.2.0",
     "@heroicons/react": "^1.0.6",
-    "@types/react": "^18.2.33",
+    "@types/react": "^18.2.37",
     "framer-motion": "^10.16.4",
     "moment": "^2.29.4",
     "next": "^14.0.0",
