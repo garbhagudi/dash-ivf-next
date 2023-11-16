@@ -19,7 +19,7 @@ const OtherServices = () => {
             <h2 className='text-3xl md:text-5xl mb-4'>
               Trusted by over{' '}
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark'>
-                11000+ couples{' '}
+                10000+ couples{' '}
               </span>
               across the world for over{' '}
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark'>
