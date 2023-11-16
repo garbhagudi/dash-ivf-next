@@ -7,7 +7,7 @@ const VideoOne = () => {
     <div className='mx-auto max-w-7xl '>
       <div className='px-3 pb-10 lg:pb-24'>
         <div className='rounded-2xl  overflow-hidden'>
-          <LiteYouTubeEmbed id='OQEFbV9AB5w' poster='maxresdefault' />
+          <LiteYouTubeEmbed id='0G4ZkeVVX6M' poster='maxresdefault' />
         </div>
       </div>
     </div>

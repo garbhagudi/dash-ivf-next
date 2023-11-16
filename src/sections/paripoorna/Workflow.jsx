@@ -1,126 +1,51 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-
-import { jsx } from "theme-ui";
-import { Container, Grid, Box, Heading, Text, Button } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import MyModal from "components/modal";
+import MyModal from 'components/modal';
 
 const data = [
   {
     id: 1,
-    title: "Visit GarbhaGudi ",
-    text: "Visit your nearest GarbhaGudi branch for your initial Infertility screening",
+    title: 'Visit your nearest GG branch 📍',
+    text: 'Embark on your fertility journey by stepping into our warm and welcoming GarbhaGudi branch. Our state-of-the-art facilities are designed to provide you with the utmost care and comfort from the moment you walk through our doors.',
   },
   {
     id: 2,
-    title: "Consultation and Assessment",
-    text: "Go through with your Initial consultation & fertility screening for the diagnosis",
+    title: 'Consult the doctor  🌟',
+    text: 'Meet our experienced and compassionate fertility experts who are dedicated to understanding your unique needs. Our doctors will guide you through personalized fertility solutions, ensuring you receive the care that suits your individual journey.',
   },
   {
     id: 3,
-    title: "Register and Apply ",
-    text: "Apply for the paripoorna plan by filling out the form provided by the branch ",
+    title: 'Speak to the financial counsellor 💬',
+    text: 'Navigating the financial aspects of fertility treatment can be stress-free with GarbhaGudi. Our dedicated financial counsellors are here to assist you, offering transparent and tailored solutions to make your path to parenthood as smooth as possible.',
   },
   {
     id: 4,
-    title: "Enjoy your Benefits",
-    text: "A committee will verify your application and relevant discount will be applied. ",
+    title: 'Sit back and relax 🌈',
+    text: `Once you've taken the initial steps, it's time to sit back and relax. Trust in GarbhaGudi's expertise to handle the rest. Our team is committed to providing you with unparalleled support, allowing you to focus on the excitement of building your family.`,
   },
 ];
 
 export default function WorkFlow() {
   return (
-    <section sx={{ variant: "section.workflow" }} id="workflow">
-      <Container>
-        <SectionHeading title="How to avail this offer? " />
+    <div className='bg-amber-100 py-10 mb-10'>
+      <div className='max-w-7xl mx-auto'>
+        <h3 className='text-3xl font-heading text-center font-bold'>
+          How to avail this offer?
+        </h3>
 
-        <Grid sx={styles.grid}>
+        <div className='grid md:grid-cols-2 gap-8 py-8'>
           {data.map((item) => (
-            <Box sx={styles.card} key={item.id}>
-              <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
-              <Box sx={styles.wrapper}>
-                <Heading sx={styles.wrapper.heading}>{item.title}</Heading>
-                <Text sx={styles.wrapper.description}>{item.text}</Text>
-              </Box>
-            </Box>
+            <div key={item.id} className='flex flex-col sm:flex-row space-x-4'>
+              <div className='text-2xl w-6 ml-4'>{`0${item.id}`}</div>
+              <div className=' flex flex-col'>
+                <div className='text-2xl pb-3'>{item.title}</div>
+                <div>{item.text}</div>
+              </div>
+            </div>
           ))}
-        </Grid>
-      </Container>
-      <div className="mx-auto text-center mt-12">
-        <MyModal title={"Book an Appointment"} />
+        </div>
       </div>
-    </section>
+      <div className='mx-auto text-center mt-12'>
+        <MyModal title={'Book an Appointment'} />
+      </div>
+    </div>
   );
 }
-
-const styles = {
-  grid: {
-    pt: [0, null, null, null, null, null, null, null, 3],
-    pb: [0, null, null, null, null, null, null, null, 5],
-    mb: -1,
-    gridGap: [
-      "40px",
-      "45px",
-      "45px 30px",
-      null,
-      "60px 30px",
-      "50px 40px",
-      null,
-      "75px",
-    ],
-    gridTemplateColumns: [
-      "repeat(1,1fr)",
-      null,
-      "repeat(2,1fr)",
-      null,
-      "repeat(2,1fr)",
-    ],
-  },
-  card: {
-    display: "flex",
-    flexDirection: ["column", null, null, "row"],
-    textAlign: ["center", null, "left"],
-    px: [0, 5, 0],
-    mx: "auto",
-  },
-
-  iconBox: {
-    flexShrink: 0,
-    mb: [4, null, null, 0],
-    fontSize: [8, 9, null, null, 10, null, null, 11],
-    fontWeight: 300,
-    fontFamily: "DM Sans",
-    color: "heading",
-    lineHeight: 1,
-    letterSpacing: "heading",
-    mr: ["auto", null, 0, 4, null, null, null, 5],
-    ml: ["auto", null, 0],
-    mt: [0, null, null, -1],
-  },
-  wrapper: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    mt: "-5px",
-    description: {
-      fontSize: [1, 2],
-      fontWeight: "body",
-      lineHeight: 1.9,
-      pt: 2,
-    },
-    heading: {
-      fontSize: [2, null, null, 4],
-    },
-  },
-  buttonWrapper: {
-    textAlign: ["center"],
-    left: "50%",
-    top: 0,
-    mt: 10,
-    a: {
-      textDecoration: "none",
-      color: "#fff",
-    },
-  },
-};

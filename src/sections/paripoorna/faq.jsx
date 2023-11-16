@@ -1,11 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import Accordion from "components/accordion/accordion";
+import { jsx, Container, Box } from 'theme-ui';
+import SectionHeading from 'components/section-heading';
+import Accordion from 'components/accordion/accordion';
 const faqs = [
   {
-    title: "What is the procedure to register for PARIPOORNA offer?",
+    title: 'What is the procedure to register for PARIPOORNA offer?',
     contents: (
       <div>
         Visit any of our centres during the registration for PARIPOORNA plan,
@@ -14,7 +14,7 @@ const faqs = [
     ),
   },
   {
-    title: "Who is eligible for the PARIPOORNA offer?",
+    title: 'Who is eligible for the PARIPOORNA offer?',
     contents: (
       <div>
         This plan is specially designed for couples looking for infertility
@@ -26,28 +26,7 @@ const faqs = [
     title: `Is everyone who registers entitled to receive the benefit?`,
     contents: (
       <div>
-        A couple will be eligible for the offer only after proper validation of
-        the application and approval by the GarbhaGnan foundation committee.
-      </div>
-    ),
-  },
-  {
-    title: `What are the criteria for eligibility?`,
-    contents: (
-      <div>
-        This benefit plan/offer is valid only for couples seeking IVF treatment.
-        Since eligibility will be validated by the GarbhaGnan Committee, you
-        will be able to see your eligibility only after the submission of your
-        form.
-      </div>
-    ),
-  },
-  {
-    title: `If eligible, will I receive treatment plan?`,
-    contents: (
-      <div>
-        Yes, on successful validation and approval, you will be able to receive
-        the treatment plan from the doctor.
+        Yes, Everyone who registers and will be eligible for the benefit.
       </div>
     ),
   },
@@ -62,7 +41,7 @@ const faqs = [
   {
     title: `What is the last date to apply for PARIPOORNA program?`,
     contents: (
-      <div>Register for the PARIPOORNA program before 31st Dec’2021.</div>
+      <div>Register for the PARIPOORNA program before 31st Dec’2023.</div>
     ),
   },
   {
@@ -94,24 +73,24 @@ const faqs = [
 ];
 export default function Faq() {
   return (
-    <div className="mb-20">
+    <div className='my-16'>
       <Box
-        as="section"
-        variant="section.faq"
-        sx={{ pt: "48px", mb: "12px" }}
-        id="frequent"
+        as='section'
+        variant='section.faq'
+        sx={{ pt: '48px', mb: '12px' }}
+        id='frequent'
       >
         <Container>
           <SectionHeading
-            title="Do you have any quesiton?"
-            description="GG Care is here to help. Please contact us on +919108910832 and one of our associates will get in touch with you."
+            title='Do you have any quesiton?'
+            description='GG Care is here to help. Please contact us on +919108910832 and one of our associates will get in touch with you.'
           />
           <Box
             sx={{
-              display: "flex",
-              width: ["100%", null, null, "650px", "745px"],
-              flexDirection: "column",
-              mx: "auto",
+              display: 'flex',
+              width: ['100%', null, null, '650px', '745px'],
+              flexDirection: 'column',
+              mx: 'auto',
               my: -4,
             }}
           >
