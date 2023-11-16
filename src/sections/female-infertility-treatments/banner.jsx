@@ -5,35 +5,37 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-3'>
-        <div className='order-0 relative bg-[#e1a1b2]'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 bg-[#cad4ea]'>
+        <div className='order-0 relative '>
           <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
-            <div className='text-3xl lg:text-2xl font-content font-extrabold text-center pb-4'>
-              Affordable{' '}
-              <span className='text-brandPink drop-shadow-xl'>Parenthood</span>{' '}
-              IVF Solutions at GarbhaGudi{' '}
+            <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
+              <div className='text-[#e92e64] uppercase'>Paripoorna</div>
             </div>
-            <div className='text-3xl lg:text-4xl pb-2 font-bold font-heading'>
-              Your path to parenthood Begins at{' '}
-              <span className='text-[#e92e64] uppercase'>₹90,000/- </span>{' '}
+            <div className='text-xl font-bold pb-2'>
+              It&apos;s the season of JOY of being COMPLETE
+            </div>
+            <div className='text-xl py-2 font-bold font-heading pb-4'>
+              Under Paripoorna, get a flat discount of{' '}
+              <span className='text-[#064a63] underline'>₹ 90,000/-</span> on
+              IVF treatement program*
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
             *terms and conditions apply
           </div>
         </div>
-        <div className='order-1 relative flex items-center w-full h-full justify-center object-cover overflow-hidden bg-[#e1a1b2]'>
-          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bottom-0 bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
+        <div className='order-1 flex items-end justify-center object-cover overflow-hidden'>
+          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
             *terms and conditions apply
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1692426652/misc/top-view-fertility-concept-with-pink-background-min_hitvgh.webp'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
             }
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='object-cover object-center -scale-x-100 bg-[#e1a1b2]'
+            className='object-cover object-center w-full h-full'
             priority={true}
           />
         </div>

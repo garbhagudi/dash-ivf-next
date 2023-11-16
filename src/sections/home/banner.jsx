@@ -5,20 +5,19 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-3 bg-[#ffb6c0]'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 bg-[#cad4ea]'>
         <div className='order-0 relative '>
           <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
             <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
-              <div className='text-[#064a63] uppercase'>Feel the Joy of</div>{' '}
-              <div className='text-[#e92e64] uppercase'>Parenthood</div>
+              <div className='text-[#e92e64] uppercase'>Paripoorna</div>
             </div>
             <div className='text-xl font-bold pb-2'>
-              Experience Tailored Fertility Care
+              It&apos;s the season of JOY of being COMPLETE
             </div>
             <div className='text-xl py-2 font-bold font-heading pb-4'>
-              with our Exclusive{' '}
-              <span className='text-[#064a63] underline'>₹ 90,000/-</span>{' '}
-              Package Offer
+              Under Paripoorna, get a flat discount of{' '}
+              <span className='text-[#064a63] underline'>₹ 90,000/-</span> on
+              IVF treatement program*
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
@@ -31,12 +30,12 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1693471472/Girl_Fri-min_ouvhv3.webp'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
             }
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='object-cover object-center -scale-x-100 w-56 -mb-5'
+            className='object-cover object-center w-full h-full'
             priority={true}
           />
         </div>
