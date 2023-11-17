@@ -26,11 +26,14 @@ const OtherServices = () => {
                 13 Years{' '}
               </span>
             </h2>
+            <div className='uppercase underline text-center text-2xl pt-8 font-bold'>
+              IVF Success Rates
+            </div>
           </div>
           <div className='max-w-lg mx-auto'>
             <div className='mt-2'>
               <h4 className='text-brandDark font-bold text-lg mb-5 text-center px-3 py-1 border border-brandDark rounded-lg w-56 mx-auto'>
-                Industry Average
+                Industry Average*
               </h4>
               <div className='w-full rounded-full h-5 bg-brandPurple'>
                 <div className='bg-brandPurpleDark w-[25%] text-sm text-white h-5 font-bold text-center leading-none rounded-l-full flex items-center justify-center'>
@@ -40,7 +43,7 @@ const OtherServices = () => {
             </div>
             <div className='mt-10'>
               <h4 className='text-brandPink font-bold text-lg mb-5 text-center px-3 py-1 border border-brandPink rounded-lg w-56 mx-auto'>
-                GarbhaGudi Average
+                GarbhaGudi Average*
               </h4>
               <div className='w-full bg-brandPurple rounded-full h-5'>
                 <div className='bg-brandPurpleDark w-[75%] text-sm text-white h-5 font-extrabold text-center leading-none rounded-l-full flex items-center justify-center'>
