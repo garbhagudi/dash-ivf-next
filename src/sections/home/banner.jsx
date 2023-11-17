@@ -30,7 +30,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1700052783/paripoorna/mother-with-daughter-lie-bed-dog-looking-them-min_uecuvg.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1700224143/garbhagudi-ivf/Paripoorna/Web_Banner_New_Artboard_copy_5_or5khw.webp'
             }
             width={1920}
             height={1080}
