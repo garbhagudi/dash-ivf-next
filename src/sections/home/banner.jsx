@@ -17,15 +17,15 @@ const Banner = () => {
             <div className='text-xl py-2 font-bold font-heading pb-4'>
               Under Paripoorna, get a flat discount of{' '}
               <span className='text-[#064a63] underline'>₹ 90,000/-</span> on
-              IVF treatement program*
+              IVF treatment program*
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
             *terms and conditions apply
           </div>
         </div>
-        <div className='order-1 flex items-end justify-center object-cover overflow-hidden'>
-          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
+        <div className='order-1 flex items-end justify-start object-cover overflow-hidden'>
+          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-50 rounded-t-md z-10'>
             *terms and conditions apply
           </div>
           <Image
