@@ -23,7 +23,7 @@ const Calculators = () => {
           {data?.map((item) => (
             <div
               key={item.id}
-              className='bg-blue-200 rounded-lg p-6 flex items-start hover:bg-gray-100 transition duration-500'
+              className='bg-pink-200 rounded-lg p-6 flex items-start hover:bg-purple-200 transition duration-500'
             >
               <Link href={item.path} target='_blank'>
                 <div>
