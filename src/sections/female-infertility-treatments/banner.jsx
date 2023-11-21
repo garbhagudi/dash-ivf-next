@@ -35,7 +35,7 @@ const Banner = () => {
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='object-cover object-center w-full h-full'
+            className='object-center w-full h-full'
             priority={true}
           />
         </div>
