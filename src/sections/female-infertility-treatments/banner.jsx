@@ -5,19 +5,19 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-3 bg-[#cad4ea]'>
-        <div className='order-0 relative '>
-          <div className='flex items-center justify-center w-full h-full flex-col text-center py-16 lg:py-0'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 '>
+        <div className='order-0 relative'>
+          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[url(https://res.cloudinary.com/garbhagudi/image/upload/e_fade:1000/a_0/v1702634259/WhatsApp_Image_2023-12-15_at_15.26.27_67f49473_xn5oem.webp)] bg-contain'>
             <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
               <div className='text-[#e92e64] uppercase'>Paripoorna</div>
             </div>
             <div className='text-xl font-bold pb-2'>
               It&apos;s the season of JOY of being COMPLETE
             </div>
-            <div className='text-xl py-2 font-bold font-heading pb-4'>
-              Under Paripoorna, get a flat discount of{' '}
-              <span className='text-[#064a63] underline'>₹ 90,000/-</span> on
-              IVF treatment program*
+            <div className='text-xl py-2 font-bold font-content pb-4 px-3'>
+              Get a flat discount of{' '}
+              <span className='text-[#064a63] underline'>₹90,000/-</span> on IVF
+              treatment program*
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
@@ -25,17 +25,17 @@ const Banner = () => {
           </div>
         </div>
         <div className='order-1 flex items-end justify-start object-cover overflow-hidden'>
-          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-75 rounded-t-md z-10'>
+          <div className='absolute font-content -mt-5 text-xs font-medium lg:hidden block bg-white px-3 py-1 bg-opacity-50 rounded-t-md z-10'>
             *terms and conditions apply
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1700224143/garbhagudi-ivf/Paripoorna/Web_Banner_New_Artboard_copy_5_or5khw.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1702632912/WhatsApp_Image_2023-12-15_at_15.02.53_9634526f_pvmr6o.webp'
             }
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='object-center w-full h-full'
+            className='object-center h-full'
             priority={true}
           />
         </div>
