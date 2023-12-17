@@ -7,7 +7,7 @@ const Banner = () => {
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-3 '>
         <div className='order-0 relative'>
-          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[url(https://res.cloudinary.com/garbhagudi/image/upload/e_fade:1000/a_0/v1702634259/WhatsApp_Image_2023-12-15_at_15.26.27_67f49473_xn5oem.webp)] bg-contain'>
+          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[url(https://res.cloudinary.com/garbhagudi/image/upload/v1702778382/WhatsApp_Image_2023-12-16_at_16.06.34_b3904a5d_lbfffv.webp)] bg-cover bg-no-repeat'>
             <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
               <div className='text-[#e92e64] uppercase'>Paripoorna</div>
             </div>
