@@ -7,17 +7,20 @@ const Banner = () => {
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-3 '>
         <div className='order-0 relative'>
-          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[url(https://res.cloudinary.com/garbhagudi/image/upload/v1702778382/WhatsApp_Image_2023-12-16_at_16.06.34_b3904a5d_lbfffv.webp)] bg-cover bg-no-repeat'>
-            <div className='text-4xl lg:text-5xl font-heading font-extrabold text-center pb-4'>
-              <div className='text-[#e92e64] uppercase'>Paripoorna</div>
+          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[#e7e6e2] bg-cover bg-no-repeat'>
+            <div className='text-3xl font-heading font-extrabold text-center pb-4'>
+              <div className='text-[#e92e64] uppercase'>
+                Experience the joy of Being Complete
+              </div>
             </div>
-            <div className='text-xl font-bold pb-2'>
-              It&apos;s the season of JOY of being COMPLETE
-            </div>
-            <div className='text-xl py-2 font-bold font-content pb-4 px-3'>
-              Get a flat discount of{' '}
-              <span className='text-[#064a63] underline'>₹90,000/-</span> on IVF
-              treatment program*
+            <div className='text-lg py-2 font-normal font-content pb-4 px-4'>
+              This New Year, begin your journey towards parenthood with a free
+              <span className='font-bold uppercase text-[#e92e64]'>
+                {' '}
+                fertility screening
+              </span>{' '}
+              at GarbhaGudi IVF Centre. <br />
+              Book an appointment today!
             </div>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
@@ -30,7 +33,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1702632912/WhatsApp_Image_2023-12-15_at_15.02.53_9634526f_pvmr6o.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1704280213/banner_wpgrxp.webp'
             }
             width={1920}
             height={1080}
@@ -39,7 +42,7 @@ const Banner = () => {
             priority={true}
           />
         </div>
-        <div className='order-2 bg-brandPurpleDark' id='leadForm'>
+        <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
             <Form />
           </div>
