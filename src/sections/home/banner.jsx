@@ -14,7 +14,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='text-lg py-2 font-normal font-content pb-4 px-4'>
-              This new year begin your journey towards parenthood with a free
+              This New Year, begin your journey towards parenthood with a free
               <span className='font-bold uppercase text-[#e92e64]'>
                 {' '}
                 fertility screening
