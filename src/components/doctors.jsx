@@ -245,60 +245,60 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr Maheshwari',
-    qualification: 'MBBS, MS-OBG, FRM',
-    designation: 'Assistant Medical Director, GarbhaGudi ',
-    locations: 'Hanumanthanagar',
-    image: {
-      url: 'https://media.graphassets.com/GyfBXwJQWm5NpDwnKj2X',
-    },
-    imageAlt: 'Best IVF Doctor in Bangalore - Dr Maheshwari',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: 'Dr Maheshwari is a senior fertility consultant associated with GarbhaGudi. Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine. She is recognized for her expertise in advanced infertility treatments and is known for achieving high success rates in IVF, IUI pregnancies, and other such ART procedures. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patients. She is currently the Assistant Medical Director of GarbhaGudi. ',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
-  {
-    name: 'Dr Chinmayie R',
-    qualification: 'MBBS,MS – OBG, FRM',
-    designation: 'Assistant Medical Director, GGIRHR',
-    locations: 'Jayanagar',
-    image: {
-      url: 'https://media.graphassets.com/WYwNXLz4QbCJUrbHOaM3',
-    },
-    imageAlt: 'IVF Specialist in Bangalore - Dr Chinmayie R',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Chinmayie is a fertility expert with eight years of experience in gynaecology and infertility. She holds a Fellowship in Reproductive Medicine from RGUHS and has also been active in the world of academia. In addition to her clinical experience, Dr Chinmayie has a compassionate and caring nature. She practices at GarbhaGudi and is recognized for performing Intra-Uterine Insemination (IUI), in In-Vitro Fertilization (IVF), and other such ART techniques. Her mission is to provide the highest medical care to all her patients.  She is currently the assistant medical director of GGIRHR.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr Maheshwari',
+  //   qualification: 'MBBS, MS-OBG, FRM',
+  //   designation: 'Assistant Medical Director, GarbhaGudi ',
+  //   locations: 'Hanumanthanagar',
+  //   image: {
+  //     url: 'https://media.graphassets.com/GyfBXwJQWm5NpDwnKj2X',
+  //   },
+  //   imageAlt: 'Best IVF Doctor in Bangalore - Dr Maheshwari',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: 'Dr Maheshwari is a senior fertility consultant associated with GarbhaGudi. Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine. She is recognized for her expertise in advanced infertility treatments and is known for achieving high success rates in IVF, IUI pregnancies, and other such ART procedures. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patients. She is currently the Assistant Medical Director of GarbhaGudi. ',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
+  // {
+  //   name: 'Dr Chinmayie R',
+  //   qualification: 'MBBS,MS – OBG, FRM',
+  //   designation: 'Assistant Medical Director, GGIRHR',
+  //   locations: 'Jayanagar',
+  //   image: {
+  //     url: 'https://media.graphassets.com/WYwNXLz4QbCJUrbHOaM3',
+  //   },
+  //   imageAlt: 'IVF Specialist in Bangalore - Dr Chinmayie R',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Chinmayie is a fertility expert with eight years of experience in gynaecology and infertility. She holds a Fellowship in Reproductive Medicine from RGUHS and has also been active in the world of academia. In addition to her clinical experience, Dr Chinmayie has a compassionate and caring nature. She practices at GarbhaGudi and is recognized for performing Intra-Uterine Insemination (IUI), in In-Vitro Fertilization (IVF), and other such ART techniques. Her mission is to provide the highest medical care to all her patients.  She is currently the assistant medical director of GGIRHR.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   {
     name: 'Dr Priyanka Rani',
     qualification: 'MBBS, DNB, FRM',
