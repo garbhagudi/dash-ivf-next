@@ -17,7 +17,6 @@ const IndexPage = () => {
         />
         <iframe
           src='/contact_2.html'
-          frameborder='0'
           className='w-screen max-w-md lg:max-w-2xl h-[80vh] md:h-[60vh] mx-auto'
         ></iframe>
       </div>
