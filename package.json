@@ -13,7 +13,7 @@
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "^2.1.1",
     "@types/react": "^18.2.45",
     "framer-motion": "^10.18.0",
     "moment": "^2.30.1",
