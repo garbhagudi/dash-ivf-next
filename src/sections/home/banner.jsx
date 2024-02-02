@@ -7,21 +7,26 @@ const Banner = () => {
     <div>
       <div className='grid grid-cols-1 lg:grid-cols-3 '>
         <div className='order-0 relative'>
-          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-[#e7e6e2] bg-cover bg-no-repeat'>
-            <div className='text-3xl font-heading font-extrabold text-center pb-4'>
+          <div className='flex items-left justify-center w-full h-full flex-col text-center py-16 lg:py-0 bg-cover bg-no-repeat'>
+            <div className='text-2xl font-heading font-extrabold text-center pb-4 px-2'>
               <div className='text-[#e92e64] uppercase'>
-                Experience the joy of Being Complete
+                Leading IVF & Fertility clinic in Bangalore: Expert care &
+                Advanced treatments
               </div>
             </div>
-            <div className='text-lg py-2 font-normal font-content pb-4 px-4'>
-              This New Year, begin your journey towards parenthood with a free
-              <span className='font-bold uppercase text-[#e92e64]'>
-                {' '}
-                fertility screening
-              </span>{' '}
-              at GarbhaGudi IVF Centre. <br />
-              Book an appointment today!
+            <div className='text-xl py-2 font-normal font-content pb-4 px-4'>
+              Offer of the Month:
+              <div className='px-1.5 py-0.5 font-bold text-white bg-brandPink rounded-sm block'>
+                Free Fertility Consultation & 100% Free IUI
+              </div>{' '}
+              Treatment
             </div>
+            <Link
+              href={'#leadForm'}
+              className='py-1.5 bg-brandPink w-full md:w-1/3 mx-auto text-base font-bold text-white rounded-sm transition duration-200 ease-in-out hover:bg-brandPurpleDark'
+            >
+              <button>Book an Appointment</button>
+            </Link>
           </div>
           <div className='font-content -mt-5 text-xs font-medium hidden lg:block'>
             *terms and conditions apply
@@ -33,7 +38,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1704280213/banner_wpgrxp.webp'
+              'https://res.cloudinary.com/garbhagudi/image/upload/v1706853998/misc/1X1_Artboard_copy_3-min_peik3v.webp'
             }
             width={1920}
             height={1080}
