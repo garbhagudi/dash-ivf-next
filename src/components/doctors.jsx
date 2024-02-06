@@ -665,70 +665,70 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr Lakshmi Priya ',
-    qualification: 'MBBS, MS (OBG), FRM',
-    designation: 'Fertility Specialist',
-    locations: 'Hanumanthanagar',
-    image: {
-      url: 'https://media.graphassets.com/gc7HQh4RmZKof4PbunIA',
-    },
-    imageAlt: 'Best IVF Doctor in Bangalore - Dr Lakshmi Priya',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist dedicated to helping patients overcome infertility challenges and achieve their dream of starting a family. She holds an MBBS degree and completed her M.S. in Obstetrics and Gynecology, specializing in reproductive medicine. Dr. Priya has also obtained FRM (Fellowship in Reproductive Medicine) certification, further enhancing her expertise in the field.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-base text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'With over five years of experience in Obstetrics, Gynecology, and fertility treatments, Dr. Lakshmi Priya has developed a deep understanding of the complexities of infertility and the various challenges faced by patients. She has received comprehensive training in ultrasound for IUI and IVF procedures, oocyte retrieval, and embryo transfers. Her areas of interest encompass addressing issues related to poor responders, PCOS, recurrent implantation failure, and recurrent pregnancy loss. ',
-                  },
-                ],
-              },
-            ],
-            className: 'text-base text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist who combines her expertise in reproductive medicine with a compassionate approach to patient care. With her extensive knowledge, advanced skills, and dedication to helping couples overcome infertility, she strives to make a meaningful difference in their lives and bring happiness to their journey toward parenthood.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-base text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr Lakshmi Priya ',
+  //   qualification: 'MBBS, MS (OBG), FRM',
+  //   designation: 'Fertility Specialist',
+  //   locations: 'Hanumanthanagar',
+  //   image: {
+  //     url: 'https://media.graphassets.com/gc7HQh4RmZKof4PbunIA',
+  //   },
+  //   imageAlt: 'Best IVF Doctor in Bangalore - Dr Lakshmi Priya',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist dedicated to helping patients overcome infertility challenges and achieve their dream of starting a family. She holds an MBBS degree and completed her M.S. in Obstetrics and Gynecology, specializing in reproductive medicine. Dr. Priya has also obtained FRM (Fellowship in Reproductive Medicine) certification, further enhancing her expertise in the field.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-base text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'With over five years of experience in Obstetrics, Gynecology, and fertility treatments, Dr. Lakshmi Priya has developed a deep understanding of the complexities of infertility and the various challenges faced by patients. She has received comprehensive training in ultrasound for IUI and IVF procedures, oocyte retrieval, and embryo transfers. Her areas of interest encompass addressing issues related to poor responders, PCOS, recurrent implantation failure, and recurrent pregnancy loss. ',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-base text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist who combines her expertise in reproductive medicine with a compassionate approach to patient care. With her extensive knowledge, advanced skills, and dedication to helping couples overcome infertility, she strives to make a meaningful difference in their lives and bring happiness to their journey toward parenthood.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-base text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
 ];
