@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
@@ -25,7 +25,7 @@
     "react-gtm-module": "^2.0.11",
     "react-icons": "^5.0.1",
     "react-lazy-load-image-component": "^1.6.0",
-    "react-lite-youtube-embed": "^2.3.52",
+    "react-lite-youtube-embed": "^2.4.0",
     "react-moment": "^1.1.3",
     "react-scroll": "^1.9.0",
     "swiper": "9.4.1",
