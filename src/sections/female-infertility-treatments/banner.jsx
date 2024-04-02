@@ -17,9 +17,8 @@ const Banner = () => {
             <div className='text-xl py-2 font-normal font-content pb-4 px-4'>
               Offer of the Month:
               <div className='px-1.5 py-0.5 font-bold text-white bg-brandPink rounded-sm block'>
-                Free Fertility Consultation & 100% Free IUI
+                50% Off on Blood Tests & Free Fertility Consultation
               </div>{' '}
-              Treatment
             </div>
             <Link
               href={'#leadForm'}
@@ -38,7 +37,7 @@ const Banner = () => {
           </div>
           <Image
             src={
-              'https://res.cloudinary.com/garbhagudi/image/upload/v1706853998/misc/1X1_Artboard_copy_3-min_peik3v.webp'
+              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1712042392/Misc/Web_B-min_d3vjd6.webp'
             }
             width={1920}
             height={1080}
