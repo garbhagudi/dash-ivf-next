@@ -2,10 +2,10 @@ import Features from './features';
 
 const OtherServices = () => {
   return (
-    <div className='pt-8 pb-16 bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div className='bg-white pb-16 pt-8'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='lg:text-center'>
-          <p className='mt-2 text-xl leading-8 font-bold font-heading text-gray-700 underline sm:text-2xl text-center'>
+          <p className='mt-2 text-center font-heading text-xl font-bold leading-8 text-gray-700 underline sm:text-2xl'>
             What makes GarbhaGudi special?
           </p>
         </div>
@@ -14,39 +14,39 @@ const OtherServices = () => {
           <h1>Best IVF & Fertility centre in Bangalore</h1> by multiple
           organisations.
         </div>
-        <div className='max-w-4xl mx-auto pb-12'>
-          <div className='max-w-3xl mx-auto text-center font-bold py-6 md:py-10'>
-            <h2 className='text-3xl md:text-5xl mb-4'>
+        <div className='mx-auto max-w-4xl pb-12'>
+          <div className='mx-auto max-w-3xl py-6 text-center font-bold md:py-10'>
+            <h2 className='mb-4 text-3xl md:text-5xl'>
               Trusted by over{' '}
-              <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark'>
+              <span className='bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text text-transparent'>
                 10000+ couples{' '}
               </span>
               across the world for over{' '}
-              <span className='bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark'>
+              <span className='bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text text-transparent'>
                 13 Years{' '}
               </span>
             </h2>
-            <div className='uppercase underline text-center text-2xl pt-8 font-bold'>
+            <div className='pt-8 text-center text-2xl font-bold uppercase underline'>
               IVF Success Rates
             </div>
           </div>
-          <div className='max-w-lg mx-auto'>
+          <div className='mx-auto max-w-lg'>
             <div className='mt-2'>
-              <h4 className='text-brandDark font-bold text-lg mb-5 text-center px-3 py-1 border border-brandDark rounded-lg w-56 mx-auto'>
+              <h4 className='mx-auto mb-5 w-56 rounded-lg border border-brandDark px-3 py-1 text-center text-lg font-bold text-brandDark'>
                 Industry Average*
               </h4>
-              <div className='w-full rounded-full h-5 bg-brandPurple'>
-                <div className='bg-brandPurpleDark w-[25%] text-sm text-white h-5 font-bold text-center leading-none rounded-l-full flex items-center justify-center'>
+              <div className='h-5 w-full rounded-full bg-brandPurple'>
+                <div className='flex h-5 w-[25%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-bold leading-none text-white'>
                   25 - 28%
                 </div>
               </div>
             </div>
             <div className='mt-10'>
-              <h4 className='text-brandPink font-bold text-lg mb-5 text-center px-3 py-1 border border-brandPink rounded-lg w-56 mx-auto'>
+              <h4 className='mx-auto mb-5 w-56 rounded-lg border border-brandPink px-3 py-1 text-center text-lg font-bold text-brandPink'>
                 GarbhaGudi Average*
               </h4>
-              <div className='w-full bg-brandPurple rounded-full h-5'>
-                <div className='bg-brandPurpleDark w-[75%] text-sm text-white h-5 font-extrabold text-center leading-none rounded-l-full flex items-center justify-center'>
+              <div className='h-5 w-full rounded-full bg-brandPurple'>
+                <div className='flex h-5 w-[75%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-extrabold leading-none text-white'>
                   65-73%
                 </div>
               </div>

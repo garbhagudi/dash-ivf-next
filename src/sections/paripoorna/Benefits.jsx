@@ -4,23 +4,23 @@ import Image from 'next/image';
 const Benefits = () => {
   return (
     <section className='px-3'>
-      <div className='max-w-7xl mx-auto'>
+      <div className='mx-auto max-w-7xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex items-center justify-center'>
             <Image
               src='https://res.cloudinary.com/garbhagudi/image/upload/v1700126545/garbhagudi-ivf/Paripoorna/2023_Paripoorna_Ads_V1_Lat_Artboard_copy_3-min_blsezv.webp'
               alt='benefits'
-              className='rounded-xl my-4'
+              className='my-4 rounded-xl'
               width={500}
               height={500}
             />
           </div>
-          <div className='flex items-center justify-center flex-col'>
-            <h3 className='py-10 text-3xl font-heading font-bold'>
+          <div className='flex flex-col items-center justify-center'>
+            <h3 className='py-10 font-heading text-3xl font-bold'>
               Avail the benefits of paripoorna and turn your dream of parenthood
               into reality
             </h3>
-            <div className='flex items-center justify-center flex-col'>
+            <div className='flex flex-col items-center justify-center'>
               The word &apos;PARIPOORNA&apos; means fulfilment. GarbhaGudi under
               Dr Asha&apos;s medical supervision, is trying to fulfil the dreams
               of many of couples in achieving their parenthood. <br />

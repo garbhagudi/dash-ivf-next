@@ -6,11 +6,11 @@ const DoctorLocation = ({ name, designation, image, qualification }) => {
   return (
     <div>
       <Link href={'/contact-us'} passHref>
-        <div className='text-center mb-8 md:mb-0 cursor-pointer'>
-          <div className='relative h-44 w-44 mx-auto -mb-20'>
-            <div className='h-full w-full absolute rounded-full overflow-hidden bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+        <div className='mb-8 cursor-pointer text-center md:mb-0'>
+          <div className='relative mx-auto -mb-20 h-44 w-44'>
+            <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
             <Image
-              className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent overflow-hidden'
+              className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
               src={image}
               alt={name}
               width={500}
@@ -18,11 +18,11 @@ const DoctorLocation = ({ name, designation, image, qualification }) => {
               loading='lazy'
             />
           </div>
-          <div className='bg-gray-100 shadow-lg rounded-lg px-2 pt-24 sm:pt-28 pb-6 h-52 text-gray-400 hover:shadow-2xl hover:bg-gray-50 transition-all duration-500'>
-            <h3 className='font-heading font-bold text-gray-800 text-md mb-3'>
+          <div className='h-52 rounded-lg bg-gray-100 px-2 pb-6 pt-24 text-gray-400 shadow-lg transition-all duration-500 hover:bg-gray-50 hover:shadow-2xl sm:pt-28'>
+            <h3 className='text-md mb-3 font-heading font-bold text-gray-800'>
               {name}
             </h3>
-            <p className='text-gray-800 text-sm tracking-wide'>{designation}</p>
+            <p className='text-sm tracking-wide text-gray-800'>{designation}</p>
           </div>
         </div>
       </Link>

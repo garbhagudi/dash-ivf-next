@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import RelatedSearches from 'sections/home/relatedSearches';
-
 const Banner = dynamic(() => import('sections/home/banner'));
 const OtherServices = dynamic(() => import('sections/home/other-services'));
 const Calculators = dynamic(() => import('sections/home/calculators'));

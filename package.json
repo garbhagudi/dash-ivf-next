@@ -11,19 +11,19 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
-    "@headlessui/react": "^1.7.18",
-    "@headlessui/tailwindcss": "^0.2.0",
+    "@headlessui/react": "^2.1.1",
+    "@headlessui/tailwindcss": "^0.2.1",
     "@heroicons/react": "^1.0.6",
     "@types/react": "^18.3.3",
     "framer-motion": "^11.1.7",
     "moment": "^2.30.1",
-    "next": "^14.2.3",
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-calendar": "^5.0.0",
     "react-dom": "^18.3.1",
     "react-draggable": "^4.4.6",
     "react-gtm-module": "^2.0.11",
-    "react-icons": "^5.0.1",
+    "react-icons": "^5.2.1",
     "react-lazy-load-image-component": "^1.6.0",
     "react-lite-youtube-embed": "^2.4.0",
     "react-moment": "^1.1.3",
@@ -32,11 +32,13 @@
     "theme-ui": "^0.15.5"
   },
   "devDependencies": {
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.1.4",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "eslint": "^9.6.0",
+    "eslint-config-next": "^14.2.4",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4"
   }
 }

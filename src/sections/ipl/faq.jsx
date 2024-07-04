@@ -1,12 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import Accordion from "components/accordion/accordion";
+import { jsx, Container, Box } from 'theme-ui';
+import SectionHeading from 'components/section-heading';
+import Accordion from 'components/accordion/accordion';
 const faqs = [
   {
     title:
-      "In this Covid -19 situation, how do you ensure that you will send a healthy person to our place?",
+      'In this Covid -19 situation, how do you ensure that you will send a healthy person to our place?',
     contents: (
       <div>
         We do medical examination of the person before sending them by checking
@@ -17,7 +17,7 @@ const faqs = [
     ),
   },
   {
-    title: "Our area comes under the red zone, so how does it work?",
+    title: 'Our area comes under the red zone, so how does it work?',
     contents: (
       <div>
         We can&apos;t send our staff to the red zone area as per government
@@ -91,22 +91,22 @@ const faqs = [
 export default function Faq() {
   return (
     <Box
-      as="section"
-      variant="section.faq"
-      sx={{ pt: "48px", mb: "12px" }}
-      id="faq"
+      as='section'
+      variant='section.faq'
+      sx={{ pt: '48px', mb: '12px' }}
+      id='faq'
     >
       <Container>
         <SectionHeading
-          title="Have more questions? "
-          description="GG Care is here to help. Please contact us on +919108910832 and one of our associates will get in touch with you."
+          title='Have more questions? '
+          description='GG Care is here to help. Please contact us on +919108910832 and one of our associates will get in touch with you.'
         />
         <Box
           sx={{
-            display: "flex",
-            width: ["100%", null, null, "650px", "745px"],
-            flexDirection: "column",
-            mx: "auto",
+            display: 'flex',
+            width: ['100%', null, null, '650px', '745px'],
+            flexDirection: 'column',
+            mx: 'auto',
             my: -4,
           }}
         >

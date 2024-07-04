@@ -7,7 +7,7 @@ const IndexPage = () => {
       <Head>
         <title>GarbhaGudi IVF Center | Know your Fertility Score</title>
       </Head>
-      <div className='max-w-3xl mx-auto'>
+      <div className='mx-auto max-w-3xl'>
         <h1></h1>
         <Image
           src={
@@ -17,7 +17,7 @@ const IndexPage = () => {
         />
         <iframe
           src='/contact_2.html'
-          className='w-screen max-w-md lg:max-w-2xl h-[80vh] md:h-[60vh] mx-auto'
+          className='mx-auto h-[80vh] w-screen max-w-md md:h-[60vh] lg:max-w-2xl'
         ></iframe>
       </div>
     </div>

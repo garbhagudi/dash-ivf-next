@@ -5,7 +5,7 @@ const Form = () => {
     <div>
       <iframe
         src='/contact/form.html'
-        className='bg-transparent mx-auto h-screen max-h-[460px]'
+        className='mx-auto h-screen max-h-[460px] bg-transparent'
         loading='lazy'
       >
         Loading…

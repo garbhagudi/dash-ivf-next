@@ -27,7 +27,7 @@ class BaseAccordion extends React.Component {
       () => {
         this.props.onStateChange(allChanges);
         callback();
-      }
+      },
     );
   }
   handleItemClick = (index) => {

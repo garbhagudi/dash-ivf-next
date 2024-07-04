@@ -25,25 +25,25 @@ const data = [
 
 export default function WorkFlow() {
   return (
-    <div className='bg-amber-100 py-10 mb-10'>
-      <div className='max-w-7xl mx-auto'>
-        <h3 className='text-3xl font-heading text-center font-bold'>
+    <div className='mb-10 bg-amber-100 py-10'>
+      <div className='mx-auto max-w-7xl'>
+        <h3 className='text-center font-heading text-3xl font-bold'>
           How to avail this offer?
         </h3>
 
-        <div className='grid md:grid-cols-2 gap-8 py-8'>
+        <div className='grid gap-8 py-8 md:grid-cols-2'>
           {data.map((item) => (
-            <div key={item.id} className='flex flex-col sm:flex-row space-x-4'>
-              <div className='text-2xl w-6 ml-4'>{`0${item.id}`}</div>
-              <div className=' flex flex-col'>
-                <div className='text-2xl pb-3'>{item.title}</div>
+            <div key={item.id} className='flex flex-col space-x-4 sm:flex-row'>
+              <div className='ml-4 w-6 text-2xl'>{`0${item.id}`}</div>
+              <div className='flex flex-col'>
+                <div className='pb-3 text-2xl'>{item.title}</div>
                 <div>{item.text}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className='mx-auto text-center mt-12'>
+      <div className='mx-auto mt-12 text-center'>
         <MyModal title={'Book an Appointment'} />
       </div>
     </div>

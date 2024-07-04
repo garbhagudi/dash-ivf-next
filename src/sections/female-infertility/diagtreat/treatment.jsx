@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box } from "theme-ui";
-import Accordion from "components/accordion/accordion";
+import { jsx, Container, Box } from 'theme-ui';
+import Accordion from 'components/accordion/accordion';
 const faqs = [
   {
     title: `Reproductive assistance`,
@@ -62,7 +62,7 @@ const faqs = [
     ),
   },
   {
-    title: "Medications to restore fertility",
+    title: 'Medications to restore fertility',
     contents: (
       <div>
         Medications that regulate or stimulate ovulation are known as fertility
@@ -115,7 +115,7 @@ const faqs = [
     ),
   },
   {
-    title: "Risks of fertility drugs",
+    title: 'Risks of fertility drugs',
     contents: (
       <div>
         Using fertility drugs carries some risks, such as: <br />
@@ -160,14 +160,14 @@ const faqs = [
 ];
 export default function Treatment() {
   return (
-    <Box as="section" variant="section.faq" id="faq">
+    <Box as='section' variant='section.faq' id='faq'>
       <Container>
         <Box
           sx={{
-            display: "flex",
-            width: ["100%", null, null, "650px", "745px"],
-            flexDirection: "column",
-            mx: "auto",
+            display: 'flex',
+            width: ['100%', null, null, '650px', '745px'],
+            flexDirection: 'column',
+            mx: 'auto',
           }}
         >
           <Accordion items={faqs} />

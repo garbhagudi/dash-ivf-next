@@ -70,7 +70,7 @@ const HanumanthaNagar = () => {
           'Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560050'
         }
       />
-      <div className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4'>
+      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4'>
         {doctors.map(
           (items) =>
             items.locations.includes('Hanumanthanagar') && (

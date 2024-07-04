@@ -8,18 +8,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='border-b p-4 sticky top-0 bg-white z-50'>
-      <div className='container mx-auto flex justify-between items-center'>
+    <nav className='sticky top-0 z-50 border-b bg-white p-4'>
+      <div className='container mx-auto flex items-center justify-between'>
         {/* Logo */}
         <div
-          className='text-white text-xl font-bold cursor-pointer'
+          className='cursor-pointer text-xl font-bold text-white'
           onClick={scrollToTop}
         >
           <Logo />
         </div>
 
         {/* Navigation Links */}
-        <ul className='lg:flex space-x-6 hidden'>
+        <ul className='hidden space-x-6 lg:flex'>
           <li>
             <Link
               to='home'
@@ -27,7 +27,7 @@ const Navbar = () => {
               smooth={true}
               offset={-110}
               duration={500}
-              className='hover:text-gray-800 cursor-pointer hover:tracking-widest transition-all duration-200 ease-in-out'
+              className='cursor-pointer transition-all duration-200 ease-in-out hover:tracking-widest hover:text-gray-800'
             >
               Home
             </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className='hover:text-gray-800 cursor-pointer hover:tracking-widest transition-all duration-200 ease-in-out'
+              className='cursor-pointer transition-all duration-200 ease-in-out hover:tracking-widest hover:text-gray-800'
             >
               Why GarbhaGudi
             </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className='hover:text-gray-800 cursor-pointer hover:tracking-widest transition-all duration-200 ease-in-out'
+              className='cursor-pointer transition-all duration-200 ease-in-out hover:tracking-widest hover:text-gray-800'
             >
               Our Success
             </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className='hover:text-gray-800 cursor-pointer hover:tracking-widest transition-all duration-200 ease-in-out'
+              className='cursor-pointer transition-all duration-200 ease-in-out hover:tracking-widest hover:text-gray-800'
             >
               Testimonials
             </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className='hover:text-gray-800 cursor-pointer hover:tracking-wider transition-all duration-200 ease-in-out'
+              className='cursor-pointer transition-all duration-200 ease-in-out hover:tracking-wider hover:text-gray-800'
             >
               Awards
             </Link>

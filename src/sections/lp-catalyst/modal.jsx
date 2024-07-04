@@ -1,5 +1,10 @@
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
+import { useState } from 'react';
 import Form from './form';
 
 export default function MyModal({ title }) {
@@ -19,16 +24,16 @@ export default function MyModal({ title }) {
         <button
           type='button'
           onClick={openModal}
-          className='px-6 py-4 focus:outline-none bg-brandPink text-white font-semibold rounded-md'
+          className='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
         >
           {title}
         </button>
       </div>
 
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition appear show={isOpen} as={'div'}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
-          <Transition.Child
-            as={Fragment}
+          <TransitionChild
+            as={'div'}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
             enterTo='opacity-100'
@@ -37,12 +42,12 @@ export default function MyModal({ title }) {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25'></div>
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 overscroll-y-contain'>
-            <div className='flex max-w-lg mx-auto min-h-full items-center justify-center text-center'>
-              <Transition.Child
-                as={Fragment}
+            <div className='mx-auto flex min-h-full max-w-lg items-center justify-center text-center'>
+              <TransitionChild
+                as={'div'}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
                 enterTo='opacity-100 scale-100'
@@ -50,22 +55,22 @@ export default function MyModal({ title }) {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-lg -mt-5 transform rounded cursor-pointer overflow-hidden bg-purple-100 opacity-95 align-middle shadow-xl transition-all'>
+                <DialogPanel className='-mt-5 w-full max-w-lg transform cursor-pointer overflow-hidden rounded bg-purple-100 align-middle opacity-95 shadow-xl transition-all'>
                   <div
-                    className='my-4 flex sm:hidden items-center justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg'
+                    className='mx-auto my-4 flex w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:hidden'
                     onClick={closeModal}
                   >
                     Close
                   </div>
                   <Form />
                   <div
-                    className='hidden my-4 items-center sm:block justify-center cursor-pointer px-3 py-1 bg-brandPink2 mx-auto w-20 text-white font-semibold rounded-lg'
+                    className='mx-auto my-4 hidden w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:block'
                     onClick={closeModal}
                   >
                     Close
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

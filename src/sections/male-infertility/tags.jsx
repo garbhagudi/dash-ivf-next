@@ -1,15 +1,15 @@
-import React from "react";
-import { HiOutlineTag } from "react-icons/hi";
+import React from 'react';
+import { HiOutlineTag } from 'react-icons/hi';
 
 const Tags = () => {
   return (
-    <div className="max-w-5xl mx-auto py-10">
+    <div className='mx-auto max-w-5xl py-10'>
       {Data.map((items) => (
         <div
-          className="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-0.5 bg-green-200 text-green-700 rounded-full"
+          className='leading-sm ml-4 inline-flex items-center rounded-full bg-green-200 px-3 py-0.5 text-xs font-bold uppercase text-green-700'
           key={items.id}
         >
-          <HiOutlineTag className="mr-2" />
+          <HiOutlineTag className='mr-2' />
           <a>{items.tag}</a>
         </div>
       ))}
@@ -22,51 +22,51 @@ export default Tags;
 const Data = [
   {
     id: 1,
-    tag: "Male Infertility",
+    tag: 'Male Infertility',
   },
   {
     id: 2,
-    tag: "Semen analysis",
+    tag: 'Semen analysis',
   },
   {
     id: 3,
-    tag: "Tesa",
+    tag: 'Tesa',
   },
   {
     id: 4,
-    tag: "Pesa",
+    tag: 'Pesa',
   },
   {
     id: 5,
-    tag: "Varicocele",
+    tag: 'Varicocele',
   },
   {
     id: 6,
-    tag: "Casa",
+    tag: 'Casa',
   },
   {
     id: 7,
-    tag: "PGS",
+    tag: 'PGS',
   },
   {
     id: 8,
-    tag: "PGD",
+    tag: 'PGD',
   },
   {
     id: 9,
-    tag: "Azoospermia",
+    tag: 'Azoospermia',
   },
   {
     id: 10,
-    tag: "Sperm Donation",
+    tag: 'Sperm Donation',
   },
   {
     id: 11,
-    tag: "Cryopreservation",
+    tag: 'Cryopreservation',
   },
   {
     id: 12,
-    tag: "Oligoasthenoteratozoospermia",
+    tag: 'Oligoasthenoteratozoospermia',
   },
   // {
   //   id: 14,

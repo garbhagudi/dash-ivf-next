@@ -17,18 +17,18 @@ const data = [
 
 const Calculators = () => {
   return (
-    <div as='section' id='support' className='max-w-7xl mx-auto py-10'>
+    <div as='section' id='support' className='mx-auto max-w-7xl py-10'>
       <div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 justify-center'>
+        <div className='grid grid-cols-1 justify-center gap-x-8 gap-y-4 lg:grid-cols-2'>
           {data?.map((item) => (
             <div
               key={item.id}
-              className='bg-pink-200 rounded-lg p-6 flex items-start hover:bg-purple-200 transition duration-500'
+              className='flex items-start rounded-lg bg-pink-200 p-6 transition duration-500 hover:bg-purple-200'
             >
               <Link href={item.path} target='_blank'>
                 <div>
                   <div>
-                    <div className='font-heading font-bold py-4 text-xl'>
+                    <div className='py-4 font-heading text-xl font-bold'>
                       {item?.title}
                     </div>
                   </div>

@@ -1,6 +1,6 @@
-import React from "react";
-import { BaseAccordion } from "./base-accordion";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import React from 'react';
+import { BaseAccordion } from './base-accordion';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 import {
   AccordionButton,
   AccordionItem,
@@ -8,7 +8,7 @@ import {
   single,
   // preventClose,
   combineReducers,
-} from "./shared";
+} from './shared';
 
 export default function Accordion({ items, ...props }) {
   const openIcon = <FaMinus />;

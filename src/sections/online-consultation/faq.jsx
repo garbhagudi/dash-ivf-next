@@ -1,22 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Container, Grid, Image, Text } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import Accordion from "components/accordion/accordion";
+import { jsx, Box, Container, Grid, Image, Text } from 'theme-ui';
+import SectionHeading from 'components/section-heading';
+import Accordion from 'components/accordion/accordion';
 
 const data = [
   {
-    title: "How can I book the Online Consultation? ",
+    title: 'How can I book the Online Consultation? ',
     contents: (
       <div>
-        You can click{" "}
+        You can click{' '}
         <a
-          href="https://consult.bestdocapp.com/home/GARBHAGUDI"
-          target="_blank"
-          rel="noreferrer"
+          href='https://consult.bestdocapp.com/home/GARBHAGUDI'
+          target='_blank'
+          rel='noreferrer'
         >
           here
-        </a>{" "}
+        </a>{' '}
         and follow the steps mentioned above to book an appointment. Details
         will be provided to you via the information provided by you during the
         booking stage.
@@ -24,7 +24,7 @@ const data = [
     ),
   },
   {
-    title: "Who should use the online consultation service?",
+    title: 'Who should use the online consultation service?',
     contents: (
       <div>
         Patients who are looking for non-critical care, a follow-up or second
@@ -49,24 +49,24 @@ const data = [
 
 const Faq = () => {
   return (
-    <section sx={styles.section} id="faq">
+    <section sx={styles.section} id='faq'>
       <Container>
         <Grid sx={styles.grid}>
-          <Box as="figure" sx={styles.illustration}>
+          <Box as='figure' sx={styles.illustration}>
             <Image
-              src="https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_800/v1634563067/garbhagudi-ivf/Images%20/3731957_yjmv2x.webp"
-              alt="messenger"
+              src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_800/v1634563067/garbhagudi-ivf/Images%20/3731957_yjmv2x.webp'
+              alt='messenger'
             />
           </Box>
           <Box sx={styles.rightContent}>
             <SectionHeading
               sx={styles.heading}
-              title="Frequently Asked Questions"
+              title='Frequently Asked Questions'
             />
-            <Text as="p">
-              Check out our FAQ section and feel free to contact us at{" "}
-              <a href="tel:+919108910832">+919108910832</a> or drop an E-mail at{" "}
-              <a href="mailto:dreams@garbhagudi.com">dreams@garbhagudi.com</a>.{" "}
+            <Text as='p'>
+              Check out our FAQ section and feel free to contact us at{' '}
+              <a href='tel:+919108910832'>+919108910832</a> or drop an E-mail at{' '}
+              <a href='mailto:dreams@garbhagudi.com'>dreams@garbhagudi.com</a>.{' '}
               We will get back to you as soon as possible
             </Text>
             <Box sx={styles.accordionGroup}>
@@ -87,36 +87,36 @@ const styles = {
     pb: [6, null, null, null, 7, 9, 11, null],
   },
   grid: {
-    alignItems: "center",
+    alignItems: 'center',
     gridTemplateColumns: [
-      "1fr",
+      '1fr',
       null,
       null,
       null,
-      "1fr 431px",
-      "1fr 530px",
-      "1fr 550px",
+      '1fr 431px',
+      '1fr 530px',
+      '1fr 550px',
     ],
     p: {
-      mt: "-40px",
-      mb: "10px",
+      mt: '-40px',
+      mb: '10px',
     },
   },
   heading: {
-    textAlign: ["left", null, null, "center", "left"],
-    ml: [null, null, null, "auto"],
+    textAlign: ['left', null, null, 'center', 'left'],
+    ml: [null, null, null, 'auto'],
     mt: [8, null, null, null],
     maxWidth: [null, null, null, 520, 660],
     h2: {
       fontSize: [null, null, null, 10, 8, 10, 40],
       Image: {
-        mt: ["25px", null, null, "0"],
-        height: ["500px", null, "500px", "auto"],
-        display: "flex",
-        marginLeft: ["0", null, null, null, "auto"],
-        marginRight: ["0", null, null, null, "auto"],
-        position: "relative",
-        top: [null, null, null, "-20px", "-45px", "auto"],
+        mt: ['25px', null, null, '0'],
+        height: ['500px', null, '500px', 'auto'],
+        display: 'flex',
+        marginLeft: ['0', null, null, null, 'auto'],
+        marginRight: ['0', null, null, null, 'auto'],
+        position: 'relative',
+        top: [null, null, null, '-20px', '-45px', 'auto'],
       },
     },
     p: {
@@ -127,7 +127,7 @@ const styles = {
     mb: [-6, null, null, -8, 0],
   },
   accordionGroup: {
-    m: [null, null, null, "0 auto", "unset"],
-    maxWidth: [null, null, null, 600, "none"],
+    m: [null, null, null, '0 auto', 'unset'],
+    maxWidth: [null, null, null, 600, 'none'],
   },
 };
