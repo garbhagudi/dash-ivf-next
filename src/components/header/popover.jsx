@@ -1,5 +1,10 @@
 import { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  Transition,
+} from '@headlessui/react';
 import { HiChevronDown } from 'react-icons/hi';
 import Link from 'next/link';
 import { about, locations, services, treatments } from './menuData';
@@ -14,7 +19,7 @@ export const Treatments = () => {
     <Popover className='relative'>
       {({ close }) => (
         <>
-          <Popover.Button
+          <PopoverButton
             className={classNames(
               close ? 'text-gray-900' : 'text-brandPink2',
               'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-brandPink2 focus:outline-none',
@@ -28,9 +33,9 @@ export const Treatments = () => {
               )}
               aria-hidden='true'
             />
-          </Popover.Button>
+          </PopoverButton>
           <Transition
-            as={Fragment}
+            as={'div'}
             enter='transition ease-out duration-200'
             enterFrom='opacity-0 translate-y-1'
             enterTo='opacity-100 translate-y-0'
@@ -38,7 +43,7 @@ export const Treatments = () => {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute left-1/2 z-10 mt-7 w-screen max-w-md -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-xl xl:max-w-3xl'>
+            <PopoverPanel className='absolute left-1/2 z-10 mt-7 w-screen max-w-md -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-xl xl:max-w-3xl'>
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <p className='bg-white px-4 pb-2 pt-4 text-xs font-bold text-brandDark underline sm:text-sm'>
                   Female Infertility
@@ -87,7 +92,7 @@ export const Treatments = () => {
                 </div>
                 <hr />
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
@@ -100,7 +105,7 @@ export const Services = () => {
     <Popover className='relative'>
       {({ close }) => (
         <>
-          <Popover.Button
+          <PopoverButton
             className={classNames(
               close ? 'text-gray-900' : 'text-brandPink2',
               'group inline-flex items-center rounded-md bg-white text-sm font-medium hover:text-brandPink2 focus:outline-none focus:ring-offset-2 md:text-base',
@@ -114,10 +119,10 @@ export const Services = () => {
               )}
               aria-hidden='true'
             />
-          </Popover.Button>
+          </PopoverButton>
 
           <Transition
-            as={Fragment}
+            as={'div'}
             enter='transition ease-out duration-200'
             enterFrom='opacity-0 translate-y-1'
             enterTo='opacity-100 translate-y-0'
@@ -125,7 +130,7 @@ export const Services = () => {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute z-10 -ml-4 mt-5 w-screen max-w-xs transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2'>
+            <PopoverPanel className='absolute z-10 -ml-4 mt-5 w-screen max-w-xs transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2'>
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
                   {services.map((item) => (
@@ -150,7 +155,7 @@ export const Services = () => {
                   ))}
                 </div>
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
@@ -163,7 +168,7 @@ export const Locations = () => {
     <Popover className='relative'>
       {({ close }) => (
         <>
-          <Popover.Button
+          <PopoverButton
             className={classNames(
               close ? 'text-gray-900' : 'text-brandPink2',
               'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-brandPink2 focus:outline-none',
@@ -177,10 +182,10 @@ export const Locations = () => {
               )}
               aria-hidden='true'
             />
-          </Popover.Button>
+          </PopoverButton>
 
           <Transition
-            as={Fragment}
+            as={'div'}
             enter='transition ease-out duration-200'
             enterFrom='opacity-0 translate-y-1'
             enterTo='opacity-100 translate-y-0'
@@ -188,7 +193,7 @@ export const Locations = () => {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute left-1/2 z-10 mt-5 w-screen max-w-xl -translate-x-1/2 transform px-2 sm:px-0'>
+            <PopoverPanel className='absolute left-1/2 z-10 mt-5 w-screen max-w-xl -translate-x-1/2 transform px-2 sm:px-0'>
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <div className='relative grid grid-cols-2 gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
                   {locations.map((item) => (
@@ -213,7 +218,7 @@ export const Locations = () => {
                   ))}
                 </div>
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
@@ -226,7 +231,7 @@ export const About = () => {
     <Popover className='relative'>
       {({ close }) => (
         <>
-          <Popover.Button
+          <PopoverButton
             className={classNames(
               close ? 'text-gray-900' : 'text-brandPink2',
               'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-brandPink2 focus:outline-none',
@@ -240,10 +245,10 @@ export const About = () => {
               )}
               aria-hidden='true'
             />
-          </Popover.Button>
+          </PopoverButton>
 
           <Transition
-            as={Fragment}
+            as={'div'}
             enter='transition ease-out duration-200'
             enterFrom='opacity-0 translate-y-1'
             enterTo='opacity-100 translate-y-0'
@@ -251,7 +256,7 @@ export const About = () => {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <Popover.Panel className='absolute left-1/2 z-10 mt-5 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0'>
+            <PopoverPanel className='absolute left-1/2 z-10 mt-5 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0'>
               <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                 <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
                   {about.map((item) => (
@@ -276,7 +281,7 @@ export const About = () => {
                   ))}
                 </div>
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}

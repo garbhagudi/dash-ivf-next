@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import MyModal from './modal';
 
 const DoctorLayout = ({
@@ -33,8 +33,8 @@ const DoctorLayout = ({
       {activeIndex === index && (
         <Transition appear show={isOpen} as={React.Fragment}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
-            <Transition.Child
-              as={React.Fragment}
+            <TransitionChild
+              as={'div'}
               enter='ease-out duration-300'
               enterFrom='opacity-0'
               enterTo='opacity-100'
@@ -43,12 +43,12 @@ const DoctorLayout = ({
               leaveTo='opacity-0'
             >
               <div className='fixed inset-0 bg-black bg-opacity-25' />
-            </Transition.Child>
+            </TransitionChild>
 
             <div className='fixed inset-0 flex items-start justify-center overflow-y-auto'>
               <div className='mt-24 p-4 text-center'>
-                <Transition.Child
-                  as={React.Fragment}
+                <TransitionChild
+                  as={'div'}
                   enter='ease-out duration-300'
                   enterFrom='opacity-0 scale-95'
                   enterTo='opacity-100 scale-100'
@@ -83,7 +83,7 @@ const DoctorLayout = ({
                       </button>
                     </div>
                   </Dialog.Panel>
-                </Transition.Child>
+                </TransitionChild>
               </div>
             </div>
           </Dialog>

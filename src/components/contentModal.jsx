@@ -1,4 +1,4 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
@@ -23,8 +23,8 @@ export default function ContentModal({ title, content, classname, heading }) {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
-          <Transition.Child
-            as={Fragment}
+          <TransitionChild
+            as={'div'}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
             enterTo='opacity-100'
@@ -33,12 +33,12 @@ export default function ContentModal({ title, content, classname, heading }) {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25'></div>
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 overflow-scroll'>
             <div className='mx-auto mt-14 flex max-w-lg items-center justify-center text-center lg:min-h-[60vh] lg:max-w-5xl'>
-              <Transition.Child
-                as={Fragment}
+              <TransitionChild
+                as={'div'}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
                 enterTo='opacity-100 scale-100'
@@ -64,7 +64,7 @@ export default function ContentModal({ title, content, classname, heading }) {
                     Close
                   </div>
                 </Dialog.Panel>
-              </Transition.Child>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

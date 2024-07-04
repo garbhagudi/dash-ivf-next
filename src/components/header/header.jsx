@@ -1,5 +1,10 @@
 import { Fragment, useState } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import {
+  Popover,
+  PopoverGroup,
+  PopoverButton,
+  Transition,
+} from '@headlessui/react';
 import Image from 'components/image';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Link from 'next/link';
@@ -17,7 +22,7 @@ export default function Header() {
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href='/'>
               <div>
-                <span className='sr-only'>Workflow</span>
+                <span className='sr-only'>logo</span>
                 <Image
                   className='h-10 sm:h-14'
                   src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg'
@@ -27,12 +32,12 @@ export default function Header() {
             </Link>
           </div>
 
-          <Popover.Group as='nav' className='hidden space-x-10 lg:flex'>
+          <PopoverGroup as='nav' className='hidden space-x-10 lg:flex'>
             <Treatments />
             <Services />
             <Locations />
             <About />
-          </Popover.Group>
+          </PopoverGroup>
 
           <div className='flex items-center justify-end md:flex-1 lg:w-0'>
             <div className='hidden md:flex'>
@@ -44,10 +49,10 @@ export default function Header() {
               </div>
             </Link>
             <div className='-my-2 -mr-2 ml-2 lg:hidden'>
-              <Popover.Button className='flex items-end justify-between rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink'>
+              <PopoverButton className='flex items-end justify-between rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink'>
                 <span className='sr-only'>Open menu</span>
                 <HiMenu className='h-6 w-6' aria-hidden='true' />
-              </Popover.Button>
+              </PopoverButton>
             </div>
           </div>
         </div>
