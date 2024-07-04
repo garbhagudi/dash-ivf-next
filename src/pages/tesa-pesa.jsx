@@ -1,5 +1,5 @@
-import React from "react";
-import Page from "sections/tesa-pesa/page";
+import React from 'react';
+import Page from 'sections/tesa-pesa/page';
 
 const TesaPesa = () => {
   return (

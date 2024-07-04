@@ -1,90 +1,90 @@
 const OvulationDisorder = () => {
   return (
     <div
-      className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden scroll-m-28"
-      id="ovarian-disorders"
+      className='scroll-m-28 overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8 xl:py-36'
+      id='ovarian-disorders'
     >
-      <div className="max-w-max lg:max-w-7xl mx-auto">
-        <div className="relative z-10 mb-8 md:mb-2 md:px-6">
-          <div className="text-base max-w-prose lg:max-w-none">
-            <h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
+      <div className='mx-auto max-w-max lg:max-w-7xl'>
+        <div className='relative z-10 mb-8 md:mb-2 md:px-6'>
+          <div className='max-w-prose text-base lg:max-w-none'>
+            <h2 className='font-semibold uppercase leading-6 tracking-wide text-indigo-600'>
               Female Infertility
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl'>
               Ovulation Disorder
             </p>
           </div>
         </div>
-        <div className="relative">
+        <div className='relative'>
           <svg
-            className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
+            className='absolute right-0 top-0 -mr-20 -mt-20 hidden md:block'
             width={404}
             height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-            aria-hidden="true"
+            fill='none'
+            viewBox='0 0 404 384'
+            aria-hidden='true'
           >
             <defs>
               <pattern
-                id="95e8f2de-6d30-4b7e-8159-f791729db21b"
+                id='95e8f2de-6d30-4b7e-8159-f791729db21b'
                 x={0}
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse"
+                patternUnits='userSpaceOnUse'
               >
                 <rect
                   x={0}
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
+                  className='text-gray-200'
+                  fill='currentColor'
                 />
               </pattern>
             </defs>
             <rect
               width={404}
               height={384}
-              fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)"
+              fill='url(#95e8f2de-6d30-4b7e-8159-f791729db21b)'
             />
           </svg>
           <svg
-            className="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20"
+            className='absolute bottom-0 left-0 -mb-20 -ml-20 hidden md:block'
             width={404}
             height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-            aria-hidden="true"
+            fill='none'
+            viewBox='0 0 404 384'
+            aria-hidden='true'
           >
             <defs>
               <pattern
-                id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
+                id='7a00fe67-0343-4a3c-8e81-c145097a3ce0'
                 x={0}
                 y={0}
                 width={20}
                 height={20}
-                patternUnits="userSpaceOnUse"
+                patternUnits='userSpaceOnUse'
               >
                 <rect
                   x={0}
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
+                  className='text-gray-200'
+                  fill='currentColor'
                 />
               </pattern>
             </defs>
             <rect
               width={404}
               height={384}
-              fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)"
+              fill='url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)'
             />
           </svg>
-          <div className="relative md:bg-white md:p-6">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-6">
-              <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+          <div className='relative md:bg-white md:p-6'>
+            <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
+              <div className='prose prose-indigo prose-lg text-gray-500 lg:max-w-none'>
                 <p>
                   Ovulation abnormalities are among the most prevalent causes of
                   female infertility. Ovulation disorders are disruptions in the
@@ -93,7 +93,7 @@ const OvulationDisorder = () => {
                   control of reproductive hormones. Disorders are frequently
                   caused by situations such as:
                 </p>
-                <ol className="list-outside list-disc space-y-2">
+                <ol className='list-outside list-disc space-y-2'>
                   <li>
                     Hypothyroidism or hyperthyroidism is caused by hypothalamic
                     dysfunction
@@ -105,12 +105,12 @@ const OvulationDisorder = () => {
                     production among other things
                   </li>
                 </ol>
-                <h4 className="font-bold text-lg py-4">Symptoms: </h4>
+                <h4 className='py-4 text-lg font-bold'>Symptoms: </h4>
                 <div>
                   Symptoms of an ovulation issue vary depending on the reason
                   and the hormones that impact ovulation. Infertility may be the
                   only symptom in certain situations. Others are as follows:
-                  <ul className="list-outside list-disc mt-2 space-y-2">
+                  <ul className='mt-2 list-outside list-disc space-y-2'>
                     <li>Periods that are irregular or missing are common.</li>
                     <li>
                       Anxiety, despair, and anxiousness are examples of mood
@@ -124,13 +124,13 @@ const OvulationDisorder = () => {
                   </ul>
                 </div>
               </div>
-              <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
+              <div className='prose prose-indigo prose-lg mt-6 text-gray-500 lg:mt-0'>
                 <p>
                   Treatments for ovulation problems aim to improve the quality
                   and frequency of ovulation. Among the therapies are:
                 </p>
-                <h4 className="font-bold text-lg py-4">
-                  Fertility Medications:{" "}
+                <h4 className='py-4 text-lg font-bold'>
+                  Fertility Medications:{' '}
                 </h4>
                 <p>
                   Fertility treatments, both oral and injectable, can encourage
@@ -140,7 +140,7 @@ const OvulationDisorder = () => {
                   will be started on injectable meds, which will require more
                   frequent monitoring by a doctor
                 </p>
-                <h4 className="font-bold text-lg py-4">
+                <h4 className='py-4 text-lg font-bold'>
                   Modifications in lifestyle:
                 </h4>
                 <p>
@@ -149,7 +149,7 @@ const OvulationDisorder = () => {
                   frequent exercise, and stress-relieving techniques are all
                   recommended.
                 </p>
-                <h4 className="font-bold text-lg py-4">
+                <h4 className='py-4 text-lg font-bold'>
                   Thyroid hormone replacement treatment:
                 </h4>
                 <p>

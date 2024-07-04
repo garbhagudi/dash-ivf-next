@@ -70,7 +70,7 @@ const Marathahalli = () => {
           'No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094'
         }
       />
-      <div className=' max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
+      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
         {doctors.map(
           (items) =>
             items.locations.includes('RMV Extension') && (

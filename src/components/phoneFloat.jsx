@@ -12,9 +12,9 @@ const FloatPhone = () => {
 
   return (
     <>
-      <div className='fixed w-10 h-10 md:w-14 md:h-14 bottom-4 left-4 bg-brandPink3 rounded-full flex items-center justify-center transition-opacity duration-500 ease-linear z-50'>
+      <div className='fixed bottom-4 left-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-brandPink3 transition-opacity duration-500 ease-linear md:h-14 md:w-14'>
         <Link href='tel:+919108910832'>
-          <HiPhone className='w-6 h-6 md:w-8 md:h-8 md:p-0.5 text-white' />
+          <HiPhone className='h-6 w-6 text-white md:h-8 md:w-8 md:p-0.5' />
         </Link>
       </div>
     </>

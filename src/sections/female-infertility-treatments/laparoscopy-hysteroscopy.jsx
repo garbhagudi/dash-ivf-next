@@ -3,7 +3,7 @@ import React from 'react';
 const LaparoHystero = () => {
   return (
     <div
-      className='relative bg-white scroll-m-28'
+      className='relative scroll-m-28 bg-white'
       id='hysteroscopy-and-laparoscopy'
     >
       <div className='lg:absolute lg:inset-0'>
@@ -15,16 +15,16 @@ const LaparoHystero = () => {
           />
         </div>
       </div>
-      <div className='relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2'>
+      <div className='relative px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8'>
         <div className='lg:col-start-2 lg:pl-8'>
-          <div className='text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0'>
-            <h2 className='leading-6 text-indigo-600 font-semibold tracking-wide uppercase'>
+          <div className='mx-auto max-w-prose text-base lg:ml-auto lg:mr-0 lg:max-w-lg'>
+            <h2 className='font-semibold uppercase leading-6 tracking-wide text-indigo-600'>
               Female Infertility
             </h2>
-            <h3 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+            <h3 className='mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl'>
               Laparoscopy and Hysteroscopy
             </h3>
-            <p className='mt-8 prose text-gray-500'>
+            <p className='prose mt-8 text-gray-500'>
               Laparoscopy and hysteroscopy are procedures that are advised
               during infertility therapy. These treatments allow the doctor to
               examine the tissues and organs within the pelvis and perform
@@ -35,7 +35,7 @@ const LaparoHystero = () => {
               operations are best performed immediately after menstruation when
               the view is clear.
             </p>
-            <div className='mt-5 prose prose-indigo text-gray-500'>
+            <div className='prose prose-indigo mt-5 text-gray-500'>
               <p>
                 If you have pelvic discomfort or a history of pelvic illness,
                 the doctor may consider a laparoscopy. It aids in the diagnosis

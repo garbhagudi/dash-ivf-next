@@ -1,13 +1,13 @@
-import React from "react";
-import { Box, Container, Text, Heading } from "theme-ui";
+import React from 'react';
+import { Box, Container, Text, Heading } from 'theme-ui';
 
 const TermsConditions = () => {
   return (
     <>
       <Box sx={styles.wrapper}>
         <Container sx={styles.container}>
-          <Heading as="h3">Terms and Conditions</Heading>
-          <Text as="p">
+          <Heading as='h3'>Terms and Conditions</Heading>
+          <Text as='p'>
             The following terms and conditions will be deemed to have been
             accepted by the User on usage of the website www.garbhagudi.com. You
             are requested to read them carefully before you use the content and
@@ -22,13 +22,13 @@ const TermsConditions = () => {
             retransmission of material contained within our website is
             prohibited unless the prior written consent has been obtained.
           </Text>
-          <Heading as="h4" style={{ marginTop: "45px" }}>
+          <Heading as='h4' style={{ marginTop: '45px' }}>
             Disclaimer
           </Heading>
-          <Text as="p">
+          <Text as='p'>
             The materials appearing on this website are provided for
             informational use only, and are in no way intended to constitute
-            Medical advice or opinions from our clinics or any of its doctors.{" "}
+            Medical advice or opinions from our clinics or any of its doctors.{' '}
             <br />
             <br /> Transmission or receipt of any information from this website
             does not create a clinic/doctor-client relationship, and you should
@@ -64,9 +64,9 @@ const TermsConditions = () => {
             </ul>
           </Text>
         </Container>
-        <Container sx={styles.container} style={{ marginTop: "45px" }}>
-          <Heading as="h4">Limitation of Liability and Indemnification</Heading>
-          <Text as="p">
+        <Container sx={styles.container} style={{ marginTop: '45px' }}>
+          <Heading as='h4'>Limitation of Liability and Indemnification</Heading>
+          <Text as='p'>
             In no event will we be liable to any party for any direct, indirect,
             incidental, special, exemplary, punitive or consequential damages of
             any type whatsoever related to or arising from this Site or any use
@@ -79,8 +79,8 @@ const TermsConditions = () => {
             damages. This exclusion and waiver of liability applies to all
             causes of action, whether based on contract, warranty, tort, or any
             other legal theories. The User agrees to indemnify, defend and hold
-            harmless,{" "}
-            <a href="https://garbhagudi-ivf.com">garbhagudi-ivf.com</a>
+            harmless,{' '}
+            <a href='https://garbhagudi-ivf.com'>garbhagudi-ivf.com</a>
             , its subsidiaries and affiliates its officers, directors, employees
             and agents from any claim, cost, expense, judgment or other loss
             relating to your use of this website including, without limitation
@@ -89,9 +89,9 @@ const TermsConditions = () => {
             <br />
           </Text>
         </Container>
-        <Container sx={styles.container} style={{ marginTop: "45px" }}>
-          <Heading as="h4">Paripoorna</Heading>
-          <Text as="p">
+        <Container sx={styles.container} style={{ marginTop: '45px' }}>
+          <Heading as='h4'>Paripoorna</Heading>
+          <Text as='p'>
             GarbhaGnan Foundation is one of the foremost foundations in the
             country that offers specialized and the latest health care for
             women. With growing rates of infertility across the globe due to
@@ -104,7 +104,7 @@ const TermsConditions = () => {
             borne by GarbhaGnan Foundation as a part of its CSR activity.
             Deserving couple are selected by a committee put in place by
             GarbhaGnan Foundation. The selection process and merits are defined
-            by GarbhaGnan Foundation and cannot be contested by any couple.{" "}
+            by GarbhaGnan Foundation and cannot be contested by any couple.{' '}
             <br />
             <br />
             Committee’s decision in awarding the offer is final. Offer is not
@@ -123,71 +123,71 @@ export default TermsConditions;
 
 const styles = {
   wrapper: {
-    pt: ["80px", null, null, null, "100px", "120px"],
-    pb: ["60px", null, null, null, "60px", null, "120"],
-    overflow: "hidden",
+    pt: ['80px', null, null, null, '100px', '120px'],
+    pb: ['60px', null, null, null, '60px', null, '120'],
+    overflow: 'hidden',
   },
   container: {
-    width: [null, null, null, null, null, null, "1390px"],
+    width: [null, null, null, null, null, null, '1390px'],
     h3: {
-      fontWeight: "bold",
+      fontWeight: 'bold',
       lineHeight: [1.39],
-      letterSpacing: ["-.7px", "-1.5px"],
-      mb: ["15px", null, null, null, "50px"],
-      width: ["100%"],
-      maxWidth: ["100%", null, null, "90%", "100%", "full"],
-      fontSize: [6, null, null, "36px", null, "55px", 9],
-      textAlign: "center",
-      color: "secondary",
+      letterSpacing: ['-.7px', '-1.5px'],
+      mb: ['15px', null, null, null, '50px'],
+      width: ['100%'],
+      maxWidth: ['100%', null, null, '90%', '100%', 'full'],
+      fontSize: [6, null, null, '36px', null, '55px', 9],
+      textAlign: 'center',
+      color: 'secondary',
     },
     h4: {
-      fontWeight: "bold",
+      fontWeight: 'bold',
       lineHeight: [1.39],
-      letterSpacing: ["-.7px", "-1.5px"],
-      mb: ["15px", null, null, null, "50px"],
-      width: ["100%"],
-      maxWidth: ["100%", null, null, "90%", "100%", "full"],
-      fontSize: [3, null, null, "36px", null, "55px", 6],
-      textAlign: "center",
-      textDecoration: "underline",
-      color: "primary2",
+      letterSpacing: ['-.7px', '-1.5px'],
+      mb: ['15px', null, null, null, '50px'],
+      width: ['100%'],
+      maxWidth: ['100%', null, null, '90%', '100%', 'full'],
+      fontSize: [3, null, null, '36px', null, '55px', 6],
+      textAlign: 'center',
+      textDecoration: 'underline',
+      color: 'primary2',
     },
   },
   grid: {
-    display: "grid",
-    gridTemplateColumns: ["1fr", null, null, "1fr 1fr"],
-    gridGap: "0",
+    display: 'grid',
+    gridTemplateColumns: ['1fr', null, null, '1fr 1fr'],
+    gridGap: '0',
   },
   content: {
     p: {
       fontSize: [1, null, null, 2, null, 3],
-      lineHeight: ["26px", null, null, null, 1.5],
-      color: "text_secondary",
-      mb: ["20px", null, null, null, null, "30px"],
-      width: ["100%"],
-      maxWidth: ["100%", null, null, null, null, "640px"],
+      lineHeight: ['26px', null, null, null, 1.5],
+      color: 'text_secondary',
+      mb: ['20px', null, null, null, null, '30px'],
+      width: ['100%'],
+      maxWidth: ['100%', null, null, null, null, '640px'],
       br: {
-        display: ["none", null, null, null, "inherit"],
+        display: ['none', null, null, null, 'inherit'],
       },
       h2: {
         fontSize: [3, null, null, 2, null, 6],
-        fontWeight: ["bold", null, null, "bold", null, "bold"],
-        mb: ["5px", null, null, null, null, "-5px"],
-        mt: ["5px", null, null, null, null, "15px"],
+        fontWeight: ['bold', null, null, 'bold', null, 'bold'],
+        mb: ['5px', null, null, null, null, '-5px'],
+        mt: ['5px', null, null, null, null, '15px'],
       },
     },
   },
   image: {
     img: {
-      display: ["block", null, null, "flex"],
-      mx: "auto",
-      width: "500px",
-      mixBlendMode: "darken",
-      position: "relative",
-      top: ["0", null, null, null, null, "-40px"],
-      maxWidth: ["100%", null, null, null, null, null, "100%"],
-      float: [null, null, null, "right"],
-      my: ["20px", null, null, "60px"],
+      display: ['block', null, null, 'flex'],
+      mx: 'auto',
+      width: '500px',
+      mixBlendMode: 'darken',
+      position: 'relative',
+      top: ['0', null, null, null, null, '-40px'],
+      maxWidth: ['100%', null, null, null, null, null, '100%'],
+      float: [null, null, null, 'right'],
+      my: ['20px', null, null, '60px'],
     },
   },
 };

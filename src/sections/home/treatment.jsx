@@ -5,16 +5,16 @@ import Link from 'next/link';
 const TreatmentOptions = ({ branch }) => {
   return (
     <div className='container mx-auto'>
-      <h2 className='pb-16 lg:pb-20 text-2xl lg:text-3xl font-heading text-center font-bold px-2'>
+      <h2 className='px-2 pb-16 text-center font-heading text-2xl font-bold lg:pb-20 lg:text-3xl'>
         Infertility Treatment Options at {branch}
       </h2>
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-3 lg:gap-16 pb-10 lg:pb-16 px-2'>
+      <div className='grid grid-cols-2 gap-x-3 gap-y-16 px-2 pb-10 lg:grid-cols-4 lg:gap-16 lg:pb-16'>
         {Data.map((items) => (
           <div
             key={items?.id}
-            className='font-content border border-brandPink4 rounded-2xl flex items-center justify-between flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 hover:bg-pink-50'
+            className='font-content flex flex-col items-center justify-between rounded-2xl border border-brandPink4 transition-all duration-300 hover:-translate-y-2 hover:bg-pink-50 hover:shadow-2xl'
           >
-            <div className='-mt-10 md:w-24 md:h-24 md:-mt-12 mx-auto flex items-center justify-center rounded-full'>
+            <div className='mx-auto -mt-10 flex items-center justify-center rounded-full md:-mt-12 md:h-24 md:w-24'>
               <Image
                 src={items?.image}
                 alt={items?.treatent}
@@ -25,17 +25,17 @@ const TreatmentOptions = ({ branch }) => {
               />
             </div>
             <div className='flex flex-col items-center justify-center py-2'>
-              <div className='text-base md:text-xl font-heading text-center font-bold pb-2'>
+              <div className='pb-2 text-center font-heading text-base font-bold md:text-xl'>
                 {items?.treatent}
               </div>
-              <div className='px-3 text-sm md:text-base text-center'>
+              <div className='px-3 text-center text-sm md:text-base'>
                 {items?.desc}
               </div>
             </div>
-            <div className=' text-center border w-full bg-brandPink4 py-1 rounded-b-2xl'>
+            <div className='w-full rounded-b-2xl border bg-brandPink4 py-1 text-center'>
               <Link
                 href={items?.link}
-                className='font-bold text-white font-content'
+                className='font-content font-bold text-white'
               >
                 Learn More
               </Link>

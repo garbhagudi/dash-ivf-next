@@ -2,8 +2,8 @@ const IndexPage = () => {
   return (
     <>
       <iframe
-        src="/contact.html"
-        className="max-w-lg w-screen mx-auto h-[90vh]"
+        src='/contact.html'
+        className='mx-auto h-[90vh] w-screen max-w-lg'
       >
         Loading…
       </iframe>

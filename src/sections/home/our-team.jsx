@@ -31,22 +31,22 @@ export default function TeamSection() {
   const swiperRef = useRef();
   return (
     <div className='bg-gradient-to-br from-pink-300 to-purple-100 py-6'>
-      <div className='mx-auto px-3 max-w-7xl pb-12'>
-        <div className='text-center pb-12 '>
-          <h1 className='text-3xl sm:text-4xl font-heading font-bold mb-4'>
+      <div className='mx-auto max-w-7xl px-3 pb-12'>
+        <div className='pb-12 text-center'>
+          <h1 className='mb-4 font-heading text-3xl font-bold sm:text-4xl'>
             Meet our Fertility Specialists
           </h1>
-          <p className='max-w-prose mx-auto'>
+          <p className='mx-auto max-w-prose'>
             Our team of fertility specialists have been known for their
             extensive clinical experience and research contributions, as well as
             for their success in treating the most challenging fertility cases.
           </p>
         </div>
 
-        <div className='mx-auto flex flex-row items-center justify-center max-w-7xl '>
+        <div className='mx-auto flex max-w-7xl flex-row items-center justify-center'>
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className='bg-brandPink text-white rounded-full z-10 p-2 left-0 lg:left-10 absolute ml-4 '
+            className='absolute left-0 z-10 ml-4 rounded-full bg-brandPink p-2 text-white lg:left-10'
           >
             <HiChevronLeft className='text-2xl' />
           </button>
@@ -64,11 +64,11 @@ export default function TeamSection() {
             {doctors.map((item) => {
               return (
                 <SwiperSlide key={item.name}>
-                  <div className='mb-2 transition-all duration-500 rounded-xl '>
-                    <div className='relative h-52 w-52 mx-auto'>
-                      <div className='h-full w-full absolute rounded-full overflow-hidden bg-gradient-to-br from-brandPink3/80 to-purple-500/40 animate-rotate bg-[length: 400%]'></div>
+                  <div className='mb-2 rounded-xl transition-all duration-500'>
+                    <div className='relative mx-auto h-52 w-52'>
+                      <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                       <Image
-                        className='rounded-full shadow-2xl drop-shadow-2xl bg-transparent overflow-hidden'
+                        className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
                         src={item?.image.url}
                         alt={item?.imageAlt || item?.name}
                         width={220}
@@ -76,15 +76,15 @@ export default function TeamSection() {
                         loading='lazy'
                       />
                     </div>
-                    <div className='space-y-4 mt-4 flex items-center text-center justify-center flex-col'>
-                      <div className='space-y-1 text-lg font-medium leading-6 h-24'>
-                        <h3 className='text-brandDark font-content'>
+                    <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
+                      <div className='h-24 space-y-1 text-lg font-medium leading-6'>
+                        <h3 className='font-content text-brandDark'>
                           {item?.name}
                         </h3>
-                        <p className='text-xs text-brandPurpleDark font-content'>
+                        <p className='font-content text-xs text-brandPurpleDark'>
                           {item?.qualification}
                         </p>
-                        <p className='pb-2 text-sm text-brandPink font-content'>
+                        <p className='font-content pb-2 text-sm text-brandPink'>
                           {item?.designation}
                         </p>
                       </div>
@@ -104,7 +104,7 @@ export default function TeamSection() {
           </Swiper>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className='bg-brandPink text-white rounded-full p-2 z-10 right-0 lg:right-10 absolute mr-4'
+            className='absolute right-0 z-10 mr-4 rounded-full bg-brandPink p-2 text-white lg:right-10'
           >
             <HiChevronRight className='text-2xl' />
           </button>

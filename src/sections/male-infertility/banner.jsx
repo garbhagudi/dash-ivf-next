@@ -1,29 +1,29 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx, Box, Container, Button } from "theme-ui";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import SectionHeading from "components/section-heading";
-import MyModal from "components/modal";
+import { jsx, Box, Container, Button } from 'theme-ui';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import SectionHeading from 'components/section-heading';
+import MyModal from 'components/modal';
 
 const Banner = () => {
   return (
-    <Box as="section" id="home" sx={styles.section}>
+    <Box as='section' id='home' sx={styles.section}>
       <Container>
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Best Male Infertility Treatment in Bangalore."
-            description="Book a Free Consultation Now!"
+            title='Best Male Infertility Treatment in Bangalore.'
+            description='Book a Free Consultation Now!'
           />
-          <Box as="figure" sx={styles.illustration}>
+          <Box as='figure' sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>
-              <MyModal title="Get Started" />
+              <MyModal title='Get Started' />
             </Box>
             <LazyLoadImage
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780493/garbhagudi-ivf/Banners/maleInf_umubsg.webp"
-              alt="illustration"
-              style={{ marginTop: "30px" }}
+              src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780493/garbhagudi-ivf/Banners/maleInf_umubsg.webp'
+              alt='illustration'
+              style={{ marginTop: '30px' }}
             />
           </Box>
         </Box>
@@ -36,14 +36,14 @@ export default Banner;
 
 const styles = {
   section: {
-    position: "relative",
+    position: 'relative',
     pt: [105, null, null, 140, 15, null, 140],
     pb: [8, null, null, 0],
     zIndex: 0,
-    ":before": {
-      backgroundColor: "#FFF5ED",
-      content: ["none", null, null, `''`],
-      position: "absolute",
+    ':before': {
+      backgroundColor: '#FFF5ED',
+      content: ['none', null, null, `''`],
+      position: 'absolute',
       left: 0,
       right: 0,
       bottom: 0,
@@ -52,10 +52,10 @@ const styles = {
     },
   },
   contentWrapper: {
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "flex-end",
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
   },
   heading: {
     mb: [30],
@@ -70,23 +70,23 @@ const styles = {
     },
   },
   illustration: {
-    display: ["block", null, null, "flex"],
-    position: "relative",
+    display: ['block', null, null, 'flex'],
+    position: 'relative',
     img: {
-      display: ["block", null, null, "block"],
-      maxWidth: ["90%"],
-      m: ["0 auto"],
+      display: ['block', null, null, 'block'],
+      maxWidth: ['90%'],
+      m: ['0 auto'],
     },
   },
   buttonWrapper: {
-    textAlign: ["center"],
-    position: ["static", null, null, "absolute"],
-    left: "50%",
+    textAlign: ['center'],
+    position: ['static', null, null, 'absolute'],
+    left: '50%',
     top: 0,
-    transform: ["unset", null, null, "translateX(-50%)"],
+    transform: ['unset', null, null, 'translateX(-50%)'],
     a: {
-      textDecoration: "none",
-      color: "#fff",
+      textDecoration: 'none',
+      color: '#fff',
     },
   },
 };

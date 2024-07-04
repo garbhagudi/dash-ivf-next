@@ -4,23 +4,23 @@ import Image from 'next/image';
 function FeaturesBlocks() {
   return (
     <section className='relative'>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 pt-6'>
+      <div className='relative mx-auto max-w-7xl px-4 pt-6 sm:px-6'>
         <div className='py-4 md:py-6'>
           {/* Section header */}
-          <div className='max-w-3xl mx-auto text-center pb-12 md:pb-20'>
-            <h2 className='h2 mb-4 uppercase text-3xl font-heading bg-clip-text text-transparent bg-gradient-to-r from-brandPink to-brandPurpleDark dark:to-brandPurple font-bold'>
+          <div className='mx-auto max-w-3xl pb-12 text-center md:pb-20'>
+            <h2 className='h2 mb-4 bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text font-heading text-3xl font-bold uppercase text-transparent dark:to-brandPurple'>
               Why we are the Industry Leaders?
             </h2>
-            <p className='text-xl text-gray-800 font-content'>
+            <p className='font-content text-xl text-gray-800'>
               GarbhaGudi has won numerous awards from various organisations for
               its exceptional service and high success rates
             </p>
           </div>
 
-          <div className='flex items-center justify-center flex-wrap gap-5 '>
+          <div className='flex flex-wrap items-center justify-center gap-5'>
             {Data.map((items) => (
               <div
-                className='relative flex flex-col items-center p-3 bg-white rounded-lg  hover:shadow-2xl hover:-translate-x-2 hover:-translate-y-2 hover:border-0 transition-all duration-300'
+                className='relative flex flex-col items-center rounded-lg bg-white p-3 transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:border-0 hover:shadow-2xl'
                 key={items.id}
               >
                 <Image
@@ -31,10 +31,10 @@ function FeaturesBlocks() {
                   height={500}
                   loading='lazy'
                 />
-                <h4 className='text-xl font-bold text-center leading-snug tracking-tight mb-1 mt-3 text-gray-800'>
+                <h4 className='mb-1 mt-3 text-center text-xl font-bold leading-snug tracking-tight text-gray-800'>
                   {items.title}
                 </h4>
-                <p className='text-gray-800 text-center'>{items.desc}</p>
+                <p className='text-center text-gray-800'>{items.desc}</p>
               </div>
             ))}
           </div>

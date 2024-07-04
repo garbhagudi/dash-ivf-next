@@ -70,7 +70,7 @@ const Jayanagar = () => {
           'South End Circle, 26, Pattalamma Temple Rd, Basavanagudi, Bengaluru, Karnataka 560004'
         }
       />
-      <div className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4'>
         {doctors.map(
           (items) =>
             items.locations.includes('Jayanagar') && (

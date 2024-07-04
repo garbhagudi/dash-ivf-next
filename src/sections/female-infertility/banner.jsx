@@ -1,26 +1,26 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Flex, Container, Image } from "theme-ui";
-import SectionHeading from "components/section-heading";
-import MyModal from "components/modal";
+import { jsx, Flex, Container, Image } from 'theme-ui';
+import SectionHeading from 'components/section-heading';
+import MyModal from 'components/modal';
 
 const Banner = () => {
   return (
-    <section id="home" sx={styles.section}>
+    <section id='home' sx={styles.section}>
       <Container sx={styles.container}>
         <div sx={styles.content}>
           <SectionHeading
             sx={styles.heading}
-            title="The journey begins when you take your first step"
+            title='The journey begins when you take your first step'
           />
           <Flex sx={styles.buttonGroup}>
-            <MyModal title="Get Started" />
+            <MyModal title='Get Started' />
           </Flex>
         </div>
-        <Flex as="figure" sx={styles.illustration}>
+        <Flex as='figure' sx={styles.illustration}>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_1280/v1637220770/garbhagudi-ivf/Banners/Young_married_couple_consulting_doctor_svxszn.webp"
-            alt="banner"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_1280/v1637220770/garbhagudi-ivf/Banners/Young_married_couple_consulting_doctor_svxszn.webp'
+            alt='banner'
           />
         </Flex>
       </Container>
@@ -32,34 +32,34 @@ export default Banner;
 
 const styles = {
   section: {
-    backgroundColor: "#FFF",
+    backgroundColor: '#FFF',
     pt: [12, null, null, null, 10, 0],
     pb: [2, null, null, null, 10, 8],
-    position: "relative",
+    position: 'relative',
     zIndex: 0,
-    "::before": {
-      backgroundColor: "white",
+    '::before': {
+      backgroundColor: 'white',
       content: `''`,
-      position: "absolute",
+      position: 'absolute',
       height: [30, null, null, 70, 85, 120],
       bottom: 0,
-      width: "100%",
+      width: '100%',
       zIndex: -1,
     },
   },
   container: {
-    minHeight: [null, null, null, null, null, "100vh"],
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    flexDirection: "column",
+    minHeight: [null, null, null, null, null, '100vh'],
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'column',
   },
   content: {
     maxWidth: [null, null, null, 570, 690],
-    textAlign: "center",
+    textAlign: 'center',
     marginTop: [18, null, null, 22, 120],
     h1: {
-      color: "white",
+      color: 'white',
       fontSize: [7, null, null, 12, 14],
       lineHeight: 1.35,
     },
@@ -77,30 +77,30 @@ const styles = {
     },
   },
   buttonGroup: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: [6, null, null, 6],
-    position: "relative",
+    position: 'relative',
     zIndex: 2,
     button: {
       a: {
-        textDecoration: "none",
-        color: "#FFF",
+        textDecoration: 'none',
+        color: '#FFF',
       },
     },
   },
   btnOutlined: {
-    borderColor: "white",
-    color: "white",
+    borderColor: 'white',
+    color: 'white',
     ml: 3,
     svg: {
       ml: 2,
     },
   },
   illustration: {
-    transform: ["scale(1.1)", null, "scale(1.20)", "scale(1.20)"],
-    alignItems: "center",
-    display: "flex",
+    transform: ['scale(1.1)', null, 'scale(1.20)', 'scale(1.20)'],
+    alignItems: 'center',
+    display: 'flex',
     marginTop: [2, null, null, -4, -5],
   },
 };

@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box } from "theme-ui";
-import Accordion from "components/accordion/accordion";
+import { jsx, Container, Box } from 'theme-ui';
+import Accordion from 'components/accordion/accordion';
 const faqs = [
   {
-    title: "Ovulation testing",
+    title: 'Ovulation testing',
     contents: (
       <div>
         A home testing kit to check to know the rise in luteinizing hormone (LH)
@@ -15,7 +15,7 @@ const faqs = [
     ),
   },
   {
-    title: "Hysterosalpingography",
+    title: 'Hysterosalpingography',
     contents: (
       <div>
         Hysterosalpingography is a type of x-ray where the contrast dye is
@@ -83,14 +83,14 @@ const faqs = [
 ];
 export default function Diagnosis() {
   return (
-    <Box as="section" variant="section.faq" id="faq">
+    <Box as='section' variant='section.faq' id='faq'>
       <Container>
         <Box
           sx={{
-            display: "flex",
-            width: ["100%", null, null, "650px", "745px"],
-            flexDirection: "column",
-            mx: "auto",
+            display: 'flex',
+            width: ['100%', null, null, '650px', '745px'],
+            flexDirection: 'column',
+            mx: 'auto',
           }}
         >
           <Accordion items={faqs} />

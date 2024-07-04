@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 const Note = () => {
   return (
-    <div className="max-w-7xl mx-auto py-10 px-5">
-      <h1 className="text-4xl lg:text-5xl font-heading pb-10 font-bold text-center">
+    <div className='mx-auto max-w-7xl px-5 py-10'>
+      <h1 className='pb-10 text-center font-heading text-4xl font-bold lg:text-5xl'>
         Some important points to note
       </h1>
       <div>
-        <ul className="list-outside list-disc text-lg max-w-4xl mx-auto">
+        <ul className='mx-auto max-w-4xl list-outside list-disc text-lg'>
           <li>
             The loan is given at 0% interest to the patient. So there is no
             additional burden on the patient because of financing

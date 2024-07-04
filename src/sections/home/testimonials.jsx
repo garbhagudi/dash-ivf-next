@@ -29,18 +29,18 @@ const breakpoints = {
 const Testimonial = () => {
   const swiperRef = useRef();
   return (
-    <section className='bg-gradient-to-tr from-brandPink3/70 via-brandPurple/50 to-purple-100 overflow-hidden py-8'>
-      <FcGoogle className='h-14 w-14 text-center mx-auto' />
-      <div className='font-sans font-semibold text-center'>
-        <MdOutlineRateReview className='inline-block mr-2' />
+    <section className='overflow-hidden bg-gradient-to-tr from-brandPink3/70 via-brandPurple/50 to-purple-100 py-8'>
+      <FcGoogle className='mx-auto h-14 w-14 text-center' />
+      <div className='text-center font-sans font-semibold'>
+        <MdOutlineRateReview className='mr-2 inline-block' />
         Reviews
       </div>
 
       <div className='flex items-center justify-center'>
-        <div className='relative max-w-7xl mx-auto flex flex-row items-center justify-center'>
+        <div className='relative mx-auto flex max-w-7xl flex-row items-center justify-center'>
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className='bg-brandPink text-white rounded-full z-10 p-2 absolute left-0 ml-4 hidden md:block'
+            className='absolute left-0 z-10 ml-4 hidden rounded-full bg-brandPink p-2 text-white md:block'
           >
             <HiChevronLeft className='text-2xl' />
           </button>
@@ -56,9 +56,9 @@ const Testimonial = () => {
           >
             {data.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className='flex justify-center flex-col'>
+                <div className='flex flex-col justify-center'>
                   <blockquote className='mt-8'>
-                    <div className='max-w-sm sm:max-w-md md:max-w-3xl h-80 lg:h-52 px-1.5 mx-auto text-center text-base md:text-lg tracking-tight lg:leading-[1.8rem] font-medium text-gray-900 font-content'>
+                    <div className='font-content mx-auto h-80 max-w-sm px-1.5 text-center text-base font-medium tracking-tight text-gray-900 sm:max-w-md md:max-w-3xl md:text-lg lg:h-52 lg:leading-[1.8rem]'>
                       <div className='flex items-center justify-center'>
                         &quot;{item.review}&quot;
                       </div>
@@ -66,9 +66,9 @@ const Testimonial = () => {
                   </blockquote>
                   <div className='mt-8'>
                     <div className='h-[2px] w-full rounded-lg bg-gradient-to-r from-brandPink via-brandPurple to-purple-800'></div>
-                    <div className='flex pt-4 items-center justify-center gap-3'>
-                      <div className='mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center'>
-                        <div className='font-heading font-semibold text-gray-900 '>
+                    <div className='flex items-center justify-center gap-3 pt-4'>
+                      <div className='mt-3 text-center md:ml-4 md:mt-0 md:flex md:items-center'>
+                        <div className='font-heading font-semibold text-gray-900'>
                           {item.name}
                         </div>
                       </div>
@@ -80,13 +80,13 @@ const Testimonial = () => {
           </Swiper>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className='bg-brandPink text-white rounded-full p-2 z-10 absolute right-0 mr-4 hidden md:block'
+            className='absolute right-0 z-10 mr-4 hidden rounded-full bg-brandPink p-2 text-white md:block'
           >
             <HiChevronRight className='text-2xl' />
           </button>
         </div>
       </div>
-      <div className='text-center lg:text-right pt-4 font-dm py-1 max-w-6xl mx-auto underline text-sm'>
+      <div className='mx-auto max-w-6xl py-1 pt-4 text-center font-dm text-sm underline lg:text-right'>
         Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
       </div>
     </section>

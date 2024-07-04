@@ -1,6 +1,6 @@
-import React from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import MyModal from "./modal";
+import React from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import MyModal from './modal';
 
 const DoctorLayout = ({
   name,
@@ -22,61 +22,61 @@ const DoctorLayout = ({
   };
   return (
     <div>
-      <div className="">
+      <div className=''>
         <div
           onClick={() => handleSetIndex(index)}
-          className=" px-3 pt-4 flex items-center flex-col justify-center border rounded-lg bg-slate-50 hover:shadow-2xl transition duration-200 ease-in-out"
+          className='flex flex-col items-center justify-center rounded-lg border bg-slate-50 px-3 pt-4 transition duration-200 ease-in-out hover:shadow-2xl'
         >
-          <div className="">{imageComponent}</div>
+          <div className=''>{imageComponent}</div>
         </div>
       </div>
       {activeIndex === index && (
         <Transition appear show={isOpen} as={React.Fragment}>
-          <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <Transition.Child
               as={React.Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
+              enter='ease-out duration-300'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
             >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
+              <div className='fixed inset-0 bg-black bg-opacity-25' />
             </Transition.Child>
 
-            <div className="fixed inset-0 flex items-start justify-center overflow-y-auto">
-              <div className="mt-24  p-4 text-center">
+            <div className='fixed inset-0 flex items-start justify-center overflow-y-auto'>
+              <div className='mt-24 p-4 text-center'>
                 <Transition.Child
                   as={React.Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0 scale-95"
-                  enterTo="opacity-100 scale-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95"
+                  enter='ease-out duration-300'
+                  enterFrom='opacity-0 scale-95'
+                  enterTo='opacity-100 scale-100'
+                  leave='ease-in duration-200'
+                  leaveFrom='opacity-100 scale-100'
+                  leaveTo='opacity-0 scale-95'
                 >
-                  <Dialog.Panel className="w-full max-w-7xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className='w-full max-w-7xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                     <Dialog.Title
-                      as="h3"
-                      className="text-2xl font-heading font-bold text-center leading-6 text-brandPink"
+                      as='h3'
+                      className='text-center font-heading text-2xl font-bold leading-6 text-brandPink'
                     >
                       {name}
                     </Dialog.Title>
                     <img
                       src={docpic}
                       alt={name}
-                      className="w-44 h-44 mx-auto m-4 rounded-full"
+                      className='m-4 mx-auto h-44 w-44 rounded-full'
                     />
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">{bio}</p>
+                    <div className='mt-2'>
+                      <p className='text-sm text-gray-500'>{bio}</p>
                     </div>
 
-                    <div className="mt-4 text-center space-y-4">
-                      <MyModal title={"Book an Appointment"} />
+                    <div className='mt-4 space-y-4 text-center'>
+                      <MyModal title={'Book an Appointment'} />
                       <button
-                        type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white"
+                        type='button'
+                        className='inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white'
                         onClick={closeModal}
                       >
                         Close

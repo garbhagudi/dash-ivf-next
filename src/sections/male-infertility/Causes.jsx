@@ -1,21 +1,21 @@
-import React from "react";
-import Image from "components/image";
+import React from 'react';
+import Image from 'components/image';
 
 const Causes = () => {
   return (
-    <div className="max-w-7xl mx-auto px-3">
-      <div className="text-2xl sm:text-4xl font-heading font-bold text-center">
-        What Causes Male Infertility?{" "}
+    <div className='mx-auto max-w-7xl px-3'>
+      <div className='text-center font-heading text-2xl font-bold sm:text-4xl'>
+        What Causes Male Infertility?{' '}
       </div>
-      <div className="text-center py-2">
+      <div className='py-2 text-center'>
         There are many reasons for this and some are discussed below:
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 py-8">
-        <div className="flex items-start justify-center flex-col">
-          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+      <div className='grid grid-cols-1 py-8 lg:grid-cols-2'>
+        <div className='flex flex-col items-start justify-center'>
+          <h3 className='font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Low Sperm Count
           </h3>
-          <p className="mt-4">
+          <p className='mt-4'>
             A man’s sperm count is considered lower than normal if he has fewer
             than 15 million sperm per mL of semen which can decrease the chances
             of conceiving a child simply because of fewer opportunities for
@@ -25,20 +25,20 @@ const Causes = () => {
             depression and obesity.
           </p>
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp"
-            alt="lsc"
-            className="my-4 sm:mt-0 w-72"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp'
+            alt='lsc'
+            className='my-4 w-72 sm:mt-0'
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 py-8">
-        <div className="flex items-start justify-center flex-col">
-          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+      <div className='grid grid-cols-1 py-8 lg:grid-cols-2'>
+        <div className='flex flex-col items-start justify-center'>
+          <h3 className='font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Poor sperm movement
           </h3>
-          <p className="mt-4">
+          <p className='mt-4'>
             Sperm motility refers to the ability of sperm to move efficiently.
             It is important in fertility because sperm need to move rapidly and
             directly through the woman’s reproductive tract to reach and
@@ -47,20 +47,20 @@ const Causes = () => {
             sperm motility.
           </p>
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Poor-sperm-movement-min_flsze3.webp"
-            alt="lsc"
-            className="my-4 sm:mt-0 w-72"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Poor-sperm-movement-min_flsze3.webp'
+            alt='lsc'
+            className='my-4 w-72 sm:mt-0'
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 py-8">
-        <div className="flex items-start flex-col justify-center">
-          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+      <div className='grid grid-cols-1 py-8 lg:grid-cols-2'>
+        <div className='flex flex-col items-start justify-center'>
+          <h3 className='font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Sperm Quality
           </h3>
-          <p className="mt-4">
+          <p className='mt-4'>
             Degradation of sperm DNA affects the health of an embryo’s genetic
             make-up, and can contribute to miscarriage. After men turn 40, the
             quality of their sperm’s genetic material lessens and the new sperm
@@ -71,23 +71,23 @@ const Causes = () => {
             is more likely to make an embryo nonviable.
           </p>
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Sperm-Quality-min_tzt5zb.webp"
-            alt="lsc"
-            className="my-4 sm:mt-0 w-72"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Sperm-Quality-min_tzt5zb.webp'
+            alt='lsc'
+            className='my-4 w-72 sm:mt-0'
           />
         </div>
       </div>
       <div
-        className="grid grid-cols-1 lg:grid-cols-2 py-8 scroll-m-16 lg:scroll-m-28"
-        id="varicocele"
+        className='grid scroll-m-16 grid-cols-1 py-8 lg:scroll-m-28 lg:grid-cols-2'
+        id='varicocele'
       >
-        <div className="flex items-start justify-center flex-col">
-          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+        <div className='flex flex-col items-start justify-center'>
+          <h3 className='font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Structural Issues
           </h3>
-          <p className="mt-4">
+          <p className='mt-4'>
             Anything that clogs the genital tract can prevent the passage of
             sperm. This might be the result of a genetic or congenital defect.
             Infection or inflammation caused by a sexually transmitted disease
@@ -95,23 +95,23 @@ const Causes = () => {
             scar tissue or twisted, bulging veins in the scrotum.
           </p>
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Sperm-Structure-min_eyhwz0.webp"
-            alt="lsc"
-            className="my-4 sm:mt-0 w-3/4"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Sperm-Structure-min_eyhwz0.webp'
+            alt='lsc'
+            className='my-4 w-3/4 sm:mt-0'
           />
         </div>
       </div>
       <div
-        className="grid grid-cols-1 lg:grid-cols-2 py-8 scroll-m-16 lg:scroll-m-28"
-        id="varicocele"
+        className='grid scroll-m-16 grid-cols-1 py-8 lg:scroll-m-28 lg:grid-cols-2'
+        id='varicocele'
       >
-        <div className="flex items-start justify-center flex-col">
-          <h3 className="text-xl sm:text-2xl text-brandPink font-heading font-bold">
+        <div className='flex flex-col items-start justify-center'>
+          <h3 className='font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Varicocele
           </h3>
-          <p className="mt-4">
+          <p className='mt-4'>
             Degradation of sperm DNA affects the health of an embryo’s genetic
             make-up, and can contribute to miscarriage. After men turn 40, the
             quality of their sperm’s genetic material lessens and the new sperm
@@ -122,11 +122,11 @@ const Causes = () => {
             is more likely to make an embryo nonviable.
           </p>
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <Image
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Varicocele-min_twb33l.webp"
-            alt="lsc"
-            className="my-4 sm:mt-0 scale-75"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Varicocele-min_twb33l.webp'
+            alt='lsc'
+            className='my-4 scale-75 sm:mt-0'
           />
         </div>
       </div>

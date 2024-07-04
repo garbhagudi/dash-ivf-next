@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { HiChevronDown } from "react-icons/hi";
+import React, { Fragment } from 'react';
+import { HiChevronDown } from 'react-icons/hi';
 
 const AccordionLayout = ({
   title,
@@ -15,20 +15,20 @@ const AccordionLayout = ({
     <>
       <div
         onClick={() => handleSetIndex(index)}
-        className="flex items-center justify-center w-full px-3 py-1 mt-3 rounded-xl text-brandDark bg-brandDark bg-opacity-20 hover:bg-opacity-80 hover:text-white hover:cursor-pointer"
+        className='mt-3 flex w-full items-center justify-center rounded-xl bg-brandDark bg-opacity-20 px-3 py-1 text-brandDark hover:cursor-pointer hover:bg-opacity-80 hover:text-white'
       >
-        <div className="justify-center font-semibold flexitems-center text-md sm:text-xl ">
-          <div className="font-content">{title}</div>
+        <div className='flexitems-center text-md justify-center font-semibold sm:text-xl'>
+          <div className='font-content'>{title}</div>
         </div>
 
         {activeIndex === index ? (
-          <HiChevronDown className="flex w-4 h-4 rotate-180 item-center" />
+          <HiChevronDown className='item-center flex h-4 w-4 rotate-180' />
         ) : (
-          <HiChevronDown className="flex w-4 h-4 item-center" />
+          <HiChevronDown className='item-center flex h-4 w-4' />
         )}
       </div>
       {activeIndex === index && (
-        <div className="mt-2 text-center text-gray-900 shadow-3xl rounded-2xl font-content">
+        <div className='shadow-3xl font-content mt-2 rounded-2xl text-center text-gray-900'>
           {children}
         </div>
       )}

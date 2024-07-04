@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Content = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 py-20 px-4 gap-x-10">
-        <div className="text-lg lg:text-xl mb-4 flex items-center justify-center">
+    <div className='mx-auto max-w-7xl'>
+      <div className='grid grid-cols-1 gap-x-10 px-4 py-20 lg:grid-cols-2'>
+        <div className='mb-4 flex items-center justify-center text-lg lg:text-xl'>
           At GarbhaGudi, we believe that the cost of the treatment should not
           limit your dream of becoming a parent. Since health insurance does not
           usually cover the costs of treating infertility, treatments are often
@@ -15,11 +15,11 @@ const Content = () => {
           option is that it is given at zero per cent interest with the option
           of repayment in easy installments.
         </div>
-        <div className="flex items-center justify-center">
+        <div className='flex items-center justify-center'>
           <img
-            src="https://media.graphassets.com/DOAD1Xy2S2KJxuKlipGw"
-            alt=""
-            className="rounded-lg"
+            src='https://media.graphassets.com/DOAD1Xy2S2KJxuKlipGw'
+            alt=''
+            className='rounded-lg'
           />
         </div>
       </div>

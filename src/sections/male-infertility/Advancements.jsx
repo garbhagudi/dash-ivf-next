@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
 const Advancements = () => {
   return (
-    <div id="advancements" className="max-w-6xl pb-12 mx-auto px-3 sm:px-0">
-      <h3 className="text-2xl sm:text-4xl font-heading font-bold text-center py-4 md:py-10">
+    <div id='advancements' className='mx-auto max-w-6xl px-3 pb-12 sm:px-0'>
+      <h3 className='py-4 text-center font-heading text-2xl font-bold sm:text-4xl md:py-10'>
         Advancements in the Field of Male Infertility Treatment
       </h3>
-      <div className="">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex items-center justify-center flex-col">
+      <div className=''>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
+          <div className='flex flex-col items-center justify-center'>
             <h4
-              className="text-xl mt-8 sm:text-2xl font-heading font-bold text-center scroll-m-10 md:scroll-m-28"
-              id="casa"
+              className='mt-8 scroll-m-10 text-center font-heading text-xl font-bold sm:text-2xl md:scroll-m-28'
+              id='casa'
             >
               Computer Assisted Sperm Analysis (CASA)
             </h4>
-            <p className="mt-6">
+            <p className='mt-6'>
               A semen analysis is a test performed to screen for male fertility
               problems. The evaluation of sperm cell motility (movement) and
               morphology (shape and size) is an essential parameters in the
@@ -27,24 +27,24 @@ const Advancements = () => {
               treatment can be specifically tailored for male infertility.
             </p>
           </div>
-          <div className="flex items-center justify-center mx-auto lg:ml-10">
+          <div className='mx-auto flex items-center justify-center lg:ml-10'>
             <img
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/CASA-min_kb4aei.jpg"
-              alt="CASA"
-              className="rounded-lg"
+              src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/CASA-min_kb4aei.jpg'
+              alt='CASA'
+              className='rounded-lg'
             />
           </div>
         </div>
       </div>
       <div
-        className="mt-10 scroll-m-10 md:scroll-m-28 grid grid-cols-1 lg:grid-cols-2"
-        id="tesa-pesa"
+        className='mt-10 grid scroll-m-10 grid-cols-1 md:scroll-m-28 lg:grid-cols-2'
+        id='tesa-pesa'
       >
-        <div className="flex items-center justify-center flex-col">
-          <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
+        <div className='flex flex-col items-center justify-center'>
+          <h4 className='text-center font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Percutaneous Epididymal Sperm Aspiration (PESA)
           </h4>
-          <p className="mt-6">
+          <p className='mt-6'>
             PESA is a simple procedure that involves inserting a needle into the
             epididymis to extract fluid that contains sperm. The aspirated fluid
             will then be sent to the laboratory for sperm aspiration. The sperms
@@ -59,19 +59,19 @@ const Advancements = () => {
             as it does not involve any surgical incision.
           </p>
         </div>
-        <div className="w-96 flex items-center justify-center mx-auto">
+        <div className='mx-auto flex w-96 items-center justify-center'>
           <img
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/PESA-min_uoxqt7.webp"
-            alt="pesa"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/PESA-min_uoxqt7.webp'
+            alt='pesa'
           />
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
-        <div className="flex items-center justify-center flex-col">
-          <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
+      <div className='mt-10 grid grid-cols-1 lg:grid-cols-2'>
+        <div className='flex flex-col items-center justify-center'>
+          <h4 className='text-center font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Testicular Sperm Aspiration (TESA)
           </h4>
-          <p className="mt-6">
+          <p className='mt-6'>
             Similar to PESA, testicular sperm aspiration (TESA) is also one of
             the newest methods used in the treatment of infertility in men. This
             technique is widely recommended to men with azoospermia, in which
@@ -97,22 +97,22 @@ const Advancements = () => {
             father. GarbhaGudi IVF Centre – A path from dreams to success.
           </p>
         </div>
-        <div className="w-96 flex items-center justify-center mx-auto">
+        <div className='mx-auto flex w-96 items-center justify-center'>
           <img
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/TESA-min_fep5ds.webp"
-            alt="TESA"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/TESA-min_fep5ds.webp'
+            alt='TESA'
           />
         </div>
       </div>
       <div
-        className="mt-10 grid grid-cols-1 lg:grid-cols-2 scroll-m-28"
-        id="semen-freezing"
+        className='mt-10 grid scroll-m-28 grid-cols-1 lg:grid-cols-2'
+        id='semen-freezing'
       >
-        <div className="flex items-center justify-center flex-col">
-          <h4 className="text-center font-heading text-brandPink text-xl sm:text-2xl font-bold">
+        <div className='flex flex-col items-center justify-center'>
+          <h4 className='text-center font-heading text-xl font-bold text-brandPink sm:text-2xl'>
             Semen Freezing
           </h4>
-          <p className="mt-6">
+          <p className='mt-6'>
             Semen freezing, commonly known as sperm cryopreservation or sperm
             banking/freezing, is a method of preserving sperm cells. It is a
             procedure that uses unique chemical protectants to preserve and
@@ -124,10 +124,10 @@ const Advancements = () => {
             be used in IVF and IUI in the future.
           </p>
         </div>
-        <div className="w-96 flex items-center justify-center mx-auto">
+        <div className='mx-auto flex w-96 items-center justify-center'>
           <img
-            src="https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Semen-Freezing-min_pfcrvp.png"
-            alt="Semen Freezing"
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Semen-Freezing-min_pfcrvp.png'
+            alt='Semen Freezing'
           />
         </div>
       </div>
