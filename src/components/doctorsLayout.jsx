@@ -31,7 +31,7 @@ const DoctorLayout = ({
         </div>
       </div>
       {activeIndex === index && (
-        <Transition appear show={isOpen} as={React.Fragment}>
+        <Transition appear show={isOpen} as={'div'}>
           <Dialog as='div' className='relative z-10' onClose={closeModal}>
             <TransitionChild
               as={'div'}

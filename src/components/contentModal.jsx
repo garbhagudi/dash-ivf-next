@@ -1,5 +1,5 @@
 import { Dialog, Transition, TransitionChild } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
 export default function ContentModal({ title, content, classname, heading }) {

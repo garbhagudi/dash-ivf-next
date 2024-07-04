@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HiChevronDown } from 'react-icons/hi';
 
 const AccordionLayout = ({

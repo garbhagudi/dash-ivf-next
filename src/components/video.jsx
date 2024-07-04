@@ -6,7 +6,7 @@ import {
   Transition,
   TransitionChild,
 } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 const WatchVideo = ({ videoID }) => {
