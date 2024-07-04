@@ -1,5 +1,11 @@
 import React from 'react';
-import { Dialog, Transition, TransitionChild } from '@headlessui/react';
+import {
+  Dialog,
+  DialogTitle,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import MyModal from './modal';
 
 const DoctorLayout = ({
@@ -56,13 +62,13 @@ const DoctorLayout = ({
                   leaveFrom='opacity-100 scale-100'
                   leaveTo='opacity-0 scale-95'
                 >
-                  <Dialog.Panel className='w-full max-w-7xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
-                    <Dialog.Title
+                  <DialogPanel className='w-full max-w-7xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                    <DialogTitle
                       as='h3'
                       className='text-center font-heading text-2xl font-bold leading-6 text-brandPink'
                     >
                       {name}
-                    </Dialog.Title>
+                    </DialogTitle>
                     <img
                       src={docpic}
                       alt={name}
@@ -82,7 +88,7 @@ const DoctorLayout = ({
                         Close
                       </button>
                     </div>
-                  </Dialog.Panel>
+                  </DialogPanel>
                 </TransitionChild>
               </div>
             </div>

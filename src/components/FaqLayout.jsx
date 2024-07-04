@@ -35,6 +35,7 @@ const AccordionLayout = ({
         </div>
       </div>
       <Transition
+        as={'div'}
         show={true}
         enter='transition duration-300 ease-out'
         enterFrom='transform scale-95 opacity-0'

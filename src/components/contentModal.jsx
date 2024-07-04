@@ -1,4 +1,9 @@
-import { Dialog, Transition, TransitionChild } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { useState } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 
@@ -46,7 +51,7 @@ export default function ContentModal({ title, content, classname, heading }) {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='-mt-5 w-full transform cursor-pointer overflow-hidden rounded bg-gray-50 px-3 align-middle opacity-95 shadow-xl transition-all lg:px-6'>
+                <DialogPanel className='-mt-5 w-full transform cursor-pointer overflow-hidden rounded bg-gray-50 px-3 align-middle opacity-95 shadow-xl transition-all lg:px-6'>
                   <div
                     className='mx-auto my-4 flex w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:hidden'
                     onClick={closeModal}
@@ -63,7 +68,7 @@ export default function ContentModal({ title, content, classname, heading }) {
                   >
                     Close
                   </div>
-                </Dialog.Panel>
+                </DialogPanel>
               </TransitionChild>
             </div>
           </div>

@@ -12,7 +12,7 @@
     "@emotion/react": "^11.11.4",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^2.1.1",
-    "@headlessui/tailwindcss": "^0.2.0",
+    "@headlessui/tailwindcss": "^0.2.1",
     "@heroicons/react": "^1.0.6",
     "@types/react": "^18.3.3",
     "framer-motion": "^11.1.7",
