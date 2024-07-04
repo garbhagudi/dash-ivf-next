@@ -29,7 +29,7 @@ const WatchVideo = ({ videoID }) => {
         </button>
       </div>
 
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition appear show={isOpen} as={'div'}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
           <TransitionChild
             as={'div'}

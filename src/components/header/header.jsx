@@ -3,6 +3,7 @@ import {
   Popover,
   PopoverGroup,
   PopoverButton,
+  PopoverPanel,
   Transition,
 } from '@headlessui/react';
 import Image from 'components/image';
@@ -59,7 +60,7 @@ export default function Header() {
       </div>
 
       <Transition
-        as={Fragment}
+        as={'div'}
         enter='duration-200 ease-out'
         enterFrom='opacity-0 scale-95'
         enterTo='opacity-100 scale-100'
@@ -67,7 +68,7 @@ export default function Header() {
         leaveFrom='opacity-100 scale-100'
         leaveTo='opacity-0 scale-95'
       >
-        <Popover.Panel className='absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition duration-500 lg:hidden'>
+        <PopoverPanel className='absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition duration-500 lg:hidden'>
           <div className='divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
             <div className='px-2 pb-2 pt-5'>
               <div className='flex items-center justify-between'>
@@ -84,10 +85,10 @@ export default function Header() {
                       Book Now
                     </div>
                   </Link>
-                  <Popover.Button className='mr-2 inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink'>
+                  <PopoverButton className='mr-2 inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandPink'>
                     <span className='sr-only'>Close menu</span>
                     <HiX className='h-6 w-6' aria-hidden='true' />
-                  </Popover.Button>
+                  </PopoverButton>
                 </div>
               </div>
               <div className='mt-6'>
@@ -203,7 +204,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </Popover.Panel>
+        </PopoverPanel>
       </Transition>
     </Popover>
   );
