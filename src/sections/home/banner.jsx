@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Form from 'components/form';
 import Link from 'next/link';
+import web_banner from 'assets/images/web-banner.png'
 
 const Banner = () => {
   return (
@@ -44,9 +45,7 @@ const Banner = () => {
             *terms and conditions apply
           </div>
           <Image
-            src={
-              'https://res.cloudinary.com/garbhagudiivf/image/upload/v1719824922/July-Month-offer-ads-Source-File_1__n90fcn.webp'
-            }
+            src={web_banner}
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
