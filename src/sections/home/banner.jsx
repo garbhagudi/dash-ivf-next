@@ -22,7 +22,6 @@ const Banner = () => {
               </div>{' '}
               <ol className='mx-auto mt-2 inline-block list-inside list-decimal text-justify'>
                 <li className='mt-0.5 py-0.5 font-bold'>Free Baseline scan</li>{' '}
-                <li className='mt-0.5 py-0.5 font-bold'>Free semen analysis</li>{' '}
                 <li className='mt-0.5 py-0.5 font-bold'>Free Consultation &</li>{' '}
                 <li className='mt-0.5 py-0.5 font-bold'>
                   Free Counseling session
