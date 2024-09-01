@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Form from 'components/form';
 import Link from 'next/link';
-import web_banner from 'assets/images/web-banner.png'
 
 const Banner = () => {
   return (
@@ -16,17 +15,8 @@ const Banner = () => {
               </div>
             </div>
             <div className='font-content px-4 py-2 pb-4 text-xl font-normal'>
-              Offer of the Month : <br />
-              <div className='block rounded-sm bg-brandPink px-1.5 py-0.5 font-bold text-white'>
-                Free Fertility Screening
-              </div>{' '}
-              <ol className='mx-auto mt-2 inline-block list-inside list-decimal text-justify'>
-                <li className='mt-0.5 py-0.5 font-bold'>Free Baseline scan</li>{' '}
-                <li className='mt-0.5 py-0.5 font-bold'>Free Consultation &</li>{' '}
-                <li className='mt-0.5 py-0.5 font-bold'>
-                  Free Counseling session
-                </li>{' '}
-              </ol>
+              Offer of the Month : Upto 50% OFF on Blood Investigations & Free
+              consultations
             </div>
             <Link
               href={'#leadForm'}
@@ -44,11 +34,11 @@ const Banner = () => {
             *terms and conditions apply
           </div>
           <Image
-            src={web_banner}
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
-            className='h-full object-center'
+            className='object-center'
             priority={true}
           />
         </div>
