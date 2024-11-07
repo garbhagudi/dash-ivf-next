@@ -10,13 +10,11 @@ const Banner = () => {
           <div className='items-left flex h-full w-full flex-col justify-center bg-cover bg-no-repeat py-16 text-center lg:py-0'>
             <div className='px-2 pb-4 text-center font-heading text-2xl font-extrabold'>
               <div className='uppercase text-[#e92e64]'>
-                Leading IVF & Fertility clinic in Bangalore: Expert care &
-                Advanced treatments
+                Trusted by over 10,000+ couples across the world for over 14 years...
               </div>
             </div>
             <div className='font-content px-4 py-2 pb-4 text-xl font-normal'>
-              Offer of the Month : Upto 50% OFF on Blood Investigations & Free
-              consultations
+              Offer of the Month : Rs.1,00,000 Discount on IVF Treatment Valid upto 31st December 2024
             </div>
             <Link
               href={'#leadForm'}
@@ -34,7 +32,7 @@ const Banner = () => {
             *terms and conditions apply
           </div>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1725183349/Ads%20and%20offers/Web_Banner-min_rgm3ts.webp'
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1730993605/garbhagudi-ivf/Paripoorna/IVF_Compressed_kmekqi.webp'
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
