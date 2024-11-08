@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
-    "@graphcms/rich-text-react-renderer": "^0.6.1",
+    "@graphcms/rich-text-react-renderer": "^0.6.2",
     "@headlessui/react": "^2.2.0",
     "@headlessui/tailwindcss": "^0.2.1",
     "@heroicons/react": "^1.0.6",
