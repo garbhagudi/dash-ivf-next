@@ -1,8 +1,8 @@
-import DoctorLocation from 'components/cards/doctorLocation';
+// import DoctorLocation from 'components/cards/doctorLocation';
 import React from 'react';
 import LocationHeader from 'components/locationHeader';
 import CallToAction from 'sections/home/subscribe-us';
-import { doctors } from 'components/doctors';
+// import { doctors } from 'components/doctors';
 import Head from 'next/head';
 
 const Marathahalli = () => {
@@ -70,7 +70,7 @@ const Marathahalli = () => {
           '4TH floor, Chirag Towers, 24 & 64, Service Rd, next to Kalamandir, Marathahalli, Bengaluru, Karnataka 560037'
         }
       />
-      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
+      {/* <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
         {doctors.map(
           (items) =>
             items.locations.includes('Marathahalli') && (
@@ -83,7 +83,7 @@ const Marathahalli = () => {
               />
             ),
         )}
-      </div>
+      </div> */}
       <div className='pt-8'>
         <CallToAction />
       </div>
