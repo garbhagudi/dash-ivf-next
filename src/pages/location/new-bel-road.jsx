@@ -1,8 +1,8 @@
-import DoctorLocation from 'components/cards/doctorLocation';
+// import DoctorLocation from 'components/cards/doctorLocation';
 import React from 'react';
 import LocationHeader from 'components/locationHeader';
 import CallToAction from 'sections/home/subscribe-us';
-import { doctors } from 'components/doctors';
+// import { doctors } from 'components/doctors';
 import Head from 'next/head';
 
 const Marathahalli = () => {
@@ -70,7 +70,7 @@ const Marathahalli = () => {
           'No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094'
         }
       />
-      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
+      {/* <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
         {doctors.map(
           (items) =>
             items.locations.includes('RMV Extension') && (
@@ -83,7 +83,7 @@ const Marathahalli = () => {
               />
             ),
         )}
-      </div>
+      </div> */}
       <div className='pt-8'>
         <CallToAction />
       </div>

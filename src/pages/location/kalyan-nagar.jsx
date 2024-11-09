@@ -1,8 +1,8 @@
-import DoctorLocation from 'components/cards/doctorLocation';
+// import DoctorLocation from 'components/cards/doctorLocation';
 import React from 'react';
 import CallToAction from 'sections/home/subscribe-us';
 import LocationHeader from 'components/locationHeader';
-import { doctors } from 'components/doctors';
+// import { doctors } from 'components/doctors';
 import Head from 'next/head';
 
 const KalyanNagar = () => {
@@ -70,7 +70,7 @@ const KalyanNagar = () => {
           'Park Landing, 5AC-709, Dr Puneeth Rajkumar Rd, Balachandra Layout, HRBR Layout 2nd Block, Chelekare, Extension, Bengaluru, Karnataka 560043'
         }
       />
-      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
+      {/* <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
         {doctors.map(
           (items) =>
             items.locations.includes('Kalyan Nagar') && (
@@ -83,7 +83,7 @@ const KalyanNagar = () => {
               />
             ),
         )}
-      </div>
+      </div> */}
       <div className='pt-8'>
         <CallToAction />
       </div>

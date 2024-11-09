@@ -1,6 +1,6 @@
-import DoctorLocation from 'components/cards/doctorLocation';
+// import DoctorLocation from 'components/cards/doctorLocation';
 import React from 'react';
-import { doctors } from 'components/doctors';
+// import { doctors } from 'components/doctors';
 import LocationHeader from 'components/locationHeader';
 import CallToAction from 'sections/home/subscribe-us';
 import Head from 'next/head';
@@ -68,7 +68,7 @@ const ElectronicCity = () => {
           'Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara, Electronic City, Bengaluru, Karnataka 560100'
         }
       />
-      <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
+      {/* <div className='mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3'>
         {doctors.map(
           (items) =>
             items.locations.includes('Electronic City') && (
@@ -81,7 +81,7 @@ const ElectronicCity = () => {
               />
             ),
         )}
-      </div>
+      </div> */}
       <div className='pt-8'>
         <CallToAction />
       </div>

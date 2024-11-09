@@ -23,7 +23,7 @@ const OtherServices = () => {
               </span>
               across the world for over{' '}
               <span className='bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text text-transparent'>
-                13 Years{' '}
+                14 Years{' '}
               </span>
             </h2>
             <div className='pt-8 text-center text-2xl font-bold uppercase underline'>

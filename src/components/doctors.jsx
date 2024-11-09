@@ -7,11 +7,24 @@ export const doctors = [
       url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
     },
     imageAlt: 'Best IVF Specialist in Bangalore - Dr Asha S Vijay',
-    locations:
-      'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar, Marathahalli, RMV Extension, Nagarbhavi',
     bio: {
       raw: {
         children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr Asha S Vijay – A doyen in the field of infertility treatment, a proficient academician, an accomplished entrepreneur and a social visionary !!! ',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-2xl text-brandDark font-semibold my-4 font-heading',
+          },
           {
             type: 'class',
             children: [
@@ -169,6 +182,243 @@ export const doctors = [
             ],
             className: 'text-lg text-brandDark mt-3 font-qs',
           },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Her Journey, Vision and Mission',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-xl text-brandDark font-semibold mt-4 font-heading',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Growing up, Dr Asha always wanted to be a doctor and serve society, and hers is a story of hard work, overcoming stiff challenges and impediments. She has demonstrated a razor-sharp focus on what she wants to achieve and usually aligns it with the greater good.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr Asha graduated in Medicine from the prestigious Bangalore Medical College and started her career with Kidwai Institute of Oncology, Bangalore, as a senior resident doctor. She then completed her post-graduation in Obstetrics & Gynecology in the year 1996 from Bangalore Medical College. Dr Asha set up her own practice with ‘Sannidhi Multi-Specialty Hospital”. Over time, she gained enormous experience in the field of Gynecology & Infertility. Over the course of 15 years of dealing with gynaecology, obstetrics, and fertility issues as part of her practice, she made it her life’s purpose to try and address the scourge of infertility.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'She knew that people with reproductive disorders were clueless about whom to approach and, how to decide about the treatment they have to adopt, how to manage the costs etc. She also noticed that in many cases, the causes of infertility often went undiagnosed, and in most cases, the couples did not get the right treatment at the right time. Even if they did get it, the treatment would be highly expensive with low success rates and barely within the reach of a middle-class family. It was then that Dr Asha, along with a team of first-generation entrepreneurs, decided to approach the problem holistically – to provide world-class treatment and services at affordable costs.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Thus, GarbhaGudi IVF was born!',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Accomplishments',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-2xl text-grey-800 font-semibold my-4 font-heading',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Founder – GarbhaGudi IVF Centre',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-xl text-brandDark font-semibold mt-4 font-heading',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr Asha Vijay founded GarbhaGudi IVF Centre in 2011 to provide holistic world-class fertility treatment at affordable cost. success rate',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Since then, there has been much progress towards this vision because of the founders’ commitment, abilities, and determination to build a strong, value-based organization. GarbhaGudi’s hand-picked team of fertility specialists, includes highly capable gynaecologists, embryologists, technicians, and staff. They work closely with patients to develop a personalized fertility treatment plan and offer fertility treatments like IUI, IVF, donor programs, advanced treatment options like ERA, PGD, sequential transfers and much more. Today, GarbhaGudi’s stands at over 65%, which is one of the highest in the industry.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Founder – GGIRHR (GarbhaGudi Institute of Reproductive Health and Research)',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-xl text-brandDark font-semibold mt-4 font-heading',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr  Asha is the Dean and Scientific Director of GGIRHR, a premier institute in the field of reproductive health training and research',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'This institution provides top-notch training in the field of infertility. It offers a wide choice of online and offline courses which provide phenomenal learning and upskilling opportunities to gynaecologists, medical students, urologists, science graduates, and para-medical staff. GGIRHR’s primary aim has been to share the rich expertise and success in infertility and reproductive technologies of the parent organization – GarbhaGudi IVF.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Founder Trustee of GarbhaGnan Foundation',
+                  },
+                ],
+              },
+            ],
+            className:
+              'text-center text-xl text-brandDark font-semibold mt-4 font-heading',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr Asha is part of the founding trustees of GarbhaGnan Foundation, a trust that is established for fulfilling the corporate social responsibility of the GarbhaGudi group. The aim is to help the economically weaker sections of the society in getting infertility treatment, educate and train doctors practising in rural areas to address infertility in the right way, at the right time.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr Asha Vijay is a guiding light and has illuminated the lives of many childless couples.  She is kind, dedicated and a visionary. She is a true inspiration for all whose lives she touches.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Infinitheism, a well-known school of philosophy, has played a key role in Dr Asha’s life. Mahatria, the founder of Inifinitheism, has been a lighthouse in Dr Asha’s life-giving her the direction, tools and inspiration to make it very big in life, peacefully. The teachings of Mahatria have been the key standpoints in the life of Dr Asha and also of the GarbhaGudi group of companies.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
         ],
       },
     },
@@ -176,7 +426,6 @@ export const doctors = [
   {
     name: 'Dr Aparna N',
     qualification: 'MBBS, DNB, M.Ch Reproductive Medicine and Surgery',
-    locations: 'Kalyan Nagar',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/3Shs19wcRZWACdwng438',
@@ -241,69 +490,22 @@ export const doctors = [
             ],
             className: 'text-lg text-brandDark mt-3 font-qs',
           },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
         ],
       },
     },
   },
-  // {
-  //   name: 'Dr Maheshwari',
-  //   qualification: 'MBBS, MS-OBG, FRM',
-  //   designation: 'Assistant Medical Director, GarbhaGudi ',
-  //   locations: 'Hanumanthanagar',
-  //   image: {
-  //     url: 'https://media.graphassets.com/GyfBXwJQWm5NpDwnKj2X',
-  //   },
-  //   imageAlt: 'Best IVF Doctor in Bangalore - Dr Maheshwari',
-  //   bio: {
-  //     raw: {
-  //       children: [
-  //         {
-  //           type: 'paragraph',
-  //           children: [
-  //             {
-  //               text: 'Dr Maheshwari is a senior fertility consultant associated with GarbhaGudi. Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine. She is recognized for her expertise in advanced infertility treatments and is known for achieving high success rates in IVF, IUI pregnancies, and other such ART procedures. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patients. She is currently the Assistant Medical Director of GarbhaGudi. ',
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   },
-  // },
-  // {
-  //   name: 'Dr Chinmayie R',
-  //   qualification: 'MBBS,MS – OBG, FRM',
-  //   designation: 'Assistant Medical Director, GGIRHR',
-  //   locations: 'Jayanagar',
-  //   image: {
-  //     url: 'https://media.graphassets.com/WYwNXLz4QbCJUrbHOaM3',
-  //   },
-  //   imageAlt: 'IVF Specialist in Bangalore - Dr Chinmayie R',
-  //   bio: {
-  //     raw: {
-  //       children: [
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr Chinmayie is a fertility expert with eight years of experience in gynaecology and infertility. She holds a Fellowship in Reproductive Medicine from RGUHS and has also been active in the world of academia. In addition to her clinical experience, Dr Chinmayie has a compassionate and caring nature. She practices at GarbhaGudi and is recognized for performing Intra-Uterine Insemination (IUI), in In-Vitro Fertilization (IVF), and other such ART techniques. Her mission is to provide the highest medical care to all her patients.  She is currently the assistant medical director of GGIRHR.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-lg text-brandDark mt-3 font-qs',
-  //         },
-  //       ],
-  //     },
-  //   },
-  // },
   {
     name: 'Dr Priyanka Rani',
     qualification: 'MBBS, DNB, FRM',
     designation: 'Fertility Specialist',
-    locations: 'Electronic City',
     image: {
       url: 'https://media.graphassets.com/kBAaY7UgQqefqgAjAvsk',
     },
@@ -325,6 +527,14 @@ export const doctors = [
             ],
             className: 'text-lg text-brandDark mt-3 font-qs',
           },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
         ],
       },
     },
@@ -332,7 +542,6 @@ export const doctors = [
   {
     name: 'Dr Anitha Manoj',
     qualification: 'MBBS, MS (OBG), FMAS, FRM',
-    locations: 'Nagarabhavi',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/7ghdxcJPTZIQvtdFRVWn',
@@ -355,86 +564,21 @@ export const doctors = [
             ],
             className: 'text-lg text-brandDark mt-3 font-qs',
           },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
         ],
       },
     },
   },
-  // {
-  //   name: 'Dr Srinivas B.V',
-  //   qualification: 'MBBS, MS, DNB Urology, FAMH',
-  //   locations: 'Hanumanthanagar, Jayanagar, Electronic City, Kalyan Nagar',
-  //   designation: 'Andrologist and Urologist',
-  //   image: {
-  //     url: 'https://media.graphassets.com/Phqwx5loT1y6F9kyaL3U',
-  //   },
-  //   imageAlt: 'IVF Doctor in Bangalore - Dr Srinivas B.V',
-  //   bio: {
-  //     raw: {
-  //       children: [
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr Srinivas is a renowned and experienced Andrologist rendering his service in Garbhagudi IVF centre as Senior Consultant Andrologist and Urologist. He was awarded as the best budding Andrologist in India during the National Award ceremony conducted by Economic times in the year 2019, he was also awarded as the best budding Andrologist in South India as well during the same event.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-lg text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr Srinivas completed his MBBS from the prestigious BANGALORE MEDICAL COLLEGE. Later on, finished his postgraduate MS (General Surgery) from ST. JOHN’S MEDICAL COLLEGE, BANGALORE. He completed his super-speciality course DNB (Urology)- NATIONAL BOARD OF EXAMINATION, NEW DELHI from NU Hospitals, Bangalore. His pursuit for enhanced learning made him continue the further course on FAMH( Fellowship in Andrology and Men’s Health) from Rajiv Gandhi University Of health sciences. He is the first in Asia to have a university certified course in Andrology and men’s health.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-lg text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr Srinivas has an equal interest in teaching as well. He is an honorary ASSOCIATE PROFESSOR at SHRIDEVI INSTITUTE OF MEDICAL COLLEGE & RESEARCH CENTER, Tumkur. He is also associated with teaching students in Embryology courses at Bangalore University. He also takes regular classes to gynaecologists at various fellowship programmes under RGUHS.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-lg text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr Srinivas is presently practising at various IVF and fertility centres in Bangalore. He has also published many articles in international journals. His depth of involvement in research is evident with his journal published in the International Journal of Infertility and Fetal Medicine which studied the effect of mobile phone radiation on semen parameters. His original article on Hypogonadism and Varicocele was published in the International Journal of Endocrinology and was appreciated worldwide and was even included in American Urology Association guidelines. To his credit, Dr Srinivas has won a lot of prizes at various national and state conferences and CMEs. He is also credited with being an author of 3 chapters of the standard Fertility Textbook. He has given several TV interviews on reproductive health and fertility issues.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-lg text-brandDark mt-3 font-qs',
-  //         },
-  //       ],
-  //     },
-  //   },
-  // },
   {
     name: 'Dr Shubha L ',
     qualification: 'MBBS, MS(OBG), DNB, FRM ',
-    locations: 'Electronic City',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/9uwozE6LSTe53RQfEb9t',
@@ -457,6 +601,14 @@ export const doctors = [
             ],
             className: 'text-lg text-brandDark my-4 font-content',
           },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '\n',
+              },
+            ],
+          },
         ],
       },
     },
@@ -464,7 +616,6 @@ export const doctors = [
   {
     name: 'Dr Deepthi Venkatesh ',
     qualification: 'MBBS, MS - FRM ',
-    locations: 'Jayanagar',
     designation: 'Fertility Specialist ',
     image: {
       url: 'https://media.graphassets.com/kKgEEz2Q4GLNK4wMPIOW',
@@ -510,14 +661,6 @@ export const doctors = [
             className: ' text-lg text-brandDark my-4 font-content',
           },
           {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-          {
             type: 'class',
             children: [
               {
@@ -536,67 +679,8 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr Varsha Patil',
-    qualification: 'MBBS, DGO, DNB(OBG), FRM',
-    locations: 'Marathahalli',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/9wZTO3YiTUGgeDs55xrp',
-    },
-    imageAlt: 'Best IVF Specialist in Bangalore - Dr Varsha Patil',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Varsha Patil is a highly skilled Fertility Specialist, dedicated to providing the best treatment for her patients. She received her MBBS degree from M.R. Medical College, Gulbarga and completed her DGO from Mysore Medical College and Research Institute, Mysore. Dr Varsha Patil also completed her DNB(OBG) through the National Board of Examinations from Bangalore Baptist hospital, Bangalore.',
-                  },
-                ],
-              },
-            ],
-            className: 'font-content py-3 text-lg text-brandDark',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Her desire to specialize further in infertility led her to complete her Fellowship in Reproductive Medicine from the International Institute for training and research in reproductive health (IIRRH) - Milann, Bangalore. She further honed her skills by completing Ultrasound Training at Karthik Ultrasound Scan Centre under the tutelage of Dr Chaithra Ganesh. She also completed a 6-month ICOG certification from FOGSI in Reproductive Medicine.',
-                  },
-                ],
-              },
-            ],
-            className: 'font-content py-3 text-lg text-brandDark',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Varsha Patil is known for her patience, knowledge, and hard work. She believes in a scientific approach to fertility treatment in an ethical manner. She is well-versed in various ART procedures like IVF, IUI, etc. and provides counselling to her patients with dedication. Her goal is to ensure that every patient receives personalized care and treatment that is tailored to their individual needs. Dr Varsha Patil is a skilled professional committed to helping her patients achieve their dream of having a child.',
-                  },
-                ],
-              },
-            ],
-            className: 'font-content py-3 text-lg text-brandDark',
-          },
-        ],
-      },
-    },
-  },
-  {
     name: 'Dr Nikitha Murthy B.S',
     qualification: 'MBBS, MS-OBG, DNB, FRM',
-    locations: 'RMV Extension',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/aoSy8u3ORwaJng9CVqGY',
@@ -665,70 +749,401 @@ export const doctors = [
       },
     },
   },
-  // {
-  //   name: 'Dr Lakshmi Priya ',
-  //   qualification: 'MBBS, MS (OBG), FRM',
-  //   designation: 'Fertility Specialist',
-  //   locations: 'Hanumanthanagar',
-  //   image: {
-  //     url: 'https://media.graphassets.com/gc7HQh4RmZKof4PbunIA',
-  //   },
-  //   imageAlt: 'Best IVF Doctor in Bangalore - Dr Lakshmi Priya',
-  //   bio: {
-  //     raw: {
-  //       children: [
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist dedicated to helping patients overcome infertility challenges and achieve their dream of starting a family. She holds an MBBS degree and completed her M.S. in Obstetrics and Gynecology, specializing in reproductive medicine. Dr. Priya has also obtained FRM (Fellowship in Reproductive Medicine) certification, further enhancing her expertise in the field.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-base text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'With over five years of experience in Obstetrics, Gynecology, and fertility treatments, Dr. Lakshmi Priya has developed a deep understanding of the complexities of infertility and the various challenges faced by patients. She has received comprehensive training in ultrasound for IUI and IVF procedures, oocyte retrieval, and embryo transfers. Her areas of interest encompass addressing issues related to poor responders, PCOS, recurrent implantation failure, and recurrent pregnancy loss. ',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-base text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'class',
-  //           children: [
-  //             {
-  //               type: 'paragraph',
-  //               children: [
-  //                 {
-  //                   text: 'Dr. Lakshmi Priya is a highly qualified and experienced Fertility Specialist who combines her expertise in reproductive medicine with a compassionate approach to patient care. With her extensive knowledge, advanced skills, and dedication to helping couples overcome infertility, she strives to make a meaningful difference in their lives and bring happiness to their journey toward parenthood.',
-  //                 },
-  //               ],
-  //             },
-  //           ],
-  //           className: 'text-base text-brandDark mt-3 font-qs',
-  //         },
-  //         {
-  //           type: 'paragraph',
-  //           children: [
-  //             {
-  //               text: '',
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   },
-  // },
+  {
+    name: 'Dr Pavithra ',
+    qualification: 'MBBS, MS OBG , FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/4UJ5nbpQYCRSGSuKrWJq',
+    },
+    imageAlt: null,
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Pavithra M is an accomplished Infertility Specialist with a passion for helping couples overcome reproductive challenges. She completed her MBBS degree from VIMS & RC and pursued her MS in Obstetrics and Gynecology from the same institution. Dr. Pavithra M's dedication to advancing her knowledge and skills led her to complete a Fellowship in Reproductive Medicine from Dr. Patil's Fertility and Endoscopy Clinic.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'With a solid academic background, Dr. Pavithra M brings a wealth of expertise to her practice. She has two years of experience in the field of infertility, during which she has worked tirelessly to support her patients in their journey toward parenthood. Dr. Pavithra M is well-versed in the latest advancements in Assisted Reproductive Technology (ART), including procedures like IVF and IUI.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Known for her patience, compassion, and scientific approach, Dr. Pavithra M ensures that each patient receives personalized care tailored to their specific needs. She believes in providing ethical and evidence-based treatments while maintaining open and transparent communication with her patients. Dr. Pavithra M is also experienced in providing counseling to couples, offering them the emotional support they need during their fertility journey.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Pavithra M's goal is to empower her patients and guide them through the complex process of fertility treatment. With her expertise, dedication, and commitment, she strives to help couples achieve their dream of starting a family.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. S R Raajam Murali ',
+    qualification: 'MBBS MD FRM',
+    designation: 'Senior Fertility Specialist ',
+    image: {
+      url: 'https://media.graphassets.com/f3PATdnoQ7ieg28F3gzr',
+    },
+    imageAlt: null,
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. SR Raajam Murali, MBBS, MD FIRM, is a distinguished Senior Fertility Consultant with a wealth of experience and expertise in reproductive medicine. With a strong academic background and extensive practical knowledge, Dr. SR Raajam Murali has made significant contributions to the field, particularly in the study of Gestational Trophoblastic Diseases.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Throughout her illustrious career, Dr. SR Raajam Murali has presented groundbreaking research at prestigious conferences such as AICOG and FOGSI, earning recognition for her work on topics ranging from rare clinical cases to the timing of intrauterine insemination (IUI) in relation to ovulation. Her dedication to advancing reproductive medicine is evident in her numerous publications, including articles in reputable journals like Perinatology-Journal of Perinatal and Neonatal Care and Minerva Ginecol.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. SR Raajam Murali's expertise extends to various areas of assisted reproductive technology (ART), including in vitro maturation (IVM) and ovarian stimulation. Her commitment to staying at the forefront of her field is demonstrated by her contributions to academic literature and her participation in Good Clinical Practice (GCP) training.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. SR Raajam Murali's passion for improving fertility outcomes, coupled with her profound knowledge and dedication, makes her a leading authority in the field of reproductive medicine.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. Vandana Ramanathan',
+    qualification: 'MBBS, DNB(OBG) FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/fA2XgIz7QGwFJ2vomjQM',
+    },
+    imageAlt: 'Dr. Vandana Ramanathan',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Meet Dr. Vandana, a dedicated Fertility Specialist committed to helping couples realize their dream of parenthood. Dr. Vandana obtained her MBBS from MIMER Medical College, followed by an MS (D.N.B) from K.G Hospital & Post Graduate Medical Institute, and a Fellowship in Reproductive Medicine from CRAFT Hospital & Research Centre.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'With extensive experience spanning various prestigious institutions such as Garbhagudi IVF Centre, Oasis Fertility Centre, and The Origin International Fertility Centre,Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility. ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Vandana's passion for advancing fertility care is evident through her academic achievements, including a thesis on maternal age impact and presentations at prestigious conferences. She has also contributed to medical literature with upcoming publications.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patients through their fertility journey with empathy and expertise.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr Shweta Ashok Harnal',
+    qualification: 'MBBS, MS, FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/FZxTAyTHWVjXmjNdaLvg',
+    },
+    imageAlt: null,
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Shweta Ashok Harnal is a highly skilled fertility specialist with a background in obstetrics and gynecology. She completed her MBBS from Shri B M Patil Medical College, Bijapur in 2012, and furthered her education with an MS in Obstetrics and Gynecology from Assam Medical College & Hospital, Assam in 2018. Dr Shweta's expertise was enriched through a Fellowship in Reproductive Medicine at GarbhaGudi Institute of Reproductive Medicine & Research Private Limited in 2024. With five years of practical experience, she is dedicated to helping couples navigate the complexities of infertility.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Specializing in assisted reproductive technologies (ART), including Intra-Uterine Insemination (IUI) and In-Vitro Fertilization (IVF), as well as possessing expertise in advanced laparoscopy and Hysterolaparoscopy. Dr. Shweta provides personalized care tailored to each patient's needs. Her compassionate approach and commitment to patient well-being have earned her praise from those under her care. Dr. Shweta remains at the forefront of her field, continuously updating her knowledge and skills to provide the highest level of expertise to her patients.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Driven by a passion for helping couples achieve their dream of parenthood, Dr. Shweta Ashok Harnal stands as a trusted fertility specialist, offering compassionate care and personalized treatment plans. With her extensive education, specialized training, and dedication to ongoing learning, she strives to provide the best possible outcomes for her patients on their journey toward parenthood. ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. Kavya Krishnappa',
+    qualification: 'MBBS MS(OBG) FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/NXpMCWvIS7mccxbZr4hy',
+    },
+    imageAlt: 'Dr. Kavya Krishnappa',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Kavya Krishnappa is a distinguished Obstetrician, Gynecologist, and Infertility Specialist with over a decade of experience dedicated to helping couples achieve their dream of parenthood. With a profound passion for Infertility, she pursued specialized training, including a Fellowship in Reproductive Medicine from Craft Hospital and Research Centre, Kerala, and a Diploma in Advanced Reproductive Medicine from Kiel's University, Germany.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Kavya Krishnappa completed her MBBS from Jawaharlal Nehru Medical College, Belgaum, and MS in Obstetrics and Gynecology from JJM Medical College, Davangere, Dr.Kavya Krishnappa has garnered expertise in various reproductive procedures, including Laparoscopy, Hysteroscopy, and Ultrasonography. Her commitment to staying abreast of the latest advancements in Reproductive Medicine is reflected in her evidence-based practice and active participation in national conferences.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: "Dr. Kavya Krishnappa's areas of expertise encompass a wide range of conditions such as Decreased Ovarian Reserve, Endometriosis, PCOS, Recurrent Pregnancy Loss, and Male infertility. Moreover, she offers innovative treatments like Regenerative medicine, including Intra-ovarian PRP and Stem Cell therapy. Patients commend her approachable nature and multilingual proficiency in Kannada, Telugu, Tamil, English, Hindi, and Malayalam, which fosters a comfortable environment for communication and care.",
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'With a vision to facilitate safe and affordable treatments for infertile couples, Dr. Kavya Krishnappa strives to realize the joy of parenthood for her patients while maintaining the highest standards of medical excellence and compassion.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
 ];
