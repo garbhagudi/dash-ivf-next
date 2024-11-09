@@ -1,3 +1,4 @@
+import Header from 'components/header/header';
 import dynamic from 'next/dynamic';
 import RelatedSearches from 'sections/home/relatedSearches';
 const Banner = dynamic(() => import('sections/home/banner'));
@@ -64,6 +65,7 @@ export default function Home() {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
+      <Header />
       <Banner />
       <OtherServices />
       <TreatmentOptions branch={'GarbhaGudi IVF Centre'} />
