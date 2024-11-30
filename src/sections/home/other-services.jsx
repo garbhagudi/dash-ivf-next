@@ -14,6 +14,7 @@ const OtherServices = () => {
           <h1>Best IVF & Fertility centre in Bangalore</h1> by multiple
           organisations.
         </div>
+        <Features />
         <div className='mx-auto max-w-4xl pb-12'>
           <div className='mx-auto max-w-3xl py-6 text-center font-bold md:py-10'>
             <h2 className='mb-4 text-3xl md:text-5xl'>
@@ -52,10 +53,6 @@ const OtherServices = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className='mt-10'>
-          <Features />
         </div>
       </div>
     </div>
