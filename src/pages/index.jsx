@@ -72,7 +72,6 @@ export default function Home() {
       <TeamSection />
       <Faq />
       <Testimonials />
-      <Calculators />
       <Cta />
       <RelatedSearches />
     </div>
