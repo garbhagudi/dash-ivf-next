@@ -43,6 +43,7 @@ const Banner = () => {
             alt='Start IVF from as low as 90K'
             className='object-center'
             priority={true}
+            quality={75}
           />
         </div>
         <div className='order-2 bg-[#005e7e]' id='leadForm'>

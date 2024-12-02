@@ -22,6 +22,7 @@ const TreatmentOptions = ({ branch }) => {
                 height={80}
                 className='w-20'
                 loading='lazy'
+                quality={75}
               />
             </div>
             <div className='flex flex-col items-center justify-center py-2'>
