@@ -74,6 +74,7 @@ export default function TeamSection() {
                         width={220}
                         height={220}
                         loading='lazy'
+                        quality={10}
                       />
                     </div>
                     <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
