@@ -1,22 +1,29 @@
 import Header from 'components/header/header';
 import dynamic from 'next/dynamic';
 import RelatedSearches from 'sections/home/relatedSearches';
-const Banner = dynamic(() => import('sections/home/banner'));
-const OtherServices = dynamic(() => import('sections/home/other-services'));
-const Calculators = dynamic(() => import('sections/home/calculators'));
-const TeamSection = dynamic(() => import('sections/home/our-team'));
-const Testimonials = dynamic(() => import('sections/home/testimonials'));
-const Cta = dynamic(() => import('sections/home/cta'));
+
+const Banner = dynamic(() => import('sections/home/banner'), { ssr: true });
+const OtherServices = dynamic(() => import('sections/home/other-services'), {
+  ssr: false,
+});
+const TeamSection = dynamic(() => import('sections/home/our-team'), {
+  ssr: false,
+});
+const Testimonials = dynamic(() => import('sections/home/testimonials'), {
+  ssr: false,
+});
+const Cta = dynamic(() => import('sections/home/cta'), { ssr: false });
 const Head = dynamic(() => import('next/head'));
-const TreatmentOptions = dynamic(() => import('sections/home/treatment'));
-const Faq = dynamic(() => import('sections/home/faq'));
+const TreatmentOptions = dynamic(() => import('sections/home/treatment'), {
+  ssr: false,
+});
+const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 
 export default function Home() {
   return (
     <div>
       <Head>
         {/* Primary Tags */}
-
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India
@@ -31,7 +38,6 @@ export default function Home() {
         />
 
         {/* Open Graph / Facebook */}
-
         <meta
           property='og:title'
           content='GarbhaGudi IVF Centre | Best IVF & Fertility Hospital in India'
@@ -48,8 +54,7 @@ export default function Home() {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
 
-        {/* Twitter*/}
-
+        {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@garbhagudiivf' />
         <meta
@@ -65,10 +70,11 @@ export default function Home() {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
       </Head>
+
       <Header />
       <Banner />
       <OtherServices />
-      <TreatmentOptions branch={'GarbhaGudi IVF Centre'} />
+      <TreatmentOptions branch='GarbhaGudi IVF Centre' />
       <TeamSection />
       <Faq />
       <Testimonials />
