@@ -1,4 +1,6 @@
-import Features from './features';
+import dynamic from 'next/dynamic';
+
+const Features = dynamic(() => import('./features'), { ssr: false });
 
 const OtherServices = () => {
   return (
