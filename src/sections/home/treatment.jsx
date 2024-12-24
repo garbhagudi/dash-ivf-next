@@ -93,7 +93,7 @@ const Data = [
   },
   {
     id: 6,
-    treatent: 'Gyanec Treatments',
+    treatent: 'Gynecological Treatments',
     desc: "Say goodbye to gynecological problems with GarbhaGudi's comprehensive range of treatments, specially designed to keep you healthy and fertile.",
     link: '/contact.html',
     image:
