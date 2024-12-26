@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   images: {
     dangerouslyAllowSVG: true,
-    productionBrowserSourceMaps: true,
     unoptimized: true,
     domains: [
       'res.cloudinary.com',
