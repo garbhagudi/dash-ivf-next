@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from 'react-icons/md';
-import Image from 'next/image';
 import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -54,13 +53,13 @@ const Testimonial = () => {
             loop={true}
             pagination={true}
           >
-            {data.map((item) => (
-              <SwiperSlide key={item.id}>
+            {data?.map((item) => (
+              <SwiperSlide key={item?.id}>
                 <div className='flex flex-col justify-center'>
                   <blockquote className='mt-8'>
                     <div className='font-content mx-auto h-80 max-w-sm px-1.5 text-center text-base font-medium tracking-tight text-gray-900 sm:max-w-md md:max-w-3xl md:text-lg lg:h-52 lg:leading-[1.8rem]'>
                       <div className='flex items-center justify-center'>
-                        &quot;{item.review}&quot;
+                        &quot;{item?.review}&quot;
                       </div>
                     </div>
                   </blockquote>
@@ -69,7 +68,7 @@ const Testimonial = () => {
                     <div className='flex items-center justify-center gap-3 pt-4'>
                       <div className='mt-3 text-center md:ml-4 md:mt-0 md:flex md:items-center'>
                         <div className='font-heading font-semibold text-gray-900'>
-                          {item.name}
+                          {item?.name}
                         </div>
                       </div>
                     </div>
@@ -79,7 +78,7 @@ const Testimonial = () => {
             ))}
           </Swiper>
           <button
-            onClick={() => swiperRef.current?.slideNext()}
+            onClick={() => swiperRef?.current?.slideNext()}
             className='absolute right-0 z-10 mr-4 hidden rounded-full bg-brandPink p-2 text-white md:block'
           >
             <HiChevronRight className='text-2xl' />

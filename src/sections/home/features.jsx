@@ -104,21 +104,21 @@ const Features = () => {
         </div>
         <div className='mt-8'>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-            {features.map((feature) => (
-              <div className='group mx-auto max-w-sm pt-3' key={feature.id}>
+            {features?.map((feature) => (
+              <div className='group mx-auto max-w-sm pt-3' key={feature?.id}>
                 <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
                   <div className='grid grid-cols-6'>
                     <div className='col-span-1 flex h-full items-center justify-center bg-brandPink'>
                       <div className='text-4xl font-bold text-white'>
-                        {feature.icon}
+                        {feature?.icon}
                       </div>
                     </div>
                     <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-brandPink px-2'>
                       <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
-                        {feature.name}
+                        {feature?.name}
                       </h3>
                       <p className='font-content mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
-                        {feature.content}
+                        {feature?.content}
                       </p>
                     </div>
                   </div>

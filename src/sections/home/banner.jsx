@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Form from 'components/form';
+import { Form } from 'components/form';
 import Link from 'next/link';
 
 const Banner = () => {
@@ -25,7 +25,7 @@ const Banner = () => {
               href={'tel:+919108910832'}
               className='mx-auto w-fit rounded-lg bg-brandPink px-5 py-1.5 text-base font-bold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark'
             >
-              <button>Call us for Appointment</button>
+              Call us for Appointment
             </Link>
           </div>
           <div className='font-content -mt-5 hidden text-xs font-medium lg:block'>
@@ -49,7 +49,7 @@ const Banner = () => {
         </div>
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            <Form />
+            {Form ? <Form /> : <p>Loading...</p>}
           </div>
         </div>
       </div>

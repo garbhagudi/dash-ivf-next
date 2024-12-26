@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
+    productionBrowserSourceMaps: true,
     unoptimized: true,
     domains: [
       'res.cloudinary.com',

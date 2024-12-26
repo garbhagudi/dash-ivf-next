@@ -9,7 +9,7 @@ const TreatmentOptions = ({ branch }) => {
         Infertility Treatment Options at {branch}
       </h2>
       <div className='grid grid-cols-2 gap-x-3 gap-y-16 px-2 pb-10 lg:grid-cols-4 lg:gap-16 lg:pb-16'>
-        {Data.map((items) => (
+        {Data?.map((items) => (
           <div
             key={items?.id}
             className='font-content flex flex-col items-center justify-between rounded-2xl border border-brandPink4 transition-all duration-300 hover:-translate-y-2 hover:bg-pink-50 hover:shadow-2xl'

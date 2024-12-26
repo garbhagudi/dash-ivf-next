@@ -45,7 +45,7 @@ export default function TeamSection() {
 
         <div className='mx-auto flex max-w-7xl flex-row items-center justify-center'>
           <button
-            onClick={() => swiperRef.current?.slidePrev()}
+            onClick={() => swiperRef?.current?.slidePrev()}
             className='absolute left-0 z-10 ml-4 rounded-full bg-brandPink p-2 text-white lg:left-10'
           >
             <HiChevronLeft className='text-2xl' />
@@ -94,8 +94,8 @@ export default function TeamSection() {
                         classname={
                           'font-content text-brandPink text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandPurpleDark border-2 border-brandPurpleDark hover:border-brandPurpleDark transition-all duration-300 ease-linear'
                         }
-                        content={item.bio.raw.children}
-                        heading={item.name}
+                        content={item?.bio?.raw?.children}
+                        heading={item?.name}
                       />
                     </div>
                   </div>
@@ -104,7 +104,7 @@ export default function TeamSection() {
             })}
           </Swiper>
           <button
-            onClick={() => swiperRef.current?.slideNext()}
+            onClick={() => swiperRef?.current?.slideNext()}
             className='absolute right-0 z-10 mr-4 rounded-full bg-brandPink p-2 text-white lg:right-10'
           >
             <HiChevronRight className='text-2xl' />
