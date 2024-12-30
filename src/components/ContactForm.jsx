@@ -291,9 +291,7 @@ const ContactForm = () => {
               onChange={handleChange}
             >
               <option value='-None-'>-None-</option>
-              <option value='Online' selected>
-                Online
-              </option>
+              <option value='Online'>Online</option>
               <option value='Media'>Media</option>
               <option value='Listing'>Listing</option>
               <option value='Referred'>Referral</option>
@@ -319,7 +317,7 @@ const ContactForm = () => {
               onChange={handleChange}
             >
               <option value='-None-'>-None-</option>
-              <option selected value='GarbhaGudi&#x20;Website'>
+              <option value='GarbhaGudi&#x20;Website'>
                 GarbhaGudi Website
               </option>
               <option value='Bagepalli'>Bagepalli</option>
