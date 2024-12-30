@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { Form } from 'components/form';
+import Form from 'components/form';
 import Link from 'next/link';
+import ContactForm from 'components/ContactForm';
 
 const Banner = () => {
   return (
@@ -49,7 +50,8 @@ const Banner = () => {
         </div>
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            {Form ? <Form /> : <p>Loading...</p>}
+            {/* {Form ? <Form /> : <p>Loading...</p>} */}
+            <ContactForm />
           </div>
         </div>
       </div>
