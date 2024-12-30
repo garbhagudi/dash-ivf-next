@@ -4,7 +4,7 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { useRef } from 'react';
 import ContentModal from 'components/contentModal';
 

@@ -1,4 +1,7 @@
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+
+// https://creator.zoho.com/api/v2/GG CRM Admin/Leads/form/https://crm.zoho.com/crm/org674009382/settings/webform/3505252000130723002/preview?module=Leads
 
 const ContactForm = () => {
   const [formValues, setFormValues] = useState({
@@ -8,6 +11,30 @@ const ContactForm = () => {
     description: 'Values',
     leadSource: 'Online',
     leadSubSource: 'GarbhaGudi Website',
+    xnQsjsdp:
+      '17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2',
+    xmIwtLD: '61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdeb',
+    actionType: 'TGVhZHM=',
+    returnURL: 'http://localhost:3001/thank-you.html',
+    ldeskuid: '',
+    LDTuvid: '',
+    'g-recaptcha-response':
+      '03AFcWeA4sNHmeraNGOP9YwhbRe_DLXtKNhWLJ8jRXPixYk4FDSjzLSIdLqnJQV7Xu2FDRZda7LPSU_gqOES0_qvOKb6aLUo45acrWVixhPqZBhYbFqeekwSacIsAAnTzUgFrH3-5isdIeMWXjPs8BwiRZkg4cFB5T3YvDXdPCX_vK10-372xSFx39oRkUOY1fgNgck7ziUHx1a4_l7OsjauC_rrivLYVyQ_PWN_9JNMYxTjI-CIRfcKTiQ6DCENSC0LorM11jKk7d7hXtCvAuTtIgVny024e9eYiwIDXHyxOBJLrBnbLAQ71xgac38cpi139Xe7VKv0seBp6CVx_MCw7kssJcxnpL3yLkmgFoVK_aEOQyI65EMPDvWjCChW4UfY-x1smg3G7uKp_UMGu9ECoOseGxB9Y2r7tSKdLakr57EzVprppfuioJ3rqf9hhFebgjrlpRndWr0-kEPPCmE3vKoW1Zekiv0g9l207VSuwHXm0CaDz3kicb9ymExkS88lXYZfxvmPqpWlSTx40Svo1pZ6NYWeIX4JYOgACBvaQZjJ36KlnxcB8OLi3iKKzHza4BuTJswFtQlpTgUP4cciIPsZ7FXVYYyH5mMGqtW1z_4lM1dZr3FBr823hY5bELOp6UpZRlzClA8UjHs0FpPkTR1BqTZGg1cy3BjWNLhd9aDNquiYWTuouKcgOV5PmT6meXxbsot-BjkFMS4O5dbMNFsgNWOyb5k__Wt-sePpoNFmNlMVMA0sAHuTiGsJvyc6yC8vY1ei_BwQAHBtaaUuJ7cOD9XunrAoo48w-kQg99TgizIxFsTzvrMjRxcGFUmHA-NvEvynp_raiowfajYvlP4N1PXSGTYJvhEbZ9nG1xSlt7D6JUo7mnlpl4rxhZFqrlN7g3dMux',
+    te: true,
+    wbfIanaFrD:
+      '1a2d04c0edfaa2fa255fdd38ff927ec8c3a33a5c3938035bf9e8ffee1e2037ba020bc10f892c307635ef860ab9466524',
+    rw: '52aca069f057e866511f1cba61d9c8f074fb9583be025b7962fd699bb74a2dda',
+    la: '97c77c5fe11cf425ecd8cd6c405de8754cd01f3db9b4e38bb33f6b755c17eff1',
+    eo: 'd34470f0f355fd1d68da392c11ff06fff2839af0c2410b2942e365d0992ce4a8',
+    webform_analytics_submission: {
+      total_time: 18554,
+      field_analytics: [
+        { field_name: 'Last Name', correction: 0, total_time: 4480 },
+        { field_name: 'Phone', correction: 0, total_time: 3161 },
+        { field_name: 'Email', correction: 0, total_time: 6192 },
+      ],
+      pwXsmCp: 'http://localhost:3001',
+    },
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -43,140 +70,51 @@ const ContactForm = () => {
     setCaptchaVerified(true);
     setCaptchaError(false);
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (!checkMandatory()) return;
+    const leadData = {
+      Last_Name: formValues.lastName,
+      Email: formValues.email,
+      Mobile: formValues.phone,
+    };
+    // const leadData = {
+    //   First_Name: 'John',
+    //   Last_Name: 'Doe',
+    //   Email: 'john.doe@example.com',
+    //   Mobile: '1234567890',
+    // };
 
-    // Send the form data to the server
-    // fetch('https://crm.zoho.com/crm/WebToLeadForm', {
-    //   method: 'POST',
-    //   body: formData,
-    // })
-    //   .then((response) => {
-    //     if (response.ok) {
-    //       console.log('Form submitted successfully');
-    //       // Handle success (e.g., show a success message)
-    //     } else {
-    //       console.error('Form submission failed');
-    //       // Handle error (e.g., show an error message)
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //     // Handle network error
-    //   });
+    const accessToken =
+      '1000.b9206cc79bc24f2b127b4f7ff04f0776.c0c6a92c5519b1261ab022be0f564059';
+    const apiUrl = 'https://www.zohoapis.com/crm/v2/WebToLeadForm';
 
-    // const ZOHO_API_URL = 'https://www.zohoapis.com/crm/v2/Leads';
-    // const accessToken = process.env.NEXT_ACCESS_TOKEN;
-
-    // // console.log(ZOHO_API_URL, accessToken, formValues);
-
-    // try {
-    //   const response = await fetch(ZOHO_API_URL, {
-    //     method: 'POST',
-    //     headers: {
-    //       Authorization: `Bearer 1000.4b66b8d29e3d6e6fa663a28b9a92f716.0eb0c70dfd4bd8b00519211734d6acca`,
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ data: [formValues] }),
-    //   });
-    //   console.log(response);
-
-    //   if (!response.ok) {
-    //     // Handle HTTP errors
-    //     const errorData = await response.json();
-    //     throw new Error(
-    //       `Error creating lead: ${response.status} ${response.statusText}, ${JSON.stringify(
-    //         errorData,
-    //       )}`,
-    //     );
-    //   }
-
-    //   const result = await response.json();
-    //   console.log('Lead created successfully:', result);
-    //   return result;
-    // } catch (error) {
-    //   console.error('Error creating lead:', error.message);
-    // }
-
-    // Function to get access token
-    const getAccessToken = async () => {
-      const url = 'https://accounts.zoho.com/oauth/v2/token';
-      const params = new URLSearchParams({
-        client_id: '1000.1NXDSVHWUSWV1BVHBEVXU1QMZBZATH', // Your Zoho client ID
-        client_secret: '1451825b7e7ba454bb1697e81bdf2491f1066bf6d6', // Your Zoho client secret
-        grant_type: 'authorization_code', // Grant type for client credentials flow
+    try {
+      // Create FormData
+      const formData = new FormData();
+      Object.entries(leadData).forEach(([key, value]) => {
+        formData.append(key, value);
       });
 
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          body: params,
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-        });
+      // Fetch request
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          Authorization: `Zoho-oauthtoken ${accessToken}`,
+        },
+        body: formData,
+      });
 
-        const data = await response.json();
-        console.log('1- access token', data);
-
-        if (response.ok) {
-          return data.access_token; // Return the access token
-        } else {
-          throw new Error(
-            data.error_description || 'Failed to get access token',
-          );
-        }
-      } catch (error) {
-        console.error('Error obtaining access token:', error);
-        throw error;
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(`Error: ${errorData.message}`);
       }
-    };
 
-    // Function to create a lead in Zoho CRM
-    const createLead = async () => {
-      try {
-        // Get the access token
-        const accessToken = await getAccessToken();
-
-        // Prepare the lead data
-        const leadData = {
-          data: [
-            {
-              'Last Name': formValues.lastName,
-              Email: formValues.email,
-              Phone: formValues.phone,
-            },
-          ],
-        };
-
-        // Make the API call to create a lead
-        const response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
-          method: 'POST',
-          headers: {
-            Authorization: `Zoho-oauthtoken ${accessToken}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(leadData),
-        });
-
-        const data = await response.json();
-        console.log('2-completed', data);
-
-        if (response.ok) {
-          console.log('Lead Created:', data);
-        } else {
-          console.error('Error creating lead:', data);
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
-
-    // Call the function to create a lead
-    createLead();
+      const responseData = await response.json();
+      console.log('Record created successfully:', responseData);
+    } catch (error) {
+      console.error('Error creating record:', error.message || error);
+    }
   };
 
   const checkMandatory = () => {

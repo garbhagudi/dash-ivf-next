@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from 'react-icons/md';
-import { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
