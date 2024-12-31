@@ -50,12 +50,12 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.lastName || !formData.phone) {
+    if (!formData['Last Name'] || !formData['Phone']) {
       alert('Full Name and Phone cannot be empty.');
       return;
     }
 
-    if (formData.email && !validateEmail(formData.email)) {
+    if (formData['email'] && !validateEmail(formData['email'])) {
       alert('Please enter a valid email address.');
       return;
     }
