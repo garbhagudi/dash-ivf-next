@@ -7,12 +7,12 @@ const RelatedSearches = () => {
         Related Searches
       </h2>
       <ul className='flex flex-wrap items-center justify-center gap-2 text-center'>
-        {list.map((item) => (
+        {list?.map((item) => (
           <li
-            key={item.id}
+            key={item?.id}
             className='cursor-default rounded-lg bg-brandPurple px-3 py-1.5 text-white hover:bg-brandPurpleDark'
           >
-            {item.item}
+            {item?.item}
           </li>
         ))}
       </ul>

@@ -10,15 +10,15 @@ const Faq = () => {
       </h2>
       <div className='px-3 pb-10 lg:pb-16'>
         <div className='mx-auto mt-10 flex max-w-6xl flex-col justify-center'>
-          {data.map((items) => (
+          {data?.map((items) => (
             <AccordionLayout
-              title={items.Question}
-              key={items.id}
-              index={items.id}
+              title={items?.Question}
+              key={items?.id}
+              index={items?.id}
               activeIndex={activeIndex1}
               setActiveIndex={setActiveIndex1}
             >
-              {items.Answer}
+              {items?.Answer}
             </AccordionLayout>
           ))}
         </div>

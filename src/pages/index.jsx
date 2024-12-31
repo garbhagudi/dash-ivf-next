@@ -69,6 +69,19 @@ export default function Home() {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
+
+        {/* Load Google reCAPTCHA */}
+        {/* <script
+          src='https://www.google.com/recaptcha/api.js'
+          async
+          defer
+        ></script> */}
+
+        {/* Load Zoho Analytics */}
+        {/* <script
+          src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a'
+          async
+        ></script> */}
       </Head>
 
       <Header />
