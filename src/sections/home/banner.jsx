@@ -21,13 +21,13 @@ const Banner = () => {
                   Exclusive Package at ₹ 1111
                 </strong>
               </p>
-              <ul className='mt-4 flex flex-col items-start'>
-                <li> 1. Free consultation</li>
-                <li>2. Free SA</li>
-                <li>3. Free Ultrasound</li>
-                <li>4. Free AFC Scan</li>
+              <ul className='mt-2 flex flex-col items-start'>
+                <li>1. Free consultation</li>
+                <li>2. AFC Scan</li>
+                <li>3. Ultrasound Scan</li>
+                <li>4. Semen Analysis</li>
               </ul>
-              <p className='mt-4'>Offer validity : 31st March 2025</p>
+              <p className='mt-2'>Offer validity : 31st March 2025</p>
             </div>
 
             <Link
@@ -46,7 +46,7 @@ const Banner = () => {
             *terms and conditions apply
           </div>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735630393/Exclusive_package_2025.jpg'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735634760/01_Jan_25_-_Offer_-_Ads_-_LP_fwbkhw.jpg'
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
