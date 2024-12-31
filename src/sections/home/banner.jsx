@@ -14,13 +14,22 @@ const Banner = () => {
                 Advanced treatments
               </h1>
             </div>
-            <div className='font-content px-4 py-2 pb-4 text-xl font-normal'>
-              Offer of the Month :{' '}
-              <strong className='text-brandPurpleDark'>
-                Rs.1,00,000 Discount on IVF Treatment.
-              </strong>{' '}
-              Valid upto 31st December 2024
+            <div className='font-content flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
+              <p>
+                Offer of the Month:{' '}
+                <strong className='text-brandPurpleDark'>
+                  Exclusive Package at ₹ 1111
+                </strong>
+              </p>
+              <ul className='mt-4 flex flex-col items-start'>
+                <li> 1. Free consultation</li>
+                <li>2. Free SA</li>
+                <li>3. Free Ultrasound</li>
+                <li>4. Free AFC Scan</li>
+              </ul>
+              <p className='mt-4'>Offer validity : 31st March 2025</p>
             </div>
+
             <Link
               href={'tel:+919108910832'}
               className='mx-auto w-fit rounded-lg bg-brandPink px-5 py-1.5 text-base font-bold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark'
@@ -37,7 +46,7 @@ const Banner = () => {
             *terms and conditions apply
           </div>
           <Image
-            src='https://res.cloudinary.com/garbhagudi/image/upload/v1730993605/garbhagudi-ivf/Paripoorna/IVF_Compressed_kmekqi.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735630393/Exclusive_package_2025.jpg'
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
