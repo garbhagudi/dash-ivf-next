@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -11,7 +12,28 @@ const ContactForm = () => {
     Description: 'Values',
     'Lead Source': 'Online',
     'Lead SubSource': 'GarbhaGudi Website',
+    UTM_Campaign: 'check1',
+    Campaign: 'check2',
+    Ad_Campaign_Name: 'check3',
   });
+
+  const router = useRouter();
+  const [utmData, setUtmData] = useState({
+    utm_campaign: '',
+    utm_source: '',
+  });
+
+  useEffect(() => {
+    if (router.query) {
+      const { utm_campaign, utm_source } = router.query;
+      setUtmData({
+        utm_campaign: utm_campaign || '',
+        utm_source: utm_source || '',
+      });
+    }
+  }, [router.query]);
+
+  console.log('utm check', utmData);
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
@@ -167,9 +189,28 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <input type='hidden' name='Description' value={formData.description} />
-        <input type='hidden' name='Lead Source' value={formData.leadSource} />
-        <input type='hidden' name='LEADCF6' value={formData.leadSubSource} />
+        <input type='hidden' name='Description' value={formData.Description} />
+        <input
+          type='hidden'
+          name='Lead Source'
+          value={formData['Lead Source']}
+        />
+        <input
+          type='hidden'
+          name='LEADCF6'
+          value={formData['Lead SubSource']}
+        />
+        <input
+          type='hidden'
+          name='Ad_Campaign_Name'
+          value={formData['Ad_Campaign_Name']}
+        />
+        <input
+          type='hidden'
+          name='UTM_Campaign'
+          value={formData['UTM_Campaign']}
+        />
+        <input type='hidden' name='Campaign' value={formData['Campaign']} />
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
