@@ -4,7 +4,7 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { useRef } from 'react';
 import ContentModal from 'components/contentModal';
 
@@ -61,47 +61,48 @@ export default function TeamSection() {
             pagination={true}
             autoplay
           >
-            {doctors.map((item) => {
-              return (
-                <SwiperSlide key={item.name}>
-                  <div className='mb-2 rounded-xl transition-all duration-500'>
-                    <div className='relative mx-auto h-52 w-52'>
-                      <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
-                      <Image
-                        className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
-                        src={item?.image.url}
-                        alt={item?.imageAlt || item?.name}
-                        width={220}
-                        height={220}
-                        loading='lazy'
-                        quality={10}
-                      />
-                    </div>
-                    <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
-                      <div className='h-24 space-y-1 text-lg font-medium leading-6'>
-                        <h3 className='font-content text-brandDark'>
-                          {item?.name}
-                        </h3>
-                        <p className='font-content text-xs text-brandPurpleDark'>
-                          {item?.qualification}
-                        </p>
-                        <p className='font-content pb-2 text-sm text-brandPink'>
-                          {item?.designation}
-                        </p>
+            {doctors &&
+              doctors?.map((item) => {
+                return (
+                  <SwiperSlide key={item.name}>
+                    <div className='mb-2 rounded-xl transition-all duration-500'>
+                      <div className='relative mx-auto h-52 w-52'>
+                        <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
+                        <Image
+                          className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
+                          src={item?.image.url}
+                          alt={item?.imageAlt || item?.name}
+                          width={220}
+                          height={220}
+                          loading='lazy'
+                          quality={10}
+                        />
                       </div>
-                      <ContentModal
-                        title={'Read More'}
-                        classname={
-                          'font-content text-brandPink text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandPurpleDark border-2 border-brandPurpleDark hover:border-brandPurpleDark transition-all duration-300 ease-linear'
-                        }
-                        content={item?.bio?.raw?.children}
-                        heading={item?.name}
-                      />
+                      <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
+                        <div className='h-24 space-y-1 text-lg font-medium leading-6'>
+                          <h3 className='font-content text-brandDark'>
+                            {item?.name}
+                          </h3>
+                          <p className='font-content text-xs text-brandPurpleDark'>
+                            {item?.qualification}
+                          </p>
+                          <p className='font-content pb-2 text-sm text-brandPink'>
+                            {item?.designation}
+                          </p>
+                        </div>
+                        <ContentModal
+                          title={'Read More'}
+                          classname={
+                            'font-content text-brandPink text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandPurpleDark border-2 border-brandPurpleDark hover:border-brandPurpleDark transition-all duration-300 ease-linear'
+                          }
+                          content={item?.bio?.raw?.children}
+                          heading={item?.name}
+                        />
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
           <button
             onClick={() => swiperRef?.current?.slideNext()}
