@@ -5,12 +5,12 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    lastName: '',
-    phone: '',
-    email: '',
-    description: 'Values',
-    leadSource: 'Online',
-    leadSubSource: 'GarbhaGudi Website',
+    'Last Name': '',
+    Phone: '',
+    Email: '',
+    Description: 'Values',
+    'Lead Source': 'Online',
+    'Lead SubSource': 'GarbhaGudi Website',
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -74,12 +74,12 @@ const ContactForm = () => {
 
   const handleReset = () => {
     setFormData({
-      lastName: '',
-      phone: '',
-      email: '',
-      description: 'Values',
-      leadSource: 'Online',
-      leadSubSource: 'GarbhaGudi Website',
+      'Last Name': '',
+      Phone: '',
+      Email: '',
+      Description: 'Values',
+      'Lead Source': 'Online',
+      'Lead SubSource': 'GarbhaGudi Website',
     });
     setCaptchaVerified(false);
   };
@@ -132,7 +132,7 @@ const ContactForm = () => {
               type='text'
               id='Last_Name'
               placeholder='Full Name'
-              name='lastName'
+              name='Last Name'
               value={formData.lastName}
               onChange={handleInputChange}
               maxLength='80'
@@ -145,7 +145,7 @@ const ContactForm = () => {
               type='text'
               id='Phone'
               placeholder='Phone'
-              name='phone'
+              name='Phone'
               value={formData.phone}
               onChange={handleInputChange}
               maxLength='30'
@@ -158,7 +158,7 @@ const ContactForm = () => {
               type='text'
               id='Email'
               placeholder='Email'
-              name='email'
+              name='Email'
               value={formData.email}
               onChange={handleInputChange}
               maxLength='100'
@@ -167,8 +167,8 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <input type='hidden' name='description' value={formData.description} />
-        <input type='hidden' name='leadSource' value={formData.leadSource} />
+        <input type='hidden' name='Description' value={formData.description} />
+        <input type='hidden' name='Lead Source' value={formData.leadSource} />
         <input type='hidden' name='LEADCF6' value={formData.leadSubSource} />
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
