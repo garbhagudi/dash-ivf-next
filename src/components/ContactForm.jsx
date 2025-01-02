@@ -12,25 +12,19 @@ const ContactForm = () => {
     Description: 'Values',
     'Lead Source': 'Online',
     'Lead SubSource': 'GarbhaGudi Website',
+    'UTM Campign': '',
   });
 
   const router = useRouter();
-  const [utmData, setUtmData] = useState({
-    utm_campaign: '',
-    utm_source: '',
-  });
 
   useEffect(() => {
     if (router.query) {
-      const { utm_campaign, utm_source } = router.query;
-      setUtmData({
-        utm_campaign: utm_campaign || '',
-        utm_source: utm_source || '',
-      });
+      const { utm_campaign } = router.query;
+      setFormData({ 'UTM Campign': utm_campaign });
     }
   }, [router.query]);
 
-  console.log('utm check', utmData);
+  console.log('utm check', formData['UTM Campign']);
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
@@ -46,6 +40,26 @@ const ContactForm = () => {
       })(window,document,'script','dataLayer','GTM-5T77DVZ');
     `;
     document.head.appendChild(script);
+
+    // Create and append the analytics script
+    const analyticScript = document.createElement('script');
+    analyticScript.id = 'wf_anal';
+    analyticScript.src =
+      'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a';
+    analyticScript.async = true;
+
+    // Only append if the script doesn't already exist
+    if (!document.getElementById('wf_anal')) {
+      document.body.appendChild(analyticScript);
+    }
+
+    // Cleanup function
+    return () => {
+      const existingScript = document.getElementById('wf_anal');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
   }, []);
 
   const handleInputChange = (e) => {
@@ -92,14 +106,7 @@ const ContactForm = () => {
   };
 
   const handleReset = () => {
-    setFormData({
-      'Last Name': '',
-      Phone: '',
-      Email: '',
-      Description: 'Values',
-      'Lead Source': 'Online',
-      'Lead SubSource': 'GarbhaGudi Website',
-    });
+    setFormData({});
     setCaptchaVerified(false);
   };
 
@@ -197,9 +204,8 @@ const ContactForm = () => {
           name='LEADCF6'
           value={formData['Lead SubSource']}
         />
-        {utmData.utm_campaign && (
-          <input type='hidden' name='LEADCF122' value={utmData.utm_campaign} />
-        )}
+
+        <input type='hidden' name='LEADCF122' value={formData['UTM Campign']} />
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
