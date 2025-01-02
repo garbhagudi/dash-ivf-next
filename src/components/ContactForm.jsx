@@ -12,9 +12,6 @@ const ContactForm = () => {
     Description: 'Values',
     'Lead Source': 'Online',
     'Lead SubSource': 'GarbhaGudi Website',
-    UTM_Campaign: 'check1',
-    Campaign: 'check2',
-    Ad_Campaign_Name: 'check3',
   });
 
   const router = useRouter();
@@ -200,17 +197,7 @@ const ContactForm = () => {
           name='LEADCF6'
           value={formData['Lead SubSource']}
         />
-        <input
-          type='hidden'
-          name='Ad_Campaign_Name'
-          value={formData['Ad_Campaign_Name']}
-        />
-        <input
-          type='hidden'
-          name='UTM_Campaign'
-          value={formData['UTM_Campaign']}
-        />
-        <input type='hidden' name='Campaign' value={formData['Campaign']} />
+        <input type='hidden' name='LEADCF122' value={utmData.utm_campaign} />
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
