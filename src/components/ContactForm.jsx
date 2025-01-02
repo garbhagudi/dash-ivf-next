@@ -197,7 +197,9 @@ const ContactForm = () => {
           name='LEADCF6'
           value={formData['Lead SubSource']}
         />
-        <input type='hidden' name='LEADCF122' value={utmData.utm_campaign} />
+        {utmData.utm_campaign && (
+          <input type='hidden' name='LEADCF122' value={utmData.utm_campaign} />
+        )}
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
