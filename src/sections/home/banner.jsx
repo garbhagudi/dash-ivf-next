@@ -44,7 +44,7 @@ const Banner = () => {
 
         <div className='order-1 flex items-center justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735718686/01_Jan_25_-_Offer_-_Ads_-_LP_-updated_bknoyy.jpg'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735896812/01_Jan_25-Offer-Ads-LP_1_qhgbtt.png'
             width={1920}
             height={1080}
             alt='Start IVF from as low as 90K'
