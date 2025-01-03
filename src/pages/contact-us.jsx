@@ -1,13 +1,23 @@
+import ContactForm from 'components/ContactForm';
+import Image from 'next/image';
+
 const IndexPage = () => {
   return (
-    <>
-      <iframe
-        src='/contact.html'
-        className='mx-auto h-[90vh] w-screen max-w-lg'
-      >
-        Loading…
-      </iframe>
-    </>
+    <div className='flex flex-col items-center justify-center'>
+      <div className='h-full w-full bg-[#005e7e] pb-2 lg:h-1/2 lg:w-1/2'>
+        <Image
+          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735814525/Image_Artboard_copy_3_ic0le8.jpg'
+          width={1920}
+          height={1080}
+          alt='book an appointment form'
+          className='h-full w-full object-center'
+          priority={true}
+          quality={75}
+          loading='eager'
+        />
+        <ContactForm title='Book Your Appointment' />
+      </div>
+    </div>
   );
 };
 

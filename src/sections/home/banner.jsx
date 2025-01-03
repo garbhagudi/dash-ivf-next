@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Form from 'components/form';
 import Link from 'next/link';
+import ContactForm from 'components/ContactForm';
 
 const Banner = () => {
   return (
@@ -36,7 +37,7 @@ const Banner = () => {
               Call us for Appointment
             </Link>
           </div>
-          <div className='font-content -mt-5 hidden text-xs font-medium lg:block'>
+          <div className='font-content mt-3 hidden text-xs font-medium lg:block'>
             *terms and conditions apply
           </div>
         </div>
@@ -56,7 +57,8 @@ const Banner = () => {
 
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            {Form ? <Form /> : <p>Loading...</p>}
+            {/* {Form ? <Form /> : <p>Loading...</p>} */}
+            <ContactForm title='Book Your Appointment' />
           </div>
         </div>
       </div>
