@@ -1,18 +1,8 @@
 import { useState } from 'react';
-import {
-  Popover,
-  PopoverGroup,
-  PopoverButton,
-  PopoverPanel,
-  Transition,
-} from '@headlessui/react';
+import { Popover } from '@headlessui/react';
 import Image from 'components/image';
-import { HiMenu, HiX } from 'react-icons/hi';
 import Link from 'next/link';
-import { Treatments, Services, Locations, About } from './popover';
-import { mobileMenu } from './menuData';
-import MyModal from 'components/modal';
-import AccordionLayout from './mobileMenuLauout';
+import Popup from 'components/Popup';
 
 export default function Header() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -35,13 +25,17 @@ export default function Header() {
 
           <div className='flex items-center justify-end md:flex-1 lg:w-0'>
             <div className='hidden md:flex'>
-              <MyModal title={'Book Appointment'} />
+              <Popup
+                title={'Book Appointment'}
+                btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+              />
             </div>
-            <Link href='/contact.html'>
-              <div className='ml-8 flex items-center justify-end whitespace-nowrap rounded-md border border-transparent bg-brandPink3 px-3 py-1 text-sm font-medium text-white shadow-sm hover:bg-brandPink md:hidden'>
-                Book Now
-              </div>
-            </Link>
+            <div className='md:hidden'>
+              <Popup
+                title={'Book Now'}
+                btnClassName='ml-8 flex items-center justify-end whitespace-nowrap rounded-md border border-transparent bg-brandPink3 px-3 py-1 text-sm font-medium text-white shadow-sm hover:bg-brandPink'
+              />
+            </div>
           </div>
         </div>
       </div>
