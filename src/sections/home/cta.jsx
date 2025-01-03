@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Popup from 'components/Popup';
 
 const Cta = () => {
   return (
@@ -11,16 +12,12 @@ const Cta = () => {
             Let us take your dreams forward...
           </span>
         </h2>
-        <div className='flex flex-col items-center justify-center space-x-3 text-right lg:flex-row'>
-          <button className='mx-auto mt-5 block rounded-lg bg-brandPink px-6 py-3 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block lg:mt-0'>
-            <Link
-              href='#leadForm'
-              className='font-content scroll-smooth text-lg'
-            >
-              Book an Appointment
-            </Link>
-          </button>
-          <button className='mx-auto mt-5 block rounded-lg bg-brandPink px-6 py-3 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block lg:mt-0'>
+        <div className='flex flex-col items-center justify-center lg:flex-row'>
+          <Popup
+            title={'Book an Appointment'}
+            btnClassName='mx-auto mt-5 block rounded-lg bg-brandPink px-6 py-3 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block lg:mt-0 text-lg'
+          />
+          <button className='mx-auto mt-5 block rounded-lg bg-brandPink px-6 py-3 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block lg:ml-2 lg:mt-0'>
             <Link
               href='tel:+919108910832'
               className='font-content scroll-smooth text-lg'

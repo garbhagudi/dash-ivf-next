@@ -4,18 +4,16 @@ import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const ContactForm = () => {
+const ContactForm = ({ title }) => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     'Last Name': '',
     Phone: '',
     Email: '',
-    Description: 'Values',
     'Lead Source': 'Online',
     'Lead SubSource': 'GarbhaGudi Website',
     'UTM Campign': '',
   });
-
-  const router = useRouter();
 
   useEffect(() => {
     if (router.query) {
@@ -23,9 +21,6 @@ const ContactForm = () => {
       setFormData({ 'UTM Campign': utm_campaign });
     }
   }, [router.query]);
-
-  console.log('utm check', formData['UTM Campign']);
-
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
 
@@ -75,7 +70,6 @@ const ContactForm = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
-
   const handleCaptchaChange = (value) => {
     setCaptchaVerified(!!value);
     setShowCaptchaError(false);
@@ -93,22 +87,18 @@ const ContactForm = () => {
       alert('Please enter a valid email address.');
       return;
     }
-
     if (!captchaVerified) {
       setShowCaptchaError(true);
       return;
     }
 
-    // Submit form to Zoho CRM
-    console.log('started');
-
     e.target.submit();
-    console.log('submitted');
   };
 
   const handleReset = () => {
     setFormData({});
     setCaptchaVerified(false);
+    setShowCaptchaError(false);
   };
 
   return (
@@ -161,48 +151,66 @@ const ContactForm = () => {
           name='LDTuvid'
         ></input>
 
-        <div className='py-8 text-center font-[B612] text-xl font-bold text-gray-100 lg:text-2xl'>
-          Consult our Fertility Experts
+        <div className='pb-12 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
+          {title}
         </div>
 
-        <div className='mx-auto space-y-3 px-3'>
-          <div className='mx-auto max-w-sm'>
-            <input
-              type='text'
-              id='Last_Name'
-              placeholder='Full Name'
-              name='Last Name'
-              value={formData.lastName}
-              onChange={handleInputChange}
-              maxLength='80'
-              className='mt-2 w-full rounded-md border border-[#ea4b6a] px-3 py-1 font-[nunito] text-base focus:border-[#ea4b6a] focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] active:outline-none lg:mt-0'
-            />
+        <div className='mx-auto flex flex-col space-y-2 px-3'>
+          <div className='mx-auto max-w-sm rounded-md'>
+            <label
+              htmlFor='Last Name'
+              className='flex items-center justify-start'
+            >
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+                Full Name
+              </span>
+              <input
+                type='text'
+                id='Last_Name'
+                placeholder='Enter full name'
+                name='Last Name'
+                value={formData['Last Name']}
+                onChange={handleInputChange}
+                maxLength='80'
+                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+              />
+            </label>
           </div>
 
           <div className='mx-auto max-w-sm'>
-            <input
-              type='text'
-              id='Phone'
-              placeholder='Phone'
-              name='Phone'
-              value={formData.phone}
-              onChange={handleInputChange}
-              maxLength='30'
-              className='mt-2 w-full rounded-md border border-[#ea4b6a] px-3 py-1 font-[nunito] text-base focus:border-[#ea4b6a] focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] active:outline-none lg:mt-0'
-            />
+            <label htmlFor='Phone' className='flex items-center justify-start'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+                Phone
+              </span>
+              <input
+                type='text'
+                id='Phone'
+                placeholder='Enter phone number'
+                name='Phone'
+                value={formData['Phone']}
+                onChange={handleInputChange}
+                maxLength='30'
+                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+              />
+            </label>
           </div>
 
           <div className='mx-auto max-w-sm'>
-            <input
-              type='text'
-              id='Email'
-              placeholder='Email'
-              name='Email'
-              value={formData.email}
-              onChange={handleInputChange}
-              maxLength='100'
-              className='mt-2 w-full rounded-md border border-[#ea4b6a] px-3 py-1 font-[nunito] text-base focus:border-[#ea4b6a] focus:outline-none focus:ring-2 focus:ring-[#ea4b6a] active:outline-none lg:mt-0'
-            />
+            <label htmlFor='Email' className='flex items-center justify-start'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+                Email
+              </span>
+              <input
+                type='email'
+                id='Email'
+                placeholder='Enter email'
+                name='Email'
+                value={formData['Email']}
+                onChange={handleInputChange}
+                maxLength='100'
+                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+              />
+            </label>
           </div>
         </div>
 
@@ -217,35 +225,34 @@ const ContactForm = () => {
           name='LEADCF6'
           value={formData['Lead SubSource']}
         />
-
         <input type='hidden' name='LEADCF122' value={formData['UTM Campign']} />
 
-        <div className='zcwf_row flex flex-col items-center justify-center pt-6'>
+        <div className='zcwf_row relative flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
             <ReCAPTCHA
               sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
               onChange={handleCaptchaChange}
             />
             {showCaptchaError && (
-              <div className='mt-2 text-sm text-red-500'>
+              <div className='absolute -bottom-5 text-sm text-red-500'>
                 Please complete the captcha verification.
               </div>
             )}
           </div>
         </div>
-
         <div className='zcwf_row'>
-          <div className='zcwf_col_fld mt-4 flex items-center justify-center space-x-3'>
+          <div className='zcwf_col_fld mb-6 mt-8 flex items-center justify-center space-x-4'>
             <button
               type='submit'
-              className='formsubmit zcwf_button rounded-lg bg-[#ea4b6a] px-3 py-2 font-[nunito] text-base font-bold text-white hover:bg-[#ee6f88] focus:outline-none active:outline-none'
+              className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88] focus:outline-none focus:ring focus:ring-pink-300 md:w-auto lg:w-28'
             >
               Submit
             </button>
+
             <button
-              type='button'
+              type='reset'
               onClick={handleReset}
-              className='zcwf_button rounded-lg bg-[#ea4b6a] px-3 py-2 font-[nunito] text-base font-bold text-white hover:bg-[#ee6f88] focus:outline-none active:outline-none'
+              className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88] focus:outline-none focus:ring focus:ring-pink-300 md:w-auto lg:w-28'
             >
               Reset
             </button>
