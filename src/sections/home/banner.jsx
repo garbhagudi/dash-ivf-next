@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Form from 'components/form';
 import Link from 'next/link';
 import ContactForm from 'components/ContactForm';
 
@@ -23,7 +22,7 @@ const Banner = () => {
                 </strong>
               </p>
               <ul className='mt-2 flex flex-col items-start space-y-1'>
-                <li>1. Free consultation</li>
+                <li>1. Consultation</li>
                 <li>2. AFC Scan</li>
                 <li>3. Ultrasound Scan</li>
                 <li>4. Semen Analysis</li>
