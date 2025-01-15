@@ -16,7 +16,7 @@ const LocationHeader = ({ branch, mapLink, address, phone }) => {
             <iframe
               src={mapLink}
               allowfullscreen='True'
-              loading='lazy'
+              loading=''
               className='aspect-square w-full rounded-xl border-2 sm:w-1/2 lg:w-11/12'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>

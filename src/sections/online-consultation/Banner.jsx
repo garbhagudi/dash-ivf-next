@@ -50,6 +50,7 @@ export default function Banner() {
           <Image
             src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,h_700,w_800/v1634546628/garbhagudi-ivf/Banners/phonee_fgv31d.webp'
             alt='banner'
+            loading='lazy'
           />
         </Box>
       </Container>

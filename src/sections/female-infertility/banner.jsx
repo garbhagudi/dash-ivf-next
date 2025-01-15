@@ -21,6 +21,7 @@ const Banner = () => {
           <Image
             src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_1280/v1637220770/garbhagudi-ivf/Banners/Young_married_couple_consulting_doctor_svxszn.webp'
             alt='banner'
+            loading='lazy'
           />
         </Flex>
       </Container>

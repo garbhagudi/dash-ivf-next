@@ -30,6 +30,7 @@ const Causes = () => {
             src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Low-Sperm-Count-min_a4b8ts.webp'
             alt='lsc'
             className='my-4 w-72 sm:mt-0'
+            loading='lazy'
           />
         </div>
       </div>
@@ -52,6 +53,7 @@ const Causes = () => {
             src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Poor-sperm-movement-min_flsze3.webp'
             alt='lsc'
             className='my-4 w-72 sm:mt-0'
+            loading='lazy'
           />
         </div>
       </div>
@@ -76,6 +78,7 @@ const Causes = () => {
             src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Sperm-Quality-min_tzt5zb.webp'
             alt='lsc'
             className='my-4 w-72 sm:mt-0'
+            loading='lazy'
           />
         </div>
       </div>
@@ -100,6 +103,7 @@ const Causes = () => {
             src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Sperm-Structure-min_eyhwz0.webp'
             alt='lsc'
             className='my-4 w-3/4 sm:mt-0'
+            loading='lazy'
           />
         </div>
       </div>
@@ -127,6 +131,7 @@ const Causes = () => {
             src='https://res.cloudinary.com/garbhagudi/image/upload/v1665994575/garbhagudi-ivf/New%20Website/Varicocele-min_twb33l.webp'
             alt='lsc'
             className='my-4 scale-75 sm:mt-0'
+            loading='lazy'
           />
         </div>
       </div>

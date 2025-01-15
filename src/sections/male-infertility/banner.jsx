@@ -24,6 +24,7 @@ const Banner = () => {
               src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780493/garbhagudi-ivf/Banners/maleInf_umubsg.webp'
               alt='illustration'
               style={{ marginTop: '30px' }}
+              loading='lazy'
             />
           </Box>
         </Box>

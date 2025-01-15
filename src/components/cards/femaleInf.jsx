@@ -6,7 +6,7 @@ const FemaleInfCard = ({ data, ...props }) => {
   return (
     <Box sx={styles.feature} {...props}>
       <figure>
-        <Image src={data?.icon} alt={data?.title} />
+        <Image src={data?.icon} alt={data?.title} loading='lazy' />
       </figure>
       <Box>
         <Heading as='h4'>{data?.title}</Heading>

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Header from 'components/header/header';
 import dynamic from 'next/dynamic';
 import RelatedSearches from 'sections/home/relatedSearches';
@@ -20,6 +21,43 @@ const TreatmentOptions = dynamic(() => import('sections/home/treatment'), {
 const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
 
 export default function Home() {
+  const lazyComponents = [
+    { key: 'Banner', component: <Banner /> },
+    { key: 'other-services', component: <OtherServices /> },
+    {
+      key: 'treatment-options',
+      component: <TreatmentOptions branch='GarbhaGudi IVF Centre' />,
+    },
+    { key: 'team-section', component: <TeamSection /> },
+    { key: 'faq', component: <Faq /> },
+    { key: 'testimonials', component: <Testimonials /> },
+    { key: 'cta', component: <Cta /> },
+    { key: 'related-searches', component: <RelatedSearches /> },
+  ];
+
+  const [visibleIndex, setVisibleIndex] = useState(0);
+
+  const scrollHandler = () => {
+    const scrollPosition = window.scrollY;
+    const threshold = 500;
+
+    const nextComponentPosition = visibleIndex * threshold;
+
+    if (scrollPosition > nextComponentPosition) {
+      setVisibleIndex((prevIndex) =>
+        prevIndex < lazyComponents.length - 1 ? prevIndex + 1 : prevIndex,
+      );
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+    };
+  }, [visibleIndex]);
+
   return (
     <div>
       <Head>
@@ -69,30 +107,12 @@ export default function Home() {
           name='twitter:image'
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1643802154/SEO/OG_images_Home_pct8yc.jpg'
         />
-
-        {/* Load Google reCAPTCHA */}
-        {/* <script
-          src='https://www.google.com/recaptcha/api.js'
-          async
-          defer
-        ></script> */}
-
-        {/* Load Zoho Analytics */}
-        {/* <script
-          src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=61bba0cba3c8377c6a5dd6a5d5678a36b0c0af8489b97450a29344c095d7fdebgid17730c4e7d6442ffce68a431e6d754713eb2b12b9ac7777050f2773ec54ed2d2gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a'
-          async
-        ></script> */}
       </Head>
 
       <Header />
-      <Banner />
-      <OtherServices />
-      <TreatmentOptions branch='GarbhaGudi IVF Centre' />
-      <TeamSection />
-      <Faq />
-      <Testimonials />
-      <Cta />
-      <RelatedSearches />
+      {lazyComponents.map(({ key, component }) => (
+        <React.Fragment key={key}>{component}</React.Fragment>
+      ))}
     </div>
   );
 }

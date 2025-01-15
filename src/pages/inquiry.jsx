@@ -14,6 +14,7 @@ const IndexPage = () => {
             'https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg'
           }
           alt='Inquiry'
+          loading='lazy'
         />
         <iframe
           src='/contact_2.html'
