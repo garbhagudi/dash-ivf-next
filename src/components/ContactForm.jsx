@@ -13,19 +13,23 @@ const ContactForm = ({ title }) => {
     'Lead Source': 'Online',
     'Lead SubSource': 'GarbhaGudi Website',
     'UTM Campign': '',
+    Description: '',
   });
 
-  useEffect(() => {
-    if (router.query) {
-      const { utm_campaign } = router.query;
-      setFormData({ 'UTM Campign': utm_campaign });
-    }
-  }, [router.query]);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
 
   useEffect(() => {
-    // Load Google Tag Manager
+    if (router.query) {
+      const { utm_campaign } = router.query;
+      setFormData((prev) => ({
+        ...prev,
+        'UTM Campign': utm_campaign || '',
+      }));
+    }
+  }, [router.query]);
+
+  useEffect(() => {
     const script = document.createElement('script');
     script.innerHTML = `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -36,7 +40,6 @@ const ContactForm = ({ title }) => {
     `;
     document.head.appendChild(script);
 
-    // Create and append the analytics script
     const analyticScript = document.createElement('script');
     analyticScript.id = 'wf_anal';
     analyticScript.src =
@@ -44,12 +47,10 @@ const ContactForm = ({ title }) => {
 
     analyticScript.async = true;
 
-    // Only append if the script doesn't already exist
     if (!document.getElementById('wf_anal')) {
       document.body.appendChild(analyticScript);
     }
 
-    // Cleanup function
     return () => {
       const existingScript = document.getElementById('wf_anal');
       if (existingScript) {
@@ -62,7 +63,7 @@ const ContactForm = ({ title }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: value || '',
     }));
   };
 
@@ -70,6 +71,7 @@ const ContactForm = ({ title }) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
+
   const handleCaptchaChange = (value) => {
     setCaptchaVerified(!!value);
     setShowCaptchaError(false);
@@ -83,7 +85,7 @@ const ContactForm = ({ title }) => {
       return;
     }
 
-    if (formData['email'] && !validateEmail(formData['email'])) {
+    if (formData['Email'] && !validateEmail(formData['Email'])) {
       alert('Please enter a valid email address.');
       return;
     }
@@ -96,7 +98,15 @@ const ContactForm = ({ title }) => {
   };
 
   const handleReset = () => {
-    setFormData({});
+    setFormData({
+      'Last Name': '',
+      Phone: '',
+      Email: '',
+      'Lead Source': 'Online',
+      'Lead SubSource': 'GarbhaGudi Website',
+      'UTM Campign': '',
+      Description: '',
+    });
     setCaptchaVerified(false);
     setShowCaptchaError(false);
   };
@@ -117,38 +127,50 @@ const ContactForm = ({ title }) => {
           type='text'
           style={{ display: 'none' }}
           name='xnQsjsdp'
-          value='1c4d025c73947e5aba8a8e018b4a05728a8276239bd940adac43b4a4865eb7d2'
+          defaultValue='1c4d025c73947e5aba8a8e018b4a05728a8276239bd940adac43b4a4865eb7d2'
+          readOnly
         />
-        <input type='hidden' name='zc_gad' id='zc_gad' value='' />
+        <input
+          type='hidden'
+          name='zc_gad'
+          id='zc_gad'
+          defaultValue=''
+          readOnly
+        />
         <input
           type='text'
           style={{ display: 'none' }}
           name='xmIwtLD'
-          value='665f0f2ebcb43dfefb765b299d547459aeef5f93d35b4495ecae51f68620b55a6240e6000d0ca159ed5401596766b76b'
+          defaultValue='665f0f2ebcb43dfefb765b299d547459aeef5f93d35b4495ecae51f68620b55a6240e6000d0ca159ed5401596766b76b'
+          readOnly
         />
         <input
           type='text'
           style={{ display: 'none' }}
           name='actionType'
           value='TGVhZHM='
+          readOnly
         />
         <input
           type='text'
           style={{ display: 'none' }}
           name='returnURL'
-          value='https://garbhagudi-ivf.com/thank-you.html'
+          defaultValue='https://garbhagudi-ivf.com/thank-you.html'
+          readOnly
         />
         <input
           type='text'
           style={{ display: 'none' }}
           id='ldeskuid'
           name='ldeskuid'
+          readOnly
         ></input>
         <input
           type='text'
           style={{ display: 'none' }}
           id='LDTuvid'
           name='LDTuvid'
+          readOnly
         ></input>
 
         <div className='pb-12 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
@@ -214,18 +236,30 @@ const ContactForm = ({ title }) => {
           </div>
         </div>
 
-        <input type='hidden' name='Description' value={formData.Description} />
+        <input
+          type='hidden'
+          name='Description'
+          defaultValue={formData.Description}
+          readOnly
+        />
         <input
           type='hidden'
           name='Lead Source'
-          value={formData['Lead Source']}
+          defaultValue={formData['Lead Source']}
+          readOnly
         />
         <input
           type='hidden'
           name='LEADCF6'
-          value={formData['Lead SubSource']}
+          defaultValue={formData['Lead SubSource']}
+          readOnly
         />
-        <input type='hidden' name='LEADCF122' value={formData['UTM Campign']} />
+        <input
+          type='hidden'
+          name='LEADCF122'
+          defaultValue={formData['UTM Campign']}
+          readOnly
+        />
 
         <div className='zcwf_row relative flex flex-col items-center justify-center pt-6'>
           <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>

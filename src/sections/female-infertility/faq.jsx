@@ -46,6 +46,7 @@ const Faq = () => {
             <Image
               src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_800/v1634563067/garbhagudi-ivf/Images%20/3731957_yjmv2x.webp'
               alt='messenger'
+              loading='lazy'
             />
           </Box>
           <Box sx={styles.rightContent}>

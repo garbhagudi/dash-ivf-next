@@ -12,7 +12,7 @@ export const WidgetAbout = ({ title, items }) => {
       <ul>
         {items.map(({ url, label, icon }, i) => (
           <li key={i}>
-            {icon && <Image src={icon} alt={label} />}
+            {icon && <Image src={icon} alt={label} loading='lazy' />}
             <a href={url} key={i}>
               {label}
             </a>
@@ -30,7 +30,7 @@ export const WidgetInfo = ({ title, items }) => {
       <ul>
         {items.map(({ to, label, icon }, i) => (
           <li key={i}>
-            {icon && <Image src={icon} alt={label} />}
+            {icon && <Image src={icon} alt={label} loading='lazy' />}
             <Link href={to} key={i}>
               {label}
             </Link>
@@ -48,7 +48,7 @@ export const WidgetPages = ({ title, items }) => {
       <ul>
         {items.map(({ to, label, icon }, i) => (
           <li key={i}>
-            {icon && <Image src={icon} alt={label} />}
+            {icon && <Image src={icon} alt={label} loading='lazy' />}
             <Link href={to} key={i}>
               {label}
             </Link>

@@ -9,7 +9,12 @@ export default function TeamCard({ src, altText, title, designation }) {
   return (
     <Link href='/contact-us'>
       <Box sx={styles.card}>
-        <LazyLoadImage src={src} alt={altText} sx={styles.memberThumb} />
+        <LazyLoadImage
+          src={src}
+          alt={altText}
+          sx={styles.memberThumb}
+          loading='lazy'
+        />
         <Box sx={styles.infoWrapper}>
           <Heading className='info__name' sx={styles.infoWrapper.name}>
             {title}

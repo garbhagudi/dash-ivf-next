@@ -58,9 +58,8 @@ export default function Popup({ title, btnClassName }) {
                     height={1080}
                     alt='book an appointment form'
                     className='h-full w-full object-center'
-                    priority={true}
                     quality={75}
-                    loading='eager'
+                    loading='lazy'
                   />
                   <ContactForm title='Book Your Appointment' />
                 </Dialog.Panel>

@@ -32,6 +32,7 @@ const Banner = () => {
             <Image
               src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1699869285/paripoorna/Paripoorna_2023_Ver_Logo_Eng_bridnx.png'
               alt='illustration'
+              loading='lazy'
             />
           </Flex>
         </Grid>

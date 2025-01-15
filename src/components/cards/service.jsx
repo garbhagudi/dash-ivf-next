@@ -8,7 +8,7 @@ const Service = ({ item }) => {
   return (
     <Box sx={styles.serviceItem}>
       <Box as='figure' sx={styles.figure}>
-        <LazyLoadImage src={item?.icon} alt='icon' />
+        <LazyLoadImage src={item?.icon} alt='icon' loading='lazy' />
       </Box>
       <Box sx={styles.content}>
         <Heading as='h3'>{item?.title}</Heading>
