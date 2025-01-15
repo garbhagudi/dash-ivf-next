@@ -96,6 +96,7 @@ const ImageComponent = ({ name, image, qualification, designation }) => {
         src={image}
         alt={name}
         className='h-40 w-40 rounded-full md:h-64 md:w-64'
+        loading='lazy'
       />
       <div className='text-center'>
         <div className='mt-4 font-heading text-xl font-bold'>{name}</div>

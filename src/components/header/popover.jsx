@@ -144,6 +144,7 @@ export const Services = () => {
                           src={item.icon}
                           aria-hidden='true'
                           alt={item.name}
+                          loading='lazy'
                         />
                         <div className='ml-4'>
                           <p className='text-base font-medium text-gray-900'>
@@ -207,6 +208,7 @@ export const Locations = () => {
                           src={item.icon}
                           aria-hidden='true'
                           alt={item.name}
+                          loading='lazy'
                         />
                         <div className='ml-4'>
                           <p className='text-base font-medium text-gray-900'>
@@ -270,6 +272,7 @@ export const About = () => {
                           src={item.icon}
                           aria-hidden='true'
                           alt={item.name}
+                          loading='lazy'
                         />
                         <div className='ml-4'>
                           <p className='text-base font-medium text-gray-900'>

@@ -18,6 +18,7 @@ export default function Header() {
                   className='h-10 sm:h-14'
                   src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg'
                   alt='logo'
+                  loading='lazy'
                 />
               </div>
             </Link>

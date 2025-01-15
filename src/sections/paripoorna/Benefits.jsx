@@ -13,6 +13,7 @@ const Benefits = () => {
               className='my-4 rounded-xl'
               width={500}
               height={500}
+              loading='lazy'
             />
           </div>
           <div className='flex flex-col items-center justify-center'>

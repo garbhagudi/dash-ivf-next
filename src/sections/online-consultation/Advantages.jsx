@@ -48,6 +48,7 @@ const Advantages = () => {
             <Image
               src='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,h_707,r_0,w_633/v1634539273/garbhagudi-ivf/Images%20/3720926_pmvypv.webp'
               alt='online-consultation'
+              loading='lazy'
             />
           </Flex>
         </Box>

@@ -4,6 +4,7 @@ import { ThemeProvider, Flex } from 'theme-ui';
 import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
+import FloatWhatsApp from 'components/FloatWhatsapp';
 
 const SalesIQ = dynamic(() => import('components/SalesIQ'), { ssr: false });
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }) {
         <main sx={{ variant: 'layout.main' }}>
           <Component {...pageProps} />
         </main>
+        <FloatWhatsApp />
         <FloatPhone />
         <SalesIQ />
         <Footer />
