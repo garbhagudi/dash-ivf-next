@@ -1,10 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ContactForm from 'components/ContactForm';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+const ContactForm = dynamic(() => import('components/ContactForm'), {
+  ssr: false,
+});
 
 const Banner = () => {
   return (
     <div>
+      {/* Preload fonts for faster text rendering */}
+      <Head>
+        <link
+          rel='preload'
+          href='/path-to-font.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
+        {/* Preload the critical image */}
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737101101/01_Jan_25-Offer-Ads-LP_V2-01_gs7vei.webp'
+          as='image'
+        />
+      </Head>
+
       <div className='grid grid-cols-1 lg:grid-cols-3'>
         <div className='order-0'>
           <div className='items-left flex h-full flex-col justify-center bg-cover bg-no-repeat py-16 text-center lg:py-0'>
@@ -41,21 +63,21 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className='order-1 flex items-center justify-center overflow-hidden'>
+        <div className='order-1 flex items-end justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735896812/01_Jan_25-Offer-Ads-LP_1_qhgbtt.png'
-            width={1920}
-            height={1080}
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737101101/01_Jan_25-Offer-Ads-LP_V2-01_gs7vei.webp'
+            width={800}
+            height={450}
             alt='Start IVF from as low as 90K'
-            className='h-full w-full object-center'
-            quality={75}
-            loading='lazy'
+            quality={90}
+            loading='eager'
+            priority
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
           />
         </div>
 
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            {/* {Form ? <Form /> : <p>Loading...</p>} */}
             <ContactForm title='Book Your Appointment' />
           </div>
         </div>
@@ -64,7 +86,7 @@ const Banner = () => {
       <div className='max-w-8xl mx-auto sm:mt-10'>
         <div className='mx-auto mb-4 max-w-lg bg-gray-300 px-3 py-2 text-center text-base font-semibold sm:rounded-lg md:text-lg'>
           <div>
-            Call {''}
+            Call{' '}
             <a
               href='tel:+919108910832'
               className='block text-brandPink sm:inline-block'
