@@ -89,7 +89,7 @@ export default function Home() {
 
       <Header />
 
-      {lazyComponents.map(({ key, component }, index) => (
+      {lazyComponents?.map(({ key, component }, index) => (
         <div
           key={key}
           ref={(el) => (containerRefs.current[index] = el)}
