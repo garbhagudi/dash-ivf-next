@@ -24,7 +24,6 @@ const RelatedSearches = dynamic(() => import('sections/home/relatedSearches'), {
 
 export default function Home() {
   const lazyComponents = [
-    { key: 'Banner', component: <Banner /> },
     { key: 'other-services', component: <OtherServices /> },
     {
       key: 'treatment-options',
@@ -88,7 +87,7 @@ export default function Home() {
       </Head>
 
       <Header />
-
+      <Banner />
       {lazyComponents.map(({ key, component }, index) => (
         <div
           key={key}
