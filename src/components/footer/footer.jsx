@@ -31,9 +31,6 @@ export default function Footer() {
             {information.map(({ id, title, items }) => (
               <WidgetInfo key={id} title={title} items={items} />
             ))}
-            {pages.map(({ id, title, items }) => (
-              <WidgetPages key={id} title={title} items={items} />
-            ))}
           </Box>
         </Container>
       </Box>
