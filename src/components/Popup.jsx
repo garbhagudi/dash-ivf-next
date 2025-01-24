@@ -2,6 +2,7 @@ import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import { useState } from 'react';
 import Image from 'next/image';
 import ContactForm from './ContactForm';
+import { HiX } from 'react-icons/hi';
 
 export default function Popup({ title, btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -62,6 +63,12 @@ export default function Popup({ title, btnClassName }) {
                     loading='lazy'
                   />
                   <ContactForm title='Book Your Appointment' />
+                  <div
+                    onClick={closeModal}
+                    className='absolute right-3 top-3 cursor-pointer'
+                  >
+                    <HiX className='block h-6 w-6 text-black hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-100' />
+                  </div>
                 </Dialog.Panel>
               </TransitionChild>
             </div>
