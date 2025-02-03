@@ -65,7 +65,7 @@ const HanumanthaNagar = () => {
       <LocationHeader
         branch='Hanumanthanagar'
         mapLink='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15553.886019164418!2d77.556468!3d12.9416527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x61c537027ad19840!2sGarbhaGudi%20IVF%20Centre%2C%20Hanumanthanagar.!5e0!3m2!1sen!2sin!4v1663838744587!5m2!1sen!2sin'
-        phone='+919108910832'
+        phone='+919480940805'
         address={
           'Subhasri Complex, 210/A, Kumaraswamy Temple Rd, 2nd Block, Phase 1, Banashankari 1st Stage, Banashankari, Bengaluru, Karnataka 560050'
         }

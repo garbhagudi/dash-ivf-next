@@ -60,25 +60,25 @@ const Banner = () => {
               </h3>
               <div className='grid cursor-pointer grid-cols-1 gap-3 text-base font-semibold text-gray-700 md:grid-cols-2'>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                  <span className='dark:text-gg-400 font-bold text-brandPink'>
+                  <span className='font-bold text-brandPink dark:text-gg-400'>
                     10000+
                   </span>{' '}
                   Happy Families
                 </div>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                  <span className='dark:text-gg-400 font-bold text-brandPink'>
+                  <span className='font-bold text-brandPink dark:text-gg-400'>
                     12+
                   </span>{' '}
                   Years of Experience
                 </div>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                  <span className='dark:text-gg-400 font-bold text-brandPink'>
+                  <span className='font-bold text-brandPink dark:text-gg-400'>
                     65-73%
                   </span>{' '}
                   IVF Success Rate
                 </div>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                  <span className='dark:text-gg-400 font-bold text-brandPink'>
+                  <span className='font-bold text-brandPink dark:text-gg-400'>
                     7
                   </span>{' '}
                   Centres Across Bangalore
@@ -122,7 +122,7 @@ const Banner = () => {
             <div className='hidden text-center lg:mt-6 lg:block lg:text-left'>
               {' '}
               <Link
-                href={'tel:+919108910832'}
+                href={'tel:+919480940805'}
                 className='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
               >
                 Book an Appointment
