@@ -19,7 +19,7 @@ const Cta = () => {
           />
           <button className='mx-auto mt-5 block rounded-lg bg-brandPink px-6 py-3 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block lg:ml-2 lg:mt-0'>
             <Link
-              href='tel:+919108910832'
+              href='tel:+919480940805'
               className='font-content scroll-smooth text-lg'
             >
               Talk to us

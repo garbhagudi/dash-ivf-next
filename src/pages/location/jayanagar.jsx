@@ -65,7 +65,7 @@ const Jayanagar = () => {
       <LocationHeader
         branch='Jayanagar'
         mapLink='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124389.58988191826!2d77.50394971640624!3d13.024545500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1596b02fd78f%3A0x1f870d0e467c8c8a!2sGarbhaGudi%20IVF%20Centre%2C%20South%20End%20Circle.!5e0!3m2!1sen!2sin!4v1663846658020!5m2!1sen!2sin'
-        phone='+919108910832'
+        phone='+919480940805'
         address={
           'South End Circle, 26, Pattalamma Temple Rd, Basavanagudi, Bengaluru, Karnataka 560004'
         }
