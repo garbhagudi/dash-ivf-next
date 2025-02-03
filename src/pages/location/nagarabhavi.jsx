@@ -65,7 +65,7 @@ const Marathahalli = () => {
       <LocationHeader
         branch='Nagarabhavi'
         mapLink='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1944.087072336465!2d77.508472!3d12.960706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fcd6ee8ee57%3A0x2b5769e83d027d93!2sGarbhaGudi%20IVF%20Centre%2C%20Nagarbhavi!5e0!3m2!1sen!2sin!4v1682147772838!5m2!1sen!2sin'
-        phone='+919108910832'
+        phone='+919480940805'
         address={
           '4TH floor, Chirag Towers, 24 & 64, Service Rd, next to Kalamandir, Marathahalli, Bengaluru, Karnataka 560037'
         }
