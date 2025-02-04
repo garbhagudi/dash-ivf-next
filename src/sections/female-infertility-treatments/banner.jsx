@@ -56,10 +56,10 @@ const Banner = () => {
         <div className='mx-auto mb-4 max-w-lg bg-gray-300 px-3 py-2 text-center text-base font-semibold sm:rounded-lg md:text-lg'>
           To Book Appointment call{' '}
           <a
-            href='tel:+919480940805'
+            href='tel:+919480948005'
             className='block text-brandPink sm:inline-block'
           >
-            +91 9480 9408 05
+            +91 9480 9480 05
           </a>
         </div>
         <div className='mx-auto text-center'>

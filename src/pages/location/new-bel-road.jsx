@@ -65,7 +65,7 @@ const Marathahalli = () => {
       <LocationHeader
         branch='New BEL Road'
         mapLink='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248776.01303899457!2d77.571752!3d13.027698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1787016c1729%3A0xc0292defa84a9230!2sGarbhaGudi%20IVF%20Centre%2C%20New%20BEL%20Road!5e0!3m2!1sen!2sin!4v1682145314332!5m2!1sen!2sin'
-        phone='+919480940805'
+        phone='+919480948005'
         address={
           'No. 3, 1st Floor, New BEL Rd, opp. to Ramaiah Hospital, RMV 2nd Stage, Ashwath Nagar, Devasandra Layout, Bengaluru, Karnataka 560094'
         }

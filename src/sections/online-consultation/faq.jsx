@@ -66,7 +66,7 @@ const Faq = () => {
             />
             <Text as='p'>
               Check out our FAQ section and feel free to contact us at{' '}
-              <a href='tel:+919480940805'>+919480940805</a> or drop an E-mail at{' '}
+              <a href='tel:+919480948005'>+919480948005</a> or drop an E-mail at{' '}
               <a href='mailto:dreams@garbhagudi.com'>dreams@garbhagudi.com</a>.{' '}
               We will get back to you as soon as possible
             </Text>
