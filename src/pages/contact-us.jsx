@@ -1,4 +1,4 @@
-import ContactForm from 'components/ContactForm';
+import FormComponent from 'components/formComp';
 import Image from 'next/image';
 
 const IndexPage = () => {
@@ -15,7 +15,7 @@ const IndexPage = () => {
           quality={75}
           loading='lazy'
         />
-        <ContactForm title='Book Your Appointment' />
+        <FormComponent title='Book Your Appointment' />
       </div>
     </div>
   );
