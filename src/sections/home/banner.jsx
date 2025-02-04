@@ -52,7 +52,7 @@ const Banner = () => {
               <p className='mt-2'>Offer Validity: 31st January 2025</p>
             </div>
             <Link
-              href='tel:+919480940805'
+              href='tel:+919480948005'
               className='mx-auto w-fit rounded-lg bg-brandPink px-5 py-1.5 text-base font-bold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark'
             >
               Call us for Appointment
@@ -88,10 +88,10 @@ const Banner = () => {
           <div>
             Call{' '}
             <a
-              href='tel:+919480940805'
+              href='tel:+919480948005'
               className='block text-brandPink sm:inline-block'
             >
-              +91 9480 9408 05
+              +91 9480 9480 05
             </a>
           </div>
           <div> to book your free consultation today!</div>

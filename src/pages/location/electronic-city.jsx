@@ -63,7 +63,7 @@ const ElectronicCity = () => {
       <LocationHeader
         branch='Electronic City'
         mapLink='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.860805420732!2d77.66559191525012!3d12.852265620961985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6c972baa2581%3A0x38dd3f8049f5f606!2sGarbhaGudi%20IVF%20Centre%2C%20Electronic%20City.!5e0!3m2!1sen!2sin!4v1663845628153!5m2!1sen!2sin'
-        phone='+919480940805'
+        phone='+919480948005'
         address={
           'Ganesh Towers,3rd Floor, 60/5 and 60/6, NH 44, Beside Andhra Bank, Konappana Agrahara, Electronic City, Bengaluru, Karnataka 560100'
         }
