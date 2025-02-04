@@ -1,187 +1,115 @@
 'use client';
 
 import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useForm } from 'react-hook-form';
 
 const ContactForm = ({ title }) => {
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    'Last Name': '',
-    Phone: '',
-    Email: '',
-    'Lead Source': 'Online',
-    'Lead SubSource': 'GarbhaGudi Website',
-    'UTM Campign': '',
-    Description: '',
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      Last_Name: '',
+      Phone: '',
+      Email: '',
+      Lead_Source: 'Online',
+      Lead_Sub_Source: 'GarbhaGudi-IVF',
+      UTM_Campign: '',
+    },
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
+  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
     if (router.query) {
       const { utm_campaign } = router.query;
-      setFormData((prev) => ({
-        ...prev,
-        'UTM Campign': utm_campaign || '',
-      }));
+      setValue('UTM_Campign', utm_campaign || '');
     }
-  }, [router.query]);
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.setAttribute('defer', 'true');
-    script.innerHTML = `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5T77DVZ');
-    `;
-    document.head.appendChild(script);
-
-    const analyticScript = document.createElement('script');
-    analyticScript.id = 'wf_anal';
-    analyticScript.src =
-      'https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=10db38b50d3143e27965b364398348ee8b080fb27f8bec9e24f75f0df210fcba7b970dc67600a6b7e0c3ffd6eaf6f9edgidbcf773dae8749b004d3dc29f0f1fb9714a996ba17d6a3770df222cbc5215fb3bgid7dc5ab9953badc7311b39ecc151ab45d0baf96bccc2ed64a7295d2a5fdbb6277gidc08b3680fc8dc3545c5c03fae82c543a364403e35591e428003c79024185eac3&tw=6c80c7c22e385cf5f7474eb6fb1ce0b3506093530f8ea42aeb6c544afeef0dbb';
-
-    analyticScript.async = true;
-
-    if (!document.getElementById('wf_anal')) {
-      document.body.appendChild(analyticScript);
-    }
-
-    return () => {
-      const existingScript = document.getElementById('wf_anal');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value || '',
-    }));
-  };
-
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
+  }, [router.query, setValue]);
 
   const handleCaptchaChange = (value) => {
     setCaptchaVerified(!!value);
     setShowCaptchaError(false);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!formData['Last Name'] || !formData['Phone']) {
-      alert('Full Name and Phone cannot be empty.');
-      return;
-    }
-
-    if (formData['Email'] && !validateEmail(formData['Email'])) {
-      alert('Please enter a valid email address.');
-      return;
-    }
+  const onSubmit = async (data) => {
     if (!captchaVerified) {
       setShowCaptchaError(true);
       return;
     }
 
-    e.target.submit();
-  };
+    const getAccessToken = async () => {
+      if (accessToken) return accessToken;
 
-  const handleReset = () => {
-    setFormData({
-      'Last Name': '',
-      Phone: '',
-      Email: '',
-      'Lead Source': 'Online',
-      'Lead SubSource': 'GarbhaGudi Website',
-      'UTM Campign': '',
-      Description: '',
-    });
-    setCaptchaVerified(false);
-    setShowCaptchaError(false);
+      try {
+        const tokenParams = new URLSearchParams({
+          refresh_token: process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN,
+          client_id: process.env.NEXT_PRIVATE_ZOHO_CLIENT_ID,
+          client_secret: process.env.NEXT_PRIVATE_ZOHO_CLIENT_SECRET,
+          grant_type: 'refresh_token',
+        });
+
+        const tokenResponse = await fetch(
+          `${process.env.NEXT_PRIVATE_ZOHO_0AUTH_URL}?${tokenParams.toString()}`,
+          { method: 'POST' },
+        );
+
+        const tokenData = await tokenResponse.json();
+
+        if (!tokenResponse.ok)
+          throw new Error(`Token Error: ${tokenData.error}`);
+
+        setAccessToken(tokenData.access_token);
+        return tokenData.access_token;
+      } catch (error) {
+        console.error(error.message);
+        return null;
+      }
+    };
+
+    try {
+      const token = await getAccessToken();
+      if (!token) throw new Error('Access token could not be retrieved.');
+
+      const requestData = { data: [data] };
+
+      const response = await fetch(process.env.NEXT_PRIVATE_ZOHO_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Zoho-oauthtoken ${token}`,
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (!response.ok)
+        throw new Error(`HTTP error! Status: ${response.status}`);
+
+      const responseData = await response.json();
+      router.push('https://www.garbhagudi-ivf.com/thank-you.html');
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   return (
-    <div
-      id='crmWebToEntityForm'
-      className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent'
-    >
-      <form
-        action='https://crm.zoho.com/crm/WebToLeadForm'
-        name='WebToLeads3505252000084677079'
-        method='POST'
-        onSubmit={handleSubmit}
-        acceptCharset='UTF-8'
-      >
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          name='xnQsjsdp'
-          defaultValue='1c4d025c73947e5aba8a8e018b4a05728a8276239bd940adac43b4a4865eb7d2'
-          readOnly
-        />
-        <input
-          type='hidden'
-          name='zc_gad'
-          id='zc_gad'
-          defaultValue=''
-          readOnly
-        />
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          name='xmIwtLD'
-          defaultValue='665f0f2ebcb43dfefb765b299d547459aeef5f93d35b4495ecae51f68620b55a6240e6000d0ca159ed5401596766b76b'
-          readOnly
-        />
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          name='actionType'
-          value='TGVhZHM='
-          readOnly
-        />
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          name='returnURL'
-          defaultValue='https://garbhagudi-ivf.com/thank-you.html'
-          readOnly
-        />
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          id='ldeskuid'
-          name='ldeskuid'
-          readOnly
-        ></input>
-        <input
-          type='text'
-          style={{ display: 'none' }}
-          id='LDTuvid'
-          name='LDTuvid'
-          readOnly
-        ></input>
-
-        <div className='pb-12 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
+    <div className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent'>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className='pb-4 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
           {title}
         </div>
-
-        <div className='mx-auto flex flex-col space-y-2 px-3'>
-          <div className='mx-auto max-w-sm rounded-md'>
+        <div className='mx-auto flex flex-col space-y-5 px-3'>
+          <div className='mx-auto max-w-sm'>
             <label
-              htmlFor='Last Name'
+              htmlFor='Last_Name'
               className='flex items-center justify-start'
             >
               <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
@@ -191,13 +119,17 @@ const ContactForm = ({ title }) => {
                 type='text'
                 id='Last_Name'
                 placeholder='Enter full name'
-                name='Last Name'
-                value={formData['Last Name']}
-                onChange={handleInputChange}
-                maxLength='80'
+                {...register('Last_Name', {
+                  required: 'Full Name is required',
+                })}
                 className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
               />
             </label>
+            {errors.Last_Name && (
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>
+                {errors.Last_Name?.message}
+              </p>
+            )}
           </div>
 
           <div className='mx-auto max-w-sm'>
@@ -209,13 +141,21 @@ const ContactForm = ({ title }) => {
                 type='text'
                 id='Phone'
                 placeholder='Enter phone number'
-                name='Phone'
-                value={formData['Phone']}
-                onChange={handleInputChange}
-                maxLength='30'
+                {...register('Phone', {
+                  required: 'Phone is required',
+                  pattern: {
+                    value: /^[0-9]{10}$/, // Assuming a 10-digit phone number
+                    message: 'Invalid phone number',
+                  },
+                })}
                 className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
               />
             </label>
+            {errors.Phone && (
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>
+                {errors.Phone?.message}
+              </p>
+            )}
           </div>
 
           <div className='mx-auto max-w-sm'>
@@ -227,71 +167,55 @@ const ContactForm = ({ title }) => {
                 type='email'
                 id='Email'
                 placeholder='Enter email'
-                name='Email'
-                value={formData['Email']}
-                onChange={handleInputChange}
-                maxLength='100'
+                {...register('Email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: 'Invalid email format',
+                  },
+                })}
                 className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
               />
             </label>
-          </div>
-        </div>
-
-        <input
-          type='hidden'
-          name='Description'
-          defaultValue={formData.Description}
-          readOnly
-        />
-        <input
-          type='hidden'
-          name='Lead Source'
-          defaultValue={formData['Lead Source']}
-          readOnly
-        />
-        <input
-          type='hidden'
-          name='LEADCF6'
-          defaultValue={formData['Lead SubSource']}
-          readOnly
-        />
-        <input
-          type='hidden'
-          name='LEADCF122'
-          defaultValue={formData['UTM Campign']}
-          readOnly
-        />
-
-        <div className='zcwf_row relative flex flex-col items-center justify-center pt-6'>
-          <div className='zcwf_col_fld mx-auto flex flex-col items-center justify-center'>
-            <ReCAPTCHA
-              sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
-              onChange={handleCaptchaChange}
-            />
-            {showCaptchaError && (
-              <div className='absolute -bottom-5 text-sm text-red-500'>
-                Please complete the captcha verification.
-              </div>
+            {errors.Email && (
+              <p className='absolute ml-[1.2em] text-sm text-red-500'>
+                {errors.Email?.message}
+              </p>
             )}
           </div>
         </div>
-        <div className='zcwf_row'>
-          <div className='zcwf_col_fld mb-6 mt-8 flex items-center justify-center space-x-4'>
-            <button
-              type='submit'
-              className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88] focus:outline-none focus:ring focus:ring-pink-300 md:w-auto lg:w-28'
-            >
-              Submit
-            </button>
 
-            <button
-              type='reset'
-              onClick={handleReset}
-              className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88] focus:outline-none focus:ring focus:ring-pink-300 md:w-auto lg:w-28'
-            >
-              Reset
-            </button>
-          </div>
+        <div className='zcwf_row flex flex-col items-center justify-center pt-5'>
+          <ReCAPTCHA
+            sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
+            onChange={handleCaptchaChange}
+          />
+          {showCaptchaError && (
+            <p className='text-sm text-red-500'>
+              Please complete the captcha verification.
+            </p>
+          )}
+        </div>
+
+        <div className='mb-6 mt-4 flex items-center justify-center space-x-4'>
+          <button
+            type='submit'
+            className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+          >
+            Submit
+          </button>
+
+          <button
+            type='button'
+            onClick={() => {
+              reset();
+              setCaptchaVerified(false);
+              setShowCaptchaError(false);
+            }}
+            className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+          >
+            Reset
+          </button>
         </div>
       </form>
     </div>
