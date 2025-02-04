@@ -122,7 +122,7 @@ const Banner = () => {
             <div className='hidden text-center lg:mt-6 lg:block lg:text-left'>
               {' '}
               <Link
-                href={'tel:+919480940805'}
+                href={'tel:+919480948005'}
                 className='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
               >
                 Book an Appointment
