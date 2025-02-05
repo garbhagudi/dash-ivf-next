@@ -1044,13 +1044,13 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr. Kavya Krishnappa',
-    qualification: 'MBBS MS(OBG) FRM',
+    name: 'Dr. Varsha Patil',
+    qualification: 'MBBS, DGO, DNB(OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/NXpMCWvIS7mccxbZr4hy',
+      url: 'https://media.graphassets.com/PxCiYMsmTyeNv3OrzQjc',
     },
-    imageAlt: 'Dr. Kavya Krishnappa',
+    imageAlt: null,
     bio: {
       raw: {
         children: [
@@ -1061,20 +1061,12 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: "Dr. Kavya Krishnappa is a distinguished Obstetrician, Gynecologist, and Infertility Specialist with over a decade of experience dedicated to helping couples achieve their dream of parenthood. With a profound passion for Infertility, she pursued specialized training, including a Fellowship in Reproductive Medicine from Craft Hospital and Research Centre, Kerala, and a Diploma in Advanced Reproductive Medicine from Kiel's University, Germany.",
+                    text: 'Dr Varsha Patil is a highly skilled Fertility Specialist, dedicated to providing the best treatment for her patients. She received her MBBS degree from M.R. Medical College, Gulbarga and completed her DGO from Mysore Medical College and Research Institute, Mysore. Dr Varsha Patil also completed her DNB(OBG) through the National Board of Examinations from Bangalore Baptist hospital, Bangalore.',
                   },
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
           {
             type: 'class',
@@ -1083,20 +1075,12 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: 'Dr. Kavya Krishnappa completed her MBBS from Jawaharlal Nehru Medical College, Belgaum, and MS in Obstetrics and Gynecology from JJM Medical College, Davangere, Dr.Kavya Krishnappa has garnered expertise in various reproductive procedures, including Laparoscopy, Hysteroscopy, and Ultrasonography. Her commitment to staying abreast of the latest advancements in Reproductive Medicine is reflected in her evidence-based practice and active participation in national conferences.',
+                    text: 'Her desire to specialize further in infertility led her to complete her Fellowship in Reproductive Medicine from the International Institute for training and research in reproductive health (IIRRH) - Milann, Bangalore. She further honed her skills by completing Ultrasound Training at Karthik Ultrasound Scan Centre under the tutelage of Dr Chaithra Ganesh. She also completed a 6-month ICOG certification from FOGSI in Reproductive Medicine.',
                   },
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
           {
             type: 'class',
@@ -1105,20 +1089,41 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: "Dr. Kavya Krishnappa's areas of expertise encompass a wide range of conditions such as Decreased Ovarian Reserve, Endometriosis, PCOS, Recurrent Pregnancy Loss, and Male infertility. Moreover, she offers innovative treatments like Regenerative medicine, including Intra-ovarian PRP and Stem Cell therapy. Patients commend her approachable nature and multilingual proficiency in Kannada, Telugu, Tamil, English, Hindi, and Malayalam, which fosters a comfortable environment for communication and care.",
+                    text: 'Dr Varsha Patil is known for her patience, knowledge, and hard work. She believes in a scientific approach to fertility treatment in an ethical manner. She is well-versed in various ART procedures like IVF, IUI, etc. and provides counselling to her patients with dedication. Her goal is to ensure that every patient receives personalized care and treatment that is tailored to their individual needs. Dr Varsha Patil is a skilled professional committed to helping her patients achieve their dream of having a child.',
                   },
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. Sahana K',
+    qualification: 'MBBS, MS (OBG), DNB(OBG), FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/ocaZ9siTu6Uy9UCVo1SA',
+    },
+    imageAlt: null,
+    bio: {
+      raw: {
+        children: [
           {
-            type: 'paragraph',
+            type: 'class',
             children: [
               {
-                text: '',
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'At GarbhaGudi IVF Centre, we are proud to have Dr. Sahana K as part of our expert team. Dr. Sahana brings a wealth of experience and deep expertise in obstetrics, gynecology, and reproductive medicine. Her compassionate approach and commitment to helping couples achieve their dreams of parenthood make her a valuable asset to our organization.',
+                  },
+                ],
               },
             ],
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
           {
             type: 'class',
@@ -1127,20 +1132,68 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: 'With a vision to facilitate safe and affordable treatments for infertile couples, Dr. Kavya Krishnappa strives to realize the joy of parenthood for her patients while maintaining the highest standards of medical excellence and compassion.',
+                    text: 'Dr. Sahana K’s journey in the field of medicine is marked by her academic brilliance and professional dedication. She began her medical education with an MBBS from Rajiv Gandhi University of Health Sciences, Davanagere, India, completed between 2009 and 2014. She further specialized in obstetrics and gynecology, earning her MS (OBG) from Dr. V.M. Government Medical College, Solapur, India, from 2016 to 2019. Dr. Sahana then achieved a DNB (OBG) from the National Board of Examination, New Delhi, India, in November 2020. Her advanced training was further enhanced by a Fellowship in Reproductive Medicine at the prestigious Gunasheela Surgical & Maternity Hospital, Bengaluru, India.',
                   },
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
           {
-            type: 'paragraph',
+            type: 'class',
             children: [
               {
-                text: '',
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Professionally, Dr. Sahana has gained extensive experience in both national and international healthcare settings. She served as a Senior Resident at Dr. V.M. Government Medical College, Solapur, from June 2019 to October 2020, where she honed her skills in obstetrics and gynecology. Later, she worked as a Registrar at Kangaroo Care Hospital, Bengaluru, from February 2022 to June 2022. Most recently, she broadened her expertise as an OBGY Specialist at Better Life Clinic, Dubai, from September 2023 to October 2024.',
+                  },
+                ],
               },
             ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Sahana’s diverse academic and professional background equips her with the knowledge and skills to address even the most complex fertility challenges. Her patient-centric approach and dedication to reproductive health make her a valued member of the GarbhaGudi IVF Centre team. Her goal is to provide not just medical solutions but emotional support, ensuring a seamless and comfortable experience for her patients.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'With a combination of academic brilliance, global experience, and a compassionate touch, Dr. Sahana is dedicated to turning hope into reality for couples struggling with infertility. Whether it’s advanced IVF procedures, hormonal treatments, or fertility counseling, Dr. Sahana ensures that her patients receive the highest standard of care.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Reach out to us to schedule a consultation with Dr. Sahana and take the first step toward making your dreams come true.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-base text-brandDark mt-3 font-qs',
           },
         ],
       },
