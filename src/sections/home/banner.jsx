@@ -49,7 +49,7 @@ const Banner = () => {
                 <li>3. Ultrasound Scan</li>
                 <li>4. Semen Analysis</li>
               </ul>
-              <p className='mt-2'>Offer Validity: 31st January 2025</p>
+              <p className='mt-2'>Offer Validity: 28th Feb 2025</p>
             </div>
             <Link
               href='tel:+919480948005'
