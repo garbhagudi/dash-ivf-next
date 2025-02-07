@@ -78,12 +78,12 @@ const Features = () => {
               <div className='group mx-auto max-w-sm pt-3' key={feature.id}>
                 <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
                   <div className='grid grid-cols-6'>
-                    <div className='bg-gg-500 dark:group-hover:bg-gg-500 col-span-1 flex h-full items-center justify-center dark:bg-gray-600'>
+                    <div className='col-span-1 flex h-full items-center justify-center bg-gg-500 dark:bg-gray-600 dark:group-hover:bg-gg-500'>
                       <div className='text-4xl font-bold text-white'>
                         {feature.icon}
                       </div>
                     </div>
-                    <div className='border-gg-500 dark:group-hover:border-gg-500 col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 px-2 dark:border-gray-600'>
+                    <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-gg-500 px-2 dark:border-gray-600 dark:group-hover:border-gg-500'>
                       <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-gray-800 dark:text-gray-200'>
                         {feature.name}
                       </h3>
