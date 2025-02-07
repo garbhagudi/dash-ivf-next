@@ -10,7 +10,7 @@ const features = [
     name: 'High Success Rate',
     icon: <CiPercent />,
     content:
-      'GarbhaGudi has one of the highest IVF treatments success rates in the industry over 65-73 per cent.',
+      'GarbhaGudi has one of the highest IVF treatments success rates in the industry.',
     link: '/features/success-rates-of-ivf',
   },
   {
