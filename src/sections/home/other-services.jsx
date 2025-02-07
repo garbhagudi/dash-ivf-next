@@ -17,7 +17,7 @@ const OtherServices = () => {
           organisations.
         </div>
         <Features />
-        <div className='mx-auto max-w-4xl pb-12'>
+        <div className='mx-auto mt-6 max-w-4xl'>
           <div className='mx-auto max-w-3xl py-6 text-center font-bold md:py-10'>
             <h2 className='mb-4 text-3xl md:text-5xl'>
               Trusted by over{' '}
@@ -29,31 +29,6 @@ const OtherServices = () => {
                 14 Years{' '}
               </span>
             </h2>
-            <div className='pt-8 text-center text-2xl font-bold uppercase underline'>
-              IVF Success Rates
-            </div>
-          </div>
-          <div className='mx-auto max-w-lg'>
-            <div className='mt-2'>
-              <h4 className='mx-auto mb-5 w-56 rounded-lg border border-brandDark px-3 py-1 text-center text-lg font-bold text-brandDark'>
-                Industry Average*
-              </h4>
-              <div className='h-5 w-full rounded-full bg-brandPurple'>
-                <div className='flex h-5 w-[25%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-bold leading-none text-white'>
-                  25 - 28%
-                </div>
-              </div>
-            </div>
-            <div className='mt-10'>
-              <h4 className='mx-auto mb-5 w-56 rounded-lg border border-brandPink px-3 py-1 text-center text-lg font-bold text-brandPink'>
-                GarbhaGudi Average*
-              </h4>
-              <div className='h-5 w-full rounded-full bg-brandPurple'>
-                <div className='flex h-5 w-[75%] items-center justify-center rounded-l-full bg-brandPurpleDark text-center text-sm font-extrabold leading-none text-white'>
-                  65-73%
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
