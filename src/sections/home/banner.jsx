@@ -22,7 +22,7 @@ const Banner = () => {
         {/* Preload the critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737101101/01_Jan_25-Offer-Ads-LP_V2-01_gs7vei.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
           as='image'
         />
       </Head>
@@ -65,7 +65,7 @@ const Banner = () => {
 
         <div className='order-1 flex items-end justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737101101/01_Jan_25-Offer-Ads-LP_V2-01_gs7vei.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
             width={800}
             height={450}
             alt='Start IVF from as low as 90K'
