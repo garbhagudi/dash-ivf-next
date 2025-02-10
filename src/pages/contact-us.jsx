@@ -11,9 +11,8 @@ const IndexPage = () => {
           height={1080}
           alt='book an appointment form'
           className='h-full w-full object-center'
-          priority={true}
           quality={75}
-          // loading='lazy'
+          loading='lazy'
         />
         <FormComponent title='Book Your Appointment' />
       </div>
