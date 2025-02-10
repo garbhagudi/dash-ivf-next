@@ -26,7 +26,6 @@ const FormComponent = ({ title }) => {
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
-  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
     if (router.query) {
@@ -46,57 +45,24 @@ const FormComponent = ({ title }) => {
       return;
     }
 
-    const getAccessToken = async () => {
-      if (accessToken) return accessToken;
-
-      try {
-        const tokenParams = new URLSearchParams({
-          refresh_token: process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN,
-          client_id: process.env.NEXT_PRIVATE_ZOHO_CLIENT_ID,
-          client_secret: process.env.NEXT_PRIVATE_ZOHO_CLIENT_SECRET,
-          grant_type: 'refresh_token',
-        });
-
-        const tokenResponse = await fetch(
-          `${process.env.NEXT_PRIVATE_ZOHO_0AUTH_URL}?${tokenParams.toString()}`,
-          { method: 'POST' },
-        );
-
-        const tokenData = await tokenResponse.json();
-
-        if (!tokenResponse.ok)
-          throw new Error(`Token Error: ${tokenData.error}`);
-
-        setAccessToken(tokenData.access_token);
-        return tokenData.access_token;
-      } catch (error) {
-        console.error(error.message);
-        return null;
-      }
-    };
-
     try {
-      const token = await getAccessToken();
-      if (!token) throw new Error('Access token could not be retrieved.');
-
-      const requestData = { data: [data] };
-
-      const response = await fetch(process.env.NEXT_PRIVATE_ZOHO_API_URL, {
+      const response = await fetch('/api/createLeads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Zoho-oauthtoken ${token}`,
         },
-        body: JSON.stringify(requestData),
+        body: JSON.stringify({ data: data }),
       });
 
-      if (!response.ok)
-        throw new Error(`HTTP error! Status: ${response.status}`);
-
       const responseData = await response.json();
-      router.push('https://www.garbhagudi-ivf.com/thank-you.html');
-    } catch (error) {
-      console.error(error.message);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+    } catch (err) {
+      console.log(err);
+    } finally {
+      router.push('/thank-you-2.html');
     }
   };
 
@@ -197,7 +163,7 @@ const FormComponent = ({ title }) => {
           )}
         </div>
 
-        <div className='mb-6 mt-4 flex items-center justify-center space-x-4'>
+        <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
             type='submit'
             className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
