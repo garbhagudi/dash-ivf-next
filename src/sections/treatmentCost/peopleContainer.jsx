@@ -34,12 +34,6 @@ const PeopleContainer = () => {
     },
     {
       key: 'infertility9',
-      title: 'People using surrogacy',
-      content:
-        'Individuals or couples who choose surrogacy, whether using a gestational surrogate or egg donor, often need assistance with fertility treatments to successfully conceive.',
-    },
-    {
-      key: 'infertility10',
       title: 'People who have had previous pregnancy prevention surgery',
       content:
         'People who have undergone tubal ligation or other forms of pregnancy prevention surgery and later wish to conceive may require fertility treatments to reverse the procedure.',
@@ -48,7 +42,7 @@ const PeopleContainer = () => {
 
   return (
     <div className='mx-auto my-10 max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
-      <h2 className='mt-2 text-center font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl'>
+      <h2 className='mt-2 text-left font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl lg:text-center'>
         Who Should Look for IVF Treatment?
       </h2>
       <div className='mx-auto max-w-7xl px-3'>

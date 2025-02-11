@@ -7,7 +7,7 @@ const KeyBenefits = () => {
         <div className='mx-auto max-w-7xl px-3 lg:px-5'>
           <div className='font-lexend py-5 text-center text-xl font-bold text-yellow-500 lg:py-6 lg:text-2xl'>
             GarbhaGudi IVF Centre offers a Tantalizing Thursdays Avail ₹10,000
-            off IVF Cycle on Every Thursday
+            OFF on IVF Cycle Every Thursday
           </div>
         </div>
       </div>
