@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 
 const useScript = (url, widgetCode, condition) => {
+  console.log('check', condition);
+
   useEffect(() => {
+    console.log('check in', condition);
     if (typeof window === 'undefined' || !condition) return;
 
     // Prevent duplicate scripts
@@ -38,6 +41,8 @@ const useScript = (url, widgetCode, condition) => {
 };
 
 export default function SalesIQ({ condition }) {
+  console.log('1', condition);
+
   useScript(
     'https://salesiq.zoho.com/widget',
     '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0',
