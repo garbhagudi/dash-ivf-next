@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 
 const useScript = (url, widgetCode, condition) => {
   useEffect(() => {
-    if (!condition) return;
+    if (typeof window === 'undefined' || !condition) return;
+
+    // Prevent duplicate scripts
+    if (document.getElementById('zsiqscript')) return;
 
     const script = document.createElement('script');
     script.setAttribute('type', 'text/javascript');
@@ -26,7 +29,8 @@ const useScript = (url, widgetCode, condition) => {
     };
 
     return () => {
-      if (script.parentNode) script.parentNode.removeChild(script);
+      const existingScript = document.getElementById('zsiqscript');
+      if (existingScript) existingScript.remove();
       const existingWidget = document.getElementById('zsiqwidget');
       if (existingWidget) existingWidget.remove();
     };
