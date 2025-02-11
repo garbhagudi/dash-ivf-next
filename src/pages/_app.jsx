@@ -5,9 +5,11 @@ import { useRouter } from 'next/router';
 import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
-import FloatWhatsApp from 'components/FloatWhatsapp';
 
 const SalesIQ = dynamic(() => import('components/SalesIQ'), { ssr: false });
+const FloatWhatsApp = dynamic(() => import('components/FloatWhatsapp'), {
+  ssr: false,
+});
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
   ssr: false,
 });
@@ -48,7 +50,7 @@ function MyApp({ Component, pageProps }) {
         </main>
         <FloatWhatsApp condition={showSalesIQ} />
         <FloatPhone />
-        {showSalesIQ && <SalesIQ />}
+        <SalesIQ condition={showSalesIQ} />
         <Footer />
       </Flex>
     </ThemeProvider>
