@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { ThemeProvider, Flex } from 'theme-ui';
-import { useRouter } from 'next/router';
 import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
@@ -16,23 +15,12 @@ const Footer = dynamic(() => import('components/footer/footer'), {
 });
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-  const [showSalesIQ, setShowSalesIQ] = useState(true);
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const TagManager = require('react-gtm-module');
       TagManager.initialize({ gtmId: 'GTM-NT9BZ69' });
     }
   }, []);
-
-  useEffect(() => {
-    if (router.pathname === '/ivf/treatment-cost') {
-      setShowSalesIQ(false);
-    } else {
-      setShowSalesIQ(true);
-    }
-  }, [router.pathname]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -46,9 +34,9 @@ function MyApp({ Component, pageProps }) {
         <main sx={{ variant: 'layout.main' }}>
           <Component {...pageProps} />
         </main>
-        <FloatWhatsApp condition={showSalesIQ} />
+        <FloatWhatsApp />
         <FloatPhone />
-        {showSalesIQ && <SalesIQ />}
+        <SalesIQ />
         <Footer />
       </Flex>
     </ThemeProvider>

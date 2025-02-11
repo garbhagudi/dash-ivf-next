@@ -4,7 +4,7 @@ import AccordionLayout from 'components/FaqLayout';
 const Faq = () => {
   const [activeIndex1, setActiveIndex1] = React.useState(1);
   return (
-    <div className='bg-fuchsia-50'>
+    <div className='bg-fuchsia-50 px-1'>
       <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold lg:text-4xl'>
         Frequently asked questions
       </h2>

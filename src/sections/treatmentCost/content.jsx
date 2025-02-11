@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Content = () => {
   return (
     <div>
-      <h2 className='mx-auto my-16 text-center font-heading text-3xl font-black lg:text-5xl'>
+      <h2 className='mx-auto mb-6 mt-16 text-center font-heading text-3xl font-black lg:text-5xl'>
         Why Choose GarbhaGudi for IVF Treatment
       </h2>{' '}
       <Image
@@ -11,7 +11,7 @@ const Content = () => {
         alt='Banner Image'
         width={400}
         height={400}
-        className='mx-auto h-full w-full object-contain'
+        className='mx-auto w-full object-contain lg:w-8/12'
         priority
       />
     </div>
