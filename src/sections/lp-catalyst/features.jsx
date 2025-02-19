@@ -9,7 +9,7 @@ const features = [
     id: 1,
     name: 'High Success Rate',
     icon: <CiPercent />,
-    content: 'Experience a 65-73% IVF success rate with GarbhaGudi.',
+    content: 'Experience a High success rate with GarbhaGudi.',
     link: '/features/success-rates-of-ivf',
   },
   {

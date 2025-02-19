@@ -10,7 +10,7 @@ const Banner = () => {
           <div className='relative mb-8 mt-2 pl-2 pr-2 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
             <Image
               className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737531412/Website-01_x6mpwp.png'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1739953592/Website_Landing_page_-_02-01_ft0jzo.webp'
               alt='happy couple with a baby'
               width={500}
               height={500}
@@ -40,7 +40,7 @@ const Banner = () => {
                     <li>3. Ultrasound Scan</li>
                     <li>4. Semen Analysis</li>
                   </ul>
-                  <p className='mt-2'>Offer Validity: 31st January 2025</p>
+                  <p className='mt-2'>Offer Validity: 28th February 2025</p>
                 </div>
                 <p className='mt-2 text-base font-extrabold'>
                   EMI Facility Available at 0% Interest.
@@ -72,9 +72,6 @@ const Banner = () => {
                   Years of Experience
                 </div>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
-                  <span className='font-bold text-brandPink dark:text-gg-400'>
-                    65-73%
-                  </span>{' '}
                   IVF Success Rate
                 </div>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
@@ -171,7 +168,7 @@ const Banner = () => {
             <div className='relative mt-2 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
               <Image
                 className='w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none'
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1737531412/Website-01_x6mpwp.png'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1739953592/Website_Landing_page_-_02-01_ft0jzo.webp'
                 alt='happy couple with a baby'
                 width={500}
                 height={500}
