@@ -14,14 +14,14 @@ const metrics = [
     emphasis: 'Free Fertility Awareness Camps',
   },
   {
-    id: 3,
-    stat: '65-73%',
-    emphasis: 'IVF Success Rate',
-  },
-  {
     id: 4,
     stat: '7',
     emphasis: 'Infertility Centres Across Bangalore',
+  },
+  {
+    id: 3,
+    stat: '',
+    emphasis: 'IVF Success Rate',
   },
 ];
 
@@ -56,7 +56,7 @@ const Stat = () => {
             possibilities never end. As one of the finest{' '}
             <Link
               href='/'
-              className='text-gg-500 dark:text-gg-400 hover:underline'
+              className='text-gg-500 hover:underline dark:text-gg-400'
             >
               IVF Centre in Bangalore
             </Link>
@@ -65,7 +65,7 @@ const Stat = () => {
             treatment and care, some of the other contributing factors for
             achieving high success rates are:
           </p>
-          <div className='mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2'>
+          <div className='mt-12 flex flex-col gap-x-6 gap-y-8'>
             {metrics.map((item) => (
               <p key={item.id}>
                 <span className='block font-heading text-2xl font-bold text-gray-800 dark:text-gray-200'>

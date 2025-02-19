@@ -15,7 +15,7 @@ const metrics = [
   },
   {
     id: 3,
-    stat: '65-73%',
+    stat: '',
     emphasis: 'IVF Success Rate',
   },
   {
