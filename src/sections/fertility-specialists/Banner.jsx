@@ -7,7 +7,7 @@ const Banner = () => {
     <div>
       <Image
         src={
-          'https://res.cloudinary.com/garbhagudiivf/image/upload/v1737708942/Doctors_Image-01_gwmana.jpg'
+          'https://res.cloudinary.com/garbhagudiivf/image/upload/v1739971295/Doctors_Image-01_x4ldnl.webp'
         }
         alt={'fertility-specialists-banner'}
         width={1920}

@@ -8,7 +8,7 @@ const features = [
     name: 'High Success Rate',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840283/Icons/Features/Success_Rate_lig6sq.svg',
     content:
-      'GarbhaGudi has one of the highest IVF treatments success rates in the industry over 65-73 per cent.',
+      'GarbhaGudi has one of the highest IVF treatments success rates in the industry.',
     link: '/features/success-rates-of-ivf',
   },
   {
