@@ -4,6 +4,8 @@ const getAccessToken = async () => {
   if (accessToken) return accessToken;
 
   try {
+    console.log(process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN);
+
     const tokenParams = `refresh_token=${process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN}&client_id=${process.env.NEXT_PRIVATE_ZOHO_CLIENT_ID}&client_secret=${process.env.NEXT_PRIVATE_ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
 
     const tokenResponse = await fetch(
