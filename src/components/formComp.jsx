@@ -47,7 +47,7 @@ const FormComponent = ({ title }) => {
       return;
     }
 
-    console.log('2');
+    console.log('2', process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN);
     try {
       console.log('3');
       const response = await fetch('/api/createLeads', {
