@@ -40,16 +40,12 @@ const FormComponent = ({ title }) => {
   };
 
   const onSubmit = async (data) => {
-    console.log('1', data);
-
     if (!captchaVerified) {
       setShowCaptchaError(true);
       return;
     }
 
-    console.log('2', process.env.NEXT_PRIVATE_ZOHO_REFRESH_TOKEN);
     try {
-      console.log('3');
       const response = await fetch('/api/createLeads', {
         method: 'POST',
         headers: {
@@ -57,21 +53,17 @@ const FormComponent = ({ title }) => {
         },
         body: JSON.stringify({ data: data }),
       });
-      console.log('4', response);
 
       const responseData = await response.json();
-      console.log('5', responseData);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const result = await response.json();
-      console.log(responseData, result);
 
       responseData?.data[0]?.code === 'SUCCESS' &&
         router.push('/thank-you.html');
     } catch (err) {
       console.log(err);
-    } finally {
     }
   };
 
