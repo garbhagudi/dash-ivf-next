@@ -40,16 +40,15 @@ const Banner = () => {
               <p>
                 Offer of the Month:{' '}
                 <strong className='text-brandPurpleDark'>
-                  Exclusive Package at ₹ 1111
+                  Free Fertility Screening
                 </strong>
               </p>
               <ul className='mt-2 flex flex-col items-start space-y-1'>
-                <li>1. Consultation</li>
-                <li>2. AFC Scan</li>
-                <li>3. Ultrasound Scan</li>
-                <li>4. Semen Analysis</li>
+                <li>1. Free Consultation</li>
+                <li>2. Baseline Scan</li>
+                <li>3. Semen Analysis</li>
               </ul>
-              <p className='mt-2'>Offer Validity: 28th Feb 2025</p>
+              <p className='mt-2'>Offer Validity: 31st March 2025</p>
             </div>
             <Link
               href='tel:+919480948005'
@@ -65,7 +64,7 @@ const Banner = () => {
 
         <div className='order-1 flex items-end justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740748730/PHOTO-2025-02-28-15-58-41_wpwy1e.png'
             width={800}
             height={450}
             alt='Start IVF from as low as 90K'
