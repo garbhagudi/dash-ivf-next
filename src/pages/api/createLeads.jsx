@@ -4,10 +4,10 @@ const getAccessToken = async () => {
   if (accessToken) return accessToken;
 
   try {
-    const tokenParams = `refresh_token=${process.env.NEXT_PUBLIC_ZOHO_REFRESH_TOKEN}&client_id=${process.env.NEXT_PUBLIC_ZOHO_CLIENT_ID}&client_secret=${process.env.NEXT_PUBLIC_ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
+    const tokenParams = `refresh_token=${process.env.ZOHO_REFRESH_TOKEN}&client_id=${process.env.ZOHO_CLIENT_ID}&client_secret=${process.env.ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
 
     const tokenResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_ZOHO_0AUTH_URL}?${tokenParams}`,
+      `${process.env.ZOHO_0AUTH_URL}?${tokenParams}`,
       { method: 'POST' },
     );
 
@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 
     const requestData = JSON.stringify({ data: [req.body.data] });
 
-    const response = await fetch(process.env.NEXT_PUBLIC_ZOHO_API_URL, {
+    const response = await fetch(process.env.ZOHO_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
