@@ -51,19 +51,20 @@ const FormComponent = ({ title }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ data: data }),
+        body: JSON.stringify({ data }),
       });
 
-      const responseData = await response.json();
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const result = await response.json();
 
-      responseData?.data[0]?.code === 'SUCCESS' &&
+      const responseData = await response.json();
+
+      if (responseData?.data?.[0]?.code === 'SUCCESS') {
         router.push('/thank-you.html');
+      }
     } catch (err) {
-      console.log(err);
+      console.error('Error submitting form:', err);
     }
   };
 
