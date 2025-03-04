@@ -20,17 +20,18 @@ const FormComponent = ({ title }) => {
       Email: '',
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
-      UTM_Campign: '',
+      UTM_Campaign: '',
     },
   });
 
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
+  const [load, setLoad] = useState(false);
 
   useEffect(() => {
     if (router.query) {
       const { utm_campaign } = router.query;
-      setValue('UTM_Campign', utm_campaign || '');
+      setValue('UTM_Campaign', utm_campaign || '');
     }
   }, [router.query, setValue]);
 
@@ -40,7 +41,9 @@ const FormComponent = ({ title }) => {
   };
 
   const onSubmit = async (data) => {
+    setLoad(true);
     if (!captchaVerified) {
+      setLoad(false);
       setShowCaptchaError(true);
       return;
     }
@@ -53,14 +56,15 @@ const FormComponent = ({ title }) => {
         },
         body: JSON.stringify({ data: data }),
       });
-
       const responseData = await response.json();
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+      setLoad(false);
       responseData?.data[0]?.code === 'SUCCESS' &&
         router.push('/thank-you.html');
     } catch (err) {
+      setLoad(false);
       console.log(err);
     }
   };
@@ -108,10 +112,10 @@ const FormComponent = ({ title }) => {
                 placeholder='Enter phone number'
                 {...register('Phone', {
                   required: 'Phone is required',
-                  pattern: {
-                    value: /^[0-9]{10}$/, // Assuming a 10-digit phone number
-                    message: 'Invalid phone number',
-                  },
+                  // pattern: {
+                  //   value: /^[0-9]{10}$/, // Assuming a 10-digit phone number
+                  //   message: 'Invalid phone number',
+                  // },
                 })}
                 className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
               />
@@ -165,9 +169,35 @@ const FormComponent = ({ title }) => {
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
           <button
             type='submit'
-            className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+            className='flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
+            disabled={load}
           >
             Submit
+            {load && (
+              <svg
+                width={22}
+                height={22}
+                viewBox='0 0 38 38'
+                xmlns='http://www.w3.org/2000/svg'
+                stroke='#B2B2B2'
+              >
+                <g fill='none' fillRule='evenodd'>
+                  <g transform='translate(1 1)' strokeWidth='2'>
+                    <circle strokeOpacity='.5' cx='18' cy='18' r='18' />
+                    <path d='M36 18c0-9.94-8.06-18-18-18'>
+                      <animateTransform
+                        attributeName='transform'
+                        type='rotate'
+                        from='0 18 18'
+                        to='360 18 18'
+                        dur='1s'
+                        repeatCount='indefinite'
+                      />
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            )}
           </button>
 
           <button
