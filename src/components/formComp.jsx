@@ -58,8 +58,6 @@ const FormComponent = ({ title }) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const result = await response.json();
-
       responseData?.data[0]?.code === 'SUCCESS' &&
         router.push('/thank-you.html');
     } catch (err) {
