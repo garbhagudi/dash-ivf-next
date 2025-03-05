@@ -134,19 +134,6 @@ const DoctorsList = () => {
       category: 'fertilitySpecialist',
       designation: 'Fertility Specialist',
       image: {
-        url: 'https://media.graphassets.com/kKgEEz2Q4GLNK4wMPIOW',
-      },
-      imageAlt: 'IVF Specialist in Bangalore - Dr Deepthi Venkatesh',
-      medicalRegNo: '104924',
-      name: 'Dr Deepthi Venkatesh',
-      order: 10,
-      qualification: 'MBBS, MS - FRM',
-      content: `Dr. Deepthi Venkatesh MBBS, MS - FRM is a distinguished fertility specialist with over seven years of experience in the field of obstetrics and gynecology. With a passion for helping couples achieve their dream of parenthood, Dr. Deepthi is an expert in Intra-Uterine Insemination (IUI), in vitro fertilization (IVF), and other such ART techniques. Her personalized approach and exceptional success rates have earned high praise from her patients, who appreciate her compassionate nature and approachability. Driven by her commitment to providing the very best care, Dr. Deepthi continuously updates her knowledge and skills. `,
-    },
-    {
-      category: 'fertilitySpecialist',
-      designation: 'Fertility Specialist',
-      image: {
         url: 'https://media.graphassets.com/4UJ5nbpQYCRSGSuKrWJq',
       },
       imageAlt: null,
@@ -273,7 +260,7 @@ const DoctorsList = () => {
             {/* Tabs for Categories */}
             <div className='lg:block'>
               <TabGroup>
-                <TabList className='bg-gg-400 mt-12 flex space-x-2 rounded-xl p-2'>
+                <TabList className='mt-12 flex space-x-2 rounded-xl bg-gg-400 p-2'>
                   {categories.map((category) => (
                     <Tab
                       key={category}
@@ -281,7 +268,7 @@ const DoctorsList = () => {
                         `w-full rounded-lg py-2.5 text-sm font-medium leading-5 focus:outline-none lg:text-base ${
                           selected
                             ? 'bg-brandPurpleDark text-white shadow'
-                            : 'hover:bg-gg-500/[0.9] text-white'
+                            : 'text-white hover:bg-gg-500/[0.9]'
                         }`
                       }
                     >
@@ -317,7 +304,7 @@ const DoctorsList = () => {
                                 <p className='text-sm text-purple-900 dark:text-purple-200'>
                                   {doctor.qualification}
                                 </p>
-                                <p className='text-gg-500 dark:text-gg-300 text-sm'>
+                                <p className='text-sm text-gg-500 dark:text-gg-300'>
                                   {doctor.designation}
                                 </p>
                                 <Popup
