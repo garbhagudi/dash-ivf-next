@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ContactForm from 'components/ContactForm';
+import FormComponent from 'components/formComp';
 
 const Offer = () => {
   return (
@@ -24,7 +24,7 @@ const Offer = () => {
           <h2 className='font-lexend overflow-hidden rounded-lg text-center text-xl font-bold text-white'>
             Talk To Our Fertility Experts Today
           </h2>
-          <ContactForm />
+          <FormComponent />
         </div>
       </div>
     </section>

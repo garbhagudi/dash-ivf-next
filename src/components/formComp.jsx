@@ -54,8 +54,9 @@ const FormComponent = ({ title }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ data: data }),
+        body: JSON.stringify({ data }),
       });
+
       const responseData = await response.json();
       if (!response.ok) {
         throw new Error('Network response was not ok');
