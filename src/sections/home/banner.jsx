@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-const ContactForm = dynamic(() => import('components/ContactForm'), {
-  ssr: false,
-});
+import FormComponent from 'components/formComp';
 
 const Banner = () => {
   return (
@@ -77,7 +73,7 @@ const Banner = () => {
 
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            <ContactForm title='Book Your Appointment' />
+            <FormComponent title='Book Your Appointment' />
           </div>
         </div>
       </div>

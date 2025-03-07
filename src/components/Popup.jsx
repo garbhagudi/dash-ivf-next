@@ -1,8 +1,8 @@
 import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import { useState } from 'react';
 import Image from 'next/image';
-import ContactForm from './ContactForm';
 import { HiX } from 'react-icons/hi';
+import FormComponent from './formComp';
 
 export default function Popup({ title, btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -62,7 +62,7 @@ export default function Popup({ title, btnClassName }) {
                     quality={75}
                     loading='lazy'
                   />
-                  <ContactForm title='Book Your Appointment' />
+                  <FormComponent title='Book Your Appointment' />
                   <div
                     onClick={closeModal}
                     className='absolute right-3 top-3 cursor-pointer'
