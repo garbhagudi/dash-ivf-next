@@ -540,13 +540,13 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr Anitha Manoj',
+    name: 'Dr. Anitha A Manoj',
     qualification: 'MBBS, MS (OBG), FMAS, FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/7ghdxcJPTZIQvtdFRVWn',
     },
-    imageAlt: 'IVF Doctor in Bangalore - Dr Anitha Manoj',
+    imageAlt: 'IVF Doctor in Bangalore - Dr. Anitha A Manoj',
     bio: {
       raw: {
         children: [
@@ -557,7 +557,7 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: 'Dr Anita has over a decade of experience as a gynaecologist. She specializes in infertility and holds a fellowship in reproductive medicine from Rajiv Gandhi University of Health Sciences. She regularly keeps herself updated with current medical knowledge & practices. Dr Anita’s prime motto is to ensure safe medical care for patients. She is one of the best fertility experts in Bangalore, and practices at GarbhaGudi IVF Centre, Bangalore. She is a member of FOGSI and the Indian Medical Association (IMA).',
+                    text: 'Dr Anitha has over a decade of experience as a gynaecologist. She specializes in infertility and holds a fellowship in reproductive medicine from Rajiv Gandhi University of Health Sciences. She regularly keeps herself updated with current medical knowledge & practices. Dr Anitha’s prime motto is to ensure safe medical care for patients. She is one of the best fertility experts in Bangalore, and practices at GarbhaGudi IVF Centre, Bangalore. She is a member of FOGSI and the Indian Medical Association (IMA).',
                   },
                 ],
               },
