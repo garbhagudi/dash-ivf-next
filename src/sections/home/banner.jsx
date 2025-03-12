@@ -34,7 +34,12 @@ const Banner = () => {
             </div>
             <div className='font-content flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
               <p>
-                Offer of the Month:{' '}
+                Offer of the Month: <br />
+                15th Anniversary Special Offer: <br />
+                <strong className='text-brandPurpleDark'>
+                  ₹1 Lakh Off on IVF Treatment
+                </strong>
+                <div className='text-center'>&</div>
                 <strong className='text-brandPurpleDark'>
                   Free Fertility Screening
                 </strong>
@@ -60,7 +65,7 @@ const Banner = () => {
 
         <div className='order-1 flex items-end justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740748730/PHOTO-2025-02-28-15-58-41_wpwy1e.webp'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.png'
             width={800}
             height={450}
             alt='Start IVF from as low as 90K'
