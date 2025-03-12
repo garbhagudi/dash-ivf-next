@@ -6,8 +6,6 @@ import Link from 'next/link';
 import Popup from 'components/Popup';
 
 export default function Header() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const logoUrl =
     'https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg';
 

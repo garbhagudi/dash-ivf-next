@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
@@ -12,7 +12,7 @@
 </head>
 <div
   id="crmWebToEntityForm"
-  class="flex flex-col items-center justify-center w-full h-full bg-transparent"
+  class="flex h-full w-full flex-col items-center justify-center bg-transparent"
 >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -53,11 +53,11 @@
     <input type="text" style="display: none" id="ldeskuid" name="ldeskuid" />
     <input type="text" style="display: none" id="LDTuvid" name="LDTuvid" />
     <!-- Do not remove this code. -->
-    <div class="font-[lexend] font-bold text-2xl text-center">
+    <div class="text-center font-[lexend] text-2xl font-bold">
       Book your Appointment
     </div>
-    <div class="flex flex-col mx-auto items-end mt-6 px-3">
-      <div class="flex items-center mx-auto">
+    <div class="mx-auto mt-6 flex flex-col items-end px-3">
+      <div class="mx-auto flex items-center">
         <div class="">
           <input
             type="text"
@@ -65,11 +65,11 @@
             name="Last Name"
             maxlength="80"
             placeholder="Full Name*"
-            class="px-3 py-2 font-[lexend] text-center border border-pink-400 rounded-md outline-none focus:border-purple-500"
+            class="rounded-md border border-pink-400 px-3 py-2 text-center font-[lexend] outline-none focus:border-purple-500"
           />
         </div>
       </div>
-      <div class="flex items-center mt-3 mx-auto">
+      <div class="mx-auto mt-3 flex items-center">
         <div class="">
           <input
             type="text"
@@ -77,7 +77,7 @@
             name="Phone"
             maxlength="30"
             placeholder="Phone*"
-            class="px-3 py-2 text-center font-[lexend] border border-pink-400 rounded-md outline-none focus:border-purple-500"
+            class="rounded-md border border-pink-400 px-3 py-2 text-center font-[lexend] outline-none focus:border-purple-500"
           />
         </div>
       </div>
@@ -223,43 +223,43 @@
       </div>
 
       <!-- Do not remove this code. -->
-      <div class="mt-2.5 rounded-md mx-auto flex items-center justify-center">
+      <div class="mx-auto mt-2.5 flex items-center justify-center rounded-md">
         <div class=""></div>
         <div
-          class="text-center font-[lexend] border border-pink-400 rounded-md outline-none focus:border-purple-500 overflow-hidden"
+          class="overflow-hidden rounded-md border border-pink-400 text-center font-[lexend] outline-none focus:border-purple-500"
         >
           <img
             id="imgid3505252000162902402"
-            class="px-2.5 bg-white"
+            class="bg-white px-2.5"
             src="https://crm.zoho.com/crm/CaptchaServlet?formId=f00b520e6aea56d6077a1a495607a14a9e4a75d53bb5b7e8004f108aa05939d2af2d8713e6edba63f7b590b44e970477&grpid=f9599782f917e6468f66444b706a506dcd7b4afe095aa46c72eedf8e53ba6d08"
           />
           <a
             href="javascript:;"
             onclick="reloadImg3505252000162902402();"
-            class="w-fulltext-center font-[lexend] flex items-center justify-center bg-purple-500 text-white"
+            class="w-fulltext-center flex items-center justify-center bg-purple-500 font-[lexend] text-white"
             >Reload</a
           >
         </div>
         <div class=""></div>
       </div>
-      <div class="flex items-center mt-3 mx-auto">
+      <div class="mx-auto mt-3 flex items-center">
         <div class="">
           <input
             type="text"
             maxlength="10"
             name="enterdigest"
             placeholder="Enter the Captcha*"
-            class="px-3 py-2 text-center border font-[lexend] border-pink-400 rounded-md outline-none focus:border-purple-500"
+            class="rounded-md border border-pink-400 px-3 py-2 text-center font-[lexend] outline-none focus:border-purple-500"
           />
         </div>
       </div>
       <div class="mx-auto">
         <div class=""></div>
-        <div class="flex items-center justify-center space-x-3 mx-auto mt-3">
+        <div class="mx-auto mt-3 flex items-center justify-center space-x-3">
           <input
             type="submit"
             id="formsubmit"
-            class="formsubmit mt-6 font-[lexend] text-white px-5 py-2 text-center bg-pink-600 hover:bg-pink-400 focus:bg-pink-400 rounded-md outline-none focus:border-purple-500"
+            class="formsubmit mt-6 rounded-md bg-pink-600 px-5 py-2 text-center font-[lexend] text-white outline-none hover:bg-pink-400 focus:border-purple-500 focus:bg-pink-400"
             value="Book your Appointment"
             title="Submit"
           />
