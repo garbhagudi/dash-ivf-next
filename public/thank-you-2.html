@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="h-full bg-white">
   <head>
     <meta charset="utf-8" />
@@ -6,8 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -46,7 +46,7 @@
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
       rel="stylesheet"
@@ -54,7 +54,7 @@
 
     <title>Thank You!</title>
     <!-- Google Tag Manager -->
-    <script>
+    <script defer>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -69,7 +69,7 @@
     <!-- End Google Tag Manager -->
   </head>
   <body
-    class="antialiased text-gray-600 min-h-full flex flex-col relative bg-gray-100"
+    class="relative flex min-h-full flex-col bg-gray-100 text-gray-600 antialiased"
   >
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -78,21 +78,22 @@
         height="0"
         width="0"
         style="display: none; visibility: hidden"
+        defer
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <main
-      class="flex-auto flex items-center justify-center text-center text-gray-400 py-16 px-4 sm:px-6 lg:px-8"
+      class="flex flex-auto items-center justify-center px-4 py-16 text-center text-gray-400 sm:px-6 lg:px-8"
     >
       <div>
         <h1
-          class="text-3xl sm:text-4.5xl text-gray-800 font-extrabold mb-4"
+          class="sm:text-4.5xl mb-4 text-3xl font-extrabold text-gray-800"
           style="font-family: b612"
         >
           Thank you!
         </h1>
         <p
-          class="mb-4 max-w-lg mx-auto text-gray-600"
+          class="mx-auto mb-4 max-w-lg text-gray-600"
           style="font-family: Nunito"
         >
           Our representative will get in touch with you soon to confirm your
@@ -100,7 +101,7 @@
             first free consultation at any of our 7 centres in Bangalore.
           </strong>
         </p>
-        <div class="max-w-lg mx-auto mb-4">
+        <div class="mx-auto mb-4 max-w-lg">
           <img
             src="./images/offer.webp"
             alt="offer image"
@@ -110,14 +111,14 @@
         <a
           href="https://garbhagudi-ivf.com"
           target="_blank"
-          class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md shadow-md w-full"
+          class="inline-block w-full rounded-md bg-pink-600 px-4 py-2 text-white shadow-md hover:bg-pink-700"
           style="font-family: Nunito"
           >Home</a
         >
       </div>
     </main>
     <footer
-      class="relative z-10 flex-none pb-6 flex items-start justify-center text-gray-400 px-4 sm:px-6 lg:px-8"
+      class="relative z-10 flex flex-none items-start justify-center px-4 pb-6 text-gray-400 sm:px-6 lg:px-8"
     >
       <div class="mt-8 text-center" style="font-family: Nunito">
         &copy; GarbhaGudi IVF Centre -
@@ -154,7 +155,7 @@
         window,
         document,
         'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
+        'https://connect.facebook.net/en_US/fbevents.js',
       );
 
       fbq('init', '2326481447668134');
@@ -176,6 +177,7 @@
         height="0"
         width="0"
         style="display: none; visibility: hidden"
+        defer
       ></iframe
     ></noscript>
   </body>

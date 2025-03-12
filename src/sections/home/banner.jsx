@@ -6,20 +6,20 @@ import FormComponent from 'components/formComp';
 const Banner = () => {
   return (
     <div>
-      {/* Preload fonts for faster text rendering */}
       <Head>
+        {/* Preload critical image */}
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
+          as='image'
+        />
+        {/* Preload Fonts */}
         <link
           rel='preload'
           href='/path-to-font.woff2'
           as='font'
           type='font/woff2'
           crossOrigin='anonymous'
-        />
-        {/* Preload the critical image */}
-        <link
-          rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
-          as='image'
         />
       </Head>
 
@@ -60,12 +60,11 @@ const Banner = () => {
 
         <div className='order-1 flex items-end justify-center overflow-hidden'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740748730/PHOTO-2025-02-28-15-58-41_wpwy1e.png'
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1740748730/PHOTO-2025-02-28-15-58-41_wpwy1e.webp'
             width={800}
             height={450}
             alt='Start IVF from as low as 90K'
             quality={90}
-            loading='eager'
             priority
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
           />
