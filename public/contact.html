@@ -1,6 +1,6 @@
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet"
@@ -43,7 +43,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Tag Manager -->
-  <script>
+  <script defer>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -66,6 +66,7 @@
       height="0"
       width="0"
       style="display: none; visibility: hidden"
+      defer
     ></iframe
   ></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -80,7 +81,10 @@
   >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      rel="dns-prefetch"
+    ></script>
     <form
       action="https://crm.zoho.com/crm/WebToLeadForm"
       name="WebToLeads3505252000085291164"
