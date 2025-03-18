@@ -6,15 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
+      rel="dns-prefetch"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="dns-prefetch"
     />
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -45,13 +45,11 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-      rel="stylesheet"
+      rel="dns-prefetch"
     />
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Thank You!</title>
     <!-- Google Tag Manager -->
     <script defer>
@@ -64,7 +62,7 @@
         j.async = true;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-NT9BZ69');
+      })(window, document, 'script', 'dataLayer', 'GTM-5T77DVZ');
     </script>
     <!-- End Google Tag Manager -->
   </head>
@@ -74,104 +72,119 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NT9BZ69"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5462HX7"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-        defer
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <main
-      class="flex flex-auto items-center justify-center px-4 py-16 text-center text-gray-400 sm:px-6 lg:px-8"
+
+    <header
+      class="dark-mode:text-gray-200 dark-mode:bg-gray-800 w-full border-b bg-gray-100 pb-4 shadow-md md:pb-2"
+      style="font-family: Nunito"
     >
-      <div>
-        <h1
-          class="sm:text-4.5xl mb-4 text-3xl font-extrabold text-gray-800"
-          style="font-family: b612"
-        >
-          Thank you!
-        </h1>
-        <p
-          class="mx-auto mb-8 max-w-lg text-gray-600"
-          style="font-family: Nunito"
-        >
-          Our representative will get in touch with you soon!
-          <strong class="font-semibold text-gray-800"
-            >Feel free to browse our website a little more
-          </strong>
-          to get more information
-        </p>
+      <!-- component -->
+      <div
+        class="mx-auto flex max-w-screen-xl flex-col items-center px-4 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8"
+      >
+        <div class="flex flex-row items-center justify-between p-4">
+          <!-- logo and home page link -->
+          <a
+            href="https://www.garbhagudi-ivf.com/"
+            class="dark-mode:text-white focus:shadow-outline rounded-lg text-lg font-semibold uppercase tracking-widest text-gray-900 focus:outline-none"
+            ><img
+              src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg"
+              alt="logo"
+              width="210px"
+          /></a>
+        </div>
+        <!-- contact us -->
         <a
-          href="https://garbhagudi-ivf.com"
-          class="inline-flex w-full max-w-[8rem] justify-center rounded-md bg-gray-700 px-4 py-3 text-sm font-semibold text-gray-200 hover:bg-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-          style="font-family: Nunito"
-          >Home</a
+          href="tel:+919480948005"
+          class="flex items-center gap-2 rounded-md pr-2 shadow-md"
+          style="background-color: rgb(209, 213, 219); width: fit-content"
         >
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-md text-white"
+            style="background-color: rgb(234, 75, 106)"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1.2em"
+              width="1.2em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="text-lg font-semibold" style="color: rgb(234, 75, 106)">
+            +91 9480 9480 05
+          </h1>
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow" style="background-color: rgb(253, 244, 255)">
+      <div
+        class="flex h-full w-full flex-col items-center justify-center gap-5 text-center md:flex-row"
+      >
+        <div class="order-2 w-full md:order-1 md:w-2/6">
+          <h1 class="mb-4 text-4xl font-bold text-gray-900">
+            <span
+              class="border-b-2 pb-0.5"
+              style="border-color: rgb(32, 141, 174)"
+            >
+              Thank </span
+            >you
+          </h1>
+          <p class="text-gray-700">
+            We have forward your request to the concerned team and an agent will
+            contact you shortly.
+          </p>
+          <p class="text-gray-700">
+            Meanwhile, you can go through our website and learn more about our
+            services and features.
+          </p>
+        </div>
+        <img
+          src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png"
+          alt="GarbhaGudi Logo"
+          class="order-1 h-72 md:order-2 md:h-96"
+        />
       </div>
     </main>
-    <footer
-      class="relative z-10 flex flex-none items-start justify-center px-4 pb-6 text-gray-400 sm:px-6 lg:px-8"
-    >
-      <div class="mt-8 text-center" style="font-family: Nunito">
-        &copy; GarbhaGudi IVF Centre -
-        <script>
-          document.write(/\d{4}/.exec(Date())[0]);
-        </script>
+
+    <footer class="bg-gray-800 py-6">
+      <div class="container mx-auto text-center text-white">
+        &copy; 2025 GarbhaGudi IVF Centre. All rights reserved.
       </div>
     </footer>
-    <script
-      src="https://cdn.usefathom.com/script.js"
-      site="SOXJJCZQ"
-      defer
-    ></script>
-    <!-- Facebook Pixel Code -->
+    <!-- Zoho SalesIQ Integration -->
     <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js',
-      );
-
-      fbq('init', '2326481447668134');
-      fbq('set', 'agent', 'tmgoogletagmanager', '2326481447668134');
-      fbq('track', 'PageView');
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0',
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      var s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'zsiqchat';
+      s.defer = true;
+      s.src = 'https://salesiq.zohopublic.com/widget';
+      var t = d.getElementsByTagName('script')[0];
+      t.parentNode.insertBefore(s, t);
+      d.innerHTML += '<div id="zsiqchat"></div>';
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=2326481447668134&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NT5T77DVZ"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-        defer
-      ></iframe
-    ></noscript>
+    <!-- End Zoho SalesIQ Integration -->
   </body>
 </html>
