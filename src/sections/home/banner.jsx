@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import Head from 'next/head';
 import FormComponent from 'components/formComp';
+import Popup from 'components/Popup';
 
 const Banner = () => {
   return (
@@ -23,8 +23,8 @@ const Banner = () => {
         />
       </Head>
 
-      <div className='grid grid-cols-1 lg:grid-cols-3'>
-        <div className='order-0'>
+      <div className='grid grid-cols-1 pb-5 md:pb-8 lg:grid-cols-3'>
+        <div className='md:order-0 order-1'>
           <div className='items-left flex h-full flex-col justify-center bg-cover bg-no-repeat py-16 text-center lg:py-0'>
             <div className='px-2 pb-4 text-center font-heading text-2xl font-extrabold'>
               <h1 className='uppercase text-[#e92e64]'>
@@ -37,7 +37,7 @@ const Banner = () => {
                 Offer of the Month: <br />
                 15th Anniversary Special Offer: <br />
                 <strong className='text-brandPurpleDark'>
-                  ₹1 Lakh Off on IVF Treatment
+                  ₹1,00,000 off on IVF Treatment
                 </strong>
                 <div className='text-center'>&</div>
                 <strong className='text-brandPurpleDark'>
@@ -51,19 +51,17 @@ const Banner = () => {
               </ul>
               <p className='mt-2'>Offer Validity: 31st March 2025</p>
             </div>
-            <Link
-              href='tel:+919480948005'
-              className='mx-auto w-fit rounded-lg bg-brandPink px-5 py-1.5 text-base font-bold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark'
-            >
-              Call us for Appointment
-            </Link>
+            <Popup
+              title={'Book Appointment'}
+              btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+            />
           </div>
           <div className='font-content mt-3 hidden text-xs font-medium lg:block'>
             *terms and conditions apply
           </div>
         </div>
 
-        <div className='order-1 flex items-end justify-center overflow-hidden'>
+        <div className='order-0 flex items-end justify-center overflow-hidden md:order-1'>
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.png'
             width={800}
@@ -79,21 +77,6 @@ const Banner = () => {
           <div className='flex items-center justify-center'>
             <FormComponent title='Book Your Appointment' />
           </div>
-        </div>
-      </div>
-
-      <div className='max-w-8xl mx-auto sm:mt-10'>
-        <div className='mx-auto mb-4 max-w-lg bg-gray-300 px-3 py-2 text-center text-base font-semibold sm:rounded-lg md:text-lg'>
-          <div>
-            Call{' '}
-            <a
-              href='tel:+919480948005'
-              className='block text-brandPink sm:inline-block'
-            >
-              +91 9480 9480 05
-            </a>
-          </div>
-          <div> to book your free consultation today!</div>
         </div>
       </div>
     </div>

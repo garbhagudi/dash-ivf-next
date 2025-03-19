@@ -30,8 +30,8 @@ export default function Home() {
       component: <TreatmentOptions branch='GarbhaGudi IVF Centre' />,
     },
     { key: 'team-section', component: <TeamSection /> },
-    { key: 'faq', component: <Faq /> },
     { key: 'video', component: <Video /> },
+    { key: 'faq', component: <Faq /> },
     { key: 'testimonials', component: <Testimonials /> },
     { key: 'related-searches', component: <RelatedSearches /> },
   ];
