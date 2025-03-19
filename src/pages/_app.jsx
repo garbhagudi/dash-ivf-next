@@ -6,9 +6,6 @@ import '../styles/globals.css';
 import '../styles/calendar.css';
 
 // Dynamically load non-essential components
-const FloatWhatsApp = dynamic(() => import('components/FloatWhatsapp'), {
-  ssr: false, // Disable server-side rendering for non-critical components
-});
 const SalesIQ = dynamic(() => import('components/SalesIQ'), {
   ssr: false,
   loading: () => null, // Optional loading state
@@ -46,7 +43,6 @@ function MyApp({ Component, pageProps }) {
         </main>
 
         {/* Defer loading of less critical components */}
-        <FloatWhatsApp />
         <FloatPhone />
         <SalesIQ />
         <Footer />
