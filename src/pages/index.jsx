@@ -9,10 +9,10 @@ const OtherServices = dynamic(() => import('sections/home/other-services'), {
 const TeamSection = dynamic(() => import('sections/home/our-team'), {
   ssr: false,
 });
+const Video = dynamic(() => import('sections/home/video'));
 const Testimonials = dynamic(() => import('sections/home/testimonials'), {
   ssr: false,
 });
-const Cta = dynamic(() => import('sections/home/cta'), { ssr: false });
 const Head = dynamic(() => import('next/head'));
 const TreatmentOptions = dynamic(() => import('sections/home/treatment'), {
   ssr: false,
@@ -31,8 +31,8 @@ export default function Home() {
     },
     { key: 'team-section', component: <TeamSection /> },
     { key: 'faq', component: <Faq /> },
+    { key: 'video', component: <Video /> },
     { key: 'testimonials', component: <Testimonials /> },
-    { key: 'cta', component: <Cta /> },
     { key: 'related-searches', component: <RelatedSearches /> },
   ];
 

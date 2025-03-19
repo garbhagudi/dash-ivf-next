@@ -6,9 +6,9 @@ const treatment = () => {
     <div className='scroll-m-16 scroll-smooth' id='know-more'>
       <div className='relative bg-white dark:bg-gray-800'>
         <div className='container relative m-auto px-3 md:px-12 lg:px-6'>
-          <h2 className='mx-auto text-left font-heading text-4xl font-black lg:text-5xl'>
+          <h3 className='mx-auto text-left font-heading text-4xl font-black lg:text-5xl'>
             What is IVF and how does it work ?
-          </h2>{' '}
+          </h3>{' '}
           <div className='mx-auto flex-wrap text-gray-800 md:flex dark:text-gray-200'>
             <div className='grid grid-cols-1 items-center lg:grid-cols-2'>
               <div className='font-content relative mx-auto ml-0 mt-8 space-y-8 text-left md:mt-16 md:max-w-lg lg:max-w-2xl'>
