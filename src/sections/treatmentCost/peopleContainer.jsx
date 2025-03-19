@@ -42,9 +42,9 @@ const PeopleContainer = () => {
 
   return (
     <div className='mx-auto my-10 max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
-      <h2 className='mt-2 text-left font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl lg:text-center'>
+      <h3 className='mt-2 text-left font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl lg:text-center'>
         Who Should Look for IVF Treatment?
-      </h2>
+      </h3>
       <div className='mx-auto max-w-7xl px-3'>
         <div className='py-3 lg:pt-8'>
           <div className='font-content'>

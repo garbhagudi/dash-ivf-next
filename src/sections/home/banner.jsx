@@ -33,7 +33,7 @@ const Banner = () => {
               </h1>
             </div>
             <div className='font-content flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
-              <p>
+              <div>
                 Offer of the Month: <br />
                 15th Anniversary Special Offer: <br />
                 <strong className='text-brandPurpleDark'>
@@ -43,7 +43,7 @@ const Banner = () => {
                 <strong className='text-brandPurpleDark'>
                   Free Fertility Screening
                 </strong>
-              </p>
+              </div>
               <ul className='mt-2 flex flex-col items-start space-y-1'>
                 <li>1. Free Consultation</li>
                 <li>2. Baseline Scan</li>
