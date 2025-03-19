@@ -72,11 +72,11 @@ export default Video;
 const testimonials = [
   {
     id: 1,
-    videoId: 'UjZ7APf5EbE',
+    videoId: 'cPPnXU9fB_0',
   },
   {
     id: 2,
-    videoId: 'cPPnXU9fB_0',
+    videoId: 'UjZ7APf5EbE',
   },
   {
     id: 3,
