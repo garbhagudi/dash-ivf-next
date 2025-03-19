@@ -11,7 +11,7 @@ const Content = () => {
         alt='Banner Image'
         width={400}
         height={400}
-        className='mx-auto w-full object-contain lg:w-8/12'
+        className='mx-auto w-full object-contain lg:w-1/2'
         priority
       />
     </div>

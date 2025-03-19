@@ -33,9 +33,9 @@ export default function TeamSection() {
     <div className='bg-gradient-to-br from-pink-300 to-purple-100 py-6'>
       <div className='mx-auto max-w-7xl px-3 pb-12'>
         <div className='pb-12 text-center'>
-          <h1 className='mb-4 font-heading text-3xl font-bold sm:text-4xl'>
+          <h2 className='mb-4 font-heading text-3xl font-bold sm:text-4xl'>
             Meet our Fertility Specialists
-          </h1>
+          </h2>
           <p className='mx-auto max-w-prose'>
             Our team of fertility specialists have been known for their
             extensive clinical experience and research contributions, as well as
