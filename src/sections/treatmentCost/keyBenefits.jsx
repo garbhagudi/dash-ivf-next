@@ -4,20 +4,19 @@ const KeyBenefits = () => {
   return (
     <>
       <div className='bg-gg-800'>
-        <div className='mx-auto max-w-7xl px-3 lg:px-5'>
-          <div className='font-lexend py-5 text-center text-xl font-bold text-yellow-500 lg:py-6 lg:text-2xl'>
-            GarbhaGudi IVF Centre offers a Tantalizing Thursdays Avail ₹10,000
-            OFF on IVF Cycle Every Thursday
+        <div className='lg:px-5 max-w-7xl mx-auto px-3'>
+          <div className='text-center text-xl text-yellow-500 font-bold font-lexend lg:py-6 lg:text-2xl py-5'>
+          15th Anniversary - ₹1 Lakh Off on IVF Treatment - A Gift from us to you!
           </div>
         </div>
       </div>
       <div className='max-w-8xl mx-auto sm:mt-6'>
-        <div className='mx-auto mb-4 max-w-lg bg-gray-300 px-3 py-2 text-center text-base font-semibold sm:rounded-lg md:text-lg'>
+        <div className='bg-gray-300 text-base text-center font-semibold max-w-lg mb-4 md:text-lg mx-auto px-3 py-2 sm:rounded-lg'>
           <div>
             Call{' '}
             <a
               href='tel:+919480948005'
-              className='block text-brandPink sm:inline-block'
+              className='text-brandPink block sm:inline-block'
             >
               +91 9480 9480 05
             </a>
