@@ -57,7 +57,7 @@ const Testimonial = () => {
               <SwiperSlide key={item?.id}>
                 <div className='flex flex-col justify-center'>
                   <blockquote className='mt-8'>
-                    <div className='font-content mx-auto h-80 max-w-sm px-1.5 text-center text-base font-medium tracking-tight text-gray-900 sm:max-w-md md:max-w-3xl md:text-lg lg:h-52 lg:leading-[1.8rem]'>
+                    <div className='mx-auto h-80 max-w-sm px-1.5 text-center text-base font-medium tracking-tight text-gray-900 sm:max-w-md md:max-w-3xl md:text-lg lg:h-52 lg:leading-[1.8rem]'>
                       <div className='flex items-center justify-center'>
                         &quot;{item?.review}&quot;
                       </div>

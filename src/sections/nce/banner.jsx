@@ -22,7 +22,7 @@ const Banner = () => {
               </span>
               <span className='block text-indigo-200'></span>
             </h1>
-            <p className='font-content mx-auto mt-6 max-w-lg text-center text-xl font-semibold text-white sm:max-w-3xl'>
+            <p className='mx-auto mt-6 max-w-lg text-center text-xl font-semibold text-white sm:max-w-3xl'>
               Take advantage of many financial benefits available at GarbhaGudi
               designed to make your IVF journey as affordable as possible
             </p>

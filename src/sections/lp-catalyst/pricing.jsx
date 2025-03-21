@@ -51,7 +51,7 @@ const Stat = () => {
           <p className='mt-3 font-heading text-3xl font-extrabold text-gray-800'>
             Our Ever-Growing Success
           </p>
-          <p className='font-content mt-5 text-lg text-gray-800'>
+          <p className='mt-5 text-lg text-gray-800'>
             GarbhaGudi is a place where dreams come alive, hopes never fade, and
             possibilities never end. As one of the finest{' '}
             <Link href='/' className='text-gg-500 hover:underline'>
@@ -69,7 +69,7 @@ const Stat = () => {
                   {item.stat}
                 </span>
                 <span className='mt-1 block text-base text-gray-800'>
-                  <span className='font-content font-medium text-gray-800'>
+                  <span className='font-medium text-gray-800'>
                     {item.emphasis}
                   </span>{' '}
                 </span>

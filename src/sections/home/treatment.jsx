@@ -12,7 +12,7 @@ const TreatmentOptions = ({ branch }) => {
         {Data?.map((items) => (
           <div
             key={items?.id}
-            className='font-content flex flex-col items-center justify-between rounded-2xl border border-brandPink4 transition-all duration-300 hover:-translate-y-2 hover:bg-pink-50 hover:shadow-2xl'
+            className='flex flex-col items-center justify-between rounded-2xl border border-brandPink4 transition-all duration-300 hover:-translate-y-2 hover:bg-pink-50 hover:shadow-2xl'
           >
             <div className='mx-auto -mt-10 flex items-center justify-center rounded-full md:-mt-12 md:h-24 md:w-24'>
               <Image
@@ -34,10 +34,7 @@ const TreatmentOptions = ({ branch }) => {
               </div>
             </div>
             <div className='w-full rounded-b-2xl border bg-brandPink4 py-1 text-center'>
-              <Link
-                href={items?.link}
-                className='font-content font-bold text-white'
-              >
+              <Link href={items?.link} className='font-bold text-white'>
                 Learn More
               </Link>
             </div>

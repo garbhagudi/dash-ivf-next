@@ -599,7 +599,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-lg text-brandDark my-4 ',
           },
           {
             type: 'paragraph',
@@ -636,7 +636,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'font-content py-3 text-lg text-brandDark',
+            className: ' py-3 text-lg text-brandDark',
           },
           {
             type: 'class',
@@ -650,7 +650,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'font-content py-3 text-lg text-brandDark',
+            className: ' py-3 text-lg text-brandDark',
           },
           {
             type: 'class',
@@ -664,7 +664,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'font-content py-3 text-lg text-brandDark',
+            className: ' py-3 text-lg text-brandDark',
           },
           {
             type: 'class',
@@ -678,7 +678,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'font-content py-3 text-lg text-brandDark',
+            className: ' py-3 text-lg text-brandDark',
           },
         ],
       },
@@ -849,7 +849,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-lg text-brandDark my-4 ',
           },
           {
             type: 'paragraph',
@@ -871,7 +871,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-lg text-brandDark my-4 ',
           },
           {
             type: 'paragraph',
@@ -893,7 +893,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-lg text-brandDark my-4 ',
           },
           {
             type: 'paragraph',
@@ -915,7 +915,7 @@ export const doctors = [
                 ],
               },
             ],
-            className: 'text-lg text-brandDark my-4 font-content',
+            className: 'text-lg text-brandDark my-4 ',
           },
         ],
       },

@@ -100,8 +100,8 @@ const ImageComponent = ({ name, image, qualification, designation }) => {
       />
       <div className='text-center'>
         <div className='mt-4 font-heading text-xl font-bold'>{name}</div>
-        <div className='font-content mt-2 text-xs'>{qualification}</div>
-        <div className='font-content mb-4 mt-2 text-sm'>{designation}</div>
+        <div className='mt-2 text-xs'>{qualification}</div>
+        <div className='mb-4 mt-2 text-sm'>{designation}</div>
       </div>
     </div>
   );

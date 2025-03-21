@@ -59,7 +59,7 @@ const Video = () => {
             })}
           </Carousel>
         </div>
-        <div className='font-content mx-auto max-w-6xl py-1 pt-4 text-center text-sm underline lg:text-right'>
+        <div className='mx-auto max-w-6xl py-1 pt-4 text-center text-sm underline lg:text-right'>
           Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
         </div>
       </div>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Banner = () => {
   return (
     <div className='bg-white pb-8 sm:pb-12 lg:pb-12'>
-      <div className='font-content overflow-hidden pt-8 sm:pt-12 lg:relative lg:py-10'>
+      <div className='overflow-hidden pt-8 sm:pt-12 lg:relative lg:py-10'>
         <div className='block sm:mx-auto sm:hidden sm:max-w-3xl sm:px-6'>
           <div className='relative mb-8 mt-2 pl-2 pr-2 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-[28rem] lg:max-w-none lg:pl-12'>
             <Image
@@ -27,7 +27,7 @@ const Banner = () => {
 
             <div className='order-0'>
               <div className='items-left flex h-full flex-col justify-center bg-cover bg-no-repeat py-10 text-center lg:py-0'>
-                <div className='font-content flex flex-col items-center px-4 pb-4 text-center text-xl font-normal lg:mt-6 lg:py-2'>
+                <div className='flex flex-col items-center px-4 pb-4 text-center text-xl font-normal lg:mt-6 lg:py-2'>
                   <p>
                     Offer of the Month:{' '}
                     <strong className='text-brandPurpleDark'>
@@ -45,14 +45,14 @@ const Banner = () => {
                 <p className='mt-2 text-base font-extrabold'>
                   EMI Facility Available at 0% Interest.
                 </p>
-                <div className='font-content mt-3 hidden text-left text-xs font-medium lg:block'>
+                <div className='mt-3 hidden text-left text-xs font-medium lg:block'>
                   *terms and conditions apply
                 </div>
               </div>
             </div>
 
             <div className='mt-6'>
-              <h3 className='font-content mb-6 text-2xl font-medium'>
+              <h3 className='mb-6 text-2xl font-medium'>
                 Why choose{' '}
                 <span className='bg-gradient-to-r from-brandPink2 to-brandPurpleDark bg-clip-text text-transparent dark:to-brandPurple'>
                   GarbhaGudi?
@@ -107,12 +107,12 @@ const Banner = () => {
                   />
                 </div>
                 <div className='min-w-0 flex-1 py-1 pl-5 text-center text-sm font-semibold text-gray-800 sm:py-3 md:text-left dark:text-gray-200'>
-                  <span className=''>Rated 4.8 stars on</span>
+                  <span>Rated 4.8 stars on</span>
                   <span className='text-gg-500 dark:text-gg-400'>
                     {' '}
                     Google Reviews
                   </span>
-                  <span className=''> across all our branches</span>
+                  <span> across all our branches</span>
                 </div>
               </div>
             </div>

@@ -10,14 +10,14 @@ const Treatment = () => {
 
   return (
     <div className='scroll-m-16 scroll-smooth' id='know-more'>
-      <div className='bg-white dark:bg-gray-800 py-5 relative'>
-        <div className='container m-auto lg:px-6 md:px-12 px-3 relative'>
-          <h3 className='text-4xl text-left font-black font-heading lg:text-5xl mx-auto'>
+      <div className='relative bg-white py-5 dark:bg-gray-800'>
+        <div className='container relative m-auto px-3 md:px-12 lg:px-6'>
+          <h3 className='mx-auto text-left font-heading text-4xl font-black lg:text-5xl'>
             Step by Step IVF Process
           </h3>{' '}
-          <div className='flex-wrap text-gray-800 dark:text-gray-200 md:flex mx-auto'>
+          <div className='mx-auto flex-wrap text-gray-800 md:flex dark:text-gray-200'>
             <div className='grid grid-cols-1 lg:grid-cols-5'>
-              <div className='col-span-3 order-2 font-content lg:order-1 mt-8 relative'>
+              <div className='relative order-2 col-span-3 mt-8 lg:order-1'>
                 <p>
                   GarbhaGudi IVF Center in Bangalore combines advanced
                   technology with a skilled team of doctors and embryologists to
@@ -32,7 +32,7 @@ const Treatment = () => {
                 </p>
 
                 {/* See More/See Less Toggle Section */}
-                <ul className='flex flex-col list-decimal gap-1.5 mt-2 px-2.5'>
+                <ul className='mt-2 flex list-decimal flex-col gap-1.5 px-2.5'>
                   {/* Show top 3 list items by default */}
                   <li className='text-lg font-bold'>
                     Initial Consultation and Testing
@@ -45,7 +45,7 @@ const Treatment = () => {
                       with a fertility specialist. During this appointment, the
                       doctor will:
                     </div>
-                    <ul className='list-disc text-sm font-normal px-5'>
+                    <ul className='list-disc px-5 text-sm font-normal'>
                       <li>
                         Review your medical history and any previous fertility
                         treatments.
@@ -86,7 +86,7 @@ const Treatment = () => {
                       multiple eggs. This is achieved through daily injections
                       of fertility medications such as:
                     </div>
-                    <ul className='list-disc text-sm font-normal px-5'>
+                    <ul className='list-disc px-5 text-sm font-normal'>
                       <li>
                         <span className='text-base font-semibold'>
                           Gonadotropins:
@@ -176,17 +176,17 @@ const Treatment = () => {
                 <div className='mt-4'>
                   <button
                     onClick={handleToggle}
-                    className='text-base text-primary-600 dark:text-primary-400 font-semibold hover:underline'
+                    className='text-primary-600 dark:text-primary-400 text-base font-semibold hover:underline'
                   >
                     {showMore ? 'See Less' : 'See More'}
                   </button>
                 </div>
               </div>
 
-              <div className='col-span-2 order-1 lg:order-2 lg:p-4 max-w-[50rem] md:max-w-full mt-4 mx-auto'>
+              <div className='order-1 col-span-2 mx-auto mt-4 max-w-[50rem] md:max-w-full lg:order-2 lg:p-4'>
                 <Image
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722510346/Misc/PNG_25_yoa08y_1_cr2fpg.png'
-                  className='bg-white/10 w-full dark:brightness-75 dark:invert relative'
+                  className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                   alt='Process of IVF Treatment in Bangalore'
                   loading='lazy'
                   width={500}

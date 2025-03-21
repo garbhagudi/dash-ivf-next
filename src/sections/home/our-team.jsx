@@ -56,7 +56,6 @@ export default function TeamSection() {
               swiperRef.current = swiper;
             }}
             breakpoints={breakpoints}
-            className=''
             loop={true}
             pagination={true}
             autoplay
@@ -80,20 +79,18 @@ export default function TeamSection() {
                       </div>
                       <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
                         <div className='h-24 space-y-1 text-lg font-medium leading-6'>
-                          <h3 className='font-content text-brandDark'>
-                            {item?.name}
-                          </h3>
-                          <p className='font-content text-xs text-brandPurpleDark'>
+                          <h3 className='text-brandDark'>{item?.name}</h3>
+                          <p className='text-xs text-brandPurpleDark'>
                             {item?.qualification}
                           </p>
-                          <p className='font-content pb-2 text-sm text-brandPink'>
+                          <p className='pb-2 text-sm text-brandPink'>
                             {item?.designation}
                           </p>
                         </div>
                         <ContentModal
                           title={'Read More'}
                           classname={
-                            'font-content text-brandPink text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandPurpleDark border-2 border-brandPurpleDark hover:border-brandPurpleDark transition-all duration-300 ease-linear'
+                            ' text-brandPink text-base px-3 py-1.5 rounded-lg font-medium hover:text-brandPurpleDark border-2 border-brandPurpleDark hover:border-brandPurpleDark transition-all duration-300 ease-linear'
                           }
                           content={item?.bio?.raw?.children}
                           heading={item?.name}

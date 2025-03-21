@@ -64,7 +64,7 @@ const Features = () => {
         </h2>
         <div className='mx-auto max-w-7xl px-3'>
           <div className='py-3 lg:pt-8'>
-            <div className='font-content'>
+            <div>
               <div className='pb-4'>
                 GarbhaGudi IVF Centre stands as the epitome of excellence,
                 making it the{' '}
@@ -117,7 +117,7 @@ const Features = () => {
                       <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
                         {feature?.name}
                       </h3>
-                      <p className='font-content mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
+                      <p className='mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
                         {feature?.content}
                       </p>
                     </div>

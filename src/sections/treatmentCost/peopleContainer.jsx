@@ -47,7 +47,7 @@ const PeopleContainer = () => {
       </h3>
       <div className='mx-auto max-w-7xl px-3'>
         <div className='py-3 lg:pt-8'>
-          <div className='font-content'>
+          <div>
             <div className='pb-4'>
               Normally pregnancy occurs from sexual intercourse in which the
               man’s sperm is ejaculated into the woman’s vagina, traveling to
@@ -57,7 +57,7 @@ const PeopleContainer = () => {
               can say 25 out of 100 women will succeed per month.
             </div>
           </div>
-          <div className='font-content'>
+          <div>
             <div className='pb-4'>
               Infertility Treatment is a comprehensive approach designed to
               assist couples struggling to conceive naturally. Infertility can
