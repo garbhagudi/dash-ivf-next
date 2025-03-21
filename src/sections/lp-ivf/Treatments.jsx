@@ -12,7 +12,7 @@ const Treatments = () => {
         </h3>
         <div className='mx-auto max-w-3xl px-2'>
           <TabGroup>
-            <TabList className='bg-gg-500 dark:bg-gg-400 flex flex-nowrap rounded-lg transition-all duration-300 ease-linear dark:border dark:border-gray-600'>
+            <TabList className='flex flex-nowrap rounded-lg bg-gg-500 transition-all duration-300 ease-linear dark:border dark:border-gray-600 dark:bg-gg-400'>
               <Tab className='mx-auto w-full rounded-lg py-2 text-center font-heading text-xl font-semibold text-gray-100 focus:outline-none ui-selected:bg-gray-100 ui-selected:text-brandPink2 ui-selected:shadow-xl ui-selected:transition-all ui-selected:duration-300 ui-selected:ease-linear ui-selected:hover:bg-gray-100 ui-not-selected:hover:bg-brandPink3 dark:text-gray-800 dark:ui-selected:bg-gray-800 dark:ui-selected:text-gray-200'>
                 Female Infertility
               </Tab>
@@ -30,7 +30,7 @@ const Treatments = () => {
                     // <Link href={items.link} key={items.id} className='group'>
                     <div
                       key={items.id}
-                      className='hover:bg-gg-500 flex rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
+                      className='flex rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
                     >
                       <div className='w-1/3'>
                         <Image
@@ -42,7 +42,7 @@ const Treatments = () => {
                         />
                       </div>
                       <div className='ml-4 flex w-2/3 flex-col justify-center text-left'>
-                        <p className='font-content text-sm font-semibold md:text-base'>
+                        <p className='text-sm font-semibold md:text-base'>
                           {items.name}
                         </p>
                       </div>
@@ -57,7 +57,7 @@ const Treatments = () => {
                     // <Link href={items.link} key={items.id} className='group'>
                     <div
                       key={items.id}
-                      className='hover:bg-gg-500 flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
+                      className='flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
                     >
                       <div className='w-1/3'>
                         <Image
@@ -69,7 +69,7 @@ const Treatments = () => {
                         />
                       </div>
                       <div className='ml-4 flex w-2/3 flex-col justify-center text-left'>
-                        <p className='font-content text-sm font-semibold md:text-base'>
+                        <p className='text-sm font-semibold md:text-base'>
                           {items.name}
                         </p>
                       </div>
@@ -84,7 +84,7 @@ const Treatments = () => {
                     // <Link href={items.link} key={items.id} className='group'>
                     <div
                       key={items.id}
-                      className='hover:bg-gg-500 flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
+                      className='flex cursor-pointer rounded-lg border px-2 py-2 transition-all duration-300 ease-linear hover:border-transparent hover:bg-gg-500 md:px-3 md:py-3 lg:px-4 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
                     >
                       <div className='w-1/3'>
                         <Image
@@ -96,7 +96,7 @@ const Treatments = () => {
                         />
                       </div>
                       <div className='ml-4 flex w-2/3 flex-col justify-center text-left'>
-                        <p className='font-content text-sm font-semibold md:text-base'>
+                        <p className='text-sm font-semibold md:text-base'>
                           {items.name}
                         </p>
                       </div>

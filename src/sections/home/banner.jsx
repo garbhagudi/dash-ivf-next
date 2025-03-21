@@ -26,13 +26,13 @@ const Banner = () => {
       <div className='grid grid-cols-1 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='md:order-0 order-1'>
           <div className='items-left flex h-full flex-col justify-center bg-cover bg-no-repeat py-16 text-center lg:py-0'>
-            <div className='px-2 pb-4 text-center font-heading text-2xl font-extrabold'>
+            <div className='px-2 pb-4 text-center text-2xl font-extrabold'>
               <h1 className='uppercase text-[#e92e64]'>
                 Leading IVF & Fertility Clinic in Bangalore: Expert Care &
                 Advanced Treatments
               </h1>
             </div>
-            <div className='font-content flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
+            <div className='flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
               <div>
                 Offer of the Month: <br />
                 15th Anniversary Special Offer: <br />
@@ -56,16 +56,16 @@ const Banner = () => {
               btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
             />
           </div>
-          <div className='font-content mt-3 hidden text-xs font-medium lg:block'>
+          <div className='mt-3 hidden text-xs font-medium lg:block'>
             *terms and conditions apply
           </div>
         </div>
 
         <div className='order-0 flex items-end justify-center overflow-hidden md:order-1'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.png'
-            width={800}
-            height={450}
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.webp'
+            width={520}
+            height={480}
             alt='Start IVF from as low as 90K'
             quality={90}
             priority

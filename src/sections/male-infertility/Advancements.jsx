@@ -6,7 +6,7 @@ const Advancements = () => {
       <h3 className='py-4 text-center font-heading text-2xl font-bold sm:text-4xl md:py-10'>
         Advancements in the Field of Male Infertility Treatment
       </h3>
-      <div className=''>
+      <div>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='flex flex-col items-center justify-center'>
             <h4

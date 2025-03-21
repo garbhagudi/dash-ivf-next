@@ -12,7 +12,7 @@ const Video = ({ testimonials }) => {
     },
   };
   return (
-    <div className='from-brandPink5 bg-gradient-to-br to-brandPurple2 dark:from-gray-800 dark:via-gray-800 dark:to-brandPurpleDark'>
+    <div className='bg-gradient-to-br from-brandPink5 to-brandPurple2 dark:from-gray-800 dark:via-gray-800 dark:to-brandPurpleDark'>
       <div className='mx-auto max-w-7xl py-8'>
         <h2 className='flex items-center justify-center text-center font-heading text-2xl font-extrabold text-gray-800 lg:text-4xl dark:text-gray-200'>
           Testimonials from our happy couples
@@ -59,7 +59,7 @@ const Video = ({ testimonials }) => {
             })}
           </Carousel>
         </div>
-        <div className='font-content mx-auto max-w-6xl py-1 pt-4 text-center text-sm underline lg:text-right'>
+        <div className='mx-auto max-w-6xl py-1 pt-4 text-center text-sm underline lg:text-right'>
           Swipe for more reviews <MdOutlineSwipeLeft className='inline-block' />
         </div>
       </div>

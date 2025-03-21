@@ -28,20 +28,20 @@ const AshaSection = () => {
               </div>
             </div>
             <div className='mt-10 text-center text-gray-800 dark:text-gray-200'>
-              <h3 className='text-blueGray-700 font-content mb-2 text-xl font-semibold leading-normal'>
+              <h3 className='text-blueGray-700 mb-2 text-xl font-semibold leading-normal'>
                 Dr Asha S Vijay
               </h3>
-              <div className='text-blueGray-400 font-content mb-2 mt-0 text-sm font-bold uppercase leading-normal'>
+              <div className='text-blueGray-400 mb-2 mt-0 text-sm font-bold uppercase leading-normal'>
                 MBBS, DNB, DGO
               </div>
-              <div className='text-blueGray-600 font-content mb-2 mt-6 font-semibold'>
+              <div className='text-blueGray-600 mb-2 mt-6 font-semibold'>
                 Founder & Medical Director - GarbhaGudi IVF Centre
               </div>
             </div>
             <div className='border-blueGray-200 mt-4 border-t py-4 text-center'>
               <div className='flex flex-wrap justify-center'>
                 <div className='w-full px-4 lg:w-11/12'>
-                  <p className='text-blueGray-700 font-content mb-6 text-base'>
+                  <p className='text-blueGray-700 mb-6 text-base'>
                     Dr Asha has well over two decades of experience in the
                     fields of obstetrics, gynaecology and infertility. She is a
                     well-known name in infertility – both in treating patients

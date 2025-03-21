@@ -28,12 +28,12 @@ const DoctorLayout = ({
   };
   return (
     <div>
-      <div className=''>
+      <div>
         <div
           onClick={() => handleSetIndex(index)}
           className='flex flex-col items-center justify-center rounded-lg border bg-slate-50 px-3 pt-4 transition duration-200 ease-in-out hover:shadow-2xl'
         >
-          <div className=''>{imageComponent}</div>
+          <div>{imageComponent}</div>
         </div>
       </div>
       {activeIndex === index && (
