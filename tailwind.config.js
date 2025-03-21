@@ -393,7 +393,7 @@ module.exports = {
       serif: ['ui-serif'],
       mono: ['ui-monospace'],
       dm: 'DM Sans',
-      heading: 'B612',
+      heading: 'DM Sans',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

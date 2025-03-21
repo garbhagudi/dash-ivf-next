@@ -14,7 +14,7 @@ const Banner = () => {
                 Advanced treatments
               </div>
             </div>
-            <div className='font-content px-4 py-2 pb-4 text-xl font-normal'>
+            <div className='px-4 py-2 pb-4 text-xl font-normal'>
               Offer of the Month:
               <div className='block rounded-sm bg-brandPink px-1.5 py-0.5 font-bold text-white'>
                 ₹ 55000/- OFF on IVF Treatment
@@ -27,12 +27,12 @@ const Banner = () => {
               <button>Book an Appointment</button>
             </Link>
           </div>
-          <div className='font-content -mt-5 hidden text-xs font-medium lg:block'>
+          <div className='-mt-5 hidden text-xs font-medium lg:block'>
             *terms and conditions apply
           </div>
         </div>
         <div className='order-1 flex items-end justify-start overflow-hidden object-cover'>
-          <div className='font-content absolute z-10 -mt-5 block rounded-t-md bg-white bg-opacity-50 px-3 py-1 text-xs font-medium lg:hidden'>
+          <div className='absolute z-10 -mt-5 block rounded-t-md bg-white bg-opacity-50 px-3 py-1 text-xs font-medium lg:hidden'>
             *terms and conditions apply
           </div>
           <Image

@@ -89,7 +89,7 @@ export default function DetailsPopup({ title, btnClassName, data }) {
                         {data.content}
                       </div>
                       <div className='mt-4 flex flex-col items-center justify-center gap-4 md:flex-row'>
-                        <button className='font-content rounded-md bg-brandPink px-6 py-2 font-bold text-white hover:bg-brandPink3'>
+                        <button className='rounded-md bg-brandPink px-6 py-2 font-bold text-white hover:bg-brandPink3'>
                           <a href='tel:+919480948005' hrefLang='en-us'>
                             Give us a Call
                           </a>

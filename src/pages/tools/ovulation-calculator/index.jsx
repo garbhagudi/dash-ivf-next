@@ -74,9 +74,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className='mt-8 text-center text-lg'>
-          <label htmlFor='cycle' className=''>
-            How long is your average cycle?{' '}
-          </label>
+          <label htmlFor='cycle'>How long is your average cycle? </label>
           <select
             onChange={(e) => cycleValue(e.target.value)}
             defaultValue={cycle}

@@ -18,7 +18,7 @@ const AccordionLayout = ({
         className='mt-3 flex w-full items-center justify-center rounded-xl bg-brandDark bg-opacity-20 px-3 py-1 text-brandDark hover:cursor-pointer hover:bg-opacity-80 hover:text-white'
       >
         <div className='flexitems-center text-md justify-center font-semibold sm:text-xl'>
-          <div className='font-content'>{title}</div>
+          <div>{title}</div>
         </div>
 
         {activeIndex === index ? (
@@ -28,7 +28,7 @@ const AccordionLayout = ({
         )}
       </div>
       {activeIndex === index && (
-        <div className='shadow-3xl font-content mt-2 rounded-2xl text-center text-gray-900'>
+        <div className='shadow-3xl mt-2 rounded-2xl text-center text-gray-900'>
           {children}
         </div>
       )}

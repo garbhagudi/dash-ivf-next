@@ -10,7 +10,7 @@ const Stats = () => {
       </p>
       <div className='mx-auto mt-4 max-w-lg align-middle md:max-w-4xl'>
         <div className='text-center'>
-          <div className='font-content grid grid-cols-4 grid-rows-4'>
+          <div className='grid grid-cols-4 grid-rows-4'>
             <div>
               <div
                 className='mx-auto my-4 -mr-4 -mt-2 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full'
@@ -35,8 +35,8 @@ const Stats = () => {
             </div>
 
             <div className='col-span-2 row-span-3 flex items-center justify-center rounded-full'>
-              <div className='border-gg-500 dark:border-gg-400 absolute -z-50 h-[700px] w-[700px] rounded-full border bg-transparent'></div>
-              <div className='animate-spinSlow border-gg-500 dark:border-gg-400 absolute -z-40 h-[450px] w-[450px] rounded-full border-2 border-dashed bg-transparent'></div>
+              <div className='absolute -z-50 h-[700px] w-[700px] rounded-full border border-gg-500 bg-transparent dark:border-gg-400'></div>
+              <div className='absolute -z-40 h-[450px] w-[450px] animate-spinSlow rounded-full border-2 border-dashed border-gg-500 bg-transparent dark:border-gg-400'></div>
               <div className='flex h-96 w-96 items-center justify-center rounded-full shadow-2xl ring-brandPink4 dark:bg-gray-700'>
                 <Image
                   src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1659164257/logos/GG_Vertical_Logo_nrcl5h.svg'

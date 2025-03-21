@@ -72,7 +72,7 @@ const Features = () => {
                       <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
                         {feature.name}
                       </h3>
-                      <p className='font-content mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
+                      <p className='mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
                         {feature.content}
                       </p>
                     </div>

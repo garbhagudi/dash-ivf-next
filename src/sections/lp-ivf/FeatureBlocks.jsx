@@ -11,7 +11,7 @@ function FeaturesBlocks() {
             <h2 className='h2 mb-4 bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text font-heading text-3xl font-bold uppercase text-transparent dark:to-brandPurple'>
               Why we are the Industry Leaders?
             </h2>
-            <p className='font-content text-xl text-gray-800 dark:text-gray-200'>
+            <p className='text-xl text-gray-800 dark:text-gray-200'>
               GarbhaGudi has won numerous awards from various organisations for
               its exceptional service and high success rates
             </p>

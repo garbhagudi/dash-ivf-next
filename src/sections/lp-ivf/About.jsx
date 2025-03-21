@@ -18,7 +18,7 @@ const About = () => {
               className='animate-shine h-56 w-56 rounded-xl bg-gradient-to-br from-brandPurple via-white to-brandPink4 bg-[length:400%] p-3 shadow-2xl drop-shadow-2xl'
             />
           </div>
-          <div className='font-content col-span-3 mt-6 flex flex-col items-center justify-center px-6 text-gray-800 md:mt-0 dark:text-gray-200'>
+          <div className='col-span-3 mt-6 flex flex-col items-center justify-center px-6 text-gray-800 md:mt-0 dark:text-gray-200'>
             <div>
               Spanning over a decade, GarbhaGudi has served as a beacon of hope
               to thousands of infertile couples. Our experienced and dedicated

@@ -5,7 +5,7 @@ export const Average = () => {
         Average Fertility
       </h1>
       <article className='px-3 text-base sm:px-0'>
-        <p className=''>
+        <p>
           A lady with Average Fertility needs to play it safe. It means that her
           fertility status is not too good, but neither is it very bad. It also
           indicates that it is not long before the fertility levels will drop

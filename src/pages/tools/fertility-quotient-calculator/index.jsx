@@ -157,7 +157,7 @@ const IndexPage = () => {
           content='https://res.cloudinary.com/garbhagudiivf/image/upload/v1654690156/SEO/5-min_xsyat3.jpg'
         />
       </Head>
-      <div className='font-content mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-7xl'>
         <h1 className='py-8 text-center font-heading text-4xl font-semibold text-brandPink'>
           Fertility Quotient Calculator
         </h1>

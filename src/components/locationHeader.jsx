@@ -41,7 +41,7 @@ const LocationHeader = ({ branch, mapLink, address, phone }) => {
                 </a>
               </div>
               <div>
-                Address : <span className=''>{address}</span>
+                Address : <span>{address}</span>
               </div>
               <div>
                 E mail:{' '}
