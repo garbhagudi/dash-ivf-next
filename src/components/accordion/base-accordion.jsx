@@ -40,7 +40,6 @@ class BaseAccordion extends React.Component {
           : [...state.openIndexes, index],
       };
     });
-    console.log('clicked');
   };
   render() {
     return this.props.children({

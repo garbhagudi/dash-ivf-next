@@ -3,8 +3,8 @@
 import { jsx, Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
 import Link from 'next/link';
-import { WidgetAbout, WidgetInfo, WidgetPages, WidgetConnect } from './widget';
-import { about, information, pages, connect } from './footer.data';
+import { WidgetAbout, WidgetInfo } from './widget';
+import { about, information } from './footer.data';
 
 export default function Footer() {
   return (

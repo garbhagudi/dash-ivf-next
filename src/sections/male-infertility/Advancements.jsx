@@ -126,7 +126,7 @@ const Advancements = () => {
         </div>
         <div className='mx-auto flex w-96 items-center justify-center'>
           <img
-            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Semen-Freezing-min_pfcrvp.png'
+            src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805636/garbhagudi-ivf/New%20Website/Semen-Freezing-min_pfcrvp.webp'
             alt='Semen Freezing'
           />
         </div>
