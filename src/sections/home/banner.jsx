@@ -78,7 +78,7 @@ const Banner = () => {
 
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            <FormComponent title='Book Your Appointment' />
+            <FormComponent title='Book Your Appointment' isTag={false} />
           </div>
         </div>
       </div>
