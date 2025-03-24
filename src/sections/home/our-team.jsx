@@ -6,8 +6,10 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { useRef } from 'react';
-import ContentModal from 'components/contentModal';
-
+import dynamic from 'next/dynamic';
+const ContentModal = dynamic(() => import('components/contentModal'), {
+  ssr: false,
+});
 const breakpoints = {
   0: {
     slidesPerView: 1,

@@ -30,7 +30,7 @@ const Banner = () => {
           </Box>
           <Flex as='figure' sx={styles.illustration}>
             <Image
-              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1699869285/paripoorna/Paripoorna_2023_Ver_Logo_Eng_bridnx.png'
+              src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1699869285/paripoorna/Paripoorna_2023_Ver_Logo_Eng_bridnx.webp'
               alt='illustration'
               loading='lazy'
             />

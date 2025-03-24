@@ -18,7 +18,7 @@ const Process = () => {
             <img
               alt='feature'
               className='h-full w-full object-cover object-center'
-              src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/How-to-Avail-min_c54odl.png'
+              src='https://res.cloudinary.com/garbhagudi/image/upload/v1667805635/garbhagudi-ivf/New%20Website/How-to-Avail-min_c54odl.webp'
             />
           </div>
           <div className='-mb-10 lg:py-6 lg:pl-12 lg:text-left'>

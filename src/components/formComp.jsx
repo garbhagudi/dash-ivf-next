@@ -1,11 +1,11 @@
 'use client';
 
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { lazy, Suspense, useEffect, useState } from 'react';
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 import { useForm } from 'react-hook-form';
 
-const FormComponent = ({ title }) => {
+const FormComponent = ({ title, isTag = true }) => {
   const router = useRouter();
   const {
     register,
@@ -31,7 +31,7 @@ const FormComponent = ({ title }) => {
   useEffect(() => {
     if (router.query) {
       const { utm_campaign } = router.query;
-      setValue('UTM_Campaign', utm_campaign || '');
+      setValue('UTM_Campaign', utm_campaign || 'IVF Treatment 2023');
     }
   }, [router.query, setValue]);
 
@@ -72,6 +72,14 @@ const FormComponent = ({ title }) => {
 
   return (
     <div className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent'>
+      {isTag && (
+        <div className='flex justify-center'>
+          <div className='mx-5 mt-5 w-fit self-center rounded-md bg-white px-2 py-1 text-center font-semibold text-brandPink shadow-sm'>
+            ₹1,00,000 off on IVF Treatment
+            <span> | Free Fertility Screening</span>
+          </div>
+        </div>
+      )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='pb-4 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
           {title}
@@ -156,10 +164,12 @@ const FormComponent = ({ title }) => {
         </div>
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-5'>
-          <ReCAPTCHA
-            sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
-            onChange={handleCaptchaChange}
-          />
+          <Suspense fallback={<div>Loading Captcha...</div>}>
+            <ReCAPTCHA
+              sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
+              onChange={handleCaptchaChange}
+            />
+          </Suspense>
           {showCaptchaError && (
             <p className='text-sm text-red-500'>
               Please complete the captcha verification.
@@ -173,7 +183,7 @@ const FormComponent = ({ title }) => {
             className='flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
             disabled={load}
           >
-            Submit
+            Get a Call Back
             {load && (
               <svg
                 width={22}
@@ -199,18 +209,6 @@ const FormComponent = ({ title }) => {
                 </g>
               </svg>
             )}
-          </button>
-
-          <button
-            type='button'
-            onClick={() => {
-              reset();
-              setCaptchaVerified(false);
-              setShowCaptchaError(false);
-            }}
-            className='rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88]'
-          >
-            Reset
           </button>
         </div>
       </form>
