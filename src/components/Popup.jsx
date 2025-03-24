@@ -62,6 +62,7 @@ export default function Popup({ title, btnClassName }) {
                     quality={75}
                     loading='lazy'
                   />
+
                   <FormComponent title='Book Your Appointment' />
                   <div
                     onClick={closeModal}
