@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Calendar from 'react-calendar';
 import Moment from 'react-moment';
 import Head from 'next/head';
-
 const IndexPage = () => {
   const [value, onChange] = useState(new Date());
   const [cycle, cycleValue] = useState('28');

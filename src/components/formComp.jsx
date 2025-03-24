@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { lazy, Suspense, useEffect, useState } from 'react';
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 import { useForm } from 'react-hook-form';
 
 const FormComponent = ({ title }) => {
@@ -156,10 +156,12 @@ const FormComponent = ({ title }) => {
         </div>
 
         <div className='zcwf_row flex flex-col items-center justify-center pt-5'>
-          <ReCAPTCHA
-            sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
-            onChange={handleCaptchaChange}
-          />
+          <Suspense fallback={<div>Loading Captcha...</div>}>
+            <ReCAPTCHA
+              sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
+              onChange={handleCaptchaChange}
+            />
+          </Suspense>
           {showCaptchaError && (
             <p className='text-sm text-red-500'>
               Please complete the captcha verification.

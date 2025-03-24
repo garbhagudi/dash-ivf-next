@@ -12,7 +12,7 @@ const Content = () => {
         width={400}
         height={400}
         className='mx-auto w-full object-contain lg:w-1/2'
-        priority
+        priority='true'
       />
     </div>
   );

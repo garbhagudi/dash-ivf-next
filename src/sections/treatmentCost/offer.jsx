@@ -21,12 +21,12 @@ const Offer = () => {
             </ul>
             <div className='flex justify-end pt-16'>
               <Image
-                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742457439/1_Lakh_Offer_mbs1hf.png'
+                src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742457439/1_Lakh_Offer_mbs1hf.webp'
                 width={800}
                 height={350}
                 alt='Start IVF from as low as 90K'
                 quality={90}
-                priority
+                priority='true'
                 // className='h-60 w-60'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               />
@@ -40,12 +40,12 @@ const Offer = () => {
 
       <div className='order-0 flex overflow-hidden md:order-1'>
         <Image
-          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742454450/Couple--01_is1s40.png'
+          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742454450/Couple--01_is1s40.webp'
           width={800}
           height={350}
           alt='Start IVF from as low as 90K'
           quality={90}
-          priority
+          priority='true'
           className='h-full'
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />

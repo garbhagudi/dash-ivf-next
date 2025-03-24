@@ -1,4 +1,3 @@
-import React from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';

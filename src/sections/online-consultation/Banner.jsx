@@ -61,7 +61,7 @@ export default function Banner() {
 const styles = {
   banner: {
     overflow: ['hidden', 'initial', null, 'hidden'],
-    backgroundImage: `url(https://res.cloudinary.com/garbhagudi/image/upload/v1634539905/garbhagudi-ivf/Banners/bannerBg_ua1mbj.png)`,
+    backgroundImage: `url(https://res.cloudinary.com/garbhagudi/image/upload/v1634539905/garbhagudi-ivf/Banners/bannerBg_ua1mbj.webp)`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'top left',
     backgroundSize: 'cover',

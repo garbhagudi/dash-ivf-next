@@ -1,9 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { ThemeProvider, Flex } from 'theme-ui';
 import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
+import { DM_Sans } from 'next/font/google';
+
+const dmSans = DM_Sans({
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  style: ['normal'],
+});
 
 // Dynamically load non-essential components
 const SalesIQ = dynamic(() => import('components/SalesIQ'), {
@@ -18,14 +25,23 @@ const Footer = dynamic(() => import('components/footer/footer'), {
   ssr: false,
   loading: () => null,
 });
-
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    // Defer Google Tag Manager loading
-    if (typeof window !== 'undefined') {
-      const TagManager = require('react-gtm-module');
-      TagManager.initialize({ gtmId: 'GTM-NT9BZ69' });
-    }
+    // Defer Google Tag Manager loading after the initial page load
+    const loadGoogleTagManager = () => {
+      if (typeof window !== 'undefined') {
+        const TagManager = require('react-gtm-module');
+        TagManager.initialize({ gtmId: 'GTM-NT9BZ69' });
+      }
+    };
+
+    // Load Google Tag Manager after the page is loaded
+    window.addEventListener('load', loadGoogleTagManager);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('load', loadGoogleTagManager);
+    };
   }, []);
 
   return (
@@ -38,7 +54,7 @@ function MyApp({ Component, pageProps }) {
         }}
       >
         {/* Main component */}
-        <main sx={{ variant: 'layout.main' }}>
+        <main sx={{ variant: 'layout.main' }} className={dmSans.className}>
           <Component {...pageProps} />
         </main>
 

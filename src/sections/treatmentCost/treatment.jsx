@@ -185,7 +185,7 @@ const Treatment = () => {
 
               <div className='order-1 col-span-2 mx-auto mt-4 max-w-[50rem] md:max-w-full lg:order-2 lg:p-4'>
                 <Image
-                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722510346/Misc/PNG_25_yoa08y_1_cr2fpg.png'
+                  src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1722510346/Misc/PNG_25_yoa08y_1_cr2fpg.webp'
                   className='relative w-full bg-white/10 dark:brightness-75 dark:invert'
                   alt='Process of IVF Treatment in Bangalore'
                   loading='lazy'

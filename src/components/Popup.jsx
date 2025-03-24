@@ -54,9 +54,9 @@ export default function Popup({ title, btnClassName }) {
               >
                 <Dialog.Panel className='flex w-full max-w-lg transform flex-col items-start justify-start overflow-hidden rounded-lg bg-[#005e7e] pb-8 shadow-lg transition-all'>
                   <Image
-                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735814525/Image_Artboard_copy_3_ic0le8.jpg'
-                    width={1920}
-                    height={1080}
+                    src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735814525/Image_Artboard_copy_3_ic0le8.webp'
+                    width={512}
+                    height={180}
                     alt='book an appointment form'
                     className='h-full w-full object-center'
                     quality={75}

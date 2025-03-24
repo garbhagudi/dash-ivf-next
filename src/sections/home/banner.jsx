@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Head from 'next/head';
-import FormComponent from 'components/formComp';
-import Popup from 'components/Popup';
+import dynamic from 'next/dynamic';
+const Popup = dynamic(() => import('components/Popup'), { ssr: false });
+const FormComponent = dynamic(() => import('components/formComp'), {
+  ssr: false,
+});
 
 const Banner = () => {
   return (
@@ -10,7 +13,7 @@ const Banner = () => {
         {/* Preload critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738910110/Website_Landing_page-01_zwlyd7.png'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.webp'
           as='image'
         />
         {/* Preload Fonts */}
@@ -64,11 +67,11 @@ const Banner = () => {
         <div className='order-0 flex items-end justify-center overflow-hidden md:order-1'>
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.webp'
-            width={520}
-            height={480}
+            width={490}
+            height={360}
             alt='Start IVF from as low as 90K'
             quality={90}
-            priority
+            priority='true'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
           />
         </div>

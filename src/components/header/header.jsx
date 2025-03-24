@@ -22,10 +22,12 @@ export default function Header() {
                 <div>
                   <span className='sr-only'>logo</span>
                   <Image
-                    className='h-10 sm:h-14'
+                    className='h-10 w-48 sm:h-14 lg:w-64'
                     src={logoUrl}
                     alt='logo'
-                    loading='lazy'
+                    width={250}
+                    height={70}
+                    priority='true'
                   />
                 </div>
               </Link>

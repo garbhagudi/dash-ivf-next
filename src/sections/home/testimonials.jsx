@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineSwipeLeft, MdOutlineRateReview } from 'react-icons/md';

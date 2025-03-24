@@ -336,7 +336,7 @@ const Ivf = () => {
                   <div className='px-2 sm:px-0 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:-ml-48 lg:h-full lg:px-0 lg:pr-4'>
                     <img
                       className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none lg:px-28'
-                      src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.png'
+                      src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1671190677/Misc/avn-min_jo63l5.webp'
                       alt='Customer profile user interface'
                     />
                   </div>
