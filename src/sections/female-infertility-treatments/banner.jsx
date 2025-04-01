@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Form from 'components/form';
-import Link from 'next/link';
+import Popup from 'components/Popup';
+import FormComponent from 'components/formComp';
 
 const Banner = () => {
   return (
@@ -20,12 +20,10 @@ const Banner = () => {
                 ₹ 55000/- OFF on IVF Treatment
               </div>{' '}
             </div>
-            <Link
-              href={'#leadForm'}
-              className='mx-auto w-full rounded-sm bg-brandPink py-1.5 text-base font-bold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark md:w-1/3'
-            >
-              <button>Book an Appointment</button>
-            </Link>
+            <Popup
+              title={'Book an Appointment'}
+              btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+            />
           </div>
           <div className='-mt-5 hidden text-xs font-medium lg:block'>
             *terms and conditions apply
@@ -48,7 +46,10 @@ const Banner = () => {
         </div>
         <div className='order-2 bg-[#005e7e]' id='leadForm'>
           <div className='flex items-center justify-center'>
-            <Form />
+            <FormComponent
+              title={'Consult our Fertility Experts '}
+              isTag={false}
+            />
           </div>
         </div>
       </div>
@@ -63,11 +64,10 @@ const Banner = () => {
           </a>
         </div>
         <div className='mx-auto text-center'>
-          <button className='mx-auto block rounded-lg bg-brandPink px-3 py-2 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block'>
-            <Link href='#leadForm' className='scroll-smooth font-sans'>
-              Book an Appointment
-            </Link>
-          </button>
+          <Popup
+            title={'Book an Appointment'}
+            btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+          />
         </div>
       </div>
     </div>

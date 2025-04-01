@@ -5,6 +5,7 @@ import { jsx, Box, Container, Button } from 'theme-ui';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import SectionHeading from 'components/section-heading';
 import MyModal from 'components/modal';
+import Popup from 'components/Popup';
 
 const Banner = () => {
   return (
@@ -18,7 +19,10 @@ const Banner = () => {
           />
           <Box as='figure' sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>
-              <MyModal title='Get Started' />
+              <Popup
+                title={'Get Started'}
+                btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+              />
             </Box>
             <LazyLoadImage
               src='https://res.cloudinary.com/garbhagudi/image/upload/v1633780493/garbhagudi-ivf/Banners/maleInf_umubsg.webp'

@@ -282,7 +282,7 @@ const DoctorsList = () => {
                       <div className='grid grid-cols-2 items-start gap-8 lg:grid-cols-4'>
                         {groupedDoctors[category].map((doctor) => (
                           <div
-                            key={doctor.id}
+                            key={doctor?.order}
                             className='transition-all duration-300 hover:scale-105'
                           >
                             <div className='space-y-4'>

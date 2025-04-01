@@ -38,24 +38,15 @@ const Banner = () => {
             <div className='flex flex-col items-center px-4 py-2 pb-4 text-center text-xl font-normal'>
               <div>
                 Offer of the Month: <br />
-                15th Anniversary Special Offer: <br />
+                15th Anniversary Special: <br />
                 <strong className='text-brandPurpleDark'>
                   ₹1,00,000 off on IVF Treatment
                 </strong>
-                <div className='text-center'>&</div>
-                <strong className='text-brandPurpleDark'>
-                  Free Fertility Screening
-                </strong>
               </div>
-              <ul className='mt-2 flex flex-col items-start space-y-1'>
-                <li>1. Free Consultation</li>
-                <li>2. Baseline Scan</li>
-                <li>3. Semen Analysis</li>
-              </ul>
-              <p className='mt-2'>Offer Validity: 31st March 2025</p>
+              <p className='mt-2'>Offer Validity: 30th April 2025</p>
             </div>
             <Popup
-              title={'Book Appointment'}
+              title={'Book Free Consultation'}
               btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
             />
           </div>

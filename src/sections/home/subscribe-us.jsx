@@ -1,5 +1,4 @@
-import React from 'react';
-import MyModal from 'components/modal';
+import Popup from 'components/Popup';
 
 const CallToAction = () => {
   return (
@@ -13,7 +12,10 @@ const CallToAction = () => {
         </h2>
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
           <div className='inline-flex rounded-md shadow'>
-            <MyModal title={'BOOK AN APPOINTMENT'} />
+            <Popup
+              title={'BOOK AN APPOINTMENT'}
+              btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+            />
           </div>
         </div>
       </div>
