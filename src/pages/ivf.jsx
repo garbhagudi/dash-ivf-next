@@ -4,6 +4,7 @@ import MyModal from 'components/modal';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Head from 'next/head';
+import Popup from 'components/Popup';
 
 const Ivf = () => {
   function addReviewJsonLd() {
@@ -238,7 +239,10 @@ const Ivf = () => {
                   <div className='mx-auto mt-10 flex justify-center'>
                     <div className='mx-auto'>
                       <div>
-                        <MyModal title={'Get Started'} />
+                        <Popup
+                          title={'Get Started'}
+                          btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+                        />
                       </div>
                     </div>
                   </div>

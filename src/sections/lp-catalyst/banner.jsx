@@ -1,12 +1,14 @@
 import Image from 'next/image';
-import Form from 'sections/lp-catalyst/form';
+
 import { Link } from 'react-scroll';
 import bannerImage from 'assets/images/banner.webp';
+import FormComponent from 'components/formComp';
+import Popup from 'components/Popup';
 
 const Banner = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 bg-purple-100 lg:grid-cols-5 xl:grid-cols-4'>
+      <div className='grid grid-cols-1 bg-[#005e7e] lg:grid-cols-5 xl:grid-cols-4'>
         <div className='h-full w-full object-cover object-center lg:col-span-3 xl:col-span-3'>
           <Image
             src={bannerImage}
@@ -18,11 +20,11 @@ const Banner = () => {
           />
         </div>
         <div
-          className='flex items-center justify-center p-4 text-center font-semibold text-white lg:col-span-2 lg:text-left xl:col-span-1'
+          className='flex items-center justify-center text-center font-semibold lg:col-span-2 lg:text-left xl:col-span-1'
           id='leadForm'
         >
           <div className='flex items-center justify-center'>
-            <Form />
+            <FormComponent title={'Book your Appointment'} isTag={false} />
           </div>
         </div>
       </div>
@@ -37,17 +39,10 @@ const Banner = () => {
           </a>
         </div>
         <div className='mx-auto text-center'>
-          <button className='mx-auto block rounded-lg bg-brandPink px-3 py-2 text-center font-semibold text-white transition duration-200 ease-in-out hover:bg-brandPurpleDark sm:inline-block'>
-            <Link
-              to='home'
-              spy={true}
-              smooth={true}
-              offset={-110}
-              duration={500}
-            >
-              Book an Appointment
-            </Link>
-          </button>
+          <Popup
+            title={'Book an Appointment'}
+            btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+          />
         </div>
       </div>
     </div>

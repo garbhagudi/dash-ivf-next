@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { lazy, Suspense, useEffect, useState } from 'react';
 const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
@@ -7,6 +8,10 @@ import { useForm } from 'react-hook-form';
 
 const FormComponent = ({ title, isTag = true }) => {
   const router = useRouter();
+  const path = usePathname();
+  const pageVisit = router?.query?.pageVisit || path;
+  console.log(pageVisit);
+
   const {
     register,
     handleSubmit,
@@ -21,6 +26,7 @@ const FormComponent = ({ title, isTag = true }) => {
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
       UTM_Campaign: '',
+      Page_Visited: pageVisit,
     },
   });
 
@@ -33,7 +39,8 @@ const FormComponent = ({ title, isTag = true }) => {
       const { utm_campaign } = router.query;
       setValue('UTM_Campaign', utm_campaign || 'IVF Treatment 2023');
     }
-  }, [router.query, setValue]);
+    setValue('Page_Visited', pageVisit);
+  }, [router.query, setValue, pageVisit]);
 
   const handleCaptchaChange = (value) => {
     setCaptchaVerified(!!value);
@@ -76,7 +83,6 @@ const FormComponent = ({ title, isTag = true }) => {
         <div className='flex justify-center'>
           <div className='mx-5 mt-5 w-fit self-center rounded-md bg-white px-2 py-1 text-center font-semibold text-brandPink shadow-sm'>
             ₹1,00,000 off on IVF Treatment
-            <span> | Free Fertility Screening</span>
           </div>
         </div>
       )}
