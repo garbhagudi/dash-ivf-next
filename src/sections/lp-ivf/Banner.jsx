@@ -1,6 +1,7 @@
 import { HiStar } from 'react-icons/hi';
 import Link from 'next/link';
 import Image from 'next/image';
+import Popup from 'components/Popup';
 
 const Banner = () => {
   return (
@@ -118,12 +119,10 @@ const Banner = () => {
             </div>
             <div className='hidden text-center lg:mt-6 lg:block lg:text-left'>
               {' '}
-              <Link
-                href={'tel:+919480948005'}
-                className='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
-              >
-                Book an Appointment
-              </Link>
+              <Popup
+                title={'Book an Appointment'}
+                btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+              />
             </div>
           </div>
         </div>

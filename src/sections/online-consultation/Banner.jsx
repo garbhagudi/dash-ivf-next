@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import Popup from 'components/Popup';
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Heading, Text, Image, Button } from 'theme-ui';
 
@@ -19,15 +20,10 @@ export default function Banner() {
             No Extra Cost!!
           </Text>
           <Flex>
-            <Button variant='whiteButton' aria-label='Get Started'>
-              <a
-                href='https://consult.bestdocapp.com/home/GARBHAGUDI'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Get Started
-              </a>
-            </Button>
+            <Popup
+              title={'Get Started'}
+              btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+            />
             {/* <>
               <ModalVideo
                 channel="youtube"

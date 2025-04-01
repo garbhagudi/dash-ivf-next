@@ -1,5 +1,4 @@
-import MyModal from 'components/modal';
-import React from 'react';
+import Popup from 'components/Popup';
 
 function HeroHome() {
   return (
@@ -36,7 +35,10 @@ function HeroHome() {
               </p>
               <div className='flex flex-col items-center justify-center space-y-10 sm:flex-row sm:space-x-10 sm:space-y-0'>
                 <div>
-                  <MyModal title={'Book a Free Consultation'} />
+                  <Popup
+                    title={'Book a Free Consultation'}
+                    btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+                  />
                 </div>
                 <div>
                   <a

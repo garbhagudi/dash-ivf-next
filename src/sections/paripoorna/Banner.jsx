@@ -2,8 +2,8 @@
 /** @jsx jsx */
 import { jsx, Box, Flex, Grid, Container, Button, Image, Text } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
-import Link from 'next/link';
 import MyModal from 'components/modal';
+import Popup from 'components/Popup';
 
 const Banner = () => {
   return (
@@ -25,7 +25,10 @@ const Banner = () => {
               treatment.
             </Text>
             <div className='mt-8'>
-              <MyModal title={'Get Started'} />
+              <Popup
+                title={'Get Started'}
+                btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+              />
             </div>
           </Box>
           <Flex as='figure' sx={styles.illustration}>

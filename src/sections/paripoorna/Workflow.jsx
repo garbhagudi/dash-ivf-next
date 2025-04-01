@@ -1,4 +1,5 @@
 import MyModal from 'components/modal';
+import Popup from 'components/Popup';
 
 const data = [
   {
@@ -44,7 +45,10 @@ export default function WorkFlow() {
         </div>
       </div>
       <div className='mx-auto mt-12 text-center'>
-        <MyModal title={'Book an Appointment'} />
+        <Popup
+          title={'Book an Appointment'}
+          btnClassName='rounded-md bg-brandPink px-6 py-4 font-semibold text-white focus:outline-none'
+        />
       </div>
     </div>
   );
