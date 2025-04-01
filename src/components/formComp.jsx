@@ -10,7 +10,6 @@ const FormComponent = ({ title, isTag = true }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
-  console.log(pageVisit);
 
   const {
     register,
