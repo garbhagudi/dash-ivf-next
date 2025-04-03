@@ -38,7 +38,7 @@ const FormComponent = ({ title, isTag = true }) => {
       const { utm_campaign } = router.query;
       setValue('UTM_Campaign', utm_campaign || 'IVF Treatment 2023');
     }
-    setValue('Page_Visited', pageVisit);
+    setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
   }, [router.query, setValue, pageVisit]);
 
   const handleCaptchaChange = (value) => {
