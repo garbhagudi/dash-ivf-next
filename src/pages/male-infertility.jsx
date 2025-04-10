@@ -31,7 +31,7 @@ const MaleInfertility = () => {
           content='https://res.cloudinary.com/garbhagudi/image/upload/v1633780493/garbhagudi-ivf/Banners/maleInf_umubsg.webp'
         />
         <meta name='twitter:site' content='@garbhagudiivf'></meta>
-        <meta name='twitter:title' content='Garbhagudi IVF Centre ' />
+        <meta name='twitter:title' content='GarbhaGudi IVF Centre ' />
         <meta
           name='twitter:description'
           content=" India's Best IVF Infrastructure"

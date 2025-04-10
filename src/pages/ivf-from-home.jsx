@@ -30,7 +30,7 @@ const IvfFromHome = () => {
           content='https://res.cloudinary.com/garbhagudi/image/upload/v1633779919/garbhagudi-ivf/Banners/ivffromhome_tdjvoq.webp'
         />
         <meta name='twitter:site' content='@garbhagudiivf'></meta>
-        <meta name='twitter:title' content='Garbhagudi IVF Centre ' />
+        <meta name='twitter:title' content='GarbhaGudi IVF Centre ' />
         <meta
           name='twitter:description'
           content=" India's Best IVF Infrastructure"
