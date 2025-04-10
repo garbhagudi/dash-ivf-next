@@ -23,7 +23,7 @@ const Paripoorna = () => {
           property='og:image'
           content='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,w_1200/v1638189477/garbhagudi-ivf/Banners/Link_Share_Banner_i1ppok.webp'
         />
-        <meta name='twitter:title' content='Garbhagudi IVF Centre' />
+        <meta name='twitter:title' content='GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content=" India's Best IVF Infrastructure"
