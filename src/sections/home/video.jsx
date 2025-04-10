@@ -50,7 +50,7 @@ const Video = () => {
                 >
                   <LiteYouTubeEmbed
                     id={item?.videoId}
-                    title='Garbhagudi IVF Center Youtube video'
+                    title='GarbhaGudi IVF Center Youtube video'
                     poster='maxresdefault'
                   />
                 </div>

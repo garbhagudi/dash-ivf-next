@@ -1,7 +1,7 @@
 export const doctors = [
   {
     name: 'Dr Asha S Vijay',
-    qualification: 'MBBS, DGO-DNB',
+    qualification: 'MBBS, MD(OBG), FRM',
     designation: 'Medical Director - GarbhaGudi',
     image: {
       url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
@@ -615,7 +615,7 @@ export const doctors = [
   },
   {
     name: 'Dr Nikitha Murthy B.S',
-    qualification: 'MBBS, MS-OBG, DNB, FRM',
+    qualification: 'MBBS, MS(OBG), DNB(OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://media.graphassets.com/aoSy8u3ORwaJng9CVqGY',
@@ -866,7 +866,7 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: 'With extensive experience spanning various prestigious institutions such as Garbhagudi IVF Centre, Oasis Fertility Centre, and The Origin International Fertility Centre,Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility. ',
+                    text: 'With extensive experience spanning various prestigious institutions such as GarbhaGudi IVF Centre, Oasis Fertility Centre, and The Origin International Fertility Centre,Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility. ',
                   },
                 ],
               },

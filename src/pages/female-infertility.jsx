@@ -30,7 +30,7 @@ const FemaleInfertility = () => {
           property='og:image'
           content='https://res.cloudinary.com/garbhagudi/image/upload/c_scale,h_586,w_1200/v1637220770/garbhagudi-ivf/Banners/Young_married_couple_consulting_doctor_svxszn.webp'
         />
-        <meta name='twitter:title' content='Garbhagudi IVF Centre' />
+        <meta name='twitter:title' content='GarbhaGudi IVF Centre' />
         <meta
           name='twitter:description'
           content=" India's Best IVF Infrastructure"

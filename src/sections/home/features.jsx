@@ -42,7 +42,7 @@ const features = [
     name: 'Holistic Approach',
     icon: <GiMeditation />,
     content:
-      'At Garbhagudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
+      'At GarbhaGudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
     link: '/features/holistic-approach',
   },
   {

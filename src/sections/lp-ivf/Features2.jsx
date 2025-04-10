@@ -56,7 +56,7 @@ const features = [
     name: 'Holistic Approach',
     icon: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1642840338/Icons/Features/Holistic_Approach_pcqyr1.svg',
     content:
-      'At Garbhagudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
+      'At GarbhaGudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
     link: '/features/holistic-approach',
   },
   {

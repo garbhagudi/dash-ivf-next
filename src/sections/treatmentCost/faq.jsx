@@ -50,7 +50,7 @@ const data = [
   {
     id: 4,
     Question: 'Which IVF clinic has the highest success rate in Bangalore?',
-    Answer: `Garbhagudi IVF Centre has a high success rate, with many of our patients achieving successful pregnancies. However, it's important to note that success rates can vary depending on individual factors.`,
+    Answer: `GarbhaGudi IVF Centre has a high success rate, with many of our patients achieving successful pregnancies. However, it's important to note that success rates can vary depending on individual factors.`,
   },
   {
     id: 5,
