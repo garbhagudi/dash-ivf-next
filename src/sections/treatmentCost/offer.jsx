@@ -9,7 +9,7 @@ const Offer = () => {
         <div className='items-left flex h-full flex-col justify-center bg-cover bg-no-repeat py-5 text-center lg:py-0'>
           <div className='px-2 pb-4 pt-8 text-center font-heading text-2xl font-extrabold'>
             <h1 className='uppercase text-[#e92e64]'>
-              IVF Treatment Cost at ₹1,50,000*
+              IVF Treatment Cost at ₹1,60,000*
             </h1>
           </div>
           <div className='flex flex-col px-4 py-2 pb-4 text-xl font-normal'>
