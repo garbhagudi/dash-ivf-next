@@ -22,7 +22,7 @@ export default function Header() {
                 <div>
                   <span className='sr-only'>logo</span>
                   <Image
-                    className='h-10 w-48 sm:h-14 lg:w-64'
+                    className='h-10 w-36 sm:h-14 md:w-48 lg:w-64'
                     src={logoUrl}
                     alt='logo'
                     width={250}
