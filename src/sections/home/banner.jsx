@@ -36,10 +36,20 @@ const Banner = () => {
             quality={90}
             priority='true'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-            className='h-full w-full'
+            className='hidden h-full w-full md:block'
           />
-          <div className='absolute -bottom-6 flex w-full justify-center p-2 font-semibold text-white md:hidden'>
-            <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-sm shadow-sm'>
+          <Image
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.jpg'
+            width={490}
+            height={360}
+            alt='Start IVF from as low as 90K'
+            quality={90}
+            priority='true'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            className='h-full w-full md:hidden'
+          />
+          <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
+            <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
               Best IVF & Fertility Clinic - Affordable IVF Treatment
             </h1>
           </div>
