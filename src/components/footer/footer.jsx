@@ -1,9 +1,15 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Box, Text, Container } from 'theme-ui';
+import { Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
 import Link from 'next/link';
-import { WidgetAbout, WidgetInfo } from './widget';
+import dynamic from 'next/dynamic';
+const WidgetAbout = dynamic(
+  () => import('./widget').then((mod) => mod.WidgetAbout),
+  { ssr: false },
+);
+const WidgetInfo = dynamic(
+  () => import('./widget').then((mod) => mod.WidgetInfo),
+  { ssr: false },
+);
 import { about, information } from './footer.data';
 
 export default function Footer() {
