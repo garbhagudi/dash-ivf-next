@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { ThemeProvider, Flex } from 'theme-ui';
+import { ThemeUIProvider, Flex } from 'theme-ui';
 import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeUIProvider theme={theme}>
       <Flex
         sx={{
           minHeight: '100vh',
@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
         <SalesIQ />
         <Footer />
       </Flex>
-    </ThemeProvider>
+    </ThemeUIProvider>
   );
 }
 
