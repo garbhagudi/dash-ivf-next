@@ -19,7 +19,7 @@ const OtherServices = () => {
             width={360}
             height={400}
             className='mx-auto w-full object-contain lg:w-3/5'
-            priority='true'
+            loading='lazy'
           />
           <p className='text-sm text-gray-600'>
             GarbhaGudi IVF Centre has been awarded as the Best IVF & Fertility

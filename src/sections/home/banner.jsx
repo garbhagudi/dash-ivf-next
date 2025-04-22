@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const Popup = dynamic(() => import('components/Popup'), { ssr: false });
 const FormComponent = dynamic(() => import('components/formComp'), {
-  ssr: false,
+  ssr: true,
 });
 
 const Banner = () => {
@@ -13,7 +12,7 @@ const Banner = () => {
         {/* Preload critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1741775546/15th_year_anniversary_Landing_page-01_g71qgd.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
           as='image'
         />
         {/* Preload Fonts */}
@@ -30,20 +29,18 @@ const Banner = () => {
         <div className='relative col-span-2'>
           <Image
             src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
-            width={490}
+            width={720}
             height={360}
             alt='Start IVF from as low as 90K'
-            quality={90}
             priority='true'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='hidden h-full w-full md:block'
           />
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.jpg'
-            width={490}
+            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.webp'
+            width={420}
             height={360}
             alt='Start IVF from as low as 90K'
-            quality={90}
             priority='true'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='h-full w-full md:hidden'
