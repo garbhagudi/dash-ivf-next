@@ -5,6 +5,7 @@ import theme from 'theme';
 import '../styles/globals.css';
 import '../styles/calendar.css';
 import { DM_Sans } from 'next/font/google';
+import { useRouter } from 'next/router';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '600', '700', '800'],
@@ -26,6 +27,7 @@ const Footer = dynamic(() => import('components/footer/footer'), {
   loading: () => null,
 });
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   useEffect(() => {
     // Defer Google Tag Manager loading after the initial page load
     const loadGoogleTagManager = () => {
@@ -60,7 +62,7 @@ function MyApp({ Component, pageProps }) {
 
         {/* Defer loading of less critical components */}
         <FloatPhone />
-        <SalesIQ />
+        {router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
         <Footer />
       </Flex>
     </ThemeUIProvider>
