@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from 'components/header/header';
-import Offer from 'sections/treatmentCost/offer';
 import KeyBenefits from 'sections/treatmentCost/keyBenefits';
 import Content from 'sections/treatmentCost/content';
 import OtherServices from 'sections/treatmentCost/otherServices';
@@ -13,6 +12,7 @@ import Cta from 'sections/home/cta';
 import RelatedSearches from 'sections/home/relatedSearches';
 import Testimonial from 'sections/home/testimonials';
 import Script from 'next/script';
+import Banner from 'sections/home/banner';
 
 const IndexPage = () => {
   return (
@@ -79,7 +79,7 @@ const IndexPage = () => {
           `}
       </Script>
       <Header />
-      <Offer />
+      <Banner />
       <KeyBenefits />
       <Content />
       <OtherServices />

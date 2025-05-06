@@ -80,7 +80,7 @@ const FormComponent = ({ title, isTag = true }) => {
       {isTag && (
         <div className='flex justify-center'>
           <div className='mx-5 mt-5 w-fit self-center rounded-md bg-white px-2 py-1 text-center font-semibold text-brandPink shadow-sm'>
-            ₹1,00,000 off on IVF Treatment
+            Parivara Parva Book a Free Consultation Now
           </div>
         </div>
       )}
