@@ -33,7 +33,7 @@ const data = [
   {
     id: 1,
     Question: 'Is this package available in all your centres?',
-    Answer: 'Yes, this package is available at all our 7 centres.',
+    Answer: 'Yes, this package is available at all our 8 centres.',
   },
   {
     id: 2,
