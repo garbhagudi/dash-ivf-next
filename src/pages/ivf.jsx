@@ -17,7 +17,7 @@ const Ivf = () => {
           "description": "What is IVF and how does it work? IVF or In Vitro Fertilization is one of the more widely known types of Assisted Reproductive Techniques (ART).",
           "brand": {
             "@type": "Brand",
-            "name": "Garbha Gudi"
+            "name": "GarbhaGudi"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -79,7 +79,7 @@ const Ivf = () => {
           "itemReviewed": {
           "@type": "Hospital",
           "image": "https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/logo_tyy9tg.svg",
-          "name": "Garbha Gudi",
+          "name": "GarbhaGudi",
           "telephone": "+91 9480 9480 05",
           "priceRange": "90000 - 280000"
           }

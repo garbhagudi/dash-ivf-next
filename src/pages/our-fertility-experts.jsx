@@ -15,7 +15,7 @@ const FertilityExperts = () => {
         <title>Our Fertility Experts | GarbhaGudi IVF Centre</title>
         <meta
           name='title'
-          content='Top Infertility Hospital and Centres with Best Fertility Doctors in Banglore | Garbha Gudi'
+          content='Top Infertility Hospital and Centres with Best Fertility Doctors in Banglore | GarbhaGudi'
         />
         <meta
           name='description'

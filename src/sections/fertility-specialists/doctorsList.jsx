@@ -134,19 +134,6 @@ const DoctorsList = () => {
       category: 'fertilitySpecialist',
       designation: 'Fertility Specialist',
       image: {
-        url: 'https://media.graphassets.com/4UJ5nbpQYCRSGSuKrWJq',
-      },
-      imageAlt: null,
-      medicalRegNo: '110858',
-      name: 'Dr Pavithra',
-      order: 11,
-      qualification: 'MBBS, MS OBG , FRM',
-      content: `Dr. Pavithra MBBS, MS-OBG, FRM is an accomplished Infertility Specialist with a passion for helping couples overcome reproductive challenges. She has two years of experience in the field of infertility, during which she has worked tirelessly to support her patients in their journey toward parenthood. She is well-versed in the latest advancements in Assisted Reproductive Technology (ART), including procedures like IVF and IUI. She ensures that each patient receives personalized care tailored to their specific needs and believes in providing ethical and evidence-based treatments while maintaining open and transparent communication. She is also experienced in providing counseling to couples, offering them the emotional support they need during their fertility journey.`,
-    },
-    {
-      category: 'fertilitySpecialist',
-      designation: 'Fertility Specialist',
-      image: {
         url: 'https://media.graphassets.com/FZxTAyTHWVjXmjNdaLvg',
       },
       imageAlt: null,

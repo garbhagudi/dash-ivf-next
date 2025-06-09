@@ -18,7 +18,7 @@ const features = [
     name: 'World Class Fertility Care',
     icon: <BsBuildings />,
     content:
-      'GarbhaGudi is Proud to have played a key role in bringing more than 8,500+ babies into the world since 2011.',
+      'GarbhaGudi is Proud to have played a key role in bringing more than 11,000+ babies into the world since 2011.',
     link: '/features/world-class-fertility-care',
   },
   {
