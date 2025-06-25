@@ -1137,4 +1137,916 @@ export const doctors = [
       },
     },
   },
+  {
+    name: 'Dr. Poornima M S',
+    qualification: 'MBBS, MS (OBG), FRM, FMAS',
+    designation: 'Fertility Specialist ',
+    image: {
+      url: 'https://media.graphassets.com/VlHN58CdScaqsblmOFlp',
+    },
+    imageAlt: 'dr-poornima-m-s',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Poornima is a compassionate and experienced fertility specialist with a strong foundation in obstetrics and gynaecology. With a robust academic background and hands-on experience in handling both high-risk pregnancies and complex infertility cases, she brings a holistic and skilled approach to patient care. Her journey from handling critical obstetric emergencies to mastering advanced fertility procedures demonstrates her versatility and dedication to women’s health.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship in Reproductive Medicine (FRM) – Gunasheela Surgical and Maternity Hospital, Bangalore ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'M.S. (OBG) – Yenepoya Medical College Hospital, Mangalore ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS – JSS Medical College, Mysore',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Recognition:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: '1st Prize, YENDO-OBG Update 2018 Quiz – Yenepoya Medical College',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Hosted YENDO-OBG CME – 2018, Yenepoya Medical College',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Expertise in infertility evaluation and planning optimal treatment pathways',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Skilled in performing ovum pickups, hysteroscopies, IUI, and embryo transfers',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Managed high-risk obstetric cases including preeclampsia, eclampsia, placenta previa, abruption, HELLP, AFLP, thrombocytopenia, and cardiac disorders in pregnancy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Proficient in handling emergencies: shoulder dystocia, cord prolapse, PPH, maternal collapse',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Performed major gynecological surgeries: abdominal & vaginal hysterectomy, hysteroscopy, colposcopy, D&C, cone biopsy, marsupialization, and cryotherapy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Conducted more than 500 vaginal deliveries, and around 50 operative vaginal deliveries. ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Performed more than 300 Caesarean sections and many post-partum sterilizations, assisted peripartum hysterectomy. ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Poornima follows a compassionate and evidence-based approach to fertility care. She believes in tailoring each treatment plan to suit the unique needs of the couple, with emphasis on open communication, emotional support, and ethical practice. Her training in reproductive medicine enables her to handle both common and complex infertility scenarios effectively.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment',
+                  },
+                  {
+                    text: ':',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Individualized treatment plans\nIntegration of the latest reproductive technologies\nComprehensive patient care from diagnosis to delivery\nFocus on patient comfort, transparency, and results',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Special/Difficult Fertility Cases Handled',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Poor ovarian responders ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Repeated IVF failures',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Onco fertility cases',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'High-risk pregnancies and medical complications in pregnancy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Management of postmenopausal reproductive concerns',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Conferences Attended:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'South ISAR, Bengaluru – 2024 Annual PG Academic Rehearsal IV – 2019, KMC Mangalore CME on Medical Emergencies in Pregnancy – 2018, Kanachur Institute PG Excellence Quest & CME – 2018, Mangalore\nYENDO-OBG Update – 2018\nFeto-Maternal Rescue – 2017, KMC Mangalore\nRevise & Be Wise Workshop – 2017, KMC Mangalore\nMaternal Fetal Simulation – 2016, Yenepoya Medical College\nResearch Methodology Workshop – 2016, Yenepoya',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Papers Presented / Published',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Paper Presentation: Outcome of embryo pooling in poor ovarian responders – South ISAR 2024\nPublication: Role of Tubal Ligation in Ovarian Cancer Risk Reduction – IJOG, 2019\nCase presentations: Postmenopausal Bleeding, Primary Amenorrhea\nPaper: Outcome of Unengaged Head in Primigravida – KSOGA 2017\nPoster: Postmenopausal Endometriosis – Yuva KSOGA 2017',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. P. V. Vasavi Devi',
+    qualification: 'MBBS, DGO, FRM, FMAS ',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://media.graphassets.com/gpKSKpmgQguLtfTmx5xt',
+    },
+    imageAlt: 'Dr. P. V. Vasavi Devi',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Vasavi (Gold Medalist) is an award-winning, experienced Obstetrician and Gynaecologist with over six years of dedicated practice in managing a broad spectrum of obstetric and gynaecological cases, including infertility treatment. She is highly skilled in surgical procedures, antenatal care, and various infertility management protocols. Known for her excellent communication skills and strong technical expertise, she thrives in collaborative, team-oriented settings.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education Credentials:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship in Gynaecologic Endoscopy, 2025',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship in Reproductive Medicine, Milann Fertility Centre, Bengaluru - A unit of BACC Healthcare Pvt Ltd, 2024',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'DGO - Diploma in Obstetrics and Gynaecology, Sri Venkateshwara Medical College, 2018',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS - Sri Venkateswara Medical College, Tirupati, Andhra Pradesh, 2014',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Recognition:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Gold Medalist in Anatomy and Surgery ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Awarded Best Outgoing Student ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Infertility counselling',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Intrauterine Insemination (IUI)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'In Vitro Fertilization (IVF)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Embryo transfer',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Male infertility management',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Laparoscopic tubectomy ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Laparoscopic hysterectomy ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Laparoscopic cystectomy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Diagnostic and surgical management of abortions ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Normal and induced deliveries ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Performing tubectomies and hysterectomies ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'IUCD insertion and antenatal scans ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Performing D&C and PAP smears ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Management of gynaecological problems ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Laparoscopic ectopic pregnancy management ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Infertility management ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Cesarean deliveries ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Her commitment to service excellence and continuous improvement is evident in her ability to manage time effectively while providing unwavering support to patients. She is deeply passionate about delivering high-quality, patient-centred care, drawing from a solid medical background and having earned distinctions in anatomy and surgery during her training. She is multilingual - can give consultations in four languages - Kannada, English, Hindi, and Telugu.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    id: 'cmc5xttet23kr07o364zcjjrb',
+  },
 ];

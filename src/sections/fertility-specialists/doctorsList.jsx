@@ -157,6 +157,32 @@ const DoctorsList = () => {
       content: `Dr. Sahana K, MBBS, MS (OBG), DNB (OBG), FRM brings a wealth of experience and deep expertise in obstetrics, gynecology, and reproductive medicine. Her compassionate approach and commitment to helping couples achieve their dreams of parenthood make her a valuable asset to our organization. Her diverse academic and professional background equips her with the knowledge and skills to address even the most complex fertility challenges. Her patient-centric approach and dedication to reproductive health make her a valued member of the GarbhaGudi IVF Centre team. Her goal is to provide not just medical solutions but emotional support, ensuring a seamless and comfortable experience for her patients.`,
     },
     {
+      category: 'fertilitySpecialist',
+      designation: 'Fertility Specialist',
+      image: {
+        url: 'https://media.graphassets.com/VlHN58CdScaqsblmOFlp',
+      },
+      imageAlt: 'dr-poornima-m-s',
+      medicalRegNo: '110722',
+      name: 'Dr. Poornima M S',
+      order: 14,
+      qualification: 'MBBS, MS (OBG), FRM, FMAS',
+      content: `Dr. Poornima is a compassionate and experienced fertility specialist with a strong foundation in obstetrics and gynaecology. With a robust academic background and hands-on experience in handling both high-risk pregnancies and complex infertility cases, she brings a holistic and skilled approach to patient care. Her journey from handling critical obstetric emergencies to mastering advanced fertility procedures demonstrates her versatility and dedication to women’s health.`,
+    },
+    {
+      category: 'fertilitySpecialist',
+      designation: 'Fertility Specialist',
+      image: {
+        url: 'https://media.graphassets.com/gpKSKpmgQguLtfTmx5xt',
+      },
+      imageAlt: 'Dr. P. V. Vasavi Devi',
+      medicalRegNo: 'ANP 2014 0001883 KTK',
+      name: 'Dr. P. V. Vasavi Devi',
+      order: 15,
+      qualification: 'MBBS, DGO, FRM, FMAS',
+      content: `Dr. Vasavi (Gold Medalist) is an award-winning, experienced Obstetrician and Gynaecologist with over six years of dedicated practice in managing a broad spectrum of obstetric and gynaecological cases, including infertility treatment. She is highly skilled in surgical procedures, antenatal care, and various infertility management protocols. Known for her excellent communication skills and strong technical expertise, she thrives in collaborative, team-oriented settings.`,
+    },
+    {
       category: 'embryologist',
       designation: 'Director of Embryology',
       image: {
@@ -165,7 +191,7 @@ const DoctorsList = () => {
       imageAlt: 'Embryologist in Bangalore - Fyzullah Syed',
       medicalRegNo: null,
       name: 'Fyzullah Syed',
-      order: 14,
+      order: 16,
       qualification: 'MSc Embryology, MSc Microbiology, BSc MLT',
       content: `Fyzulla Syed M.Sc Embryology, M.Sc Microbiology, B.Sc MLT is a visionary leader and trailblazer in the field of ART. As the Director of Embryology at GarbhaGudi IVF Centre, he has redefined the standards of fertility care, combining cutting-edge science with an unwavering commitment to patient success. With a remarkable academic background and over a decade of hands-on experience, his expertise is unparalleled. Under his leadership, GarbhaGudi IVF Centre has become a beacon of hope for couples seeking to realize their dream of parenthood. His relentless pursuit of excellence has not only improved the lives of countless families but has also set new benchmarks in fertility treatment outcomes across the globe.`,
     },
@@ -178,7 +204,7 @@ const DoctorsList = () => {
       imageAlt: 'Embryologist in Bangalore - Vidyalakshmi A',
       medicalRegNo: null,
       name: 'Vidyalakshmi A',
-      order: 15,
+      order: 17,
       qualification:
         'P.G diploma (Clinical Embryology), Fellowship in Embryology',
       content: `Vidyalakshmi A, PG Diploma (Clinical Embryology), Fellowship in Embryology is a Senior Embryologist and Lab Manager at GarbhaGudi IVF Centre. With a strong educational background in Biomedical Sciences and Clinical Embryology, she is a highly qualified and experienced professional in her field. Vidyalakshmi has been associated with the IVF industry for the past 9 years, during which she has contributed significantly to the field of embryology. `,
