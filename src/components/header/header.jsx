@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import { Popover } from '@headlessui/react';
 import Head from 'next/head';
 import Image from 'components/image';
 import Link from 'next/link';
-import Popup from 'components/Popup';
 
 export default function Header() {
   const logoUrl =
-    'https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg';
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
 
   return (
     <>
