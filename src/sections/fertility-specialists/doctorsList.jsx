@@ -183,6 +183,19 @@ const DoctorsList = () => {
       content: `Dr. Vasavi (Gold Medalist) is an award-winning, experienced Obstetrician and Gynaecologist with over six years of dedicated practice in managing a broad spectrum of obstetric and gynaecological cases, including infertility treatment. She is highly skilled in surgical procedures, antenatal care, and various infertility management protocols. Known for her excellent communication skills and strong technical expertise, she thrives in collaborative, team-oriented settings.`,
     },
     {
+      category: 'fertilitySpecialist',
+      designation: 'Junior Fertility Specialist',
+      image: {
+        url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmcylkm0b0kw808o7m39xzz56',
+      },
+      imageAlt: 'dr-harshitha-p',
+      medicalRegNo: '114185',
+      name: 'Dr. Harshitha P',
+      order: 16,
+      qualification: 'MBBS, MS (OBG), DNB,  FRM',
+      content: `Dr. Harshitha P is a compassionate fertility specialist with a robust background in reproductive medicine.  She excels in infertility management and high-risk pregnancy care. She has a strong foundation in obstetrics and gynaecology. With an academic background and hands-on experience in handling both high-risk pregnancies and complex infertility cases, she brings a holistic and skilled approach to patient care. Her expertise is further enhanced by adeptness in gynaecology and hysteroscopy, showcasing a unique blend of technical proficiency. Achievements include significantly improving patient outcomes, underscoring a commitment to excellence in the field. Her journey from handling critical obstetric emergencies to mastering advanced fertility procedures demonstrates her versatility and dedication to women’s health.`,
+    },
+    {
       category: 'embryologist',
       designation: 'Director of Embryology',
       image: {

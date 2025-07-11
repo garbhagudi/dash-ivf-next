@@ -2049,4 +2049,460 @@ export const doctors = [
     },
     id: 'cmc5xttet23kr07o364zcjjrb',
   },
+  {
+    name: 'Dr. Harshitha P',
+    qualification: 'MBBS, MS (OBG), DNB,  FRM',
+    designation: 'Junior Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmcylkm0b0kw808o7m39xzz56',
+    },
+    imageAlt: 'dr-harshitha-p',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Harshitha P is a compassionate fertility specialist with a robust background in reproductive medicine.  She excels in infertility management and high-risk pregnancy care. She has a strong foundation in obstetrics and gynaecology. With an academic background and hands-on experience in handling both high-risk pregnancies and complex infertility cases, she brings a holistic and skilled approach to patient care. Her expertise is further enhanced by adeptness in gynaecology and hysteroscopy, showcasing a unique blend of technical proficiency. Achievements include significantly improving patient outcomes, underscoring a commitment to excellence in the field. Her journey from handling critical obstetric emergencies to mastering advanced fertility procedures demonstrates her versatility and dedication to women’s health.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship in Reproductive Medicine (FRM) – RGUHS - Gunasheela Surgical and Maternity Hospital, Bangalore (2025)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'DNB (OBG) - NBE (2020)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'M.S. (OBG) – JSS Medical College, Mysore (2020)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS – JSS Medical College, Mysore (2016)\n',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Senior Resident, ESICH ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Senior Resident, MMCRI ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Registrar, Kangaroo Care',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Harshitha follows a compassionate and evidence-based approach to fertility care. She believes in tailoring each treatment plan to suit the unique needs of the couple, with emphasis on open communication, emotional support, and ethical practice. Her training in reproductive medicine enables her to handle both common and complex infertility scenarios effectively.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment',
+                  },
+                  {
+                    text: ':',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Expertise in advanced assisted reproductive technologies including IUI, IVF, ICSI, and fertility preservation.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dedicated to personalized patient care and staying current with innovations in fertility science.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Gynaecology Hysteroscopy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'High-Risk Pregnancy\nIntegration of the latest reproductive technologies\nComprehensive patient care from diagnosis to delivery\nFocus on patient comfort, transparency, and results',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Conferences/ workshops',
+                  },
+                  {
+                    text: ' ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'South ISAR 2024- Bangalore ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'AICOG 2020- Lucknow ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'KSOG 2019 - Bellary',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Workshop On Postpartum Intrauterine Contraceptive Device (Ppiucd) - Figo Fogsi Initiative ( Mysore 2018)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Workshop On Pelvic Organ Prolapse',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Ethiskills Workshop Conducted By Johnson And Johnson( Mysore 2019)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Workshop On Urogynaecology',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Papers Presented / Published',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: ' A case of ruptured non-communicating rudimentary horn with previous LSCS at 18 weeks- KSOG 2019',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Paper - "Course and outcome of pregnant and postpartum women with psychiatric disorders " at AICOG 2020',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Paper- “ A prospective comparative study of Gnrh anta his versus PPOS in COS” - South ISAR 2024',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Journal -Clinical effect of lymphocyte immunotherapy on patients with unexplained recurrent spontaneous abortion- TAPISAR  2024',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    id: 'cmcysobbq0tf607pm3juiu7id',
+  },
 ];
