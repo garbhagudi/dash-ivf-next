@@ -8,10 +8,10 @@ const KeyBenefits = () => {
           <div>
             Call{' '}
             <a
-              href='tel:+919480948005'
+              href='tel:+919108910832'
               className='block text-brandPink sm:inline-block'
             >
-              +91 9480 9480 05
+              +91 9108 9108 32
             </a>
           </div>
           <div> to book your free consultation today!</div>

@@ -33,7 +33,7 @@ export default function Header() {
 
             <div className='flex items-center justify-end md:flex-1 lg:w-0'>
               <a
-                href='tel:+919480948005'
+                href='tel:+919108910832'
                 className='flex w-fit items-center gap-1 rounded-md bg-gray-300 pr-2 shadow-md md:gap-2'
               >
                 <div className='flex h-6 w-6 items-center justify-center rounded-md bg-brandPink text-white md:h-10 md:w-10'>
@@ -51,7 +51,7 @@ export default function Header() {
                   </svg>
                 </div>
                 <p className='text-sm font-semibold text-brandPink md:text-lg'>
-                  +91 9480 9480 05
+                  +91 9108 9108 32
                 </p>
               </a>
             </div>
