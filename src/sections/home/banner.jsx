@@ -122,7 +122,7 @@ const bannerData = [
     id: '1',
     title: 'Web_Banner_1',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755589783/Desktop_Landing_Page-01_labetv.webp',
       url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.webp',
     },
   },
