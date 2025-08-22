@@ -62,7 +62,7 @@ const Banner = () => {
               <div className='grid cursor-pointer grid-cols-1 gap-3 text-base font-semibold text-gray-700 md:grid-cols-2'>
                 <div className='rounded-md bg-gray-200 from-gray-400 via-gray-300 to-gray-300 py-1.5 pl-3 duration-200 hover:bg-gradient-to-l hover:shadow-xl dark:bg-gray-700 dark:text-gray-200 dark:hover:text-gray-800'>
                   <span className='font-bold text-brandPink dark:text-gg-400'>
-                    10000+
+                    15000+
                   </span>{' '}
                   Happy Families
                 </div>

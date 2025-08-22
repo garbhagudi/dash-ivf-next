@@ -410,8 +410,8 @@ const Ivf = () => {
                 </p>
                 <p className='mt-5 text-lg text-gray-700'>
                   GarbhaGudi has one of the highest IVF treatments success rates
-                  in the industry with over 7000+ successful IVF pregnancies in
-                  the last 10-years
+                  in the industry with over 15,000+ successful IVF pregnancies
+                  in the last 10-years
                 </p>
                 <div className='mt-10'>
                   <h4 className='mb-5 text-center text-gray-700'>

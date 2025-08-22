@@ -37,7 +37,7 @@ const Banner = () => {
         <div className='relative col-span-2 h-fit'>
           <Carousel
             autoplay
-            autoplayInterval={5000}
+            autoplayInterval={3000}
             className='border-0 shadow-2xl drop-shadow-2xl'
             defaultControlsConfig={defaultControlsConfig}
             wrapAround

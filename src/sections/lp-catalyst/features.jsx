@@ -16,7 +16,7 @@ const features = [
     id: 2,
     name: 'World Class Fertility Care',
     icon: <BsBuildings />,
-    content: 'Over 10000+ babies born with our care since 2011.',
+    content: 'Over 15000+ babies born with our care since 2011.',
     link: '/features/world-class-fertility-care',
   },
   {
