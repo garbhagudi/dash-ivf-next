@@ -21,14 +21,16 @@ const OtherServices = () => {
             className='mx-auto w-full object-contain lg:w-3/5'
             loading='lazy'
           />
-          <p className='text-sm text-gray-600'>
-            GarbhaGudi IVF Centre has been awarded as the Best IVF centre in
-            Bangalore by multiple organizations and trusted by thousands of
-            couples. GarbhaGudi is your trusted partner in the journey to
-            parenthood. We provide advanced fertility treatments at an
-            affordable price, making your dreams of having a baby come true. Our
-            transparent IVF cost in Bangalore and personalized care plans ensure
-            you get the best treatment without hidden expenses. If you’re
+          <strong>Best IVF centre in Bangalore</strong>
+          <p className='text-justify text-sm text-gray-600'>
+            GarbhaGudi IVF Centre has been awarded as the{' '}
+            <strong>Best IVF centre in Bangalore</strong> by multiple
+            organizations and trusted by thousands of couples. GarbhaGudi is
+            your trusted partner in the journey to parenthood. We provide
+            advanced fertility treatments at an affordable price, making your
+            dreams of having a baby come true. Our transparent{' '}
+            <strong>IVF cost in Bangalore</strong> and personalized care plans
+            ensure you get the best treatment without hidden expenses. If you’re
             searching for a reliable fertility centre close to you or a leading
             IVF centre in your area, GarbhaGudi stands out with high success
             rates, compassionate doctors, and world-class facilities. Begin your

@@ -45,4 +45,12 @@ const list = [
     id: 6,
     item: 'Low Cost IVF Treatment in Bangalore',
   },
+  {
+    id: 7,
+    item: 'Best IVF centre in Bangalore',
+  },
+  {
+    id: 8,
+    item: 'IVF cost in Bangalore',
+  },
 ];
