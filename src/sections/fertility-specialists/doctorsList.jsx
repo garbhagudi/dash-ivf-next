@@ -184,7 +184,7 @@ const DoctorsList = () => {
     },
     {
       category: 'fertilitySpecialist',
-      designation: 'Junior Fertility Specialist',
+      designation: 'Fertility Specialist',
       image: {
         url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmcylkm0b0kw808o7m39xzz56',
       },
