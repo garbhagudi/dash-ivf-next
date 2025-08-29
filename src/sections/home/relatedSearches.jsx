@@ -53,4 +53,20 @@ const list = [
     id: 8,
     item: 'IVF cost in Bangalore',
   },
+  {
+    id: 9,
+    item: 'ivf pregnancy',
+  },
+  {
+    id: 10,
+    item: 'fertility center near me',
+  },
+  {
+    id: 11,
+    item: 'infertility treatment for female',
+  },
+  {
+    id: 12,
+    item: 'asthenozoospermia treatment',
+  },
 ];
