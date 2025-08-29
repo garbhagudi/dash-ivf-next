@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Header() {
   const logoUrl =
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_250,h_70,c_fill/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_auto,h_70,c_fill/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
 
   return (
     <>

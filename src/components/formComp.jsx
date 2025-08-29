@@ -166,13 +166,19 @@ const FormComponent = ({ title, isTag = true }) => {
             )}
           </div>
         </div>
-        <div style={{ minHeight: '78px' }}>
+
+        <div className='zcwf_row flex min-h-[78px] flex-col items-center justify-center pt-5'>
           <Suspense fallback={<div>Loading Captcha...</div>}>
             <ReCAPTCHA
               sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
               onChange={handleCaptchaChange}
             />
           </Suspense>
+          {showCaptchaError && (
+            <p className='text-sm text-red-500'>
+              Please complete the captcha verification.
+            </p>
+          )}
         </div>
 
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
