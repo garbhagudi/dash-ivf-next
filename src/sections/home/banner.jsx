@@ -1,49 +1,42 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Carousel from 'nuka-carousel';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { Link } from 'components/link';
+
+const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
 
 const Banner = () => {
   const defaultControlsConfig = {
-    pagingDotsStyle: {
-      display: 'none',
-    },
+    pagingDotsStyle: { display: 'none' },
   };
+
   return (
     <div>
       <Head>
-        {/* Preload critical image */}
+        {/* Preload FIRST (LCP) Banner */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_900,h_506,c_fill,g_auto/v1755589783/Desktop_Landing_Page-01_labetv.webp'
           as='image'
-        />
-        {/* Preload Fonts */}
-        <link
-          rel='preload'
-          href='/path-to-font.woff2'
-          as='font'
-          type='font/woff2'
-          crossOrigin='anonymous'
         />
       </Head>
 
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
+        {/* Banner Section */}
         <div className='relative col-span-2 h-fit'>
           <Carousel
             autoplay
             autoplayInterval={3000}
-            className='border-0 shadow-2xl drop-shadow-2xl'
-            defaultControlsConfig={defaultControlsConfig}
             wrapAround
             dragging
             enableKeyboardControls
             pauseOnHover
+            className='border-0 shadow-2xl drop-shadow-2xl'
+            defaultControlsConfig={defaultControlsConfig}
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
@@ -62,45 +55,59 @@ const Banner = () => {
             )}
           >
             {bannerData.length > 0 ? (
-              bannerData.map((banner) => (
+              bannerData.map((banner, i) => (
                 <Link
                   href={banner.url || '#'}
                   target='_blank'
                   rel='noreferrer'
                   key={banner.id}
                 >
-                  <Image
-                    src={`${banner.image.url1.replace('/upload/', '/upload/f_auto,q_auto,w_900,h_471,c_fill/')}`}
-                    alt={banner.title}
-                    width={900}
-                    height={471}
-                    priority
-                    fetchPriority='high'
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
-                    className='hidden h-full w-full object-cover md:block'
-                  />
+                  {/* Desktop Banner */}
+                  <div className='relative hidden aspect-[16/9] w-full md:block'>
+                    <Image
+                      src={`${banner.image.url1.replace(
+                        '/upload/',
+                        '/upload/f_auto,q_auto,w_900,h_506,c_fill,g_auto/',
+                      )}`}
+                      alt={banner.title}
+                      fill
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
+                      className='object-cover'
+                      priority={i === 0} // only first gets priority
+                      fetchPriority={i === 0 ? 'high' : 'auto'}
+                    />
+                  </div>
 
-                  <Image
-                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto/')}`}
-                    alt={banner.title}
-                    width={420}
-                    height={360}
-                    priority
-                    sizes='100vw'
-                    className='h-[65vh] w-full object-cover md:hidden'
-                  />
+                  {/* Mobile Banner */}
+                  <div className='relative block aspect-[7/6] w-full md:hidden'>
+                    <Image
+                      src={`${banner.image.url2.replace(
+                        '/upload/',
+                        '/upload/f_auto,q_auto,w_420,h_360,c_fill,g_auto/',
+                      )}`}
+                      alt={banner.title}
+                      fill
+                      sizes='100vw'
+                      className='object-cover'
+                      priority={i === 0}
+                    />
+                  </div>
                 </Link>
               ))
             ) : (
               <div>No banners available</div>
             )}
           </Carousel>
+
+          {/* Mobile Caption */}
           <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
             <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
               Best IVF & Fertility Clinic - Affordable IVF Treatment
             </h1>
           </div>
         </div>
+
+        {/* Lead Form */}
         <div
           className='flex min-h-[500px] justify-center bg-[#005e7e]'
           id='leadForm'
@@ -109,6 +116,8 @@ const Banner = () => {
             <FormComponent title='Book Your Appointment' isTag={false} />
           </div>
         </div>
+
+        {/* Desktop Caption */}
         <div className='absolute -bottom-5 hidden w-full justify-center px-5 font-semibold text-white md:flex'>
           <h1 className='w-full rounded-md bg-gg-500 p-2 text-center text-base shadow-sm'>
             Best IVF & Fertility Clinic - Affordable IVF Treatment
