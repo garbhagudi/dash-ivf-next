@@ -70,22 +70,24 @@ const Banner = () => {
                   key={banner.id}
                 >
                   <Image
-                    src={banner.image.url1}
-                    width={720}
-                    height={360}
+                    src={`${banner.image.url1.replace('/upload/', '/upload/f_auto,q_auto,w_900,h_471,c_fill/')}`}
                     alt={banner.title}
-                    priority={true}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    className='hidden h-full w-full md:block'
+                    width={900}
+                    height={471}
+                    priority
+                    fetchPriority='high'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
+                    className='hidden h-full w-full object-cover md:block'
                   />
+
                   <Image
-                    src={banner.image.url2}
+                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_420,h_360,c_fill/')}`}
+                    alt={banner.title}
                     width={420}
                     height={360}
-                    alt={banner.title}
-                    priority={true}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    className='h-[65vh] w-full object-fill md:hidden'
+                    priority
+                    sizes='100vw'
+                    className='h-[65vh] w-full object-cover md:hidden'
                   />
                 </Link>
               ))
@@ -99,7 +101,10 @@ const Banner = () => {
             </h1>
           </div>
         </div>
-        <div className='flex justify-center bg-[#005e7e]' id='leadForm'>
+        <div
+          className='flex min-h-[500px] justify-center bg-[#005e7e]'
+          id='leadForm'
+        >
           <div className='flex h-fit w-full items-center justify-center'>
             <FormComponent title='Book Your Appointment' isTag={false} />
           </div>

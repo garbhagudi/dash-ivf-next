@@ -7,7 +7,7 @@ const nextConfig = {
   compress: true, // to enable gzip in Next.js
   images: {
     dangerouslyAllowSVG: true,
-    unoptimized: true,
+    // unoptimized: true,
     domains: [
       'res.cloudinary.com',
       'media.graphassets.com',

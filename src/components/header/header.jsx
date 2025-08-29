@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Header() {
   const logoUrl =
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
+    'https://res.cloudinary.com/garbhagudiivf/image/upload/f_auto,q_auto,w_250,h_70,c_fill/v1751352018/GG_New-Hori_Logo_ziwur1.svg';
 
   return (
     <>
@@ -20,12 +20,11 @@ export default function Header() {
                 <div>
                   <span className='sr-only'>logo</span>
                   <Image
-                    className='h-fit w-36 sm:h-14 md:w-48 lg:w-64'
                     src={logoUrl}
                     alt='logo'
                     width={250}
                     height={70}
-                    priority='true'
+                    priority
                   />
                 </div>
               </Link>
