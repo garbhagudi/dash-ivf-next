@@ -79,15 +79,14 @@ const Banner = () => {
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
                   />
-
                   <Image
-                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_420,h_460,c_fill/')}`}
-                    alt={banner.title}
+                    src={banner.image.url2}
                     width={420}
                     height={360}
-                    priority
-                    sizes='100vw'
-                    className='h-[65vh] w-full object-cover md:hidden'
+                    alt={banner.title}
+                    priority={true}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    className='h-[65vh] w-full object-fill md:hidden'
                   />
                 </Link>
               ))
