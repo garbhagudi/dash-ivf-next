@@ -81,7 +81,7 @@ const Banner = () => {
                   />
 
                   <Image
-                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_420,h_360,c_fill/')}`}
+                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto/')}`}
                     alt={banner.title}
                     width={420}
                     height={360}
