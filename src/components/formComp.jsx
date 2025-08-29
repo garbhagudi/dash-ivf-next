@@ -167,7 +167,7 @@ const FormComponent = ({ title, isTag = true }) => {
           </div>
         </div>
 
-        <div className='zcwf_row flex flex-col items-center justify-center pt-5'>
+        <div className='zcwf_row flex min-h-[78px] flex-col items-center justify-center pt-5'>
           <Suspense fallback={<div>Loading Captcha...</div>}>
             <ReCAPTCHA
               sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
