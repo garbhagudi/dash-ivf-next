@@ -58,11 +58,11 @@ const features = [
 const Features = () => {
   return (
     <div className='sm:py-18 relative bg-white py-8' id='features'>
-      <div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 className='mt-2 text-center font-heading text-3xl font-extrabold tracking-tight text-brandDark sm:text-4xl'>
+      <div className='mx-auto max-w-md sm:max-w-3xl lg:max-w-7xl'>
+        <h2 className='mt-2 text-center font-heading text-2xl font-bold text-brandDark sm:text-3xl'>
           Our Versatile Approach
         </h2>
-        <div className='mx-auto max-w-7xl px-3'>
+        <div className='mx-auto max-w-7xl'>
           <div className='py-3 lg:pt-8'>
             <div>
               <div className='pb-4'>
@@ -106,8 +106,8 @@ const Features = () => {
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {features?.map((feature) => (
               <div className='group mx-auto max-w-sm pt-3' key={feature?.id}>
-                <div className='shadow-3xl overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
-                  <div className='grid grid-cols-6'>
+                <div className='shadow-3xl h-full overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl'>
+                  <div className='grid h-full grid-cols-6'>
                     <div className='col-span-1 flex h-full items-center justify-center bg-brandPink'>
                       <div className='text-4xl font-bold text-white'>
                         {feature?.icon}
@@ -117,9 +117,7 @@ const Features = () => {
                       <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
                         {feature?.name}
                       </h3>
-                      <p className='mt-2 pb-3 text-sm font-medium text-brandDark antialiased'>
-                        {feature?.content}
-                      </p>
+                      <p className='mt-2 pb-3 text-sm'>{feature?.content}</p>
                     </div>
                   </div>
                 </div>

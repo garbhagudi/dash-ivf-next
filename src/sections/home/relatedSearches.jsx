@@ -1,7 +1,7 @@
 const RelatedSearches = () => {
   return (
     <div className='mx-auto max-w-7xl'>
-      <h2 className='py-8 text-center font-heading text-4xl font-bold lg:py-14'>
+      <h2 className='py-8 text-center font-heading text-2xl font-bold text-brandDark sm:text-3xl lg:py-14'>
         Related Searches
       </h2>
       <ul className='flex flex-wrap items-center justify-center gap-2 text-center'>
