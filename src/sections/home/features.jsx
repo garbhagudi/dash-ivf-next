@@ -65,7 +65,7 @@ const Features = () => {
         <div className='mx-auto max-w-7xl'>
           <div className='py-3 lg:pt-8'>
             <div>
-              <div className='pb-4'>
+              <div className='pb-2'>
                 GarbhaGudi IVF Centre stands as the epitome of excellence,
                 making it the{' '}
                 <span className='font-bold'>
@@ -77,7 +77,7 @@ const Features = () => {
                 cater to diverse needs, ensuring that every couple receives
                 personalized care and attention.
               </div>{' '}
-              <div className='pb-4'>
+              <div className='pb-2'>
                 As a prominent{' '}
                 <span className='font-bold'>
                   {' '}
@@ -88,7 +88,7 @@ const Features = () => {
                 experts brings together years of experience and expertise to
                 provide the highest level of care.
               </div>{' '}
-              <div className='pb-4'>
+              <div className='pb-2'>
                 With a commitment to excellence, compassionate care, and a high
                 success rate, GarbhaGudi IVF Centre has rightfully earned its
                 reputation as the{' '}
@@ -114,10 +114,12 @@ const Features = () => {
                       </div>
                     </div>
                     <div className='col-span-5 flex flex-col rounded-br-lg rounded-tr-lg border-2 border-brandPink px-2'>
-                      <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark'>
+                      <h3 className='mt-3 font-heading text-base font-semibold tracking-tight text-brandDark md:text-lg'>
                         {feature?.name}
                       </h3>
-                      <p className='mt-2 pb-3 text-sm'>{feature?.content}</p>
+                      <p className='mt-2 pb-3 text-sm md:text-base'>
+                        {feature?.content}
+                      </p>
                     </div>
                   </div>
                 </div>
