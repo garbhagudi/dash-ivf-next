@@ -105,8 +105,11 @@ const Banner = () => {
           className='flex min-h-[500px] justify-center bg-[#005e7e]'
           id='leadForm'
         >
-          <div className='flex h-fit w-full items-center justify-center'>
-            <FormComponent title='Book Your Appointment' isTag={false} />
+          <div className='flex h-full w-full items-center justify-center'>
+            <FormComponent
+              title='Book Free Fertility Consultation Today'
+              isTag={false}
+            />
           </div>
         </div>
         <div className='absolute -bottom-5 hidden w-full justify-center px-5 font-semibold text-white md:flex'>
