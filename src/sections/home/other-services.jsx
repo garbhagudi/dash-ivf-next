@@ -8,7 +8,7 @@ const OtherServices = () => {
     <div className='bg-white pb-16 pt-8'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='lg:text-center'>
-          <h2 className='mt-2 text-center font-heading text-xl font-bold leading-8 text-gray-700 underline sm:text-2xl'>
+          <h2 className='mt-5 text-center font-heading text-2xl font-bold leading-8 text-brandDark underline sm:text-3xl'>
             What makes GarbhaGudi IVF Centre special?
           </h2>
         </div>
@@ -22,7 +22,7 @@ const OtherServices = () => {
             loading='lazy'
           />
           <strong>Best IVF centre in Bangalore</strong>
-          <p className='text-justify text-sm text-gray-600'>
+          <p className='text-justify'>
             GarbhaGudi IVF Centre has been awarded as the{' '}
             <strong>Best IVF centre in Bangalore</strong> by multiple
             organizations and trusted by thousands of couples. GarbhaGudi is
@@ -39,8 +39,8 @@ const OtherServices = () => {
         </div>
         <Features />
         <div className='mx-auto mt-6 max-w-4xl'>
-          <div className='mx-auto max-w-3xl py-6 text-center font-bold md:py-10'>
-            <h3 className='mb-4 text-3xl md:text-5xl'>
+          <div className='mx-auto max-w-3xl py-6 text-center font-bold'>
+            <h3 className='font-heading text-2xl font-bold text-brandDark sm:text-3xl'>
               Trusted by over{' '}
               <span className='bg-gradient-to-r from-brandPink to-brandPurpleDark bg-clip-text text-transparent'>
                 15000+ couples{' '}

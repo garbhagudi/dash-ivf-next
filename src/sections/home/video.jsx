@@ -13,7 +13,7 @@ const Video = () => {
   return (
     <div className='bg-brandPurple'>
       <div className='mx-auto max-w-7xl py-8'>
-        <h3 className='flex items-center justify-center text-center font-heading text-2xl font-extrabold text-white lg:text-4xl'>
+        <h3 className='flex items-center justify-center text-center font-heading text-2xl font-bold text-white sm:text-3xl lg:text-4xl'>
           Most Trusted IVF Clinic in Bangalore
         </h3>
         <div className='mx-auto flex max-w-7xl flex-row items-center justify-center px-3 sm:px-0'>

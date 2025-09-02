@@ -7,7 +7,7 @@ const Faq = () => {
   const [activeIndex1, setActiveIndex1] = useState(1);
   return (
     <div className='bg-fuchsia-50'>
-      <h2 className='lg:pt:16 pt-10 text-center font-heading text-3xl font-bold lg:text-4xl'>
+      <h2 className='lg:pt:16 pt-10 text-center font-heading text-2xl font-bold text-brandDark sm:text-3xl'>
         Frequently asked questions
       </h2>
       <div className='px-3 pb-10 lg:pb-16'>
