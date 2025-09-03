@@ -2505,4 +2505,1309 @@ export const doctors = [
     },
     id: 'cmcysobbq0tf607pm3juiu7id',
   },
+  {
+    name: 'Dr. Manasa K A',
+    qualification: 'MBBS, MS, DNB (OBG), FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmdzwtmjp2a9q07po2rbcj4sb',
+    },
+    imageAlt: 'Fertility Specialist Davanagere',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Manasa is a dedicated and compassionate ',
+                  },
+                  {
+                    text: 'fertility specialist in Davanagere',
+                    italic: true,
+                  },
+                  {
+                    text: ' with experience in obstetrics, gynecology, and reproductive medicine. With a strong academic background and specialized training in fertility care, Dr. Manasa has helped couples overcome infertility challenges and achieve successful pregnancies. Known for a patient-centered and evidence-based approach, she offers the highest standard of IVF care using cutting-edge technology.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fluent in Kannada, English, Hindi, and Telugu, Dr. Manasa is able to connect deeply with patients from diverse linguistic backgrounds.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'MBBS – Shivamogga Institute of Medical Sciences, 2013–2018',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'MS (Obstetrics & Gynecology) – Mandya Institute of Medical Sciences, 2020–2023',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'DNB (OBG)—National Board of Examinations (NBE) ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Fellowship in Reproductive Medicine (FRM) – RGUHS',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Manasa has developed expertise in:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'In Vitro Fertilization (IVF) & ICSI',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Recurrent Pregnancy Loss',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Egg Freezing and Cryopreservation',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Fertility Preservation for Cancer Patients',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Male and Female Infertility Management',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Advanced ART procedures like ERA (Endometrial Receptivity Array), PGD (Preimplantation Genetic Diagnosis)',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Manasa brings a solid research and clinical background, contributing both academically and clinically to the advancement of reproductive health.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: ' ',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Certifications',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Diplomate of National Board (DNB) – Obstetrics and Gynecology',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Fellowship in Reproductive Medicine – RGUHS',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Manasa follows a holistic, evidence-based approach to fertility care. By combining advanced reproductive technologies with personalized treatment protocols, she ensures a high success rate while minimizing physical and emotional stress for patients.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'One-on-one consultation and customized IVF plans',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Emphasis on lifestyle, nutrition, and emotional well-being',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Transparent communication and supportive counseling throughout the journey',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Personalized IVF Protocols',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'High-End Fertility Lab Facilities',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Comprehensive Preconception Counseling',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Compassionate Care & Emotional Support',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Ethical and Transparent Treatment Plans',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: ' ',
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Academic Contributions',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Free Paper Presentation – 32nd KSOGA Conference, 2022',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'E-Poster Presentation – 32nd KSOGA, 2022',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Paper Presented on COVID-19 – National e-Conference on Labour and Birth, September 2020',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Publication – Co-author of research article on maternal and fetal outcomes in eclampsia, ',
+                              },
+                              {
+                                text: 'European Journal of Medicine',
+                                italic: true,
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Publication – First author of article on Fetal Growth Restriction (FGR) and Barcelona Staging',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. Radha Puchalapalli',
+    qualification: 'Obstetrics, Gynecology & Reproductive Medicine',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmequvf1c58or07pl65844wc5',
+    },
+    imageAlt: 'Fertility Specialist Hosur',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Radha Puchalapalli is a compassionate and experienced gynecologist and fertility specialist with a strong foundation in reproductive medicine. With over 6 years of clinical experience across rural development and private hospital settings, she has dedicated her career to supporting women and couples in their journey towards parenthood. Her multilingual ability (Telugu, Kannada, Hindi, Tamil, and English) enables her to connect deeply with patients from diverse backgrounds.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                bold: true,
+                                text: 'Medical Degree (MBBS):',
+                              },
+                              {
+                                text: ' Sri Venkateswara Govt. Medical College, Tirupati, Andhra Pradesh (2000–2006)',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                bold: true,
+                                text: 'DGO (Postgraduate Diploma in Obstetrics & Gynecology):',
+                              },
+                              {
+                                text: ' Kurnool Govt. Medical College, Andhra Pradesh (2008–2010)',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                bold: true,
+                                text: 'Fellowship in Reproductive Medicine (FRM, ICOG Certified):',
+                              },
+                              {
+                                text: ' Dr. Patil’s Fertility Center, Bangalore (2019)',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                bold: true,
+                                text: '2 years',
+                              },
+                              {
+                                text: ' at Rural Development Trust Hospital (RDT Hospital), Anantapur, Andhra Pradesh',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                bold: true,
+                                text: '4 years',
+                              },
+                              {
+                                text: ' in Private Hospital practice, Chittoor, Andhra Pradesh',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Expertise in ',
+                              },
+                              {
+                                bold: true,
+                                text: 'Infertility Management, Assisted Reproductive Techniques, Gynecological Disorders, and Patient-Centric Fertility Care',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Certifications',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Fellowship in Reproductive Medicine (ICOG Certified, 2019)',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Radha believes in a ',
+                  },
+                  {
+                    bold: true,
+                    text: 'holistic and empathetic approach',
+                  },
+                  {
+                    text: ' to fertility care. She combines evidence-based medical practices with personalized treatment plans, ensuring that every couple receives compassionate guidance and advanced reproductive solutions tailored to their unique needs.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'heading-three',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'bulleted-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Patient-centered fertility care',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Expertise in IVF, IUI, and advanced reproductive medicine',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Multilingual communication for better patient understanding',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Experience in both rural and urban healthcare setups',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Ethical and evidence-based medical practice',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '\n',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
 ];
