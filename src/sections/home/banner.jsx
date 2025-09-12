@@ -20,7 +20,7 @@ const Banner = () => {
         {/* Preload critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1744978945/April_Month_Landing_Page_Latest-02_zle4xm.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1755589783/Desktop_Landing_Page-01_labetv.webp'
           as='image'
         />
         {/* Preload Fonts */}
@@ -70,7 +70,7 @@ const Banner = () => {
                   key={banner.id}
                 >
                   <Image
-                    src={`${banner.image.url1.replace('/upload/', '/upload/f_auto,q_auto,w_900,h_471,c_fill/')}`}
+                    src={`${banner.image.url1}`}
                     alt={banner.title}
                     width={900}
                     height={471}
@@ -80,7 +80,7 @@ const Banner = () => {
                     className='hidden h-full w-full object-cover md:block'
                   />
                   <Image
-                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_412,h_577,c_fill/')}`}
+                    src={`${banner.image.url2}`}
                     width={412}
                     height={577}
                     alt={banner.title}
