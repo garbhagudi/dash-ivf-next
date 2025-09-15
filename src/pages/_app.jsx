@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { ThemeUIProvider, Flex } from 'theme-ui';
 import theme from 'theme';
@@ -28,23 +27,6 @@ const Footer = dynamic(() => import('components/footer/footer'), {
 });
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  useEffect(() => {
-    // Defer Google Tag Manager loading after the initial page load
-    const loadGoogleTagManager = () => {
-      if (typeof window !== 'undefined') {
-        const TagManager = require('react-gtm-module');
-        TagManager.initialize({ gtmId: 'GTM-NT9BZ69' });
-      }
-    };
-
-    // Load Google Tag Manager after the page is loaded
-    window.addEventListener('load', loadGoogleTagManager);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener('load', loadGoogleTagManager);
-    };
-  }, []);
 
   return (
     <ThemeUIProvider theme={theme}>
