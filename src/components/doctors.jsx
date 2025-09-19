@@ -1,7 +1,7 @@
 export const doctors = [
   {
     name: 'Dr Asha S Vijay',
-    qualification: 'MBBS, MD(OBG), FRM',
+    qualification: 'MBBS, DNB(OBG), DGO, PGD-RM&E',
     designation: 'Medical Director - GarbhaGudi',
     image: {
       url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
