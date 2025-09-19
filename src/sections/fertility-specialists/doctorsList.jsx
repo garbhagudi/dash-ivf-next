@@ -22,8 +22,8 @@ const DoctorsList = () => {
       medicalRegNo: '33884',
       name: 'Dr Asha S Vijay',
       order: 0,
-      qualification: 'MBBS, DGO-DNB',
-      content: `Dr. Asha S Vijay MBBS, DGO-DNB is a doyen in the field of infertility Treatment.  She has well over two decades of experience in the fields of obstetrics, gynecology, and infertility. She is a well-known name in infertility – both in treating patients and also in infertility education. Many consider her a medical genius with an overarching vision to eradicate infertility.
+      qualification: 'MBBS, DNB(OBG), DGO, PGD-RM&E',
+      content: `Dr. Asha S Vijay MBBS, DNB(OBG), DGO, PGD-RM&E is a doyen in the field of infertility Treatment.  She has well over two decades of experience in the fields of obstetrics, gynecology, and infertility. She is a well-known name in infertility – both in treating patients and also in infertility education. Many consider her a medical genius with an overarching vision to eradicate infertility.
     Dr Asha has been instrumental in creating happy endings in the lives of more than 15,000+ couples, by ensuring they have a child of their own. With her immense knowledge, expertise, skills, and cutting-edge medical technology, she has produced extraordinary success rates in the field of infertility. She is highly dedicated to her vision and leaves no stone unturned to ensure that the couple can take home a healthy baby and enjoy parenthood.`,
     },
     {

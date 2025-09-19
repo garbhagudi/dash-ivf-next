@@ -32,7 +32,7 @@ const AshaSection = () => {
                 Dr Asha S Vijay
               </h3>
               <div className='text-blueGray-400 mb-2 mt-0 text-sm font-bold uppercase leading-normal'>
-                MBBS, DNB, DGO
+                MBBS, DNB(OBG), DGO, PGD-RM&E
               </div>
               <div className='text-blueGray-600 mb-2 mt-6 font-semibold'>
                 Founder & Medical Director - GarbhaGudi IVF Centre
