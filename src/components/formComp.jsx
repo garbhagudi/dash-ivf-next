@@ -10,11 +10,11 @@ const FormComponent = ({ title, isTag = true }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
+  const utmCampaign = router.query?.utm_campaign || '';
   const {
     register,
     handleSubmit,
     setValue,
-    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -23,7 +23,7 @@ const FormComponent = ({ title, isTag = true }) => {
       Email: '',
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
-      UTM_Campaign: '',
+      UTM_Campaign: utmCampaign,
       Page_Visited: pageVisit,
     },
   });
@@ -31,14 +31,12 @@ const FormComponent = ({ title, isTag = true }) => {
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showCaptchaError, setShowCaptchaError] = useState(false);
   const [load, setLoad] = useState(false);
-
   useEffect(() => {
-    if (router.query) {
-      const { utm_campaign } = router.query;
-      setValue('UTM_Campaign', utm_campaign || 'IVF Treatment 2023');
-    }
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
-  }, [router.query, setValue, pageVisit]);
+  }, [pageVisit, setValue]);
+  useEffect(() => {
+    setValue('UTM_Campaign', utmCampaign);
+  }, [utmCampaign, setValue]);
 
   const handleCaptchaChange = (value) => {
     setCaptchaVerified(!!value);
