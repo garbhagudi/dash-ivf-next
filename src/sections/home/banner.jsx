@@ -3,7 +3,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Carousel from 'nuka-carousel';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { Link } from 'components/link';
+import Link from 'next/link';
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
