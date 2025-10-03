@@ -126,7 +126,7 @@ export default Banner;
 
 const bannerData = [
   {
-    url: '/',
+    url: 'https://www.garbhagudi.com/',
     id: '1',
     title: 'Web_Banner_1',
     image: {
@@ -135,12 +135,21 @@ const bannerData = [
     },
   },
   {
-    url: '/',
+    url: 'https://www.garbhagudi.com/locations/davanagere',
     id: '2',
     title: 'Web_Banner_2',
     image: {
       url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755337721/Davangere_Branch_Ad_-_V3-04_asftjb.webp',
       url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755337723/Davangere_Branch_Ad_-_V3-02_mdkbrc.webp',
+    },
+  },
+  {
+    url: 'https://www.garbhagudi.com/locations/hosur',
+    id: '3',
+    title: 'Web_Banner_3',
+    image: {
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759466308/Hosur_Ad_English_-_2-03-1_jokqsq.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759466290/Hosur_Ad_English_-_2-02-1_kl2e6t.webp',
     },
   },
 ];
