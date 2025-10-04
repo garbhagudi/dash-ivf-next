@@ -23,6 +23,7 @@ const FormComponent = ({ title, isTag = true }) => {
       Email: '',
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
+      Campaign: 'GarbhaGudi Website Leads',
       UTM_Campaign: utmCampaign,
       Page_Visited: pageVisit,
     },
