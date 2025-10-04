@@ -23,7 +23,7 @@ const FormComponent = ({ title, isTag = true }) => {
       Email: '',
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
-      Campaign: 'GarbhaGudi Website Leads',
+      Campaign: { id: '3505252000019573428' },
       UTM_Campaign: utmCampaign,
       Page_Visited: pageVisit,
     },
@@ -46,11 +46,11 @@ const FormComponent = ({ title, isTag = true }) => {
 
   const onSubmit = async (data) => {
     setLoad(true);
-    if (!captchaVerified) {
-      setLoad(false);
-      setShowCaptchaError(true);
-      return;
-    }
+    // if (!captchaVerified) {
+    //   setLoad(false);
+    //   setShowCaptchaError(true);
+    //   return;
+    // }
 
     try {
       const response = await fetch('/api/createLeads', {
