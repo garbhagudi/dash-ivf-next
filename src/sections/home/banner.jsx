@@ -20,7 +20,7 @@ const Banner = () => {
         {/* Preload critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1755589783/Desktop_Landing_Page-01_labetv.webp'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557566/Oct_Month_pffer_Landing_Page_banner-02_bvmjsv.webp'
           as='image'
         />
         {/* Preload Fonts */}
@@ -130,8 +130,8 @@ const bannerData = [
     id: '1',
     title: 'Web_Banner_1',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755589783/Desktop_Landing_Page-01_labetv.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1745217384/April_Month_Landing_Page_Latest--02_sa0uzt.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557566/Oct_Month_pffer_Landing_Page_banner-02_bvmjsv.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557594/Oct_Month_pffer_Landing_Page_banner-01_r4ftdl.webp',
     },
   },
   {
