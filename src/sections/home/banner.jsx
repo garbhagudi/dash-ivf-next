@@ -80,9 +80,9 @@ const Banner = () => {
                     className='hidden h-full w-full object-cover md:block'
                   />
                   <Image
-                    src={`${banner.image.url2}`}
+                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_412,h_535,c_fill/')}`}
                     width={412}
-                    height={577}
+                    height={535}
                     alt={banner.title}
                     priority={true}
                     fetchPriority='high'
