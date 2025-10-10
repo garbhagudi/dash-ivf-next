@@ -17,12 +17,6 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        {/* Preload critical image */}
-        <link
-          rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557566/Oct_Month_pffer_Landing_Page_banner-02_bvmjsv.webp'
-          as='image'
-        />
         {/* Preload Fonts */}
         <link
           rel='preload'
@@ -62,7 +56,7 @@ const Banner = () => {
             )}
           >
             {bannerData.length > 0 ? (
-              bannerData.map((banner) => (
+              bannerData.map((banner, index) => (
                 <Link
                   href={banner.url || '#'}
                   target='_blank'
@@ -74,9 +68,9 @@ const Banner = () => {
                     alt={banner.title}
                     width={900}
                     height={471}
-                    priority
+                    priority={index === 0}
                     fetchPriority='high'
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
+                    sizes='(max-width: 1200px) 66vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
                   />
                   <Image
@@ -84,9 +78,9 @@ const Banner = () => {
                     width={412}
                     height={535}
                     alt={banner.title}
-                    priority={true}
+                    priority={index === 0}
                     fetchPriority='high'
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    sizes='(max-width: 768px) 100vw'
                     className='h-[65vh] w-full object-fill md:hidden'
                   />
                 </Link>
