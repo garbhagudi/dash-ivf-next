@@ -2,8 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
-import { lazy, Suspense, useEffect, useState } from 'react';
-const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const FormComponent = ({ title, isTag = true }) => {
@@ -28,9 +27,6 @@ const FormComponent = ({ title, isTag = true }) => {
       Page_Visited: pageVisit,
     },
   });
-
-  const [captchaVerified, setCaptchaVerified] = useState(false);
-  const [showCaptchaError, setShowCaptchaError] = useState(false);
   const [load, setLoad] = useState(false);
   useEffect(() => {
     setValue('Page_Visited', `${window.location?.origin}${pageVisit}`);
@@ -39,19 +35,8 @@ const FormComponent = ({ title, isTag = true }) => {
     setValue('UTM_Campaign', utmCampaign);
   }, [utmCampaign, setValue]);
 
-  const handleCaptchaChange = (value) => {
-    setCaptchaVerified(!!value);
-    setShowCaptchaError(false);
-  };
-
   const onSubmit = async (data) => {
     setLoad(true);
-    // if (!captchaVerified) {
-    //   setLoad(false);
-    //   setShowCaptchaError(true);
-    //   return;
-    // }
-
     try {
       const response = await fetch('/api/createLeads', {
         method: 'POST',
@@ -124,10 +109,10 @@ const FormComponent = ({ title, isTag = true }) => {
                 placeholder='Enter phone number'
                 {...register('Phone', {
                   required: 'Phone is required',
-                  // pattern: {
-                  //   value: /^[0-9]{10}$/, // Assuming a 10-digit phone number
-                  //   message: 'Invalid phone number',
-                  // },
+                  pattern: {
+                    value: /^[0-9]{10}$/,
+                    message: 'Invalid phone number',
+                  },
                 })}
                 className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
               />
@@ -164,20 +149,6 @@ const FormComponent = ({ title, isTag = true }) => {
               </p>
             )}
           </div>
-        </div>
-
-        <div className='zcwf_row flex min-h-[78px] flex-col items-center justify-center pt-5'>
-          <Suspense fallback={<div>Loading Captcha...</div>}>
-            <ReCAPTCHA
-              sitekey='6LegDMIiAAAAAEdpZNW8tk7jSYoTFJu7-1smV3xB'
-              onChange={handleCaptchaChange}
-            />
-          </Suspense>
-          {showCaptchaError && (
-            <p className='text-sm text-red-500'>
-              Please complete the captcha verification.
-            </p>
-          )}
         </div>
 
         <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>

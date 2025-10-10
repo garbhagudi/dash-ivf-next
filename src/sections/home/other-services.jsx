@@ -14,7 +14,10 @@ const OtherServices = () => {
         </div>
         <div className='mt-5 flex flex-col gap-1.5 text-center'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1738903030/WebIcon-01_ywi7q3.webp'
+            src={'https://res.cloudinary.com/garbhagudiivf/image/upload/v1738903030/WebIcon-01_ywi7q3.webp'.replace(
+              '/upload/',
+              '/upload/f_auto,q_auto,w_730,h_420,c_fill/',
+            )}
             alt='Banner Image'
             width={360}
             height={400}
