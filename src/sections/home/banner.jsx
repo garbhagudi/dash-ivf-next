@@ -124,8 +124,8 @@ const bannerData = [
     id: '1',
     title: 'Web_Banner_1',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557566/Oct_Month_pffer_Landing_Page_banner-02_bvmjsv.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759557594/Oct_Month_pffer_Landing_Page_banner-01_r4ftdl.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101158/1-02_yyxrvi.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101172/1-01_c6w9x7.webp',
     },
   },
   {
