@@ -133,8 +133,8 @@ const bannerData = [
     id: '2',
     title: 'Web_Banner_2',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755337721/Davangere_Branch_Ad_-_V3-04_asftjb.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1755337723/Davangere_Branch_Ad_-_V3-02_mdkbrc.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177332/Davanagere-02_uh5oex.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177331/Davanagere-01_wo0zex.webp',
     },
   },
   {
@@ -142,8 +142,8 @@ const bannerData = [
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759466308/Hosur_Ad_English_-_2-03-1_jokqsq.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1759466290/Hosur_Ad_English_-_2-02-1_kl2e6t.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177306/01-02_s8m5oa.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177306/01-01_aqmkjp.webp',
     },
   },
 ];
