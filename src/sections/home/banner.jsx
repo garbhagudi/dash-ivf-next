@@ -1,14 +1,28 @@
+import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Carousel from 'components/Carousel';
+import Carousel from 'nuka-carousel';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import Link from 'next/link';
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
 
 const Banner = () => {
+  const defaultControlsConfig = {
+    pagingDotsStyle: {
+      display: 'none',
+    },
+  };
   return (
     <div>
       <Head>
+        {/* Preload critical image */}
+        <link
+          rel='preload'
+          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101158/1-02_yyxrvi.webp'
+          as='image'
+        />
         {/* Preload Fonts */}
         <link
           rel='preload'
@@ -21,7 +35,66 @@ const Banner = () => {
 
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
-          <Carousel images={bannerData} interval={5000} />
+          <Carousel
+            autoplay
+            autoplayInterval={3000}
+            className='border-0 shadow-2xl drop-shadow-2xl'
+            defaultControlsConfig={defaultControlsConfig}
+            wrapAround
+            dragging
+            enableKeyboardControls
+            pauseOnHover
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button
+                onClick={previousSlide}
+                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronLeft className='mr-1' />
+              </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button
+                onClick={nextSlide}
+                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+              >
+                <HiChevronRight className='ml-1' />
+              </button>
+            )}
+          >
+            {bannerData.length > 0 ? (
+              bannerData.map((banner) => (
+                <Link
+                  href={banner.url || '#'}
+                  target='_blank'
+                  rel='noreferrer'
+                  key={banner.id}
+                >
+                  <Image
+                    src={`${banner.image.url1}`}
+                    alt={banner.title}
+                    width={900}
+                    height={471}
+                    priority
+                    fetchPriority='high'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
+                    className='hidden h-full w-full object-cover md:block'
+                  />
+                  <Image
+                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_412,h_535,c_fill/')}`}
+                    width={412}
+                    height={535}
+                    alt={banner.title}
+                    priority={true}
+                    fetchPriority='high'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    className='h-[65vh] w-full object-fill md:hidden'
+                  />
+                </Link>
+              ))
+            ) : (
+              <div>No banners available</div>
+            )}
+          </Carousel>
           <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
             <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
               Best IVF & Fertility Clinic - Affordable IVF Treatment
