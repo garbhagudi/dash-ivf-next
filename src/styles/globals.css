@@ -13,11 +13,11 @@
     -webkit-text-stroke: 4px black;
   }
 }
-.carousel-inner {
+
+/* .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 .carousel-prev,
 .carousel-next {
   position: absolute;
@@ -27,4 +27,4 @@
   border: none;
   padding: 10px;
   cursor: pointer;
-}
+} */

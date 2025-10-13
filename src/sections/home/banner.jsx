@@ -96,7 +96,7 @@ const Banner = () => {
           </div>
         </div>
         <div
-          className='flex h-fit justify-start bg-[#005e7e] py-10 md:h-full md:min-h-[500px] md:justify-center md:py-0'
+          className='flex min-h-[500px] justify-center bg-[#005e7e]'
           id='leadForm'
         >
           <div className='flex h-full w-full items-center justify-center'>
