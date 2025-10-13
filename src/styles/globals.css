@@ -13,3 +13,18 @@
     -webkit-text-stroke: 4px black;
   }
 }
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}

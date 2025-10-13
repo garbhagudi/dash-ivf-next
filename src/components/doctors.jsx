@@ -981,6 +981,592 @@ export const doctors = [
       },
     },
   },
+
+  {
+    name: 'Dr Deepthi Venkatesh ',
+    qualification: 'MBBS, MS(OBG), FRM',
+    designation: 'Fertility Specialist ',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmgowk4wc26v708pkn06x6duv',
+    },
+    imageAlt: 'IVF Specialist in Bangalore - Dr Deepthi Venkatesh',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Deepthi Venkatesh is a dedicated and skilled fertility specialist at GarbhaGudi IVF Centre, Nagarbhavi, Bangalore. After graduating in MBBS from VIMS & RC, she went on to obtain her MS OBG degree from the prestigious Bangalore Medical College & Research Institute, followed by RGUHS fellowship in Reproductive Medicine. With more than ten years of experience in OBG & over five years in reproductive medicine, Dr. Deepthi is committed to helping patients achieve their dream of parenthood through compassionate care and a personalized approach to fertility issues. ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Medical Degree -MBBS - 2008-14 - Vydehi Institute of Medical Sciences and Research Centre, Bangalore',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Specialization- MS (OBG) - 2015-18 - Bangalore Medical College and Research Institute - Bangalore',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Additional Qualification -FRM - Fellowship in reproductive medicine (RGUHS) - 2019 - 2021 - Manipal Fertility',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Recognition',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'ICMR awarded research project in MBBS about utilisation of Janani Suraksha Yojana at a PHC attached to VIMS & RC',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Best outgoing student – Batch 2008, Vydehi Institute of Medical Sciences and Research Centre, Bangalore',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Memberships',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'BSOG ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Indian Fertility Society (IFS)',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'ISAR ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'KISAR ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Certifications:',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Ultrasonography course at Sonoscan, Coimbatore - 2019 ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: '3D Ultrasonography - 2024 ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Paper Presentation / Publication',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'numbered-list',
+            children: [
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Paper “ A clinical study of rupture Uterus- Management and Feto Maternal outcome at a Tertiary Hospital, Bangalore “ at AICOG 2018, Bhubaneshwar ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Poster - “ Uterine Torsion In pregnancy” at KSOGA 2017, Shimoga ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Paper “ Growth Hormone supplementation in poor responders in ICSI  cycles “ at Fertivision 2019, Gurugram ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Paper “ Supraphysiological Estradiol and its impact on embryo quality in ICSI cycles in PCOS” at ISAR 2019, Hyderabad ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: 'list-item',
+                children: [
+                  {
+                    type: 'list-item-child',
+                    children: [
+                      {
+                        type: 'class',
+                        children: [
+                          {
+                            type: 'paragraph',
+                            children: [
+                              {
+                                text: 'Original Research article “ Maternal & Perinatal outcome of pregnancy in women with one previous Cesarean Section: A study at a tertiary care centre “ in IJRCOG , Dec 2020 ',
+                              },
+                            ],
+                          },
+                        ],
+                        className: 'text-lg text-brandDark my-4 font-content',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Expertise',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Apart from being well-versed in obstetric care, Dr. Deepthi has expertise in Assisted Reproductive Technologies (ART), including ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Intra-Uterine Insemination (IUI),',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'In vitro fertilization (IVF), fertility preservation,',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Gynaec hysteroscopy',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Deepthi is dedicated to providing ',
+                  },
+                  {
+                    bold: true,
+                    text: 'personalized fertility care',
+                  },
+                  {
+                    text: '. Her ',
+                  },
+                  {
+                    bold: true,
+                    text: 'compassionate and patient-first approach',
+                  },
+                  {
+                    text: ' has earned her the trust and gratitude of countless families. With a strong foundation in advanced fertility treatments and a commitment to continuous learning, she strives to achieve the best possible outcomes on every couple’s path to parenthood.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content font-semibold',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Tailored Treatment Plans',
+                  },
+                  {
+                    text: ' – Personalized fertility care designed for each patient’s unique journey\n',
+                  },
+                  {
+                    bold: true,
+                    text: 'Compassionate & Supportive Care',
+                  },
+                  {
+                    text: ' – A dedicated approach that prioritizes patient well-being\n',
+                  },
+                  {
+                    bold: true,
+                    text: 'Integrated Holistic approach with evidence-based treatment ',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awareness Programmes on Infertility on TV',
+                  },
+                  {
+                    text: ' – Dr. Deepthi Venkatesh has actively participated in televised discussions and awareness programs, educating the public on infertility, its causes, treatments, and preventive measures. Her insights have helped dispel myths and provide clarity to countless viewers.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Conducted OPDs in Medical Camps (Urban & Rural)',
+                  },
+                  {
+                    text: ' – Through her involvement in medical camps, she has extended fertility consultations and treatments to underserved populations. By reaching both urban and rural communities, she has made quality reproductive healthcare accessible to many, fulfilling the dreams of aspiring parents.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark my-4 font-content',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
   {
     name: 'Dr Shweta Ashok Harnal',
     qualification: 'MBBS, MS, FRM',
@@ -1688,14 +2274,6 @@ export const doctors = [
             className: 'text-lg text-brandDark my-4 font-content',
           },
           {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-          {
             type: 'class',
             children: [
               {
@@ -1737,14 +2315,6 @@ export const doctors = [
               },
             ],
             className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
           },
           {
             type: 'class',
@@ -2035,14 +2605,6 @@ export const doctors = [
               },
             ],
             className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
           },
         ],
       },
