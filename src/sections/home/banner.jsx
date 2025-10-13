@@ -20,7 +20,10 @@ const Banner = () => {
         {/* Preload critical image */}
         <link
           rel='preload'
-          href='https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101158/1-02_yyxrvi.webp'
+          href={bannerData[0].image.url2.replace(
+            '/upload/',
+            '/upload/f_auto,q_auto,w_412,h_535,c_fill/',
+          )}
           as='image'
         />
         {/* Preload Fonts */}
@@ -74,8 +77,8 @@ const Banner = () => {
                     alt={banner.title}
                     width={900}
                     height={471}
-                    priority
-                    fetchPriority='high'
+                    priority={true}
+                    loading={index === 0 ? 'eager' : 'lazy'}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
                   />
@@ -84,8 +87,8 @@ const Banner = () => {
                     width={412}
                     height={535}
                     alt={banner.title}
-                    priority={true}
-                    fetchPriority='high'
+                    priority={index === 0}
+                    loading={index === 0 ? 'eager' : 'lazy'}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='h-[65vh] w-full object-fill md:hidden'
                   />
