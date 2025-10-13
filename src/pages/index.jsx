@@ -5,21 +5,31 @@ import dynamic from 'next/dynamic';
 const Banner = dynamic(() => import('sections/home/banner'), { ssr: true });
 const OtherServices = dynamic(() => import('sections/home/other-services'), {
   ssr: false,
+  loading: () => <p>Loading Other Services...</p>,
 });
 const TeamSection = dynamic(() => import('sections/home/our-team'), {
   ssr: false,
+  loading: () => <p>Loading Our Team...</p>,
 });
-const Video = dynamic(() => import('sections/home/video'));
+const Video = dynamic(() => import('sections/home/video'), {
+  ssr: false,
+  loading: () => <p>Loading Video...</p>,
+});
 const Testimonials = dynamic(() => import('sections/home/testimonials'), {
   ssr: false,
+  loading: () => <p>Loading Testimonials...</p>,
 });
 const Head = dynamic(() => import('next/head'));
 const TreatmentOptions = dynamic(() => import('sections/home/treatment'), {
   ssr: false,
+  loading: () => <p>Loading Treatment Options...</p>,
 });
-const Faq = dynamic(() => import('sections/home/faq'), { ssr: false });
-const RelatedSearches = dynamic(() => import('sections/home/relatedSearches'), {
+const Faq = dynamic(() => import('sections/home/faq'), {
   ssr: false,
+  loading: () => <p>Loading FAQs...</p>,
+});
+const RelatedSearches = dynamic(() => import('sections/home/relatedSearches'), {
+  ssr: true,
 });
 
 export default function Home() {
