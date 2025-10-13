@@ -65,7 +65,7 @@ const Banner = () => {
             )}
           >
             {bannerData.length > 0 ? (
-              bannerData.map((banner) => (
+              bannerData.map((banner, index) => (
                 <Link
                   href={banner.url || '#'}
                   target='_blank'
@@ -77,8 +77,7 @@ const Banner = () => {
                     alt={banner.title}
                     width={900}
                     height={471}
-                    priority={true}
-                    loading={index === 0 ? 'eager' : 'lazy'}
+                    {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
                   />
@@ -87,8 +86,7 @@ const Banner = () => {
                     width={412}
                     height={535}
                     alt={banner.title}
-                    priority={index === 0}
-                    loading={index === 0 ? 'eager' : 'lazy'}
+                    {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='h-[65vh] w-full object-fill md:hidden'
                   />
