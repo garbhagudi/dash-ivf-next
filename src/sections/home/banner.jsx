@@ -140,8 +140,8 @@ const bannerData = [
     id: '2',
     title: 'Web_Banner_2',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760443119/Davanagere-02_1_d07nmx.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760443120/Davanagere-01_1_vko7ui.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760445537/Davanagere-02-02-1_s55l10.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760445536/Davanagere-02-01_yg0lcf.webp',
     },
   },
   {
