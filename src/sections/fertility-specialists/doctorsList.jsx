@@ -121,19 +121,6 @@ const DoctorsList = () => {
       category: 'fertilitySpecialist',
       designation: 'Fertility Specialist',
       image: {
-        url: 'https://media.graphassets.com/9uwozE6LSTe53RQfEb9t',
-      },
-      imageAlt: 'Best IVF Doctor in Bangalore - Dr Shubha L',
-      medicalRegNo: '95820',
-      name: 'Dr Shubha L',
-      order: 9,
-      qualification: 'MBBS, MS(OBG), DNB, FRM',
-      content: `Dr. Shubha L, MBBS, MS-OBG, DNB, FRM is a fertility specialist with 5 years of experience in obstetrics and gynecology. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patients. She is well-versed in ART procedures like IVF, IUI, etc. Dr. Shubha L is known for the comfort and confidence she elicits in her patients, and she believes in performing fertility treatments with a scientific approach & in an ethical manner. She also offers to counsel for infertility treatment with dedication toward her patients. Her skills as a fertility specialist made her a valued member of the team at GarbhaGudi IVF Center. `,
-    },
-    {
-      category: 'fertilitySpecialist',
-      designation: 'Fertility Specialist',
-      image: {
         url: 'https://media.graphassets.com/FZxTAyTHWVjXmjNdaLvg',
       },
       imageAlt: null,

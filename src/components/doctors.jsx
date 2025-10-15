@@ -888,43 +888,6 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr Shubha L ',
-    qualification: 'MBBS, MS(OBG), DNB, FRM ',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://media.graphassets.com/9uwozE6LSTe53RQfEb9t',
-    },
-    imageAlt: 'Best IVF Doctor in Bangalore - Dr Shubha L',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr. Shubha L is a fertility specialist with 5 years of experience in obstetrics and gynecology. She completed her MBBS at JJMMC, davangere and MS from father muller medical college, Mangalore. She worked as a senior registrar at St Martha’s hospital and Owing to her great desire to specialize further, she completed her fellowship in reproductive medicine from Craft hospital, Kerala. She is a skilled professional, is completely passionate about her job, and aims to provide the best treatment for her patients. She is well-versed in ART procedures like IVF, IUI, etc. Dr. Shubha l is known for the comfort and confidence she elicits in her patients, and she believes in performing fertility treatments with a scientific approach & in an ethical manner. She also offers to counsel for infertility treatment with dedication toward her patients. Her skills as a fertility specialist made her a valued member of the team at GarbhaGudi IVF Center. ',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 ',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '\n',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
-  {
     name: 'Dr. Varsha Patil',
     qualification: 'MBBS, DGO, DNB(OBG), FRM',
     designation: 'Fertility Specialist',
