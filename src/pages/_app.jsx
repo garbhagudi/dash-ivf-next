@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import { ThemeUIProvider, Flex } from 'theme-ui';
 import theme from 'theme';
 import '../styles/globals.css';
-import '../styles/calendar.css';
 import { DM_Sans } from 'next/font/google';
 import { useRouter } from 'next/router';
 
