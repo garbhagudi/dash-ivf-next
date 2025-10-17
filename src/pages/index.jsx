@@ -9,7 +9,7 @@ const OtherServices = dynamic(() => import('sections/home/other-services'), {
 const TeamSection = dynamic(() => import('sections/home/our-team'), {
   ssr: false,
 });
-const Video = dynamic(() => import('sections/home/video'));
+// const Video = dynamic(() => import('sections/home/video'));
 const Testimonials = dynamic(() => import('sections/home/testimonials'), {
   ssr: false,
 });
@@ -30,7 +30,7 @@ export default function Home() {
       component: <TreatmentOptions branch='GarbhaGudi IVF Centre' />,
     },
     { key: 'team-section', component: <TeamSection /> },
-    { key: 'video', component: <Video /> },
+    // { key: 'video', component: <Video /> },
     { key: 'faq', component: <Faq /> },
     { key: 'testimonials', component: <Testimonials /> },
     { key: 'related-searches', component: <RelatedSearches /> },
