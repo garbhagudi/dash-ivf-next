@@ -136,15 +136,6 @@ const bannerData = [
     },
   },
   {
-    url: 'https://www.garbhagudi.com/locations/davanagere',
-    id: '2',
-    title: 'Web_Banner_2',
-    image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760445537/Davanagere-02-02-1_s55l10.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760445536/Davanagere-02-01_yg0lcf.webp',
-    },
-  },
-  {
     url: 'https://www.garbhagudi.com/locations/hosur',
     id: '3',
     title: 'Web_Banner_3',
