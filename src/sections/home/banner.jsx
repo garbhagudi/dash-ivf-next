@@ -132,7 +132,7 @@ const bannerData = [
     title: 'Web_Banner_3',
     image: {
       url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497774/paripoorna_Landing_Page_Banner-03_l6g5kq.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp',
     },
   },
 ];
