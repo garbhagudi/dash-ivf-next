@@ -127,21 +127,12 @@ export default Banner;
 
 const bannerData = [
   {
-    url: 'https://www.garbhagudi.com/',
-    id: '1',
-    title: 'Web_Banner_1',
-    image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101158/1-02_yyxrvi.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760101172/1-01_c6w9x7.webp',
-    },
-  },
-  {
-    url: 'https://www.garbhagudi.com/locations/hosur',
+    url: 'https://www.garbhagudi.com/features/paripoorna',
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177306/01-02_s8m5oa.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1760177306/01-01_aqmkjp.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497774/paripoorna_Landing_Page_Banner-03_l6g5kq.webp',
     },
   },
 ];
