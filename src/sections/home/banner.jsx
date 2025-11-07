@@ -39,7 +39,7 @@ const Banner = () => {
       <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
           <Carousel
-            autoplay
+            autoplay={false}
             autoplayInterval={3000}
             className='border-0 shadow-2xl drop-shadow-2xl'
             defaultControlsConfig={defaultControlsConfig}
@@ -50,7 +50,7 @@ const Banner = () => {
             renderCenterLeftControls={({ previousSlide }) => (
               <button
                 onClick={previousSlide}
-                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100'
               >
                 <HiChevronLeft className='mr-1' />
               </button>
@@ -58,7 +58,7 @@ const Banner = () => {
             renderCenterRightControls={({ nextSlide }) => (
               <button
                 onClick={nextSlide}
-                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100 md:flex'
+                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100'
               >
                 <HiChevronRight className='ml-1' />
               </button>
