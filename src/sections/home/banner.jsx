@@ -36,7 +36,7 @@ const Banner = () => {
         />
       </Head>
 
-      <div className='relative grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
           <Carousel
             autoplay={false}
@@ -96,11 +96,11 @@ const Banner = () => {
               <div>No banners available</div>
             )}
           </Carousel>
-          <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
+          {/* <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
             <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
               Best IVF & Fertility Clinic - Affordable IVF Treatment
             </h1>
-          </div>
+          </div> */}
         </div>
         <div
           className='flex min-h-[500px] justify-center bg-[#005e7e]'
@@ -113,11 +113,39 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className='absolute -bottom-5 hidden w-full justify-center px-5 font-semibold text-white md:flex'>
-          <h1 className='w-full rounded-md bg-gg-500 p-2 text-center text-base shadow-sm'>
-            Best IVF & Fertility Clinic - Affordable IVF Treatment
-          </h1>
-        </div>
+      </div>
+      <div className='hidden w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-5 font-semibold text-white shadow-sm md:flex'>
+        <h1 className='w-full text-center text-base'>
+          Best IVF & Fertility Clinic - Affordable IVF Treatment
+        </h1>
+        <h2 className='my-2 text-center text-base font-semibold text-white sm:text-base md:text-lg'>
+          Experience Parenthood with PARIPOORNA Offer — Save ₹1,11,111* on IVF
+          Treatments!
+        </h2>
+        <p className='text-justify text-sm text-gray-100'>
+          Parenthood is priceless, and through PARIPOORNA, we aim to make it
+          more accessible for every aspiring couple. At GarbhaGudi, we
+          understand that the path to parenthood can be filled with emotional
+          and financial hurdles.
+          <br />
+          PARIPOORNAis our way of making this journey a little easier —
+          combining compassionate care, advanced fertility treatments, and
+          trusted expertise to turn your dream of a baby into reality.
+        </p>
+      </div>
+      <div className='flex w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
+        <h1 className='w-full text-center text-base'>
+          Best IVF & Fertility Clinic - Affordable IVF Treatment
+        </h1>
+        <h2 className='my-2 text-center text-base font-semibold text-white sm:text-base md:text-lg'>
+          Celebrate the season of parenthood with PARIPOORNA — this Nov & Dec
+          2025, get ₹1,11,111 OFF on IVF treatments at GarbhaGudi IVF Centre.
+        </h2>
+        <p className='text-justify text-sm text-gray-100'>
+          Parenthood is priceless. Through PARIPOORNA, GarbhaGudi makes it more
+          accessible by easing the emotional and financial journey with
+          compassionate care, advanced treatments, and trusted expertise.
+        </p>
       </div>
     </div>
   );
