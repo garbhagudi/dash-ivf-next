@@ -8,10 +8,10 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     // unoptimized: true,
-    domains: [
-      'res.cloudinary.com',
-      'media.graphassets.com',
-      'avatars.dicebear.com',
+    remotePatterns: [
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'media.graphassets.com' },
+      { protocol: 'https', hostname: 'avatars.dicebear.com' },
     ],
   },
   webpack(config) {
