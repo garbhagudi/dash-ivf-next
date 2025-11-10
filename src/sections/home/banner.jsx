@@ -80,6 +80,7 @@ const Banner = () => {
                     {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
+                    fetchPriority={index === 0 ? 'high' : 'auto'}
                   />
                   <Image
                     src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_412,h_535,c_fill/')}`}
@@ -89,6 +90,7 @@ const Banner = () => {
                     {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='h-[65vh] w-full object-fill md:hidden'
+                    fetchPriority={index === 0 ? 'high' : 'auto'}
                   />
                 </Link>
               ))
