@@ -114,15 +114,11 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto hidden w-full max-w-7xl flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
+      <div className='mx-auto mb-3 hidden w-full max-w-7xl flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
-        <h2 className='my-2 text-center text-base font-semibold text-white sm:text-base md:text-lg'>
-          Experience Parenthood with PARIPOORNA Offer — Save ₹1,11,111* on IVF
-          Treatments!
-        </h2>
-        <p className='text-justify text-sm text-gray-100'>
+        <p className='text-justify text-gray-100'>
           Parenthood is priceless, and through PARIPOORNA, we aim to make it
           more accessible for every aspiring couple. At GarbhaGudi, we
           understand that the path to parenthood can be filled with emotional
@@ -132,19 +128,26 @@ const Banner = () => {
           reality.
         </p>
       </div>
-      <div className='flex w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
+      <div className='mb-3 flex w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
+
         <h2 className='text-justify text-base font-semibold text-white sm:text-base md:text-lg'>
           Celebrate the season of parenthood with PARIPOORNA — this Nov & Dec
           2025, get ₹1,11,111 OFF on IVF treatments at GarbhaGudi IVF Centre.
         </h2>
-        <p className='text-center text-sm text-gray-100'>
+        <p className='text-gray-100'>
           Parenthood is priceless. Through PARIPOORNA, GarbhaGudi makes it more
           accessible by easing the emotional and financial journey with
           compassionate care, advanced treatments, and trusted expertise.
         </p>
+      </div>
+      <div className='mx-auto mt-4 w-full max-w-fit rounded-lg bg-brandPurpleDark p-2.5 text-white shadow-lg lg:max-w-7xl'>
+        <h2 className='w-full text-center text-base font-semibold'>
+          Experience Parenthood with PARIPOORNA Offer — Save ₹1,11,111* on IVF
+          Treatments!
+        </h2>
       </div>
     </div>
   );
