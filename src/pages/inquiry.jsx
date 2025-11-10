@@ -1,5 +1,4 @@
 import Image from 'components/image';
-import React from 'react';
 import Head from 'next/head';
 const IndexPage = () => {
   return (
