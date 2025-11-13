@@ -4,7 +4,7 @@ export const doctors = [
     qualification: 'MBBS, DNB(OBG), DGO, PGD-RM&E',
     designation: 'Medical Director - GarbhaGudi',
     image: {
-      url: 'https://media.graphassets.com/tEF3ZeEhSoeekeSEh47v',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/kTm169VTeyEFTwGhYTSQ',
     },
     imageAlt: 'Best IVF Specialist in Bangalore - Dr Asha S Vijay',
     bio: {
@@ -428,7 +428,7 @@ export const doctors = [
     qualification: 'MBBS MD FRM',
     designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/f3PATdnoQ7ieg28F3gzr',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/2yqIQrHpQZyqUeZn5QMQ',
     },
     imageAlt: null,
     bio: {
@@ -499,7 +499,7 @@ export const doctors = [
     qualification: 'MBBS, DNB, FRM',
     designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/kBAaY7UgQqefqgAjAvsk',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/mSwDtFwRSqUnU4OKILAZ',
     },
     imageAlt: 'IVF Specialist in Bangalore - Dr Priyanka Rani',
     bio: {
@@ -536,7 +536,7 @@ export const doctors = [
     qualification: 'MBBS, MS (OBG), FMAS, FRM',
     designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/7ghdxcJPTZIQvtdFRVWn',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/rYpX4eo0QGGXzwOSpTih',
     },
     imageAlt: 'IVF Doctor in Bangalore - Dr. Anitha A Manoj',
     bio: {
@@ -573,7 +573,7 @@ export const doctors = [
     qualification: 'MBBS, DNB, M.Ch Reproductive Medicine and Surgery',
     designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/3Shs19wcRZWACdwng438',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/qBZDJPaaSFKtXd8dqvV4',
     },
     imageAlt: 'Best IVF Doctor in Bangalore - Dr Aparna N',
     bio: {
@@ -652,7 +652,7 @@ export const doctors = [
     qualification: 'MBBS, DNB (OBG), FRM & Infertility Management',
     designation: 'Senior Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/cm9u8fdbt026x07po4h2fcbpc/cmaun2flr21lu07o5df9ycte9',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/ZPEwDxjETjCTjqVPM50g',
     },
     imageAlt: 'Dr. Vandana Krishnaprasad M',
     bio: {
@@ -726,7 +726,7 @@ export const doctors = [
     qualification: 'MBBS, DNB(OBG) FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/fA2XgIz7QGwFJ2vomjQM',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/9yGb4ofxQ5OhrQrr7B7T',
     },
     imageAlt: 'Dr. Vandana Ramanathan',
     bio: {
@@ -821,7 +821,7 @@ export const doctors = [
     qualification: 'MBBS, MS(OBG), DNB(OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/aoSy8u3ORwaJng9CVqGY',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/WtLzker2RNGGcyFmEOVE',
     },
     imageAlt: 'IVF Specialist in Bangalore - Dr Nikitha Murthy',
     bio: {
@@ -892,7 +892,7 @@ export const doctors = [
     qualification: 'MBBS, DGO, DNB(OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/PxCiYMsmTyeNv3OrzQjc',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/ydCageIWRRSZMJM1MR6A',
     },
     imageAlt: null,
     bio: {
@@ -950,7 +950,7 @@ export const doctors = [
     qualification: 'MBBS, MS(OBG), FRM',
     designation: 'Fertility Specialist ',
     image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmgowk4wc26v708pkn06x6duv',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmgrl937z0o3407pnmu6gj612',
     },
     imageAlt: 'IVF Specialist in Bangalore - Dr Deepthi Venkatesh',
     bio: {
@@ -1535,7 +1535,7 @@ export const doctors = [
     qualification: 'MBBS, MS, FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/FZxTAyTHWVjXmjNdaLvg',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/gr247akQxiCngsWKXygR',
     },
     imageAlt: null,
     bio: {
@@ -1592,7 +1592,7 @@ export const doctors = [
     qualification: 'MBBS, MS (OBG), DNB(OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/ocaZ9siTu6Uy9UCVo1SA',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/sbq78oflRTqsc65HoRic',
     },
     imageAlt: null,
     bio: {
@@ -1691,7 +1691,7 @@ export const doctors = [
     qualification: 'MBBS, MS (OBG), FRM, FMAS',
     designation: 'Fertility Specialist ',
     image: {
-      url: 'https://media.graphassets.com/VlHN58CdScaqsblmOFlp',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme71es9505cx07pibxq41o0c',
     },
     imageAlt: 'dr-poornima-m-s',
     bio: {
@@ -2145,7 +2145,7 @@ export const doctors = [
     qualification: 'MBBS, DGO, FRM, FMAS ',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://media.graphassets.com/gpKSKpmgQguLtfTmx5xt',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmdycqzy60qj607pextxqewbq',
     },
     imageAlt: 'Dr. P. V. Vasavi Devi',
     bio: {
@@ -2579,7 +2579,7 @@ export const doctors = [
     qualification: 'MBBS, MS (OBG), DNB,  FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmcylkm0b0kw808o7m39xzz56',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme74104o06r107pfss7ag45e',
     },
     imageAlt: 'dr-harshitha-p',
     bio: {
@@ -3035,7 +3035,7 @@ export const doctors = [
     qualification: 'MBBS, MS, DNB (OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmdzwtmjp2a9q07po2rbcj4sb',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme6u06uz2jo208pkj8y9fb68',
     },
     imageAlt: 'Fertility Specialist Davanagere',
     bio: {
@@ -3875,7 +3875,7 @@ export const doctors = [
     qualification: 'Obstetrics, Gynecology & Reproductive Medicine',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmequvf1c58or07pl65844wc5',
+      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmfc7r9gn1m6908o7dr61m4b2',
     },
     imageAlt: 'Fertility Specialist Hosur',
     bio: {
