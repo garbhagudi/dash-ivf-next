@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
+const Carousel = dynamic(() => import('nuka-carousel').then((m) => m.default), {
+  ssr: false,
+});
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Link from 'next/link';
 const FormComponent = dynamic(() => import('components/formComp'), {

@@ -3,7 +3,9 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { MdOutlineSwipeLeft } from 'react-icons/md';
 import dynamic from 'next/dynamic';
-const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
+const Carousel = dynamic(() => import('nuka-carousel').then((m) => m.default), {
+  ssr: false,
+});
 
 const Video = () => {
   const defaultControlsConfig = {
