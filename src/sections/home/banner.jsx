@@ -38,12 +38,12 @@ const Banner = () => {
       </Head>
 
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
-        <div className='relative col-span-2 h-fit'>
+        <div className='relative col-span-2 min-h-[350px] md:min-h-[470px]'>
           <Carousel
-            ssr={false}
             renderAnnounceSlideMessage={({ currentSlide, slideCount }) =>
               `Slide ${currentSlide + 1} of ${slideCount}`
             }
+            heightMode='max'
             autoplay={false}
             autoplayInterval={3000}
             className='border-0 shadow-2xl drop-shadow-2xl'
