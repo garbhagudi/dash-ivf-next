@@ -1,21 +1,18 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const Carousel = dynamic(() => import('nuka-carousel').then((m) => m.default), {
-  ssr: false,
-});
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+const Carousel = dynamic(
+  () => import('nuka-carousel').then((m) => m.Carousel),
+  {
+    ssr: false,
+  },
+);
 import Link from 'next/link';
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
 
 const Banner = () => {
-  const defaultControlsConfig = {
-    pagingDotsStyle: {
-      display: 'none',
-    },
-  };
   return (
     <div>
       <Head>
@@ -38,36 +35,13 @@ const Banner = () => {
       </Head>
 
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
-        <div className='relative col-span-2 min-h-[350px] md:min-h-[470px]'>
+        <div className='relative col-span-2 h-fit'>
           <Carousel
-            renderAnnounceSlideMessage={({ currentSlide, slideCount }) =>
-              `Slide ${currentSlide + 1} of ${slideCount}`
-            }
-            heightMode='max'
-            autoplay={false}
+            autoplay={true}
             autoplayInterval={3000}
+            wrapMode='wrap'
             className='border-0 shadow-2xl drop-shadow-2xl'
-            defaultControlsConfig={defaultControlsConfig}
-            wrapAround
-            dragging
-            enableKeyboardControls
-            pauseOnHover
-            renderCenterLeftControls={({ previousSlide }) => (
-              <button
-                onClick={previousSlide}
-                className='ml-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100'
-              >
-                <HiChevronLeft className='mr-1' />
-              </button>
-            )}
-            renderCenterRightControls={({ nextSlide }) => (
-              <button
-                onClick={nextSlide}
-                className='mr-3 hidden h-11 w-11 items-center justify-center rounded-full bg-brandPurpleDark bg-opacity-70 text-4xl text-white transition duration-300 ease-in-out hover:bg-opacity-100'
-              >
-                <HiChevronRight className='ml-1' />
-              </button>
-            )}
+            showArrows='hover'
           >
             {bannerData.length > 0 ? (
               bannerData.map((banner, index) => (
@@ -76,6 +50,7 @@ const Banner = () => {
                   target='_blank'
                   rel='noreferrer'
                   key={banner.id}
+                  className='min-h-full min-w-full'
                 >
                   <Image
                     src={`${banner.image.url1}`}
@@ -161,6 +136,24 @@ const Banner = () => {
 export default Banner;
 
 const bannerData = [
+  {
+    url: 'https://www.garbhagudi.com/features/paripoorna',
+    id: '3',
+    title: 'Web_Banner_3',
+    image: {
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp',
+    },
+  },
+  {
+    url: 'https://www.garbhagudi.com/features/paripoorna',
+    id: '3',
+    title: 'Web_Banner_3',
+    image: {
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762497773/paripoorna_Landing_Page_Banner-02_qebqpx.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1762504289/paripoorna_Landing_Page_Banner-01_wxgq38.webp',
+    },
+  },
   {
     url: 'https://www.garbhagudi.com/features/paripoorna',
     id: '3',
