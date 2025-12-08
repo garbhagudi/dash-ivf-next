@@ -2,7 +2,8 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { MdOutlineSwipeLeft } from 'react-icons/md';
-import Carousel from 'nuka-carousel';
+import dynamic from 'next/dynamic';
+const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
 
 const Video = () => {
   const defaultControlsConfig = {
@@ -18,6 +19,10 @@ const Video = () => {
         </h3>
         <div className='mx-auto flex max-w-7xl flex-row items-center justify-center px-3 sm:px-0'>
           <Carousel
+            ssr={false}
+            renderAnnounceSlideMessage={({ currentSlide, slideCount }) =>
+              `Slide ${currentSlide + 1} of ${slideCount}`
+            }
             defaultControlsConfig={defaultControlsConfig}
             autoplayInterval={5000}
             className='mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl'

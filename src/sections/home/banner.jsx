@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Carousel from 'nuka-carousel';
+const Carousel = dynamic(() => import('nuka-carousel'), { ssr: false });
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import Link from 'next/link';
 const FormComponent = dynamic(() => import('components/formComp'), {
@@ -17,7 +17,6 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        {/* Preload critical image */}
         <link
           rel='preload'
           href={bannerData[0].image.url2.replace(
@@ -39,6 +38,10 @@ const Banner = () => {
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
           <Carousel
+            ssr={false}
+            renderAnnounceSlideMessage={({ currentSlide, slideCount }) =>
+              `Slide ${currentSlide + 1} of ${slideCount}`
+            }
             autoplay={false}
             autoplayInterval={3000}
             className='border-0 shadow-2xl drop-shadow-2xl'

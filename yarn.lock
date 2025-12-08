@@ -2967,10 +2967,10 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
-nuka-carousel@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-7.0.0.tgz#bcf1d9d1ebf194a589ffecbfd42df269a6219805"
-  integrity sha512-KE0WV1MuE4Gq6ynL8P3qJH2rGq/DkJ0ej+ezo0IuZp4oklV8WNqu6P6O1utJqihHLGoEuFppq5wlHSHfhdCHXA==
+nuka-carousel@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-8.2.0.tgz#fd086423e02acec7643dd04d38aa3d891cc2bd6a"
+  integrity sha512-Wt6rAlSKnhQyZQETfdb5HGSzNc1hcnWls2pA+WpHqi6xq+F44k+oaldFEaSTxvSuVMz2Fo8LhDFGInlYlXepeQ==
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
