@@ -108,7 +108,7 @@ const Banner = () => {
           reality.
         </p>
       </div>
-      <div className='mb-3 flex w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
+      <div className='mb-3 flex w-full flex-col justify-center rounded-md bg-brandPurpleDark p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
@@ -123,7 +123,7 @@ const Banner = () => {
           compassionate care, advanced treatments, and trusted expertise.
         </p>
       </div>
-      <div className='mx-auto mt-4 w-full max-w-fit rounded-lg bg-brandPurpleDark p-2.5 text-white shadow-lg lg:max-w-7xl'>
+      <div className='mx-auto mt-4 w-full max-w-fit rounded-lg bg-gg-500 p-2.5 text-white shadow-lg lg:max-w-7xl'>
         <h2 className='w-full text-center text-base font-semibold'>
           Experience Parenthood with PARIPOORNA Offer — Save ₹1,11,111* on IVF
           Treatments!
