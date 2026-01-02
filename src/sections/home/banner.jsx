@@ -98,36 +98,11 @@ const Banner = () => {
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
-        <p className='text-justify text-gray-100'>
-          Parenthood is priceless, and through PARIPOORNA, we aim to make it
-          more accessible for every aspiring couple. At GarbhaGudi, we
-          understand that the path to parenthood can be filled with emotional
-          and financial hurdles.PARIPOORNAis our way of making this journey a
-          little easier — combining compassionate care, advanced fertility
-          treatments, and trusted expertise to turn your dream of a baby into
-          reality.
-        </p>
       </div>
       <div className='mb-3 flex w-full flex-col justify-center rounded-md bg-brandPurpleDark p-2 px-5 font-semibold text-white shadow-sm md:hidden'>
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
-
-        <h2 className='text-justify text-base font-semibold text-white sm:text-base md:text-lg'>
-          Celebrate the season of parenthood with PARIPOORNA — this Nov & Dec
-          2025, get ₹1,11,111 OFF on IVF treatments at GarbhaGudi IVF Centre.
-        </h2>
-        <p className='text-gray-100'>
-          Parenthood is priceless. Through PARIPOORNA, GarbhaGudi makes it more
-          accessible by easing the emotional and financial journey with
-          compassionate care, advanced treatments, and trusted expertise.
-        </p>
-      </div>
-      <div className='mx-auto mt-4 w-full max-w-fit rounded-lg bg-gg-500 p-2.5 text-white shadow-lg lg:max-w-7xl'>
-        <h2 className='w-full text-center text-base font-semibold'>
-          Experience Parenthood with PARIPOORNA Offer — Save ₹1,11,111* on IVF
-          Treatments!
-        </h2>
       </div>
     </div>
   );
@@ -141,8 +116,8 @@ const bannerData = [
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1765198199/paripoorna_Landing_Page_Banner_New-02_wjhcew.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1765198200/paripoorna_Landing_Page_Banner_New-01_ixfejv.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-02_jkbtvk.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-01_jt2lgz.webp',
     },
   },
 ];
