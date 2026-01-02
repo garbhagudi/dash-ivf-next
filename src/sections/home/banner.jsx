@@ -141,8 +141,8 @@ const bannerData = [
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1765198199/paripoorna_Landing_Page_Banner_New-02_wjhcew.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1765198200/paripoorna_Landing_Page_Banner_New-01_ixfejv.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-02_jkbtvk.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-01_jt2lgz.webp',
     },
   },
 ];
