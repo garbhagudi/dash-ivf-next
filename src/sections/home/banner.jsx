@@ -116,8 +116,8 @@ const bannerData = [
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-02_jkbtvk.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767361195/Jan_Month_offer_LP-01_jt2lgz.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_WEB_hrcjyg.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957947/GG_IVF_Mobile_ksbdr7.webp',
     },
   },
 ];
