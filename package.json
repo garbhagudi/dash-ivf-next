@@ -13,6 +13,7 @@
     "@graphcms/rich-text-react-renderer": "^0.6.2",
     "@headlessui/react": "^2.2.0",
     "@headlessui/tailwindcss": "^0.2.1",
+    "@react-icons/all-files": "^4.1.0",
     "@types/react": "^18.3.12",
     "axios": "^1.7.9",
     "critters": "^0.0.23",
@@ -29,6 +30,7 @@
     "theme-ui": "0.17.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.1.2",
     "@types/node": "^22.10.2",
     "autoprefixer": "^10.4.20",
     "eslint": "9.17.0",
