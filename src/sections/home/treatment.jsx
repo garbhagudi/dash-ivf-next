@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const TreatmentOptions = ({ branch }) => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto lg:max-w-7xl'>
       <h2 className='px-2 pb-16 text-center font-heading text-2xl font-bold text-brandDark sm:text-3xl lg:pb-20'>
         Infertility Treatment Options at {branch}
       </h2>
