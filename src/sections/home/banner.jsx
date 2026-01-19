@@ -25,13 +25,13 @@ const Banner = () => {
           as='image'
         />
         {/* Preload Fonts */}
-        <link
+        {/* <link
           rel='preload'
           href='/path-to-font.woff2'
           as='font'
           type='font/woff2'
           crossOrigin='anonymous'
-        />
+        /> // because we are already using the next/font/google no preload required here */}
       </Head>
 
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
@@ -68,7 +68,7 @@ const Banner = () => {
                     alt={banner.title}
                     {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    className='h-[65vh] w-full object-fill md:hidden'
+                    className='w-full object-fill md:hidden lg:h-[65vh]'
                   />
                 </Link>
               ))
@@ -94,7 +94,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto mb-3 hidden w-full max-w-7xl flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
+      <div className='mx-auto mb-3 hidden w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
         <h1 className='w-full text-center text-base'>
           Best IVF & Fertility Clinic - Affordable IVF Treatment
         </h1>
