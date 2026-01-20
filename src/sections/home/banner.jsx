@@ -53,7 +53,7 @@ const Banner = () => {
                 //   key={banner.id}
                 //   className='min-h-full min-w-full'
                 // >
-                <Fragment>
+                <Fragment key={banner.id}>
                   <Image
                     src={`${banner.image.url1}`}
                     alt={banner.title}
