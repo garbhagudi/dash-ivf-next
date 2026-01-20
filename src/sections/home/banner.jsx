@@ -8,6 +8,7 @@ const Carousel = dynamic(
   },
 );
 import Link from 'next/link';
+import { Fragment } from 'react';
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
@@ -45,13 +46,14 @@ const Banner = () => {
           >
             {bannerData.length > 0 ? (
               bannerData.map((banner, index) => (
-                <Link
-                  href={banner.url || '#'}
-                  target='_blank'
-                  rel='noreferrer'
-                  key={banner.id}
-                  className='min-h-full min-w-full'
-                >
+                // <Link
+                //   href={banner.url || '#'}
+                //   target='_blank'
+                //   rel='noreferrer'
+                //   key={banner.id}
+                //   className='min-h-full min-w-full'
+                // >
+                <Fragment>
                   <Image
                     src={`${banner.image.url1}`}
                     alt={banner.title}
@@ -70,7 +72,8 @@ const Banner = () => {
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='w-full object-fill md:hidden lg:h-[65vh]'
                   />
-                </Link>
+                </Fragment>
+                // </Link>
               ))
             ) : (
               <div>No banners available</div>
