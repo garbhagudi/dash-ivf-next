@@ -7,8 +7,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
   reactStrictMode: true,
-  productionBrowserSourceMaps: true,
+  // productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false, // Disable for prod perf
   compress: true, // to enable gzip in Next.js
+  // swcMinify: true,
   images: {
     dangerouslyAllowSVG: true,
     // unoptimized: true,
@@ -21,13 +23,16 @@ const nextConfig = {
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@components': path.resolve(__dirname, 'components'), // to prevent large imports
+      // moment: false,
+      moment: 'dayjs', // Smaller than moment
+      '@components': path.resolve(__dirname, 'src/components'), // to prevent large imports
     };
     return config;
   },
   experimental: {
     scrollRestoration: true, // to improve navigation performance
     optimizeCss: true, // removes render-blocking CSS
+    optimizePackageImports: ['react-icons', 'nuka-carousel'], // to reduce bundle size
   },
 };
 
