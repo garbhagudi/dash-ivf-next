@@ -3,8 +3,8 @@
   "version": "1.22.22",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
     "analyze": "cross-env ANALYZE=true yarn build",
