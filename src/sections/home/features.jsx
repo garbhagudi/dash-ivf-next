@@ -133,46 +133,21 @@
 // };
 
 // export default Features;
-
 import React from 'react';
-
-import dynamic from 'next/dynamic';
-
-const CiPercent = dynamic(
-  () => import('react-icons/ci').then((m) => m.CiPercent),
-  { ssr: false },
-);
-
-const CiMedicalCase = dynamic(
-  () => import('react-icons/ci').then((m) => m.CiMedicalCase),
-  { ssr: false },
-);
-
-const BsBuildings = dynamic(
-  () => import('react-icons/bs').then((m) => m.BsBuildings),
-  { ssr: false },
-);
-
-const BsCurrencyRupee = dynamic(
-  () => import('react-icons/bs').then((m) => m.BsCurrencyRupee),
-  { ssr: false },
-);
-
-const GiMeditation = dynamic(
-  () => import('react-icons/gi').then((m) => m.GiMeditation),
-  { ssr: false },
-);
-
-const ImLab = dynamic(() => import('react-icons/im').then((m) => m.ImLab), {
-  ssr: false,
-});
+import {
+  Percent,
+  Building2,
+  Stethoscope,
+  IndianRupee,
+  Leaf,
+  TestTube2,
+} from 'lucide-react';
 
 const features = [
   {
     id: 1,
     name: 'High Success Rate',
-    Icon: CiPercent,
-    // Icon: CiIcons.CiPercent,
+    Icon: Percent,
     content:
       'GarbhaGudi has one of the highest IVF treatments success rates in the industry.',
     link: '/features/success-rates-of-ivf',
@@ -180,8 +155,7 @@ const features = [
   {
     id: 2,
     name: 'World Class Fertility Care',
-    Icon: BsBuildings,
-    // Icon: BsIcons.BsBuildings,
+    Icon: Building2,
     content:
       'GarbhaGudi is Proud to have played a key role in bringing more than 15,000+ babies into the world since 2011.',
     link: '/features/world-class-fertility-care',
@@ -189,8 +163,7 @@ const features = [
   {
     id: 3,
     name: 'Top Fertility Specialists',
-    Icon: CiMedicalCase,
-    // Icon: CiIcons.CiMedicalCase,
+    Icon: Stethoscope,
     content:
       'Team of fertility specialists like gynecologists, embryologists, technicians and staff to help you conceive.',
     link: '/fertility-experts',
@@ -198,8 +171,7 @@ const features = [
   {
     id: 4,
     name: 'Affordable Treatments',
-    Icon: BsCurrencyRupee,
-    // Icon: BsIcons.BsCurrencyRupee,
+    Icon: IndianRupee,
     content:
       'GarbhaGudi offers Affordable Infertility treatment without any compromise on service or quality of medicines or services',
     link: '/features/affordable-treatments',
@@ -207,8 +179,7 @@ const features = [
   {
     id: 7,
     name: 'Holistic Approach',
-    Icon: GiMeditation,
-    // Icon: GiIcons.GiMeditation,
+    Icon: Leaf,
     content:
       'At GarbhaGudi we are committed to Treating infertility through the holistic mind-body-soul programs.',
     link: '/features/holistic-approach',
@@ -216,10 +187,9 @@ const features = [
   {
     id: 9,
     name: 'Best in Class Facilities',
-    Icon: ImLab,
-    // Icon: ImIcons.ImLab,
+    Icon: TestTube2,
     content:
-      'Our IVF Centers in Bangalore are equipped to handle the most challenging cases with state of the art technology at our disposal',
+      'Our IVF Centers in Bangalore are equipped to handle the most challenging cases with state of art technology at our disposal',
     link: '/features/best-in-class-facilities',
   },
 ];
@@ -240,15 +210,17 @@ const Features = () => {
                 <div className='shadow-3xl h-full overflow-hidden rounded-lg transition-all hover:scale-105'>
                   <div className='grid h-full grid-cols-6'>
                     <div className='col-span-1 flex items-center justify-center bg-brandPink'>
-                      <div className='text-4xl text-white'>
-                        <Icon />
+                      <div className='p-3 text-4xl text-white'>
+                        <Icon size={32} strokeWidth={2} />
                       </div>
                     </div>
-                    <div className='col-span-5 border-2 border-brandPink px-2'>
-                      <h3 className='mt-3 font-heading font-semibold'>
+                    <div className='col-span-5 border-2 border-brandPink px-2 py-4'>
+                      <h3 className='mt-1 font-heading text-lg font-semibold'>
                         {feature.name}
                       </h3>
-                      <p className='mt-2 pb-3 text-sm'>{feature.content}</p>
+                      <p className='mt-2 pb-3 text-sm leading-relaxed text-gray-600'>
+                        {feature.content}
+                      </p>
                     </div>
                   </div>
                 </div>
