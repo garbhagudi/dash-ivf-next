@@ -86,6 +86,8 @@ function MyApp({ Component, pageProps }) {
           justifyContent: 'space-between',
         }}
         className={dmSans.className}
+        data-viewport-dxr=''
+        suppressHydrationWarning
       >
         <Script
           id='gtm'

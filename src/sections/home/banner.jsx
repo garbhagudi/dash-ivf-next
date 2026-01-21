@@ -8,12 +8,16 @@ const Carousel = dynamic(
   },
 );
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 const FormComponent = dynamic(() => import('components/formComp'), {
   ssr: true,
 });
 
 const Banner = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div>
       <Head>
@@ -85,17 +89,21 @@ const Banner = () => {
             </h1>
           </div> */}
         </div>
-        <div
-          className='flex min-h-fit justify-center bg-[#005e7e] md:min-h-[500px]'
-          id='leadForm'
-        >
-          <div className='flex h-full w-full items-center justify-center'>
-            <FormComponent
-              title='Book Free Fertility Consultation Today'
-              isTag={false}
-            />
+        {isClient ? (
+          <div
+            className='flex min-h-fit justify-center bg-[#005e7e] md:min-h-[500px]'
+            id='leadForm'
+          >
+            <div className='flex h-full w-full items-center justify-center'>
+              <FormComponent
+                title='Book Free Fertility Consultation Today'
+                isTag={false}
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          ''
+        )}
       </div>
       <div className='mx-auto mb-3 hidden w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
         <h1 className='w-full text-center text-base'>

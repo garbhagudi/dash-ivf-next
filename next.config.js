@@ -11,15 +11,20 @@ const nextConfig = {
   productionBrowserSourceMaps: false, // Disable for prod perf
   compress: true, // to enable gzip in Next.js
   // swcMinify: true,
+  devIndicators: {
+    buildActivity: false,
+  },
   images: {
     dangerouslyAllowSVG: true,
-    // unoptimized: true,
+    unoptimized: true,
+    minimumCacheTTL: 0,
     remotePatterns: [
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'media.graphassets.com' },
       { protocol: 'https', hostname: 'avatars.dicebear.com' },
     ],
   },
+  turbopack: {},
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -30,9 +35,18 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    scrollRestoration: true, // to improve navigation performance
+    // turbo: false,
     optimizeCss: true, // removes render-blocking CSS
+    scrollRestoration: true, // to improve navigation performance
     optimizePackageImports: ['react-icons', 'nuka-carousel'], // to reduce bundle size
+    // css: {
+    //   modules: true,
+    // },
+    // resourcePriority: {
+    //   images: 'high',
+    //   scripts: 'low',
+    //   stylesheets: 'medium',
+    // },
   },
 };
 

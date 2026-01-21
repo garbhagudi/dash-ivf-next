@@ -3,9 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
     <Html lang='en'>
-      <Head>
-        {/* Google Tag Manager */}
-        {/* <script
+      {/* <Head> */}
+      {/* Google Tag Manager */}
+      {/* <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -14,8 +14,19 @@ export default function Document() {
               })(window,document,'script','dataLayer','GTM-NT9BZ69');`,
           }}
         /> */}
-        {/* End Google Tag Manager */}
+      {/* End Google Tag Manager */}
+      {/* </Head> */}
+      <Head>
+        <link
+          rel='preload'
+          href='/fonts/DM-Sans.woff2'
+          as='font'
+          crossOrigin=''
+        />
+        <link rel='dns-prefetch' href='res.cloudinary.com' />
+        <link rel='dns-prefetch' href='media.graphassets.com' />
       </Head>
+
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
