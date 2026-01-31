@@ -127,8 +127,8 @@ const bannerData = [
     id: '3',
     title: 'Web_Banner_3',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957948/GG_IVF_WEB_hrcjyg.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1767957947/GG_IVF_Mobile_ksbdr7.webp',
+      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-02_1_bx2hjb.webp',
+      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-01_1_flywtu.webp',
     },
   },
 ];
