@@ -426,7 +426,7 @@ export const doctors = [
   {
     name: 'Dr. S R Raajam Murali ',
     qualification: 'MBBS MD FRM',
-    designation: 'Senior Fertility Specialist',
+    designation: 'Senior Fertility Specialist & Cluster Clinician South',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/2yqIQrHpQZyqUeZn5QMQ',
     },
@@ -497,7 +497,7 @@ export const doctors = [
   {
     name: 'Dr Priyanka Rani',
     qualification: 'MBBS, DNB, FRM',
-    designation: 'Senior Fertility Specialist',
+    designation: 'Senior Fertility Specialist & Cluster Clinician East',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/mSwDtFwRSqUnU4OKILAZ',
     },
@@ -534,7 +534,7 @@ export const doctors = [
   {
     name: 'Dr. Anitha A Manoj',
     qualification: 'MBBS, MS (OBG), FMAS, FRM',
-    designation: 'Senior Fertility Specialist',
+    designation: 'Senior Fertility Specialist & Cluster Clinician West',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/rYpX4eo0QGGXzwOSpTih',
     },
@@ -571,7 +571,7 @@ export const doctors = [
   {
     name: 'Dr Aparna N',
     qualification: 'MBBS, DNB, M.Ch Reproductive Medicine and Surgery',
-    designation: 'Senior Fertility Specialist',
+    designation: 'Senior Fertility Specialist & Cluster Clinician North',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/qBZDJPaaSFKtXd8dqvV4',
     },
