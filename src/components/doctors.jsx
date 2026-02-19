@@ -742,77 +742,77 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr Nikitha Murthy B.S',
-    qualification: 'MBBS, MS(OBG), DNB(OBG), FRM',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/WtLzker2RNGGcyFmEOVE',
-    },
-    imageAlt: 'IVF Specialist in Bangalore - Dr Nikitha Murthy',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Meet Dr Nikitha Murthy, an experienced Infertility Specialist with a passion for helping couples achieve their dream of having a family. Dr Murthy completed her MBBS from Bangalore Medical College and Research Institute, Bangalore in 2014. She then pursued her post-graduation in Obstetrics and Gynecology from JJMMC, Davanagere, and obtained her DNB in 2018.',
-                  },
-                ],
-              },
-            ],
-            className: ' py-3 text-lg text-brandDark',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'After completing her residency at Moolchand Hospital, New Delhi, she worked as a Registrar at Fortis La Femme, Richmond Road & Apollo Hospitals Sheshadripuram from 2019 to 2020. In 2019, Dr Murthy also completed a Fellowship in Reproductive Medicine from Milann Fertility Centre, Bangalore.',
-                  },
-                ],
-              },
-            ],
-            className: ' py-3 text-lg text-brandDark',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: "Dr Murthy's passion for helping couples struggling with infertility led her to become the Chief Consultant at Caree fertility centre from 2020 to 2021. She is now a Fertility Specialist at GarbhaGudi IVF Centre, New BEL Road, where she continues to provide personalized care to her patients. Dr Murthy's areas of expertise include assisted reproductive technologies, preconception counselling, and management of complex fertility issues.",
-                  },
-                ],
-              },
-            ],
-            className: ' py-3 text-lg text-brandDark',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'With her vast knowledge and experience, Dr Nikitha Murthy is dedicated to helping her patients navigate the complex world of infertility and achieve their dream of having a family.',
-                  },
-                ],
-              },
-            ],
-            className: ' py-3 text-lg text-brandDark',
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr Nikitha Murthy B.S',
+  //   qualification: 'MBBS, MS(OBG), DNB(OBG), FRM',
+  //   designation: 'Fertility Specialist',
+  //   image: {
+  //     url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/WtLzker2RNGGcyFmEOVE',
+  //   },
+  //   imageAlt: 'IVF Specialist in Bangalore - Dr Nikitha Murthy',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Meet Dr Nikitha Murthy, an experienced Infertility Specialist with a passion for helping couples achieve their dream of having a family. Dr Murthy completed her MBBS from Bangalore Medical College and Research Institute, Bangalore in 2014. She then pursued her post-graduation in Obstetrics and Gynecology from JJMMC, Davanagere, and obtained her DNB in 2018.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: ' py-3 text-lg text-brandDark',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'After completing her residency at Moolchand Hospital, New Delhi, she worked as a Registrar at Fortis La Femme, Richmond Road & Apollo Hospitals Sheshadripuram from 2019 to 2020. In 2019, Dr Murthy also completed a Fellowship in Reproductive Medicine from Milann Fertility Centre, Bangalore.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: ' py-3 text-lg text-brandDark',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: "Dr Murthy's passion for helping couples struggling with infertility led her to become the Chief Consultant at Caree fertility centre from 2020 to 2021. She is now a Fertility Specialist at GarbhaGudi IVF Centre, New BEL Road, where she continues to provide personalized care to her patients. Dr Murthy's areas of expertise include assisted reproductive technologies, preconception counselling, and management of complex fertility issues.",
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: ' py-3 text-lg text-brandDark',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'With her vast knowledge and experience, Dr Nikitha Murthy is dedicated to helping her patients navigate the complex world of infertility and achieve their dream of having a family.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: ' py-3 text-lg text-brandDark',
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   {
     name: 'Dr. Varsha Patil',
     qualification: 'MBBS, DGO, DNB(OBG), FRM',
