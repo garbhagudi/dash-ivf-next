@@ -652,7 +652,7 @@ export const doctors = [
     qualification: 'MBBS, DNB(OBG) FRM',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/9yGb4ofxQ5OhrQrr7B7T',
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/fA2XgIz7QGwFJ2vomjQM',
     },
     imageAlt: 'Dr. Vandana Ramanathan',
     bio: {
