@@ -14,6 +14,15 @@ const nextConfig = {
   devIndicators: {
     buildActivity: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/contact.html',
+        destination: '/contact-us',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     dangerouslyAllowSVG: true,
     unoptimized: true,

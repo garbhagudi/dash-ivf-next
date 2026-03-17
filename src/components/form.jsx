@@ -2,7 +2,7 @@ const IndexPage = () => {
   return (
     <>
       <iframe
-        src='/contact.html'
+        src='/contact-us'
         className='mx-auto h-screen max-h-[460px] w-screen max-w-xs bg-transparent'
         loading='eager'
       >
