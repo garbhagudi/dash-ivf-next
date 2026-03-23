@@ -647,101 +647,101 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr. Vandana Ramanathan',
-    qualification: 'MBBS, DNB(OBG) FRM',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/9yGb4ofxQ5OhrQrr7B7T',
-    },
-    imageAlt: 'Dr. Vandana Ramanathan',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Meet Dr. Vandana, a dedicated Fertility Specialist committed to helping couples realize their dream of parenthood. Dr. Vandana obtained her MBBS from MIMER Medical College, followed by an MS (D.N.B) from K.G Hospital & Post Graduate Medical Institute, and a Fellowship in Reproductive Medicine from CRAFT Hospital & Research Centre.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 ',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'With extensive experience spanning various prestigious institutions such as GarbhaGudi IVF Centre, Oasis Fertility Centre, and The Origin International Fertility Centre,Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility. ',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 ',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: "Dr. Vandana's passion for advancing fertility care is evident through her academic achievements, including a thesis on maternal age impact and presentations at prestigious conferences. She has also contributed to medical literature with upcoming publications.",
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 ',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patients through their fertility journey with empathy and expertise.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 ',
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr. Vandana Ramanathan',
+  //   qualification: 'MBBS, DNB(OBG) FRM',
+  //   designation: 'Fertility Specialist',
+  //   image: {
+  //     url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/9yGb4ofxQ5OhrQrr7B7T',
+  //   },
+  //   imageAlt: 'Dr. Vandana Ramanathan',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Meet Dr. Vandana, a dedicated Fertility Specialist committed to helping couples realize their dream of parenthood. Dr. Vandana obtained her MBBS from MIMER Medical College, followed by an MS (D.N.B) from K.G Hospital & Post Graduate Medical Institute, and a Fellowship in Reproductive Medicine from CRAFT Hospital & Research Centre.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 ',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '',
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'With extensive experience spanning various prestigious institutions such as GarbhaGudi IVF Centre, Oasis Fertility Centre, and The Origin International Fertility Centre,Dr. Vandana has honed her skills in reproductive medicine. Her expertise includes conducting all ART procedures, follicular monitoring, transvaginal ultrasound, ultrasound-related interventions and endoscopic procedures related to infertility. ',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 ',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '',
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: "Dr. Vandana's passion for advancing fertility care is evident through her academic achievements, including a thesis on maternal age impact and presentations at prestigious conferences. She has also contributed to medical literature with upcoming publications.",
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 ',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '',
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Committed to continuous learning, Dr. Vandana actively participates in workshops and conferences, staying updated with the latest advancements in her field. With her compassionate approach and wealth of experience, Dr. Vandana strives to guide her patients through their fertility journey with empathy and expertise.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 ',
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   // {
   //   name: 'Dr Nikitha Murthy B.S',
   //   qualification: 'MBBS, MS(OBG), DNB(OBG), FRM',
