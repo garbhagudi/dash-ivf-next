@@ -67,6 +67,10 @@ const dmSans = DM_Sans({
 });
 
 const SalesIQ = dynamic(() => import('components/SalesIQ'), { ssr: false });
+const SalesIQLandingNext = dynamic(
+  () => import('components/SalesIQLandingNext'),
+  { ssr: false },
+);
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
   ssr: false,
 });
@@ -125,8 +129,10 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
 
-        <FloatPhone />
-        {router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
+        {router.pathname !== '/landing-next' && <FloatPhone />}
+        {router.pathname === '/landing-next' && <SalesIQLandingNext />}
+        {router.pathname !== '/landing-next' &&
+          router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
         <Footer />
       </Flex>
     </ThemeUIProvider>
