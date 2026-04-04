@@ -5,7 +5,10 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const FormComponent = ({ title, isTag = true }) => {
+/**
+ * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
+ */
+const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
@@ -59,6 +62,147 @@ const FormComponent = ({ title, isTag = true }) => {
     }
   };
 
+  const inputCard =
+    'w-full rounded-xl border-2 border-stone-200 bg-white px-4 py-3 text-base text-brandDark shadow-sm transition placeholder:text-stone-400 focus:border-brandPink focus:outline-none focus:ring-4 focus:ring-brandPink/15';
+
+  if (variant === 'card') {
+    return (
+      <div className='crmWebToEntityForm mx-auto w-full max-w-md'>
+        {isTag && (
+          <div className='flex justify-center'>
+            <div className='mb-4 w-fit rounded-lg bg-brandPink5 px-3 py-1 text-center text-sm font-semibold text-brandPurpleDark'>
+              Parivara Parva — free consultation
+            </div>
+          </div>
+        )}
+        <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
+          {title ? (
+            <h3 className='text-center font-heading text-lg font-bold text-brandPurpleDark sm:text-xl'>
+              {title}
+            </h3>
+          ) : null}
+
+          <div className='relative space-y-1'>
+            <label
+              htmlFor='Last_Name'
+              className='block text-sm font-semibold text-brandPurpleDark'
+            >
+              Full name
+            </label>
+            <input
+              type='text'
+              id='Last_Name'
+              placeholder='Enter your full name'
+              autoComplete='name'
+              {...register('Last_Name', {
+                required: 'Full name is required',
+              })}
+              className={inputCard}
+            />
+            {errors.Last_Name && (
+              <p className='text-sm font-medium text-red-600'>
+                {errors.Last_Name?.message}
+              </p>
+            )}
+          </div>
+
+          <div className='relative space-y-1'>
+            <label
+              htmlFor='Phone'
+              className='block text-sm font-semibold text-brandPurpleDark'
+            >
+              Phone
+            </label>
+            <input
+              type='tel'
+              id='Phone'
+              inputMode='numeric'
+              placeholder='10-digit mobile number'
+              autoComplete='tel'
+              {...register('Phone', {
+                required: 'Phone is required',
+                pattern: {
+                  value: /^[0-9]{10}$/,
+                  message: 'Enter a valid 10-digit number',
+                },
+              })}
+              className={inputCard}
+            />
+            {errors.Phone && (
+              <p className='text-sm font-medium text-red-600'>
+                {errors.Phone?.message}
+              </p>
+            )}
+          </div>
+
+          <div className='relative space-y-1'>
+            <label
+              htmlFor='Email'
+              className='block text-sm font-semibold text-brandPurpleDark'
+            >
+              Email
+            </label>
+            <input
+              type='email'
+              id='Email'
+              placeholder='you@example.com'
+              autoComplete='email'
+              {...register('Email', {
+                required: 'Email is required',
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: 'Enter a valid email',
+                },
+              })}
+              className={inputCard}
+            />
+            {errors.Email && (
+              <p className='text-sm font-medium text-red-600'>
+                {errors.Email?.message}
+              </p>
+            )}
+          </div>
+
+          <div className='pt-2'>
+            <button
+              type='submit'
+              className='flex w-full items-center justify-center gap-2 rounded-xl bg-brandPink px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-brandPink/25 transition hover:bg-brandPink2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-70'
+              disabled={load}
+            >
+              Get a Call Back
+              {load && (
+                <svg
+                  width={22}
+                  height={22}
+                  viewBox='0 0 38 38'
+                  xmlns='http://www.w3.org/2000/svg'
+                  stroke='#fff'
+                  aria-hidden
+                >
+                  <g fill='none' fillRule='evenodd'>
+                    <g transform='translate(1 1)' strokeWidth='2'>
+                      <circle strokeOpacity='.5' cx='18' cy='18' r='18' />
+                      <path d='M36 18c0-9.94-8.06-18-18-18'>
+                        <animateTransform
+                          attributeName='transform'
+                          type='rotate'
+                          from='0 18 18'
+                          to='360 18 18'
+                          dur='1s'
+                          repeatCount='indefinite'
+                        />
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+              )}
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <div className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent'>
       {isTag && (
@@ -73,12 +217,12 @@ const FormComponent = ({ title, isTag = true }) => {
           {title}
         </div>
         <div className='mx-auto flex flex-col space-y-5 px-3'>
-          <div className='mx-auto max-w-sm'>
+          <div className='relative mx-auto max-w-sm'>
             <label
               htmlFor='Last_Name'
               className='flex items-center justify-start'
             >
-              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark'>
                 Full Name
               </span>
               <input
@@ -88,19 +232,17 @@ const FormComponent = ({ title, isTag = true }) => {
                 {...register('Last_Name', {
                   required: 'Full Name is required',
                 })}
-                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+                className='w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none'
               />
             </label>
             {errors.Last_Name && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.Last_Name?.message}
-              </p>
+              <p className='mt-1 text-sm text-red-200'>{errors.Last_Name?.message}</p>
             )}
           </div>
 
-          <div className='mx-auto max-w-sm'>
+          <div className='relative mx-auto max-w-sm'>
             <label htmlFor='Phone' className='flex items-center justify-start'>
-              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark'>
                 Phone
               </span>
               <input
@@ -114,19 +256,17 @@ const FormComponent = ({ title, isTag = true }) => {
                     message: 'Invalid phone number',
                   },
                 })}
-                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+                className='w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none'
               />
             </label>
             {errors.Phone && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.Phone?.message}
-              </p>
+              <p className='mt-1 text-sm text-red-200'>{errors.Phone?.message}</p>
             )}
           </div>
 
-          <div className='mx-auto max-w-sm'>
+          <div className='relative mx-auto max-w-sm'>
             <label htmlFor='Email' className='flex items-center justify-start'>
-              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'>
+              <span className='w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark'>
                 Email
               </span>
               <input
@@ -140,13 +280,11 @@ const FormComponent = ({ title, isTag = true }) => {
                     message: 'Invalid email format',
                   },
                 })}
-                className='w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+                className='w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none'
               />
             </label>
             {errors.Email && (
-              <p className='absolute ml-[1.2em] text-sm text-red-500'>
-                {errors.Email?.message}
-              </p>
+              <p className='mt-1 text-sm text-red-200'>{errors.Email?.message}</p>
             )}
           </div>
         </div>

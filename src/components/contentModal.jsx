@@ -6,9 +6,10 @@ import {
 } from '@headlessui/react';
 import { useState } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import { HiX } from 'react-icons/hi';
 
 export default function ContentModal({ title, content, classname, heading }) {
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -26,10 +27,10 @@ export default function ContentModal({ title, content, classname, heading }) {
         </button>
       </div>
 
-      <Transition appear show={isOpen} as={'div'}>
-        <Dialog as='div' className='relative z-10' onClose={closeModal}>
+      <Transition appear show={isOpen} as='div'>
+        <Dialog as='div' className='relative z-[100]' onClose={closeModal}>
           <TransitionChild
-            as={'div'}
+            as='div'
             enter='ease-out duration-300'
             enterFrom='opacity-0'
             enterTo='opacity-100'
@@ -37,40 +38,62 @@ export default function ContentModal({ title, content, classname, heading }) {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <div className='fixed inset-0 bg-black bg-opacity-25'></div>
+            <div
+              className='fixed inset-0 bg-brandPurpleDark/55 backdrop-blur-[2px]'
+              aria-hidden
+            />
           </TransitionChild>
 
-          <div className='fixed inset-0 overflow-scroll'>
-            <div className='mx-auto mt-14 flex max-w-lg items-center justify-center text-center lg:min-h-[60vh] lg:max-w-5xl'>
-              <TransitionChild
-                as={'div'}
-                enter='ease-out duration-300'
-                enterFrom='opacity-0 scale-95'
-                enterTo='opacity-100 scale-100'
-                leave='ease-in duration-200'
-                leaveFrom='opacity-100 scale-100'
-                leaveTo='opacity-0 scale-95'
-              >
-                <DialogPanel className='-mt-5 w-full transform cursor-pointer overflow-hidden rounded bg-gray-50 px-3 align-middle opacity-95 shadow-xl transition-all lg:px-6'>
-                  <div
-                    className='mx-auto my-4 flex w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:hidden'
+          <div className='fixed inset-0 z-[100] flex items-end justify-center overflow-hidden sm:items-center sm:p-4 sm:py-8'>
+            <TransitionChild
+              as='div'
+              enter='ease-out duration-300'
+              enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+              enterTo='opacity-100 translate-y-0 sm:scale-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100 translate-y-0 sm:scale-100'
+              leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+              className='flex w-full max-w-full justify-center sm:max-w-3xl'
+            >
+              <DialogPanel className='flex max-h-[min(90vh,900px)] w-full flex-col overflow-hidden rounded-t-3xl border-2 border-brandPink4/70 bg-white shadow-2xl shadow-brandPurple/25 sm:max-h-[85vh] sm:rounded-3xl sm:border-brandPink4/50'>
+                <div className='h-1.5 shrink-0 bg-gradient-to-r from-brandPink via-brandPurple to-brandPurpleDark' />
+
+                <div className='flex shrink-0 items-start justify-between gap-3 border-b border-brandPink5 bg-gradient-to-br from-pink-50 via-white to-purple-100/60 px-4 py-4 sm:px-6 sm:py-5'>
+                  <div className='min-w-0 flex-1 text-left'>
+                    <p className='text-xs font-bold uppercase tracking-wider text-brandPink'>
+                      GarbhaGudi specialist
+                    </p>
+                    <h2 className='mt-1 font-heading text-xl font-bold leading-snug text-brandPurpleDark sm:text-2xl'>
+                      {heading}
+                    </h2>
+                  </div>
+                  <button
+                    type='button'
                     onClick={closeModal}
+                    className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-brandPurpleDark text-brandPurpleDark transition hover:bg-brandPurpleDark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPink'
+                    aria-label='Close profile'
+                  >
+                    <HiX className='h-5 w-5' />
+                  </button>
+                </div>
+
+                <div className='min-h-0 flex-1 cursor-default overflow-y-auto overscroll-contain px-4 py-5 sm:px-6 sm:py-6'>
+                  <div className='text-left text-base leading-relaxed text-brandDark [&_a]:font-semibold [&_a]:text-brandPink [&_a]:underline [&_a]:decoration-brandPink/40 [&_a]:underline-offset-2 [&_li]:text-brandDark [&_p]:mb-3 [&_p]:text-brandDark [&_strong]:text-brandPurpleDark'>
+                    <RichText content={content} />
+                  </div>
+                </div>
+
+                <div className='shrink-0 border-t border-brandPink5 bg-gradient-to-r from-brandPink5/40 to-purple-100/50 px-4 py-4 sm:px-6'>
+                  <button
+                    type='button'
+                    onClick={closeModal}
+                    className='w-full rounded-xl bg-brandPink py-3.5 text-center text-sm font-bold text-white shadow-md shadow-brandPink/30 transition hover:bg-brandPink2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark'
                   >
                     Close
-                  </div>
-                  <h1 className='pb-2 pt-6 text-center font-heading text-xl uppercase text-brandPurpleDark underline'>
-                    {heading}
-                  </h1>
-                  <RichText content={content} />
-                  <div
-                    className='mx-auto my-4 hidden w-20 cursor-pointer items-center justify-center rounded-lg bg-brandPink2 px-3 py-1 font-semibold text-white sm:block'
-                    onClick={closeModal}
-                  >
-                    Close
-                  </div>
-                </DialogPanel>
-              </TransitionChild>
-            </div>
+                  </button>
+                </div>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </Dialog>
       </Transition>
