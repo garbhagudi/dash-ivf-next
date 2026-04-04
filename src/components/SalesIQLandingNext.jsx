@@ -3,63 +3,83 @@ import { useEffect, useRef } from 'react';
 const WIDGET_CODE =
   '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0';
 
-function scheduleOpenChatAfter6s() {
-  return window.setTimeout(() => {
-    try {
-      const fw = window.$zoho?.salesiq?.floatwindow;
-      if (!fw) return;
-      if (typeof fw.visible === 'function') fw.visible('show');
-      if (typeof fw.open === 'function') fw.open(() => {});
-    } catch {
-      /* ignore */
-    }
-  }, 6000);
+const SCROLL_OPEN_THRESHOLD_PCT = 30;
+
+function scrollDepthPercent() {
+  const doc = document.documentElement;
+  const scrollable = doc.scrollHeight - doc.clientHeight;
+  if (scrollable <= 0) return 100;
+  const top = window.scrollY ?? doc.scrollTop;
+  return (top / scrollable) * 100;
 }
 
 /**
- * Zoho SalesIQ for `/landing-next` only: load without waiting for scroll,
- * then show/open the float window after 6 seconds once the widget is ready.
+ * Zoho SalesIQ for `/landing-next` only: load on mount, then show/open the float
+ * window once the user has scrolled at least 30% down the page.
  */
 export default function SalesIQLandingNext() {
-  const openTimerRef = useRef(null);
   const pollRef = useRef(null);
-  const openScheduledRef = useRef(false);
+  const widgetReadyRef = useRef(false);
+  const openedRef = useRef(false);
 
   useEffect(() => {
-    const clearTimers = () => {
-      if (openTimerRef.current != null) {
-        window.clearTimeout(openTimerRef.current);
-        openTimerRef.current = null;
+    const onScroll = () => {
+      checkScrollAndMaybeOpen();
+    };
+
+    const openChat = () => {
+      if (openedRef.current) return;
+      try {
+        const fw = window.$zoho?.salesiq?.floatwindow;
+        if (!fw) return;
+        openedRef.current = true;
+        if (typeof fw.visible === 'function') fw.visible('show');
+        if (typeof fw.open === 'function') fw.open(() => {});
+      } catch {
+        /* ignore */
       }
+    };
+
+    const checkScrollAndMaybeOpen = () => {
+      if (!widgetReadyRef.current || openedRef.current) return;
+      if (scrollDepthPercent() >= SCROLL_OPEN_THRESHOLD_PCT) {
+        openChat();
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+
+    const onWidgetReady = () => {
+      if (widgetReadyRef.current) return;
+      widgetReadyRef.current = true;
+      checkScrollAndMaybeOpen();
+      if (!openedRef.current) {
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    };
+
+    const clearPoll = () => {
       if (pollRef.current != null) {
         window.clearInterval(pollRef.current);
         pollRef.current = null;
       }
     };
 
-    const armOpenWhenReady = () => {
-      if (openScheduledRef.current) return;
-      openScheduledRef.current = true;
-      openTimerRef.current = scheduleOpenChatAfter6s();
+    const cleanup = () => {
+      clearPoll();
+      window.removeEventListener('scroll', onScroll);
     };
 
-    // Widget script already injected (e.g. client nav from home) — poll for API then delay 6s.
+    // Widget script already injected (e.g. client nav from home) — poll for API.
     if (document.getElementById('zsiqscript')) {
       pollRef.current = window.setInterval(() => {
         if (window.$zoho?.salesiq?.floatwindow) {
-          window.clearInterval(pollRef.current);
-          pollRef.current = null;
-          armOpenWhenReady();
+          clearPoll();
+          onWidgetReady();
         }
       }, 200);
-      const maxPoll = window.setTimeout(() => {
-        if (pollRef.current != null) {
-          window.clearInterval(pollRef.current);
-          pollRef.current = null;
-        }
-      }, 30000);
+      const maxPoll = window.setTimeout(clearPoll, 30000);
       return () => {
-        clearTimers();
+        cleanup();
         window.clearTimeout(maxPoll);
       };
     }
@@ -69,7 +89,7 @@ export default function SalesIQLandingNext() {
       widgetcode: WIDGET_CODE,
       values: {},
       ready() {
-        armOpenWhenReady();
+        onWidgetReady();
       },
     };
 
@@ -86,7 +106,7 @@ export default function SalesIQLandingNext() {
     script.defer = true;
     document.body.appendChild(script);
 
-    return clearTimers;
+    return cleanup;
   }, []);
 
   return null;
