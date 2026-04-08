@@ -16,7 +16,7 @@
     "@headlessui/react": "^2.2.0",
     "@headlessui/tailwindcss": "^0.2.1",
     "@types/react": "^18.3.12",
-    "axios": "^1.7.9",
+    "axios": "^1.13.5",
     "critters": "^0.0.23",
     "lucide-react": "^0.562.0",
     "moment": "^2.30.1",
