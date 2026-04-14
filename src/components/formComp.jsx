@@ -7,9 +7,11 @@ import { useForm } from 'react-hook-form';
 
 /**
  * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
- * @param {boolean} compact - tighter spacing for card variant (e.g. hero).
+ * @param {boolean} [compact] - tighter spacing for card variant (e.g. hero).
  */
-const FormComponent = ({ title, isTag = true, variant = 'banner', compact = false }) => {
+const FormComponent = (props) => {
+  const { title, isTag = true, variant = 'banner' } = props;
+  const compact = props.compact === true;
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
