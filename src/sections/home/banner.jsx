@@ -21,14 +21,7 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        <link
-          rel='preload'
-          href={bannerData[0].image.url2.replace(
-            '/upload/',
-            '/upload/f_auto,q_auto,w_412,h_535,c_fill/',
-          )}
-          as='image'
-        />
+        <link rel='preload' href='/images/landing-banner-mobile.png' as='image' />
         {/* Preload Fonts */}
         {/* <link
           rel='preload'
@@ -59,19 +52,19 @@ const Banner = () => {
                 // >
                 <Fragment key={banner.id}>
                   <Image
-                    src={`${banner.image.url1}`}
-                    alt={banner.title}
-                    width={900}
-                    height={471}
+                    src={banner.image.desktop}
+                    alt={banner.alt}
+                    width={1024}
+                    height={536}
                     {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
                     className='hidden h-full w-full object-cover md:block'
                   />
                   <Image
-                    src={`${banner.image.url2.replace('/upload/', '/upload/f_auto,q_auto,w_412,h_535,c_fill/')}`}
-                    width={412}
-                    height={535}
-                    alt={banner.title}
+                    src={banner.image.mobile}
+                    width={731}
+                    height={1024}
+                    alt={banner.alt}
                     {...(index === 0 ? { priority: true } : {})}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='w-full object-fill md:hidden lg:h-[65vh]'
@@ -126,9 +119,10 @@ const bannerData = [
     url: 'https://www.garbhagudi.com/features/paripoorna',
     id: '3',
     title: 'Web_Banner_3',
+    alt: 'GarbhaGudi IVF Centre promotional offer: first free fertility consultation and 50% off 25-test fertility care panel, valid until May 31, 2026. Call 9108 9108 32.',
     image: {
-      url1: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-02_1_bx2hjb.webp',
-      url2: 'https://res.cloudinary.com/garbhagudiivf/image/upload/v1769839387/Feb_Month_Offer_Landing_Page_Banner-01_1_flywtu.webp',
+      desktop: '/images/landing-banner-desktop.png',
+      mobile: '/images/landing-banner-mobile.png',
     },
   },
 ];
