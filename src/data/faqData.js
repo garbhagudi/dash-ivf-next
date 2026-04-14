@@ -22,7 +22,7 @@ export const faqData = [
     id: 4,
     Question: 'Why choose GarbhaGudi Hospital to get IVF treatment?',
     Answer:
-      'GarbhaGudi IVF Centre offers advanced infertility treatments using state-of-the-art technology.  Our experienced expert doctors provide personalised care to each patient and give the best possible outcomes.',
+      'GarbhaGudi IVF Centre offers advanced infertility treatments using state-of-the-art technology. Our experienced expert doctors provide personalised care to each patient and give the best possible outcomes.',
   },
   {
     id: 5,

@@ -1,4 +1,4 @@
-import { Baby, CalendarDays, Leaf, MapPinned } from 'lucide-react';
+import { Baby, CalendarDays, MapPinned } from 'lucide-react';
 
 const items = [
   {
@@ -16,16 +16,10 @@ const items = [
   {
     id: 'centres',
     Icon: MapPinned,
-    value: 'Multiple',
-    label: 'Bangalore centres',
-  },
-  {
-    id: 'approach',
-    Icon: Leaf,
-    value: 'Holistic & ethical',
-    label: 'Approach',
-    valueClass:
-      'text-xl sm:text-2xl lg:text-3xl leading-tight tracking-tight max-w-[11rem] mx-auto sm:max-w-none',
+    value: '10',
+    label: 'IVF Centres Across South India. Easy Access. Everywhere.',
+    labelClass:
+      'relative mt-2 text-xs font-semibold leading-snug text-brandPurpleDark sm:text-sm',
   },
 ];
 
@@ -51,7 +45,7 @@ export default function LandingNextTrustStrip() {
           <div className='mx-auto mt-3 h-0.5 w-16 rounded-full bg-gradient-to-r from-brandPink to-brandPurple' />
         </div>
 
-        <div className='mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4 md:gap-6 lg:mt-12'>
+        <div className='mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 justify-items-stretch gap-4 sm:grid-cols-3 sm:gap-5 md:gap-6 lg:mt-12'>
           {items.map((item) => {
             const Icon = item.Icon;
             return (
@@ -77,7 +71,12 @@ export default function LandingNextTrustStrip() {
                 >
                   {item.value}
                 </p>
-                <p className='relative mt-2 text-sm font-semibold leading-snug text-brandPurpleDark'>
+                <p
+                  className={
+                    item.labelClass ??
+                    'relative mt-2 text-sm font-semibold leading-snug text-brandPurpleDark'
+                  }
+                >
                   {item.label}
                 </p>
               </div>

@@ -1,9 +1,14 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from 'react';
 import { HiArrowRight } from 'react-icons/hi';
+import ContactFormDialog from 'sections/landing-next/contact-form-dialog';
 import { treatmentOptionsData } from 'sections/home/treatment';
 
 export default function LandingNextServicesCompact() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section
       className='relative bg-gradient-to-b from-white via-brandPink5/20 to-white py-14 sm:py-16 lg:py-20'
@@ -14,15 +19,15 @@ export default function LandingNextServicesCompact() {
 
       <div className='container relative mx-auto max-w-7xl px-4 sm:px-6'>
         <div className='mx-auto max-w-3xl text-center'>
-          <p className='text-xs font-bold uppercase tracking-[0.2em] text-brandPink'>
+          <h1 className='text-xs font-bold uppercase tracking-[0.2em] text-brandPink'>
             Clinical programmes
-          </p>
-          <h2
+          </h1>
+          <h4
             id='services-heading'
             className='mt-2 font-heading text-2xl font-bold text-brandDark sm:text-3xl lg:text-4xl'
           >
             Treatments we are known for
-          </h2>
+          </h4>
           <div className='mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brandPink to-brandPurple' />
           <p className='mt-5 text-pretty text-sm leading-relaxed text-brandDark/75 sm:text-base'>
             The same options as our main site—explore what fits your journey,
@@ -64,16 +69,18 @@ export default function LandingNextServicesCompact() {
                   </div>
                 </div>
 
-                <Link
-                  href={item.link}
+                <button
+                  type='button'
+                  onClick={() => setContactOpen(true)}
                   className='group/cta mt-auto flex w-full items-center justify-center gap-2 rounded-b-[0.9rem] border-t-2 border-brandPink4/50 bg-brandPink4 py-3 text-sm font-bold text-white transition duration-200 hover:border-brandPink hover:bg-brandPink hover:shadow-inner focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark active:scale-[0.99]'
+                  aria-haspopup='dialog'
                 >
                   <span>Learn more</span>
                   <HiArrowRight
                     className='h-4 w-4 shrink-0 transition-transform duration-200 group-hover/cta:translate-x-1'
                     aria-hidden
                   />
-                </Link>
+                </button>
               </article>
             </li>
           ))}
@@ -89,6 +96,11 @@ export default function LandingNextServicesCompact() {
           </a>
           .
         </p>
+
+        <ContactFormDialog
+          open={contactOpen}
+          onClose={() => setContactOpen(false)}
+        />
       </div>
     </section>
   );

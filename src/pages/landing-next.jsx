@@ -36,12 +36,12 @@ export default function LandingNextPage() {
       <LandingNextHeader />
       <main>
         <LandingNextHero />
+        {/* <LandingNextConsultationBlock /> */}
         <LandingNextTrustStrip />
         <LandingNextServicesCompact />
         <LandingNextDoctorsGrid />
         <LandingNextSocialProof />
         <LandingNextFaq />
-        <LandingNextConsultationBlock />
       </main>
     </div>
   );

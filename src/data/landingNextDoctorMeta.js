@@ -5,25 +5,70 @@ export const landingNextDoctorMeta = {
     locations: ['Hanumanthanagar', 'Jayanagar', 'Electronic City'],
     languages: ['English', 'Kannada', 'Hindi'],
   },
-  'Dr Priyanka Rani': {
-    experience: '10+ years in reproductive medicine',
-    locations: ['Hanumanthanagar', 'Multiple Bangalore centres'],
-    languages: ['English', 'Hindi', 'Kannada'],
-  },
   'Dr Aparna N': {
     experience: '10+ years in fertility care',
-    locations: ['Jayanagar', 'Hanumanthanagar'],
-    languages: ['English', 'Kannada', 'Tamil'],
+    locations: ['Kalyan Nagar', 'Bangalore'],
+    languages: ['English', 'Kannada', 'Hindi', 'Tamil', 'Malayalam', 'Telugu'],
   },
   'Dr Deepthi Venkatesh': {
     experience: '10+ years clinical fertility',
-    locations: ['Electronic City', 'Bangalore'],
+    locations: ['Nagarbhavi', 'Bangalore'],
     languages: ['English', 'Kannada', 'Hindi'],
   },
+  'Dr Priyanka Rani': {
+    experience: '10+ years in reproductive medicine',
+    locations: ['Electronic City', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi'],
+  },
   'Dr Shweta Ashok Harnal': {
-    experience: '10+ years in gynaecology & IVF',
-    locations: ['Nagarabhavi', 'Bangalore'],
-    languages: ['English', 'Kannada', 'Hindi'],
+    experience: '10+ years in fertility treatment',
+    locations: ['Jayanagar', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi', 'Marathi', 'Assamese'],
+  },
+  'Dr. Anusha S. M': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Yelahanka', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi'],
+  },
+  'Dr. Harshitha P': {
+    experience: 'Experienced fertility specialist',
+    locations: ['New BEL Road', 'Bangalore'],
+    languages: ['English', 'Kannada', 'Hindi', 'Telugu'],
+  },
+  'Dr. Manasa K A': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Davanagere', 'Karnataka'],
+    languages: ['English', 'Hindi', 'Kannada', 'Telugu'],
+  },
+  'Dr. P. V. Vasavi Devi': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Marathahalli', 'Bangalore'],
+    languages: ['English', 'Hindi', 'Kannada', 'Telugu'],
+  },
+  'Dr. Poornima M S': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Jayanagar', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi', 'Tamil', 'Telugu'],
+  },
+  'Dr. Radha Puchalapalli': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Hosur', 'Tamil Nadu'],
+    languages: ['Tamil', 'Telugu', 'Kannada', 'English', 'Hindi'],
+  },
+  'Dr. S R Raajam Murali': {
+    experience: '20+ years in fertility treatment',
+    locations: ['Hanumanthnagar', 'Bangalore'],
+    languages: ['English', 'Tamil', 'Kannada', 'Hindi'],
+  },
+  'Dr. Sahana K': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Nagarbhavi', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi', 'Tamil', 'Telugu', 'Marathi'],
+  },
+  'Dr. Varsha Patil': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Electronic City', 'Bangalore'],
+    languages: ['Kannada', 'English'],
   },
 };
 

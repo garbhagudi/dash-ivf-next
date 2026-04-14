@@ -7,8 +7,9 @@ import { useForm } from 'react-hook-form';
 
 /**
  * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
+ * @param {boolean} compact - tighter spacing for card variant (e.g. hero).
  */
-const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
+const FormComponent = ({ title, isTag = true, variant = 'banner', compact = false }) => {
   const router = useRouter();
   const path = usePathname();
   const pageVisit = router?.query?.pageVisit || path;
@@ -62,12 +63,19 @@ const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
     }
   };
 
-  const inputCard =
-    'w-full rounded-xl border-2 border-stone-200 bg-white px-4 py-3 text-base text-brandDark shadow-sm transition placeholder:text-stone-400 focus:border-brandPink focus:outline-none focus:ring-4 focus:ring-brandPink/15';
+  const inputCard = compact
+    ? 'w-full rounded-lg border-2 border-stone-200 bg-white px-3 py-2 text-sm text-brandDark transition placeholder:text-stone-400 focus:border-brandPink focus:outline-none focus:ring-2 focus:ring-brandPink/15'
+    : 'w-full rounded-xl border-2 border-stone-200 bg-white px-4 py-3 text-base text-brandDark shadow-sm transition placeholder:text-stone-400 focus:border-brandPink focus:outline-none focus:ring-4 focus:ring-brandPink/15';
+
+  const labelClass = compact
+    ? 'block text-xs font-semibold text-brandPurpleDark'
+    : 'block text-sm font-semibold text-brandPurpleDark';
 
   if (variant === 'card') {
     return (
-      <div className='crmWebToEntityForm mx-auto w-full max-w-md'>
+      <div
+        className={`crmWebToEntityForm mx-auto w-full ${compact ? 'max-w-full' : 'max-w-md'}`}
+      >
         {isTag && (
           <div className='flex justify-center'>
             <div className='mb-4 w-fit rounded-lg bg-brandPink5 px-3 py-1 text-center text-sm font-semibold text-brandPurpleDark'>
@@ -75,18 +83,18 @@ const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
             </div>
           </div>
         )}
-        <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className={compact ? 'space-y-3' : 'space-y-5'}
+        >
           {title ? (
             <h3 className='text-center font-heading text-lg font-bold text-brandPurpleDark sm:text-xl'>
               {title}
             </h3>
           ) : null}
 
-          <div className='relative space-y-1'>
-            <label
-              htmlFor='Last_Name'
-              className='block text-sm font-semibold text-brandPurpleDark'
-            >
+          <div className='relative space-y-0.5'>
+            <label htmlFor='Last_Name' className={labelClass}>
               Full name
             </label>
             <input
@@ -106,11 +114,8 @@ const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
             )}
           </div>
 
-          <div className='relative space-y-1'>
-            <label
-              htmlFor='Phone'
-              className='block text-sm font-semibold text-brandPurpleDark'
-            >
+          <div className='relative space-y-0.5'>
+            <label htmlFor='Phone' className={labelClass}>
               Phone
             </label>
             <input
@@ -135,11 +140,8 @@ const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
             )}
           </div>
 
-          <div className='relative space-y-1'>
-            <label
-              htmlFor='Email'
-              className='block text-sm font-semibold text-brandPurpleDark'
-            >
+          <div className='relative space-y-0.5'>
+            <label htmlFor='Email' className={labelClass}>
               Email
             </label>
             <input
@@ -163,10 +165,14 @@ const FormComponent = ({ title, isTag = true, variant = 'banner' }) => {
             )}
           </div>
 
-          <div className='pt-2'>
+          <div className={compact ? 'pt-1' : 'pt-2'}>
             <button
               type='submit'
-              className='flex w-full items-center justify-center gap-2 rounded-xl bg-brandPink px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-brandPink/25 transition hover:bg-brandPink2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-70'
+              className={
+                compact
+                  ? 'flex w-full items-center justify-center gap-2 rounded-lg bg-brandPink px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brandPink2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-70'
+                  : 'flex w-full items-center justify-center gap-2 rounded-xl bg-brandPink px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-brandPink/25 transition hover:bg-brandPink2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-70'
+              }
               disabled={load}
             >
               Get a Call Back
