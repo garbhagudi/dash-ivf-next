@@ -1,9 +1,37 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+
+function firstZohoRow(responseData) {
+  const d = responseData?.data;
+  if (Array.isArray(d)) return d[0];
+  if (d && typeof d === 'object') return d;
+  return null;
+}
+
+const ZOHO_LEAD_FAIL_CODES = new Set([
+  'INVALID_DATA',
+  'MANDATORY_NOT_FOUND',
+  'INVALID_TOKEN',
+  'OAUTH_SCOPE_MISMATCH',
+  'LIMIT_EXCEEDED',
+  'INTERNAL_ERROR',
+  'RECORD_NOT_FOUND',
+  'ERROR',
+]);
+
+function isZohoLeadSuccess(responseData) {
+  const row = firstZohoRow(responseData);
+  if (!row) return false;
+  const codeNorm = String(row.code ?? '').toUpperCase();
+  if (ZOHO_LEAD_FAIL_CODES.has(codeNorm)) return false;
+  if (codeNorm === 'SUCCESS' || codeNorm === 'DUPLICATE_DATA') return true;
+  if (row.status === 'success') return true;
+  if (row.details?.id) return true;
+  return false;
+}
 
 /**
  * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
@@ -13,8 +41,8 @@ const FormComponent = (props) => {
   const { title, isTag = true, variant = 'banner' } = props;
   const compact = props.compact === true;
   const router = useRouter();
-  const path = usePathname();
-  const pageVisit = router?.query?.pageVisit || path;
+  const pathForVisit = router?.query?.pageVisit || router.asPath || '/';
+  const pageVisit = pathForVisit;
   const utmCampaign = router.query?.utm_campaign || '';
   const {
     register,
@@ -52,16 +80,30 @@ const FormComponent = (props) => {
         body: JSON.stringify({ data }),
       });
 
-      const responseData = await response.json();
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      let responseData = null;
+      try {
+        responseData = await response.json();
+      } catch {
+        responseData = null;
       }
-      setLoad(false);
-      responseData?.data[0]?.code === 'SUCCESS' &&
-        router.push('/thank-you.html');
+
+      if (!response.ok) {
+        throw new Error(
+          responseData?.error || 'Network response was not ok',
+        );
+      }
+
+      if (isZohoLeadSuccess(responseData)) {
+        // Full navigation so static `public/thank-you.html` always loads (Pages router).
+        window.location.assign('/thank-you.html');
+        return;
+      }
+
+      console.warn('Lead API returned 200 but Zoho payload was not success', responseData);
     } catch (err) {
+      console.error(err);
+    } finally {
       setLoad(false);
-      console.log(err);
     }
   };
 
