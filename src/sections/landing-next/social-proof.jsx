@@ -31,16 +31,6 @@ const LiteYouTubeEmbed = dynamic(
   },
 );
 
-const languages = [
-  { id: 'all', label: 'All' },
-  { id: 'en', label: 'English' },
-  { id: 'kn', label: 'Kannada' },
-  { id: 'hi', label: 'Hindi' },
-  { id: 'ta', label: 'Tamil' },
-  { id: 'te', label: 'Telugu' },
-  { id: 'ml', label: 'Malayalam' },
-];
-
 const stories = [
   {
     id: 1,
@@ -138,14 +128,22 @@ function ReviewAvatar({ name }) {
 const navBtnClass =
   'flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/80 bg-brandPink text-white shadow-lg transition hover:border-white hover:bg-brandPink2 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-40 sm:h-11 sm:w-11';
 
+const videoTabLanguages = [
+  { id: 'all', label: 'All' },
+  ...testimonialVideosByLanguage.map((v) => ({
+    id: v.lang,
+    label: v.label,
+  })),
+];
+
 export default function LandingNextSocialProof() {
-  const [lang, setLang] = useState('all');
+  const [videoLang, setVideoLang] = useState('all');
   const swiperRef = useRef();
 
-  const filtered = useMemo(() => {
-    if (lang === 'all') return stories;
-    return stories.filter((s) => s.language === lang);
-  }, [lang]);
+  const filteredVideos = useMemo(() => {
+    if (videoLang === 'all') return testimonialVideosByLanguage;
+    return testimonialVideosByLanguage.filter((v) => v.lang === videoLang);
+  }, [videoLang]);
 
   return (
     <section
@@ -189,46 +187,8 @@ export default function LandingNextSocialProof() {
           </p>
         </div>
 
-        <div className='relative -mx-4 mt-10 sm:mx-0'>
-          <div
-            className='flex snap-x snap-mandatory flex-nowrap gap-2 overflow-x-auto px-4 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] sm:snap-none sm:flex-wrap sm:justify-center sm:overflow-x-visible sm:px-0 sm:pb-0'
-            role='tablist'
-            aria-label='Filter stories by language'
-          >
-            {languages.map((l) => (
-              <button
-                key={l.id}
-                type='button'
-                role='tab'
-                aria-selected={lang === l.id}
-                onClick={() => setLang(l.id)}
-                className={`shrink-0 snap-start rounded-full px-4 py-2.5 text-sm font-semibold shadow-sm transition ${
-                  lang === l.id
-                    ? 'bg-brandPink text-white shadow-md ring-2 ring-brandPurpleDark/25'
-                    : 'bg-white/95 text-brandDark ring-1 ring-brandPink4/60 hover:bg-pink-50 hover:ring-brandPink'
-                }`}
-              >
-                {l.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <div className='relative mx-auto mt-12 max-w-3xl lg:max-w-4xl'>
-          {filtered.length === 0 ? (
-            <p className='rounded-2xl border border-dashed border-brandPurple/40 bg-white/80 py-12 text-center text-sm font-medium text-brandPurpleDark'>
-              Patient stories in this language are coming soon. Try{' '}
-              <button
-                type='button'
-                className='font-bold text-brandPink underline'
-                onClick={() => setLang('all')}
-              >
-                All
-              </button>
-              .
-            </p>
-          ) : (
-            <div className='relative min-w-0 lg:px-12'>
+          <div className='relative min-w-0 lg:px-12'>
               <button
                 type='button'
                 onClick={() => swiperRef.current?.slidePrev()}
@@ -245,15 +205,15 @@ export default function LandingNextSocialProof() {
                 }}
                 spaceBetween={20}
                 slidesPerView={1}
-                loop={filtered.length > 1}
-                key={lang}
+                loop={stories.length > 1}
+                key='all-stories'
                 pagination={{
                   clickable: true,
-                  dynamicBullets: filtered.length > 3,
+                  dynamicBullets: stories.length > 3,
                 }}
                 className='reviews-swiper relative z-0 !pb-12 [&_.swiper-pagination-bullet]:h-2.5 [&_.swiper-pagination-bullet]:w-2.5 [&_.swiper-pagination-bullet]:bg-brandPink4/60 [&_.swiper-pagination-bullet-active]:!w-6 [&_.swiper-pagination-bullet-active]:!rounded-full [&_.swiper-pagination-bullet-active]:!bg-brandPink'
               >
-                {filtered.map((item) => (
+                {stories.map((item) => (
                   <SwiperSlide key={item.id}>
                     <blockquote className='mx-auto max-w-2xl rounded-2xl border-2 border-white/90 bg-white/95 p-6 text-center shadow-xl shadow-brandPurple/10 ring-1 ring-brandPink4/30 sm:p-8 sm:text-left lg:p-10'>
                       <div className='flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-8'>
@@ -297,7 +257,6 @@ export default function LandingNextSocialProof() {
                 <HiChevronRight className='text-2xl' />
               </button>
             </div>
-          )}
         </div>
 
         <div className='mx-auto mt-16 w-full max-w-6xl border-t border-brandPink4/40 pt-14'>
@@ -309,12 +268,35 @@ export default function LandingNextSocialProof() {
             <span className='font-semibold text-brandPurpleDark'>
               GarbhaGudi IVF Centre on YouTube
             </span>
-            . The Telugu story is in Telugu; other languages will show English
-            clips from the same channel until dedicated regional videos are
-            added.
+            . Use the tabs to focus on one language, or All to browse every
+            clip below.
           </p>
+          <div className='relative -mx-4 mt-8 sm:mx-0'>
+            <div
+              className='flex snap-x snap-mandatory flex-nowrap gap-2 overflow-x-auto px-4 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] sm:snap-none sm:flex-wrap sm:justify-center sm:overflow-x-visible sm:px-0 sm:pb-0'
+              role='tablist'
+              aria-label='Filter video testimonials by language'
+            >
+              {videoTabLanguages.map((l) => (
+                <button
+                  key={l.id}
+                  type='button'
+                  role='tab'
+                  aria-selected={videoLang === l.id}
+                  onClick={() => setVideoLang(l.id)}
+                  className={`shrink-0 snap-start rounded-full px-4 py-2.5 text-sm font-semibold shadow-sm transition ${
+                    videoLang === l.id
+                      ? 'bg-brandPink text-white shadow-md ring-2 ring-brandPurpleDark/25'
+                      : 'bg-white/95 text-brandDark ring-1 ring-brandPink4/60 hover:bg-pink-50 hover:ring-brandPink'
+                  }`}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className='mt-10 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6'>
-            {testimonialVideosByLanguage.map((v) => (
+            {filteredVideos.map((v) => (
               <figure
                 key={v.lang}
                 className='flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-brandPink4/60 bg-white shadow-lg shadow-brandPurple/10 ring-1 ring-white/80 transition hover:border-brandPink hover:shadow-xl'

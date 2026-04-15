@@ -36,10 +36,14 @@ function isZohoLeadSuccess(responseData) {
 /**
  * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
  * @param {boolean} [compact] - tighter spacing for card variant (e.g. hero).
+ * @param {string} [submitLabel] - card variant submit button text (defaults to &quot;Get a Call Back&quot;).
+ * @param {boolean} [fieldsInRow] - card variant: stack fields on small screens, one row from md up.
  */
 const FormComponent = (props) => {
-  const { title, isTag = true, variant = 'banner' } = props;
+  const { title, isTag = true, variant = 'banner', submitLabel } = props;
+  const submitText = submitLabel ?? 'Get a Call Back';
   const compact = props.compact === true;
+  const fieldsInRow = props.fieldsInRow === true;
   const router = useRouter();
   const pathForVisit = router?.query?.pageVisit || router.asPath || '/';
   const pageVisit = pathForVisit;
@@ -116,9 +120,18 @@ const FormComponent = (props) => {
     : 'block text-sm font-semibold text-brandPurpleDark';
 
   if (variant === 'card') {
+    const fieldWrap =
+      fieldsInRow && !compact
+        ? 'relative min-w-0 space-y-0.5 md:flex-1'
+        : 'relative space-y-0.5';
+    const fieldsRowClass =
+      fieldsInRow && !compact
+        ? 'flex flex-col gap-4 md:flex-row md:items-start md:gap-3 lg:gap-4'
+        : 'space-y-5';
+
     return (
       <div
-        className={`crmWebToEntityForm mx-auto w-full ${compact ? 'max-w-full' : 'max-w-md'}`}
+        className={`crmWebToEntityForm mx-auto w-full ${compact ? 'max-w-full' : fieldsInRow ? 'max-w-full' : 'max-w-md'}`}
       >
         {isTag && (
           <div className='flex justify-center'>
@@ -129,7 +142,13 @@ const FormComponent = (props) => {
         )}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className={compact ? 'space-y-3' : 'space-y-5'}
+          className={
+            compact
+              ? 'space-y-3'
+              : fieldsInRow
+                ? 'space-y-4 md:space-y-5'
+                : 'space-y-5'
+          }
         >
           {title ? (
             <h3 className='text-center font-heading text-lg font-bold text-brandPurpleDark sm:text-xl'>
@@ -137,7 +156,8 @@ const FormComponent = (props) => {
             </h3>
           ) : null}
 
-          <div className='relative space-y-0.5'>
+          <div className={fieldsInRow && !compact ? fieldsRowClass : 'space-y-5'}>
+          <div className={fieldWrap}>
             <label htmlFor='Last_Name' className={labelClass}>
               Full name
             </label>
@@ -158,7 +178,7 @@ const FormComponent = (props) => {
             )}
           </div>
 
-          <div className='relative space-y-0.5'>
+          <div className={fieldWrap}>
             <label htmlFor='Phone' className={labelClass}>
               Phone
             </label>
@@ -184,7 +204,7 @@ const FormComponent = (props) => {
             )}
           </div>
 
-          <div className='relative space-y-0.5'>
+          <div className={fieldWrap}>
             <label htmlFor='Email' className={labelClass}>
               Email
             </label>
@@ -208,6 +228,7 @@ const FormComponent = (props) => {
               </p>
             )}
           </div>
+          </div>
 
           <div className={compact ? 'pt-1' : 'pt-2'}>
             <button
@@ -219,7 +240,7 @@ const FormComponent = (props) => {
               }
               disabled={load}
             >
-              Get a Call Back
+              {submitText}
               {load && (
                 <svg
                   width={22}

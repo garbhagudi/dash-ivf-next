@@ -1,5 +1,21 @@
+import dynamic from 'next/dynamic';
 import { HiArrowRight } from 'react-icons/hi';
-import LandingNextHeroConsultationForm from 'sections/landing-next/hero-consultation-form';
+import { GARBHAGUDI_YOUTUBE_CHANNEL } from 'data/garbhagudiTestimonialVideos';
+import {
+  landingNextHeroYoutubeTitle,
+  landingNextHeroYoutubeVideoId,
+} from 'data/landingNextHeroVideo';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
+const LiteYouTubeEmbed = dynamic(() => import('react-lite-youtube-embed'), {
+  ssr: false,
+  loading: () => (
+    <div
+      className='aspect-video w-full rounded-xl bg-brandPink5/50'
+      aria-hidden
+    />
+  ),
+});
 
 export default function LandingNextHero() {
   return (
@@ -8,8 +24,7 @@ export default function LandingNextHero() {
 
       <div className='relative mx-auto max-w-6xl px-4 py-8 sm:px-5 sm:py-9 lg:grid lg:grid-cols-2 lg:items-start lg:gap-8 lg:py-10'>
         <div>
-
-          <h1 className='mt-3 font-heading text-2xl font-bold leading-snug text-brandDark sm:mt-4 sm:text-3xl lg:text-[1.95rem] lg:leading-tight'>
+          <h1 className='font-heading text-2xl font-bold leading-snug text-brandDark sm:text-3xl lg:text-[1.95rem] lg:leading-tight'>
             From Infertility Struggles to Successful Pregnancy
           </h1>
           <div className='mt-3 h-0.5 w-14 rounded-full bg-gradient-to-r from-brandPink via-brandPurple to-brandPurpleDark' />
@@ -20,47 +35,35 @@ export default function LandingNextHero() {
 
           <div className='mt-5'>
             <a
-              href='#hero-consultation'
+              href='#consultation'
               className='inline-flex items-center justify-center gap-1.5 rounded-lg bg-brandPink px-5 py-2.5 text-xs font-bold text-white transition hover:bg-brandPink2 sm:text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark'
             >
-              Book a free fertility consultation
+              Book a consultation now
               <HiArrowRight className='h-3.5 w-3.5 sm:h-4 sm:w-4' aria-hidden />
             </a>
           </div>
         </div>
 
-        <div
-          id='hero-consultation'
-          className='mx-auto mt-8 w-full max-w-[22rem] scroll-mt-20 sm:max-w-sm lg:mt-0 lg:max-w-none'
-        >
-          <div className='rounded-xl border border-brandPink4/60 bg-white px-4 py-4 sm:px-5 sm:py-4'>
-            <div className='border-b border-brandPink5 pb-3 text-center sm:text-left'>
-              <p className='text-[10px] font-bold uppercase tracking-wider text-brandPink sm:text-xs'>
-                GarbhaGudi IVF
-              </p>
-              <h3 className='mt-0.5 font-heading text-base font-bold text-brandPurpleDark sm:text-lg'>
-                Book your consultation
-              </h3>
-              <p className='mt-1.5 text-xs leading-snug text-brandDark/80 sm:text-sm'>
-                Share a few details and we will coordinate a call. Offers after you are
-                comfortable with clinical fit.
-              </p>
-            </div>
-
-            <div className='mt-3'>
-              <LandingNextHeroConsultationForm />
-            </div>
-
-            <p className='mt-3 text-center text-[11px] text-brandDark/70 sm:text-left'>
-              Prefer calling?{' '}
-              <a
-                href='tel:+919108910832'
-                className='font-semibold text-brandPink underline underline-offset-2 hover:text-brandPink2'
-              >
-                +91 9108 9108 32
-              </a>
-            </p>
-          </div>
+        <div className='mx-auto mt-8 w-full max-w-lg lg:mt-0 lg:max-w-none'>
+          <figure className='overflow-hidden rounded-xl border border-brandPink4/60 bg-black ring-1 ring-brandPink5/40'>
+            <LiteYouTubeEmbed
+              id={landingNextHeroYoutubeVideoId}
+              title={landingNextHeroYoutubeTitle}
+              poster='maxresdefault'
+              params='rel=0'
+              wrapperClass='yt-lite w-full [&_.lty-playbtn]:!border-[#ea4b6a] [&_.lty-playbtn]:!bg-brandPink/95 [&_iframe]:rounded-none'
+            />
+          </figure>
+          <p className='mt-3 text-center text-[11px] text-brandDark/70 sm:text-left'>
+            <a
+              href={GARBHAGUDI_YOUTUBE_CHANNEL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='font-semibold text-brandPink underline underline-offset-2 hover:text-brandPink2'
+            >
+              More videos on our YouTube channel
+            </a>
+          </p>
         </div>
       </div>
     </section>

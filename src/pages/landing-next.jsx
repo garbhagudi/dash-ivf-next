@@ -7,7 +7,8 @@ import LandingNextServicesCompact from 'sections/landing-next/services-compact';
 import LandingNextDoctorsGrid from 'sections/landing-next/doctors-grid';
 import LandingNextSocialProof from 'sections/landing-next/social-proof';
 import LandingNextFaq from 'sections/landing-next/faq';
-import LandingNextConsultationBlock from 'sections/landing-next/consultation-block';
+import LandingNextConsultationFormSection from 'sections/landing-next/consultation-form-section';
+import LandingNextConsultationOfferSection from 'sections/landing-next/consultation-offer-section';
 
 const Head = dynamic(() => import('next/head'));
 
@@ -36,12 +37,13 @@ export default function LandingNextPage() {
       <LandingNextHeader />
       <main>
         <LandingNextHero />
-        {/* <LandingNextConsultationBlock /> */}
+        <LandingNextConsultationFormSection />
         <LandingNextTrustStrip />
         <LandingNextServicesCompact />
         <LandingNextDoctorsGrid />
         <LandingNextSocialProof />
         <LandingNextFaq />
+        <LandingNextConsultationOfferSection />
       </main>
     </div>
   );

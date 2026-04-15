@@ -3,9 +3,8 @@ export const GARBHAGUDI_YOUTUBE_CHANNEL =
   'https://www.youtube.com/@GarbhaGudiIVFCentre';
 
 /**
- * GarbhaGudi IVF Centre patient stories on YouTube, mapped to language chips on the landing page.
- * `UjZ7APf5EbE` is a Telugu-titled upload; the rest are English-language clips from the same channel
- * until marketing publishes Kannada / Hindi / Tamil / Malayalam-specific edits (swap `videoId` then).
+ * GarbhaGudi IVF Centre patient stories on YouTube. Each row becomes one card
+ * and one language tab on the landing-next social proof section.
  */
 export const testimonialVideosByLanguage = [
   {
