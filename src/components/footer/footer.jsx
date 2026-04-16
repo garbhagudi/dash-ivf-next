@@ -1,6 +1,7 @@
 import { Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 const WidgetAbout = dynamic(
   () => import('./widget').then((mod) => mod.WidgetAbout),
@@ -13,9 +14,24 @@ const WidgetInfo = dynamic(
 import { about, information } from './footer.data';
 
 export default function Footer() {
+  const router = useRouter();
+  const isLandingNext = router.pathname === '/landing-next';
+
   return (
     <div className='bg-white'>
-      <Box as='footer' sx={styles.footer}>
+      <Box
+        as='footer'
+        sx={{
+          ...styles.footer,
+          ...(isLandingNext
+            ? {
+                /* Tighter band above footer on mobile landing (less empty scroll). */
+                pt: [3, null, null, 8, 8, 8],
+                pb: [5, null, null, 8, 8, 8],
+              }
+            : {}),
+        }}
+      >
         <Container>
           <Box sx={styles.footerTopInner}>
             <Box sx={styles.about}>

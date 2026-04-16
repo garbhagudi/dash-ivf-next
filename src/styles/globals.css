@@ -14,6 +14,22 @@
   }
 }
 
+/* /landing-next: SalesIQ launcher — fixed 100px bottom on small screens (matches Zoho .siq_bR chip) */
+@media (max-width: 767px) {
+  html.landing-next .zsiq_floatmain.siq_bR,
+  html.landing-next #zsiq_float,
+  html.landing-next #zsiq_floatwindow,
+  html.landing-next #zsiq_float_window,
+  html.landing-next #zsiqwidget iframe[src*='salesiq'],
+  html.landing-next #zsiqwidget iframe[src*='zoho'],
+  html.landing-next #zsiqwidget iframe[src*='zsiq'],
+  html.landing-next body > iframe[src*='salesiq'],
+  html.landing-next body > iframe[src*='zoho'],
+  html.landing-next body > iframe[src*='zsiq'] {
+    bottom: 100px !important;
+  }
+}
+
 /* .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
