@@ -45,6 +45,17 @@ export default function LandingNextZohoFormEmbed({
     f.setAttribute('aria-label', title);
     d.appendChild(f);
 
+    const patchIframeUtm = () => {
+      try {
+        window.zfutm_zfAdvLead?.zfautm_iframeSprt?.();
+      } catch {
+        /* ZFAdvLead loads via /zoho-forms/zf-zfadvlead-utm.js on landing-next */
+      }
+    };
+    patchIframeUtm();
+    window.setTimeout(patchIframeUtm, 0);
+    window.setTimeout(patchIframeUtm, 300);
+
     const onMessage = (event) => {
       const evntData = event.data;
       if (!evntData || typeof evntData !== 'string') return;

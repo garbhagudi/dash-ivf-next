@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import { useEffect, useLayoutEffect } from 'react';
 import LandingNextHeader from 'components/landing-next-header';
 import LandingNextHero from 'sections/landing-next/hero';
@@ -31,6 +32,11 @@ export default function LandingNextPage() {
 
   return (
     <div className='bg-gradient-to-b from-white via-brandPink5/20 to-white md:min-h-screen'>
+      <Script
+        id='gg-zoho-zfadvlead-utm'
+        src='/zoho-forms/zf-zfadvlead-utm.js'
+        strategy='beforeInteractive'
+      />
       <Head>
         <title>
           GarbhaGudi IVF | Fertility consultation (new experience)
