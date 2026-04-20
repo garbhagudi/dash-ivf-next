@@ -1,6 +1,7 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import LandingNextZohoFormEmbed from 'components/landing-next-zoho-form-embed';
+import { landingNextZohoFormEmbedSrc } from 'data/landingNextZohoForm';
 import {
   Dialog,
   DialogPanel,
@@ -8,16 +9,8 @@ import {
   TransitionChild,
 } from '@headlessui/react';
 import { HiX } from 'react-icons/hi';
-import { useEffect, useState } from 'react';
-
-const FormComponent = dynamic(() => import('components/formComp'), {
-  ssr: true,
-});
 
 export default function ContactFormDialog({ open, onClose }) {
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => setIsClient(true), []);
-
   return (
     <Transition appear show={open} as='div'>
       <Dialog as='div' className='relative z-[100]' onClose={onClose}>
@@ -72,15 +65,13 @@ export default function ContactFormDialog({ open, onClose }) {
                 </button>
               </div>
 
-              <div className='min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 sm:px-6 sm:py-6'>
-                {isClient ? (
-                  <FormComponent variant='card' isTag={false} />
-                ) : (
-                  <div
-                    className='mx-auto h-40 max-w-md animate-pulse rounded-xl bg-stone-100'
-                    aria-hidden
-                  />
-                )}
+              <div className='min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3 sm:px-4 sm:py-4'>
+                <LandingNextZohoFormEmbed
+                  variant='dialog'
+                  embedSrc={landingNextZohoFormEmbedSrc}
+                  title='Contact us — GarbhaGudi IVF'
+                  minHeightClass='min-h-[240px] sm:min-h-[260px]'
+                />
               </div>
             </DialogPanel>
           </TransitionChild>

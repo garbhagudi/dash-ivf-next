@@ -1,14 +1,7 @@
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
-
-const FormComponent = dynamic(() => import('components/formComp'), {
-  ssr: true,
-});
+import LandingNextZohoFormEmbed from 'components/landing-next-zoho-form-embed';
+import { landingNextZohoFormEmbedSrc } from 'data/landingNextZohoForm';
 
 export default function LandingNextConsultationFormSection() {
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => setIsClient(true), []);
-
   return (
     <section
       className='relative scroll-mt-24 border-y border-brandPink4/30 bg-gradient-to-b from-white via-brandPink5/25 to-purple-100/50 py-12 text-brandDark sm:scroll-mt-28 sm:py-14 lg:py-16'
@@ -38,16 +31,13 @@ export default function LandingNextConsultationFormSection() {
 
         <div
           id='consultation-form'
-          className='mx-auto mt-10 max-w-md scroll-mt-28 rounded-2xl border border-brandPink4/50 bg-white px-6 py-8 sm:px-8 sm:py-9 md:max-w-4xl lg:max-w-5xl'
+          className='mx-auto mt-8 max-w-md scroll-mt-28 rounded-2xl border border-brandPink4/50 bg-white px-2 py-3 sm:mt-10 sm:px-4 sm:py-4 md:max-w-4xl lg:max-w-5xl'
         >
-          {isClient ? (
-            <FormComponent
-              variant='card'
-              isTag={false}
-              fieldsInRow
-              submitLabel='Book your Consultation now'
-            />
-          ) : null}
+          <LandingNextZohoFormEmbed
+            embedSrc={landingNextZohoFormEmbedSrc}
+            title='Book a consultation — GarbhaGudi IVF'
+            minHeightClass='min-h-[260px] sm:min-h-[280px]'
+          />
         </div>
 
         <p className='mx-auto mt-8 max-w-xl text-center text-sm text-brandPurpleDark'>
