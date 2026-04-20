@@ -1,4 +1,5 @@
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { featuredCarouselVideoIds } from 'data/garbhagudiTestimonialVideos';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { MdOutlineSwipeLeft } from 'react-icons/md';
@@ -49,15 +50,15 @@ const Video = () => {
               </button>
             )}
           >
-            {testimonials?.map((item) => {
+            {featuredCarouselVideoIds.map((videoId, index) => {
               return (
                 <div
                   className='mx-auto mt-8 aspect-video w-screen max-w-xs overflow-hidden rounded-lg border border-transparent sm:max-w-sm sm:px-0 md:max-w-md lg:max-w-3xl'
-                  key={item?.id}
+                  key={videoId}
                 >
                   <LiteYouTubeEmbed
-                    id={item?.videoId}
-                    title='GarbhaGudi IVF Center Youtube video'
+                    id={videoId}
+                    title={`GarbhaGudi IVF Centre patient story ${index + 1}`}
                     poster='maxresdefault'
                   />
                 </div>
@@ -74,22 +75,3 @@ const Video = () => {
 };
 
 export default Video;
-
-const testimonials = [
-  {
-    id: 1,
-    videoId: 'cPPnXU9fB_0',
-  },
-  {
-    id: 2,
-    videoId: 'UjZ7APf5EbE',
-  },
-  {
-    id: 3,
-    videoId: 'I2KHjfiVKn0',
-  },
-  {
-    id: 4,
-    videoId: 'tXsmr-fnuV4',
-  },
-];

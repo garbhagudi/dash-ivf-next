@@ -67,6 +67,10 @@ const dmSans = DM_Sans({
 });
 
 const SalesIQ = dynamic(() => import('components/SalesIQ'), { ssr: false });
+const SalesIQLandingNext = dynamic(
+  () => import('components/SalesIQLandingNext'),
+  { ssr: false },
+);
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
   ssr: false,
 });
@@ -76,14 +80,16 @@ const Footer = dynamic(() => import('components/footer/footer'), {
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const isLandingNext = router.pathname === '/landing-next';
 
   return (
     <ThemeUIProvider theme={theme}>
       <Flex
         sx={{
-          minHeight: '100vh',
+          /* landing-next: avoid a tall empty band between page and site footer (space-between + short main). */
+          minHeight: isLandingNext ? 'auto' : '100vh',
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          justifyContent: isLandingNext ? 'flex-start' : 'space-between',
         }}
         className={dmSans.className}
         data-viewport-dxr=''
@@ -121,12 +127,22 @@ function MyApp({ Component, pageProps }) {
             `,
           }}
         />
-        <main sx={{ variant: 'layout.main' }}>
+        <main
+          sx={{
+            variant: 'layout.main',
+            /* Prevent flex column from leaving a tall empty strip before <Footer> on short pages. */
+            ...(isLandingNext
+              ? { flex: '0 0 auto', flexGrow: 0, minHeight: 0 }
+              : {}),
+          }}
+        >
           <Component {...pageProps} />
         </main>
 
-        <FloatPhone />
-        {router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
+        {router.pathname !== '/landing-next' && <FloatPhone />}
+        {router.pathname === '/landing-next' && <SalesIQLandingNext />}
+        {router.pathname !== '/landing-next' &&
+          router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
         <Footer />
       </Flex>
     </ThemeUIProvider>

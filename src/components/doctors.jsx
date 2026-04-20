@@ -2,7 +2,7 @@ export const doctors = [
   {
     name: 'Dr Asha S Vijay',
     qualification: 'MBBS, DNB(OBG), DGO, PGD-RM&E',
-    designation: 'Medical Director - GarbhaGudi',
+    designation: 'Medical Director – GarbhaGudi',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/kTm169VTeyEFTwGhYTSQ',
     },
@@ -424,7 +424,7 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr. S R Raajam Murali ',
+    name: 'Dr. S R Raajam Murali',
     qualification: 'MBBS MD FRM',
     designation: 'Senior Fertility Specialist & Cluster Clinician South',
     image: {
@@ -872,9 +872,9 @@ export const doctors = [
   },
 
   {
-    name: 'Dr Deepthi Venkatesh ',
+    name: 'Dr Deepthi Venkatesh',
     qualification: 'MBBS, MS(OBG), FRM',
-    designation: 'Fertility Specialist ',
+    designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmgrl937z0o3407pnmu6gj612',
     },
@@ -1515,7 +1515,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Sahana K',
-    qualification: 'MBBS, MS (OBG), DNB(OBG), FRM',
+    qualification: 'MBBS, MS (OBG), DNB (OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/sbq78oflRTqsc65HoRic',
@@ -1615,7 +1615,7 @@ export const doctors = [
   {
     name: 'Dr. Poornima M S',
     qualification: 'MBBS, MS (OBG), FRM, FMAS',
-    designation: 'Fertility Specialist ',
+    designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme71es9505cx07pibxq41o0c',
     },
@@ -2068,7 +2068,7 @@ export const doctors = [
   },
   {
     name: 'Dr. P. V. Vasavi Devi',
-    qualification: 'MBBS, DGO, FRM, FMAS ',
+    qualification: 'MBBS, DGO, FRM, FMAS',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmdycqzy60qj607pextxqewbq',
@@ -3394,7 +3394,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Harshitha P',
-    qualification: 'MBBS, MS (OBG), DNB,  FRM',
+    qualification: 'MBBS, MS (OBG), DNB, FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme74104o06r107pfss7ag45e',
@@ -3850,7 +3850,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Radha Puchalapalli',
-    qualification: 'Obstetrics, Gynecology & Reproductive Medicine',
+    qualification: 'MBBS, DGO, FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmfc7r9gn1m6908o7dr61m4b2',
