@@ -1,7 +1,6 @@
 'use client';
 
-import LandingNextZohoFormEmbed from 'components/landing-next-zoho-form-embed';
-import { landingNextZohoFormEmbedSrc } from 'data/landingNextZohoForm';
+import LandingNextZohoHtmlForm from 'components/landing-next-zoho-html-form';
 import {
   Dialog,
   DialogPanel,
@@ -66,12 +65,7 @@ export default function ContactFormDialog({ open, onClose }) {
               </div>
 
               <div className='min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3 sm:px-4 sm:py-4'>
-                <LandingNextZohoFormEmbed
-                  variant='dialog'
-                  embedSrc={landingNextZohoFormEmbedSrc}
-                  title='Contact us — GarbhaGudi IVF'
-                  minHeightClass='min-h-[240px] sm:min-h-[260px]'
-                />
+                <LandingNextZohoHtmlForm variant='dialog' />
               </div>
             </DialogPanel>
           </TransitionChild>

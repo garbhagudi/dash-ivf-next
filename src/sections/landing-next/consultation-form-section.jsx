@@ -1,5 +1,4 @@
-import LandingNextZohoFormEmbed from 'components/landing-next-zoho-form-embed';
-import { landingNextZohoFormEmbedSrc } from 'data/landingNextZohoForm';
+import LandingNextZohoHtmlForm from 'components/landing-next-zoho-html-form';
 
 export default function LandingNextConsultationFormSection() {
   return (
@@ -31,13 +30,9 @@ export default function LandingNextConsultationFormSection() {
 
         <div
           id='consultation-form'
-          className='mx-auto mt-8 max-w-md scroll-mt-28 rounded-2xl border border-brandPink4/50 bg-white px-2 py-3 sm:mt-10 sm:px-4 sm:py-4 md:max-w-4xl lg:max-w-5xl'
+          className='mx-auto mt-8 max-w-md scroll-mt-28 px-2 py-3 sm:mt-10 sm:px-4 sm:py-4 md:max-w-5xl lg:max-w-6xl'
         >
-          <LandingNextZohoFormEmbed
-            embedSrc={landingNextZohoFormEmbedSrc}
-            title='Book a consultation — GarbhaGudi IVF'
-            minHeightClass='min-h-[260px] sm:min-h-[280px]'
-          />
+          <LandingNextZohoHtmlForm variant='section' />
         </div>
 
         <p className='mx-auto mt-8 max-w-xl text-center text-sm text-brandPurpleDark'>

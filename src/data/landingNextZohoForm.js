@@ -1,13 +1,17 @@
 /**
- * Zoho Forms permalink for `/landing-next` (Share → Embed → iframe `src`).
- * Must include `formperma/…`, or set `NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_PERMA`.
+ * Zoho Forms native HTML POST target for "Book your Consultation" on `/landing-next`.
+ * Copy the `action` URL from Zoho Share → Embed → HTML/CSS (form tag).
+ *
+ * Optional: `NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_REDIRECT_URL` — absolute URL after
+ * submit (defaults to current origin + `/thank-you.html`).
  */
-export const landingNextZohoFormEmbedSrc =
-  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_EMBED_SRC?.trim() || '';
+const DEFAULT_ACTION =
+  'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/GG/formperma/KmrIM1SMpY6gHfnIViilsu7uT_rBS3EbvFfnCqaLSX0/htmlRecords/submit';
 
-export function getZohoFormPermaFromEmbedSrc(embedSrc) {
-  const override = process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_PERMA?.trim();
-  if (override) return override;
-  const m = String(embedSrc || '').match(/formperma\/([^/?#&]+)/i);
-  return m ? m[1] : '';
-}
+export const landingNextZohoFormActionUrl =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_ACTION_URL?.trim() ||
+  DEFAULT_ACTION;
+
+/** Post-submit redirect; leave empty string to use Zoho default. */
+export const landingNextZohoFormRedirectUrlEnv =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_REDIRECT_URL?.trim() || '';
