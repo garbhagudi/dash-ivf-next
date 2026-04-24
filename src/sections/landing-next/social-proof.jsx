@@ -128,13 +128,18 @@ function ReviewAvatar({ name }) {
 const navBtnClass =
   'flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/80 bg-brandPink text-white shadow-lg transition hover:border-white hover:bg-brandPink2 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:opacity-40 sm:h-11 sm:w-11';
 
-const videoTabLanguages = [
-  { id: 'all', label: 'All' },
-  ...testimonialVideosByLanguage.map((v) => ({
-    id: v.lang,
-    label: v.label,
-  })),
-];
+/** One tab per language code — the data array has many videos per language. */
+function languageTabsFromVideos(videos) {
+  const byLang = new Map();
+  for (const v of videos) {
+    if (!byLang.has(v.lang)) byLang.set(v.lang, v.label);
+  }
+  const langs = Array.from(byLang.entries()).map(([id, label]) => ({ id, label }));
+  langs.sort((a, b) => a.label.localeCompare(b.label));
+  return [{ id: 'all', label: 'All' }, ...langs];
+}
+
+const videoTabLanguages = languageTabsFromVideos(testimonialVideosByLanguage);
 
 export default function LandingNextSocialProof() {
   const [videoLang, setVideoLang] = useState('all');
@@ -296,9 +301,9 @@ export default function LandingNextSocialProof() {
             </div>
           </div>
           <div className='mt-10 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6'>
-            {filteredVideos.map((v) => (
+            {filteredVideos.map((v, index) => (
               <figure
-                key={v.lang}
+                key={`${v.lang}-${v.videoId}-${index}`}
                 className='flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-brandPink4/60 bg-white shadow-lg shadow-brandPurple/10 ring-1 ring-white/80 transition hover:border-brandPink hover:shadow-xl'
               >
                 <div

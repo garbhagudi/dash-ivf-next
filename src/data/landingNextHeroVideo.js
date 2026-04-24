@@ -7,7 +7,7 @@
  * @see https://www.youtube.com/@GarbhaGudiIVFCentre
  */
 export const landingNextHeroYoutubeVideoId =
-  process.env.NEXT_PUBLIC_LANDING_NEXT_HERO_YOUTUBE_VIDEO_ID || 'cPPnXU9fB_0';
+  process.env.NEXT_PUBLIC_LANDING_NEXT_HERO_YOUTUBE_VIDEO_ID || '6QtvU2YAqSs';
 
 export const landingNextHeroYoutubeTitle =
   'GarbhaGudi IVF — fertility care and success stories';

@@ -127,18 +127,6 @@ export default function LandingNextConsultationOfferSection() {
               >
                 Book your Consultation now
               </a>
-              <p className='max-w-md text-pretty px-1 text-sm leading-snug text-brandDark/75 sm:text-base'>
-                <span className='text-brandDark/50 line-through decoration-brandPink4/80'>
-                  Original price Rs.499
-                </span>
-                <span className='mx-2 text-brandDark/40' aria-hidden>
-                  ·
-                </span>
-                <span className='font-semibold text-brandPurpleDark'>
-                  Grab{' '}
-                  <span className='whitespace-nowrap text-brandPink'>75% off</span> now
-                </span>
-              </p>
             </div>
 
             <div
