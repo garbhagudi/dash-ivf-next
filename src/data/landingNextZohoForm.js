@@ -15,3 +15,22 @@ export const landingNextZohoFormActionUrl =
 /** Post-submit redirect; leave empty string to use Zoho default. */
 export const landingNextZohoFormRedirectUrlEnv =
   process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_REDIRECT_URL?.trim() || '';
+
+/**
+ * Values sent for source attribution (same intent as `formComp` → `/api/createLeads`).
+ */
+export const landingNextZohoLeadSource = 'Online';
+export const landingNextZohoLeadSubSource = 'GarbhaGudi-IVF';
+
+/**
+ * HTTP POST `name` for each box — must match Zoho Forms → Share → Embed → HTML/CSS
+ * (`<input name="…">`). Zoho often uses `SingleLine`, `Dropdown`, etc., not CRM API names.
+ * If CRM shows "Lead_Sub_Source : Required" but the form entry has blank Lead Sub Source,
+ * open the official embed HTML, find the field for Lead Sub Source, and set these env vars.
+ */
+export const landingNextZohoFormLeadSourceFieldName =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_LEAD_SOURCE?.trim() || 'Lead_Source';
+
+export const landingNextZohoFormLeadSubSourceFieldName =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_LEAD_SUB_SOURCE?.trim() ||
+  'Lead_Sub_Source';

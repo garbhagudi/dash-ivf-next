@@ -5,7 +5,14 @@
  * Client-side validation blocks submit until fields are valid; Zoho redirects
  * using `zf_redirect_url` (thank-you page) after a successful submission.
  */
-import { landingNextZohoFormActionUrl, landingNextZohoFormRedirectUrlEnv } from 'data/landingNextZohoForm';
+import {
+  landingNextZohoFormActionUrl,
+  landingNextZohoFormRedirectUrlEnv,
+  landingNextZohoLeadSource,
+  landingNextZohoLeadSubSource,
+  landingNextZohoFormLeadSourceFieldName,
+  landingNextZohoFormLeadSubSourceFieldName,
+} from 'data/landingNextZohoForm';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useRef, useState } from 'react';
 
@@ -26,6 +33,22 @@ function readFormValues(form) {
   const phone = phoneRaw.replace(/\D/g, '');
   const email = (form.elements.namedItem('Email')?.value ?? '').trim();
   return { name, phone, email };
+}
+
+/** Set right before POST so Zoho never receives an empty required CRM-mapped field. */
+function syncZohoLeadAttributionFields(form, query) {
+  const subEl = form.elements.namedItem(landingNextZohoFormLeadSubSourceFieldName);
+  if (subEl && 'value' in subEl) {
+    const q = query?.Lead_Sub_Source;
+    subEl.value =
+      typeof q === 'string' && q.trim() ? q.trim() : landingNextZohoLeadSubSource;
+  }
+  const srcEl = form.elements.namedItem(landingNextZohoFormLeadSourceFieldName);
+  if (srcEl && 'value' in srcEl) {
+    const q = query?.Lead_Source;
+    srcEl.value =
+      typeof q === 'string' && q.trim() ? q.trim() : landingNextZohoLeadSource;
+  }
 }
 
 function validateConsultationForm({ name, phone, email }) {
@@ -93,6 +116,8 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
         el.value = fromQuery;
       }
     });
+
+    syncZohoLeadAttributionFields(form, router.query);
   }, [router.query]);
 
   const clearFieldError = (key) => {
@@ -126,6 +151,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
     }
     const phoneEl = form.elements.namedItem('PhoneNumber_countrycode');
     if (phoneEl) phoneEl.value = values.phone;
+    syncZohoLeadAttributionFields(form, router.query);
   };
 
   if (!landingNextZohoFormActionUrl) {
@@ -186,6 +212,16 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
           <input type='hidden' name='utm_campaign' defaultValue='' />
           <input type='hidden' name='utm_term' defaultValue='' />
           <input type='hidden' name='utm_content' defaultValue='' />
+          <input
+            type='hidden'
+            name={landingNextZohoFormLeadSourceFieldName}
+            defaultValue={landingNextZohoLeadSource}
+          />
+          <input
+            type='hidden'
+            name={landingNextZohoFormLeadSubSourceFieldName}
+            defaultValue={landingNextZohoLeadSubSource}
+          />
 
           {!isSection ? (
             <h3 className='text-center font-heading text-lg font-bold text-brandPurpleDark md:text-left'>
