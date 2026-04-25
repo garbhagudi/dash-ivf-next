@@ -34,3 +34,27 @@ export const landingNextZohoFormLeadSourceFieldName =
 export const landingNextZohoFormLeadSubSourceFieldName =
   process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_LEAD_SUB_SOURCE?.trim() ||
   'Lead_Sub_Source';
+
+/**
+ * Optional combined UTM details field (single-line string like
+ * `utm_source=... | utm_medium=... | utm_campaign=...`).
+ * Must match a real field `name` in the Zoho Forms embed if you want it to sync to CRM.
+ */
+export const landingNextZohoFormUtmDetailsFieldName =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_UTM_DETAILS?.trim() ||
+  'UTM_Campaign_Details';
+
+/**
+ * Optional defaults for UTM when URL has no utm_* query params.
+ * Common convention: source=direct, medium=none, campaign=landing-next.
+ */
+export const landingNextZohoDefaultUtmSource =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_DEFAULT_UTM_SOURCE?.trim() || '';
+export const landingNextZohoDefaultUtmMedium =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_DEFAULT_UTM_MEDIUM?.trim() || '';
+export const landingNextZohoDefaultUtmCampaign =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_DEFAULT_UTM_CAMPAIGN?.trim() || '';
+export const landingNextZohoDefaultUtmTerm =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_DEFAULT_UTM_TERM?.trim() || '';
+export const landingNextZohoDefaultUtmContent =
+  process.env.NEXT_PUBLIC_LANDING_NEXT_DEFAULT_UTM_CONTENT?.trim() || '';

@@ -3,35 +3,8 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-function firstZohoRow(responseData) {
-  const d = responseData?.data;
-  if (Array.isArray(d)) return d[0];
-  if (d && typeof d === 'object') return d;
-  return null;
-}
-
-const ZOHO_LEAD_FAIL_CODES = new Set([
-  'INVALID_DATA',
-  'MANDATORY_NOT_FOUND',
-  'INVALID_TOKEN',
-  'OAUTH_SCOPE_MISMATCH',
-  'LIMIT_EXCEEDED',
-  'INTERNAL_ERROR',
-  'RECORD_NOT_FOUND',
-  'ERROR',
-]);
-
-function isZohoLeadSuccess(responseData) {
-  const row = firstZohoRow(responseData);
-  if (!row) return false;
-  const codeNorm = String(row.code ?? '').toUpperCase();
-  if (ZOHO_LEAD_FAIL_CODES.has(codeNorm)) return false;
-  if (codeNorm === 'SUCCESS' || codeNorm === 'DUPLICATE_DATA') return true;
-  if (row.status === 'success') return true;
-  if (row.details?.id) return true;
-  return false;
-}
+import { isZohoCrmLeadSuccess } from 'lib/zohoCrmCreateLeadResponse';
+import { mergeUtmIntoClientLeadData } from 'lib/zohoCrmLeadPayload';
 
 /**
  * @param {'banner' | 'card'} variant - banner: teal strip (home). card: white panel (landing-next).
@@ -61,7 +34,12 @@ const FormComponent = (props) => {
       Lead_Source: 'Online',
       Lead_Sub_Source: 'GarbhaGudi-IVF',
       Campaign: { id: '3505252000019573428' },
+      UTM_Source: '',
+      UTM_Medium: '',
       UTM_Campaign: utmCampaign,
+      UTM_Term: '',
+      UTM_Content: '',
+      UTM_Campaign_Details: '',
       Page_Visited: pageVisit,
     },
   });
@@ -76,12 +54,13 @@ const FormComponent = (props) => {
   const onSubmit = async (data) => {
     setLoad(true);
     try {
+      const payload = mergeUtmIntoClientLeadData(data, router);
       const response = await fetch('/api/createLeads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ data }),
+        body: JSON.stringify({ data: payload }),
       });
 
       let responseData = null;
@@ -97,7 +76,7 @@ const FormComponent = (props) => {
         );
       }
 
-      if (isZohoLeadSuccess(responseData)) {
+      if (isZohoCrmLeadSuccess(responseData)) {
         // Full navigation so static `public/thank-you.html` always loads (Pages router).
         window.location.assign('/thank-you.html');
         return;

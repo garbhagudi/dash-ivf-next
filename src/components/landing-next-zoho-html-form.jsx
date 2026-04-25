@@ -1,9 +1,11 @@
 'use client';
 
 /**
- * Zoho "Book your Consultation" form — native HTML POST (no iframe).
- * Client-side validation blocks submit until fields are valid; Zoho redirects
- * using `zf_redirect_url` (thank-you page) after a successful submission.
+ * Zoho "Book your Consultation" — native HTML/CSS form POST (no iframe, no createLeads).
+ * Client-side validation before submit; thank-you via `zf_redirect_url`.
+ *
+ * CRM fields like Lead_Sub_Source only persist if they exist on the form in Zoho Forms
+ * with matching `name` values (see embed HTML or env `NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_*`).
  */
 import {
   landingNextZohoFormActionUrl,
@@ -12,6 +14,12 @@ import {
   landingNextZohoLeadSubSource,
   landingNextZohoFormLeadSourceFieldName,
   landingNextZohoFormLeadSubSourceFieldName,
+  landingNextZohoFormUtmDetailsFieldName,
+  landingNextZohoDefaultUtmSource,
+  landingNextZohoDefaultUtmMedium,
+  landingNextZohoDefaultUtmCampaign,
+  landingNextZohoDefaultUtmTerm,
+  landingNextZohoDefaultUtmContent,
 } from 'data/landingNextZohoForm';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useRef, useState } from 'react';
@@ -35,7 +43,6 @@ function readFormValues(form) {
   return { name, phone, email };
 }
 
-/** Set right before POST so Zoho never receives an empty required CRM-mapped field. */
 function syncZohoLeadAttributionFields(form, query) {
   const subEl = form.elements.namedItem(landingNextZohoFormLeadSubSourceFieldName);
   if (subEl && 'value' in subEl) {
@@ -51,6 +58,70 @@ function syncZohoLeadAttributionFields(form, query) {
   }
 }
 
+function buildUtmDetailsFromForm(form) {
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  const parts = [];
+  keys.forEach((k) => {
+    const v = String(form.elements.namedItem(k)?.value ?? '').trim();
+    if (v) parts.push(`${k}=${v}`);
+  });
+  return parts.join(' | ');
+}
+
+function syncUtmDetailsField(form) {
+  const detailsEl = form.elements.namedItem(landingNextZohoFormUtmDetailsFieldName);
+  if (!detailsEl || !('value' in detailsEl)) return;
+  const details = buildUtmDetailsFromForm(form);
+  detailsEl.value = details;
+}
+
+function fillFromUrlSearchParams(form, routerQuery) {
+  if (typeof window === 'undefined') return;
+  const sp = new URLSearchParams(window.location.search);
+
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  keys.forEach((key) => {
+    const el = form.elements.namedItem(key);
+    if (!el || !('value' in el)) return;
+    const fromQuery = routerQuery?.[key];
+    if (typeof fromQuery === 'string' && fromQuery.trim()) {
+      el.value = fromQuery.trim();
+      return;
+    }
+    const fromUrl = (sp.get(key) || '').trim();
+    if (fromUrl) {
+      el.value = fromUrl;
+      return;
+    }
+
+    const defaults = {
+      utm_source: landingNextZohoDefaultUtmSource,
+      utm_medium: landingNextZohoDefaultUtmMedium,
+      utm_campaign: landingNextZohoDefaultUtmCampaign,
+      utm_term: landingNextZohoDefaultUtmTerm,
+      utm_content: landingNextZohoDefaultUtmContent,
+    };
+    const fallback = defaults[key];
+    if (typeof fallback === 'string' && fallback.trim()) el.value = fallback.trim();
+  });
+
+  const gclidEl = form.elements.namedItem('zc_gad');
+  if (gclidEl && 'value' in gclidEl) {
+    const fromQuery = routerQuery?.gclid;
+    const fromUrl = (sp.get('gclid') || '').trim();
+    const v =
+      typeof fromQuery === 'string' && fromQuery.trim() ? fromQuery.trim() : fromUrl;
+    if (v) gclidEl.value = v;
+  }
+
+  // Optional: if your Zoho form has a "Page Visited" field (your embed shows `MultiLine1`)
+  // this ensures it gets filled even on SPA navigations.
+  const pageVisitedEl = form.elements.namedItem('MultiLine1');
+  if (pageVisitedEl && 'value' in pageVisitedEl) {
+    pageVisitedEl.value = window.location.href;
+  }
+}
+
 function validateConsultationForm({ name, phone, email }) {
   const err = {};
   if (!name || name.length < 2) {
@@ -61,9 +132,7 @@ function validateConsultationForm({ name, phone, email }) {
   } else if (!/^[0-9]{10}$/.test(phone)) {
     err.phone = 'Enter a valid 10-digit mobile number.';
   }
-  if (!email) {
-    err.email = 'Email is required.';
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     err.email = 'Enter a valid email address.';
   }
   return err;
@@ -95,29 +164,10 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
       redirInput.value = configured || fallback;
     }
 
-    const gclid = router.query?.gclid;
-    const gad = form.querySelector('input[name="zc_gad"]');
-    if (gad && typeof gclid === 'string' && gclid) {
-      gad.value = gclid;
-    }
-
-    const utmKeys = [
-      'utm_source',
-      'utm_medium',
-      'utm_campaign',
-      'utm_term',
-      'utm_content',
-    ];
-    utmKeys.forEach((key) => {
-      const el = form.querySelector(`input[name="${key}"]`);
-      if (!el) return;
-      const fromQuery = router.query?.[key];
-      if (typeof fromQuery === 'string' && fromQuery) {
-        el.value = fromQuery;
-      }
-    });
+    fillFromUrlSearchParams(form, router.query);
 
     syncZohoLeadAttributionFields(form, router.query);
+    syncUtmDetailsField(form);
   }, [router.query]);
 
   const clearFieldError = (key) => {
@@ -132,6 +182,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
   const handleSubmit = (e) => {
     const form = formRef.current;
     if (!form) return;
+    fillFromUrlSearchParams(form, router.query);
     const values = readFormValues(form);
     const next = validateConsultationForm(values);
     setErrors(next);
@@ -152,6 +203,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
     const phoneEl = form.elements.namedItem('PhoneNumber_countrycode');
     if (phoneEl) phoneEl.value = values.phone;
     syncZohoLeadAttributionFields(form, router.query);
+    syncUtmDetailsField(form);
   };
 
   if (!landingNextZohoFormActionUrl) {
@@ -212,6 +264,11 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
           <input type='hidden' name='utm_campaign' defaultValue='' />
           <input type='hidden' name='utm_term' defaultValue='' />
           <input type='hidden' name='utm_content' defaultValue='' />
+          <input
+            type='hidden'
+            name={landingNextZohoFormUtmDetailsFieldName}
+            defaultValue=''
+          />
           <input
             type='hidden'
             name={landingNextZohoFormLeadSourceFieldName}
@@ -297,7 +354,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
 
             <div className={fieldShell}>
               <label htmlFor={`Email-${suffix}`} className={labelClass}>
-                Email <em className='not-italic text-brandPink'>*</em>
+                Email
               </label>
               <input
                 id={`Email-${suffix}`}
