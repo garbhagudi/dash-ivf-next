@@ -1,17 +1,48 @@
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useLayoutEffect } from 'react';
 import LandingNextHeader from 'components/landing-next-header';
 import LandingNextHero from 'sections/landing-next/hero';
 import LandingNextTrustStrip from 'sections/landing-next/trust-strip';
 import LandingNextServicesCompact from 'sections/landing-next/services-compact';
-import LandingNextDoctorsGrid from 'sections/landing-next/doctors-grid';
-import LandingNextSocialProof from 'sections/landing-next/social-proof';
-import LandingNextFaq from 'sections/landing-next/faq';
 import LandingNextConsultationFormSection from 'sections/landing-next/consultation-form-section';
-import LandingNextConsultationOfferSection from 'sections/landing-next/consultation-offer-section';
 
-const Head = dynamic(() => import('next/head'));
+/** Below the fold — code-split to shrink initial JS (Swiper, many lite-youtube, FAQ accordion). */
+const LandingNextDoctorsGrid = dynamic(
+  () => import('sections/landing-next/doctors-grid'),
+  {
+    loading: () => (
+      <div
+        className='min-h-[22rem] bg-gradient-to-br from-pink-300/40 to-purple-100/40'
+        aria-hidden
+      />
+    ),
+  },
+);
+const LandingNextSocialProof = dynamic(
+  () => import('sections/landing-next/social-proof'),
+  {
+    loading: () => (
+      <div
+        className='min-h-[28rem] bg-gradient-to-tr from-brandPink3/30 via-brandPurple/20 to-purple-100/40'
+        aria-hidden
+      />
+    ),
+  },
+);
+const LandingNextFaq = dynamic(() => import('sections/landing-next/faq'), {
+  loading: () => (
+    <div
+      className='min-h-[16rem] border-t border-brandPink4/30 bg-gradient-to-b from-white via-brandPink5/15 to-purple-100/30'
+      aria-hidden
+    />
+  ),
+});
+const LandingNextConsultationOfferSection = dynamic(
+  () => import('sections/landing-next/consultation-offer-section'),
+  { loading: () => <div className='min-h-[5rem]' aria-hidden /> },
+);
 
 export default function LandingNextPage() {
   /** Lets global CSS / SalesIQ target this route without relying on offer-section timing. */
@@ -35,7 +66,7 @@ export default function LandingNextPage() {
       <Script
         id='gg-zoho-zfadvlead-utm'
         src='/zoho-forms/zf-zfadvlead-utm.js'
-        strategy='beforeInteractive'
+        strategy='afterInteractive'
       />
       <Head>
         <title>

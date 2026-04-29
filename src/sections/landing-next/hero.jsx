@@ -49,7 +49,7 @@ export default function LandingNextHero() {
             <LiteYouTubeEmbed
               id={landingNextHeroYoutubeVideoId}
               title={landingNextHeroYoutubeTitle}
-              poster='maxresdefault'
+              poster='hqdefault'
               params='rel=0'
               wrapperClass='yt-lite w-full [&_.lty-playbtn]:!border-[#ea4b6a] [&_.lty-playbtn]:!bg-brandPink/95 [&_iframe]:rounded-none'
             />

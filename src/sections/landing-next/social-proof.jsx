@@ -315,7 +315,7 @@ export default function LandingNextSocialProof() {
                   <LiteYouTubeEmbed
                     id={v.videoId}
                     title={v.title}
-                    poster='maxresdefault'
+                    poster='hqdefault'
                     containerElement='div'
                     wrapperClass='yt-lite w-full max-w-none'
                     params='modestbranding=1'

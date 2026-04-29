@@ -47,7 +47,12 @@ const nextConfig = {
     // turbo: false,
     optimizeCss: true, // removes render-blocking CSS
     scrollRestoration: true, // to improve navigation performance
-    optimizePackageImports: ['react-icons', 'nuka-carousel'], // to reduce bundle size
+    optimizePackageImports: [
+      'react-icons',
+      'nuka-carousel',
+      'lucide-react',
+      'swiper',
+    ],
     // css: {
     //   modules: true,
     // },
