@@ -2,47 +2,30 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useLayoutEffect } from 'react';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { landingNextHeroYoutubePosterSrc } from 'data/landingNextHeroVideo';
 import LandingNextHeader from 'components/landing-next-header';
 import LandingNextHero from 'sections/landing-next/hero';
-import LandingNextTrustStrip from 'sections/landing-next/trust-strip';
-import LandingNextServicesCompact from 'sections/landing-next/services-compact';
 import LandingNextConsultationFormSection from 'sections/landing-next/consultation-form-section';
+import LandingNextConsultationOfferSection from 'sections/landing-next/consultation-offer-section';
 
-/** Below the fold — code-split to shrink initial JS (Swiper, many lite-youtube, FAQ accordion). */
+/**
+ * Below the fold — code-split without `loading` placeholders so SSR HTML matches
+ * first paint (avoids CLS from short skeleton → tall content).
+ */
+const LandingNextTrustStrip = dynamic(
+  () => import('sections/landing-next/trust-strip'),
+);
+const LandingNextServicesCompact = dynamic(
+  () => import('sections/landing-next/services-compact'),
+);
 const LandingNextDoctorsGrid = dynamic(
   () => import('sections/landing-next/doctors-grid'),
-  {
-    loading: () => (
-      <div
-        className='min-h-[22rem] bg-gradient-to-br from-pink-300/40 to-purple-100/40'
-        aria-hidden
-      />
-    ),
-  },
 );
 const LandingNextSocialProof = dynamic(
   () => import('sections/landing-next/social-proof'),
-  {
-    loading: () => (
-      <div
-        className='min-h-[28rem] bg-gradient-to-tr from-brandPink3/30 via-brandPurple/20 to-purple-100/40'
-        aria-hidden
-      />
-    ),
-  },
 );
-const LandingNextFaq = dynamic(() => import('sections/landing-next/faq'), {
-  loading: () => (
-    <div
-      className='min-h-[16rem] border-t border-brandPink4/30 bg-gradient-to-b from-white via-brandPink5/15 to-purple-100/30'
-      aria-hidden
-    />
-  ),
-});
-const LandingNextConsultationOfferSection = dynamic(
-  () => import('sections/landing-next/consultation-offer-section'),
-  { loading: () => <div className='min-h-[5rem]' aria-hidden /> },
-);
+const LandingNextFaq = dynamic(() => import('sections/landing-next/faq'));
 
 export default function LandingNextPage() {
   /** Lets global CSS / SalesIQ target this route without relying on offer-section timing. */
@@ -66,7 +49,7 @@ export default function LandingNextPage() {
       <Script
         id='gg-zoho-zfadvlead-utm'
         src='/zoho-forms/zf-zfadvlead-utm.js'
-        strategy='afterInteractive'
+        strategy='lazyOnload'
       />
       <Head>
         <title>
@@ -77,9 +60,16 @@ export default function LandingNextPage() {
           content='A calmer GarbhaGudi landing experience focused on trust, clear doctor information, and one primary consultation action—built for testing alongside the main site.'
         />
         <meta name='robots' content='noindex, nofollow' />
+        <link rel='preconnect' href='https://i.ytimg.com' crossOrigin='anonymous' />
+        <link rel='dns-prefetch' href='https://i.ytimg.com' />
+        <link rel='preload' as='image' href={landingNextHeroYoutubePosterSrc()} />
       </Head>
       <LandingNextHeader />
-      <main className='pb-[var(--landing-offer-main-pad,var(--landing-offer-sticky-h,3.25rem))] md:pb-0'>
+      {/*
+        Fixed bottom bar (~5.5–6.5rem) + safe-area — static padding avoids CLS from
+        JS-measured CSS variables updating after paint.
+      */}
+      <main className='max-md:pb-[calc(6.75rem+env(safe-area-inset-bottom,0px))] md:pb-0'>
         <LandingNextHero />
         <LandingNextConsultationFormSection />
         <LandingNextTrustStrip />

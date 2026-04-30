@@ -60,7 +60,7 @@ export default function LandingNextTrustStrip() {
 
                 <div className='relative mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brandPink to-brandPurpleDark text-white shadow-lg shadow-brandPink/25 transition duration-300 group-hover:scale-105 group-hover:shadow-brandPink/40'>
                   <Icon
-                    className='h-7 w-7'
+                    size={28}
                     strokeWidth={2}
                     aria-hidden
                   />

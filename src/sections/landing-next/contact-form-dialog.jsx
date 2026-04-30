@@ -60,7 +60,7 @@ export default function ContactFormDialog({ open, onClose }) {
                   className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-brandPurpleDark text-brandPurpleDark transition hover:bg-brandPurpleDark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPink'
                   aria-label='Close contact form'
                 >
-                  <HiX className='h-5 w-5' />
+                  <HiX size={20} aria-hidden />
                 </button>
               </div>
 

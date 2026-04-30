@@ -2,15 +2,7 @@ import { Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-const WidgetAbout = dynamic(
-  () => import('./widget').then((mod) => mod.WidgetAbout),
-  { ssr: false },
-);
-const WidgetInfo = dynamic(
-  () => import('./widget').then((mod) => mod.WidgetInfo),
-  { ssr: false },
-);
+import { WidgetAbout, WidgetInfo } from './widget';
 import { about, information } from './footer.data';
 
 export default function Footer() {

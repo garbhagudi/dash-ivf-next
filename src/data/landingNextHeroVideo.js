@@ -11,3 +11,8 @@ export const landingNextHeroYoutubeVideoId =
 
 export const landingNextHeroYoutubeTitle =
   'GarbhaGudi IVF — fertility care and success stories';
+
+/** Static JPEG used for LCP (`<img fetchpriority="high">`) before the embed loads. */
+export function landingNextHeroYoutubePosterSrc() {
+  return `https://i.ytimg.com/vi/${landingNextHeroYoutubeVideoId}/hqdefault.jpg`;
+}

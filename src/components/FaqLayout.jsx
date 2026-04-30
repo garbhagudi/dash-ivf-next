@@ -28,9 +28,9 @@ const AccordionLayout = ({
         </div>
         <div>
           {activeIndex === index ? (
-            <HiChevronDown className='h-8 w-8 rotate-180' />
+            <HiChevronDown size={32} className='rotate-180' aria-hidden />
           ) : (
-            <HiChevronDown className='h-8 w-8' />
+            <HiChevronDown size={32} aria-hidden />
           )}
         </div>
       </div>

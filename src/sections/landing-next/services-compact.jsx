@@ -77,7 +77,8 @@ export default function LandingNextServicesCompact() {
                 >
                   <span>Learn more</span>
                   <HiArrowRight
-                    className='h-4 w-4 shrink-0 transition-transform duration-200 group-hover/cta:translate-x-1'
+                    size={16}
+                    className='shrink-0 transition-transform duration-200 group-hover/cta:translate-x-1'
                     aria-hidden
                   />
                 </button>

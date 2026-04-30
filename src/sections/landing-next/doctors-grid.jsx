@@ -75,7 +75,7 @@ export default function LandingNextDoctorsGrid() {
             onClick={() => swiperRef.current?.slidePrev()}
             className={`${navBtnClass} pointer-events-auto absolute left-2 top-1/2 z-20 -translate-y-1/2 sm:left-3 lg:left-0 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2`}
           >
-            <HiChevronLeft className='text-2xl' />
+            <HiChevronLeft size={28} aria-hidden />
           </button>
 
           <Swiper
@@ -175,7 +175,7 @@ export default function LandingNextDoctorsGrid() {
             onClick={() => swiperRef.current?.slideNext()}
             className={`${navBtnClass} pointer-events-auto absolute right-2 top-1/2 z-20 -translate-y-1/2 sm:right-3 lg:right-0 lg:z-10 lg:-translate-y-1/2 lg:translate-x-1/2`}
           >
-            <HiChevronRight className='text-2xl' />
+            <HiChevronRight size={28} aria-hidden />
           </button>
         </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const OFFER_DURATION_SEC = 5 * 60;
 
@@ -22,64 +22,8 @@ const stickyUnits = [
 export default function LandingNextConsultationOfferSection() {
   const [isClient, setIsClient] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(OFFER_DURATION_SEC);
-  const stickyBarRef = useRef(null);
 
   useEffect(() => setIsClient(true), []);
-
-  /** Publish measured sticky height so Zoho SalesIQ float sits above it (mobile). */
-  useLayoutEffect(() => {
-    if (!isClient) return undefined;
-    const root = document.documentElement;
-    const mq = window.matchMedia('(max-width: 767px)');
-
-    const publishStickyHeight = () => {
-      const el = stickyBarRef.current;
-      if (!mq.matches || !el) {
-        root.style.removeProperty('--landing-offer-sticky-h');
-        root.style.removeProperty('--landing-offer-main-pad');
-        return;
-      }
-      const h = Math.ceil(el.getBoundingClientRect().height);
-      if (h < 8) {
-        root.style.removeProperty('--landing-offer-sticky-h');
-        root.style.removeProperty('--landing-offer-main-pad');
-        return;
-      }
-      /* Full bar height (includes safe-area padding on the bar). */
-      root.style.setProperty('--landing-offer-sticky-h', `${h}px`);
-      /* Tighter scroll pad: do not add env() again (already inside measured h). */
-      root.style.setProperty(
-        '--landing-offer-main-pad',
-        `${Math.max(44, h - 14)}px`,
-      );
-    };
-
-    publishStickyHeight();
-    const ro = new ResizeObserver(publishStickyHeight);
-    let observedEl = null;
-    const observeSticky = () => {
-      const el = stickyBarRef.current;
-      if (!el || el === observedEl) return;
-      if (observedEl) ro.unobserve(observedEl);
-      ro.observe(el);
-      observedEl = el;
-    };
-    observeSticky();
-    requestAnimationFrame(() => requestAnimationFrame(observeSticky));
-    mq.addEventListener('change', publishStickyHeight);
-    window.addEventListener('resize', publishStickyHeight);
-    const t = window.setTimeout(publishStickyHeight, 150);
-
-    return () => {
-      window.clearTimeout(t);
-      if (observedEl) ro.unobserve(observedEl);
-      ro.disconnect();
-      mq.removeEventListener('change', publishStickyHeight);
-      window.removeEventListener('resize', publishStickyHeight);
-      root.style.removeProperty('--landing-offer-sticky-h');
-      root.style.removeProperty('--landing-offer-main-pad');
-    };
-  }, [isClient]);
 
   useEffect(() => {
     if (!isClient) return undefined;
@@ -164,15 +108,14 @@ export default function LandingNextConsultationOfferSection() {
 
       {/* Mobile: fixed bottom bar — same countdown as section above */}
       <div
-        ref={stickyBarRef}
-        className='fixed inset-x-0 bottom-0 z-50 border-t border-brandPink4/50 bg-white/95 shadow-[0_-6px_28px_rgba(97,42,123,0.14)] backdrop-blur-md md:hidden'
+        className='fixed inset-x-0 bottom-0 z-50 min-h-[5.75rem] border-t border-brandPink4/50 bg-white/95 shadow-[0_-6px_28px_rgba(97,42,123,0.14)] backdrop-blur-md md:hidden'
         style={{
           paddingBottom: 'max(0.65rem, env(safe-area-inset-bottom, 0px))',
         }}
         role='complementary'
         aria-label='Consultation offer and countdown'
       >
-        <div className='mx-auto flex max-w-lg items-stretch gap-2.5 px-3 pt-2.5'>
+        <div className='mx-auto flex min-h-[4.5rem] max-w-lg items-stretch gap-2.5 px-3 pt-2.5'>
           <div className='flex min-w-0 flex-1 flex-col justify-center gap-1'>
             <p className='text-[10px] font-bold uppercase tracking-wide text-brandPurpleDark'>
               Offer ends in

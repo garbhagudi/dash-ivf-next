@@ -16,6 +16,7 @@ export default function LandingNextHeader() {
           <Link href='/' className='shrink-0 lg:w-0 lg:flex-1'>
             <span className='sr-only'>GarbhaGudi home</span>
             <Image
+              priority
               className='h-fit w-36 sm:h-14 sm:w-44 md:w-48 lg:w-64'
               src={logoUrl}
               alt='GarbhaGudi IVF Centre'
@@ -37,7 +38,8 @@ export default function LandingNextHeader() {
                   fill='currentColor'
                   strokeWidth='0'
                   viewBox='0 0 24 24'
-                  className='h-4 w-4 md:h-5 md:w-5'
+                  width={20}
+                  height={20}
                   xmlns='http://www.w3.org/2000/svg'
                   aria-hidden
                 >

@@ -1,5 +1,4 @@
 import { useMemo, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
 import {
   GARBHAGUDI_YOUTUBE_CHANNEL,
   testimonialVideosByLanguage,
@@ -9,27 +8,12 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { MdOutlineRateReview } from 'react-icons/md';
 import { SiYoutube } from 'react-icons/si';
 import { Star } from 'lucide-react';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-const LiteYouTubeEmbed = dynamic(
-  () => import('react-lite-youtube-embed'),
-  {
-    ssr: false,
-    loading: () => (
-      <div
-        className='flex aspect-video items-center justify-center rounded-xl bg-brandPink5/50 text-sm font-medium text-brandPurpleDark'
-        aria-hidden
-      >
-        Loading player…
-      </div>
-    ),
-  },
-);
 
 const stories = [
   {
@@ -104,7 +88,8 @@ function StarRow({ count = 5 }) {
       {Array.from({ length: count }, (_, i) => (
         <Star
           key={i}
-          className='h-4 w-4 fill-brandYellow text-brandYellow drop-shadow-sm'
+          size={16}
+          className='fill-brandYellow text-brandYellow drop-shadow-sm'
           strokeWidth={0}
           aria-hidden
         />
@@ -167,13 +152,13 @@ export default function LandingNextSocialProof() {
       <div className='relative mx-auto max-w-7xl px-4 sm:px-6'>
         <div className='mx-auto flex max-w-3xl flex-col items-center text-center'>
           <div className='flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 shadow-md ring-1 ring-brandPink4/40'>
-            <FcGoogle className='h-8 w-8 shrink-0' aria-hidden />
+            <FcGoogle className='shrink-0' size={32} aria-hidden />
             <span className='text-xs font-semibold text-brandDark/80'>
               Reviews from Google
             </span>
           </div>
           <div className='mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-brandPink'>
-            <MdOutlineRateReview className='h-5 w-5' aria-hidden />
+            <MdOutlineRateReview size={20} aria-hidden />
             <span>Patient stories</span>
           </div>
           <h2
@@ -200,7 +185,7 @@ export default function LandingNextSocialProof() {
                 className={`${navBtnClass} pointer-events-auto absolute left-2 top-1/2 z-20 -translate-y-1/2 sm:left-3 lg:left-0 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2`}
                 aria-label='Previous review'
               >
-                <HiChevronLeft className='text-2xl' />
+                <HiChevronLeft size={28} aria-hidden />
               </button>
 
               <Swiper
@@ -242,7 +227,7 @@ export default function LandingNextSocialProof() {
                               </p>
                             </div>
                             <div className='flex items-center gap-1.5 rounded-full bg-brandPink5/80 px-3 py-1 text-xs font-semibold text-brandPurpleDark'>
-                              <FcGoogle className='h-4 w-4' aria-hidden />
+                              <FcGoogle size={16} aria-hidden />
                               Google review
                             </div>
                           </footer>
@@ -259,7 +244,7 @@ export default function LandingNextSocialProof() {
                 className={`${navBtnClass} pointer-events-auto absolute right-2 top-1/2 z-20 -translate-y-1/2 sm:right-3 lg:right-0 lg:z-10 lg:-translate-y-1/2 lg:translate-x-1/2`}
                 aria-label='Next review'
               >
-                <HiChevronRight className='text-2xl' />
+                <HiChevronRight size={28} aria-hidden />
               </button>
             </div>
         </div>
@@ -336,7 +321,7 @@ export default function LandingNextSocialProof() {
               rel='noopener noreferrer'
               className='inline-flex items-center gap-2 font-bold text-brandPink underline decoration-brandPink decoration-2 underline-offset-4 transition hover:text-brandPink2'
             >
-              <SiYoutube className='h-5 w-5 text-red-600' aria-hidden />
+              <SiYoutube className='text-red-600' size={20} aria-hidden />
               Watch more on the GarbhaGudi YouTube channel
             </a>
           </p>
