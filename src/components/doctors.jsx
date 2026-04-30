@@ -4313,4 +4313,55 @@ export const doctors = [
       },
     },
   },
+  {
+    name: 'Dr. Sowmya Rani Merugu',
+    qualification: 'MBBS, MS (OBG), FRM, Fellowship (Laparoscopic Surgery)',
+    designation: 'Fertility Specialist – GarbhaGudi IVF Centre, Kalyan Nagar',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmo3x0v8nblmw07pnajpsreyy',
+    },
+    imageAlt: 'IVF Specialist in Bangalore - Dr. Sowmya Rani Merugu',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Sowmya Rani Merugu is a highly accomplished Fertility Specialist at GarbhaGudi IVF Centre, Kalyan Nagar, with good experience in Reproductive Medicine, High-Risk Obstetrics, and Minimal Access Surgery. Holding an MS in OBG and fellowships in both Reproductive Medicine and Laparoscopic Surgery, she is recognized for her surgical precision and evidence-based approach. She specializes in advanced IVF management, utilizing innovative techniques like "Embryo Glue" and precision diagnostics to provide couples with the highest standards of modern fertility care.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Known for her compassionate and holistic philosophy, Dr. Sowmya Rani tailors every treatment plan to meet the unique biological and emotional needs of her patients. Her ability to communicate fluently in six languages—English, Hindi, Telugu, Kannada, Tamil, and Malayalam—allows her to provide deeply personalized and accessible care to a diverse range of families. By integrating cutting-edge surgical interventions with empathetic counseling, she remains dedicated to helping couples navigate their journey to parenthood with confidence and success.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
 ];

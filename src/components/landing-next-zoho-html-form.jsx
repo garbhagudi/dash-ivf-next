@@ -21,8 +21,57 @@ import {
   landingNextZohoDefaultUtmTerm,
   landingNextZohoDefaultUtmContent,
 } from 'data/landingNextZohoForm';
+import { firstQueryValue } from 'lib/zohoCrmLeadPayload';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useRef, useState } from 'react';
+
+/** Same-tab backup when in-app navigation drops ?utm_* from the URL bar. */
+const LANDING_NEXT_UTM_SESSION_KEY = 'gg_landing_next_utm_v1';
+
+/**
+ * Query string on the main URL plus any `?…` segment inside the hash (some trackers
+ * misplace params after `#`). `?utm_…#consultation` is handled by `location.search` alone.
+ */
+function getMarketingSearchParams() {
+  if (typeof window === 'undefined') return new URLSearchParams();
+  const merged = new URLSearchParams(window.location.search);
+  const hash = window.location.hash || '';
+  const qInHash = hash.indexOf('?');
+  if (qInHash !== -1) {
+    const fromHash = new URLSearchParams(hash.slice(qInHash + 1));
+    fromHash.forEach((value, key) => {
+      if (!merged.has(key)) merged.set(key, value);
+    });
+  }
+  return merged;
+}
+
+function readSessionUtms() {
+  try {
+    const raw = sessionStorage.getItem(LANDING_NEXT_UTM_SESSION_KEY);
+    if (!raw) return null;
+    const o = JSON.parse(raw);
+    return o && typeof o === 'object' ? o : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeSessionUtms(partial) {
+  try {
+    sessionStorage.setItem(LANDING_NEXT_UTM_SESSION_KEY, JSON.stringify(partial));
+  } catch {
+    /* private mode / quota */
+  }
+}
+
+function firstNonEmpty(...candidates) {
+  for (const c of candidates) {
+    const s = typeof c === 'string' ? c.trim() : '';
+    if (s) return s;
+  }
+  return '';
+}
 
 const inputBase =
   'w-full rounded-xl border-2 bg-white px-4 py-3 text-base text-brandDark transition placeholder:text-stone-400 focus:outline-none focus:ring-4';
@@ -58,12 +107,16 @@ function syncZohoLeadAttributionFields(form, query) {
   }
 }
 
-function buildUtmDetailsFromForm(form) {
+function buildUtmDetailsFromForm(form, extraPairs = []) {
   const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   const parts = [];
   keys.forEach((k) => {
     const v = String(form.elements.namedItem(k)?.value ?? '').trim();
     if (v) parts.push(`${k}=${v}`);
+  });
+  extraPairs.forEach(({ k, v }) => {
+    const t = String(v ?? '').trim();
+    if (t) parts.push(`${k}=${t}`);
   });
   return parts.join(' | ');
 }
@@ -71,26 +124,34 @@ function buildUtmDetailsFromForm(form) {
 function syncUtmDetailsField(form) {
   const detailsEl = form.elements.namedItem(landingNextZohoFormUtmDetailsFieldName);
   if (!detailsEl || !('value' in detailsEl)) return;
-  const details = buildUtmDetailsFromForm(form);
+  const sp = getMarketingSearchParams();
+  const utmId = (sp.get('utm_id') || '').trim();
+  const extras = utmId ? [{ k: 'utm_id', v: utmId }] : [];
+  const details = buildUtmDetailsFromForm(form, extras);
   detailsEl.value = details;
 }
 
 function fillFromUrlSearchParams(form, routerQuery) {
   if (typeof window === 'undefined') return;
-  const sp = new URLSearchParams(window.location.search);
+  const sp = getMarketingSearchParams();
+  const sessionSaved = readSessionUtms();
 
   const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  const capturedForSession = {};
+
   keys.forEach((key) => {
     const el = form.elements.namedItem(key);
     if (!el || !('value' in el)) return;
-    const fromQuery = routerQuery?.[key];
-    if (typeof fromQuery === 'string' && fromQuery.trim()) {
-      el.value = fromQuery.trim();
-      return;
-    }
+
     const fromUrl = (sp.get(key) || '').trim();
-    if (fromUrl) {
-      el.value = fromUrl;
+    const fromRouter = firstQueryValue(routerQuery?.[key]);
+    const fromSession =
+      typeof sessionSaved?.[key] === 'string' ? sessionSaved[key].trim() : '';
+
+    const val = firstNonEmpty(fromUrl, fromRouter, fromSession);
+    if (val) {
+      el.value = val;
+      capturedForSession[key] = val;
       return;
     }
 
@@ -105,12 +166,15 @@ function fillFromUrlSearchParams(form, routerQuery) {
     if (typeof fallback === 'string' && fallback.trim()) el.value = fallback.trim();
   });
 
+  if (Object.keys(capturedForSession).length > 0) {
+    writeSessionUtms({ ...(sessionSaved || {}), ...capturedForSession });
+  }
+
   const gclidEl = form.elements.namedItem('zc_gad');
   if (gclidEl && 'value' in gclidEl) {
-    const fromQuery = routerQuery?.gclid;
     const fromUrl = (sp.get('gclid') || '').trim();
-    const v =
-      typeof fromQuery === 'string' && fromQuery.trim() ? fromQuery.trim() : fromUrl;
+    const fromRouter = firstQueryValue(routerQuery?.gclid);
+    const v = firstNonEmpty(fromUrl, fromRouter);
     if (v) gclidEl.value = v;
   }
 
@@ -164,11 +228,11 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
       redirInput.value = configured || fallback;
     }
 
-    fillFromUrlSearchParams(form, router.query);
+    fillFromUrlSearchParams(form, router.isReady ? router.query : {});
 
-    syncZohoLeadAttributionFields(form, router.query);
+    syncZohoLeadAttributionFields(form, router.isReady ? router.query : {});
     syncUtmDetailsField(form);
-  }, [router.query]);
+  }, [router.isReady, router.query]);
 
   const clearFieldError = (key) => {
     setErrors((prev) => {
@@ -182,7 +246,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
   const handleSubmit = (e) => {
     const form = formRef.current;
     if (!form) return;
-    fillFromUrlSearchParams(form, router.query);
+    fillFromUrlSearchParams(form, router.isReady ? router.query : {});
     const values = readFormValues(form);
     const next = validateConsultationForm(values);
     setErrors(next);
@@ -202,7 +266,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
     }
     const phoneEl = form.elements.namedItem('PhoneNumber_countrycode');
     if (phoneEl) phoneEl.value = values.phone;
-    syncZohoLeadAttributionFields(form, router.query);
+    syncZohoLeadAttributionFields(form, router.isReady ? router.query : {});
     syncUtmDetailsField(form);
   };
 

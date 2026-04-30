@@ -70,6 +70,18 @@ export const landingNextDoctorMeta = {
     locations: ['Electronic City', 'Bangalore'],
     languages: ['Kannada', 'English'],
   },
+  'Dr. Sowmya Rani Merugu': {
+    experience: '10+ years in reproductive medicine & obstetrics',
+    locations: ['Kalyan Nagar', 'Bangalore'],
+    languages: [
+      'English',
+      'Hindi',
+      'Telugu',
+      'Kannada',
+      'Tamil',
+      'Malayalam',
+    ],
+  },
 };
 
 export function getLandingDoctorMeta(name) {
