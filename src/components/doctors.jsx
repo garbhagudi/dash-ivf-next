@@ -4331,21 +4331,7 @@ export const doctors = [
                 type: 'paragraph',
                 children: [
                   {
-                    text: 'Dr. Sowmya Rani Merugu is a highly accomplished Fertility Specialist at GarbhaGudi IVF Centre, Kalyan Nagar, with good experience in Reproductive Medicine, High-Risk Obstetrics, and Minimal Access Surgery. Holding an MS in OBG and fellowships in both Reproductive Medicine and Laparoscopic Surgery, she is recognized for her surgical precision and evidence-based approach. She specializes in advanced IVF management, utilizing innovative techniques like "Embryo Glue" and precision diagnostics to provide couples with the highest standards of modern fertility care.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Known for her compassionate and holistic philosophy, Dr. Sowmya Rani tailors every treatment plan to meet the unique biological and emotional needs of her patients. Her ability to communicate fluently in six languages—English, Hindi, Telugu, Kannada, Tamil, and Malayalam—allows her to provide deeply personalized and accessible care to a diverse range of families. By integrating cutting-edge surgical interventions with empathetic counseling, she remains dedicated to helping couples navigate their journey to parenthood with confidence and success.',
+                    text: 'Dr. Sowmya Rani Merugu combines high-level surgical expertise with a deeply personal touch at GarbhaGudi IVF Centre. Specializing in advanced fertility treatments like "Embryo Glue," she blends modern science with a compassionate, holistic approach tailored to every couple. What truly sets her apart is her ability to connect with families in six different languages, ensuring you feel heard and supported throughout your journey. Whether navigating complex surgery or your first IVF cycle, Dr. Sowmya provides the expert, empathetic guidance needed to help you grow your family with confidence.',
                   },
                 ],
               },
