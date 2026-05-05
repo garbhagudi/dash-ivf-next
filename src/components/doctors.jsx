@@ -2,7 +2,7 @@ export const doctors = [
   {
     name: 'Dr Asha S Vijay',
     qualification: 'MBBS, DNB(OBG), DGO, PGD-RM&E',
-    designation: 'Medical Director - GarbhaGudi',
+    designation: 'Medical Director – GarbhaGudi',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/kTm169VTeyEFTwGhYTSQ',
     },
@@ -424,7 +424,7 @@ export const doctors = [
     },
   },
   {
-    name: 'Dr. S R Raajam Murali ',
+    name: 'Dr. S R Raajam Murali',
     qualification: 'MBBS MD FRM',
     designation: 'Senior Fertility Specialist & Cluster Clinician South',
     image: {
@@ -872,9 +872,9 @@ export const doctors = [
   },
 
   {
-    name: 'Dr Deepthi Venkatesh ',
+    name: 'Dr Deepthi Venkatesh',
     qualification: 'MBBS, MS(OBG), FRM',
-    designation: 'Fertility Specialist ',
+    designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmgrl937z0o3407pnmu6gj612',
     },
@@ -1515,7 +1515,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Sahana K',
-    qualification: 'MBBS, MS (OBG), DNB(OBG), FRM',
+    qualification: 'MBBS, MS (OBG), DNB (OBG), FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/sbq78oflRTqsc65HoRic',
@@ -1615,7 +1615,7 @@ export const doctors = [
   {
     name: 'Dr. Poornima M S',
     qualification: 'MBBS, MS (OBG), FRM, FMAS',
-    designation: 'Fertility Specialist ',
+    designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme71es9505cx07pibxq41o0c',
     },
@@ -2068,7 +2068,7 @@ export const doctors = [
   },
   {
     name: 'Dr. P. V. Vasavi Devi',
-    qualification: 'MBBS, DGO, FRM, FMAS ',
+    qualification: 'MBBS, DGO, FRM, FMAS',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmdycqzy60qj607pextxqewbq',
@@ -3394,7 +3394,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Harshitha P',
-    qualification: 'MBBS, MS (OBG), DNB,  FRM',
+    qualification: 'MBBS, MS (OBG), DNB, FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cme74104o06r107pfss7ag45e',
@@ -3850,7 +3850,7 @@ export const doctors = [
   },
   {
     name: 'Dr. Radha Puchalapalli',
-    qualification: 'Obstetrics, Gynecology & Reproductive Medicine',
+    qualification: 'MBBS, DGO, FRM',
     designation: 'Fertility Specialist',
     image: {
       url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/cmfc7r9gn1m6908o7dr61m4b2',
@@ -4306,6 +4306,51 @@ export const doctors = [
             children: [
               {
                 text: '\n',
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    name: 'Dr. Sowmya Rani Merugu',
+    qualification: 'MBBS, MS (OBG), FRM, Fellowship (Laparoscopic Surgery)',
+    designation: 'Fertility Specialist – GarbhaGudi IVF Centre, Kalyan Nagar',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmo3x0v8nblmw07pnajpsreyy',
+    },
+    imageAlt: 'IVF Specialist in Bangalore - Dr. Sowmya Rani Merugu',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Sowmya Rani Merugu is a highly accomplished Fertility Specialist at GarbhaGudi IVF Centre, Kalyan Nagar, with good experience in Reproductive Medicine, High-Risk Obstetrics, and Minimal Access Surgery. Holding an MS in OBG and fellowships in both Reproductive Medicine and Laparoscopic Surgery, she is recognized for her surgical precision and evidence-based approach. She specializes in advanced IVF management, utilizing innovative techniques like “Embryo Glue” and precision diagnostics to provide couples with the highest standards of modern fertility care.',
+                  },
+                ],
+              },
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Known for her compassionate and holistic philosophy, Dr. Sowmya Rani tailors every treatment plan to meet the unique biological and emotional needs of her patients. Her ability to communicate fluently in six languages—English, Hindi, Telugu, Kannada, Tamil, and Malayalam—allows her to provide deeply personalized and accessible care to a diverse range of families. By integrating cutting-edge surgical interventions with empathetic counseling, she remains dedicated to helping couples navigate their journey to parenthood with confidence and success.',
+                  },
+                ],
+              },
+            ],
+            className: 'text-lg text-brandDark mt-3 font-qs',
+          },
+          {
+            type: 'paragraph',
+            children: [
+              {
+                text: '',
               },
             ],
           },

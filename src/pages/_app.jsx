@@ -59,41 +59,56 @@ import '../styles/globals.css';
 import { DM_Sans } from 'next/font/google';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import Footer from 'components/footer/footer';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
-  display: 'swap', // Improves LCP by showing fallback font first
+  display: 'swap',
+  adjustFontFallback: true,
 });
 
 const SalesIQ = dynamic(() => import('components/SalesIQ'), { ssr: false });
+const SalesIQLandingNext = dynamic(
+  () => import('components/SalesIQLandingNext'),
+  { ssr: false },
+);
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
-  ssr: false,
-});
-const Footer = dynamic(() => import('components/footer/footer'), {
   ssr: false,
 });
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const isLandingNext = router.pathname === '/landing-next';
+  /**
+   * GTM + Hotjar set many third‑party cookies (Lighthouse “Best practices”).
+   * On `/landing-next` they are off unless you set:
+   * `NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT=true` in `.env.local`.
+   */
+  const loadMarketingTags =
+    !isLandingNext ||
+    process.env.NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT === 'true';
 
   return (
     <ThemeUIProvider theme={theme}>
       <Flex
         sx={{
-          minHeight: '100vh',
+          /* landing-next: avoid a tall empty band between page and site footer (space-between + short main). */
+          minHeight: isLandingNext ? 'auto' : '100vh',
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          justifyContent: isLandingNext ? 'flex-start' : 'space-between',
         }}
         className={dmSans.className}
         data-viewport-dxr=''
         suppressHydrationWarning
       >
-        <Script
-          id='gtm'
-          strategy='lazyOnload'
-          dangerouslySetInnerHTML={{
-            __html: `
+        {loadMarketingTags ? (
+          <>
+            <Script
+              id='gtm'
+              strategy='lazyOnload'
+              dangerouslySetInnerHTML={{
+                __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];
           w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
           var f=d.getElementsByTagName(s)[0],
@@ -103,13 +118,13 @@ function MyApp({ Component, pageProps }) {
           f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-NT9BZ69');
         `,
-          }}
-        />
-        <Script
-          id='hotjar'
-          strategy='lazyOnload'
-          dangerouslySetInnerHTML={{
-            __html: `
+              }}
+            />
+            <Script
+              id='hotjar'
+              strategy='lazyOnload'
+              dangerouslySetInnerHTML={{
+                __html: `
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:6671155,hjsv:6};
@@ -119,14 +134,26 @@ function MyApp({ Component, pageProps }) {
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             `,
+              }}
+            />
+          </>
+        ) : null}
+        <main
+          sx={{
+            variant: 'layout.main',
+            /* Prevent flex column from leaving a tall empty strip before <Footer> on short pages. */
+            ...(isLandingNext
+              ? { flex: '0 0 auto', flexGrow: 0, minHeight: 0 }
+              : {}),
           }}
-        />
-        <main sx={{ variant: 'layout.main' }}>
+        >
           <Component {...pageProps} />
         </main>
 
-        <FloatPhone />
-        {router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
+        {router.pathname !== '/landing-next' && <FloatPhone />}
+        {router.pathname === '/landing-next' && <SalesIQLandingNext />}
+        {router.pathname !== '/landing-next' &&
+          router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
         <Footer />
       </Flex>
     </ThemeUIProvider>
