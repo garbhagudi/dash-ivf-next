@@ -60,6 +60,34 @@ export function utmFromUrlString(url) {
   }
 }
 
+/**
+ * Read `utm_*` from `document.cookie` (set site-wide by Zoho's `ZFAdvLead`
+ * tracker — covers organic/referral/gclid auto-attribution and persists
+ * across in-app navigations where the URL no longer has `?utm_*=`).
+ */
+export function utmFromCookies() {
+  if (typeof document === 'undefined' || !document.cookie) return {};
+  const map = {};
+  for (const part of document.cookie.split('; ')) {
+    const eq = part.indexOf('=');
+    if (eq === -1) continue;
+    map[part.slice(0, eq)] = part.slice(eq + 1);
+  }
+  const out = {};
+  for (const [low, high] of UTM_PAIRS) {
+    const raw = map[low];
+    if (!raw) continue;
+    let v;
+    try {
+      v = decodeURIComponent(raw).trim();
+    } catch {
+      v = String(raw).trim();
+    }
+    if (v) out[high] = v;
+  }
+  return out;
+}
+
 /** Single-line summary for a custom “UTM / campaign details” CRM field. */
 export function buildUtmCampaignDetailsLine(utmHigh) {
   if (!utmHigh || typeof utmHigh !== 'object') return '';
@@ -121,16 +149,19 @@ export function finalizeLeadRowForZohoApi(row) {
 
 /**
  * Client: merge UTM into react-hook-form `data` before POST.
- * Window search overrides router (SPA timing).
+ * Priority (lowest → highest, later wins): cookies → router → window URL.
+ * Cookies cover SPA navigations and Zoho's organic/referral/gclid attribution.
+ * Window search overrides router for SPA timing edge cases.
  */
 export function mergeUtmIntoClientLeadData(formData, router) {
   const detailsField =
     (typeof process !== 'undefined' &&
       process.env.NEXT_PUBLIC_ZOHO_CRM_UTM_DETAILS_API_NAME?.trim()) ||
     'UTM_Campaign_Details';
+  const fromCookies = utmFromCookies();
   const fromRouter = utmFromRouterQuery(router?.query);
   const fromWin = utmFromWindowLocation();
-  const utm = { ...fromRouter, ...fromWin };
+  const utm = { ...fromCookies, ...fromRouter, ...fromWin };
   const out = { ...formData, ...utm };
   const details = buildUtmCampaignDetailsLine(utm);
   if (details && (!out[detailsField] || String(out[detailsField]).trim() === '')) {

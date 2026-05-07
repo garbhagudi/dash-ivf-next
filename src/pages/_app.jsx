@@ -102,6 +102,21 @@ function MyApp({ Component, pageProps }) {
         data-viewport-dxr=''
         suppressHydrationWarning
       >
+        {/*
+          Zoho UTM tracker (ZFAdvLead) — runs on every route so URL UTMs are
+          captured into 1st-party cookies and replayed onto any embedded
+          Zoho form (`action*="formperma"`) anywhere on the site. Also handles
+          organic-search / referral / gclid auto-attribution.
+
+          `afterInteractive` (matches Zoho's official inline-`<script>` placement)
+          so cookies are set before the user can submit on first paint. Switching
+          to `lazyOnload` makes a fast-clicker race possible on first visits.
+        */}
+        <Script
+          id='gg-zoho-zfadvlead-utm'
+          src='/zoho-forms/zf-zfadvlead-utm.js'
+          strategy='afterInteractive'
+        />
         {loadMarketingTags ? (
           <>
             <Script

@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Script from 'next/script';
 import { useEffect, useLayoutEffect } from 'react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { landingNextHeroYoutubePosterSrc } from 'data/landingNextHeroVideo';
@@ -46,11 +45,7 @@ export default function LandingNextPage() {
 
   return (
     <div className='bg-gradient-to-b from-white via-brandPink5/20 to-white md:min-h-screen'>
-      <Script
-        id='gg-zoho-zfadvlead-utm'
-        src='/zoho-forms/zf-zfadvlead-utm.js'
-        strategy='lazyOnload'
-      />
+      {/* Zoho UTM tracker is now loaded site-wide in `_app.jsx`. */}
       <Head>
         <title>
           GarbhaGudi IVF | Fertility consultation (new experience)
