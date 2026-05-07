@@ -23,10 +23,31 @@ import {
 } from 'data/landingNextZohoForm';
 import { firstQueryValue, utmFromCookies } from 'lib/zohoCrmLeadPayload';
 import { useRouter } from 'next/router';
-import { useEffect, useId, useRef, useState } from 'react';
+import {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
+import { flushSync } from 'react-dom';
+
+/**
+ * `useLayoutEffect` warns on SSR. Fall back to `useEffect` on the server so
+ * the build stays clean while still running synchronously pre-paint on the
+ * client (lets us populate hidden fields before any submit can fire).
+ */
+const useIsoLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 /** Same-tab backup when in-app navigation drops ?utm_* from the URL bar. */
 const LANDING_NEXT_UTM_SESSION_KEY = 'gg_landing_next_utm_v1';
+
+/** No-op handler so React treats hidden marketing inputs as *controlled*
+ *  without warning about a missing `onChange`. They are populated only by
+ *  the surrounding component, never by user typing.
+ */
+const NOOP_ONCHANGE = () => {};
 
 /**
  * Query string on the main URL plus any `?…` segment inside the hash (some trackers
@@ -107,30 +128,6 @@ function syncZohoLeadAttributionFields(form, query) {
   }
 }
 
-function buildUtmDetailsFromForm(form, extraPairs = []) {
-  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-  const parts = [];
-  keys.forEach((k) => {
-    const v = String(form.elements.namedItem(k)?.value ?? '').trim();
-    if (v) parts.push(`${k}=${v}`);
-  });
-  extraPairs.forEach(({ k, v }) => {
-    const t = String(v ?? '').trim();
-    if (t) parts.push(`${k}=${t}`);
-  });
-  return parts.join(' | ');
-}
-
-function syncUtmDetailsField(form) {
-  const detailsEl = form.elements.namedItem(landingNextZohoFormUtmDetailsFieldName);
-  if (!detailsEl || !('value' in detailsEl)) return;
-  const sp = getMarketingSearchParams();
-  const utmId = (sp.get('utm_id') || '').trim();
-  const extras = utmId ? [{ k: 'utm_id', v: utmId }] : [];
-  const details = buildUtmDetailsFromForm(form, extras);
-  detailsEl.value = details;
-}
-
 /**
  * `utmFromCookies()` returns Zoho-CRM-style API names (`UTM_Source`, …).
  * Re-key to the lowercase form field names this component uses internally.
@@ -146,73 +143,87 @@ function readCookieUtmsLower() {
   };
 }
 
-function fillFromUrlSearchParams(form, routerQuery) {
-  if (typeof window === 'undefined') return;
+function readGclidCookie() {
+  if (typeof document === 'undefined' || !document.cookie) return '';
+  const m = document.cookie.match(/(?:^|; )gclid=([^;]+)/);
+  if (!m) return '';
+  try {
+    return decodeURIComponent(m[1]).trim();
+  } catch {
+    return m[1].trim();
+  }
+}
+
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+const EMPTY_HIDDEN_STATE = {
+  utm_source: '',
+  utm_medium: '',
+  utm_campaign: '',
+  utm_term: '',
+  utm_content: '',
+  utm_details: '',
+  gclid: '',
+  zf_referrer_name: '',
+  zf_redirect_url: '',
+  page_visited: '',
+};
+
+/**
+ * Compute the marketing/attribution values to POST.
+ * Priority for each `utm_*`: URL > router > cookie (Zoho ZFAdvLead) > sessionStorage > env default.
+ * Reading is *synchronous* so callers can use the result both at first paint and at submit time.
+ */
+function computeHiddenState(routerQuery) {
+  if (typeof window === 'undefined') return EMPTY_HIDDEN_STATE;
+
   const sp = getMarketingSearchParams();
   const sessionSaved = readSessionUtms();
   const cookieUtms = readCookieUtmsLower();
 
-  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-  const capturedForSession = {};
+  const defaults = {
+    utm_source: landingNextZohoDefaultUtmSource,
+    utm_medium: landingNextZohoDefaultUtmMedium,
+    utm_campaign: landingNextZohoDefaultUtmCampaign,
+    utm_term: landingNextZohoDefaultUtmTerm,
+    utm_content: landingNextZohoDefaultUtmContent,
+  };
 
-  keys.forEach((key) => {
-    const el = form.elements.namedItem(key);
-    if (!el || !('value' in el)) return;
-
+  const utm = {};
+  UTM_KEYS.forEach((key) => {
     const fromUrl = (sp.get(key) || '').trim();
     const fromRouter = firstQueryValue(routerQuery?.[key]);
     const fromCookie = (cookieUtms[key] || '').trim();
     const fromSession =
       typeof sessionSaved?.[key] === 'string' ? sessionSaved[key].trim() : '';
-
-    /* Priority: URL > router > cookie (Zoho ZFAdvLead) > sessionStorage. */
-    const val = firstNonEmpty(fromUrl, fromRouter, fromCookie, fromSession);
-    if (val) {
-      el.value = val;
-      capturedForSession[key] = val;
-      return;
-    }
-
-    const defaults = {
-      utm_source: landingNextZohoDefaultUtmSource,
-      utm_medium: landingNextZohoDefaultUtmMedium,
-      utm_campaign: landingNextZohoDefaultUtmCampaign,
-      utm_term: landingNextZohoDefaultUtmTerm,
-      utm_content: landingNextZohoDefaultUtmContent,
-    };
-    const fallback = defaults[key];
-    if (typeof fallback === 'string' && fallback.trim()) el.value = fallback.trim();
+    const fallback = (defaults[key] || '').trim();
+    utm[key] = firstNonEmpty(fromUrl, fromRouter, fromCookie, fromSession, fallback);
   });
 
-  if (Object.keys(capturedForSession).length > 0) {
-    writeSessionUtms({ ...(sessionSaved || {}), ...capturedForSession });
-  }
+  const utmIdRaw = (sp.get('utm_id') || '').trim();
+  const detailsParts = UTM_KEYS.filter((k) => utm[k]).map((k) => `${k}=${utm[k]}`);
+  if (utmIdRaw) detailsParts.push(`utm_id=${utmIdRaw}`);
 
-  const gclidEl = form.elements.namedItem('zc_gad');
-  if (gclidEl && 'value' in gclidEl) {
-    const fromUrl = (sp.get('gclid') || '').trim();
-    const fromRouter = firstQueryValue(routerQuery?.gclid);
-    const fromCookie =
-      typeof document !== 'undefined' && document.cookie
-        ? (() => {
-            const m = document.cookie.match(/(?:^|; )gclid=([^;]+)/);
-            try {
-              return m ? decodeURIComponent(m[1]).trim() : '';
-            } catch {
-              return m ? m[1].trim() : '';
-            }
-          })()
-        : '';
-    const v = firstNonEmpty(fromUrl, fromRouter, fromCookie);
-    if (v) gclidEl.value = v;
-  }
+  const gclid = firstNonEmpty(
+    (sp.get('gclid') || '').trim(),
+    firstQueryValue(routerQuery?.gclid),
+    readGclidCookie(),
+  );
 
-  // Optional: if your Zoho form has a "Page Visited" field (your embed shows `MultiLine1`)
-  // this ensures it gets filled even on SPA navigations.
-  const pageVisitedEl = form.elements.namedItem('MultiLine1');
-  if (pageVisitedEl && 'value' in pageVisitedEl) {
-    pageVisitedEl.value = window.location.href;
-  }
+  const referrer =
+    typeof document !== 'undefined' ? document.referrer || '' : '';
+  const redirectUrl =
+    landingNextZohoFormRedirectUrlEnv || `${window.location.origin}/thank-you.html`;
+  const pageVisited = window.location.href;
+
+  return {
+    ...utm,
+    utm_details: detailsParts.join(' | '),
+    gclid,
+    zf_referrer_name: referrer,
+    zf_redirect_url: redirectUrl,
+    page_visited: pageVisited,
+  };
 }
 
 function validateConsultationForm({ name, phone, email }) {
@@ -236,31 +247,28 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
   const suffix = useId().replace(/:/g, '');
   const formRef = useRef(null);
   const [errors, setErrors] = useState({});
+  const [hidden, setHidden] = useState(EMPTY_HIDDEN_STATE);
   const isSection = variant === 'section';
 
-  useEffect(() => {
-    const form = formRef.current;
-    if (!form) return;
-
-    const refInput = form.querySelector('input[name="zf_referrer_name"]');
-    if (refInput && typeof document !== 'undefined') {
-      refInput.value = document.referrer || '';
+  /*
+   * Populate marketing/attribution state from the URL/router/cookies/session.
+   * `useLayoutEffect` runs synchronously after mount + before paint, so values
+   * are present in the DOM before the user can possibly click Submit. We
+   * re-run on every router-query identity change (Next.js mints a fresh
+   * `query` object per route push) and persist newly-captured UTMs to
+   * sessionStorage as a per-tab safety net.
+   */
+  useIsoLayoutEffect(() => {
+    const next = computeHiddenState(router.isReady ? router.query : {});
+    setHidden(next);
+    const captured = {};
+    UTM_KEYS.forEach((k) => {
+      if (next[k]) captured[k] = next[k];
+    });
+    if (Object.keys(captured).length > 0) {
+      const prev = readSessionUtms() || {};
+      writeSessionUtms({ ...prev, ...captured });
     }
-
-    const redirInput = form.querySelector('input[name="zf_redirect_url"]');
-    if (redirInput) {
-      const configured = landingNextZohoFormRedirectUrlEnv;
-      const fallback =
-        typeof window !== 'undefined'
-          ? `${window.location.origin}/thank-you.html`
-          : '';
-      redirInput.value = configured || fallback;
-    }
-
-    fillFromUrlSearchParams(form, router.isReady ? router.query : {});
-
-    syncZohoLeadAttributionFields(form, router.isReady ? router.query : {});
-    syncUtmDetailsField(form);
   }, [router.isReady, router.query]);
 
   const clearFieldError = (key) => {
@@ -275,7 +283,12 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
   const handleSubmit = (e) => {
     const form = formRef.current;
     if (!form) return;
-    fillFromUrlSearchParams(form, router.isReady ? router.query : {});
+
+    /* Recompute right before submit and flush *synchronously* so the DOM is
+     * up to date before the browser proceeds with the default form POST. */
+    const fresh = computeHiddenState(router.isReady ? router.query : {});
+    flushSync(() => setHidden(fresh));
+
     const values = readFormValues(form);
     const next = validateConsultationForm(values);
     setErrors(next);
@@ -296,7 +309,6 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
     const phoneEl = form.elements.namedItem('PhoneNumber_countrycode');
     if (phoneEl) phoneEl.value = values.phone;
     syncZohoLeadAttributionFields(form, router.isReady ? router.query : {});
-    syncUtmDetailsField(form);
   };
 
   if (!landingNextZohoFormActionUrl) {
@@ -349,18 +361,66 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
           noValidate
           onSubmit={handleSubmit}
         >
-          <input type='hidden' name='zf_referrer_name' defaultValue='' />
-          <input type='hidden' name='zf_redirect_url' defaultValue='' />
-          <input type='hidden' name='zc_gad' defaultValue='' />
-          <input type='hidden' name='utm_source' defaultValue='' />
-          <input type='hidden' name='utm_medium' defaultValue='' />
-          <input type='hidden' name='utm_campaign' defaultValue='' />
-          <input type='hidden' name='utm_term' defaultValue='' />
-          <input type='hidden' name='utm_content' defaultValue='' />
+          {/*
+            Hidden marketing/attribution fields are *controlled* by React
+            state so the values that React renders are the values the browser
+            POSTs — no race with hydration, dynamic `<Suspense>` mounts, or
+            late `el.value = …` writes that previously appeared lost in the
+            staging deployment.
+          */}
+          <input
+            type='hidden'
+            name='zf_referrer_name'
+            value={hidden.zf_referrer_name}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='zf_redirect_url'
+            value={hidden.zf_redirect_url}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='zc_gad'
+            value={hidden.gclid}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='utm_source'
+            value={hidden.utm_source}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='utm_medium'
+            value={hidden.utm_medium}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='utm_campaign'
+            value={hidden.utm_campaign}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='utm_term'
+            value={hidden.utm_term}
+            onChange={NOOP_ONCHANGE}
+          />
+          <input
+            type='hidden'
+            name='utm_content'
+            value={hidden.utm_content}
+            onChange={NOOP_ONCHANGE}
+          />
           <input
             type='hidden'
             name={landingNextZohoFormUtmDetailsFieldName}
-            defaultValue=''
+            value={hidden.utm_details}
+            onChange={NOOP_ONCHANGE}
           />
           <input
             type='hidden'
