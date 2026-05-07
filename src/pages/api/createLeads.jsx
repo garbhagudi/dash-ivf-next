@@ -1,3 +1,8 @@
+import {
+  finalizeLeadRowForZohoApi,
+  mergeUtmIntoServerLeadData,
+} from 'lib/zohoCrmLeadPayload';
+
 let accessToken = null;
 
 const getAccessToken = async () => {
@@ -36,7 +41,12 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to retrieve access token' });
     }
 
-    const requestData = JSON.stringify({ data: [req.body.data] });
+    const merged = mergeUtmIntoServerLeadData(req.body?.data, {
+      referer: req.headers?.referer,
+      bodyUtm: req.body?.utm,
+    });
+    const row = finalizeLeadRowForZohoApi(merged);
+    const requestData = JSON.stringify({ data: [row] });
 
     const response = await fetch(process.env.ZOHO_API_URL, {
       method: 'POST',

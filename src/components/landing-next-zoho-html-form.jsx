@@ -21,7 +21,7 @@ import {
   landingNextZohoDefaultUtmTerm,
   landingNextZohoDefaultUtmContent,
 } from 'data/landingNextZohoForm';
-import { firstQueryValue } from 'lib/zohoCrmLeadPayload';
+import { firstQueryValue, utmFromCookies } from 'lib/zohoCrmLeadPayload';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useRef, useState } from 'react';
 
@@ -131,10 +131,26 @@ function syncUtmDetailsField(form) {
   detailsEl.value = details;
 }
 
+/**
+ * `utmFromCookies()` returns Zoho-CRM-style API names (`UTM_Source`, …).
+ * Re-key to the lowercase form field names this component uses internally.
+ */
+function readCookieUtmsLower() {
+  const high = utmFromCookies();
+  return {
+    utm_source: high.UTM_Source || '',
+    utm_medium: high.UTM_Medium || '',
+    utm_campaign: high.UTM_Campaign || '',
+    utm_term: high.UTM_Term || '',
+    utm_content: high.UTM_Content || '',
+  };
+}
+
 function fillFromUrlSearchParams(form, routerQuery) {
   if (typeof window === 'undefined') return;
   const sp = getMarketingSearchParams();
   const sessionSaved = readSessionUtms();
+  const cookieUtms = readCookieUtmsLower();
 
   const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   const capturedForSession = {};
@@ -145,10 +161,12 @@ function fillFromUrlSearchParams(form, routerQuery) {
 
     const fromUrl = (sp.get(key) || '').trim();
     const fromRouter = firstQueryValue(routerQuery?.[key]);
+    const fromCookie = (cookieUtms[key] || '').trim();
     const fromSession =
       typeof sessionSaved?.[key] === 'string' ? sessionSaved[key].trim() : '';
 
-    const val = firstNonEmpty(fromUrl, fromRouter, fromSession);
+    /* Priority: URL > router > cookie (Zoho ZFAdvLead) > sessionStorage. */
+    const val = firstNonEmpty(fromUrl, fromRouter, fromCookie, fromSession);
     if (val) {
       el.value = val;
       capturedForSession[key] = val;
@@ -174,7 +192,18 @@ function fillFromUrlSearchParams(form, routerQuery) {
   if (gclidEl && 'value' in gclidEl) {
     const fromUrl = (sp.get('gclid') || '').trim();
     const fromRouter = firstQueryValue(routerQuery?.gclid);
-    const v = firstNonEmpty(fromUrl, fromRouter);
+    const fromCookie =
+      typeof document !== 'undefined' && document.cookie
+        ? (() => {
+            const m = document.cookie.match(/(?:^|; )gclid=([^;]+)/);
+            try {
+              return m ? decodeURIComponent(m[1]).trim() : '';
+            } catch {
+              return m ? m[1].trim() : '';
+            }
+          })()
+        : '';
+    const v = firstNonEmpty(fromUrl, fromRouter, fromCookie);
     if (v) gclidEl.value = v;
   }
 
