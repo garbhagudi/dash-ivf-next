@@ -5,6 +5,9 @@
  * Optional: `NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_REDIRECT_URL` — absolute URL after
  * submit (defaults to current origin + `/thank-you.html`).
  */
+/* Action URL pulled verbatim from Zoho's official "Share → Embed → HTML/CSS"
+ * download for the "Book your Consultation" form. The native browser POST
+ * (multipart/form-data) submits straight to Zoho — no proxy, no JS captcha. */
 const DEFAULT_ACTION =
   'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/GG/formperma/KmrIM1SMpY6gHfnIViilsu7uT_rBS3EbvFfnCqaLSX0/htmlRecords/submit';
 
@@ -43,6 +46,19 @@ export const landingNextZohoFormLeadSubSourceFieldName =
 export const landingNextZohoFormUtmDetailsFieldName =
   process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_FIELD_UTM_DETAILS?.trim() ||
   'UTM_Campaign_Details';
+
+/**
+ * Google reCAPTCHA v2 (Checkbox) site key. Public — safe to ship to the
+ * browser. Override at deploy time with `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`.
+ *
+ * The matching secret lives only on the server in `RECAPTCHA_SECRET_KEY`
+ * (no `NEXT_PUBLIC_` prefix → never bundled into the browser).
+ *
+ * Must be a v2 key (Checkbox or Invisible). v3 keys do NOT render an
+ * interactive widget and will silently no-op.
+ */
+export const landingNextRecaptchaSiteKey =
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim()
 
 /**
  * Optional defaults for UTM when URL has no utm_* query params.
