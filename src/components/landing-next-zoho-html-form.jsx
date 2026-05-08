@@ -263,7 +263,11 @@ function validateConsultationForm({ name, phone, email }) {
   return err;
 }
 
-export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
+export default function LandingNextZohoHtmlForm({
+  variant = 'section',
+  title,
+  submitLabel = 'Get a Call Back',
+}) {
   const router = useRouter();
   const suffix = useId().replace(/:/g, '');
   const formRef = useRef(null);
@@ -516,6 +520,325 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
   }
 
   const fieldShell = 'min-w-0 flex-1';
+  const isBanner = variant === 'banner';
+
+  /*
+   * Hidden marketing/attribution inputs are *controlled* by React state so
+   * the values React renders are the values the browser POSTs (no race
+   * with hydration / late `el.value = …` writes). Extracted into a const
+   * so each variant render branch can drop them into its own form.
+   */
+  const hiddenAttributionFields = (
+    <>
+      <input
+        type='hidden'
+        name='zf_referrer_name'
+        value={hidden.zf_referrer_name}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='zf_redirect_url'
+        value={hidden.zf_redirect_url}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='zc_gad'
+        value={hidden.gclid}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='utm_source'
+        value={hidden.utm_source}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='utm_medium'
+        value={hidden.utm_medium}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='utm_campaign'
+        value={hidden.utm_campaign}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='utm_term'
+        value={hidden.utm_term}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name='utm_content'
+        value={hidden.utm_content}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name={landingNextZohoFormUtmDetailsFieldName}
+        value={hidden.utm_details}
+        onChange={NOOP_ONCHANGE}
+      />
+      <input
+        type='hidden'
+        name={landingNextZohoFormLeadSourceFieldName}
+        defaultValue={landingNextZohoLeadSource}
+      />
+      <input
+        type='hidden'
+        name={landingNextZohoFormLeadSubSourceFieldName}
+        defaultValue={landingNextZohoLeadSubSource}
+      />
+    </>
+  );
+
+  /* Captcha popup — shared by every variant. */
+  const captchaModal = captchaModalOpen ? (
+    <div
+      role='dialog'
+      aria-modal='true'
+      aria-labelledby={`captcha-title-${suffix}`}
+      className='fixed inset-0 z-[100] flex items-center justify-center px-4 py-6'
+    >
+      <button
+        type='button'
+        aria-label='Close verification dialog'
+        disabled={submitting}
+        onClick={handleCloseCaptchaModal}
+        className='absolute inset-0 h-full w-full cursor-default bg-black/55 backdrop-blur-sm disabled:cursor-not-allowed'
+      />
+      <div className='relative z-10 w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl'>
+        <div className='flex items-start justify-between gap-4 border-b border-gray-100 px-5 py-4 sm:px-6'>
+          <div>
+            <h3
+              id={`captcha-title-${suffix}`}
+              className='font-heading text-base font-bold text-brandPurpleDark sm:text-lg'
+            >
+              Verify and submit
+            </h3>
+            <p className='mt-1 text-xs text-gray-600 sm:text-sm'>
+              Please confirm you&apos;re not a robot to send your details.
+            </p>
+          </div>
+          <button
+            type='button'
+            aria-label='Close'
+            disabled={submitting}
+            onClick={handleCloseCaptchaModal}
+            className='-mr-1 -mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-gray-500 transition hover:bg-gray-100 hover:text-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-50'
+          >
+            <span aria-hidden='true' className='text-xl leading-none'>
+              ×
+            </span>
+          </button>
+        </div>
+
+        <div className='flex flex-col items-center gap-3 px-5 py-5 sm:px-6'>
+          {/*
+           * reCAPTCHA v2 (checkbox) widget mounts here. The effect above
+           * injects api.js and calls `grecaptcha.render` into this div
+           * (304×78, fixed by Google).
+           */}
+          <div ref={recaptchaContainerRef} />
+          {captchaError ? (
+            <p
+              role='alert'
+              className='text-center text-xs font-medium text-red-600 sm:text-sm'
+            >
+              {captchaError}
+            </p>
+          ) : null}
+          <p className='text-center text-[11px] leading-snug text-gray-500'>
+            Protected by reCAPTCHA —{' '}
+            <a
+              href='https://policies.google.com/privacy'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline hover:text-gray-700'
+            >
+              Privacy
+            </a>{' '}
+            /{' '}
+            <a
+              href='https://policies.google.com/terms'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline hover:text-gray-700'
+            >
+              Terms
+            </a>
+            .
+          </p>
+        </div>
+
+        <div className='flex flex-col-reverse gap-2 border-t border-gray-100 px-5 py-4 sm:flex-row sm:justify-end sm:gap-3 sm:px-6'>
+          <button
+            type='button'
+            onClick={handleCloseCaptchaModal}
+            disabled={submitting}
+            className='inline-flex h-11 items-center justify-center rounded-xl border border-gray-300 bg-white px-5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-50'
+          >
+            Cancel
+          </button>
+          <button
+            type='button'
+            onClick={handleConfirmCaptcha}
+            disabled={submitting || !captchaSolved}
+            aria-busy={submitting ? 'true' : 'false'}
+            className='inline-flex h-11 items-center justify-center rounded-xl bg-brandPink px-5 text-sm font-bold text-white shadow-md shadow-brandPink/30 transition hover:bg-brandPink2 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-70'
+          >
+            {submitting ? 'Verifying…' : 'Verify & Submit'}
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : null;
+
+  /*
+   * Banner variant — matches the home-page hero panel:
+   * teal background (provided by parent), white heading, gray-pill labels
+   * left of each input, "Get a Call Back" submit button. Wires into the
+   * same Zoho-form POST + captcha popup as the other variants.
+   */
+  if (isBanner) {
+    const bannerInput =
+      'w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none';
+    const bannerLabelPill =
+      'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark';
+
+    return (
+      <div
+        className='zcwf_lblLeft crmWebToEntityForm mx-auto h-auto w-full rounded-lg bg-transparent'
+        data-gg-zoho-html-form
+      >
+        <form
+          ref={formRef}
+          action={landingNextZohoFormActionUrl}
+          name='form'
+          id={`zoho-book-form-${suffix}`}
+          method='POST'
+          acceptCharset='UTF-8'
+          encType='multipart/form-data'
+          noValidate
+          onSubmit={handleSubmit}
+        >
+          {hiddenAttributionFields}
+
+          {title ? (
+            <div className='pb-4 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
+              {title}
+            </div>
+          ) : null}
+
+          <div className='mx-auto flex flex-col space-y-5 px-3'>
+            <div className='relative mx-auto w-full max-w-sm'>
+              <label
+                htmlFor={`SingleLine-${suffix}`}
+                className='flex items-center justify-start'
+              >
+                <span className={bannerLabelPill}>Full Name</span>
+                <input
+                  id={`SingleLine-${suffix}`}
+                  type='text'
+                  name='SingleLine'
+                  defaultValue=''
+                  maxLength={255}
+                  placeholder='Enter full name'
+                  autoComplete='name'
+                  className={bannerInput}
+                  aria-invalid={errors.name ? 'true' : 'false'}
+                  fieldType={1}
+                  onInput={() => clearFieldError('name')}
+                />
+              </label>
+              {errors.name ? (
+                <p role='alert' className='mt-1 text-sm text-red-200'>
+                  {errors.name}
+                </p>
+              ) : null}
+            </div>
+
+            <div className='relative mx-auto w-full max-w-sm'>
+              <label
+                htmlFor={`international_PhoneNumber_countrycode-${suffix}`}
+                className='flex items-center justify-start'
+              >
+                <span className={bannerLabelPill}>Phone</span>
+                <input
+                  id={`international_PhoneNumber_countrycode-${suffix}`}
+                  type='text'
+                  name='PhoneNumber_countrycode'
+                  compname='PhoneNumber'
+                  phoneFormat='1'
+                  isCountryCodeEnabled='false'
+                  maxLength={20}
+                  defaultValue=''
+                  placeholder='Enter phone number'
+                  inputMode='numeric'
+                  autoComplete='tel'
+                  className={bannerInput}
+                  aria-invalid={errors.phone ? 'true' : 'false'}
+                  fieldType={11}
+                  onInput={() => clearFieldError('phone')}
+                />
+              </label>
+              {errors.phone ? (
+                <p role='alert' className='mt-1 text-sm text-red-200'>
+                  {errors.phone}
+                </p>
+              ) : null}
+            </div>
+
+            <div className='relative mx-auto w-full max-w-sm'>
+              <label
+                htmlFor={`Email-${suffix}`}
+                className='flex items-center justify-start'
+              >
+                <span className={bannerLabelPill}>Email</span>
+                <input
+                  id={`Email-${suffix}`}
+                  type='email'
+                  name='Email'
+                  maxLength={255}
+                  defaultValue=''
+                  placeholder='Enter email'
+                  autoComplete='email'
+                  className={bannerInput}
+                  aria-invalid={errors.email ? 'true' : 'false'}
+                  fieldType={9}
+                  onInput={() => clearFieldError('email')}
+                />
+              </label>
+              {errors.email ? (
+                <p role='alert' className='mt-1 text-sm text-red-200'>
+                  {errors.email}
+                </p>
+              ) : null}
+            </div>
+          </div>
+
+          <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
+            <button
+              type='submit'
+              disabled={submitting || captchaModalOpen}
+              aria-haspopup='dialog'
+              aria-expanded={captchaModalOpen ? 'true' : 'false'}
+              className='flex items-center justify-center gap-2 rounded-md bg-[#ea4b6a] px-6 py-2 text-base font-bold text-white transition hover:bg-[#ee6f88] disabled:cursor-not-allowed disabled:opacity-70'
+            >
+              {submitLabel}
+            </button>
+          </div>
+        </form>
+
+        {captchaModal}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -553,77 +876,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
           noValidate
           onSubmit={handleSubmit}
         >
-          {/*
-            Hidden marketing/attribution fields are *controlled* by React
-            state so the values that React renders are the values the browser
-            POSTs — no race with hydration, dynamic `<Suspense>` mounts, or
-            late `el.value = …` writes that previously appeared lost in the
-            staging deployment.
-          */}
-          <input
-            type='hidden'
-            name='zf_referrer_name'
-            value={hidden.zf_referrer_name}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='zf_redirect_url'
-            value={hidden.zf_redirect_url}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='zc_gad'
-            value={hidden.gclid}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='utm_source'
-            value={hidden.utm_source}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='utm_medium'
-            value={hidden.utm_medium}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='utm_campaign'
-            value={hidden.utm_campaign}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='utm_term'
-            value={hidden.utm_term}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name='utm_content'
-            value={hidden.utm_content}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name={landingNextZohoFormUtmDetailsFieldName}
-            value={hidden.utm_details}
-            onChange={NOOP_ONCHANGE}
-          />
-          <input
-            type='hidden'
-            name={landingNextZohoFormLeadSourceFieldName}
-            defaultValue={landingNextZohoLeadSource}
-          />
-          <input
-            type='hidden'
-            name={landingNextZohoFormLeadSubSourceFieldName}
-            defaultValue={landingNextZohoLeadSubSource}
-          />
+          {hiddenAttributionFields}
 
           {!isSection ? (
             <h3 className='text-center font-heading text-lg font-bold text-brandPurpleDark md:text-left'>
@@ -741,106 +994,7 @@ export default function LandingNextZohoHtmlForm({ variant = 'section' }) {
         </form>
       </div>
 
-      {captchaModalOpen ? (
-        <div
-          role='dialog'
-          aria-modal='true'
-          aria-labelledby={`captcha-title-${suffix}`}
-          className='fixed inset-0 z-[100] flex items-center justify-center px-4 py-6'
-        >
-          <button
-            type='button'
-            aria-label='Close verification dialog'
-            disabled={submitting}
-            onClick={handleCloseCaptchaModal}
-            className='absolute inset-0 h-full w-full cursor-default bg-black/55 backdrop-blur-sm disabled:cursor-not-allowed'
-          />
-          <div className='relative z-10 w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl'>
-            <div className='flex items-start justify-between gap-4 border-b border-gray-100 px-5 py-4 sm:px-6'>
-              <div>
-                <h3
-                  id={`captcha-title-${suffix}`}
-                  className='font-heading text-base font-bold text-brandPurpleDark sm:text-lg'
-                >
-                  Verify and submit
-                </h3>
-                <p className='mt-1 text-xs text-gray-600 sm:text-sm'>
-                  Please confirm you&apos;re not a robot to send your details.
-                </p>
-              </div>
-              <button
-                type='button'
-                aria-label='Close'
-                disabled={submitting}
-                onClick={handleCloseCaptchaModal}
-                className='-mr-1 -mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-gray-500 transition hover:bg-gray-100 hover:text-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-50'
-              >
-                <span aria-hidden='true' className='text-xl leading-none'>
-                  ×
-                </span>
-              </button>
-            </div>
-
-            <div className='flex flex-col items-center gap-3 px-5 py-5 sm:px-6'>
-              {/*
-               * reCAPTCHA v2 (checkbox) widget mounts here. The effect
-               * above injects api.js and calls `grecaptcha.render` into
-               * this div (304×78, fixed by Google).
-               */}
-              <div ref={recaptchaContainerRef} />
-              {captchaError ? (
-                <p
-                  role='alert'
-                  className='text-center text-xs font-medium text-red-600 sm:text-sm'
-                >
-                  {captchaError}
-                </p>
-              ) : null}
-              <p className='text-center text-[11px] leading-snug text-gray-500'>
-                Protected by reCAPTCHA —{' '}
-                <a
-                  href='https://policies.google.com/privacy'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='underline hover:text-gray-700'
-                >
-                  Privacy
-                </a>{' '}
-                /{' '}
-                <a
-                  href='https://policies.google.com/terms'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='underline hover:text-gray-700'
-                >
-                  Terms
-                </a>
-                .
-              </p>
-            </div>
-
-            <div className='flex flex-col-reverse gap-2 border-t border-gray-100 px-5 py-4 sm:flex-row sm:justify-end sm:gap-3 sm:px-6'>
-              <button
-                type='button'
-                onClick={handleCloseCaptchaModal}
-                disabled={submitting}
-                className='inline-flex h-11 items-center justify-center rounded-xl border border-gray-300 bg-white px-5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-50'
-              >
-                Cancel
-              </button>
-              <button
-                type='button'
-                onClick={handleConfirmCaptcha}
-                disabled={submitting || !captchaSolved}
-                aria-busy={submitting ? 'true' : 'false'}
-                className='inline-flex h-11 items-center justify-center rounded-xl bg-brandPink px-5 text-sm font-bold text-white shadow-md shadow-brandPink/30 transition hover:bg-brandPink2 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPurpleDark disabled:cursor-not-allowed disabled:opacity-70'
-              >
-                {submitting ? 'Verifying…' : 'Verify & Submit'}
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      {captchaModal}
 
     </div>
   );
