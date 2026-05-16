@@ -1,51 +1,30 @@
-// import { Fragment, useEffect } from 'react';
-
-// //Zoho Sales Iq Script:
-// const useScript = (url, widgetCode) => {
-//   useEffect(() => {
-//     const script = document.createElement('script');
-//     script.setAttribute('type', 'text/javascript');
-//     script.setAttribute('defer', 'true');
-
-//     let code = `var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "${widgetCode}", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="${url}";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.innerHTML = "<div id='zsiqwidget'></div>";`;
-
-//     script.appendChild(document.createTextNode(code));
-//     document.body.appendChild(script);
-
-//     return () => {
-//       document.body.removeChild(script);
-//     };
-//   }, [url, widgetCode]);
-// };
-
-// export default function SalesIQ() {
-//   return (
-//     <Fragment>
-//       {useScript(
-//         'https://salesiq.zoho.com/widget',
-//         '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0',
-//       )}
-//     </Fragment>
-//   );
-// }
-
 import { useEffect, useRef } from 'react';
 
+import { ZOHO_SALESIQ_WIDGET_SRC } from 'data/zohoSalesIqWidget';
+
+/**
+ * Site-wide Zoho SalesIQ (home + inner pages except where `_app` omits this).
+ * Same embed as `/landing-next` (`zohopublic.com/widget?wc=…`); no auto-popup.
+ *
+ * Loads after first user gesture *or* when `window` fires `load`, so the home
+ * page gets the launcher without forcing scroll.
+ */
 export function useZohoSalesIQ() {
   const loadedRef = useRef(false);
 
   useEffect(() => {
     const loadZoho = () => {
       if (loadedRef.current) return;
+      if (document.getElementById('zsiqscript')) {
+        loadedRef.current = true;
+        return;
+      }
       loadedRef.current = true;
 
+      /* Same bootstrap as Zoho’s inline snippet before `#zsiqscript`. */
       window.$zoho = window.$zoho || {};
-      window.$zoho.salesiq = {
-        widgetcode:
-          '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0',
-        values: {},
-        ready: function () {},
-      };
+      window.$zoho.salesiq = window.$zoho.salesiq || { ready: function () {} };
+      window.$zoho.salesiq.values = window.$zoho.salesiq.values || {};
 
       if (!document.getElementById('zsiqwidget')) {
         const widgetDiv = document.createElement('div');
@@ -53,23 +32,25 @@ export function useZohoSalesIQ() {
         document.body.appendChild(widgetDiv);
       }
 
+      if (document.getElementById('zsiqscript')) return;
+
       const script = document.createElement('script');
       script.id = 'zsiqscript';
-      script.src = 'https://salesiq.zoho.com/widget';
-      script.async = true;
+      script.src = ZOHO_SALESIQ_WIDGET_SRC;
       script.defer = true;
-
       document.body.appendChild(script);
     };
 
     window.addEventListener('scroll', loadZoho, { once: true });
     window.addEventListener('mousemove', loadZoho, { once: true });
     window.addEventListener('touchstart', loadZoho, { once: true });
+    window.addEventListener('load', loadZoho, { once: true });
 
     return () => {
       window.removeEventListener('scroll', loadZoho);
       window.removeEventListener('mousemove', loadZoho);
       window.removeEventListener('touchstart', loadZoho);
+      window.removeEventListener('load', loadZoho);
     };
   }, []);
 }

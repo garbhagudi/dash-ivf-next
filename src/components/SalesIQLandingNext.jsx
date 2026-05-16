@@ -1,13 +1,20 @@
 import { useEffect, useRef } from 'react';
 
-const WIDGET_CODE =
-  '93210c756ea31b2224df734860e5d813b081008ce54deb21426241464ccb8de2e6558490d76d66086d0b48b1ed4abff0';
+import { ZOHO_SALESIQ_WIDGET_SRC } from 'data/zohoSalesIqWidget';
+
+/**
+ * Official Zoho SalesIQ embed (Share → Website) — see `data/zohoSalesIqWidget.js`.
+ * Auto-open behaviour is only in this component (`/landing-next`).
+ */
 
 /** User has read a meaningful portion of the page. */
 const SCROLL_OPEN_THRESHOLD_PCT = 30;
 
 /** Minimum time on page before we auto-show the widget (engagement + load). */
-const SHOW_AFTER_MS = 8000;
+const SHOW_AFTER_MS = 5000;
+
+/** Max wait for `floatwindow` after Zoho fires `ready` (it often attaches one tick later). */
+const FLOAT_WINDOW_WAIT_MS = 20000;
 
 /* Launcher ids only — do not include full chat window ids or we break the open panel. */
 const ZOHO_FLOAT_IDS = ['zsiq_float', 'zsiq_floatwindow', 'zsiq_float_window'];
@@ -192,9 +199,60 @@ function scrollDepthPercent() {
   return (top / scrollable) * 100;
 }
 
+function getSalesIqFloatWindow() {
+  return window.$zoho?.salesiq?.floatwindow;
+}
+
+/**
+ * Zoho often calls `salesiq.ready` before `floatwindow` is attached. Wait
+ * until the API object exists so `open` / `visible` are not no-ops.
+ */
+function waitForFloatWindow(maxMs, onFound) {
+  const start = Date.now();
+  const id = window.setInterval(() => {
+    const fw = getSalesIqFloatWindow();
+    if (
+      fw &&
+      (typeof fw.open === 'function' || typeof fw.visible === 'function')
+    ) {
+      window.clearInterval(id);
+      onFound(fw);
+    } else if (Date.now() - start > maxMs) {
+      window.clearInterval(id);
+      onFound(null);
+    }
+  }, 50);
+  return () => window.clearInterval(id);
+}
+
+/** Last resort: Zoho sometimes only exposes the launcher as a DOM chip. */
+function tryClickSalesIqLauncher() {
+  for (const id of ZOHO_FLOAT_IDS) {
+    const el = document.getElementById(id);
+    if (el && typeof el.click === 'function') {
+      try {
+        el.click();
+        return true;
+      } catch {
+        /* ignore */
+      }
+    }
+  }
+  const chip = document.querySelector('.zsiq_floatmain.siq_bR');
+  if (chip && typeof chip.click === 'function') {
+    try {
+      chip.click();
+      return true;
+    } catch {
+      /* ignore */
+    }
+  }
+  return false;
+}
+
 /**
  * Zoho SalesIQ for `/landing-next` only: load on mount, then show/open the float
- * once the widget is ready and either (a) 8s have passed or (b) user scrolled ~30%.
+ * once the widget is ready and either (a) ~5s have passed or (b) user scrolled ~30%.
  */
 export default function SalesIQLandingNext() {
   const pollRef = useRef(null);
@@ -205,6 +263,7 @@ export default function SalesIQLandingNext() {
   const scrollRafRef = useRef(null);
   const moRef = useRef(null);
   const moDebounceRef = useRef(null);
+  const floatWaitClearRef = useRef(null);
 
   useEffect(() => {
     pageEnteredAtRef.current = Date.now();
@@ -223,20 +282,48 @@ export default function SalesIQLandingNext() {
       }
     };
 
+    const clearFloatWait = () => {
+      if (typeof floatWaitClearRef.current === 'function') {
+        floatWaitClearRef.current();
+        floatWaitClearRef.current = null;
+      }
+    };
+
     const openChat = () => {
       if (openedRef.current) return;
-      try {
-        const fw = window.$zoho?.salesiq?.floatwindow;
-        if (!fw) return;
-        openedRef.current = true;
-        clearDelayTimer();
-        clearScrollRaf();
-        window.removeEventListener('scroll', onScroll);
-        if (typeof fw.visible === 'function') fw.visible('show');
-        if (typeof fw.open === 'function') fw.open(() => {});
-      } catch {
-        /* ignore */
+      const fw = getSalesIqFloatWindow();
+      let didSomething = false;
+
+      if (
+        fw &&
+        (typeof fw.open === 'function' || typeof fw.visible === 'function')
+      ) {
+        try {
+          /* Zoho docs: `.open()` is the primary API; `visible('show')` helps when
+           * the embed only reveals the launcher first. */
+          if (typeof fw.open === 'function') {
+            fw.open(() => {});
+            didSomething = true;
+          }
+          if (typeof fw.visible === 'function') {
+            fw.visible('show');
+            didSomething = true;
+          }
+        } catch {
+          /* ignore */
+        }
       }
+
+      if (!didSomething && tryClickSalesIqLauncher()) {
+        didSomething = true;
+      }
+
+      if (!didSomething) return;
+
+      openedRef.current = true;
+      clearDelayTimer();
+      clearScrollRaf();
+      window.removeEventListener('scroll', onScroll);
     };
 
     const elapsedOk = () => Date.now() - pageEnteredAtRef.current >= SHOW_AFTER_MS;
@@ -257,7 +344,7 @@ export default function SalesIQLandingNext() {
       });
     };
 
-    const onWidgetReady = () => {
+    const markWidgetReady = () => {
       if (widgetReadyRef.current) return;
       widgetReadyRef.current = true;
       syncZohoFloatAboveLandingSticky();
@@ -265,6 +352,15 @@ export default function SalesIQLandingNext() {
       if (!openedRef.current) {
         window.addEventListener('scroll', onScroll, { passive: true });
       }
+    };
+
+    const onWidgetReady = () => {
+      if (widgetReadyRef.current) return;
+      clearFloatWait();
+      floatWaitClearRef.current = waitForFloatWindow(FLOAT_WINDOW_WAIT_MS, () => {
+        floatWaitClearRef.current = null;
+        markWidgetReady();
+      });
     };
 
     const clearPoll = () => {
@@ -278,6 +374,7 @@ export default function SalesIQLandingNext() {
       clearPoll();
       clearDelayTimer();
       clearScrollRaf();
+      clearFloatWait();
       window.removeEventListener('scroll', onScroll);
       if (moDebounceRef.current != null) {
         window.clearTimeout(moDebounceRef.current);
@@ -306,9 +403,14 @@ export default function SalesIQLandingNext() {
 
     if (document.getElementById('zsiqscript')) {
       pollRef.current = window.setInterval(() => {
-        if (window.$zoho?.salesiq?.floatwindow) {
+        const fw = getSalesIqFloatWindow();
+        if (
+          fw &&
+          (typeof fw.open === 'function' || typeof fw.visible === 'function')
+        ) {
           clearPoll();
-          onWidgetReady();
+          clearFloatWait();
+          markWidgetReady();
         }
       }, 200);
       const mo = new MutationObserver(scheduleMoSync);
@@ -321,13 +423,20 @@ export default function SalesIQLandingNext() {
       };
     }
 
+    /* Match Zoho's official bootstrap (same as inline snippet before #zsiqscript). */
     window.$zoho = window.$zoho || {};
-    window.$zoho.salesiq = {
-      widgetcode: WIDGET_CODE,
-      values: {},
-      ready() {
-        onWidgetReady();
-      },
+    window.$zoho.salesiq = window.$zoho.salesiq || { ready: function () {} };
+    window.$zoho.salesiq.values = window.$zoho.salesiq.values || {};
+    const prevReady = window.$zoho.salesiq.ready;
+    window.$zoho.salesiq.ready = function salesiqReadyLandingNext(embedinfo) {
+      if (typeof prevReady === 'function') {
+        try {
+          prevReady.call(this, embedinfo);
+        } catch {
+          /* ignore */
+        }
+      }
+      onWidgetReady();
     };
 
     if (!document.getElementById('zsiqwidget')) {
@@ -338,8 +447,7 @@ export default function SalesIQLandingNext() {
 
     const script = document.createElement('script');
     script.id = 'zsiqscript';
-    script.src = 'https://salesiq.zoho.com/widget';
-    script.async = true;
+    script.src = ZOHO_SALESIQ_WIDGET_SRC;
     script.defer = true;
     document.body.appendChild(script);
 
