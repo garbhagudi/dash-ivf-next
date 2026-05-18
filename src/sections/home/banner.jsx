@@ -129,7 +129,7 @@ const bannerData = [
     url: 'https://www.garbhagudi.com/features/paripoorna',
     id: '3',
     title: 'Web_Banner_3',
-    alt: 'GarbhaGudi IVF Centre promotional offer: first free fertility consultation and 50% off 25-test fertility care panel, valid until May 31, 2026. Call 9108 9108 32.',
+    alt: "GarbhaGudi IVF Mother's Day offer: ₹25,000 off IVF treatment package, first free fertility consultation, and 50% off 25-test fertility care panel. Call 9108 9108 32.",
     image: {
       desktop: '/images/landing-banner-desktop.png',
       mobile: '/images/landing-banner-mobile.png',
