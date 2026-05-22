@@ -10,12 +10,9 @@ const Carousel = dynamic(
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 /*
- * Same Zoho-form POST + reCAPTCHA-v2 popup flow as the /landing-next page —
- * see `src/components/landing-next-zoho-html-form.jsx`. We use the
- * `banner` variant so the visual layout (gray-pill labels + white inputs
- * on the teal panel, "Get a Call Back" submit) stays identical to the
- * previous home-banner form, but submissions go through the same Zoho
- * `htmlRecords/submit` action and are gated by the captcha popup.
+ * Same Zoho-form POST flow as `/landing-next` — see
+ * `src/components/landing-next-zoho-html-form.jsx`. The `banner` variant
+ * keeps the home hero layout (gray-pill labels, "Get a Call Back").
  */
 const FormComponent = dynamic(
   () => import('components/landing-next-zoho-html-form'),
