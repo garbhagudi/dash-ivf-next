@@ -34,7 +34,7 @@ import {
 } from 'data/landingNextZohoForm';
 import { firstQueryValue, utmFromCookies } from 'lib/zohoCrmLeadPayload';
 import { useRouter } from 'next/router';
-import { useId, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 
 /**
