@@ -9,7 +9,7 @@
  * download for the "Book your Consultation" form. The native browser POST
  * (multipart/form-data) submits straight to Zoho — no proxy, no JS captcha. */
 const DEFAULT_ACTION =
-  'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/GG/formperma/KmrIM1SMpY6gHfnIViilsu7uT_rBS3EbvFfnCqaLSX0/htmlRecords/submit';
+  'https://forms.zohopublic.com/GarbhaGudiIVFCentre/form/BookyourConsultationcom/formperma/jEbZCZrOWkXJEoe1vg4sEPNIiqQCVCyYIkqezGFqLY0/htmlRecords/submit';
 
 export const landingNextZohoFormActionUrl =
   process.env.NEXT_PUBLIC_LANDING_NEXT_ZOHO_FORM_ACTION_URL?.trim() ||

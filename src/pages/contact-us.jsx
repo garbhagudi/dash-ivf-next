@@ -1,4 +1,4 @@
-import FormComponent from 'components/formComp';
+import LandingNextZohoHtmlForm from 'components/landing-next-zoho-html-form';
 import Image from 'next/image';
 
 const IndexPage = () => {
@@ -14,7 +14,11 @@ const IndexPage = () => {
           quality={75}
           loading='lazy'
         />
-        <FormComponent title='Book Your Appointment' />
+        <LandingNextZohoHtmlForm
+          variant='banner'
+          title='Book Your Appointment'
+          submitLabel='Submit'
+        />
       </div>
     </div>
   );
