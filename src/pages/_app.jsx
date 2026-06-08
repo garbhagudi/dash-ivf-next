@@ -89,6 +89,10 @@ function MyApp({ Component, pageProps }) {
     !isLandingNext ||
     process.env.NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT === 'true';
 
+  if (router.pathname === '/ivf') {
+    return <Component {...pageProps} />;
+  }
+
   return (
     <ThemeUIProvider theme={theme}>
       <Flex
@@ -205,11 +209,12 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
 
-        {router.pathname !== '/landing-next' && <FloatPhone />}
+        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && <FloatPhone />}
         {router.pathname === '/landing-next' && <SalesIQLandingNext />}
         {router.pathname !== '/landing-next' &&
-          router.pathname !== '/ivf/treatment-cost' && <SalesIQ />}
-        <Footer />
+          router.pathname !== '/ivf/treatment-cost' &&
+          router.pathname !== '/ivf' && <SalesIQ />}
+        {router.pathname !== '/ivf' && <Footer />}
       </Flex>
     </ThemeUIProvider>
   );
