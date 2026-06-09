@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
     !isLandingNext ||
     process.env.NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT === 'true';
 
-  if (router.pathname === '/ivf' || router.pathname === '/thank-you') {
+  if (router.pathname === '/ivf' || router.pathname === '/ivf/thank-you') {
     return <Component {...pageProps} />;
   }
 
@@ -209,7 +209,9 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </main>
 
-        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && <FloatPhone />}
+        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
+          <FloatPhone />
+        )}
         {router.pathname === '/landing-next' && <SalesIQLandingNext />}
         {router.pathname !== '/landing-next' &&
           router.pathname !== '/ivf/treatment-cost' &&
