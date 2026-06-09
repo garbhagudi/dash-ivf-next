@@ -22,6 +22,16 @@ export default function IvfPage() {
   return (
     <>
       <Head>
+        <script
+          key='gtm'
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT9BZ69');`,
+          }}
+        />
         <title>IVF Treatment | GarbhaGudi IVF Centre</title>
         <meta
           name='description'
@@ -50,6 +60,14 @@ export default function IvfPage() {
       </Head>
 
       <div className='ivf-page'>
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-NT9BZ69'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Header onBookConsultation={() => setIsBookingOpen(true)} />
 
         <article>

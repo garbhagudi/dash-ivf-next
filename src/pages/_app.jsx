@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
     !isLandingNext ||
     process.env.NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT === 'true';
 
-  if (router.pathname === '/ivf') {
+  if (router.pathname === '/ivf' || router.pathname === '/thank-you') {
     return <Component {...pageProps} />;
   }
 
