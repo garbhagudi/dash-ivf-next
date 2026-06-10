@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Header } from 'components/Header';
 import { StatsBar } from 'components/StatsBar';
@@ -15,9 +15,51 @@ import { FAQ } from 'components/FAQ';
 import { Footer } from 'components/Footer';
 import { Modal } from 'components/Modal';
 
+const BOOKING_BASE_URL =
+  'https://forms.garbhagudi.com/GarbhaGudiIVFCentre/form/GarbhaGudi/formperma/21qVgPWlHAmSpzYRLjpHYkEGgUHjC5LkKyd7bc_SL9w';
+
+const UTM_KEYS = [
+  'utm_source', 'utm_medium', 'utm_campaign',
+  'utm_term', 'utm_content', 'utm_id', 'gclid',
+];
+
+function parseCookies() {
+  const jar = {};
+  document.cookie.split('; ').forEach((pair) => {
+    const eq = pair.indexOf('=');
+    if (eq === -1) return;
+    try {
+      jar[pair.slice(0, eq)] = decodeURIComponent(pair.slice(eq + 1));
+    } catch {
+      jar[pair.slice(0, eq)] = pair.slice(eq + 1);
+    }
+  });
+  return jar;
+}
+
 export default function IvfPage() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [activeVideoUrl, setActiveVideoUrl] = useState(null);
+  const [bookingFormSrc, setBookingFormSrc] = useState(BOOKING_BASE_URL);
+
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const cookies = parseCookies();
+    const params = new URLSearchParams();
+
+    // URL params take priority; cookies (set by ZFAdvLead on this or
+    // previous pages) are the fallback for cross-page navigation.
+    UTM_KEYS.forEach((k) => {
+      const val = (sp.get(k) || '').trim() || (cookies[k] || '').trim();
+      if (val) params.set(k, val);
+    });
+
+    // Pass the parent-page URL as referrer so the Zoho form receives
+    // the actual /ivf page URL instead of the iframe's own origin URL.
+    params.set('zf_referrer_name', window.location.href);
+
+    setBookingFormSrc(`${BOOKING_BASE_URL}?${params.toString()}`);
+  }, []);
 
   return (
     <>
@@ -106,7 +148,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             aria-label='Book a Free Consultation'
             frameBorder={0}
             style={{ height: '600px', width: '100%', border: 'none' }}
-            src='https://forms.garbhagudi.com/GarbhaGudiIVFCentre/form/GarbhaGudi/formperma/21qVgPWlHAmSpzYRLjpHYkEGgUHjC5LkKyd7bc_SL9w'
+            src={bookingFormSrc}
+            referrerPolicy='no-referrer-when-downgrade'
             title='Booking Consultation Form'
           />
         </Modal>

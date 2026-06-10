@@ -90,7 +90,16 @@ function MyApp({ Component, pageProps }) {
     process.env.NEXT_PUBLIC_MARKETING_ON_LANDING_NEXT === 'true';
 
   if (router.pathname === '/ivf' || router.pathname === '/ivf/thank-you') {
-    return <Component {...pageProps} />;
+    return (
+      <>
+        <Script
+          id='gg-zoho-zfadvlead-utm'
+          src='/zoho-forms/zf-zfadvlead-utm.js'
+          strategy='afterInteractive'
+        />
+        <Component {...pageProps} />
+      </>
+    );
   }
 
   return (
