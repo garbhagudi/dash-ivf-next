@@ -915,6 +915,23 @@ ul.listFooterMenu li a {
     vertical-align: middle;
 }
 
+.stickyLeft {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ivf-page .btn.btn-primary.btn-whatsapp {
+    background-color: #25D366;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ivf-page .btn.btn-primary.btn-whatsapp:hover {
+    background-color: #1ebe5a;
+}
+
 
 
 
@@ -1202,12 +1219,31 @@ ul.listFooterMenu li a {
         margin-left: 10px;
     }
 
-    .ivf-page .btn.btn-primary.btn-dark {
-        width: 35%;
+    .ivf-page .btn.btn-primary.btn-dark,
+    .ivf-page .btn.btn-primary.btn-whatsapp {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        min-width: unset;
+    }
+
+    .ivf-page .btn.btn-primary.btn-dark .btn-label,
+    .ivf-page .btn.btn-primary.btn-whatsapp .btn-label {
+        display: none;
+    }
+
+    .ivf-page .btn.btn-primary.btn-dark img {
+        padding-right: 0;
+        margin-right: 0;
     }
 
     .ivf-page .btn.btn-primary {
-        width: 62%;
+        flex: 1;
+        max-width: 62%;
     }
 
     /* Stretches top CTA button to 100% of its flex column space on mobile */
