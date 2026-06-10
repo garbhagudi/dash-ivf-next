@@ -11,7 +11,7 @@ export default function ThankYouWhatsAppStrip() {
         <p>Our team is available on WhatsApp — get answers in minutes, not days.</p>
         <a
           className="btn-wa-big"
-          href="https://wa.me/919108910832?text=Hi%2C%20I%20just%20enquired%20on%20GarbhaGudi%20and%20want%20to%20learn%20more%20about%20IVF%20options."
+          href="https://wa.me/918951813344?text=Hi%2C%20I%20just%20enquired%20on%20GarbhaGudi%20and%20want%20to%20learn%20more%20about%20IVF%20options."
           target="_blank"
           rel="noopener noreferrer"
         >
