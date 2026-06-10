@@ -19,14 +19,14 @@ export default function ThankYouHero() {
           <div className="cta-row">
             <a
               className="btn btn-whatsapp"
-              href="https://wa.me/919108910832?text=Hi%2C%20I%20just%20submitted%20my%20enquiry%20on%20GarbhaGudi%20and%20would%20like%20to%20know%20more%20about%20IVF%20treatments."
+              href="https://wa.me/918951813344?text=Hi%2C%20I%20just%20submitted%20my%20enquiry%20on%20GarbhaGudi%20and%20would%20like%20to%20know%20more%20about%20IVF%20treatments."
               target="_blank"
               rel="noopener noreferrer"
             >
               <WhatsAppIcon style={{ width: 22, height: 22, fill: '#fff' }} />
               Chat on WhatsApp
             </a>
-            <a className="btn btn-call" href="tel:+919108910832">
+            <a className="btn btn-call" href="tel:+918951813344">
               <svg viewBox="0 0 24 24" strokeWidth="2" xmlns="http://www.w3.org/2000/svg">
                 <path
                   strokeLinecap="round"
