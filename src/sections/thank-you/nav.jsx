@@ -14,8 +14,8 @@ export default function ThankYouNav() {
           priority
         />
       </a>
-      <a className='phone' href='tel:+918951813344'>
-        📞 +91 89518 13344
+      <a className='phone' href='tel:+919108910832'>
+        📞 +91 9108 9108 32
       </a>
     </nav>
   );
