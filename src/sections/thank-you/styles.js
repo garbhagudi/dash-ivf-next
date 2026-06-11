@@ -314,18 +314,14 @@ export const thankYouCss = `
   #ty-root .video-unavailable span { font-size: 36px; }
 
   /* ── FOOTER ── */
-  #ty-root footer {
-    position: relative; z-index: 1;
-    background: var(--dark); color: rgba(255,255,255,.5);
-    text-align: center; padding: 28px 24px;
-    font-size: 13px;
-  }
-  #ty-root footer a { color: rgba(255,255,255,.7); text-decoration: none; }
-  #ty-root footer a:hover { color: #fff; }
 
   /* ── RESPONSIVE ── */
   @media(max-width: 768px) {
     #ty-root nav { padding: 14px 20px; }
+    #ty-root nav img { height: 30px; max-width: 140px; }
+    #ty-root nav a.phone { font-size: 12px; padding: 6px 10px; gap: 4px; }
+    #ty-root .wa-strip { padding: 40px 20px; }
+    #ty-root .btn-wa-big { width: 100%; max-width: 320px; justify-content: center; padding: 14px 20px; font-size: 14px; }
     #ty-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     #ty-root .hero-image { display: none; }
     #ty-root .floating-card, #ty-root .floating-card-2 { display: none; }
