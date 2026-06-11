@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { PartyPopper, Baby } from 'lucide-react';
 import { WhatsAppIcon } from './icons';
 
 export default function ThankYouHero() {
@@ -11,7 +12,7 @@ export default function ThankYouHero() {
       <div className='hero-inner'>
         <div className='hero-text'>
           <div className='badge'>
-            <span>🎉</span> Request Received Successfully
+            <PartyPopper size={18} color='#c0452a' /> Request Received Successfully
           </div>
           <h1>
             Thank You for
@@ -58,7 +59,7 @@ export default function ThankYouHero() {
             height={680}
           />
           <div className='floating-card'>
-            <div className='fc-icon'>👶</div>
+            <div className='fc-icon'><Baby size={28} color='#c0452a' /></div>
             <div className='fc-text'>
               <strong>10,000+ Babies Born</strong>
               <span>& counting every day</span>

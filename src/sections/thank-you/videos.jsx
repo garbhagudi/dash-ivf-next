@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Clapperboard, Youtube } from 'lucide-react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -32,7 +33,7 @@ function VideoCard({ video }) {
     <div className='video-card'>
       {unavailable ? (
         <div className='video-unavailable'>
-          <span>🎬</span>
+          <Clapperboard size={40} strokeWidth={1.5} color='#7a5c52' />
           <p>Video temporarily unavailable</p>
         </div>
       ) : (
@@ -63,6 +64,17 @@ export default function ThankYouVideos() {
         {videos.map((video) => (
           <VideoCard key={video.id} video={video} />
         ))}
+      </div>
+      <div className='video-cta'>
+        <a
+          className='btn-more-videos'
+          href='https://www.youtube.com/c/GarbhaGudiIVFCentre'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Youtube size={20} />
+          Explore More on YouTube
+        </a>
       </div>
     </section>
   );
