@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Phone } from 'lucide-react';
 
 export default function ThankYouNav() {
   const logoUrl =
@@ -15,7 +16,8 @@ export default function ThankYouNav() {
         />
       </a>
       <a className='phone' href='tel:+919108910832'>
-        📞 +91 9108 9108 32
+        <Phone size={16} strokeWidth={2} />
+        <span className='phone-text'>+91 9108 9108 32</span>
       </a>
     </nav>
   );

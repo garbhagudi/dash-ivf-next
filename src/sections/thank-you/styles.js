@@ -39,6 +39,7 @@ export const thankYouCss = `
   }
   #ty-root nav img { height: 44px; }
   #ty-root nav a.phone {
+    display: inline-flex; align-items: center; gap: 6px;
     font-family: 'DM Sans', sans-serif;
     font-weight: 500; font-size: 15px;
     color: var(--primary); text-decoration: none;
@@ -184,6 +185,25 @@ export const thankYouCss = `
     color: var(--dark); margin-bottom: 48px;
   }
   #ty-root .section-title span { color: var(--primary); font-style: italic; }
+  #ty-root .video-cta {
+    display: flex; justify-content: center; margin-top: 40px;
+  }
+  #ty-root .btn-more-videos {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600; font-size: 15px;
+    color: #fff; text-decoration: none;
+    background: var(--primary);
+    padding: 13px 32px; border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(192,69,42,0.25);
+    transition: background .25s, box-shadow .25s, transform .25s;
+    white-space: nowrap;
+  }
+  #ty-root .btn-more-videos:hover {
+    background: var(--primary-light);
+    box-shadow: 0 8px 32px rgba(192,69,42,0.35);
+    transform: translateY(-2px);
+  }
 
   #ty-root .steps-grid {
     display: grid;
@@ -248,6 +268,15 @@ export const thankYouCss = `
   }
   #ty-root .btn-wa-big:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 50px rgba(0,0,0,.28); }
   #ty-root .btn-wa-big svg { width: 24px; height: 24px; fill: #25D366; }
+  #ty-root .wa-cta-wrap {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  #ty-root .whatsapp-hours {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+  }
 
   /* ── VIDEOS ── */
   #ty-root .video-grid {
@@ -285,18 +314,14 @@ export const thankYouCss = `
   #ty-root .video-unavailable span { font-size: 36px; }
 
   /* ── FOOTER ── */
-  #ty-root footer {
-    position: relative; z-index: 1;
-    background: var(--dark); color: rgba(255,255,255,.5);
-    text-align: center; padding: 28px 24px;
-    font-size: 13px;
-  }
-  #ty-root footer a { color: rgba(255,255,255,.7); text-decoration: none; }
-  #ty-root footer a:hover { color: #fff; }
 
   /* ── RESPONSIVE ── */
   @media(max-width: 768px) {
     #ty-root nav { padding: 14px 20px; }
+    #ty-root nav img { height: 30px; max-width: 140px; }
+    #ty-root nav a.phone { font-size: 12px; padding: 6px 10px; gap: 4px; }
+    #ty-root .wa-strip { padding: 40px 20px; }
+    #ty-root .btn-wa-big { width: 100%; max-width: 320px; justify-content: center; padding: 14px 20px; font-size: 14px; }
     #ty-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     #ty-root .hero-image { display: none; }
     #ty-root .floating-card, #ty-root .floating-card-2 { display: none; }
