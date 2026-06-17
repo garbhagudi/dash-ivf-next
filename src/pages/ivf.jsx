@@ -74,6 +74,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NT9BZ69');`,
           }}
         />
+        <link
+          rel='preconnect'
+          href='https://forms.garbhagudi.com'
+          crossOrigin='anonymous'
+        />
+        <link rel='dns-prefetch' href='https://forms.garbhagudi.com' />
         <title>IVF Treatment | GarbhaGudi IVF Centre</title>
         <meta
           name='description'
