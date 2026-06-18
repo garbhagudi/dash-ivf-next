@@ -78,6 +78,13 @@ ul.listDetail li a {
     justify-content: space-between;
 }
 
+.ctaButtons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .Mainlogo img {
     max-width: 367px;
     width: 100%;
@@ -961,6 +968,12 @@ ul.listFooterMenu li a {
     .ivf-page .topCta .btn.btn-primary {
         font-size: 3vw;
         padding: 3vw;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
     }
 
     .topbar {

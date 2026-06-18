@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomCarousel } from './CustomCarousel';
+import { IvfConsultationForm } from 'components/IvfConsultationForm';
 
 export const StatsBar = ({ onBookConsultation }) => {
   return (
@@ -20,6 +21,10 @@ export const StatsBar = ({ onBookConsultation }) => {
               <div className="item"><img src="/assets/img/banners/3-mobile.jpg" alt="Banner 3 Mobile" style={{ width: '100%' }} /></div>
             </CustomCarousel>
           </div>
+        </div>
+
+        <div className="boxConsultForm" style={{ margin: '24px 0' }}>
+          <IvfConsultationForm />
         </div>
 
         <div className="boxSuccessRate">
