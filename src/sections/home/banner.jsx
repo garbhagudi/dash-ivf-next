@@ -1,12 +1,5 @@
 import Image from 'next/image';
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const Carousel = dynamic(
-  () => import('nuka-carousel').then((m) => m.Carousel),
-  {
-    ssr: false,
-  },
-);
 import { Phone } from 'lucide-react';
 import { useEffect, useState } from 'react';
 /*
@@ -26,23 +19,9 @@ const Banner = () => {
   }, []);
   return (
     <div>
-      <Head>
-        <link
-          rel='preload'
-          href='/images/Jun Month Landing page C--01.jpg'
-          as='image'
-        />
-      </Head>
-
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
-          <Carousel
-            autoplay={true}
-            autoplayInterval={3000}
-            wrapMode='wrap'
-            className='border-0 shadow-2xl drop-shadow-2xl'
-            showArrows='hover'
-          >
+          <div className='border-0 shadow-2xl drop-shadow-2xl'>
             {bannerData.length > 0 ? (
               bannerData.map((banner, index) => (
                 <div key={banner.id} className='relative overflow-hidden'>
@@ -251,7 +230,7 @@ const Banner = () => {
             ) : (
               <div>No banners available</div>
             )}
-          </Carousel>
+          </div>
         </div>
         {isClient ? (
           <div
