@@ -70,27 +70,27 @@ const Banner = () => {
                   {/* === DESKTOP OVERLAY === */}
                   <div className='pointer-events-none absolute inset-0 hidden md:block'>
                     {/* Headline — top right */}
-                    <div className='absolute right-0 top-12 w-[50%]'>
-                      <p className='text-4xl font-bold leading-tight text-gray-900'>
+                    <div className='absolute right-0 top-4 flex w-[50%] flex-col gap-1.5 text-xl font-bold leading-tight text-gray-900 xl:top-8 xl:text-3xl 2xl:top-12 2xl:text-4xl'>
+                      <p className='2xl:py-0.5'>
                         Every{' '}
-                        <span className='rounded bg-gg-500 px-1.5 py-0.5 text-white'>
+                        <span className='rounded bg-gg-500 px-1.5 text-white'>
                           Parenthood
                         </span>
-                        <br />
+                      </p>
+                      <p className='2xl:py-0.5'>
                         Journey Begins with{' '}
-                        <span className='rounded bg-gg-500 px-1.5 py-0.5 text-white'>
+                        <span className='rounded bg-gg-500 px-1.5 text-white'>
                           Hope.
                         </span>
                       </p>
-                      <p className='mt-1 text-4xl font-bold text-gray-900'>
+                      <p className='font-bold text-gray-900 xl:py-0.5 2xl:py-0.5'>
                         Let Us Walk Beside{' '}
-                        <span className='rounded bg-gg-500 px-1.5 py-0.5 text-white'>
+                        <span className='rounded bg-gg-500 px-1.5 text-white'>
                           You
                         </span>
                       </p>
                     </div>
-                    {/* Cloud + offer — mid right */}
-                    <div className='absolute left-1/2 top-[20%] w-[40%] px-4'>
+                    <div className='absolute left-[45%] top-[25%] w-[50%] px-4 xl:left-1/2 xl:w-[42%]'>
                       <div className='relative'>
                         <Image
                           src='/images/Cloud.png'
@@ -100,62 +100,77 @@ const Banner = () => {
                           aria-hidden='true'
                           className='w-full'
                         />
-                        <div className='absolute left-0 right-0 top-[38%] flex justify-center gap-3 px-5'>
-                          <div className='text-center leading-tight text-gray-900'>
-                            <p className='text-4xl font-extrabold'>FREE*</p>
-                            <p className='text-sm font-bold'>
-                              1st Fertility Expert
+                        <div className='absolute left-10 right-0 top-[37%] flex justify-center gap-1 px-5 lg:left-9 2xl:left-20'>
+                          <div className='text-start font-bold leading-none text-black'>
+                            <p className='text-3xl font-black 2xl:text-5xl'>
+                              FREE*
                             </p>
-                            <p>Consultation</p>
-                            <p className='text-sm font-bold'>
-                              Baseline Fertility
-                            </p>
-                            <p>(TVUS) Scan</p>
+                            <div className='-mt-2'>
+                              <p className='text-xs font-bold'>
+                                1st Fertility Expert
+                              </p>
+                              <p className='-mt-1 text-xs font-bold'>
+                                Consultation
+                              </p>
+                            </div>
+                            <div className='-mt-1'>
+                              <p className='text-xs font-bold'>
+                                Baseline Fertility
+                              </p>
+                              <p className='-mt-1 text-sm font-bold'>
+                                (TVUS) Scan
+                              </p>
+                            </div>
                           </div>
-                          <div className='h-14 w-px bg-gray-500' />
-                          <div className='text-center leading-tight text-gray-900'>
-                            <p className='text-4xl font-extrabold'>50%</p>
-                            <p className='text-4xl font-extrabold'>OFF*</p>
-                            <p className='text-sm font-bold'>on 24-</p>
-                            <p className='text-sm font-bold'>Fertility Tests</p>
-                            <p className='text-xs'>Valid until July 31, 2026</p>
+                          <div className='w-[2px] bg-gg-500 xl:h-24 2xl:h-36' />
+                          <div className='flex justify-start text-left leading-none'>
+                            <div className='self-start text-center leading-none text-gray-900'>
+                              <div className='text-xl font-black leading-none xl:text-3xl 2xl:text-5xl'>
+                                <p>50%</p>
+                                <p className='xl:-mt-2'>OFF*</p>
+                              </div>
+                              <div className='text-left text-xs font-bold leading-none xl:-mt-1'>
+                                <p>on 24-</p>
+                                <p>Fertility</p>
+                                <p>Tests</p>
+                              </div>
+                            </div>
+                            <div className='xl-mt-0 mt-4 flex flex-col justify-center text-[10px] leading-none tracking-tighter xl:ml-2 xl:text-sm'>
+                              <p>Valid until</p>
+                              <p>July 31,</p>
+                              <p>2026</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    {/* Bottom strip */}
-                    <div className='absolute bottom-0 left-0 flex w-full'>
-                      <div className='flex flex-1 items-center gap-2 bg-gg-500 px-4 py-2 text-lg font-bold text-white'>
+                    <div className='absolute bottom-8 left-0 flex w-1/2 xl:bottom-12'>
+                      <div className='from-80% to-100% flex flex-1 items-center gap-2 bg-gradient-to-r from-gg-700 to-transparent px-6 text-3xl font-bold text-white xl:text-5xl'>
                         <Phone size={16} className='inline-block' /> 9108 9108
                         32
-                      </div>
-                      <div className='flex items-center bg-yellow-400 px-5 py-2 text-sm font-extrabold text-gray-900'>
-                        BOOK FREE Consultation
                       </div>
                     </div>
                   </div>
 
                   {/* === MOBILE OVERLAY === */}
                   <div className='pointer-events-none absolute inset-0 block md:hidden'>
-                    {/* Headline — top */}
-                    <div className='absolute left-0 top-4 w-full px-4 text-center'>
-                      <p className='text-xl font-bold leading-tight text-gray-900'>
+                    <div className='absolute left-4 top-4 w-full px-4 text-left leading-none'>
+                      <p className='text-xl font-bold leading-tight text-gray-900 max-[375px]:text-base'>
                         Every{' '}
-                        <span className='rounded bg-gg-500 px-1.5 py-0.5 text-white'>
+                        <span className='rounded bg-gg-500 px-1.5 text-white'>
                           Parenthood
                         </span>
                         <br />
                         Journey Begins with{' '}
-                        <span className='rounded bg-gg-500 px-1.5 py-0.5 text-white'>
+                        <span className='rounded bg-gg-500 px-1.5 text-white'>
                           Hope.
                         </span>
                       </p>
-                      <p className='mt-1 text-xl font-bold text-gray-900'>
+                      <p className='text-xl font-bold text-gray-900 max-[375px]:text-base'>
                         Let Us Walk Beside You
                       </p>
                     </div>
-                    {/* Cloud + offer — middle */}
-                    <div className='absolute left-1/2 top-[32%] w-[85%] -translate-x-1/2'>
+                    <div className='absolute left-[32%] top-[12%] w-[65%]'>
                       <div className='relative'>
                         <Image
                           src='/images/Cloud.png'
@@ -165,37 +180,69 @@ const Banner = () => {
                           aria-hidden='true'
                           className='w-full'
                         />
-                        <div className='absolute left-0 right-0 top-[40%] flex justify-center gap-2 px-3'>
-                          <div className='text-center leading-tight text-gray-900'>
-                            <p className='text-base font-extrabold'>FREE*</p>
-                            <p className='text-[10px] font-bold'>
-                              1st Fertility Expert Consultation
+                        <div className='absolute left-6 right-0 top-[35%] flex justify-center'>
+                          <div className='text-left !leading-none text-gray-900'>
+                            <p className='text-2xl font-extrabold max-[375px]:text-xl'>
+                              FREE*
                             </p>
-                            <p className='text-[10px] font-bold'>
-                              Baseline Fertility (TVUS) Scan
-                            </p>
+                            <div className='-mt-1 text-[10px] font-bold max-[375px]:text-[8px]'>
+                              <p>1st Fertility Expert</p>
+                              <p>Consultation</p>
+                              <p>Baseline Fertility</p>
+                              <p>(TVUS) Scan</p>
+                            </div>
                           </div>
-                          <div className='h-10 w-px bg-gray-500' />
-                          <div className='text-center leading-tight text-gray-900'>
-                            <p className='text-base font-extrabold'>50% OFF*</p>
-                            <p className='text-[10px] font-bold'>
-                              on 24-Fertility Tests
-                            </p>
-                            <p className='text-[9px]'>
-                              Valid until July 31, 2026
-                            </p>
+                          <div className='mx-1 w-px rounded-full bg-gg-500' />
+                          <div className='flex text-left !leading-none text-gray-900'>
+                            <div className='self-start text-center leading-none'>
+                              <div className='text-2xl font-extrabold !leading-none max-[375px]:text-xl'>
+                                <p>50%</p>
+                                <p>OFF*</p>
+                              </div>
+                              <div className='text-left text-[10px] font-bold max-[375px]:text-[8px]'>
+                                <p>on 24-</p>
+                                <p>Fertility</p>
+                                <p>Tests</p>
+                              </div>
+                            </div>
+                            <div className='mt-4 flex flex-col justify-center text-[10px] leading-none tracking-tighter max-[375px]:text-[8px]'>
+                              <p>Valid until</p>
+                              <p>July 31,</p>
+                              <p>2026</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    {/* Bottom strip */}
-                    <div className='absolute bottom-0 left-0 flex w-full'>
-                      <div className='flex flex-1 items-center gap-1 bg-gg-500 px-3 py-2.5 text-sm font-bold text-white'>
+                    <div className='absolute bottom-8 left-0 flex w-3/4'>
+                      <div className='from-80% to-100% flex flex-1 items-center gap-2 bg-gradient-to-r from-gg-700 to-transparent px-6 text-2xl font-bold text-white'>
                         <Phone size={14} className='inline-block' /> 9108 9108
                         32
                       </div>
-                      <div className='flex items-center bg-yellow-400 px-4 py-2.5 text-xs font-extrabold text-gray-900'>
-                        BOOK FREE Consultation
+                    </div>
+                  </div>
+                  <div className='absolute bottom-4 right-4 flex w-[120px] max-[425px]:w-[100px] sm:right-8 lg:bottom-8'>
+                    <div className='relative'>
+                      <Image
+                        src='/images/bookConsultation.png'
+                        width={300}
+                        height={200}
+                        alt=''
+                        aria-hidden='true'
+                        className='w-full'
+                      />
+                      <div className='-lg:mt-1 absolute top-1/2 -mt-1.5 max-[425px]:left-2 sm:left-2'>
+                        <div className='font-bold !leading-none text-black'>
+                          <p className='md:te3xt text-[8px] !leading-none sm:text-[10px]'>
+                            Book
+                          </p>
+                          <p className='-mt-0.5text-lg !leading-none sm:text-lg'>
+                            FREE
+                          </p>
+                          <p className='-mt-0.5 text-[8px] !leading-none sm:text-[10px]'>
+                            Consultation
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
