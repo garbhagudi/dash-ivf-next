@@ -2501,57 +2501,57 @@ export const doctors = [
     id: 'cmc5xttet23kr07o364zcjjrb',
   },
 
-  {
-    name: 'Dr. Anusha S. M',
-    qualification: 'MBBS, MS (OBG), M.Ch Reproductive Medicine and Surgery',
-    designation: 'Fertility Specialist',
-    image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cml6jh4ye0vyh07o11zt2rkq8',
-    },
-    imageAlt: 'Fertility Specialist Yelahanka',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'A specialist in Reproductive Medicine and Surgery, Dr. Anusha S. M. is dedicated to helping individuals and couples navigate the complexities of infertility with science and empathy. With an M.Ch. in Reproductive Medicine and extensive training in both embryology and advanced laparoscopy, she offers a rare all round perspective on fertility care. From performing delicate fertility restorative surgeries to managing intricate IVF and ICSI cycles, her work is grounded in evidence based protocols and a deep understanding of reproductive endocrinology. Her academic background, highlighted by research in PCOS specific IVF strategies, ensures that her patients benefit from the most current and effective medical insights.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr. Anusha believes that successful fertility treatment requires more than just clinical skill it requires a personalized, transparent journey. Her practice emphasizes individualized embryo transfer protocols and advanced ultrasound monitoring, tailored to the unique biological and emotional needs of each patient. Whether addressing recurrent implantation failure or exploring fertility preservation, she maintains a focus on multidisciplinary coordination and ethical integrity. By combining surgical precision with compassionate counseling, Dr. Anusha strives to deliver comprehensive care that empowers patients to make informed decisions about their reproductive futures.',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark my-4 font-content',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '\n',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr. Anusha S. M',
+  //   qualification: 'MBBS, MS (OBG), M.Ch Reproductive Medicine and Surgery',
+  //   designation: 'Fertility Specialist',
+  //   image: {
+  //     url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cml6jh4ye0vyh07o11zt2rkq8',
+  //   },
+  //   imageAlt: 'Fertility Specialist Yelahanka',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'A specialist in Reproductive Medicine and Surgery, Dr. Anusha S. M. is dedicated to helping individuals and couples navigate the complexities of infertility with science and empathy. With an M.Ch. in Reproductive Medicine and extensive training in both embryology and advanced laparoscopy, she offers a rare all round perspective on fertility care. From performing delicate fertility restorative surgeries to managing intricate IVF and ICSI cycles, her work is grounded in evidence based protocols and a deep understanding of reproductive endocrinology. Her academic background, highlighted by research in PCOS specific IVF strategies, ensures that her patients benefit from the most current and effective medical insights.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 font-content',
+  //         },
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr. Anusha believes that successful fertility treatment requires more than just clinical skill it requires a personalized, transparent journey. Her practice emphasizes individualized embryo transfer protocols and advanced ultrasound monitoring, tailored to the unique biological and emotional needs of each patient. Whether addressing recurrent implantation failure or exploring fertility preservation, she maintains a focus on multidisciplinary coordination and ethical integrity. By combining surgical precision with compassionate counseling, Dr. Anusha strives to deliver comprehensive care that empowers patients to make informed decisions about their reproductive futures.',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark my-4 font-content',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '\n',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   {
     name: 'Dr. Manasa K A',
     qualification: 'MBBS, MS, DNB (OBG), FRM',
