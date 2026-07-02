@@ -4314,6 +4314,384 @@ export const doctors = [
     },
   },
   {
+    name: 'Dr. Harshita Guruprasad',
+    qualification: 'MBBS, DNB (OBG), FMAS, FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmq2957tk2xqj07o4moqjabwc',
+    },
+    imageAlt: 'Dr. Harshita Guruprasad',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Harshita Guruprasad is a dedicated Fertility Specialist at GarbhaGudi IVF Centre, Davanagere. She brings extensive expertise in Reproductive Medicine and Minimal Access Surgery. Known for her academic excellence and clinical precision, she specializes in integrating advanced IVF techniques with laparoscopic interventions to provide comprehensive care for complex fertility cases.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education Credentials:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  { text: 'FMAS – Fellowship in Minimal Access Surgery' },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'FRM – Fellowship in Reproductive Medicine – CIMAR Hospital, Kochi, Kerala',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [{ text: 'DNB (OBG)' }],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MS (OBG) – MGM Medical College and Hospital, Aurangabad, Maharashtra',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS – Belgaum Institute of Medical Sciences (BIMS)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Harshita has a robust background in both clinical practice and academic research. Her specialized training in Reproductive Medicine included a randomized clinical study on the effect of Luteal Phase GnRH Agonist on Frozen Thawed Embryo Transfer.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Advanced 2D/3D Ultrasound Scanning',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Laparoscopic Surgery',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Assisted Reproductive Technology (ART)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'IVF combined with laparoscopy for optimized fertility outcomes',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Harshita follows evidence-based protocols tailored to the unique needs of each couple. By combining her expertise in reproductive medicine, sonology, and laparoscopic surgery, she ensures every aspect of the reproductive environment is carefully evaluated and optimized before and during IVF treatment.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Detailed 3D ultrasound assessments',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Minimally invasive surgical corrections for fertility-enhancing outcomes',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Research-backed protocols for Frozen Embryo Transfer (FET)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Notable Achievements:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'First Prize – Paper Presentation at SONOCON Conference (2020)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Academic Excellence – College Topper during M.S. (OBG) residency',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Published paper: "Could Serological Markers of the Dengue Viral Disease Predict the Outcome in Pregnant South Asian Population" (IJISRT, 2020)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Co-author of the chapter "Methods of Fertilization: ICSI vs. Conventional IVF" with Dr. Parasuram Gopinathan.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'paragraph',
+            children: [{ text: '' }],
+          },
+        ],
+      },
+    },
+  },
+  {
     name: 'Dr. Sowmya Rani Merugu',
     qualification: 'MBBS, MS (OBG), FRM, Fellowship (Laparoscopic Surgery)',
     designation: 'Fertility Specialist – GarbhaGudi IVF Centre, Kalyan Nagar',
