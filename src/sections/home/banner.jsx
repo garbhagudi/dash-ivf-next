@@ -27,7 +27,11 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        <link rel='preload' href='/images/landing-banner-mobile.png' as='image' />
+        <link
+          rel='preload'
+          href='/images/landing-banner-mobile.png'
+          as='image'
+        />
         {/* Preload Fonts */}
         {/* <link
           rel='preload'
@@ -128,8 +132,8 @@ const bannerData = [
     title: 'Web_Banner_3',
     alt: 'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026. Call 9108 9108 32.',
     image: {
-      desktop: '/images/landing-banner-desktop.png',
-      mobile: '/images/landing-banner-mobile.png',
+      desktop: '/images/landing-banner-desktop.jpg',
+      mobile: '/images/landing-banner-mobile.jpg',
     },
   },
 ];
