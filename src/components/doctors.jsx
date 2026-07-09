@@ -4736,4 +4736,708 @@ export const doctors = [
       },
     },
   },
+  {
+    name: 'Dr. Shalini Venkatappa',
+    qualification: 'MD OBG, DNB, MNAMS, FRM, MRCOG-2 (U.K)',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmrdgifnp0i3k07o9cyfzrg6h',
+    },
+    imageAlt: 'Dr. Shalini Venkatappa',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Shalini Venkatappa is an ambitious and dedicated Fertility Specialist at GarbhaGudi IVF Centre, Kalyan Nagar, with a strong commitment to excellence in patient care, diagnosis, and treatment across Obstetrics, Gynaecology, and Reproductive Medicine. A proud graduate from PGIMER Chandigarh, one of India’s premier apex institutes, she brings a solid foundation in advanced clinical expertise and a deep passion for women’s health. She is highly regarded for her exceptional communication skills, superior work ethic, and deeply compassionate, patient-centric approach to reproductive healthcare. She has participated in numerous fertility workshops and conferences.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS – Kempe Gowda Institute of Medical Sciences (KIMS), Bengaluru, 2016',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'M.D. in Obstetrics & Gynaecology – Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh, 2021',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'DNB in Obstetrics & Gynaecology – National Board of Examinations in Medical Sciences',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship in Reproductive Medicine – Rajiv Gandhi University of Health Sciences (RGUHS), 2026, Milann Fertility and Birthing Centre, Bengaluru',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Clinical Attachment in Reproductive Medicine – St Mary’s Hospital, Manchester University, NHS, Manchester',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Senior Resident (Reproductive Medicine) – Jindal IVF and Sant Memorial Nursing Home, Chandigarh (11/2023 – 08/2024)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Senior Resident (Obstetrics & Gynaecology) – Government Medical College and Hospital (GMCH-32), Chandigarh (06/2022 – 11/2023)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Registrar – Cloudnine Hospital, Bengaluru (11/2021 – 04/2022)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Junior Resident – PGIMER, Chandigarh (01/2018 – 06/2021)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Core Expertise & Skills:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Reproductive Medicine & IVF: Ovulation induction, controlled ovarian stimulation, luteal phase support, endometrial preparation, third-party reproduction, and fertility preservation.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Advanced Procedures: Hands-on experience in oocyte retrieval, embryo transfer, and Intrauterine Insemination (IUI).',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Ultrasound Applications: Follicular monitoring, Doppler studies, saline infusion sonography, and early pregnancy scans.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'High-Risk Obstetrics: Performed over 300 independent Cesarean sections (Placenta previa, ruptured uterus, eclampsia) and provided comprehensive management of IVF-conceived pregnancies.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Gynaecological Surgery: Performed laparoscopic/hysteroscopic surgeries (endometriosis, myomectomy, septal resection, adhesiolysis).',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Certifications:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MRCOG Part 2 – Royal College of Obstetricians and Gynaecologists, UK (2025)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MRCOG Part 1 – Royal College of Obstetricians and Gynaecologists, UK (2022)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'ISUOG Basic Ultrasound Online Training Certification (2025)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Memberships:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Member of the National Academy of Medical Sciences (MNAMS)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Member of the Indian Fertility Society (IFS)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Shalini believes in an evidence-based, highly individualized approach to fertility care. Drawing from her comprehensive training in both the NHS clinical pathways (UK) and India’s premier medical institutes, she emphasizes absolute technical precision during delicate procedures like embryo transfers and egg retrievals. She couples this clinical exactness with a deeply compassionate communication style, ensuring patients are thoroughly educated and emotionally supported throughout their IVF journey. Her focus remains heavily tied to individualized patient management and optimization—ensuring safety and maximizing success rates.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Comprehensive Ultrasound Monitoring: Utilizing advanced Doppler and saline infusion scans to meticulously time cycles.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Evidence-Based Protocols: Tailored IVF stimulation and luteal support based on cutting-edge research.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Advanced Surgical Interventions: Pre-IVF optimization via fertility-enhancing laparoscopic and hysteroscopic surgeries.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Special/Difficult Fertility Cases Handled:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Advanced Reproductive Strategies: Management of severe diminished ovarian reserve, recurrent implantation failure, recurrent pregnancy losses and third-party reproduction.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Complex Gynaecological Pathologies: Surgical and medical management of severe endometriosis, fibroid uterus, and intrauterine adhesions compromising fertility.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Critical Obstetric Crisis: Successfully managed life-threatening presentations such as ruptured ectopic pregnancies, peripartum cardiomyopathy, severe pre-eclampsia, and emergency uterine ruptures.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Paper Presentations:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Correlation of serum AMH with embryo ploidy in IVF cycle – Fertivision 2025, Delhi NCR',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'The scars you cannot see are the hardest to heal – East Zone Yuva FOGSI 2021',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Novel concept of ovarian preservation in premenopausal women with stage 1 endometrial cancer: a case report of a 35-year-old – North Zone Yuva FOGSI 2021, Chandigarh',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Ultraconservative, Fertility Sparing Treatment of Bilateral Borderline Ovarian Tumours: A Case Report of a 19-Year-Old – FOGSI PG Forum 2020',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'A rare case of maternal adrenal haemorrhage occurring in near-term gestation – AICOG 2020, Lucknow',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Publications:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Evaluation of preoperative carbohydrate loading compared to preoperative fasting for enhanced recovery after elective gynaecological surgeries – International Journal of Reproduction, Contraception, Obstetrics and Gynaecology (11/2024)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Never Let Failure Get Your Heart – A Case of Successfully Managed Peripartum Cardiomyopathy – J Gynecol (07/2023)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'COVID-19 Vaccination in Pregnancy: International Recommendations at a Glimpse – Asian Research Journal of Gynaecology and Obstetrics (10/2021)',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'paragraph',
+            children: [{ text: '' }],
+          },
+        ],
+      },
+    },
+  },
 ];
