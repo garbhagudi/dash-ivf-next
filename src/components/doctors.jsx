@@ -4741,7 +4741,7 @@ export const doctors = [
     qualification: 'MD OBG, DNB, MNAMS, FRM, MRCOG-2 (U.K)',
     designation: 'Fertility Specialist',
     image: {
-      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmr8y9hdw5wcf07pg2yuniwbf',
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmrdgifnp0i3k07o9cyfzrg6h',
     },
     imageAlt: 'Dr. Shalini Venkatappa',
     bio: {
