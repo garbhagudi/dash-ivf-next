@@ -70,6 +70,11 @@ export const landingNextDoctorMeta = {
     locations: ['Electronic City', 'Bangalore'],
     languages: ['Kannada', 'English'],
   },
+  'Dr. Shalini Venkatappa': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Kalyan Nagar', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Hindi'],
+  },
   'Dr. Sowmya Rani Merugu': {
     experience: '10+ years in reproductive medicine & obstetrics',
     locations: ['Kalyan Nagar', 'Bangalore'],
