@@ -1,33 +1,28 @@
 <!doctype html>
-<html lang="en" class="h-full bg-white">
+<html lang="en">
   <head>
+    <!-- Design mirrors src/pages/ivf/thank-you.jsx + src/sections/thank-you/* — keep both in sync by hand. -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT9BZ69');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="dns-prefetch"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-      rel="dns-prefetch"
-    />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@garbhagudiivf" />
     <meta name="twitter:title" content="GarbhaGudi IVF Centre" />
-    <meta
-      name="twitter:description"
-      content="India's best IVF Infrastructure"
-    />
+    <meta name="twitter:description" content="India's best IVF Infrastructure" />
     <meta
       name="twitter:image"
       content="https://res.cloudinary.com/garbhagudi/image/upload/v1633779918/garbhagudi-ivf/Banners/banner-illustration_ywl2xw.webp"
@@ -41,131 +36,708 @@
     <meta property="description" content="India's best IVF Infrastructure" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-      rel="dns-prefetch"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Thank You!</title>
-    <!-- Google Tag Manager -->
-    <script defer>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-NT9BZ69');
-    </script>
-    <!-- End Google Tag Manager -->
+    <title>Thank You – GarbhaGudi IVF Centre</title>
+
+    <style>
+      /* ── ROOT: CSS variables + page base — all scoped to #ty-root ── */
+      #ty-root {
+        --bg: #fef9f4;
+        --primary: #c0452a;
+        --primary-light: #e8704a;
+        --gold: #c8963e;
+        --soft: #fff4ee;
+        --dark: #1e1210;
+        --muted: #7a5c52;
+        --white: #ffffff;
+        --green: #25D366;
+        --radius: 20px;
+
+        background: var(--bg);
+        font-family: 'DM Sans', sans-serif;
+        color: var(--dark);
+        line-height: 1.5;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      html, body { margin: 0; padding: 0; }
+
+      /* This page has no Tailwind/Preflight reset (dropped the dead v2 CDN
+         link), so replicate the handful of its rules that actually affect
+         this design — keeps this file's rendering identical to the React
+         /ivf/thank-you page, which gets Preflight for free via _app.jsx. */
+      #ty-root, #ty-root *, #ty-root *::before, #ty-root *::after {
+        box-sizing: border-box;
+      }
+      #ty-root h1, #ty-root h2, #ty-root h3, #ty-root p {
+        margin: 0;
+      }
+      #ty-root svg {
+        display: block;
+      }
+
+      /* noise texture overlay — fixed so it covers the viewport */
+      #ty-root::before {
+        content: '';
+        position: fixed; inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none; z-index: 0;
+      }
+
+      /* ── NAVBAR ── */
+      #ty-root nav {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 16px 48px;
+        background: rgba(254,249,244,0.88);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(192,69,42,0.1);
+      }
+      #ty-root nav img { height: 44px; width: auto; }
+      #ty-root nav a.phone svg { width: 16px; height: 16px; }
+      #ty-root nav a.phone {
+        display: inline-flex; align-items: center; gap: 6px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500; font-size: 15px;
+        color: var(--primary); text-decoration: none;
+        border: 1.5px solid var(--primary);
+        padding: 8px 20px; border-radius: 50px;
+        transition: all .25s;
+      }
+      #ty-root nav a.phone:hover { background: var(--primary); color: #fff; }
+
+      /* ── HERO ── */
+      #ty-root .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex; align-items: center; justify-content: center;
+        padding: 120px 24px 60px;
+        overflow: hidden;
+      }
+
+      #ty-root .orb {
+        position: absolute; border-radius: 50%;
+        filter: blur(80px); opacity: .28; pointer-events: none;
+      }
+      #ty-root .orb-1 { width: 520px; height: 520px; background: #e8704a; top: -120px; right: -100px; animation: drift1 8s ease-in-out infinite alternate; }
+      #ty-root .orb-2 { width: 380px; height: 380px; background: #c8963e; bottom: 40px; left: -80px; animation: drift2 10s ease-in-out infinite alternate; }
+      #ty-root .orb-3 { width: 260px; height: 260px; background: #c0452a; top: 40%; left: 45%; animation: drift3 7s ease-in-out infinite alternate; }
+
+      @keyframes drift1 { from{transform:translate(0,0)} to{transform:translate(-30px,40px)} }
+      @keyframes drift2 { from{transform:translate(0,0)} to{transform:translate(40px,-30px)} }
+      @keyframes drift3 { from{transform:translate(0,0)} to{transform:translate(-20px,20px)} }
+
+      #ty-root .hero-inner {
+        position: relative; z-index: 1;
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 64px; align-items: center;
+        max-width: 1140px; width: 100%;
+      }
+
+      #ty-root .hero-text { animation: fadeUp .8s ease both; }
+      @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+      #ty-root .badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: linear-gradient(135deg,#fff4ee,#ffe4d4);
+        border: 1.5px solid rgba(192,69,42,0.2);
+        padding: 8px 18px; border-radius: 50px;
+        font-size: 13px; font-weight: 500; color: var(--primary);
+        margin-bottom: 28px;
+        animation: fadeUp .8s .1s ease both;
+      }
+      #ty-root .badge svg { width: 18px; height: 18px; }
+
+      #ty-root h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(40px, 5.5vw, 68px);
+        line-height: 1.08; font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 20px;
+        animation: fadeUp .8s .2s ease both;
+      }
+      #ty-root h1 em { font-style: italic; color: var(--primary); }
+
+      #ty-root .subtext {
+        font-size: 17px; line-height: 1.7;
+        color: var(--muted); max-width: 440px;
+        margin-bottom: 40px;
+        animation: fadeUp .8s .3s ease both;
+      }
+
+      #ty-root .cta-row {
+        display: flex; gap: 16px; flex-wrap: wrap;
+        animation: fadeUp .8s .4s ease both;
+      }
+      #ty-root .btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 16px 32px; border-radius: 50px;
+        font-size: 15px; font-weight: 500;
+        text-decoration: none; transition: all .25s; cursor: pointer; border: none;
+      }
+      #ty-root .btn-whatsapp {
+        background: var(--green); color: #fff;
+        box-shadow: 0 8px 30px rgba(37,211,102,.35);
+      }
+      #ty-root .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(37,211,102,.45); }
+      #ty-root .btn-whatsapp svg { width: 22px; height: 22px; fill: #fff; }
+
+      #ty-root .btn-call {
+        background: var(--white); color: var(--primary);
+        border: 1.5px solid rgba(192,69,42,0.3);
+      }
+      #ty-root .btn-call:hover { background: var(--soft); transform: translateY(-2px); }
+      #ty-root .btn-call svg { width: 18px; height: 18px; stroke: var(--primary); fill: none; }
+
+      #ty-root .hero-image {
+        position: relative;
+        animation: fadeUp .8s .3s ease both;
+      }
+      #ty-root .hero-image img {
+        width: 100%; border-radius: 28px;
+        box-shadow: 0 32px 80px rgba(30,18,16,.18);
+        display: block;
+        aspect-ratio: 560 / 680;
+        object-fit: cover;
+        object-position: center top;
+      }
+      #ty-root .floating-card {
+        position: absolute; bottom: -20px; left: -28px;
+        background: var(--white); border-radius: 16px;
+        padding: 16px 22px;
+        box-shadow: 0 12px 40px rgba(30,18,16,.14);
+        display: flex; align-items: center; gap: 14px;
+        animation: floatY 4s ease-in-out infinite;
+      }
+      @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+      #ty-root .fc-icon { width: 44px; height: 44px; border-radius: 12px; background: #fff4ee; display:flex; align-items:center; justify-content:center; }
+      #ty-root .fc-icon svg { width: 28px; height: 28px; }
+      #ty-root .fc-text { line-height: 1.3; }
+      #ty-root .fc-text strong { font-size: 15px; color: var(--dark); display:block; }
+      #ty-root .fc-text span { font-size: 12px; color: var(--muted); }
+
+      #ty-root .floating-card-2 {
+        position: absolute; top: 20px; right: -24px;
+        background: var(--primary); color: #fff;
+        border-radius: 14px; padding: 12px 18px;
+        box-shadow: 0 12px 30px rgba(192,69,42,.3);
+        animation: floatY 5s 1s ease-in-out infinite;
+        text-align: center;
+      }
+      #ty-root .fc2-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; }
+      #ty-root .fc2-label { font-size: 11px; opacity: .85; letter-spacing: .5px; text-transform: uppercase; }
+
+      #ty-root .divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, rgba(192,69,42,.15), transparent); margin: 0 auto; }
+
+      /* ── STEPS ── */
+      #ty-root .section {
+        max-width: 1140px; margin: 0 auto; padding: 80px 24px;
+        position: relative; z-index: 1;
+      }
+      #ty-root .section-label {
+        font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+        color: var(--gold); font-weight: 600; margin-bottom: 12px;
+      }
+      #ty-root .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(28px, 3.5vw, 42px);
+        font-weight: 700; line-height: 1.2;
+        color: var(--dark); margin-bottom: 48px;
+      }
+      #ty-root .section-title span { color: var(--primary); font-style: italic; }
+      #ty-root .video-cta {
+        display: flex; justify-content: center; margin-top: 40px;
+      }
+      #ty-root .btn-more-videos {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 600; font-size: 15px;
+        color: #fff; text-decoration: none;
+        background: var(--primary);
+        padding: 13px 32px; border-radius: 50px;
+        box-shadow: 0 4px 20px rgba(192,69,42,0.25);
+        transition: background .25s, box-shadow .25s, transform .25s;
+        white-space: nowrap;
+      }
+      #ty-root .btn-more-videos:hover {
+        background: var(--primary-light);
+        box-shadow: 0 8px 32px rgba(192,69,42,0.35);
+        transform: translateY(-2px);
+      }
+      #ty-root .btn-more-videos svg { width: 20px; height: 20px; }
+
+      #ty-root .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+      }
+      #ty-root .step-card {
+        background: var(--white); border-radius: var(--radius);
+        padding: 32px 28px;
+        box-shadow: 0 4px 20px rgba(30,18,16,.06);
+        border: 1px solid rgba(192,69,42,.08);
+        transition: transform .25s;
+      }
+      #ty-root .step-card:hover { transform: translateY(-4px); }
+      #ty-root .step-num {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px; font-weight: 700;
+        color: rgba(192,69,42,.12); line-height: 1; margin-bottom: 16px;
+      }
+      #ty-root .step-icon { margin-bottom: 12px; }
+      #ty-root .step-icon svg { width: 28px; height: 28px; }
+      #ty-root .step-card h3 { font-size: 17px; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
+      #ty-root .step-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+      /* ── WHATSAPP STRIP ── */
+      #ty-root .wa-strip {
+        position: relative; z-index: 1;
+        background: linear-gradient(135deg, #0d4d2b 0%, #1a7a45 60%, #25a85a 100%);
+        padding: 60px 24px;
+        overflow: hidden;
+      }
+      #ty-root .wa-strip::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,.06) 0%, transparent 70%);
+      }
+      #ty-root .wa-strip-inner {
+        max-width: 860px; margin: 0 auto; text-align: center;
+        position: relative; z-index: 1;
+      }
+      #ty-root .wa-big-icon {
+        width: 72px; height: 72px; margin: 0 auto 24px;
+        background: rgba(255,255,255,.15);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        animation: pulse 2.5s ease-in-out infinite;
+      }
+      @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.25)} 50%{box-shadow:0 0 0 18px rgba(255,255,255,0)} }
+      #ty-root .wa-big-icon svg { width: 38px; height: 38px; fill: #fff; }
+      #ty-root .wa-strip h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(26px, 3.5vw, 40px);
+        color: #fff; font-weight: 700; margin-bottom: 14px; line-height: 1.2;
+      }
+      #ty-root .wa-strip p { color: rgba(255,255,255,.8); font-size: 16px; margin-bottom: 32px; }
+      #ty-root .btn-wa-big {
+        display: inline-flex; align-items: center; gap: 12px;
+        background: #fff; color: #0d4d2b;
+        padding: 18px 40px; border-radius: 50px;
+        font-size: 16px; font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 40px rgba(0,0,0,.2);
+        transition: all .3s;
+      }
+      #ty-root .btn-wa-big:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+      #ty-root .btn-wa-big svg { width: 24px; height: 24px; fill: #25D366; }
+      #ty-root .wa-cta-wrap {
+        display: flex; flex-direction: column; align-items: center; gap: 12px;
+      }
+      #ty-root .whatsapp-hours {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13px; font-weight: 400;
+        color: rgba(255,255,255,0.6);
+        margin: 0;
+      }
+
+      /* ── VIDEOS ── */
+      #ty-root .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 28px;
+      }
+      #ty-root .video-card {
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--white);
+        box-shadow: 0 8px 32px rgba(30,18,16,.08);
+        transition: transform .3s, box-shadow .3s;
+      }
+      #ty-root .video-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(30,18,16,.14); }
+      #ty-root .video-info { padding: 20px 24px 24px; }
+      #ty-root .video-tag {
+        display: inline-block; font-size: 11px; font-weight: 600;
+        letter-spacing: 1px; text-transform: uppercase;
+        color: var(--primary); background: var(--soft);
+        padding: 4px 12px; border-radius: 50px; margin-bottom: 10px;
+      }
+      #ty-root .video-info h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 18px; font-weight: 600; color: var(--dark);
+        line-height: 1.4; margin: 0;
+      }
+
+      /* click-to-embed facade — replaces react-lite-youtube-embed for this static page */
+      #ty-root .lite-yt {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        background-size: cover;
+        background-position: center;
+        background-color: #000;
+        cursor: pointer;
+      }
+      #ty-root .lite-yt-play {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px; height: 64px;
+        border-radius: 50%;
+        background: rgba(30,18,16,.65);
+        border: 2px solid rgba(255,255,255,.9);
+        display: flex; align-items: center; justify-content: center;
+        transition: transform .2s, background .2s;
+        pointer-events: none;
+      }
+      #ty-root .lite-yt:hover .lite-yt-play { transform: translate(-50%, -50%) scale(1.08); background: var(--primary); }
+      #ty-root .lite-yt-play svg { width: 22px; height: 22px; fill: #fff; margin-left: 3px; }
+      #ty-root .lite-yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+      /* ── FOOTER ── */
+      #ty-root .ty-footer { position: relative; z-index: 1; background: #1e1210; }
+      #ty-root .ty-footer-links {
+        border-top: 1px solid rgba(192,69,42,.08);
+        background: #fff;
+        padding: 40px 24px 32px;
+      }
+      #ty-root .ty-footer-grid {
+        max-width: 1140px; margin: 0 auto;
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+      }
+      #ty-root .ty-footer-col h3 {
+        font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+        color: var(--primary); margin: 0 0 16px;
+      }
+      #ty-root .ty-footer-col ul { list-style: none; margin: 0; padding: 0; }
+      #ty-root .ty-footer-col li { margin-bottom: 10px; }
+      #ty-root .ty-footer-col a {
+        font-size: 13px; color: var(--muted); text-decoration: none;
+        transition: color .2s;
+      }
+      #ty-root .ty-footer-col a:hover { color: var(--dark); }
+      #ty-root .ty-footer-bottom {
+        margin: 0; padding: 28px 24px; text-align: center;
+        font-size: 13px; color: rgba(255,255,255,.5);
+      }
+      #ty-root .ty-footer-bottom a {
+        color: rgba(255,255,255,.7); text-decoration: none; transition: color .2s;
+      }
+      #ty-root .ty-footer-bottom a:hover { color: #fff; }
+
+      /* ── RESPONSIVE ── */
+      @media(min-width: 768px) {
+        #ty-root .ty-footer-grid { grid-template-columns: repeat(4, 1fr); gap: 40px; }
+        #ty-root .ty-footer-links { padding: 64px 48px 48px; }
+      }
+      @media(max-width: 768px) {
+        #ty-root nav { padding: 14px 20px; }
+        #ty-root nav img { height: 30px; max-width: 140px; }
+        #ty-root nav a.phone { font-size: 12px; padding: 6px 10px; gap: 4px; }
+        #ty-root .wa-strip { padding: 40px 20px; }
+        #ty-root .btn-wa-big { width: 100%; max-width: 320px; justify-content: center; padding: 14px 20px; font-size: 14px; }
+        #ty-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+        #ty-root .hero-image { display: none; }
+        #ty-root .floating-card, #ty-root .floating-card-2 { display: none; }
+      }
+    </style>
   </head>
-  <body
-    class="relative flex min-h-full flex-col bg-gray-100 text-gray-600 antialiased"
-  >
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NT9BZ69"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT9BZ69"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header
-      class="dark-mode:text-gray-200 dark-mode:bg-gray-800 w-full border-b bg-gray-100 pb-4 shadow-md md:pb-2"
-      style="font-family: Nunito"
-    >
-      <!-- component -->
-      <div
-        class="mx-auto flex max-w-screen-xl flex-col items-center px-4 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8"
-      >
-        <div class="flex flex-row items-center justify-between p-4">
-          <!-- logo and home page link -->
-          <a
-            href="https://www.garbhagudi-ivf.com/"
-            class="dark-mode:text-white focus:shadow-outline rounded-lg text-lg font-semibold uppercase tracking-widest text-gray-900 focus:outline-none"
-            ><img
-              src="https://res.cloudinary.com/garbhagudi/image/upload/v1633780956/garbhagudi-ivf/SVGs/GG_Logo_lwfiec.svg"
-              alt="logo"
-              width="210px"
-          /></a>
-        </div>
-        <!-- contact us -->
-        <a
-          href="tel:+919108910832"
-          class="flex items-center gap-2 rounded-md pr-2 shadow-md"
-          style="background-color: rgb(209, 213, 219); width: fit-content"
-        >
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-md text-white"
-            style="background-color: rgb(234, 75, 106)"
-          >
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 24 24"
-              height="1.2em"
-              width="1.2em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path fill="none" d="M0 0h24v24H0z"></path>
-              <path
-                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-              ></path>
-            </svg>
-          </div>
-          <h1 class="text-lg font-semibold" style="color: rgb(234, 75, 106)">
-            +91 9108 9108 32
-          </h1>
+    <div id="ty-root">
+      <nav>
+        <a href="https://www.garbhagudi-ivf.com/">
+          <img
+            src="https://res.cloudinary.com/garbhagudiivf/image/upload/w_256,h_56/v1751352018/GG_New-Hori_Logo_ziwur1.svg"
+            alt="GarbhaGudi IVF Centre"
+            width="200"
+            height="44"
+          />
         </a>
-      </div>
-    </header>
+        <a class="phone" href="tel:+919108910832">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="phone-text">+91 9108 9108 32</span>
+        </a>
+      </nav>
 
-    <main class="flex-grow" style="background-color: rgb(253, 244, 255)">
-      <div
-        class="flex h-full w-full flex-col items-center justify-center gap-5 text-center md:flex-row"
-      >
-        <div class="order-2 w-full md:order-1 md:w-2/6">
-          <h1 class="mb-4 text-4xl font-bold text-gray-900">
-            <span
-              class="border-b-2 pb-0.5"
-              style="border-color: rgb(32, 141, 174)"
-            >
-              Thank </span
-            >you
-          </h1>
-          <p class="text-gray-700">
-            We have forward your request to the concerned team and an agent will
-            contact you shortly.
-          </p>
-          <p class="text-gray-700">
-            Meanwhile, you can go through our website and learn more about our
-            services and features.
-          </p>
+      <section class="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c0452a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></svg>
+              Request Received Successfully
+            </div>
+            <h1>
+              Thank You for
+              <br />
+              <em>Trusting Us</em>
+            </h1>
+            <p class="subtext">
+              We've forwarded your request to our care team. A dedicated fertility specialist
+              will contact you shortly. Your dream of parenthood is our mission.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/918951813344?text=Hi%2C%20I%20just%20submitted%20my%20enquiry%20on%20GarbhaGudi%20and%20would%20like%20to%20know%20more%20about%20IVF%20treatments."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.64 4.64 1.84 6.667L2.667 29.333l6.88-1.813A13.28 13.28 0 0016.004 29.333c7.36 0 13.333-5.973 13.333-13.333S23.364 2.667 16.004 2.667zm0 24.267a11.04 11.04 0 01-5.68-1.573l-.4-.24-4.093 1.08 1.093-4L7.71 21.8A11.067 11.067 0 0116.004 4.933c6.133 0 11.066 4.934 11.066 11.067s-4.933 11.067-11.066 11.067zm6.08-8.267c-.333-.173-2-1-2.307-1.12-.306-.107-.52-.16-.733.16-.213.32-.84 1.12-1.04 1.333-.187.213-.387.24-.72.08-.334-.16-1.4-.52-2.667-1.653-.987-.88-1.653-1.973-1.84-2.307-.2-.333-.027-.507.147-.68.16-.16.334-.413.507-.627.173-.213.227-.36.333-.587.107-.213.054-.4-.027-.573-.08-.173-.733-1.773-.987-2.427-.267-.64-.547-.547-.733-.547h-.627c-.213 0-.56.08-.853.4-.293.307-1.12 1.12-1.12 2.72s1.147 3.16 1.307 3.387c.16.213 2.24 3.52 5.547 4.8.773.333 1.373.533 1.84.68.773.24 1.48.213 2.027.133.613-.093 2-.813 2.28-1.627.28-.8.28-1.493.2-1.627-.08-.133-.293-.213-.627-.36z"/></svg>
+                Chat on WhatsApp
+              </a>
+              <a class="btn btn-call" href="tel:+919108910832">
+                <svg viewBox="0 0 24 24" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"
+                  />
+                </svg>
+                Call Us Now
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png"
+              alt="Happy couple at GarbhaGudi"
+              width="560"
+              height="680"
+            />
+            <div class="floating-card">
+              <div class="fc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c0452a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg>
+              </div>
+              <div class="fc-text">
+                <strong>10,000+ Babies Born</strong>
+                <span>&amp; counting every day</span>
+              </div>
+            </div>
+            <div class="floating-card-2">
+              <div class="fc2-num">98%</div>
+              <div class="fc2-label">Patient Satisfaction</div>
+            </div>
+          </div>
         </div>
-        <img
-          src="https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png"
-          alt="GarbhaGudi Logo"
-          class="order-1 h-72 md:order-2 md:h-96"
-        />
-      </div>
-    </main>
+      </section>
 
-    <footer class="bg-gray-800 py-6">
-      <div class="container mx-auto text-center text-white">
-        &copy; 2025 GarbhaGudi IVF Centre. All rights reserved.
+      <div class="divider"></div>
+
+      <section class="section">
+        <div class="section-label">Your Journey Begins</div>
+        <div class="section-title">What <span>Happens Next?</span></div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c0452a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Expert Callback</h3>
+            <p>A fertility counsellor will call you within 24 hours to understand your needs.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e8704a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+            </div>
+            <h3>Free Consultation</h3>
+            <p>Meet our specialist who will review your history and recommend a personalised path.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c8963e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+            </div>
+            <h3>Advanced Diagnostics</h3>
+            <p>State-of-the-art tests to give us the clearest picture of your fertility health.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c0452a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h3>Your Baby Plan</h3>
+            <p>A tailored treatment roadmap designed just for you — transparent, caring, and hopeful.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <div class="wa-strip">
+        <div class="wa-strip-inner">
+          <div class="wa-big-icon">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.64 4.64 1.84 6.667L2.667 29.333l6.88-1.813A13.28 13.28 0 0016.004 29.333c7.36 0 13.333-5.973 13.333-13.333S23.364 2.667 16.004 2.667zm0 24.267a11.04 11.04 0 01-5.68-1.573l-.4-.24-4.093 1.08 1.093-4L7.71 21.8A11.067 11.067 0 0116.004 4.933c6.133 0 11.066 4.934 11.066 11.067s-4.933 11.067-11.066 11.067zm6.08-8.267c-.333-.173-2-1-2.307-1.12-.306-.107-.52-.16-.733.16-.213.32-.84 1.12-1.04 1.333-.187.213-.387.24-.72.08-.334-.16-1.4-.52-2.667-1.653-.987-.88-1.653-1.973-1.84-2.307-.2-.333-.027-.507.147-.68.16-.16.334-.413.507-.627.173-.213.227-.36.333-.587.107-.213.054-.4-.027-.573-.08-.173-.733-1.773-.987-2.427-.267-.64-.547-.547-.733-.547h-.627c-.213 0-.56.08-.853.4-.293.307-1.12 1.12-1.12 2.72s1.147 3.16 1.307 3.387c.16.213 2.24 3.52 5.547 4.8.773.333 1.373.533 1.84.68.773.24 1.48.213 2.027.133.613-.093 2-.813 2.28-1.627.28-.8.28-1.493.2-1.627-.08-.133-.293-.213-.627-.36z"/></svg>
+          </div>
+          <h2>Have Questions Right Now?</h2>
+          <p>Our team is available on WhatsApp — get answers in minutes, not days.</p>
+          <div class="wa-cta-wrap">
+            <a
+              class="btn-wa-big"
+              href="https://wa.me/918951813344?text=Hi%2C%20I%20just%20enquired%20on%20GarbhaGudi%20and%20want%20to%20learn%20more%20about%20IVF%20options."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.64 4.64 1.84 6.667L2.667 29.333l6.88-1.813A13.28 13.28 0 0016.004 29.333c7.36 0 13.333-5.973 13.333-13.333S23.364 2.667 16.004 2.667zm0 24.267a11.04 11.04 0 01-5.68-1.573l-.4-.24-4.093 1.08 1.093-4L7.71 21.8A11.067 11.067 0 0116.004 4.933c6.133 0 11.066 4.934 11.066 11.067s-4.933 11.067-11.066 11.067zm6.08-8.267c-.333-.173-2-1-2.307-1.12-.306-.107-.52-.16-.733.16-.213.32-.84 1.12-1.04 1.333-.187.213-.387.24-.72.08-.334-.16-1.4-.52-2.667-1.653-.987-.88-1.653-1.973-1.84-2.307-.2-.333-.027-.507.147-.68.16-.16.334-.413.507-.627.173-.213.227-.36.333-.587.107-.213.054-.4-.027-.573-.08-.173-.733-1.773-.987-2.427-.267-.64-.547-.547-.733-.547h-.627c-.213 0-.56.08-.853.4-.293.307-1.12 1.12-1.12 2.72s1.147 3.16 1.307 3.387c.16.213 2.24 3.52 5.547 4.8.773.333 1.373.533 1.84.68.773.24 1.48.213 2.027.133.613-.093 2-.813 2.28-1.627.28-.8.28-1.493.2-1.627-.08-.133-.293-.213-.627-.36z"/></svg>
+              Message Us on WhatsApp
+            </a>
+            <p class="whatsapp-hours">Active Between 8 am – 10 pm</p>
+          </div>
+        </div>
       </div>
-    </footer>
+
+      <section class="section">
+        <div class="section-label">Learn &amp; Explore</div>
+        <div class="section-title">Stories &amp; <span>Insights</span> from GarbhaGudi</div>
+        <div class="video-grid">
+          <div class="video-card">
+            <div
+              class="lite-yt"
+              data-id="Kbjz_vYlijA"
+              data-title="GarbhaGudi IVF Introduction"
+              style="background-image:url('https://i.ytimg.com/vi/Kbjz_vYlijA/maxresdefault.jpg')"
+            >
+              <span class="lite-yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Our Story</span>
+              <h3>Why GarbhaGudi is India's Most Trusted IVF Centre</h3>
+            </div>
+          </div>
+          <div class="video-card">
+            <div
+              class="lite-yt"
+              data-id="FUjol4w5uEo"
+              data-title="IVF Treatment Process Explained"
+              style="background-image:url('https://i.ytimg.com/vi/FUjol4w5uEo/maxresdefault.jpg')"
+            >
+              <span class="lite-yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Patient Education</span>
+              <h3>Understanding the IVF Process — Step by Step</h3>
+            </div>
+          </div>
+          <div class="video-card">
+            <div
+              class="lite-yt"
+              data-id="LeZbAzvIGr8"
+              data-title="IVF Success Story"
+              style="background-image:url('https://i.ytimg.com/vi/LeZbAzvIGr8/maxresdefault.jpg')"
+            >
+              <span class="lite-yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Success Stories</span>
+              <h3>This is a Good Testimonial of GGJN, 15 Years of No baby and got Success</h3>
+            </div>
+          </div>
+        </div>
+        <div class="video-cta">
+          <a
+            class="btn-more-videos"
+            href="https://www.youtube.com/c/GarbhaGudiIVFCentre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            Explore More on YouTube
+          </a>
+        </div>
+      </section>
+
+      <footer class="ty-footer">
+        <div class="ty-footer-links">
+          <div class="ty-footer-grid">
+            <div class="ty-footer-col">
+              <h3>Treatments</h3>
+              <ul>
+                <li><a href="https://www.garbhagudi.com/treatments/hysteroscopy-treatment-in-bangalore">Hysteroscopy</a></li>
+                <li><a href="https://www.garbhagudi.com/treatments/icsi-treatment-in-bangalore">ICSI Treatment</a></li>
+                <li><a href="https://www.garbhagudi.com/treatments/iui-treatment-in-bangalore">IUI Treatment</a></li>
+                <li><a href="https://www.garbhagudi.com/treatments/ivf-treatment-in-bangalore">IVF Treatment</a></li>
+                <li><a href="https://www.garbhagudi.com/treatments/laparoscopy-treatment-in-bangalore">Laparoscopy</a></li>
+                <li><a href="https://www.garbhagudi.com/treatments/frozen-embryo-transfer">FET</a></li>
+              </ul>
+            </div>
+            <div class="ty-footer-col">
+              <h3>Locations</h3>
+              <ul>
+                <li><a href="https://www.garbhagudi.com/locations/hanumanthanagar">Hanumanthanagar</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/electronic-city">Electronic City</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/kalyan-nagar">Kalyan Nagar</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/marathahalli">Marthahalli</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/nagarabhavi">Nagarbhavi</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/new-bel-road">New BEL Road</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/jayanagar">Jayanagar</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/yelahanka">Yelahanka</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/davanagere">Davanagere</a></li>
+                <li><a href="https://www.garbhagudi.com/locations/hosur">Hosur</a></li>
+              </ul>
+            </div>
+            <div class="ty-footer-col">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="https://www.garbhagudi.com/fertility-experts">Fertility Experts</a></li>
+                <li><a href="https://www.garbhagudi.com/fertility-center">Fertility Centre</a></li>
+                <li><a href="https://www.garbhagudi.com/blogs/page/1">Blogs</a></li>
+                <li><a href="https://www.garbhagudi.com/resources/faq">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="ty-footer-col">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="https://www.garbhagudi.com/features/paripoorna">Paripoorna</a></li>
+                <li><a href="https://www.garbhagudi.com/careers">Careers</a></li>
+                <li><a href="https://www.garbhagudi.com/gg-care">GG Care</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="ty-footer-bottom">
+          © 2026 GarbhaGudi Centre. All rights reserved. &nbsp;|&nbsp;
+          <a href="https://www.garbhagudi.com/">Back to Website</a>
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      /* Allowlist of embeddable video ids — the iframe URL is always built
+         from this constant array (never from the DOM), so page markup can't
+         influence what gets embedded. */
+      var VIDEO_IDS = ['Kbjz_vYlijA', 'FUjol4w5uEo', 'LeZbAzvIGr8'];
+      document.querySelectorAll('.lite-yt').forEach(function (el) {
+        el.addEventListener(
+          'click',
+          function () {
+            var idx = VIDEO_IDS.indexOf(el.getAttribute('data-id'));
+            if (idx === -1) return;
+            var title = el.getAttribute('data-title') || 'YouTube video';
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_IDS[idx] + '?autoplay=1';
+            iframe.title = title;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute(
+              'allow',
+              'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            );
+            iframe.setAttribute('allowfullscreen', '');
+            el.innerHTML = '';
+            el.appendChild(iframe);
+          },
+          { once: true }
+        );
+      });
+    </script>
+
     <!-- Zoho SalesIQ Integration -->
     <script>
       var $zoho = $zoho || {};
