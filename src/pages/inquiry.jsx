@@ -10,7 +10,7 @@ const IndexPage = () => {
         <h1></h1>
         <Image
           src={
-            'https://res.cloudinary.com/garbhagudiivf/image/upload/v1663403546/Banner/Google_Form_Header-min_tjenif.jpg'
+            'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwezh0us07pnk1qjjmvg'
           }
           alt='Inquiry'
           loading='lazy'

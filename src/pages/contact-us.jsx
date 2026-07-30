@@ -6,7 +6,7 @@ const IndexPage = () => {
     <div className='flex flex-col items-center justify-center'>
       <div className='h-full w-full bg-[#005e7e] pb-2 lg:h-1/2 lg:w-1/2'>
         <Image
-          src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1735814525/Image_Artboard_copy_3_ic0le8.jpg'
+          src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwech0uo07pntrjoqe6y'
           width={1920}
           height={1080}
           alt='book an appointment form'

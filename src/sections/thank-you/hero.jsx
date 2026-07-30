@@ -12,7 +12,8 @@ export default function ThankYouHero() {
       <div className='hero-inner'>
         <div className='hero-text'>
           <div className='badge'>
-            <PartyPopper size={18} color='#c0452a' /> Request Received Successfully
+            <PartyPopper size={18} color='#c0452a' /> Request Received
+            Successfully
           </div>
           <h1>
             Thank You for
@@ -53,13 +54,15 @@ export default function ThankYouHero() {
 
         <div className='hero-image'>
           <Image
-            src='https://res.cloudinary.com/garbhagudiivf/image/upload/v1742214671/GGIRHR/Images/Couple-01_iiwu8i.png'
+            src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75y8q9h0xl07pnxcag7v7i'
             alt='Happy couple at GarbhaGudi'
             width={560}
             height={680}
           />
           <div className='floating-card'>
-            <div className='fc-icon'><Baby size={28} color='#c0452a' /></div>
+            <div className='fc-icon'>
+              <Baby size={28} color='#c0452a' />
+            </div>
             <div className='fc-text'>
               <strong>10,000+ Babies Born</strong>
               <span>& counting every day</span>

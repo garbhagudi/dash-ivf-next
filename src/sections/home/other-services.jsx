@@ -84,7 +84,7 @@ const Features = dynamic(() => import('sections/home/features'), {
 
 const OtherServices = () => {
   const rawImageUrl =
-    'https://res.cloudinary.com/garbhagudiivf/image/upload/v1738903030/WebIcon-01_ywi7q3.webp';
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwflh0uw07pn7azbdz58';
   const optimizedImageUrl = rawImageUrl.replace(
     '/upload/',
     '/upload/f_auto,q_auto,w_730,h_420,c_fill/',
