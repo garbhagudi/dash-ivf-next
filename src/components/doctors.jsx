@@ -5440,4 +5440,481 @@ export const doctors = [
       },
     },
   },
+  {
+    name: 'Dr. Aishwarya Musunuru',
+    qualification: 'MBBS, MS (OBG), FRM',
+    designation: 'Fertility Specialist',
+    image: {
+      url: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cmsealtx81w0f07pd5nh9spu6',
+    },
+    imageAlt: 'IVF Specialist in Bangalore - Dr. Aishwarya Musunuru',
+    bio: {
+      raw: {
+        children: [
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Aishwarya is a dedicated Obstetrician and Gynaecologist with focused expertise in reproductive medicine and infertility management. Known for an empathetic attitude towards patients and colleagues, she combines strong clinical acumen with a passion for evidence-based practice, assisted reproductive technologies (ART), and reproductive endocrinology. With an exceptional hunger for learning and a keen interest in surgical interventions, she is deeply committed to guideline-driven care and emerging fertility therapies.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Education & Credentials:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MBBS – Dr. Pinnamaneni Siddhartha Institute of Medical Sciences and Research Foundation – Gold Medalist in Gynaecology',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MS (OBG) – Dr. Pinnamaneni Siddhartha Institute of Medical Sciences and Research Foundation',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'FRM – GarbhaGudi IVF Centre',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Experience & Expertise:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Consultant in Reproductive Medicine – Dr. Kamini Rao Hospitals, Bangalore',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellow – GarbhaGudi IVF Centre',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Senior Resident – Old Government General Hospital, Vijayawada, AP',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Pandemic Response & General COVID Ward Duties – Department of OBG at Old GGH & Pinnamaneni Siddhartha Institute',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Certifications:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'MRCOG (Royal College of Obstetricians & Gynaecologists) – Completed Part 1 and Part 2',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Awards & Recognition:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Gold Medal in Gynaecology during MBBS',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Best Case Report Award at South ISAR (August 2025) for Targeted Hormonal Therapy according to Aphrodite Criteria in Male Infertility',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Approach to IVF Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Dr. Aishwarya believes in a highly analytical, evidence-based, and personalized approach to fertility care. Rather than a one-size-fits-all protocol, she uses emerging therapies and precise reproductive endocrinology metrics to optimize follicular response and oocyte quality. Guided by international guidelines, her practice emphasizes patient empathy, clear communication, and absolute safety at every step of the assisted reproductive journey.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Key Features of Treatment:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Guideline-Driven Protocols: Strict adherence to evidence-based international standards in ART and reproductive endocrinology.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Data-Optimized Triggers: Utilizing advanced parameters—such as post-trigger serum progesterone levels—to maximize the Follicle-to-Oocyte Index (FOI) and mature oocyte yield.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Comprehensive Male & Female Infertility Care: Deep integration of targeted therapies, including specialized criteria for male factor infertility management.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Advanced Surgical Interventions: A keen focus on reproductive surgeries to optimize the uterine environment before embryo transfer.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Research Contributions:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Fellowship Thesis: Evaluated the association of post-trigger serum Progesterone levels with the Follicle-to-Oocyte Index and Oocyte Maturation Rate in women undergoing ICSI cycles.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Post-Graduation Thesis: Comparative study of combination and concurrent methods of Foley bulb and vaginal Misoprostol versus vaginal Misoprostol alone for cervical ripening and labour induction.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    bold: true,
+                    text: 'Presentations:',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Male Infertility Excellence: Successfully presented award-winning case work on managing complex male infertility using targeted hormonal therapy according to Aphrodite Criteria (South ISAR, 2025).',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Oocyte Optimization: Presented research on correlating post-trigger serum progesterone levels with the specific number of mature oocytes retrieved in complex ICSI cycles (ISAR Ahmedabad, 2026).',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'High-Risk / Unusual Presentations: Managed and documented highly complex cases, including a rare presentation of tuberculosis in pregnancy (Yuva-FOGSI, 2021) and advanced Stage 4 Ovarian malignancy presenting as a Sister Mary Joseph nodule (State Conference, 2019).',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'class',
+            className: 'text-lg text-brandDark my-4 font-content',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    text: 'Published Peer-Reviewed Research: Published clinical studies on post-catheterization bacteriuria in OBG surgeries and comparative perinatal outcomes following corticosteroid courses in elective caesarean deliveries.',
+                  },
+                ],
+              },
+            ],
+          },
+
+          {
+            type: 'paragraph',
+            children: [{ text: '' }],
+          },
+        ],
+      },
+    },
+  },
 ];
