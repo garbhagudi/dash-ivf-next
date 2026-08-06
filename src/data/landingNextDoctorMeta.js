@@ -25,6 +25,11 @@ export const landingNextDoctorMeta = {
     locations: ['Jayanagar', 'Bangalore'],
     languages: ['Kannada', 'English', 'Hindi', 'Marathi', 'Assamese'],
   },
+  'Dr. Aishwarya Musunuru': {
+    experience: 'Experienced fertility specialist',
+    locations: ['Jayanagar', 'Bangalore'],
+    languages: ['Kannada', 'English', 'Telugu', 'Hindi'],
+  },
   'Dr. Anusha S. M': {
     experience: 'Experienced fertility specialist',
     locations: ['Yelahanka', 'Bangalore'],
