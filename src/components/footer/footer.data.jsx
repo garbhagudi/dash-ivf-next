@@ -65,22 +65,22 @@ export const connect = [
     items: [
       {
         url: 'https://www.facebook.com/garbhagudiIVF',
-        icon: 'https://res.cloudinary.com/garbhagudi/image/upload/v1633780928/garbhagudi-ivf/Icons/facebook_cshjpf.webp',
+        icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwblh0u807pnt583wdkd',
         label: 'Facebook',
       },
       {
         url: 'https://twitter.com/garbhagudiivf',
-        icon: 'https://res.cloudinary.com/garbhagudi/image/upload/v1633780927/garbhagudi-ivf/Icons/twitter_qdedgu.webp',
+        icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwceh0uc07pndlcyi0q6',
         label: 'Twitter',
       },
       {
         url: 'https://www.youtube.com/c/GarbhaGudiIVFCentre/videos',
-        icon: 'https://res.cloudinary.com/garbhagudi/image/upload/v1633780927/garbhagudi-ivf/Icons/youtube_n427fa.webp',
+        icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwcyh0ug07pnzmmsbqyf',
         label: 'Youtube',
       },
       {
         url: 'https://www.linkedin.com/company/garbagudi',
-        icon: 'https://res.cloudinary.com/garbhagudi/image/upload/v1633780928/garbhagudi-ivf/Icons/linkedin_lhir4i.webp',
+        icon: 'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwdth0uk07pnr2x3a5n9',
         label: 'Linkedin',
       },
     ],
