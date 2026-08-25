@@ -27,11 +27,6 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        <link
-          rel='preload'
-          href='/images/landing-banner-mobile.png'
-          as='image'
-        />
         {/* Preload Fonts */}
         {/* <link
           rel='preload'
@@ -52,7 +47,7 @@ const Banner = () => {
             showArrows='hover'
           >
             {bannerData.length > 0 ? (
-              bannerData.map((banner, index) => (
+              bannerData.map((banner) => (
                 // <Link
                 //   href={banner.url || '#'}
                 //   target='_blank'
@@ -66,8 +61,7 @@ const Banner = () => {
                     alt={banner.alt}
                     width={1024}
                     height={536}
-                    {...(index === 0 ? { priority: true } : {})}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 900px'
+                    sizes='(max-width: 1023px) 100vw, 66vw'
                     className='hidden h-full w-full object-cover md:block'
                   />
                   <Image
@@ -75,8 +69,7 @@ const Banner = () => {
                     width={731}
                     height={1024}
                     alt={banner.alt}
-                    {...(index === 0 ? { priority: true } : {})}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    sizes='100vw'
                     className='w-full object-fill md:hidden lg:h-[65vh]'
                   />
                 </Fragment>
