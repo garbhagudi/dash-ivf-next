@@ -16,7 +16,7 @@ export default function Header() {
         <div className='mx-auto max-w-7xl px-4 sm:px-6'>
           <div className='flex items-center justify-between border-gray-100 py-3 sm:py-5 md:justify-start md:space-x-10'>
             <div className='flex justify-start lg:w-0 lg:flex-1'>
-              <Link href='/'>
+              <Link href='https://wa.me/919108910832?text=Hi'>
                 <div>
                   <span className='sr-only'>logo</span>
                   <Image
