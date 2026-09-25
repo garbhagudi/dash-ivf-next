@@ -76,6 +76,13 @@ const SalesIQLandingNext = dynamic(
 const FloatPhone = dynamic(() => import('components/phoneFloat'), {
   ssr: false,
 });
+const FloatRequestCallBack = dynamic(
+  () => import('components/FloatRequestCallBack'),
+  { ssr: false },
+);
+const FloatWhatsapp = dynamic(() => import('components/FloatWhatsapp'), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -220,6 +227,12 @@ function MyApp({ Component, pageProps }) {
 
         {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
           <FloatPhone />
+        )}
+        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
+          <FloatRequestCallBack />
+        )}
+        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
+          <FloatWhatsapp />
         )}
         {router.pathname === '/landing-next' && <SalesIQLandingNext />}
         {router.pathname !== '/landing-next' &&
