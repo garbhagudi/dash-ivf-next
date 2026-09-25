@@ -1,12 +1,7 @@
-import {
-  Dialog,
-  DialogPanel,
-  Transition,
-  TransitionChild,
-} from '@headlessui/react';
+import { CloseButton, Dialog, DialogPanel } from '@headlessui/react';
 import { useState } from 'react';
-import { HiX } from 'react-icons/hi';
-import FormComponent from 'components/formComp';
+import { IoIosCloseCircleOutline } from 'react-icons/io';
+import LandingNextZohoHtmlForm from 'components/landing-next-zoho-html-form';
 
 export default function FloatRequestCallBack() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,68 +28,53 @@ export default function FloatRequestCallBack() {
         <p className='text-sm font-bold'>Book Appointment</p>
       </div>
 
-      <Transition appear show={isOpen} as='div'>
-        <Dialog as='div' className='relative z-[100]' onClose={closeModal}>
-          <TransitionChild
-            as='div'
-            enter='ease-out duration-300'
-            enterFrom='opacity-0'
-            enterTo='opacity-100'
-            leave='ease-in duration-200'
-            leaveFrom='opacity-100'
-            leaveTo='opacity-0'
-          >
-            <div
-              className='bg-brandPurpleDark/55 fixed inset-0 backdrop-blur-[2px]'
-              aria-hidden
-            />
-          </TransitionChild>
+      <Dialog
+        open={isOpen}
+        as='div'
+        className='relative z-[100] focus:outline-none'
+        onClose={closeModal}
+      >
+        <div
+          className='fixed inset-0 bg-black/80 transition-opacity duration-300 ease-out'
+          onClick={closeModal}
+          aria-hidden
+        />
 
-          <div className='fixed inset-0 z-[100] flex items-end justify-center overflow-hidden sm:items-center sm:p-4 sm:py-8'>
-            <TransitionChild
-              as='div'
-              enter='ease-out duration-300'
-              enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
-              enterTo='opacity-100 translate-y-0 sm:scale-100'
-              leave='ease-in duration-200'
-              leaveFrom='opacity-100 translate-y-0 sm:scale-100'
-              leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
-              className='flex w-full max-w-full justify-center sm:max-w-md'
+        <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
+          <div className='flex min-h-full items-center justify-center px-3 py-4'>
+            <DialogPanel
+              transition
+              className='data-[closed]:transform-[scale(95%)] flex max-h-[calc(100dvh-2rem)] w-full max-w-md flex-col overflow-hidden rounded-xl bg-gray-800 pb-4 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] transition-shadow duration-300 ease-out hover:shadow-[0_0_25px_10px_rgba(0,0,0,0.5)] data-[closed]:opacity-0'
             >
-              <DialogPanel className='flex max-h-[min(90vh,900px)] w-full flex-col overflow-hidden rounded-t-3xl border-2 border-brandPink4/70 bg-white shadow-2xl shadow-brandPurple/25 sm:max-h-[85vh] sm:rounded-3xl sm:border-brandPink4/50'>
-                <div className='h-1.5 shrink-0 bg-gradient-to-r from-brandPink via-brandPurple to-brandPurpleDark' />
-
-                <div className='flex shrink-0 items-start justify-between gap-3 border-b border-brandPink5 bg-gradient-to-br from-pink-50 via-white to-purple-100/60 px-4 py-4 sm:px-6 sm:py-5'>
-                  <div className='min-w-0 flex-1 text-left'>
-                    <p className='text-xs font-bold uppercase tracking-wider text-brandPink'>
-                      GarbhaGudi specialist
-                    </p>
-                    <h2 className='mt-1 font-heading text-xl font-bold leading-snug text-brandPurpleDark sm:text-2xl'>
-                      Book Your Free Consultation
-                    </h2>
+              <div className='relative h-32 w-full shrink-0'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src='https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms8iqmf63ps507pl13e62vkv'
+                  alt='formBanner'
+                  className='h-full w-full rounded-t-md'
+                />
+                <CloseButton className='absolute right-2 top-1 h-fit w-fit rounded-2xl bg-white text-brandPink'>
+                  <IoIosCloseCircleOutline fontSize={24} />
+                </CloseButton>
+              </div>
+              <div className='min-h-0 flex-1 overflow-y-auto px-0'>
+                <div className='flex justify-center'>
+                  <div className='mx-5 my-5 w-fit self-center rounded-md bg-brandPink px-4 py-1 text-center text-[13px] font-semibold text-white shadow-sm'>
+                    Book your Consultation
                   </div>
-                  <button
-                    type='button'
-                    onClick={closeModal}
-                    className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-brandPurpleDark text-brandPurpleDark transition hover:bg-brandPurpleDark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandPink'
-                    aria-label='Close'
-                  >
-                    <HiX className='h-5 w-5' />
-                  </button>
                 </div>
-
-                <div className='min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 sm:px-6 sm:py-6'>
-                  <FormComponent
-                    variant='card'
-                    isTag={false}
-                    submitLabel='Book Consultation'
-                  />
-                </div>
-              </DialogPanel>
-            </TransitionChild>
+                <LandingNextZohoHtmlForm
+                  variant='banner'
+                  plainFields
+                  showTitle={false}
+                  showConsent
+                  submitLabel='Get a call back'
+                />
+              </div>
+            </DialogPanel>
           </div>
-        </Dialog>
-      </Transition>
+        </div>
+      </Dialog>
     </>
   );
 }

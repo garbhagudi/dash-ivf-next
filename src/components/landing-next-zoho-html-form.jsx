@@ -33,6 +33,7 @@ import {
   landingNextZohoDefaultUtmContent,
 } from 'data/landingNextZohoForm';
 import { firstQueryValue, utmFromCookies } from 'lib/zohoCrmLeadPayload';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
@@ -115,7 +116,8 @@ function readFormValues(form) {
   const phoneRaw = form.elements.namedItem('PhoneNumber_countrycode')?.value ?? '';
   const phone = phoneRaw.replace(/\D/g, '');
   const email = (form.elements.namedItem('Email')?.value ?? '').trim();
-  return { name, phone, email };
+  const consent = form.elements.namedItem('Consent')?.checked ?? false;
+  return { name, phone, email, consent };
 }
 
 function syncZohoLeadAttributionFields(form, query) {
@@ -231,7 +233,7 @@ function computeHiddenState(routerQuery) {
   };
 }
 
-function validateConsultationForm({ name, phone, email }) {
+function validateConsultationForm({ name, phone, email, consent }, requireConsent) {
   const err = {};
   if (!name || name.length < 2) {
     err.name = 'Please enter your full name (at least 2 characters).';
@@ -244,12 +246,18 @@ function validateConsultationForm({ name, phone, email }) {
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     err.email = 'Enter a valid email address.';
   }
+  if (requireConsent && !consent) {
+    err.consent = 'Please accept to be contacted before submitting.';
+  }
   return err;
 }
 
 export default function LandingNextZohoHtmlForm({
   variant = 'section',
   title,
+  showTitle = true,
+  showConsent = false,
+  plainFields = false,
   submitLabel = 'Get a Call Back',
 }) {
   const router = useRouter();
@@ -302,15 +310,16 @@ export default function LandingNextZohoHtmlForm({
     flushSync(() => setHidden(fresh));
 
     const values = readFormValues(form);
-    const next = validateConsultationForm(values);
+    const next = validateConsultationForm(values, showConsent);
     setErrors(next);
     if (Object.keys(next).length > 0) {
-      const order = ['name', 'phone', 'email'];
+      const order = ['name', 'phone', 'email', 'consent'];
       const firstKey = order.find((k) => next[k]);
       const idMap = {
         name: `SingleLine-${suffix}`,
         phone: `international_PhoneNumber_countrycode-${suffix}`,
         email: `Email-${suffix}`,
+        consent: `Consent-${suffix}`,
       };
       const el = firstKey ? document.getElementById(idMap[firstKey]) : null;
       el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -420,10 +429,12 @@ export default function LandingNextZohoHtmlForm({
    * left of each input, "Get a Call Back" submit button.
    */
   if (isBanner) {
-    const bannerInput =
-      'w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none';
-    const bannerLabelPill =
-      'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark';
+    const bannerInput = plainFields
+      ? 'w-full rounded-ee-full rounded-se-full px-2 py-1 text-base focus:outline-none active:outline-none'
+      : 'w-full rounded-ee-full rounded-se-full border border-transparent bg-white/95 px-2 py-1 text-base text-brandDark focus:border-brandPink focus:outline-none focus:ring-1 focus:ring-brandPink active:outline-none';
+    const bannerLabelPill = plainFields
+      ? 'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left'
+      : 'w-[9em] rounded-es-full rounded-ss-full bg-gray-200 px-4 py-1 text-left text-brandDark';
 
     return (
       <div
@@ -443,7 +454,7 @@ export default function LandingNextZohoHtmlForm({
         >
           {hiddenAttributionFields}
 
-          {title ? (
+          {showTitle && title ? (
             <div className='pb-4 pt-4 text-center font-[B612] text-xl font-bold text-white lg:text-2xl'>
               {title}
             </div>
@@ -535,6 +546,45 @@ export default function LandingNextZohoHtmlForm({
               ) : null}
             </div>
           </div>
+
+          {showConsent ? (
+            <div className='mx-auto mt-4 max-w-md px-6'>
+              <label className='mt-4 flex justify-center space-x-3'>
+                <input
+                  type='checkbox'
+                  id={`Consent-${suffix}`}
+                  name='Consent'
+                  value='Yes'
+                  className='h-6 w-6 cursor-pointer accent-brandPink'
+                  aria-invalid={errors.consent ? 'true' : 'false'}
+                  onChange={() => clearFieldError('consent')}
+                />
+                <span className='text-justify text-sm text-gray-500'>
+                  By submitting this form I agree to be contacted by
+                  GarbhaGudi IVF Centre using the contact details through
+                  SMS, WhatsApp and Phone Calls. I also agree to the{' '}
+                  <Link
+                    href='/legal/terms-and-conditions'
+                    className='px-1 text-brandPink3'
+                  >
+                    Terms and Conditions
+                  </Link>{' '}
+                  and{' '}
+                  <Link
+                    href='/legal/privacy-policy'
+                    className='px-1 text-brandPink3'
+                  >
+                    Privacy Policy.
+                  </Link>
+                </span>
+              </label>
+              {errors.consent ? (
+                <p role='alert' className='mt-2 text-center text-sm text-red-500'>
+                  {errors.consent}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
 
           <div className='mb-6 mt-6 flex items-center justify-center space-x-4'>
             <button
