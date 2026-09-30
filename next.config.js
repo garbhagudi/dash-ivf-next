@@ -62,7 +62,9 @@ const nextConfig = {
   },
   experimental: {
     // turbo: false,
-    optimizeCss: true, // removes render-blocking CSS
+    // optimizeCss (critters) is off: under Turbopack it can't inline critical CSS,
+    // so it only made the stylesheet async -> unstyled first paint + huge CLS.
+    optimizeCss: false,
     scrollRestoration: true, // to improve navigation performance
     optimizePackageImports: [
       'react-icons',

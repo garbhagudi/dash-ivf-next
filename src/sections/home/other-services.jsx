@@ -74,8 +74,8 @@
 // export default OtherServices;
 
 import Image from 'components/image';
+import { hygraphImage } from 'lib/hygraph-image';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 
 const Features = dynamic(() => import('sections/home/features'), {
   ssr: true,
@@ -83,19 +83,13 @@ const Features = dynamic(() => import('sections/home/features'), {
 });
 
 const OtherServices = () => {
-  const rawImageUrl =
-    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwflh0uw07pn7azbdz58';
-  const optimizedImageUrl = rawImageUrl.replace(
-    '/upload/',
-    '/upload/f_auto,q_auto,w_730,h_420,c_fill/',
+  const optimizedImageUrl = hygraphImage(
+    'https://ap-south-1.graphassets.com/ATvkR6mxuRke4HGT9LQrhz/cms75xwflh0uw07pn7azbdz58',
+    730,
   );
 
   return (
     <div className='bg-white pb-16 pt-8'>
-      <Head>
-        <link rel='preload' href={optimizedImageUrl} as='image' />
-      </Head>
-
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='lg:text-center'>
           <h2 className='mt-5 text-center font-heading text-2xl font-bold leading-8 text-brandDark underline sm:text-3xl'>
@@ -109,8 +103,7 @@ const OtherServices = () => {
             alt='Banner Image'
             width={730}
             height={420}
-            className='mx-auto w-full object-contain lg:w-3/5'
-            priority
+            className='mx-auto h-auto w-full object-contain lg:w-3/5'
           />
           <strong>Best IVF centre in Bangalore</strong>
           <p className='text-justify'>

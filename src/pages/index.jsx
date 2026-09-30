@@ -91,6 +91,11 @@ export default function Home() {
       {lazyComponents.map(({ key, component }, index) => (
         <div
           key={key}
+          // First block is client-only: reserve its height so the footer does not
+          // jump in from the viewport (CLS) when it mounts.
+          className={
+            index === 0 ? 'min-h-[2300px] md:min-h-[1600px] lg:min-h-[1350px]' : undefined
+          }
           ref={(el) => (containerRefs.current[index] = el)}
           style={{
             marginBottom: '0px',

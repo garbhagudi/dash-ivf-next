@@ -477,7 +477,7 @@ export default function LandingNextZohoHtmlForm({
                   autoComplete='name'
                   className={bannerInput}
                   aria-invalid={errors.name ? 'true' : 'false'}
-                  fieldType={1}
+                  fieldtype={1}
                   onInput={() => clearFieldError('name')}
                 />
               </label>
@@ -499,8 +499,8 @@ export default function LandingNextZohoHtmlForm({
                   type='text'
                   name='PhoneNumber_countrycode'
                   compname='PhoneNumber'
-                  phoneFormat='1'
-                  isCountryCodeEnabled='false'
+                  phoneformat='1'
+                  iscountrycodeenabled='false'
                   maxLength={20}
                   defaultValue=''
                   placeholder='Enter phone number'
@@ -508,7 +508,7 @@ export default function LandingNextZohoHtmlForm({
                   autoComplete='tel'
                   className={bannerInput}
                   aria-invalid={errors.phone ? 'true' : 'false'}
-                  fieldType={11}
+                  fieldtype={11}
                   onInput={() => clearFieldError('phone')}
                 />
               </label>
@@ -535,7 +535,7 @@ export default function LandingNextZohoHtmlForm({
                   autoComplete='email'
                   className={bannerInput}
                   aria-invalid={errors.email ? 'true' : 'false'}
-                  fieldType={9}
+                  fieldtype={9}
                   onInput={() => clearFieldError('email')}
                 />
               </label>
@@ -659,7 +659,7 @@ export default function LandingNextZohoHtmlForm({
                 className={errors.name ? inputError : inputNormal}
                 aria-invalid={errors.name ? 'true' : 'false'}
                 aria-describedby={errors.name ? `err-name-${suffix}` : undefined}
-                fieldType={1}
+                fieldtype={1}
                 onInput={() => clearFieldError('name')}
               />
               {errors.name ? (
@@ -685,8 +685,8 @@ export default function LandingNextZohoHtmlForm({
                 type='text'
                 name='PhoneNumber_countrycode'
                 compname='PhoneNumber'
-                phoneFormat='1'
-                isCountryCodeEnabled='false'
+                phoneformat='1'
+                iscountrycodeenabled='false'
                 maxLength={20}
                 defaultValue=''
                 placeholder='10-digit mobile number'
@@ -695,7 +695,7 @@ export default function LandingNextZohoHtmlForm({
                 className={errors.phone ? inputError : inputNormal}
                 aria-invalid={errors.phone ? 'true' : 'false'}
                 aria-describedby={errors.phone ? `err-phone-${suffix}` : undefined}
-                fieldType={11}
+                fieldtype={11}
                 onInput={() => clearFieldError('phone')}
               />
               {errors.phone ? (
@@ -724,7 +724,7 @@ export default function LandingNextZohoHtmlForm({
                 className={errors.email ? inputError : inputNormal}
                 aria-invalid={errors.email ? 'true' : 'false'}
                 aria-describedby={errors.email ? `err-email-${suffix}` : undefined}
-                fieldType={9}
+                fieldtype={9}
                 onInput={() => clearFieldError('email')}
               />
               {errors.email ? (

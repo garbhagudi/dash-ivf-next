@@ -1,14 +1,6 @@
-import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const Carousel = dynamic(
-  () => import('nuka-carousel').then((m) => m.Carousel),
-  {
-    ssr: false,
-  },
-);
-import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 /*
  * Same Zoho-form POST flow as `/landing-next` — see
  * `src/components/landing-next-zoho-html-form.jsx`. The `banner` variant
@@ -19,6 +11,21 @@ const FormComponent = dynamic(
   { ssr: true },
 );
 
+/*
+ * Hero (LCP) image: server-rendered <picture> with AVIF/WebP/JPEG sources,
+ * a matching <link rel="preload"> and fetchpriority=high. No carousel/JS is
+ * needed to discover it. Regenerate the files in /public/images with sharp
+ * from the originals when the offer artwork changes.
+ */
+const banner = {
+  alt: 'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026. Call 9108 9108 32.',
+  desktop: '/images/landing-banner-desktop-1600',
+  mobile: '/images/landing-banner-mobile',
+};
+const MOBILE_SIZES = [480, 828];
+const mobileSet = (ext) =>
+  MOBILE_SIZES.map((w) => `${banner.mobile}-${w}.${ext} ${w}w`).join(', ');
+
 const Banner = () => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -27,69 +34,61 @@ const Banner = () => {
   return (
     <div>
       <Head>
-        {/* Preload Fonts */}
-        {/* <link
+        <link
           rel='preload'
-          href='/path-to-font.woff2'
-          as='font'
-          type='font/woff2'
-          crossOrigin='anonymous'
-        /> // because we are already using the next/font/google no preload required here */}
+          as='image'
+          type='image/avif'
+          href={`${banner.mobile}-828.avif`}
+          imageSrcSet={mobileSet('avif')}
+          imageSizes='100vw'
+          media='(max-width: 767px)'
+          fetchPriority='high'
+        />
+        <link
+          rel='preload'
+          as='image'
+          type='image/avif'
+          href={`${banner.desktop}.avif`}
+          media='(min-width: 768px)'
+          fetchPriority='high'
+        />
       </Head>
 
       <div className='grid grid-cols-1 gap-y-3 pb-5 md:pb-8 lg:grid-cols-3'>
         <div className='relative col-span-2 h-fit'>
-          <Carousel
-            autoplay={true}
-            autoplayInterval={3000}
-            wrapMode='wrap'
-            className='border-0 shadow-2xl drop-shadow-2xl'
-            showArrows='hover'
-          >
-            {bannerData.length > 0 ? (
-              bannerData.map((banner) => (
-                // <Link
-                //   href={banner.url || '#'}
-                //   target='_blank'
-                //   rel='noreferrer'
-                //   key={banner.id}
-                //   className='min-h-full min-w-full'
-                // >
-                <Fragment key={banner.id}>
-                  <Image
-                    src={banner.image.desktop}
-                    alt={banner.alt}
-                    width={1024}
-                    height={536}
-                    sizes='(max-width: 1023px) 100vw, 66vw'
-                    className='hidden h-full w-full object-cover md:block'
-                  />
-                  <Image
-                    src={banner.image.mobile}
-                    width={731}
-                    height={1024}
-                    alt={banner.alt}
-                    sizes='100vw'
-                    className='w-full object-fill md:hidden lg:h-[65vh]'
-                  />
-                </Fragment>
-                // </Link>
-              ))
-            ) : (
-              <div>No banners available</div>
-            )}
-          </Carousel>
-          {/* <div className='absolute -bottom-6 flex w-full justify-center p-1 font-semibold text-white md:hidden'>
-            <h1 className='w-full rounded-md bg-gg-500 p-1 text-center text-[13px] shadow-sm'>
-              Best IVF & Fertility Clinic - Affordable IVF Treatment
-            </h1>
-          </div> */}
+          <picture>
+            <source
+              media='(min-width: 768px)'
+              type='image/avif'
+              srcSet={`${banner.desktop}.avif`}
+            />
+            <source
+              media='(min-width: 768px)'
+              type='image/webp'
+              srcSet={`${banner.desktop}.webp`}
+            />
+            <source media='(min-width: 768px)' srcSet={`${banner.desktop}.jpg`} />
+            <source type='image/avif' srcSet={mobileSet('avif')} sizes='100vw' />
+            <source type='image/webp' srcSet={mobileSet('webp')} sizes='100vw' />
+            <img
+              src={`${banner.mobile}-828.jpg`}
+              srcSet={mobileSet('jpg')}
+              sizes='100vw'
+              alt={banner.alt}
+              width={828}
+              height={1159}
+              fetchPriority='high'
+              loading='eager'
+              decoding='async'
+              className='block aspect-[828/1159] h-auto w-full object-cover md:aspect-[1600/837] md:h-full'
+            />
+          </picture>
         </div>
-        {isClient ? (
-          <div
-            className='flex min-h-fit justify-center bg-[#005e7e] md:min-h-[500px]'
-            id='leadForm'
-          >
+        <div
+          className='flex min-h-[560px] justify-center bg-[#005e7e] md:min-h-[500px]'
+          id='leadForm'
+        >
+          {isClient ? (
             <div className='flex h-full w-full items-center justify-center'>
               <FormComponent
                 variant='banner'
@@ -97,10 +96,8 @@ const Banner = () => {
                 submitLabel='Get a Call Back'
               />
             </div>
-          </div>
-        ) : (
-          ''
-        )}
+          ) : null}
+        </div>
       </div>
       <div className='mx-auto mb-3 hidden w-full flex-col justify-center rounded-md bg-gg-500 p-2 px-4 font-semibold text-white shadow-sm md:flex'>
         <h1 className='w-full text-center text-base'>
@@ -117,16 +114,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-const bannerData = [
-  {
-    url: 'https://www.garbhagudi.com/features/paripoorna',
-    id: '3',
-    title: 'Web_Banner_3',
-    alt: 'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026. Call 9108 9108 32.',
-    image: {
-      desktop: '/images/landing-banner-desktop.jpg',
-      mobile: '/images/landing-banner-mobile.jpg',
-    },
-  },
-];

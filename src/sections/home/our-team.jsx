@@ -1,4 +1,5 @@
 import Image from 'components/image';
+import { hygraphImage } from 'lib/hygraph-image';
 import { doctors } from 'components/doctors';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import 'swiper/css';
@@ -71,12 +72,11 @@ export default function TeamSection() {
                         <div className='animate-rotate bg-[length: 400%] absolute h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-brandPink3/80 to-purple-500/40'></div>
                         <Image
                           className='overflow-hidden rounded-full bg-transparent shadow-2xl drop-shadow-2xl'
-                          src={item?.image.url}
+                          src={hygraphImage(item?.image.url, 440)}
                           alt={item?.imageAlt || item?.name}
                           width={220}
                           height={220}
                           loading='lazy'
-                          quality={10}
                         />
                       </div>
                       <div className='mt-4 flex flex-col items-center justify-center space-y-4 text-center'>
