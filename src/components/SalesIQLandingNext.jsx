@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-import { ZOHO_SALESIQ_WIDGET_SRC } from 'data/zohoSalesIqWidget';
+import {
+  ZOHO_SALESIQ_WIDGET_SRC,
+  holdSalesIqClosedOnMobile,
+} from 'data/zohoSalesIqWidget';
 
 /**
  * Official Zoho SalesIQ embed (Share → Website) — see `data/zohoSalesIqWidget.js`.
@@ -267,6 +270,8 @@ export default function SalesIQLandingNext() {
 
   useEffect(() => {
     pageEnteredAtRef.current = Date.now();
+    /* Mobile: keep Zoho's auto-opened window hidden until the bubble is tapped. */
+    holdSalesIqClosedOnMobile();
 
     const clearScrollRaf = () => {
       if (scrollRafRef.current != null) {
@@ -291,6 +296,8 @@ export default function SalesIQLandingNext() {
 
     const openChat = () => {
       if (openedRef.current) return;
+      /* Mobile: never auto-open; the visitor taps the chat bubble instead. */
+      if (isMobileLandingNextSticky()) return;
       const fw = getSalesIqFloatWindow();
       let didSomething = false;
 

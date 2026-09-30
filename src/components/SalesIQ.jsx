@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-import { ZOHO_SALESIQ_WIDGET_SRC } from 'data/zohoSalesIqWidget';
+import {
+  ZOHO_SALESIQ_WIDGET_SRC,
+  holdSalesIqClosedOnMobile,
+} from 'data/zohoSalesIqWidget';
 
 /**
  * Site-wide Zoho SalesIQ (home + inner pages except where `_app` omits this).
@@ -25,6 +28,8 @@ export function useZohoSalesIQ() {
       window.$zoho = window.$zoho || {};
       window.$zoho.salesiq = window.$zoho.salesiq || { ready: function () {} };
       window.$zoho.salesiq.values = window.$zoho.salesiq.values || {};
+      /* Mobile: keep Zoho's auto-opened window hidden until the bubble is tapped. */
+      holdSalesIqClosedOnMobile();
 
       if (!document.getElementById('zsiqwidget')) {
         const widgetDiv = document.createElement('div');
