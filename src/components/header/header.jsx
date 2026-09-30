@@ -1,7 +1,7 @@
 import { Popover } from '@headlessui/react';
-import Head from 'next/head';
 import Image from 'components/image';
 import Link from 'next/link';
+import { hygraphImage } from 'lib/hygraph-image';
 
 export default function Header() {
   const logoUrl =
@@ -9,9 +9,6 @@ export default function Header() {
 
   return (
     <>
-      <Head>
-        <link rel='preload' href={logoUrl} as='image' type='image/svg+xml' />
-      </Head>
       <Popover className='sticky top-0 z-20 border-b-2 bg-white shadow-xl'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6'>
           <div className='flex items-center justify-between border-gray-100 py-3 sm:py-5 md:justify-start md:space-x-10'>
@@ -20,11 +17,11 @@ export default function Header() {
                 <div>
                   <span className='sr-only'>logo</span>
                   <Image
-                    className='h-fit w-36 sm:h-14 md:w-48 lg:w-64'
-                    src={logoUrl}
+                    className='aspect-[500/103] h-auto w-36 sm:h-14 sm:w-auto md:h-auto md:w-48 lg:w-64'
+                    src={hygraphImage(logoUrl, 500)}
                     alt='logo'
-                    width={250}
-                    height={70}
+                    width={500}
+                    height={103}
                     priority
                   />
                 </div>

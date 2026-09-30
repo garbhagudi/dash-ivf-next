@@ -9,8 +9,8 @@ import {
  * Site-wide Zoho SalesIQ (home + inner pages except where `_app` omits this).
  * Same embed as `/landing-next` (`zohopublic.com/widget?wc=…`); no auto-popup.
  *
- * Loads after first user gesture *or* when `window` fires `load`, so the home
- * page gets the launcher without forcing scroll.
+ * Loads after the first user gesture, or after 15s for visitors who never
+ * interact, so the launcher (and Zoho's cookies) stay out of first load.
  */
 export function useZohoSalesIQ() {
   const loadedRef = useRef(false);
@@ -49,13 +49,15 @@ export function useZohoSalesIQ() {
     window.addEventListener('scroll', loadZoho, { once: true });
     window.addEventListener('mousemove', loadZoho, { once: true });
     window.addEventListener('touchstart', loadZoho, { once: true });
-    window.addEventListener('load', loadZoho, { once: true });
+    // Fallback for visitors who never interact; keeps the widget (and its
+    // third-party cookies) out of first load / audits.
+    const fallback = setTimeout(loadZoho, 15000);
 
     return () => {
       window.removeEventListener('scroll', loadZoho);
       window.removeEventListener('mousemove', loadZoho);
       window.removeEventListener('touchstart', loadZoho);
-      window.removeEventListener('load', loadZoho);
+      clearTimeout(fallback);
     };
   }, []);
 }

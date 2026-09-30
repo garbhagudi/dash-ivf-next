@@ -58,6 +58,7 @@ import theme from 'theme';
 import '../styles/globals.css';
 import { DM_Sans } from 'next/font/google';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import Footer from 'components/footer/footer';
 
@@ -84,8 +85,38 @@ const FloatWhatsapp = dynamic(() => import('components/FloatWhatsapp'), {
   ssr: false,
 });
 
+/**
+ * Marketing tags (GTM, Hotjar, Clarity, Meta Pixel) cost several seconds of
+ * main-thread time and set third-party cookies. Start them on the first user
+ * gesture, or after a long fallback delay (for visitors who only read), so they never compete with first paint / hero LCP.
+ */
+const MARKETING_TAG_DELAY_MS = 15000;
+const GESTURES = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'];
+
+function useMarketingTagsReady() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    let timer;
+    const start = () => {
+      GESTURES.forEach((e) => window.removeEventListener(e, start));
+      clearTimeout(timer);
+      setReady(true);
+    };
+    GESTURES.forEach((e) =>
+      window.addEventListener(e, start, { once: true, passive: true }),
+    );
+    timer = setTimeout(start, MARKETING_TAG_DELAY_MS);
+    return () => {
+      GESTURES.forEach((e) => window.removeEventListener(e, start));
+      clearTimeout(timer);
+    };
+  }, []);
+  return ready;
+}
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const marketingTagsReady = useMarketingTagsReady();
   const isLandingNext = router.pathname === '/landing-next';
   /**
    * GTM + Hotjar set many third‑party cookies (Lighthouse “Best practices”).
@@ -137,7 +168,7 @@ function MyApp({ Component, pageProps }) {
           src='/zoho-forms/zf-zfadvlead-utm.js'
           strategy='afterInteractive'
         />
-        {loadMarketingTags ? (
+        {loadMarketingTags && marketingTagsReady ? (
           <>
             <Script
               id='gtm'
