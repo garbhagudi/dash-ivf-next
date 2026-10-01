@@ -18,7 +18,7 @@ const FormComponent = dynamic(
  * from the originals when the offer artwork changes.
  */
 const banner = {
-  alt: 'GarbhaGudi IVF offer: free first fertility expert consultation and baseline fertility (TVUS) scan, plus 50% off on 24 fertility tests. Valid until July 31, 2026. Call 9108 9108 32.',
+  alt: 'GarbhaGudi IVF festive season offer: free 1st fertility specialist consultation, semen analysis and TVUS scan. Valid until 31st October 2026. Call 9108 9108 32.',
   desktop: '/images/landing-banner-desktop-1600',
   mobile: '/images/landing-banner-mobile',
 };
@@ -80,7 +80,7 @@ const Banner = () => {
               fetchPriority='high'
               loading='eager'
               decoding='async'
-              className='block aspect-[828/1159] h-auto w-full object-cover md:aspect-[1600/837] md:h-full'
+              className='block aspect-[828/1159] h-auto w-full object-cover md:aspect-[1600/838] md:h-full'
             />
           </picture>
         </div>
