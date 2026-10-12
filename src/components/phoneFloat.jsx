@@ -4,9 +4,13 @@ import Link from 'next/link';
 const FloatPhone = () => {
   return (
     <>
-      <div className='fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] transition-opacity duration-500 ease-linear md:h-14 md:w-14'>
-        <Link href='tel:+919108910832'>
-          <HiPhone className='h-10 w-10 text-white md:h-11 md:w-11 md:p-1' />
+      <div className='fixed bottom-5 right-5 z-50 h-12 w-12 rounded-full bg-[#25D366] md:h-14 md:w-14'>
+        <Link
+          href='tel:+919108910832'
+          aria-label='Call GarbhaGudi'
+          className='flex h-full w-full items-center justify-center'
+        >
+          <HiPhone className='h-6 w-6 text-white md:h-7 md:w-7' />
         </Link>
       </div>
     </>
