@@ -88,6 +88,60 @@ export function utmFromCookies() {
   return out;
 }
 
+const GCLID_COOKIE = 'gclid';
+const GCLID_STORAGE_KEY = 'gads_gclid';
+const GCLID_TTL_DAYS = 90;
+
+/** Ignore empty / placeholder values such as "undefined", "null" or an unfilled "{gclid}" template. */
+export function cleanGclid(value) {
+  const v = String(value ?? '').trim();
+  if (!v || /^(undefined|null|nan|false)$/i.test(v) || /[{}]/.test(v)) return '';
+  return v;
+}
+
+/**
+ * Persist `?gclid=` from the landing URL (cookie + sessionStorage) so it survives
+ * navigation to other pages before the form is submitted. Call on every page load.
+ */
+export function captureGclid() {
+  if (typeof window === 'undefined') return;
+  const gclid = cleanGclid(new URLSearchParams(window.location.search).get('gclid'));
+  if (!gclid) return;
+  try {
+    const maxAge = GCLID_TTL_DAYS * 24 * 60 * 60;
+    document.cookie = `${GCLID_COOKIE}=${encodeURIComponent(gclid)}; path=/; max-age=${maxAge}; SameSite=Lax`;
+  } catch {
+    /* ignore */
+  }
+  try {
+    sessionStorage.setItem(GCLID_STORAGE_KEY, gclid);
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Latest GCLID: current URL > cookie > sessionStorage. Empty string if none. */
+export function readGclid() {
+  if (typeof window === 'undefined') return '';
+  const fromUrl = cleanGclid(new URLSearchParams(window.location.search).get('gclid'));
+  if (fromUrl) return fromUrl;
+  const m = document.cookie.match(/(?:^|; )gclid=([^;]+)/);
+  if (m) {
+    let fromCookie;
+    try {
+      fromCookie = cleanGclid(decodeURIComponent(m[1]));
+    } catch {
+      fromCookie = cleanGclid(m[1]);
+    }
+    if (fromCookie) return fromCookie;
+  }
+  try {
+    return cleanGclid(sessionStorage.getItem(GCLID_STORAGE_KEY));
+  } catch {
+    return '';
+  }
+}
+
 /** Single-line summary for a custom “UTM / campaign details” CRM field. */
 export function buildUtmCampaignDetailsLine(utmHigh) {
   if (!utmHigh || typeof utmHigh !== 'object') return '';
@@ -163,6 +217,14 @@ export function mergeUtmIntoClientLeadData(formData, router) {
   const fromWin = utmFromWindowLocation();
   const utm = { ...fromCookies, ...fromRouter, ...fromWin };
   const out = { ...formData, ...utm };
+  // Zoho's Google Ads integration imports conversions by this lead field.
+  const gclidField =
+    (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_ZOHO_CRM_GCLID_API_NAME?.trim()) ||
+    'GCLID';
+  const gclid = readGclid();
+  if (gclid && (!out[gclidField] || String(out[gclidField]).trim() === '')) {
+    out[gclidField] = gclid;
+  }
   const details = buildUtmCampaignDetailsLine(utm);
   if (details && (!out[detailsField] || String(out[detailsField]).trim() === '')) {
     out[detailsField] = details;

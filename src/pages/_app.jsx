@@ -61,6 +61,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import Footer from 'components/footer/footer';
+import { captureGclid } from 'lib/zohoCrmLeadPayload';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -117,6 +118,9 @@ function useMarketingTagsReady() {
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const marketingTagsReady = useMarketingTagsReady();
+  useEffect(() => {
+    captureGclid();
+  }, [router.asPath]);
   const isLandingNext = router.pathname === '/landing-next';
   /**
    * GTM + Hotjar set many third‑party cookies (Lighthouse “Best practices”).
