@@ -14,6 +14,7 @@ import { Founder } from 'components/Founder';
 import { FAQ } from 'components/FAQ';
 import { Footer } from 'components/Footer';
 import { Modal } from 'components/Modal';
+import { readGclid } from 'lib/zohoCrmLeadPayload';
 
 const BOOKING_BASE_URL =
   'https://forms.garbhagudi.com/GarbhaGudiIVFCentre/form/GarbhaGudi/formperma/21qVgPWlHAmSpzYRLjpHYkEGgUHjC5LkKyd7bc_SL9w';
@@ -53,6 +54,11 @@ export default function IvfPage() {
       const val = (sp.get(k) || '').trim() || (cookies[k] || '').trim();
       if (val) params.set(k, val);
     });
+
+    // Zoho Forms stores the Google click ID in its built-in `zc_gad` field
+    // (a plain `gclid` param is not mapped), so pass it under that name too.
+    const gclid = readGclid();
+    if (gclid) params.set('zc_gad', gclid);
 
     // Pass the parent-page URL as referrer so the Zoho form receives
     // the actual /ivf page URL instead of the iframe's own origin URL.
