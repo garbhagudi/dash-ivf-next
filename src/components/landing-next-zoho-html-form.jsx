@@ -32,7 +32,7 @@ import {
   landingNextZohoDefaultUtmTerm,
   landingNextZohoDefaultUtmContent,
 } from 'data/landingNextZohoForm';
-import { firstQueryValue, utmFromCookies } from 'lib/zohoCrmLeadPayload';
+import { cleanGclid, firstQueryValue, readGclid, utmFromCookies } from 'lib/zohoCrmLeadPayload';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
@@ -212,9 +212,10 @@ function computeHiddenState(routerQuery) {
   if (utmIdRaw) detailsParts.push(`utm_id=${utmIdRaw}`);
 
   const gclid = firstNonEmpty(
-    (sp.get('gclid') || '').trim(),
-    firstQueryValue(routerQuery?.gclid),
-    readGclidCookie(),
+    cleanGclid(sp.get('gclid')),
+    cleanGclid(firstQueryValue(routerQuery?.gclid)),
+    cleanGclid(readGclidCookie()),
+    readGclid(),
   );
 
   const referrer =
