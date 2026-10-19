@@ -99,12 +99,39 @@ export function cleanGclid(value) {
   return v;
 }
 
+/** Remove stale placeholder values (e.g. a cookie literally set to "undefined") left by older builds or bad URLs. */
+function purgeInvalidGclid() {
+  try {
+    const m = document.cookie.match(/(?:^|; )gclid=([^;]*)/);
+    if (m) {
+      let raw = m[1];
+      try {
+        raw = decodeURIComponent(raw);
+      } catch {
+        /* keep raw */
+      }
+      if (!cleanGclid(raw)) {
+        document.cookie = `${GCLID_COOKIE}=; path=/; max-age=0; SameSite=Lax`;
+      }
+    }
+  } catch {
+    /* ignore */
+  }
+  try {
+    const s = sessionStorage.getItem(GCLID_STORAGE_KEY);
+    if (s !== null && !cleanGclid(s)) sessionStorage.removeItem(GCLID_STORAGE_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
 /**
  * Persist `?gclid=` from the landing URL (cookie + sessionStorage) so it survives
  * navigation to other pages before the form is submitted. Call on every page load.
  */
 export function captureGclid() {
   if (typeof window === 'undefined') return;
+  purgeInvalidGclid();
   const gclid = cleanGclid(new URLSearchParams(window.location.search).get('gclid'));
   if (!gclid) return;
   try {
