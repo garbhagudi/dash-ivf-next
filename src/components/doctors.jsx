@@ -494,43 +494,43 @@ export const doctors = [
       },
     },
   },
-  {
-    name: 'Dr Priyanka Rani',
-    qualification: 'MBBS, DNB, FRM',
-    designation: 'Senior Fertility Specialist & Cluster Clinician East',
-    image: {
-      url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/mSwDtFwRSqUnU4OKILAZ',
-    },
-    imageAlt: 'IVF Specialist in Bangalore - Dr Priyanka Rani',
-    bio: {
-      raw: {
-        children: [
-          {
-            type: 'class',
-            children: [
-              {
-                type: 'paragraph',
-                children: [
-                  {
-                    text: 'Dr Priyanka Rani is a fertility specialist with years of experience in gynaecology and obstetrics. She worked as a Senior Resident at St. John’s Medical College and holds a Rajiv Gandhi University of Health Sciences fellowship. She is well-versed in ART procedures like IVF, IUI, etc. Dr Priyanka is eager to commit herself to her patients, providing them much assurance, which puts them at ease during their treatment.  Her skills as a fertility specialist made her a valued member of the team at GarbhaGudi IVF Center. ',
-                  },
-                ],
-              },
-            ],
-            className: 'text-lg text-brandDark mt-3 font-qs',
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: '',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
+  // {
+  //   name: 'Dr Priyanka Rani',
+  //   qualification: 'MBBS, DNB, FRM',
+  //   designation: 'Senior Fertility Specialist & Cluster Clinician East',
+  //   image: {
+  //     url: 'https://ap-south-1.graphassets.com/A7M5IxnSTWGtcRy2NVnmfz/mSwDtFwRSqUnU4OKILAZ',
+  //   },
+  //   imageAlt: 'IVF Specialist in Bangalore - Dr Priyanka Rani',
+  //   bio: {
+  //     raw: {
+  //       children: [
+  //         {
+  //           type: 'class',
+  //           children: [
+  //             {
+  //               type: 'paragraph',
+  //               children: [
+  //                 {
+  //                   text: 'Dr Priyanka Rani is a fertility specialist with years of experience in gynaecology and obstetrics. She worked as a Senior Resident at St. John’s Medical College and holds a Rajiv Gandhi University of Health Sciences fellowship. She is well-versed in ART procedures like IVF, IUI, etc. Dr Priyanka is eager to commit herself to her patients, providing them much assurance, which puts them at ease during their treatment.  Her skills as a fertility specialist made her a valued member of the team at GarbhaGudi IVF Center. ',
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //           className: 'text-lg text-brandDark mt-3 font-qs',
+  //         },
+  //         {
+  //           type: 'paragraph',
+  //           children: [
+  //             {
+  //               text: '',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   },
+  // },
   // {
   //   name: 'Dr. Anitha A Manoj',
   //   qualification: 'MBBS, MS (OBG), FMAS, FRM',
