@@ -4,7 +4,7 @@ import Link from 'next/link';
 const FloatPhone = () => {
   return (
     <>
-      <div className='fixed bottom-5 right-5 z-50 h-12 w-12 rounded-full bg-[#25D366] md:h-14 md:w-14'>
+      <div className='fixed bottom-5 left-5 z-50 h-12 w-12 rounded-full bg-[#25D366] md:h-14 md:w-14'>
         <Link
           href='tel:+919108910832'
           aria-label='Call GarbhaGudi'

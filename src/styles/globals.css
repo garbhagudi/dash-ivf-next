@@ -33,14 +33,14 @@
   }
 }
 
-.zsiq-float {
+/* .zsiq-float {
   position: fixed;
   top: 50%;
   bottom: 50%;
   transform: translateY(-50%);
   right: 20px;
   z-index: 9999;
-}
+} */
 
 
 /* .carousel-inner {

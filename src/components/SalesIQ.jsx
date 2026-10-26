@@ -26,7 +26,11 @@ export function useZohoSalesIQ() {
 
       /* Same bootstrap as Zoho’s inline snippet before `#zsiqscript`. */
       window.$zoho = window.$zoho || {};
-      window.$zoho.salesiq = window.$zoho.salesiq || { ready: function () {} };
+      window.$zoho.salesiq = window.$zoho.salesiq || {};
+      /* Chat launcher sits bottom-right; the phone button (`phoneFloat`) is bottom-left. */
+      window.$zoho.salesiq.ready = function () {
+        window.$zoho.salesiq.floatbutton?.position?.('bottomright');
+      };
       window.$zoho.salesiq.values = window.$zoho.salesiq.values || {};
       /* Mobile: keep Zoho's auto-opened window hidden until the bubble is tapped. */
       holdSalesIqClosedOnMobile();
