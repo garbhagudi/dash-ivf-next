@@ -40,6 +40,16 @@
   }
 }
 
+#zsiq_float {
+  right: 20px !important;
+  bottom: 20px !important;
+  transform: none !important;
+}
+
+#zsiq_chat_wrap.chat-iframe-wrap {
+  bottom: calc(var(--zsiqf-float-close-height, 55px) + 30px) !important;
+}
+
 /* Zoho SalesIQ forces the chat window full-screen under 555px (its float.css).
    Keep the desktop-style floating panel instead; the ID selector outranks Zoho's class rules. */
 @media (max-width: 554px) {
@@ -47,7 +57,7 @@
     top: auto !important;
     left: auto !important;
     right: 10px !important;
-    bottom: calc(var(--zsiqf-float-close-height, 55px) + 20px) !important;
+    bottom: calc(var(--zsiqf-float-close-height, 55px) + 30px) !important;
     width: min(361px, calc(100% - 20px)) !important;
     max-width: calc(100% - 20px) !important;
     height: min(640px, calc(100% - 104px)) !important;
