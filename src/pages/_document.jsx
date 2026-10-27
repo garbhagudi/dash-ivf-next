@@ -17,8 +17,16 @@ export default function Document() {
       {/* End Google Tag Manager */}
       {/* </Head> */}
       <Head>
-        <link rel='dns-prefetch' href='res.cloudinary.com' />
-        <link rel='dns-prefetch' href='media.graphassets.com' />
+        <link rel='dns-prefetch' href='https://res.cloudinary.com' />
+        <link rel='dns-prefetch' href='https://media.graphassets.com' />
+        {/* Zoho SalesIQ: widget loader + API (CORS) and its static float JS/CSS. */}
+        <link rel='preconnect' href='https://salesiq.zohopublic.com' />
+        <link
+          rel='preconnect'
+          href='https://salesiq.zohopublic.com'
+          crossOrigin='anonymous'
+        />
+        <link rel='preconnect' href='https://static.zohocdn.com' />
       </Head>
 
       <body>
