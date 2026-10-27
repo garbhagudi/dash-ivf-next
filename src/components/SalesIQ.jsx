@@ -1,35 +1,37 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
-import {
-  ZOHO_SALESIQ_WIDGET_SRC,
-  holdSalesIqClosedOnMobile,
-} from 'data/zohoSalesIqWidget';
+import { ZOHO_SALESIQ_WIDGET_SRC } from 'data/zohoSalesIqWidget';
 
-/**
- * Site-wide Zoho SalesIQ (home + inner pages except where `_app` omits this).
- * Same embed as `/landing-next` (`zohopublic.com/widget?wc=…`); no auto-popup.
- *
- * Loads after the first user gesture, or after 15s for visitors who never
- * interact, so the launcher (and Zoho's cookies) stay out of first load.
- */
-export function useZohoSalesIQ() {
-  const loadedRef = useRef(false);
+const GESTURES = [
+  'scroll',
+  'pointerdown',
+  'keydown',
+  'touchstart',
+  'mousemove',
+];
 
+/** Upper bound on the idle wait after `load` for visitors who don't interact. */
+const ZOHO_IDLE_TIMEOUT_MS = 3000;
+
+export default function SalesIQ() {
   useEffect(() => {
-    const loadZoho = () => {
-      if (loadedRef.current) return;
-      if (document.getElementById('zsiqscript')) {
-        loadedRef.current = true;
-        return;
-      }
-      loadedRef.current = true;
+    if (document.getElementById('zsiqscript')) return undefined;
+
+    let cancelIdle = () => {};
+
+    const stop = () => {
+      GESTURES.forEach((e) => window.removeEventListener(e, loadZoho));
+      window.removeEventListener('load', scheduleIdle);
+      cancelIdle();
+    };
+
+    function loadZoho() {
+      stop();
 
       /* Same bootstrap as Zoho’s inline snippet before `#zsiqscript`. */
       window.$zoho = window.$zoho || {};
-      window.$zoho.salesiq = window.$zoho.salesiq || { ready: function () {} };
+      window.$zoho.salesiq = window.$zoho.salesiq || {};
       window.$zoho.salesiq.values = window.$zoho.salesiq.values || {};
-      /* Mobile: keep Zoho's auto-opened window hidden until the bubble is tapped. */
-      holdSalesIqClosedOnMobile();
 
       if (!document.getElementById('zsiqwidget')) {
         const widgetDiv = document.createElement('div');
@@ -37,32 +39,35 @@ export function useZohoSalesIQ() {
         document.body.appendChild(widgetDiv);
       }
 
-      if (document.getElementById('zsiqscript')) return;
-
       const script = document.createElement('script');
       script.id = 'zsiqscript';
       script.src = ZOHO_SALESIQ_WIDGET_SRC;
       script.defer = true;
       document.body.appendChild(script);
-    };
+    }
 
-    window.addEventListener('scroll', loadZoho, { once: true });
-    window.addEventListener('mousemove', loadZoho, { once: true });
-    window.addEventListener('touchstart', loadZoho, { once: true });
-    // Fallback for visitors who never interact; keeps the widget (and its
-    // third-party cookies) out of first load / audits.
-    const fallback = setTimeout(loadZoho, 15000);
+    // Visitors who never interact: load once the page has finished loading
+    // and the browser is idle (Safari has no requestIdleCallback).
+    function scheduleIdle() {
+      if (typeof window.requestIdleCallback === 'function') {
+        const id = window.requestIdleCallback(loadZoho, {
+          timeout: ZOHO_IDLE_TIMEOUT_MS,
+        });
+        cancelIdle = () => window.cancelIdleCallback(id);
+      } else {
+        const id = setTimeout(loadZoho, ZOHO_IDLE_TIMEOUT_MS);
+        cancelIdle = () => clearTimeout(id);
+      }
+    }
 
-    return () => {
-      window.removeEventListener('scroll', loadZoho);
-      window.removeEventListener('mousemove', loadZoho);
-      window.removeEventListener('touchstart', loadZoho);
-      clearTimeout(fallback);
-    };
+    GESTURES.forEach((e) =>
+      window.addEventListener(e, loadZoho, { passive: true }),
+    );
+    if (document.readyState === 'complete') scheduleIdle();
+    else window.addEventListener('load', scheduleIdle, { once: true });
+
+    return stop;
   }, []);
-}
 
-export default function SalesIQ() {
-  useZohoSalesIQ();
   return null;
 }

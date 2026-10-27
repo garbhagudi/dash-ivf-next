@@ -82,9 +82,6 @@ const FloatRequestCallBack = dynamic(
   () => import('components/FloatRequestCallBack'),
   { ssr: false },
 );
-const FloatWhatsapp = dynamic(() => import('components/FloatWhatsapp'), {
-  ssr: false,
-});
 
 /**
  * Marketing tags (GTM, Hotjar, Clarity, Meta Pixel) cost several seconds of
@@ -265,9 +262,6 @@ function MyApp({ Component, pageProps }) {
         )}
         {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
           <FloatRequestCallBack />
-        )}
-        {router.pathname !== '/landing-next' && router.pathname !== '/ivf' && (
-          <FloatWhatsapp />
         )}
         {router.pathname === '/landing-next' && <SalesIQLandingNext />}
         {router.pathname !== '/landing-next' &&
