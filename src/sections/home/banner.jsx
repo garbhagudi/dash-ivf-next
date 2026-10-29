@@ -18,7 +18,7 @@ const FormComponent = dynamic(
  * from the originals when the offer artwork changes.
  */
 const banner = {
-  alt: 'GarbhaGudi IVF festive season offer: free 1st fertility specialist consultation, semen analysis and TVUS scan. Valid until 31st October 2026. Call 9108 9108 32.',
+  alt: 'GarbhaGudi IVF Centre Paripoorna 2026: a defined, all inclusive IVF care package at ₹1,75,000. Transparent. Complete. With no hidden costs. Call 9108 9108 32.',
   desktop: '/images/landing-banner-desktop-1600',
   mobile: '/images/landing-banner-mobile',
 };
