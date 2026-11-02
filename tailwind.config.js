@@ -150,7 +150,7 @@ module.exports = {
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
       spinSlow: 'spin 45s linear infinite',
-      marquee: 'marquee 8s linear infinite',
+      marquee: 'marquee 16s linear infinite',
     },
     aspectRatio: {
       auto: 'auto',
