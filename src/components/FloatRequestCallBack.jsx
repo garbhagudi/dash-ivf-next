@@ -23,7 +23,7 @@ export default function FloatRequestCallBack() {
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') openModal();
         }}
-        className='fixed -left-14 top-1/2 z-40 -translate-y-1/2 rotate-90 cursor-pointer rounded-t-md bg-brandPink px-4 py-1.5 text-white shadow-md transition hover:bg-brandPink2'
+        className='fixed -left-16 top-1/2 z-40 -translate-y-1/2 rotate-90 cursor-pointer rounded-t-md bg-brandPink px-4 py-1.5 text-white shadow-md transition hover:bg-brandPink2'
       >
         <p className='text-sm font-bold'>Book Appointment</p>
       </div>
