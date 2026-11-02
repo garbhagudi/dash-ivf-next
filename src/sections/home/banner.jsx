@@ -1,22 +1,12 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-/*
- * Same Zoho-form POST flow as `/landing-next` — see
- * `src/components/landing-next-zoho-html-form.jsx`. The `banner` variant
- * keeps the home hero layout (gray-pill labels, "Get a Call Back").
- */
+
 const FormComponent = dynamic(
   () => import('components/landing-next-zoho-html-form'),
   { ssr: true },
 );
 
-/*
- * Hero (LCP) image: server-rendered <picture> with AVIF/WebP/JPEG sources,
- * a matching <link rel="preload"> and fetchpriority=high. No carousel/JS is
- * needed to discover it. Regenerate the files in /public/images with sharp
- * from the originals when the offer artwork changes.
- */
 const banner = {
   alt: 'GarbhaGudi IVF Centre Paripoorna 2026: a defined, all inclusive IVF care package at ₹1,75,000. Transparent. Complete. With no hidden costs. Call 9108 9108 32.',
   desktop: '/images/landing-banner-desktop-1600',
@@ -67,9 +57,20 @@ const Banner = () => {
               type='image/webp'
               srcSet={`${banner.desktop}.webp`}
             />
-            <source media='(min-width: 768px)' srcSet={`${banner.desktop}.jpg`} />
-            <source type='image/avif' srcSet={mobileSet('avif')} sizes='100vw' />
-            <source type='image/webp' srcSet={mobileSet('webp')} sizes='100vw' />
+            <source
+              media='(min-width: 768px)'
+              srcSet={`${banner.desktop}.jpg`}
+            />
+            <source
+              type='image/avif'
+              srcSet={mobileSet('avif')}
+              sizes='100vw'
+            />
+            <source
+              type='image/webp'
+              srcSet={mobileSet('webp')}
+              sizes='100vw'
+            />
             <img
               src={`${banner.mobile}-828.jpg`}
               srcSet={mobileSet('jpg')}
@@ -85,11 +86,22 @@ const Banner = () => {
           </picture>
         </div>
         <div
-          className='flex min-h-[560px] justify-center bg-[#005e7e] md:min-h-[500px]'
+          className='flex min-h-[400px] justify-center bg-[#005e7e] md:min-h-[500px]'
           id='leadForm'
         >
           {isClient ? (
-            <div className='flex h-full w-full items-center justify-center'>
+            <div className='flex h-full w-full flex-col items-center justify-center gap-3'>
+              <div className='w-full overflow-hidden'>
+                <div className='motion-safe:animate-marquee flex w-full justify-center motion-safe:justify-start'>
+                  <span className='flex items-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-r from-gg-500 to-gg-600 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg'>
+                    <span className='relative flex h-2 w-2'>
+                      <span className='absolute inline-flex h-full w-full rounded-full bg-white opacity-75 motion-safe:animate-ping' />
+                      <span className='relative inline-flex h-2 w-2 rounded-full bg-white' />
+                    </span>
+                    EMI options available
+                  </span>
+                </div>
+              </div>
               <FormComponent
                 variant='banner'
                 title='Book Free Fertility Consultation Today'
